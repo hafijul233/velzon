@@ -3,6 +3,7 @@ import Layout from "../../../layouts/main.vue";
 import PageHeader from "@/components/page-header";
 import appConfig from "../../../../app.config";
 import axios from 'axios';
+
 export default {
     page: {
         title: "Invoice Details",
@@ -18,10 +19,10 @@ export default {
                 text: "Invoice",
                 href: "/",
             },
-            {
-                text: "Invoice Details",
-                active: true,
-            },
+                {
+                    text: "Invoice Details",
+                    active: true,
+                },
             ],
             amount: 875,
             billing_address: "305 S San Gabriel Blvd, California, United States - 91776",
@@ -100,7 +101,7 @@ export default {
 
                     var itemclass = data.status == 'Paid' ? 'badge-soft-success' : data.status == 'Cancel' ?
                         'badge-soft-danger' : data.status == 'Unpaid' ? 'badge-soft-warning' : data.status ==
-                            'Refund' ? 'badge-soft-primary' : '';
+                        'Refund' ? 'badge-soft-primary' : '';
                     document.getElementById('payment-status').classList.add(itemclass);
 
                     this.total_amount = data.total_amount;
@@ -122,8 +123,8 @@ export default {
                     this.notes = data.notes;
 
                 }).catch((er) => {
-                    console.log(er);
-                });
+                console.log(er);
+            });
         }
     },
     components: {
@@ -135,21 +136,21 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row class="justify-content-center">
             <b-col xxl="9">
-                <b-card no-body id="demo">
+                <b-card id="demo" no-body>
                     <b-card-header class="border-bottom-dashed p-4">
                         <div class="d-sm-flex">
                             <div class="flex-grow-1">
-                                <img src="@/assets/images/logo-dark.png" class="card-logo card-logo-dark"
-                                    alt="logo dark" height="17">
-                                <img src="@/assets/images/logo-light.png" class="card-logo card-logo-light"
-                                    alt="logo light" height="17">
+                                <img alt="logo dark" class="card-logo card-logo-dark"
+                                     height="17" src="@/assets/images/logo-dark.png">
+                                <img alt="logo light" class="card-logo card-logo-light"
+                                     height="17" src="@/assets/images/logo-light.png">
                                 <div class="mt-sm-5 mt-4">
                                     <h6 class="text-muted text-uppercase fw-semibold">Address</h6>
-                                    <p class="text-muted mb-1" id="address-details">California, United States</p>
-                                    <p class="text-muted mb-0" id="zip-code"><span>Zip-code:</span> 90201</p>
+                                    <p id="address-details" class="text-muted mb-1">California, United States</p>
+                                    <p id="zip-code" class="text-muted mb-0"><span>Zip-code:</span> 90201</p>
                                 </div>
                             </div>
                             <div class="flex-shrink-0 mt-sm-0 mt-3">
@@ -161,30 +162,31 @@ export default {
                                     <span id="email">{{ email }}</span>
                                 </h6>
                                 <h6><span class="text-muted fw-normal">Website:</span>
-                                    <b-link href="https://themesbrand.com/" class="link-primary" target="_blank"
-                                        id="website">{{ website }}</b-link>
+                                    <b-link id="website" class="link-primary" href="https://themesbrand.com/"
+                                            target="_blank">{{ website }}
+                                    </b-link>
                                 </h6>
                                 <h6 class="mb-0"><span class="text-muted fw-normal">Contact No: </span><span
-                                        id="contact-no">{{ contact }}</span></h6>
+                                    id="contact-no">{{ contact }}</span></h6>
                             </div>
                         </div>
                     </b-card-header>
                     <b-card-body class="p-4">
                         <b-row class="g-3">
-                            <b-col lg="3" cols="6">
+                            <b-col cols="6" lg="3">
                                 <p class="text-muted mb-2 text-uppercase fw-semibold">Invoice No</p>
                                 <h5 class="fs-14 mb-0"><span id="invoice-no">{{ invoiceId }}</span></h5>
                             </b-col>
-                            <b-col lg="3" cols="6">
+                            <b-col cols="6" lg="3">
                                 <p class="text-muted mb-2 text-uppercase fw-semibold">Date</p>
                                 <h5 class="fs-14 mb-0"><span id="invoice-date">{{ date }}</span> <small
-                                        class="text-muted" id="invoice-time">02:36PM</small></h5>
+                                    id="invoice-time" class="text-muted">02:36PM</small></h5>
                             </b-col>
-                            <b-col lg="3" cols="6">
+                            <b-col cols="6" lg="3">
                                 <p class="text-muted mb-2 text-uppercase fw-semibold">Payment Status</p>
-                                <span class="badge bg-info fs-11" id="payment-status">{{ status }}</span>
+                                <span id="payment-status" class="badge bg-info fs-11">{{ status }}</span>
                             </b-col>
-                            <b-col lg="3" cols="6">
+                            <b-col cols="6" lg="3">
                                 <p class="text-muted mb-2 text-uppercase fw-semibold">Total Amount</p>
                                 <h5 class="fs-14 mb-0">$<span id="total-amount">{{ total_amount }}</span></h5>
                             </b-col>
@@ -194,17 +196,17 @@ export default {
                         <b-row class="g-3">
                             <b-col sm="6">
                                 <h6 class="text-muted text-uppercase fw-semibold mb-3">Billing Address</h6>
-                                <p class="fw-medium mb-2" id="billing-name">{{ billing_name }}</p>
-                                <p class="text-muted mb-1" id="billing-address">{{ billing_address }}</p>
-                                <p class="text-muted mb-1" id="billing-phone">Phone: {{ billing_phone }}</p>
-                                <p class="text-muted mb-0" id="billing-tax">Tax: {{ billing_taxno }}</p>
+                                <p id="billing-name" class="fw-medium mb-2">{{ billing_name }}</p>
+                                <p id="billing-address" class="text-muted mb-1">{{ billing_address }}</p>
+                                <p id="billing-phone" class="text-muted mb-1">Phone: {{ billing_phone }}</p>
+                                <p id="billing-tax" class="text-muted mb-0">Tax: {{ billing_taxno }}</p>
                             </b-col>
                             <b-col sm="6">
                                 <h6 class="text-muted text-uppercase fw-semibold mb-3">Shipping Address</h6>
-                                <p class="fw-medium mb-2" id="shipping-name">{{ shipping_name }}</p>
-                                <p class="text-muted mb-1" id="shipping-address">{{ shipping_address }}</p>
-                                <p class="text-muted mb-0" id="shipping-phone">Phone: {{ shipping_phone }}</p>
-                                <p class="text-muted mb-0" id="shipping-tax">Tax: {{ shipping_taxno }}</p>
+                                <p id="shipping-name" class="fw-medium mb-2">{{ shipping_name }}</p>
+                                <p id="shipping-address" class="text-muted mb-1">{{ shipping_address }}</p>
+                                <p id="shipping-phone" class="text-muted mb-0">Phone: {{ shipping_phone }}</p>
+                                <p id="shipping-tax" class="text-muted mb-0">Tax: {{ shipping_taxno }}</p>
                             </b-col>
                         </b-row>
                     </b-card-body>
@@ -212,76 +214,76 @@ export default {
                         <div class="table-responsive">
                             <table class="table table-borderless text-center table-nowrap align-middle mb-0">
                                 <thead>
-                                    <tr class="table-active">
-                                        <th scope="col" style="width: 50px;">#</th>
-                                        <th scope="col">Product Details</th>
-                                        <th scope="col">Rate</th>
-                                        <th scope="col">Quantity</th>
-                                        <th scope="col" class="text-end">Amount</th>
-                                    </tr>
+                                <tr class="table-active">
+                                    <th scope="col" style="width: 50px;">#</th>
+                                    <th scope="col">Product Details</th>
+                                    <th scope="col">Rate</th>
+                                    <th scope="col">Quantity</th>
+                                    <th class="text-end" scope="col">Amount</th>
+                                </tr>
                                 </thead>
                                 <tbody id="products-list">
-                                    <tr v-for="(item, index) of product_detail" :key="index">
-                                        <th scope="row">01</th>
-                                        <td class="text-start">
-                                            <span class="fw-medium">{{ item.name }}</span>
-                                            <p class="text-muted mb-0">{{ item.category }}
-                                            </p>
-                                        </td>
-                                        <td>${{ item.price }}</td>
-                                        <td>{{ item.stock }}</td>
-                                        <td class="text-end">{{ item.price * item.stock }}</td>
-                                    </tr>
-                                    <tr class="border-top border-top-dashed mt-2">
-                                        <td colspan="3"></td>
-                                        <td colspan="2" class="fw-medium p-0">
-                                            <table
-                                                class="table table-borderless text-start table-nowrap align-middle mb-0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Sub Total</td>
-                                                        <td class="text-end">${{ sub_total }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Estimated Tax (12.5%)</td>
-                                                        <td class="text-end">${{ estimated_tax }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Discount <small class="text-muted">(VELZON15)</small></td>
-                                                        <td class="text-end">- ${{ discount }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Shipping Charge</td>
-                                                        <td class="text-end">${{ shipping_charge }}</td>
-                                                    </tr>
-                                                    <tr class="border-top border-top-dashed">
-                                                        <th scope="row">Total Amount</th>
-                                                        <td class="text-end">${{ total_amount }}</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                <tr v-for="(item, index) of product_detail" :key="index">
+                                    <th scope="row">01</th>
+                                    <td class="text-start">
+                                        <span class="fw-medium">{{ item.name }}</span>
+                                        <p class="text-muted mb-0">{{ item.category }}
+                                        </p>
+                                    </td>
+                                    <td>${{ item.price }}</td>
+                                    <td>{{ item.stock }}</td>
+                                    <td class="text-end">{{ item.price * item.stock }}</td>
+                                </tr>
+                                <tr class="border-top border-top-dashed mt-2">
+                                    <td colspan="3"></td>
+                                    <td class="fw-medium p-0" colspan="2">
+                                        <table
+                                            class="table table-borderless text-start table-nowrap align-middle mb-0">
+                                            <tbody>
+                                            <tr>
+                                                <td>Sub Total</td>
+                                                <td class="text-end">${{ sub_total }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Estimated Tax (12.5%)</td>
+                                                <td class="text-end">${{ estimated_tax }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Discount <small class="text-muted">(VELZON15)</small></td>
+                                                <td class="text-end">- ${{ discount }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shipping Charge</td>
+                                                <td class="text-end">${{ shipping_charge }}</td>
+                                            </tr>
+                                            <tr class="border-top border-top-dashed">
+                                                <th scope="row">Total Amount</th>
+                                                <td class="text-end">${{ total_amount }}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="mt-3">
                             <h6 class="text-muted text-uppercase fw-semibold mb-3">Payment Details:</h6>
-                            <p class="text-muted mb-1">Payment Method: <span class="fw-medium" id="payment-method">{{
+                            <p class="text-muted mb-1">Payment Method: <span id="payment-method" class="fw-medium">{{
                                     payment_method
-                            }}</span></p>
-                            <p class="text-muted mb-1">Card Holder: <span class="fw-medium" id="card-holder-name">{{
+                                }}</span></p>
+                            <p class="text-muted mb-1">Card Holder: <span id="card-holder-name" class="fw-medium">{{
                                     card_holder_name
-                            }}</span></p>
-                            <p class="text-muted mb-1">Card Number: <span class="fw-medium" id="card-number">{{
+                                }}</span></p>
+                            <p class="text-muted mb-1">Card Number: <span id="card-number" class="fw-medium">{{
                                     card_number
-                            }}</span>
+                                }}</span>
                             </p>
-                            <p class="text-muted">Total Amount: <span class="fw-medium" id="">$ </span><span
-                                    id="card-total-amount">{{ total_amount }}</span></p>
+                            <p class="text-muted">Total Amount: <span id="" class="fw-medium">$ </span><span
+                                id="card-total-amount">{{ total_amount }}</span></p>
                         </div>
                         <div class="mt-4">
-                            <b-alert variant="info" show>
+                            <b-alert show variant="info">
                                 <p class="mb-0"><span class="fw-semibold">NOTES:</span>
                                     <span id="note">{{ notes }}
                                     </span>
@@ -289,11 +291,13 @@ export default {
                             </b-alert>
                         </div>
                         <div class="hstack gap-2 justify-content-end d-print-none mt-4">
-                            <b-link href="javascript:window.print()" class="btn btn-success"><i
-                                    class="ri-printer-line align-bottom me-1"></i> Print</b-link>
-                            <b-link href="javascript:void(0);" class="btn btn-primary"><i
-                                    class="ri-download-2-line align-bottom me-1"></i>
-                                Download</b-link>
+                            <b-link class="btn btn-success" href="javascript:window.print()"><i
+                                class="ri-printer-line align-bottom me-1"></i> Print
+                            </b-link>
+                            <b-link class="btn btn-primary" href="javascript:void(0);"><i
+                                class="ri-download-2-line align-bottom me-1"></i>
+                                Download
+                            </b-link>
                         </div>
                     </b-card-body>
                 </b-card>

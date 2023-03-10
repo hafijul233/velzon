@@ -1,15 +1,14 @@
 // Basic Scatter Charts
-function getChartColorsArray(colors){
+function getChartColorsArray(colors) {
     colors = JSON.parse(colors);
     return colors.map(function (value) {
-      var newValue = value.replace(" ", "");
-      if (newValue.indexOf(",") === -1) {
-        var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
+        var newValue = value.replace(" ", "");
+        if (newValue.indexOf(",") === -1) {
+            var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
             if (color) {
-            color = color.replace(" ", "");
-            return color;
-            }
-            else return newValue;
+                color = color.replace(" ", "");
+                return color;
+            } else return newValue;
         } else {
             var val = value.split(',');
             if (val.length == 2) {
@@ -21,44 +20,45 @@ function getChartColorsArray(colors){
             }
         }
     });
-  }
+}
+
 const basicScatterChart = {
     series: [{
-            name: "SAMPLE A",
-            data: [
-                [16.4, 5.4],
-                [21.7, 2],
-                [25.4, 3],
-                [19, 2],
-                [10.9, 1],
-                [13.6, 3.2],
-                [10.9, 7.4],
-                [10.9, 0],
-                [10.9, 8.2],
-                [16.4, 0],
-                [16.4, 1.8],
-                [13.6, 0.3],
-                [13.6, 0],
-                [29.9, 0],
-                [27.1, 2.3],
-                [16.4, 0],
-                [13.6, 3.7],
-                [10.9, 5.2],
-                [16.4, 6.5],
-                [10.9, 0],
-                [24.5, 7.1],
-                [10.9, 0],
-                [8.1, 4.7],
-                [19, 0],
-                [21.7, 1.8],
-                [27.1, 0],
-                [24.5, 0],
-                [27.1, 0],
-                [29.9, 1.5],
-                [27.1, 0.8],
-                [22.1, 2],
-            ],
-        },
+        name: "SAMPLE A",
+        data: [
+            [16.4, 5.4],
+            [21.7, 2],
+            [25.4, 3],
+            [19, 2],
+            [10.9, 1],
+            [13.6, 3.2],
+            [10.9, 7.4],
+            [10.9, 0],
+            [10.9, 8.2],
+            [16.4, 0],
+            [16.4, 1.8],
+            [13.6, 0.3],
+            [13.6, 0],
+            [29.9, 0],
+            [27.1, 2.3],
+            [16.4, 0],
+            [13.6, 3.7],
+            [10.9, 5.2],
+            [16.4, 6.5],
+            [10.9, 0],
+            [24.5, 7.1],
+            [10.9, 0],
+            [8.1, 4.7],
+            [19, 0],
+            [21.7, 1.8],
+            [27.1, 0],
+            [24.5, 0],
+            [27.1, 0],
+            [29.9, 1.5],
+            [27.1, 0.8],
+            [22.1, 2],
+        ],
+    },
         {
             name: "SAMPLE B",
             data: [
@@ -176,15 +176,15 @@ function generateDayWiseTimeSeries(baseval, count, yrange) {
 
 const dateTimeScatterChart = {
     series: [{
-            name: "TEAM 1",
-            data: generateDayWiseTimeSeries(
-                new Date("11 Feb 2017 GMT").getTime(),
-                20, {
-                    min: 10,
-                    max: 60,
-                }
-            ),
-        },
+        name: "TEAM 1",
+        data: generateDayWiseTimeSeries(
+            new Date("11 Feb 2017 GMT").getTime(),
+            20, {
+                min: 10,
+                max: 60,
+            }
+        ),
+    },
         {
             name: "TEAM 2",
             data: generateDayWiseTimeSeries(
@@ -265,28 +265,28 @@ const dateTimeScatterChart = {
 // Scatter - Images Charts
 const scatterImagesChart = {
     series: [{
-            name: "User A",
-            data: [
-                [16.4, 5.4],
-                [21.7, 4],
-                [25.4, 3],
-                [19, 2],
-                [10.9, 1],
-                [13.6, 3.2],
-                [10.9, 7],
-                [10.9, 8.2],
-                [16.4, 4],
-                [13.6, 4.3],
-                [13.6, 12],
-                [29.9, 3],
-                [10.9, 5.2],
-                [16.4, 6.5],
-                [10.9, 8],
-                [24.5, 7.1],
-                [10.9, 7],
-                [8.1, 4.7],
-            ],
-        },
+        name: "User A",
+        data: [
+            [16.4, 5.4],
+            [21.7, 4],
+            [25.4, 3],
+            [19, 2],
+            [10.9, 1],
+            [13.6, 3.2],
+            [10.9, 7],
+            [10.9, 8.2],
+            [16.4, 4],
+            [13.6, 4.3],
+            [13.6, 12],
+            [29.9, 3],
+            [10.9, 5.2],
+            [16.4, 6.5],
+            [10.9, 8],
+            [24.5, 7.1],
+            [10.9, 7],
+            [8.1, 4.7],
+        ],
+    },
         {
             name: "User B",
             data: [

@@ -50,7 +50,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xxl="6">
                 <b-card no-body>
@@ -97,8 +97,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Headings</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="heading-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="heading-showcode" />
+                                <label class="form-label text-muted" for="heading-showcode">Show Code</label>
+                                <input id="heading-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -162,9 +162,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Display Headings</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="displayheading-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="displayheading-showcode" />
+                                <label class="form-label text-muted" for="displayheading-showcode">Show Code</label>
+                                <input id="displayheading-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -209,9 +209,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Blockquotes</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="blockquotes-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="blockquotes-showcode" />
+                                <label class="form-label text-muted" for="blockquotes-showcode">Show Code</label>
+                                <input id="blockquotes-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -279,10 +279,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Blockquote Background Color</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="blockquotes-bgcolor-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="blockquotes-bgcolor-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="blockquotes-bgcolor-showcode" />
+                                <input id="blockquotes-bgcolor-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -295,7 +295,7 @@ export default {
                         </p>
                         <div class="live-preview">
                             <b-row class="gy-4">
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote class="blockquote custom-blockquote blockquote-primary rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Primary Example</p>
                                         <footer class="blockquote-footer mt-0">
@@ -305,7 +305,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote class="blockquote custom-blockquote blockquote-secondary rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Secondary Example</p>
                                         <footer class="blockquote-footer mt-0">
@@ -315,7 +315,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote class="blockquote custom-blockquote blockquote-success rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Success Example</p>
                                         <footer class="blockquote-footer mt-0">
@@ -325,7 +325,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote class="blockquote custom-blockquote blockquote-info rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Info Example</p>
                                         <footer class="blockquote-footer mt-0">
@@ -335,7 +335,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote class="blockquote custom-blockquote blockquote-danger rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Danger Example</p>
                                         <footer class="blockquote-footer mt-0">
@@ -345,7 +345,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote class="blockquote custom-blockquote blockquote-warning rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Warning Example</p>
                                         <footer class="blockquote-footer mt-0">
@@ -355,7 +355,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote class="blockquote custom-blockquote blockquote-dark rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Dark Example</p>
                                         <footer class="blockquote-footer mt-0">
@@ -416,10 +416,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Blockquote Border Color</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="blockquotes-bordercolor-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="blockquotes-bordercolor-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="blockquotes-bordercolor-showcode" />
+                                <input id="blockquotes-bordercolor-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -431,7 +431,7 @@ export default {
                         </p>
                         <div class="live-preview">
                             <b-row class="gy-4">
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote
                                         class="blockquote custom-blockquote blockquote-outline blockquote-primary rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Outline Primary Example</p>
@@ -442,7 +442,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote
                                         class="blockquote custom-blockquote blockquote-outline blockquote-secondary rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Outline Secondary Example</p>
@@ -453,7 +453,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote
                                         class="blockquote custom-blockquote blockquote-outline blockquote-success rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Outline Success Example</p>
@@ -464,7 +464,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote
                                         class="blockquote custom-blockquote blockquote-outline blockquote-info rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Outline Info Example</p>
@@ -475,7 +475,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote
                                         class="blockquote custom-blockquote blockquote-outline blockquote-danger rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Outline Danger Example</p>
@@ -486,7 +486,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote
                                         class="blockquote custom-blockquote blockquote-outline blockquote-warning rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Outline Warning Example</p>
@@ -497,7 +497,7 @@ export default {
                                     </blockquote>
                                 </b-col>
 
-                                <b-col xl="4" md="6">
+                                <b-col md="6" xl="4">
                                     <blockquote
                                         class="blockquote custom-blockquote blockquote-outline blockquote-dark rounded mb-0">
                                         <p class="text-dark mb-2">Custom Blockquote Outline Dark Example</p>
@@ -559,10 +559,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Inline Text Elements</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="inlinetext-elements-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="inlinetext-elements-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="inlinetext-elements-showcode" />
+                                <input id="inlinetext-elements-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -573,7 +573,8 @@ export default {
                             <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
                             <p>
                                 You can use the mark tag to
-                                <mark>highlight</mark> text.
+                                <mark>highlight</mark>
+                                text.
                             </p>
                             <p>
                                 <del>This line of text is meant to be treated as deleted text.</del>
@@ -628,9 +629,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Unstyled List</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="unstyledlist-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="unstyledlist-showcode" />
+                                <label class="form-label text-muted" for="unstyledlist-showcode">Show Code</label>
+                                <input id="unstyledlist-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -684,10 +685,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Inline List</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="inlinelist-elements-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="inlinelist-elements-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="inlinelist-elements-showcode" />
+                                <input id="inlinelist-elements-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -728,9 +729,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Description List Alignment</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="desclist-alignment-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="desclist-alignment-showcode" />
+                                <label class="form-label text-muted" for="desclist-alignment-showcode">Show Code</label>
+                                <input id="desclist-alignment-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -751,7 +752,8 @@ export default {
 
                                 <dt class="col-sm-3">Euismod</dt>
                                 <dd class="col-sm-9">Vestibulum id ligula porta felis euismod semper eget lacinia odio
-                                    sem nec elit.</dd>
+                                    sem nec elit.
+                                </dd>
                                 <dd class="col-sm-9 offset-sm-3">Donec id elit non mi porta gravida at eget metus.</dd>
 
                                 <dt class="col-sm-3">Malesuada porta</dt>
@@ -759,14 +761,16 @@ export default {
 
                                 <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
                                 <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-                                    nibh, ut fermentum massa justo sit amet risus.</dd>
+                                    nibh, ut fermentum massa justo sit amet risus.
+                                </dd>
 
                                 <dt class="col-sm-3">Nesting</dt>
                                 <dd class="col-sm-9 mb-0">
                                     <dl class="row mb-0">
                                         <dt class="col-sm-4">Nested definition list</dt>
                                         <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue
-                                            blandit nunc.</dd>
+                                            blandit nunc.
+                                        </dd>
                                     </dl>
                                 </dd>
                             </dl>
@@ -808,8 +812,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Text Wrapping and Overflow</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="textwrap-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="textwrap-showcode" />
+                                <label class="form-label text-muted" for="textwrap-showcode">Show Code</label>
+                                <input id="textwrap-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -821,7 +825,7 @@ export default {
                                     Use
                                     <code>text-wrap</code> class to wrap the text.
                                 </p>
-                                <b-badge variant="primary" class="text-wrap" style="width: 6rem;">This text should wrap.
+                                <b-badge class="text-wrap" style="width: 6rem;" variant="primary">This text should wrap.
                                 </b-badge>
                             </div>
                             <div class="mt-4">
@@ -830,7 +834,8 @@ export default {
                                     <code>text-nowrap</code> class to prevent text from wrapping.
                                 </p>
                                 <div class="text-nowrap border bg-light mt-3" style="width: 8rem;">This text should
-                                    overflow the parent.</div>
+                                    overflow the parent.
+                                </div>
                             </div>
                         </div>
 
@@ -853,8 +858,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Word Break</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="wordbreak-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="wordbreak-showcode" />
+                                <label class="form-label text-muted" for="wordbreak-showcode">Show Code</label>
+                                <input id="wordbreak-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -887,8 +892,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Font size</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="fontsize-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="fontsize-showcode" />
+                                <label class="form-label text-muted" for="fontsize-showcode">Show Code</label>
+                                <input id="fontsize-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -913,7 +918,8 @@ export default {
                         </div>
 
                         <div class="d-none code-view">
-                            <pre class="language-markup"><code>&lt;p class=&quot;fs-1&quot;&gt;.fs-1 text&lt;/p&gt;</code>
+                            <pre
+                                class="language-markup"><code>&lt;p class=&quot;fs-1&quot;&gt;.fs-1 text&lt;/p&gt;</code>
 
 <code>&lt;p class=&quot;fs-2&quot;&gt;.fs-2 text&lt;/p&gt;</code>
 
@@ -937,9 +943,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Font weight and italics</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="fontweight-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="fontweight-showcode" />
+                                <label class="form-label text-muted" for="fontweight-showcode">Show Code</label>
+                                <input id="fontweight-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -987,9 +993,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Line height</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="lineheight-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="lineheight-showcode" />
+                                <label class="form-label text-muted" for="lineheight-showcode">Show Code</label>
+                                <input id="lineheight-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1037,9 +1043,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Text Transform</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="texttransform-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="texttransform-showcode" />
+                                <label class="form-label text-muted" for="texttransform-showcode">Show Code</label>
+                                <input id="texttransform-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1074,9 +1080,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Text Decoration</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="textdecoration-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="textdecoration-showcode" />
+                                <label class="form-label text-muted" for="textdecoration-showcode">Show Code</label>
+                                <input id="textdecoration-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1092,7 +1098,8 @@ export default {
                         <div class="live-preview">
                             <p class="text-decoration-underline">This text has a line underneath it.</p>
                             <p class="text-decoration-line-through">This text has a line going through it.</p>
-                            <b-link href="#" class="text-decoration-none">This link has its text decoration removed</b-link>
+                            <b-link class="text-decoration-none" href="#">This link has its text decoration removed
+                            </b-link>
                         </div>
 
                         <div class="d-none code-view">
@@ -1115,9 +1122,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Text Truncation</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="texttruncation-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="texttruncation-showcode" />
+                                <label class="form-label text-muted" for="texttruncation-showcode">Show Code</label>
+                                <input id="texttruncation-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1132,8 +1139,10 @@ export default {
 
                         <div class="live-preview">
                             <b-row>
-                                <b-col cols="2"  class="text-truncate">This text is quite long, and will be truncated once
-                                    displayed.</b-col>
+                                <b-col class="text-truncate" cols="2">This text is quite long, and will be truncated
+                                    once
+                                    displayed.
+                                </b-col>
                             </b-row>
 
                             <span class="d-inline-block text-truncate" style="max-width: 150px;">This text is quite
@@ -1163,9 +1172,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Visibility</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="visibility-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="visibility-showcode" />
+                                <label class="form-label text-muted" for="visibility-showcode">Show Code</label>
+                                <input id="visibility-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1199,8 +1208,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Clearfix</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="clearfix-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="clearfix-showcode" />
+                                <label class="form-label text-muted" for="clearfix-showcode">Show Code</label>
+                                <input id="clearfix-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1212,8 +1221,8 @@ export default {
                         </p>
                         <div class="live-preview">
                             <div class="bg-light clearfix p-3">
-                                <b-button variant="secondary" class="float-start">Example Button floated left</b-button>
-                                <b-button variant="success" class="float-end">Example Button floated right</b-button>
+                                <b-button class="float-start" variant="secondary">Example Button floated left</b-button>
+                                <b-button class="float-end" variant="success">Example Button floated right</b-button>
                             </div>
                         </div>
 

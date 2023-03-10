@@ -50,7 +50,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col cols="12">
                 <b-card no-body>
@@ -66,100 +66,100 @@ export default {
                         <div class="table-responsive">
                             <table class="table table-bordered table-nowrap mb-0">
                                 <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col" class="text-center">
-                                            xs
-                                            <br />
-                                            <span class="fw-normal">&lt;576px</span>
-                                        </th>
-                                        <th scope="col" class="text-center">
-                                            sm
-                                            <br />
-                                            <span class="fw-normal">≥576px</span>
-                                        </th>
-                                        <th scope="col" class="text-center">
-                                            md
-                                            <br />
-                                            <span class="fw-normal">≥768px</span>
-                                        </th>
-                                        <th scope="col" class="text-center">
-                                            lg
-                                            <br />
-                                            <span class="fw-normal">≥992px</span>
-                                        </th>
-                                        <th scope="col" class="text-center">
-                                            xl
-                                            <br />
-                                            <span class="fw-normal">≥1200px</span>
-                                        </th>
-                                        <th scope="col" class="text-center">
-                                            xxl
-                                            <br />
-                                            <span class="fw-normal">≥1400px</span>
-                                        </th>
-                                    </tr>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th class="text-center" scope="col">
+                                        xs
+                                        <br/>
+                                        <span class="fw-normal">&lt;576px</span>
+                                    </th>
+                                    <th class="text-center" scope="col">
+                                        sm
+                                        <br/>
+                                        <span class="fw-normal">≥576px</span>
+                                    </th>
+                                    <th class="text-center" scope="col">
+                                        md
+                                        <br/>
+                                        <span class="fw-normal">≥768px</span>
+                                    </th>
+                                    <th class="text-center" scope="col">
+                                        lg
+                                        <br/>
+                                        <span class="fw-normal">≥992px</span>
+                                    </th>
+                                    <th class="text-center" scope="col">
+                                        xl
+                                        <br/>
+                                        <span class="fw-normal">≥1200px</span>
+                                    </th>
+                                    <th class="text-center" scope="col">
+                                        xxl
+                                        <br/>
+                                        <span class="fw-normal">≥1400px</span>
+                                    </th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row">Grid behavior</th>
-                                        <td>Horizontal at all times</td>
-                                        <td colspan="5">Collapsed to start, horizontal above breakpoints</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row">Max container width</th>
-                                        <td>None (auto)</td>
-                                        <td>540px</td>
-                                        <td>720px</td>
-                                        <td>960px</td>
-                                        <td>1140px</td>
-                                        <td>1320px</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row">Class prefix</th>
-                                        <td>
-                                            <code>col-</code>
-                                        </td>
-                                        <td>
-                                            <code>col-sm-</code>
-                                        </td>
-                                        <td>
-                                            <code>col-md-</code>
-                                        </td>
-                                        <td>
-                                            <code>col-lg-</code>
-                                        </td>
-                                        <td>
-                                            <code>col-xl-</code>
-                                        </td>
-                                        <td>
-                                            <code>col-xxl-</code>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row"># of columns</th>
-                                        <td colspan="6">12</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row">Gutter width</th>
-                                        <td colspan="6">24px (12px on each side of a column)</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row">Custom gutters</th>
-                                        <td colspan="6">Yes</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row">Nestable</th>
-                                        <td colspan="6">Yes</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row">Offsets</th>
-                                        <td colspan="6">Yes</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-nowrap" scope="row">Column ordering</th>
-                                        <td colspan="6">Yes</td>
-                                    </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Grid behavior</th>
+                                    <td>Horizontal at all times</td>
+                                    <td colspan="5">Collapsed to start, horizontal above breakpoints</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Max container width</th>
+                                    <td>None (auto)</td>
+                                    <td>540px</td>
+                                    <td>720px</td>
+                                    <td>960px</td>
+                                    <td>1140px</td>
+                                    <td>1320px</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Class prefix</th>
+                                    <td>
+                                        <code>col-</code>
+                                    </td>
+                                    <td>
+                                        <code>col-sm-</code>
+                                    </td>
+                                    <td>
+                                        <code>col-md-</code>
+                                    </td>
+                                    <td>
+                                        <code>col-lg-</code>
+                                    </td>
+                                    <td>
+                                        <code>col-xl-</code>
+                                    </td>
+                                    <td>
+                                        <code>col-xxl-</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row"># of columns</th>
+                                    <td colspan="6">12</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Gutter width</th>
+                                    <td colspan="6">24px (12px on each side of a column)</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Custom gutters</th>
+                                    <td colspan="6">Yes</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Nestable</th>
+                                    <td colspan="6">Yes</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Offsets</th>
+                                    <td colspan="6">Yes</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Column ordering</th>
+                                    <td colspan="6">Yes</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -175,9 +175,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Vertical alignment (align-items-start)</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="verticl-align-start" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="verticl-align-start" />
+                                <label class="form-label text-muted" for="verticl-align-start">Show Code</label>
+                                <input id="verticl-align-start" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -235,9 +235,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Vertical alignment (align-items-center)</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="verticl-align-center" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="verticl-align-center" />
+                                <label class="form-label text-muted" for="verticl-align-center">Show Code</label>
+                                <input id="verticl-align-center" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -296,8 +296,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Vertical alignment (align-items-end)</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="default" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="default" />
+                                <label class="form-label text-muted" for="default">Show Code</label>
+                                <input id="default" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -355,8 +355,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Align Self</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="align-self" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="align-self" />
+                                <label class="form-label text-muted" for="align-self">Show Code</label>
+                                <input id="align-self" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -373,13 +373,13 @@ export default {
                         <div class="live-preview">
                             <div class="bg-light p-3 text-center">
                                 <b-row class="g-2" style="min-height: 9rem;">
-                                    <b-col sm="4" class="align-self-start">
+                                    <b-col class="align-self-start" sm="4">
                                         <div class="bg-soft-primary text-primary rounded p-2">align-self-start</div>
                                     </b-col>
-                                    <b-col sm="4" class="align-self-center">
+                                    <b-col class="align-self-center" sm="4">
                                         <div class="bg-soft-primary text-primary rounded p-2">align-self-center</div>
                                     </b-col>
-                                    <b-col sm="4" class="align-self-end">
+                                    <b-col class="align-self-end" sm="4">
                                         <div class="bg-soft-primary text-primary rounded p-2">align-self-end</div>
                                     </b-col>
                                 </b-row>
@@ -414,8 +414,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Horizontal Alignment</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="horizontal-align" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="horizontal-align" />
+                                <label class="form-label text-muted" for="horizontal-align">Show Code</label>
+                                <input id="horizontal-align" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -439,13 +439,15 @@ export default {
                                 <b-row class="justify-content-center">
                                     <b-col sm="4">
                                         <div class="bg-soft-primary text-primary rounded p-2 mt-2 mt-sm-0">
-                                            justify-content-center</div>
+                                            justify-content-center
+                                        </div>
                                     </b-col>
                                 </b-row>
                                 <b-row class="justify-content-end">
                                     <b-col sm="4">
                                         <div class="bg-soft-primary text-primary rounded p-2 mt-2 mt-sm-0">
-                                            justify-content-end</div>
+                                            justify-content-end
+                                        </div>
                                     </b-col>
                                 </b-row>
                             </div>

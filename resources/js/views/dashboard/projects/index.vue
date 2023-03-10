@@ -13,85 +13,85 @@ import Status from "./status.vue";
 import ActiveProjects from "./active-projects.vue";
 
 export default {
-  page: {
-    title: "Projects",
-    meta: [{ name: "description", content: appConfig.description }],
-  },
-  data() {
-    return {
-      title: "Projects",
-      items: [
-        {
-          text: "Dashboards",
-          href: "/",
-        },
-        {
-          text: "Projects",
-          active: true,
-        },
-      ],
-    };
-  },
-  components: {
-    Layout,
-    PageHeader,
-    Widgets,
-    Schedules,
-    Project,
-    Task,
-    Member,
-    Chat,
-    ActiveProjects,
-    Status
-  },
+    page: {
+        title: "Projects",
+        meta: [{name: "description", content: appConfig.description}],
+    },
+    data() {
+        return {
+            title: "Projects",
+            items: [
+                {
+                    text: "Dashboards",
+                    href: "/",
+                },
+                {
+                    text: "Projects",
+                    active: true,
+                },
+            ],
+        };
+    },
+    components: {
+        Layout,
+        PageHeader,
+        Widgets,
+        Schedules,
+        Project,
+        Task,
+        Member,
+        Chat,
+        ActiveProjects,
+        Status
+    },
 };
 </script>
 
 <template>
-  <Layout>
-    <PageHeader :title="title" :items="items" />
+    <Layout>
+        <PageHeader :items="items" :title="title"/>
 
-    <b-row class="project-wrapper">
-      <b-col xxl="8">
-        <b-row>
-          <Widgets />
-          <b-col xl="4">
-          </b-col>
-          <b-col xl="4">
-          </b-col>
+        <b-row class="project-wrapper">
+            <b-col xxl="8">
+                <b-row>
+                    <Widgets/>
+                    <b-col xl="4">
+                    </b-col>
+                    <b-col xl="4">
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col xl="12">
+                        <Project/>
+                    </b-col>
+                </b-row>
+            </b-col>
+
+            <b-col xxl="4">
+                <Schedules/>
+            </b-col>
         </b-row>
+
         <b-row>
-          <b-col xl="12">
-            <Project />
-          </b-col>
+            <b-col xl="7">
+                <ActiveProjects/>
+            </b-col>
+            <b-col xl="5">
+                <Task/>
+            </b-col>
         </b-row>
-      </b-col>
 
-      <b-col xxl="4">
-        <Schedules />
-      </b-col>
-    </b-row>
+        <b-row>
+            <b-col xxl="4">
+                <Member/>
+            </b-col>
+            <b-col lg="6" xxl="4">
+                <Chat/>
+            </b-col>
+            <b-col lg="6" xxl="4">
+                <Status/>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col xl="7">
-        <ActiveProjects />
-      </b-col>
-      <b-col xl="5">
-        <Task />
-      </b-col>
-    </b-row>
-
-    <b-row>
-      <b-col xxl="4">
-        <Member />
-      </b-col>
-      <b-col xxl="4" lg="6">
-        <Chat />
-      </b-col>
-      <b-col xxl="4" lg="6">
-        <Status />
-      </b-col>
-    </b-row>
-
-  </Layout>
+    </Layout>
 </template>

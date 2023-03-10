@@ -10,10 +10,10 @@ export default {
                 text: "Email",
                 href: "/",
             },
-            {
-                text: "Basic Action",
-                active: true,
-            },
+                {
+                    text: "Basic Action",
+                    active: true,
+                },
             ],
         };
     },
@@ -21,9 +21,7 @@ export default {
         Layout,
         PageHeader,
     },
-    methods: {
-
-    },
+    methods: {},
     mounted() {
 
     },
@@ -32,7 +30,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <div class="justify-content-between d-flex align-items-center mt-3 mb-4">
@@ -41,33 +39,36 @@ export default {
             </b-col>
             <b-col cols="12">
                 <table class="body-wrap"
-                    style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
+                       style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
                     <tr style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                         <td style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;"
                             valign="top"></td>
-                        <td class="container" width="600"
+                        <td class="container"
                             style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;"
-                            valign="top">
+                            valign="top"
+                            width="600">
                             <div class="content"
-                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
-                                <table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action"
-                                    itemscope itemtype="http://schema.org/ConfirmAction"
-                                    style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; margin: 0; border: none;">
+                                 style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
+                                <table cellpadding="0" cellspacing="0" class="main" itemprop="action" itemscope
+                                       itemtype="http://schema.org/ConfirmAction"
+                                       style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; margin: 0; border: none;"
+                                       width="100%">
                                     <tr style="font-family: 'Roboto', sans-serif; font-size: 14px; margin: 0;">
                                         <td class="content-wrap"
                                             style="font-family: 'Roboto', sans-serif; box-sizing: border-box; color: #495057; font-size: 14px; vertical-align: top; margin: 0;padding: 30px; box-shadow: 0 3px 15px rgba(30,32,37,.06); ;border-radius: 7px; background-color: #fff;"
                                             valign="top">
-                                            <meta itemprop="name" content="Confirm Email"
-                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;" />
-                                            <table width="100%" cellpadding="0" cellspacing="0"
-                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                            <meta content="Confirm Email" itemprop="name"
+                                                  style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"/>
+                                            <table cellpadding="0" cellspacing="0"
+                                                   style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"
+                                                   width="100%">
                                                 <tr
                                                     style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                                                     <td class="content-block"
                                                         style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                                         valign="top">
                                                         <div style="margin-bottom: 15px;">
-                                                            <img src="@/assets/images/logo-dark.png" alt="" height="23">
+                                                            <img alt="" height="23" src="@/assets/images/logo-dark.png">
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -107,10 +108,12 @@ export default {
                                                         style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 24px;"
                                                         valign="top">
                                                         <b-link href="#" itemprop="url"
-                                                            style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: .8125rem;font-weight: 400; color: #FFF; text-decoration: none; text-align: center; cursor: pointer; display: inline-block; border-radius: .25rem; text-transform: capitalize; background-color: #0ab39c; margin: 0; border-color: #0ab39c; border-style: solid; border-width: 1px; padding: .5rem .9rem;"
-                                                            onMouseOver="this.style.background='#099885'"
-                                                            onMouseOut="this.style.background='#0ab39c'">Read More
-                                                            &#8594;</b-link>
+                                                                onMouseOut="this.style.background='#0ab39c'"
+                                                                onMouseOver="this.style.background='#099885'"
+                                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: .8125rem;font-weight: 400; color: #FFF; text-decoration: none; text-align: center; cursor: pointer; display: inline-block; border-radius: .25rem; text-transform: capitalize; background-color: #0ab39c; margin: 0; border-color: #0ab39c; border-style: solid; border-width: 1px; padding: .5rem .9rem;">
+                                                            Read More
+                                                            &#8594;
+                                                        </b-link>
                                                     </td>
                                                 </tr>
 
@@ -120,8 +123,9 @@ export default {
                                                         style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0; padding-top: 15px"
                                                         valign="top">
                                                         <div style="display: flex; align-items: center;">
-                                                            <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                                height="35" width="35" style="border-radius: 50px;">
+                                                            <img alt="" height="35"
+                                                                 src="@/assets/images/users/avatar-3.jpg"
+                                                                 style="border-radius: 50px;" width="35">
                                                             <div style="margin-left: 8px;">
                                                                 <span style="font-weight: 600;">Luis Rocha</span>
                                                                 <p
@@ -167,33 +171,36 @@ export default {
             </b-col>
             <b-col cols="12">
                 <table class="body-wrap"
-                    style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
+                       style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
                     <tr style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                         <td style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;"
                             valign="top"></td>
-                        <td class="container" width="600"
+                        <td class="container"
                             style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;"
-                            valign="top">
+                            valign="top"
+                            width="600">
                             <div class="content"
-                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
-                                <table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action"
-                                    itemscope itemtype="http://schema.org/ConfirmAction"
-                                    style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; margin: 0; border: none;">
+                                 style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
+                                <table cellpadding="0" cellspacing="0" class="main" itemprop="action" itemscope
+                                       itemtype="http://schema.org/ConfirmAction"
+                                       style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; margin: 0; border: none;"
+                                       width="100%">
                                     <tr style="font-family: 'Roboto', sans-serif; font-size: 14px; margin: 0;">
                                         <td class="content-wrap"
                                             style="font-family: 'Roboto', sans-serif; box-sizing: border-box; color: #495057; font-size: 14px; vertical-align: top; margin: 0;padding: 30px; box-shadow: 0 3px 15px rgba(30,32,37,.06); ;border-radius: 7px; background-color: #fff;"
                                             valign="top">
-                                            <meta itemprop="name" content="Confirm Email"
-                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;" />
-                                            <table width="100%" cellpadding="0" cellspacing="0"
-                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                            <meta content="Confirm Email" itemprop="name"
+                                                  style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"/>
+                                            <table cellpadding="0" cellspacing="0"
+                                                   style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"
+                                                   width="100%">
                                                 <tr
                                                     style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                                                     <td class="content-block"
                                                         style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                                         valign="top">
                                                         <div style="text-align: center;margin-bottom: 15px;">
-                                                            <img src="@/assets/images/logo-dark.png" alt="" height="23">
+                                                            <img alt="" height="23" src="@/assets/images/logo-dark.png">
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -221,10 +228,13 @@ export default {
                                                         style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 24px; text-align: center;"
                                                         valign="top">
                                                         <b-link href="#" itemprop="url"
-                                                            style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: .8125rem;font-weight: 400; color: #FFF; text-decoration: none;text-align: center; cursor: pointer; display: inline-block; border-radius: .25rem; text-transform: capitalize; background-color: #0ab39c; margin: 0; border-color: #0ab39c; border-style: solid; border-width: 1px; padding: .5rem .9rem;"
-                                                            onMouseOver="this.style.background='#099885'"
-                                                            onMouseOut="this.style.background='#0ab39c'">Yes, subscribe
-                                                            me</b-link>
+                                                                onMouseOut="this.style.background='#0ab39c'"
+                                                                onMouseOver="this.style.background='#099885'"
+                                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: .8125rem;font-weight: 400; color: #FFF; text-decoration: none;text-align: center; cursor: pointer; display: inline-block; border-radius: .25rem; text-transform: capitalize; background-color: #0ab39c; margin: 0; border-color: #0ab39c; border-style: solid; border-width: 1px; padding: .5rem .9rem;">
+                                                            Yes,
+                                                            subscribe
+                                                            me
+                                                        </b-link>
                                                     </td>
                                                 </tr>
 
@@ -274,33 +284,36 @@ export default {
             </b-col>
             <b-col cols="12">
                 <table class="body-wrap"
-                    style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
+                       style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
                     <tr style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                         <td style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;"
                             valign="top"></td>
-                        <td class="container" width="600"
+                        <td class="container"
                             style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;"
-                            valign="top">
+                            valign="top"
+                            width="600">
                             <div class="content"
-                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
-                                <table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action"
-                                    itemscope itemtype="http://schema.org/ConfirmAction"
-                                    style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; margin: 0; border: none;">
+                                 style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
+                                <table cellpadding="0" cellspacing="0" class="main" itemprop="action" itemscope
+                                       itemtype="http://schema.org/ConfirmAction"
+                                       style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; margin: 0; border: none;"
+                                       width="100%">
                                     <tr style="font-family: 'Roboto', sans-serif; font-size: 14px; margin: 0;">
                                         <td class="content-wrap"
                                             style="font-family: 'Roboto', sans-serif; box-sizing: border-box; color: #495057; font-size: 14px; vertical-align: top; margin: 0;padding: 30px; box-shadow: 0 3px 15px rgba(30,32,37,.06); ;border-radius: 7px; background-color: #fff;"
                                             valign="top">
-                                            <meta itemprop="name" content="Confirm Email"
-                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;" />
-                                            <table width="100%" cellpadding="0" cellspacing="0"
-                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                            <meta content="Confirm Email" itemprop="name"
+                                                  style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"/>
+                                            <table cellpadding="0" cellspacing="0"
+                                                   style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"
+                                                   width="100%">
                                                 <tr
                                                     style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                                                     <td class="content-block"
                                                         style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                                         valign="top">
                                                         <div style="text-align: center;margin-bottom: 15px;">
-                                                            <img src="@/assets/images/logo-dark.png" alt="" height="23">
+                                                            <img alt="" height="23" src="@/assets/images/logo-dark.png">
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -332,8 +345,10 @@ export default {
                                                         style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 22px; text-align: center;"
                                                         valign="top">
                                                         <b-link href="#" itemprop="url"
-                                                            style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: .8125rem; color: #FFF; text-decoration: none; font-weight: 400; text-align: center; cursor: pointer; display: inline-block; border-radius: .25rem; text-transform: capitalize; background-color: #405189; margin: 0; border-color: #405189; border-style: solid; border-width: 1px; padding: .5rem .9rem;">Verify
-                                                            Your Email</b-link>
+                                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: .8125rem; color: #FFF; text-decoration: none; font-weight: 400; text-align: center; cursor: pointer; display: inline-block; border-radius: .25rem; text-transform: capitalize; background-color: #405189; margin: 0; border-color: #405189; border-style: solid; border-width: 1px; padding: .5rem .9rem;">
+                                                            Verify
+                                                            Your Email
+                                                        </b-link>
                                                     </td>
                                                 </tr>
                                                 <tr
@@ -343,7 +358,8 @@ export default {
                                                         valign="top">
                                                         <p style="margin-bottom: 10px;">Or verify using this link: </p>
                                                         <b-link href="https://themesbrand.com/velzon/"
-                                                            target="_blank">https://themesbrand.com/velzon/</b-link>
+                                                                target="_blank">https://themesbrand.com/velzon/
+                                                        </b-link>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -376,26 +392,29 @@ export default {
             </b-col>
             <b-col cols="12">
                 <table class="body-wrap"
-                    style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
+                       style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: transparent; margin: 0;">
                     <tr style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                         <td style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;"
                             valign="top"></td>
-                        <td class="container" width="600"
+                        <td class="container"
                             style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;"
-                            valign="top">
+                            valign="top"
+                            width="600">
                             <div class="content"
-                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
-                                <table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action"
-                                    itemscope itemtype="http://schema.org/ConfirmAction"
-                                    style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; margin: 0; border: none;">
+                                 style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
+                                <table cellpadding="0" cellspacing="0" class="main" itemprop="action" itemscope
+                                       itemtype="http://schema.org/ConfirmAction"
+                                       style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; margin: 0; border: none;"
+                                       width="100%">
                                     <tr style="font-family: 'Roboto', sans-serif; font-size: 14px; margin: 0;">
                                         <td class="content-wrap"
                                             style="font-family: 'Roboto', sans-serif; box-sizing: border-box; color: #495057; font-size: 14px; vertical-align: top; margin: 0;padding: 30px; box-shadow: 0 3px 15px rgba(30,32,37,.06); ;border-radius: 7px; background-color: #fff;"
                                             valign="top">
-                                            <meta itemprop="name" content="Confirm Email"
-                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;" />
-                                            <table width="100%" cellpadding="0" cellspacing="0"
-                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+                                            <meta content="Confirm Email" itemprop="name"
+                                                  style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"/>
+                                            <table cellpadding="0" cellspacing="0"
+                                                   style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"
+                                                   width="100%">
                                                 <tr
                                                     style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                                                     <td class="content-block"
@@ -403,7 +422,7 @@ export default {
                                                         valign="top">
                                                         <div style="text-align: center;">
                                                             <i data-feather="lock"
-                                                                style="color: #0ab39c;fill: rgba(10,179,156,.16); height: 30px; width: 30px;"></i>
+                                                               style="color: #0ab39c;fill: rgba(10,179,156,.16); height: 30px; width: 30px;"></i>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -435,8 +454,10 @@ export default {
                                                         style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 22px; text-align: center;"
                                                         valign="top">
                                                         <b-link href="#" itemprop="url"
-                                                            style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: .8125rem; color: #FFF; text-decoration: none; font-weight: 400; text-align: center; cursor: pointer; display: inline-block; border-radius: .25rem; text-transform: capitalize; background-color: #405189; margin: 0; border-color: #405189; border-style: solid; border-width: 1px; padding: .5rem .9rem;">Reset
-                                                            Password</b-link>
+                                                                style="font-family: 'Roboto', sans-serif; box-sizing: border-box; font-size: .8125rem; color: #FFF; text-decoration: none; font-weight: 400; text-align: center; cursor: pointer; display: inline-block; border-radius: .25rem; text-transform: capitalize; background-color: #405189; margin: 0; border-color: #405189; border-style: solid; border-width: 1px; padding: .5rem .9rem;">
+                                                            Reset
+                                                            Password
+                                                        </b-link>
                                                     </td>
                                                 </tr>
 
@@ -471,8 +492,11 @@ export default {
                                 </table>
                                 <div style="text-align: center; margin: 28px auto 0px auto;">
                                     <h4>Need Help ?</h4>
-                                    <p style="color: #878a99;">Please send and feedback or bug info to <b-link href=""
-                                            style="font-weight: 500px;">info@velzon.com</b-link></p>
+                                    <p style="color: #878a99;">Please send and feedback or bug info to
+                                        <b-link href=""
+                                                style="font-weight: 500px;">info@velzon.com
+                                        </b-link>
+                                    </p>
                                     <p
                                         style="font-family: 'Roboto', sans-serif; font-size: 14px;color: #98a6ad; margin: 0px;">
                                         2022 Velzon. Design & Develop by Themesbrand</p>

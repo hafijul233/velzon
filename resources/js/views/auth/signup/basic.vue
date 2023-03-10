@@ -1,8 +1,6 @@
 <script>
 export default {
-    methods: {
-
-    },
+    methods: {},
     mounted() {
         var password = document.getElementById("password-input");
         password.onchange = this.validatePassword;
@@ -19,7 +17,6 @@ export default {
                     });
                 });
             });
-
 
 
         var myInput = document.getElementById("password-input");
@@ -86,13 +83,13 @@ export default {
 
 <template>
     <div class="auth-page-wrapper pt-5">
-        <div class="auth-one-bg-position auth-one-bg" id="auth-particles">
+        <div id="auth-particles" class="auth-one-bg-position auth-one-bg">
             <div class="bg-overlay"></div>
 
             <div class="shape">
 
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 1440 120">
+                <svg version="1.1" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
                 </svg>
             </div>
@@ -211,7 +208,7 @@ export default {
                     background_repeat: 'no-repeat',
                     background_size: 'cover',
                 },
-            }" />
+            }"/>
         </div>
 
         <div class="auth-page-content">
@@ -220,8 +217,8 @@ export default {
                     <b-col lg="12">
                         <div class="text-center mt-sm-5 mb-4 text-white-50">
                             <div>
-                                <router-link to="/" class="d-inline-block auth-logo">
-                                    <img src="@/assets/images/logo-light.png" alt="" height="20">
+                                <router-link class="d-inline-block auth-logo" to="/">
+                                    <img alt="" height="20" src="@/assets/images/logo-light.png">
                                 </router-link>
                             </div>
                             <p class="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
@@ -230,8 +227,8 @@ export default {
                 </b-row>
 
                 <b-row class="justify-content-center">
-                    <b-col md="8" lg="6" xl="5">
-                        <b-card no-body class="mt-4">
+                    <b-col lg="6" md="8" xl="5">
+                        <b-card class="mt-4" no-body>
 
                             <b-card-body class="p-4">
                                 <div class="text-center mt-2">
@@ -242,19 +239,19 @@ export default {
                                     <form class="needs-validation" novalidate>
 
                                         <div class="mb-3">
-                                            <label for="useremail" class="form-label">Email <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="email" class="form-control" id="useremail"
-                                                placeholder="Enter email address" required>
+                                            <label class="form-label" for="useremail">Email <span
+                                                class="text-danger">*</span></label>
+                                            <input id="useremail" class="form-control" placeholder="Enter email address"
+                                                   required type="email">
                                             <div class="invalid-feedback">
                                                 Please enter email
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="username" class="form-label">Username <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" id="username"
-                                                placeholder="Enter username" required>
+                                            <label class="form-label" for="username">Username <span
+                                                class="text-danger">*</span></label>
+                                            <input id="username" class="form-control" placeholder="Enter username"
+                                                   required type="text">
                                             <div class="invalid-feedback">
                                                 Please enter username
                                             </div>
@@ -263,14 +260,15 @@ export default {
                                         <div class="mb-3">
                                             <label class="form-label" for="password-input">Password</label>
                                             <div class="position-relative auth-pass-inputgroup">
-                                                <input type="password" class="form-control pe-5 password-input"
-                                                    onpaste="return false" placeholder="Enter password"
-                                                    id="password-input" aria-describedby="passwordInput"
-                                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-                                                <b-button variant="link"
-                                                    class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
-                                                    type="button" id="password-addon"><i
-                                                        class="ri-eye-fill align-middle"></i></b-button>
+                                                <input id="password-input" aria-describedby="passwordInput"
+                                                       class="form-control pe-5 password-input" onpaste="return false"
+                                                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                                       placeholder="Enter password"
+                                                       required type="password">
+                                                <b-button id="password-addon"
+                                                          class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                          type="button" variant="link"><i
+                                                    class="ri-eye-fill align-middle"></i></b-button>
                                                 <div class="invalid-feedback">
                                                     Please enter password
                                                 </div>
@@ -279,10 +277,13 @@ export default {
 
                                         <div class="mb-4">
                                             <p class="mb-0 fs-12 text-muted fst-italic">By registering you agree to the
-                                                Velzon <b-link href="#"
-                                                    class="text-primary text-decoration-underline fst-normal fw-medium">
+                                                Velzon
+                                                <b-link
+                                                    class="text-primary text-decoration-underline fst-normal fw-medium"
+                                                    href="#">
                                                     Terms
-                                                    of Use</b-link>
+                                                    of Use
+                                                </b-link>
                                             </p>
                                         </div>
                                         <div id="password-contain" class="p-3 bg-light mb-2 rounded">
@@ -297,8 +298,9 @@ export default {
                                             </p>
                                         </div>
                                         <div class="mt-4">
-                                            <b-button variant="success" class="w-100" type="button">Sign
-                                                Up</b-button>
+                                            <b-button class="w-100" type="button" variant="success">Sign
+                                                Up
+                                            </b-button>
                                         </div>
 
                                         <div class="mt-4 text-center">
@@ -307,18 +309,18 @@ export default {
                                             </div>
 
                                             <div>
-                                                <b-button type="button" variant="primary"
-                                                    class="btn-icon"><i
-                                                        class="ri-facebook-fill fs-16"></i></b-button>
-                                                <b-button type="button" variant="danger"
-                                                    class="btn-icon ms-1"><i
-                                                        class="ri-google-fill fs-16"></i></b-button>
-                                                <b-button type="button" variant="dark"
-                                                    class="btn-icon ms-1"><i
-                                                        class="ri-github-fill fs-16"></i></b-button>
-                                                <b-button type="button" variant="info"
-                                                    class="btn-icon ms-1"><i
-                                                        class="ri-twitter-fill fs-16"></i></b-button>
+                                                <b-button class="btn-icon" type="button"
+                                                          variant="primary"><i
+                                                    class="ri-facebook-fill fs-16"></i></b-button>
+                                                <b-button class="btn-icon ms-1" type="button"
+                                                          variant="danger"><i
+                                                    class="ri-google-fill fs-16"></i></b-button>
+                                                <b-button class="btn-icon ms-1" type="button"
+                                                          variant="dark"><i
+                                                    class="ri-github-fill fs-16"></i></b-button>
+                                                <b-button class="btn-icon ms-1" type="button"
+                                                          variant="info"><i
+                                                    class="ri-twitter-fill fs-16"></i></b-button>
                                             </div>
                                         </div>
                                     </form>
@@ -328,8 +330,10 @@ export default {
                         </b-card>
 
                         <div class="mt-4 text-center">
-                            <p class="mb-0">Already have an account ? <router-link to="/auth/signin-basic"
-                                    class="fw-semibold text-primary text-decoration-underline"> Signin </router-link>
+                            <p class="mb-0">Already have an account ?
+                                <router-link class="fw-semibold text-primary text-decoration-underline"
+                                             to="/auth/signin-basic"> Signin
+                                </router-link>
                             </p>
                         </div>
                     </b-col>
@@ -343,7 +347,7 @@ export default {
                     <b-col lg="12">
                         <div class="text-center">
                             <p class="mb-0 text-muted">&copy; {{ new Date().getFullYear() }} Velzon. Crafted with <i
-                                    class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                                class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                         </div>
                     </b-col>
                 </b-row>

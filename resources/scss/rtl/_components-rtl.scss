@@ -5,7 +5,7 @@
 ol,
 ul {
     padding-left: 0;
-  padding-right: 2rem;
+    padding-right: 2rem;
 }
 
 // Margin and Padding
@@ -20,16 +20,16 @@ ul {
             @each $size,
             $length in $spacers {
                 .#{$abbrev}#{$infix}-#{$size} {
-                    #{$prop}: $length  !important;
+                    #{$prop}: $length !important;
                 }
 
                 .#{$abbrev}e#{$infix}-#{$size} {
-                    #{$prop}-left: $length  !important;
+                    #{$prop}-left: $length !important;
                     #{$prop}-right: 0 !important;
                 }
 
                 .#{$abbrev}s#{$infix}-#{$size} {
-                    #{$prop}-right: $length  !important;
+                    #{$prop}-right: $length !important;
                     #{$prop}-left: 0 !important;
                 }
             }
@@ -40,27 +40,27 @@ ul {
         $length in $spacers {
             @if $size  !=0 {
                 .m#{$infix}-n#{$size} {
-                    margin: -$length  !important;
+                    margin: -$length !important;
                 }
 
                 .mt#{$infix}-n#{$size},
                 .my#{$infix}-n#{$size} {
-                    margin-top: -$length  !important;
+                    margin-top: -$length !important;
                 }
 
                 .me#{$infix}-n#{$size},
                 .mx#{$infix}-n#{$size} {
-                    margin-right: -$length  !important;
+                    margin-right: -$length !important;
                 }
 
                 .mb#{$infix}-n#{$size},
                 .my#{$infix}-n#{$size} {
-                    margin-bottom: -$length  !important;
+                    margin-bottom: -$length !important;
                 }
 
                 .ms#{$infix}-n#{$size},
                 .mx#{$infix}-n#{$size} {
-                    margin-left: -$length  !important;
+                    margin-left: -$length !important;
                 }
             }
         }
@@ -152,7 +152,7 @@ ul {
 
 
 // alert
-.alert-border-left{
+.alert-border-left {
     border-left: #{$alert-border-width} solid var(--#{$prefix}alert-border-color) !important;
     border-right: 3px solid;
 }
@@ -160,7 +160,8 @@ ul {
 .alert-dismissible {
     padding-right: $alert-padding-x;
     padding-left: $alert-dismissible-padding-r;
-    .btn-close{
+
+    .btn-close {
         right: auto;
         left: 0;
     }
@@ -176,27 +177,28 @@ ul {
 }
 
 
-.alert-label-icon{
+.alert-label-icon {
     padding-left: $alert-padding-x;
     padding-right: 60px;
-    .label-icon{
+
+    .label-icon {
         left: auto;
         right: 0;
     }
 }
 
-.alert-additional{
+.alert-additional {
     padding: 0;
 }
 
-.rounded-label{
-    .label-icon{
+.rounded-label {
+    .label-icon {
         border-radius: 30px 0 0 30px;
     }
 }
 
 // badge
-.badge-border{
+.badge-border {
     border: none;
     border-right: 2px solid;
 }
@@ -205,7 +207,7 @@ ul {
 .breadcrumb-item {
 
     // The separator between breadcrumbs (by default, a forward-slash: "/")
-    +.breadcrumb-item {
+    + .breadcrumb-item {
         padding-right: $breadcrumb-item-padding-x;
         padding-left: 0px;
 
@@ -219,7 +221,7 @@ ul {
 }
 
 
-//Buttons 
+//Buttons
 
 //button with icon
 .btn-label {
@@ -242,14 +244,14 @@ ul {
     }
 }
 
-.btn-group>:not(.btn-check)+.btn {
+.btn-group > :not(.btn-check) + .btn {
     border-radius: 0px;
     border-top-left-radius: $btn-border-radius;
     border-bottom-left-radius: $btn-border-radius;
 }
 
 
-.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
     border-radius: 0px;
     border-top-right-radius: $btn-border-radius;
     border-bottom-right-radius: $btn-border-radius;
@@ -268,8 +270,8 @@ ul {
 // step-arrow-nav
 .step-arrow-nav {
     .nav {
-        .nav-link{
-            &:before{
+        .nav-link {
+            &:before {
                 left: -14px;
                 right: auto;
             }
@@ -318,16 +320,17 @@ ul {
 // vertical-navs-step
 .vertical-navs-step {
     .nav {
-        .nav-link{
+        .nav-link {
             text-align: right;
-            .step-icon{
+
+            .step-icon {
                 float: right;
             }
         }
     }
 }
 
-// Accordion 
+// Accordion
 .accordion-button::after {
     margin-right: auto;
     margin-left: 0px;
@@ -347,23 +350,24 @@ ul {
     }
 }
 
-.custom-accordionwithicon{
-    .accordion-button::after{
+.custom-accordionwithicon {
+    .accordion-button::after {
         content: "\F0141";
     }
 }
 
 // Nav
 
-.nav{
+.nav {
     padding-right: 0;
 }
 
 
 // Dropdown
-.dropdown-item{
+.dropdown-item {
     text-align: right;
 }
+
 .dropdown-toggle::after {
     margin-right: .255em;
     margin-left: auto;
@@ -375,27 +379,28 @@ ul {
 }
 
 // list
-.list-unstyled{
+.list-unstyled {
     padding-right: 0;
 }
 
 .list-group {
     padding-right: 0px;
 }
+
 .list-inline-item {
     &:not(:last-child) {
-      margin-right: 0;
-      margin-left: $list-inline-padding;
+        margin-right: 0;
+        margin-left: $list-inline-padding;
     }
 }
 
 // pagination
 
-.pagination{
+.pagination {
     padding: 0;
 }
 
-.page-item{
+.page-item {
     &:first-child .page-link {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -420,13 +425,13 @@ ul {
 
 //Progress
 .custom-progress {
-    .progress-bar::before{
+    .progress-bar::before {
         right: auto;
         left: 2px;
     }
 }
 
-.progress-label .progress-bar .label{
+.progress-label .progress-bar .label {
     right: auto;
     left: -9px;
 }
@@ -443,26 +448,27 @@ ul {
 }
 
 // position
-.start-0, .start-50, .start-100{
-    &.translate-middle{
+.start-0, .start-50, .start-100 {
+    &.translate-middle {
         transform: translate(50%, -50%) !important;
     }
 }
 
-.start-0{
+.start-0 {
     right: 0%;
     left: auto !important;
 }
 
-.start-50{
+.start-50 {
     right: 50%;
     left: auto !important;
-    &.translate-middle-x{
+
+    &.translate-middle-x {
         transform: translateX(50%) !important;
     }
 }
 
-.start-100{
+.start-100 {
     right: 100%;
     left: auto !important;
 }
@@ -495,13 +501,13 @@ ul {
     transform: translateX(-100%)
 }
 
-.offcanvas.offcanvas-end{
+.offcanvas.offcanvas-end {
     transform: translateX(-100%);
 }
 
 //table
 
-.table .form-check label{
+.table .form-check label {
     padding-right: 0.4rem;
 }
 
@@ -520,7 +526,7 @@ ul {
 @mixin progress-variant($bg) {
     .progress-bar {
         &::after {
-            border-right-color: $bg  !important;
+            border-right-color: $bg !important;
             border-left-color: transparent !important;
         }
 
@@ -550,38 +556,39 @@ $value in $theme-colors {
 
 // validation
 .was-validated .form-control:invalid, .form-control.is-invalid,
-.was-validated .form-control:valid, .form-control.is-valid{
+.was-validated .form-control:valid, .form-control.is-valid {
     padding-right: $input-padding-x !important;
     padding-left: $input-height-inner;
     background-position: left $input-height-inner-quarter center !important;
 }
 
-.was-validated .form-select:invalid:not([multiple]):not([size]), 
-.was-validated .form-select:invalid:not([multiple])[size="1"], 
-.form-select.is-invalid:not([multiple]):not([size]), 
-.form-select.is-invalid:not([multiple])[size="1"]{
+.was-validated .form-select:invalid:not([multiple]):not([size]),
+.was-validated .form-select:invalid:not([multiple])[size="1"],
+.form-select.is-invalid:not([multiple]):not([size]),
+.form-select.is-invalid:not([multiple])[size="1"] {
     padding-right: $input-padding-x !important;
     padding-left: 4.95rem;
     background-position: left 0.9rem center, center left 2.7rem;
 }
 
-.was-validated textarea.form-control:invalid, 
-textarea.form-control.is-invalid{
+.was-validated textarea.form-control:invalid,
+textarea.form-control.is-invalid {
     background-position: top calc(0.375em + 0.25rem) left calc(0.375em + 0.25rem) !important;
 }
 
 //icon
-[class^=ri-], [class*=" ri-"]{
+[class^=ri-], [class*=" ri-"] {
     display: inline-block;
 }
 
-// .search-box 
-.search-box{
-    .form-control{
+// .search-box
+.search-box {
+    .form-control {
         padding-left: $input-padding-x;
         padding-right: 40px;
     }
-    .search-icon{
+
+    .search-icon {
         left: auto;
         right: 13px;
     }
@@ -594,14 +601,14 @@ textarea.form-control.is-invalid{
         border-left: none;
 
         &.blockquote-outline {
-            background-color: $card-bg  !important;
+            background-color: $card-bg !important;
             border: 1px solid;
             border-right: 3px solid;
         }
     }
 }
 
-.list-unstyled{
+.list-unstyled {
     padding-right: 0;
 }
 
@@ -609,27 +616,27 @@ textarea.form-control.is-invalid{
     padding-right: 0px;
 }
 
-.list-group-horizontal-md>.list-group-item:first-child {
+.list-group-horizontal-md > .list-group-item:first-child {
     border-bottom-right-radius: $border-radius;
     border-top-right-radius: $border-radius;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.list-group-horizontal-md>.list-group-item:last-child {
+.list-group-horizontal-md > .list-group-item:last-child {
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
 
-.list-group-horizontal-md>.list-group-item+.list-group-item {
+.list-group-horizontal-md > .list-group-item + .list-group-item {
     border-top-width: 1px;
     border-right-width: 0;
     border-left-width: 1px;
 }
 
-.list-group-horizontal-md>.list-group-item+.list-group-item.active {
+.list-group-horizontal-md > .list-group-item + .list-group-item.active {
     margin-right: -1px;
     border-right-width: 1px;
 }
@@ -644,32 +651,35 @@ textarea.form-control.is-invalid{
 
 // form
 input[type="email"],
-input[type="number"]{
+input[type="number"] {
     text-align: left
 }
 
 
 // form-check
-.form-check{
+.form-check {
     text-align: right;
     padding-right: 1.6em;
     padding-left: 0;
+
     .form-check-input {
         float: right;
         margin-left: 0;
         margin-right: -1.6em;
     }
 
-    &.card-radio{
+    &.card-radio {
         padding: 0;
     }
 }
+
 .form-check-inline {
     margin-right: 0;
     margin-left: $form-check-inline-margin-end;
 }
+
 .card-radio {
-    .form-check-input:checked + .form-check-label:before{
+    .form-check-input:checked + .form-check-label:before {
         right: auto;
         left: 6px;
     }
@@ -680,7 +690,8 @@ input[type="number"]{
 .form-switch {
     padding-left: 0;
     padding-right: $form-switch-padding-start;
-    .form-check-input{
+
+    .form-check-input {
         margin-left: 0;
         margin-right: $form-switch-padding-start * -1;
     }
@@ -689,29 +700,33 @@ input[type="number"]{
 .form-switch-md {
     padding-left: 0;
     padding-right: 2.5rem;
+
     .form-check-input {
         left: auto;
         right: -0.5rem;
     }
 }
 
-.form-switch-lg{
+.form-switch-lg {
     padding-left: 0;
     padding-right: 2.75rem;
+
     .form-check-input {
         left: auto;
         right: -0.75rem;
     }
 }
 
-.form-switch-right{
+.form-switch-right {
     padding-right: 0;
     padding-left: $form-check-padding-start * .5 !important;
+
     .form-check-input {
         float: left;
-        margin-left:  $form-check-padding-start * -1;
+        margin-left: $form-check-padding-start * -1;
         margin-right: 0;
     }
+
     label {
         margin-right: 0;
         margin-left: 1rem;
@@ -977,14 +992,14 @@ input[type="number"]{
 }
 
 
-.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: $border-radius !important;
     border-top-right-radius: $border-radius !important;
 }
 
-.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-right: -1px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -992,7 +1007,7 @@ input[type="number"]{
     border-top-left-radius: $border-radius;
 }
 
-.input-group.has-validation>:nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: $border-radius;

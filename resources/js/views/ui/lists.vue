@@ -50,16 +50,16 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Default List</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="basiclist-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="basiclist-showcode" />
+                                <label class="form-label text-muted" for="basiclist-showcode">Show Code</label>
+                                <input id="basiclist-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -101,15 +101,15 @@ export default {
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Active Item</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="listactive-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="listactive-showcode" />
+                                <label class="form-label text-muted" for="listactive-showcode">Show Code</label>
+                                <input id="listactive-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -121,7 +121,7 @@ export default {
                         </p>
                         <div class="live-preview">
                             <ul class="list-group">
-                                <li class="list-group-item active" aria-current="true">Send the billing agreement</li>
+                                <li aria-current="true" class="list-group-item active">Send the billing agreement</li>
                                 <li class="list-group-item">Send over all the documentation.</li>
                                 <li class="list-group-item">Meeting with daron to review the intake form</li>
                                 <li class="list-group-item">Check uikings theme and give customer support</li>
@@ -141,15 +141,15 @@ export default {
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Disabled Items</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="listdisabled-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="listdisabled-showcode" />
+                                <label class="form-label text-muted" for="listdisabled-showcode">Show Code</label>
+                                <input id="listdisabled-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -162,11 +162,11 @@ export default {
                         </p>
                         <div class="live-preview">
                             <ul class="list-group">
-                                <li class="list-group-item disabled" aria-disabled="true">
+                                <li aria-disabled="true" class="list-group-item disabled">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-1.jpg" alt
-                                                class="avatar-xs rounded-circle" />
+                                            <img alt class="avatar-xs rounded-circle"
+                                                 src="@/assets/images/users/avatar-1.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-2">James Ballard</div>
                                     </div>
@@ -174,8 +174,8 @@ export default {
                                 <li class="list-group-item">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                class="avatar-xs rounded-circle" />
+                                            <img alt class="avatar-xs rounded-circle"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-2">Nancy Martino</div>
                                     </div>
@@ -183,8 +183,8 @@ export default {
                                 <li class="list-group-item">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                class="avatar-xs rounded-circle" />
+                                            <img alt class="avatar-xs rounded-circle"
+                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-2">Henry Baird</div>
                                     </div>
@@ -192,8 +192,8 @@ export default {
                                 <li class="list-group-item">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                class="avatar-xs rounded-circle" />
+                                            <img alt class="avatar-xs rounded-circle"
+                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-2">Erica Kernan</div>
                                     </div>
@@ -248,14 +248,14 @@ Erica Kernan
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">List with Link</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="listlink-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="listlink-showcode" />
+                                <label class="form-label text-muted" for="listlink-showcode">Show Code</label>
+                                <input id="listlink-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -267,19 +267,19 @@ Erica Kernan
                         </p>
                         <div class="live-preview">
                             <div class="list-group list-group-fill-success">
-                                <b-link href="#" class="list-group-item list-group-item-action active">
+                                <b-link class="list-group-item list-group-item-action active" href="#">
                                     <i class="ri-download-2-fill align-middle me-2"></i>Category Download
                                 </b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action">
+                                <b-link class="list-group-item list-group-item-action" href="#">
                                     <i class="ri-shield-check-line align-middle me-2"></i>Security Access
                                 </b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action">
+                                <b-link class="list-group-item list-group-item-action" href="#">
                                     <i class="ri-database-2-line align-middle me-2"></i>Storage folder
                                 </b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action">
+                                <b-link class="list-group-item list-group-item-action" href="#">
                                     <i class="ri-notification-3-line align-middle me-2"></i>Push Notification
                                 </b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action disabled" tabindex="-1">
+                                <b-link class="list-group-item list-group-item-action disabled" href="#" tabindex="-1">
                                     <i class="ri-moon-fill align-middle me-2"></i>Dark Mode
                                 </b-link>
                             </div>
@@ -298,15 +298,15 @@ Erica Kernan
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">List with Button</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="listbutton-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="listbutton-showcode" />
+                                <label class="form-label text-muted" for="listbutton-showcode">Show Code</label>
+                                <input id="listbutton-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -318,20 +318,20 @@ Erica Kernan
                         </p>
                         <div class="live-preview">
                             <div class="list-group">
-                                <button type="button" class="list-group-item list-group-item-action active"
-                                    aria-current="true">
+                                <button aria-current="true" class="list-group-item list-group-item-action active"
+                                        type="button">
                                     <i class="ri-reply-fill align-middle me-2"></i>Reply
                                 </button>
-                                <button type="button" class="list-group-item list-group-item-action">
+                                <button class="list-group-item list-group-item-action" type="button">
                                     <i class="ri-share-forward-fill align-middle me-2"></i>Forward Message
                                 </button>
-                                <button type="button" class="list-group-item list-group-item-action">
+                                <button class="list-group-item list-group-item-action" type="button">
                                     <i class="ri-equalizer-line align-middle me-2"></i>Filter Message
                                 </button>
-                                <button type="button" class="list-group-item list-group-item-action">
+                                <button class="list-group-item list-group-item-action" type="button">
                                     <i class="ri-delete-bin-5-line align-middle me-2"></i>Delete Message
                                 </button>
-                                <button type="button" class="list-group-item list-group-item-action" disabled>
+                                <button class="list-group-item list-group-item-action" disabled type="button">
                                     <i class="ri-forbid-line align-middle me-2"></i>Block "Mark Spencer
                                 </button>
                             </div>
@@ -349,14 +349,14 @@ Erica Kernan
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Flush List</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="flushlist-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="flushlist-showcode" />
+                                <label class="form-label text-muted" for="flushlist-showcode">Show Code</label>
+                                <input id="flushlist-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -396,8 +396,8 @@ Erica Kernan
                         <b-card-title class="mb-0 flex-grow-1">Horizontal List</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="horilist-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="horilist-showcode" />
+                                <label class="form-label text-muted" for="horilist-showcode">Show Code</label>
+                                <input id="horilist-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -452,15 +452,15 @@ Erica Kernan
         </b-row>
 
         <b-row>
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Contextual Classes</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="contextuallist-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="contextuallist-showcode" />
+                                <label class="form-label text-muted" for="contextuallist-showcode">Show Code</label>
+                                <input id="contextuallist-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -501,16 +501,16 @@ Erica Kernan
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Contextual Classes with Link</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="contextuallist-withlink-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="contextuallist-withlink-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="contextuallist-withlink-showcode" />
+                                <input id="contextuallist-withlink-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -522,31 +522,40 @@ Erica Kernan
                         </p>
                         <div class="live-preview">
                             <div class="list-group">
-                                <b-link href="#" class="list-group-item list-group-item-action">A simple default list
+                                <b-link class="list-group-item list-group-item-action" href="#">A simple default list
                                     group
-                                    item</b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action list-group-item-primary">
+                                    item
+                                </b-link>
+                                <b-link class="list-group-item list-group-item-action list-group-item-primary" href="#">
                                     A
-                                    simple primary list group item</b-link>
-                                <b-link href="#"
-                                    class="list-group-item list-group-item-action list-group-item-secondary">A
-                                    simple secondary list group item</b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action list-group-item-success">
+                                    simple primary list group item
+                                </b-link>
+                                <b-link class="list-group-item list-group-item-action list-group-item-secondary"
+                                        href="#">A
+                                    simple secondary list group item
+                                </b-link>
+                                <b-link class="list-group-item list-group-item-action list-group-item-success" href="#">
                                     A
-                                    simple success list group item</b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action list-group-item-danger">A
-                                    simple danger list group item</b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action list-group-item-warning">
+                                    simple success list group item
+                                </b-link>
+                                <b-link class="list-group-item list-group-item-action list-group-item-danger" href="#">A
+                                    simple danger list group item
+                                </b-link>
+                                <b-link class="list-group-item list-group-item-action list-group-item-warning" href="#">
                                     A
-                                    simple warning list group item</b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action list-group-item-info">A
+                                    simple warning list group item
+                                </b-link>
+                                <b-link class="list-group-item list-group-item-action list-group-item-info" href="#">A
                                     simple
-                                    info list group item</b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action list-group-item-light">A
-                                    simple light list group item</b-link>
-                                <b-link href="#" class="list-group-item list-group-item-action list-group-item-dark">A
+                                    info list group item
+                                </b-link>
+                                <b-link class="list-group-item list-group-item-action list-group-item-light" href="#">A
+                                    simple light list group item
+                                </b-link>
+                                <b-link class="list-group-item list-group-item-action list-group-item-dark" href="#">A
                                     simple
-                                    dark list group item</b-link>
+                                    dark list group item
+                                </b-link>
                             </div>
                         </div>
                         <div class="d-none code-view">
@@ -566,15 +575,15 @@ Erica Kernan
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Colored Lists</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="colored-list-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="colored-list-showcode" />
+                                <label class="form-label text-muted" for="colored-list-showcode">Show Code</label>
+                                <input id="colored-list-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -626,9 +635,9 @@ Erica Kernan
                         <b-card-title class="mb-0 flex-grow-1">Custom Content</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="customcontent-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="customcontent-showcode" />
+                                <label class="form-label text-muted" for="customcontent-showcode">Show Code</label>
+                                <input id="customcontent-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -636,17 +645,18 @@ Erica Kernan
                     <b-card-body>
                         <p class="text-muted">
                             Add nearly any HTML within, even for linked list groups like the one below, with the help of
-                            <b-link href="https://getbootstrap.com/docs/5.1/utilities/flex/">flexbox utilities</b-link>.
+                            <b-link href="https://getbootstrap.com/docs/5.1/utilities/flex/">flexbox utilities</b-link>
+                            .
                         </p>
                         <div class="live-preview">
                             <div class="list-group">
-                                <b-link href="javascript:void(0);"
-                                    class="list-group-item list-group-item-action active">
+                                <b-link class="list-group-item list-group-item-action active"
+                                        href="javascript:void(0);">
                                     <div class="float-end">Pending</div>
                                     <div class="d-flex mb-2 align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-1.jpg" alt
-                                                class="avatar-sm rounded-circle" />
+                                            <img alt class="avatar-sm rounded-circle"
+                                                 src="@/assets/images/users/avatar-1.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h5 class="list-title fs-15 mb-1">Charlie Pritchard</h5>
@@ -658,12 +668,12 @@ Erica Kernan
                                         it's important to think about your message, then choose a font that fits. Cosby
                                         sweater eu banh mi, qui irure terry richardson ex squid.</p>
                                 </b-link>
-                                <b-link href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                <b-link class="list-group-item list-group-item-action" href="javascript:void(0);">
                                     <div class="float-end">Pending</div>
                                     <div class="d-flex mb-2 align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                class="avatar-sm rounded-circle" />
+                                            <img alt class="avatar-sm rounded-circle"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h5 class="list-title fs-15 mb-1">Dominic Charlton</h5>
@@ -675,12 +685,12 @@ Erica Kernan
                                         freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf
                                         cliche high life echo park Austin.</p>
                                 </b-link>
-                                <b-link href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                <b-link class="list-group-item list-group-item-action" href="javascript:void(0);">
                                     <div class="float-end">Rejected</div>
                                     <div class="d-flex mb-2 align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                class="avatar-sm rounded-circle" />
+                                            <img alt class="avatar-sm rounded-circle"
+                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h5 class="list-title fs-15 mb-1">Declan Long</h5>
@@ -693,12 +703,12 @@ Erica Kernan
                                         labore aes Homo nostrud organic, assumenda labore aesthetic magna elements,
                                         buttons, everything.</p>
                                 </b-link>
-                                <b-link href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                <b-link class="list-group-item list-group-item-action" href="javascript:void(0);">
                                     <div class="float-end">Successful</div>
                                     <div class="d-flex mb-2 align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                class="avatar-sm rounded-circle" />
+                                            <img alt class="avatar-sm rounded-circle"
+                                                 src="@/assets/images/users/avatar-4.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h5 class="list-title fs-15 mb-1">Angela Bernier</h5>
@@ -718,7 +728,7 @@ Erica Kernan
 <code>&lt;b-list-group&gt;
 &lt;b-list-group-item href=&quot;javascript:void(0);&quot; class=&quot;list-group-item-action active&quot;&gt;
 &lt;div class=&quot;float-end&quot;&gt;
-Pending 
+Pending
 &lt;/div&gt;
 &lt;div class=&quot;d-flex mb-2 align-items-center&quot;&gt;
 &lt;div class=&quot;flex-shrink-0&quot;&gt;
@@ -733,7 +743,7 @@ Pending
 &lt;/b-list-group-item&gt;</code>
 <code>&lt;b-list-group-item href=&quot;javascript:void(0);&quot; class=&quot;list-group-item-action&quot;&gt;
 &lt;div class=&quot;float-end&quot;&gt;
-Pending 
+Pending
 &lt;/div&gt;
 &lt;div class=&quot;d-flex mb-2 align-items-center&quot;&gt;
 &lt;div class=&quot;flex-shrink-0&quot;&gt;
@@ -748,7 +758,7 @@ Pending
 &lt;/b-list-group-item&gt;</code>
 <code>&lt;b-list-group-item href=&quot;javascript:void(0);&quot; class=&quot;list-group-item-action&quot;&gt;
 &lt;div class=&quot;float-end&quot;&gt;
-Rejected 
+Rejected
 &lt;/div&gt;
 &lt;div class=&quot;d-flex mb-2 align-items-center&quot;&gt;
 &lt;div class=&quot;flex-shrink-0&quot;&gt;
@@ -763,7 +773,7 @@ Rejected
 &lt;/b-list-group-item&gt;</code>
 <code>&lt;b-list-group-item href=&quot;javascript:void(0);&quot; class=&quot;list-group-item-action&quot;&gt;
 &lt;div class=&quot;float-end&quot;&gt;
-Successful 
+Successful
 &lt;/div&gt;
 &lt;div class=&quot;d-flex mb-2 align-items-center&quot;&gt;
 &lt;div class=&quot;flex-shrink-0&quot;&gt;
@@ -784,15 +794,15 @@ Successful
         </b-row>
 
         <b-row>
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">List with Badges</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="withbadgeslist-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="withbadgeslist-showcode" />
+                                <label class="form-label text-muted" for="withbadgeslist-showcode">Show Code</label>
+                                <input id="withbadgeslist-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -800,7 +810,8 @@ Successful
                         <p class="text-muted">
                             Use badges to any list group item to show unread counts, activity, and more with the help of
                             some
-                            <b-link href="https://getbootstrap.com/docs/5.1/utilities/">utilities</b-link>.
+                            <b-link href="https://getbootstrap.com/docs/5.1/utilities/">utilities</b-link>
+                            .
                         </p>
                         <div class="live-preview">
                             <ul class="list-group">
@@ -809,7 +820,8 @@ Successful
                                     <b-badge variant="success">High</b-badge>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">Send over
-                                    all the documentation</li>
+                                    all the documentation
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Meeting with daron to review the intake form
                                     <b-badge variant="danger">Low</b-badge>
@@ -830,7 +842,7 @@ Successful
 Send the billing agreement &lt;span class=&quot;badge bg-success&quot;&gt;High&lt;/span&gt;
 &lt;/b-list-group-item&gt;
 &lt;b-list-group-item class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
-Send over all the documentation 
+Send over all the documentation
 &lt;/b-list-group-item&gt;
 &lt;b-list-group-item class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
 Meeting with daron to review the intake form &lt;span class=&quot;badge bg-danger&quot;&gt;Low&lt;/span&gt;
@@ -847,15 +859,15 @@ Start making a presentation &lt;span class=&quot;badge bg-success&quot;&gt;High&
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">List with Checkboxs</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="withcheckboxs-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="withcheckboxs-showcode" />
+                                <label class="form-label text-muted" for="withcheckboxs-showcode">Show Code</label>
+                                <input id="withcheckboxs-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -865,23 +877,23 @@ Start making a presentation &lt;span class=&quot;badge bg-success&quot;&gt;High&
                         <div class="live-preview">
                             <div class="list-group">
                                 <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value />
+                                    <input class="form-check-input me-1" type="checkbox" value/>
                                     Declined Payment
                                 </label>
                                 <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value checked />
+                                    <input checked class="form-check-input me-1" type="checkbox" value/>
                                     Delivery Error
                                 </label>
                                 <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value checked />
+                                    <input checked class="form-check-input me-1" type="checkbox" value/>
                                     Wrong Amount
                                 </label>
                                 <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value />
+                                    <input class="form-check-input me-1" type="checkbox" value/>
                                     Wrong Address
                                 </label>
                                 <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value />
+                                    <input class="form-check-input me-1" type="checkbox" value/>
                                     Wrong UX/UI Solution
                                 </label>
                             </div>
@@ -915,15 +927,15 @@ Wrong UX/UI Solution
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">List with Radios</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="withradios-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="withradios-showcode" />
+                                <label class="form-label text-muted" for="withradios-showcode">Show Code</label>
+                                <input id="withradios-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -934,27 +946,27 @@ Wrong UX/UI Solution
                             <div class="list-group">
                                 <label class="list-group-item">
                                     <input class="form-check-input fs-14 mt-0 align-middle me-1" name="exampleRadios"
-                                        type="radio" value />
+                                           type="radio" value/>
                                     Declined Payment
                                 </label>
                                 <label class="list-group-item">
-                                    <input class="form-check-input fs-14 mt-0 align-middle me-1" name="exampleRadios"
-                                        type="radio" value checked />
+                                    <input checked class="form-check-input fs-14 mt-0 align-middle me-1"
+                                           name="exampleRadios" type="radio" value/>
                                     Delivery Error
                                 </label>
                                 <label class="list-group-item">
                                     <input class="form-check-input fs-14 mt-0 align-middle me-1" name="exampleRadios"
-                                        type="radio" value />
+                                           type="radio" value/>
                                     Wrong Amount
                                 </label>
                                 <label class="list-group-item">
                                     <input class="form-check-input fs-14 mt-0 align-middle me-1" name="exampleRadios"
-                                        type="radio" value />
+                                           type="radio" value/>
                                     Wrong Address
                                 </label>
                                 <label class="list-group-item">
                                     <input class="form-check-input fs-14 mt-0 align-middle me-1" name="exampleRadios"
-                                        type="radio" value />
+                                           type="radio" value/>
                                     Wrong UX/UI Solution
                                 </label>
                             </div>
@@ -988,15 +1000,15 @@ Wrong UX/UI Solution
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">List with Icon</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="withbadgeslist2-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="withbadgeslist2-showcode" />
+                                <label class="form-label text-muted" for="withbadgeslist2-showcode">Show Code</label>
+                                <input id="withbadgeslist2-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1039,15 +1051,15 @@ Wrong UX/UI Solution
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">List with Numbered</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="withnumbered-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="withnumbered-showcode" />
+                                <label class="form-label text-muted" for="withnumbered-showcode">Show Code</label>
+                                <input id="withnumbered-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1080,23 +1092,24 @@ Wrong UX/UI Solution
                 </b-card>
             </b-col>
 
-            <b-col xxl="4" xl="6">
+            <b-col xl="6" xxl="4">
                 <b-card no-body>
                     <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Custom Content Lists</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="withcustomcontent-list-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="withcustomcontent-list-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="withcustomcontent-list-showcode" />
+                                <input id="withcustomcontent-list-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
                     <b-card-body>
                         <p>
                             Add nearly any HTML within, even for linked list groups like the one below, with the help of
-                            <b-link href="https://getbootstrap.com/docs/5.1/utilities/flex/">flexbox utilities</b-link>.
+                            <b-link href="https://getbootstrap.com/docs/5.1/utilities/flex/">flexbox utilities</b-link>
+                            .
                         </p>
                         <div class="live-preview">
                             <div data-simplebar style="max-height: 215px;">
@@ -1146,8 +1159,8 @@ Wrong UX/UI Solution
                                             <div class="flex-grow-1">
                                                 <div class="d-flex">
                                                     <div class="flex-shrink-0">
-                                                        <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                            class="avatar-xs rounded" />
+                                                        <img alt class="avatar-xs rounded"
+                                                             src="@/assets/images/users/avatar-2.jpg"/>
                                                     </div>
                                                     <div class="flex-shrink-0 ms-2">
                                                         <h6 class="fs-14 mb-0">Emily Slater</h6>
@@ -1186,8 +1199,8 @@ Wrong UX/UI Solution
                                             <div class="flex-grow-1">
                                                 <div class="d-flex">
                                                     <div class="flex-shrink-0">
-                                                        <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                            class="avatar-xs rounded" />
+                                                        <img alt class="avatar-xs rounded"
+                                                             src="@/assets/images/users/avatar-3.jpg"/>
                                                     </div>
                                                     <div class="flex-shrink-0 ms-2">
                                                         <h6 class="fs-14 mb-0">Harvey Wells</h6>
@@ -1205,7 +1218,7 @@ Wrong UX/UI Solution
                         </div>
                         <div class="d-none code-view">
                             <pre class="language-markup" style="height: 215px;">
-<code>&lt;div data-simplebar style=&quot;max-height: 215px;&quot;&gt; 
+<code>&lt;div data-simplebar style=&quot;max-height: 215px;&quot;&gt;
 &lt;b-list-group&gt;
 &lt;b-list-group-item class=&quot;list-group-item&quot;&gt;
 &lt;div class=&quot;d-flex align-items-center&quot;&gt;

@@ -50,7 +50,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -114,7 +114,7 @@ export default {
                                         <div>
                                             <h5 class="fs-13 mb-3">Additive</h5>
                                             <b-row>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border avatar-md border-success bg-light mx-auto mb-1">
@@ -124,7 +124,7 @@ export default {
                                                         </p>
                                                     </div>
                                                 </b-col>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border-top avatar-md border-success bg-light mx-auto mb-1">
@@ -134,7 +134,7 @@ export default {
                                                         </p>
                                                     </div>
                                                 </b-col>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border-end avatar-md border-success bg-light mx-auto mb-1">
@@ -144,7 +144,7 @@ export default {
                                                         </p>
                                                     </div>
                                                 </b-col>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border-bottom avatar-md border-success bg-light mx-auto mb-1">
@@ -154,7 +154,7 @@ export default {
                                                         </p>
                                                     </div>
                                                 </b-col>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border-start avatar-md border-success bg-light mx-auto mb-1">
@@ -172,7 +172,7 @@ export default {
                                         <div>
                                             <h5 class="fs-13 mb-3">Subtractive</h5>
                                             <b-row>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border-0 border-success avatar-md bg-light mx-auto mb-1">
@@ -182,7 +182,7 @@ export default {
                                                         </p>
                                                     </div>
                                                 </b-col>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border border-success border-top-0 avatar-md bg-light mx-auto mb-1">
@@ -192,7 +192,7 @@ export default {
                                                         </p>
                                                     </div>
                                                 </b-col>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border border-success border-end-0 avatar-md bg-light mx-auto mb-1">
@@ -202,7 +202,7 @@ export default {
                                                         </p>
                                                     </div>
                                                 </b-col>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border border-success border-bottom-0 avatar-md bg-light mx-auto mb-1">
@@ -212,7 +212,7 @@ export default {
                                                         </p>
                                                     </div>
                                                 </b-col>
-                                                <b-col xl="2" sm="4">
+                                                <b-col sm="4" xl="2">
                                                     <div class="text-center">
                                                         <div
                                                             class="border border-start-0 border-success avatar-md bg-light mx-auto mb-1">
@@ -400,57 +400,61 @@ export default {
                                 <div>
                                     <div class="d-flex align-items-start flex-wrap gap-4">
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-2.jpg" class="avatar-md rounded"
-                                                alt="rounded" />
+                                            <img alt="rounded" class="avatar-md rounded"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                             <p>
                                                 <code>.rounded</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-2.jpg" class="avatar-md rounded-top"
-                                                alt="rounded-top" />
+                                            <img alt="rounded-top" class="avatar-md rounded-top"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                             <p>
                                                 <code>.rounded-top</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-2.jpg" class="avatar-md rounded-end"
-                                                alt="rounded-end" />
+                                            <img alt="rounded-end" class="avatar-md rounded-end"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                             <p>
                                                 <code>.rounded-end</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-2.jpg"
-                                                class="avatar-md rounded-bottom" alt="rounded-bottom" />
+                                            <img alt="rounded-bottom"
+                                                 class="avatar-md rounded-bottom"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                             <p>
                                                 <code>.rounded-bottom</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-2.jpg"
-                                                class="avatar-md rounded-start" alt="rounded-start" />
+                                            <img alt="rounded-start"
+                                                 class="avatar-md rounded-start"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                             <p>
                                                 <code>.rounded-start</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-2.jpg"
-                                                class="avatar-md rounded-circle" alt="rounded-circle" />
+                                            <img alt="rounded-circle"
+                                                 class="avatar-md rounded-circle"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                             <p>
                                                 <code>.rounded-circle</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-2.jpg" class="avatar-md rounded-top"
-                                                alt="rounded-top" />
+                                            <img alt="rounded-top" class="avatar-md rounded-top"
+                                                 src="@/assets/images/users/avatar-2.jpg"/>
                                             <p>
                                                 <code>.rounded-top</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/small/img-2.jpg"
-                                                class="avatar-md w-auto rounded-pill" alt="rounded-pill" />
+                                            <img alt="rounded-pill"
+                                                 class="avatar-md w-auto rounded-pill"
+                                                 src="@/assets/images/small/img-2.jpg"/>
                                             <p>
                                                 <code>.rounded-pill</code>
                                             </p>
@@ -461,41 +465,41 @@ export default {
                                     <h5 class="fs-13 mb-3">Sizes</h5>
                                     <div class="d-flex align-items-start flex-wrap gap-4">
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-1.jpg" class="avatar-md rounded-0"
-                                                alt="rounded-0" />
+                                            <img alt="rounded-0" class="avatar-md rounded-0"
+                                                 src="@/assets/images/users/avatar-1.jpg"/>
                                             <p>
                                                 <code>.rounded-0</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-1.jpg" class="avatar-md rounded-1"
-                                                alt="rounded-1" />
+                                            <img alt="rounded-1" class="avatar-md rounded-1"
+                                                 src="@/assets/images/users/avatar-1.jpg"/>
                                             <p>
                                                 <code>.rounded-1</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-1.jpg" class="avatar-md rounded-2"
-                                                alt="rounded-2" />
+                                            <img alt="rounded-2" class="avatar-md rounded-2"
+                                                 src="@/assets/images/users/avatar-1.jpg"/>
                                             <p>
                                                 <code>.rounded-2</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-1.jpg" class="avatar-md rounded-3"
-                                                alt="rounded-3" />
+                                            <img alt="rounded-3" class="avatar-md rounded-3"
+                                                 src="@/assets/images/users/avatar-1.jpg"/>
                                             <p>
                                                 <code>.rounded-3</code>
                                             </p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-1.jpg" class="avatar-md rounded-4"
-                                                alt="rounded-4">
+                                            <img alt="rounded-4" class="avatar-md rounded-4"
+                                                 src="@/assets/images/users/avatar-1.jpg">
                                             <p><code>.rounded-4</code></p>
                                         </div>
                                         <div class="text-center">
-                                            <img src="@/assets/images/users/avatar-1.jpg" class="avatar-md rounded-5"
-                                                alt="rounded-5">
+                                            <img alt="rounded-5" class="avatar-md rounded-5"
+                                                 src="@/assets/images/users/avatar-1.jpg">
                                             <p><code>.rounded-5</code></p>
                                         </div>
                                     </div>
@@ -527,67 +531,67 @@ export default {
                                             <div class="table-responsive">
                                                 <table class="table table-bordered">
                                                     <thead class="table-light">
-                                                        <tr>
-                                                            <th scope="col" style="width: 40%;">Display Property
-                                                            </th>
-                                                            <th scope="col">Class</th>
-                                                        </tr>
+                                                    <tr>
+                                                        <th scope="col" style="width: 40%;">Display Property
+                                                        </th>
+                                                        <th scope="col">Class</th>
+                                                    </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Display : none</td>
-                                                            <td>
-                                                                <code>.d-none</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Display : inline</td>
-                                                            <td>
-                                                                <code>.d-inline</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Display : inline-block</td>
-                                                            <td>
-                                                                <code>.d-inline-block</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Display : block</td>
-                                                            <td>
-                                                                <code>.d-block</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Display : table</td>
-                                                            <td>
-                                                                <code>.d-table</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Display : table-cell</td>
-                                                            <td>
-                                                                <code>.d-table-cell</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Display : table-row</td>
-                                                            <td>
-                                                                <code>.d-table-row</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Display : flex</td>
-                                                            <td>
-                                                                <code>.d-flex</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Display : inline-flex</td>
-                                                            <td>
-                                                                <code>.d-inline-flex</code>
-                                                            </td>
-                                                        </tr>
+                                                    <tr>
+                                                        <td>Display : none</td>
+                                                        <td>
+                                                            <code>.d-none</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Display : inline</td>
+                                                        <td>
+                                                            <code>.d-inline</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Display : inline-block</td>
+                                                        <td>
+                                                            <code>.d-inline-block</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Display : block</td>
+                                                        <td>
+                                                            <code>.d-block</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Display : table</td>
+                                                        <td>
+                                                            <code>.d-table</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Display : table-cell</td>
+                                                        <td>
+                                                            <code>.d-table-cell</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Display : table-row</td>
+                                                        <td>
+                                                            <code>.d-table-row</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Display : flex</td>
+                                                        <td>
+                                                            <code>.d-flex</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Display : inline-flex</td>
+                                                        <td>
+                                                            <code>.d-inline-flex</code>
+                                                        </td>
+                                                    </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -600,84 +604,84 @@ export default {
                                             <div class="table-responsive">
                                                 <table class="table table-bordered">
                                                     <thead class="table-light">
-                                                        <tr>
-                                                            <th scope="col">Screen Size</th>
-                                                            <th scope="col">Class</th>
-                                                        </tr>
+                                                    <tr>
+                                                        <th scope="col">Screen Size</th>
+                                                        <th scope="col">Class</th>
+                                                    </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Hidden on all</td>
-                                                            <td>
-                                                                <code>.d-none</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Hidden only on xs</td>
-                                                            <td>
-                                                                <code>.d-none .d-sm-block</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Hidden only on sm</td>
-                                                            <td>
-                                                                <code>.d-sm-none .d-md-block</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Hidden only on md</td>
-                                                            <td>
-                                                                <code>.d-md-none .d-lg-block</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Hidden only on lg</td>
-                                                            <td>
-                                                                <code>.d-lg-none .d-xl-block</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Hidden only on xl</td>
-                                                            <td>
-                                                                <code>.d-xl-none</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Visible on all</td>
-                                                            <td>
-                                                                <code>.d-block</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Visible only on xs</td>
-                                                            <td>
-                                                                <code>.d-block .d-sm-none</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Visible only on sm</td>
-                                                            <td>
-                                                                <code>.d-none .d-sm-block .d-md-none</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Visible only on md</td>
-                                                            <td>
-                                                                <code>.d-none .d-md-block .d-lg-none</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Visible only on lg</td>
-                                                            <td>
-                                                                <code>.d-none .d-lg-block .d-xl-none</code>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Visible only on xl</td>
-                                                            <td>
-                                                                <code>.d-none .d-xl-block</code>
-                                                            </td>
-                                                        </tr>
+                                                    <tr>
+                                                        <td>Hidden on all</td>
+                                                        <td>
+                                                            <code>.d-none</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hidden only on xs</td>
+                                                        <td>
+                                                            <code>.d-none .d-sm-block</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hidden only on sm</td>
+                                                        <td>
+                                                            <code>.d-sm-none .d-md-block</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hidden only on md</td>
+                                                        <td>
+                                                            <code>.d-md-none .d-lg-block</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hidden only on lg</td>
+                                                        <td>
+                                                            <code>.d-lg-none .d-xl-block</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hidden only on xl</td>
+                                                        <td>
+                                                            <code>.d-xl-none</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Visible on all</td>
+                                                        <td>
+                                                            <code>.d-block</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Visible only on xs</td>
+                                                        <td>
+                                                            <code>.d-block .d-sm-none</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Visible only on sm</td>
+                                                        <td>
+                                                            <code>.d-none .d-sm-block .d-md-none</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Visible only on md</td>
+                                                        <td>
+                                                            <code>.d-none .d-md-block .d-lg-none</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Visible only on lg</td>
+                                                        <td>
+                                                            <code>.d-none .d-lg-block .d-xl-none</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Visible only on xl</td>
+                                                        <td>
+                                                            <code>.d-none .d-xl-block</code>
+                                                        </td>
+                                                    </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -743,66 +747,66 @@ export default {
                                 <div class="table-responsive">
                                     <table class="table table-bordered mb-0">
                                         <thead class="table-light">
-                                            <tr>
-                                                <th scope="col" style="width: 40%;">Property</th>
-                                                <th scope="col">Class</th>
-                                            </tr>
+                                        <tr>
+                                            <th scope="col" style="width: 40%;">Property</th>
+                                            <th scope="col">Class</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>font-family: 'Poppins', sans-serif;</td>
-                                                <td>
-                                                    <code>.ff-base</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>font-family: 'hkgrotesk', sans-serif;</td>
-                                                <td>
-                                                    <code>.ff-secondary</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>font-weight: 500;</td>
-                                                <td>
-                                                    <code>.fw-medium</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>font-weight: 600;</td>
-                                                <td>
-                                                    <code>.fw-semibold</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>min-width: 80px;</td>
-                                                <td>
-                                                    <code>.w-xs</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>min-width: 95px;</td>
-                                                <td>
-                                                    <code>.w-sm</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>min-width: 110px;</td>
-                                                <td>
-                                                    <code>.w-md</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>min-width: 140px;</td>
-                                                <td>
-                                                    <code>.w-lg</code>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>min-width: 160px;</td>
-                                                <td>
-                                                    <code>.w-xl</code>
-                                                </td>
-                                            </tr>
+                                        <tr>
+                                            <td>font-family: 'Poppins', sans-serif;</td>
+                                            <td>
+                                                <code>.ff-base</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>font-family: 'hkgrotesk', sans-serif;</td>
+                                            <td>
+                                                <code>.ff-secondary</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>font-weight: 500;</td>
+                                            <td>
+                                                <code>.fw-medium</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>font-weight: 600;</td>
+                                            <td>
+                                                <code>.fw-semibold</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>min-width: 80px;</td>
+                                            <td>
+                                                <code>.w-xs</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>min-width: 95px;</td>
+                                            <td>
+                                                <code>.w-sm</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>min-width: 110px;</td>
+                                            <td>
+                                                <code>.w-md</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>min-width: 140px;</td>
+                                            <td>
+                                                <code>.w-lg</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>min-width: 160px;</td>
+                                            <td>
+                                                <code>.w-xl</code>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -820,10 +824,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Stacks - Vertical</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="stacksvertical-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="stacksvertical-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="stacksvertical-showcode">
+                                <input id="stacksvertical-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -842,7 +846,7 @@ export default {
 
                             <div class="mt-5">
                                 <h5 class="fs-14 mb-3">Vertical Stacks Examples</h5>
-                                <b-col md="5" class="vstack gap-2 mx-auto">
+                                <b-col class="vstack gap-2 mx-auto" md="5">
                                     <b-button variant="primary">Save changes</b-button>
                                     <b-button variant="outline-secondary">Cancel</b-button>
                                 </b-col>
@@ -872,9 +876,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Stacks - Horizontal</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="stackshorizontal-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="stackshorizontal-showcode">
+                                <label class="form-label text-muted" for="stackshorizontal-showcode">Show Code</label>
+                                <input id="stackshorizontal-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -916,7 +920,7 @@ export default {
                             <div class="mt-5">
                                 <h5 class="fs-13 mb-3">Horizontal Stacks Examples</h5>
                                 <div class="hstack gap-3">
-                                    <input class="form-control me-auto" type="text" placeholder="Add your item here...">
+                                    <input class="form-control me-auto" placeholder="Add your item here..." type="text">
                                     <b-button variant="primary">Submit</b-button>
                                     <div class="vr"></div>
                                     <b-button variant="outline-secondary">Reset</b-button>
@@ -942,11 +946,11 @@ export default {
     &lt;div class=&quot;bg-light border p-1 px-2&quot;&gt;First item&lt;/div&gt;
     &lt;div class=&quot;vr&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;bg-light border p-1 px-2&quot;&gt;Second item&lt;/div&gt;
-    
+
     &lt;div class=&quot;bg-light border p-1 px-2 ms-auto&quot;&gt;Third item&lt;/div&gt;
 &lt;/div&gt;</code>
 
-<code>&lt;div class=&quot;hstack gap-3&quot;&gt; 
+<code>&lt;div class=&quot;hstack gap-3&quot;&gt;
     &lt;input class=&quot;form-control me-auto&quot; type=&quot;text&quot; placeholder=&quot;Add your item here...&quot;&gt;
     &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
     &lt;div class=&quot;vr&quot;&gt;&lt;/div&gt;
@@ -965,9 +969,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Text Selection</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="textselection-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="textselection-showcode" />
+                                <label class="form-label text-muted" for="textselection-showcode">Show Code</label>
+                                <input id="textselection-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1013,9 +1017,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Pointer Events</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="pointnerevents-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="pointnerevents-showcode" />
+                                <label class="form-label text-muted" for="pointnerevents-showcode">Show Code</label>
+                                <input id="pointnerevents-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1030,22 +1034,27 @@ export default {
                         <div class="live-preview">
                             <div>
                                 <p>
-                                    <b-link href="#" class="text-success pe-none" tabindex="-1">This
-                                        link</b-link> can not be
+                                    <b-link class="text-success pe-none" href="#" tabindex="-1">This
+                                        link
+                                    </b-link>
+                                    can not be
                                     clicked.
                                 </p>
                                 <p>
-                                    <b-link href="#" class="text-success pe-auto">This link</b-link> can be
+                                    <b-link class="text-success pe-auto" href="#">This link</b-link>
+                                    can be
                                     clicked (this is
                                     default behavior).
                                 </p>
                                 <p class="pe-none mb-0">
-                                    <b-link href="#" class="text-success" tabindex="-1">This link</b-link> can
+                                    <b-link class="text-success" href="#" tabindex="-1">This link</b-link>
+                                    can
                                     not be clicked
                                     because the
                                     <code>pointer-events</code> property is inherited from its
                                     parent. However,
-                                    <b-link href="#" class="pe-auto">this link</b-link> has a
+                                    <b-link class="pe-auto" href="#">this link</b-link>
+                                    has a
                                     <code>pe-auto</code> class and can be clicked.
                                 </p>
                             </div>
@@ -1072,8 +1081,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Overflow</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="overflow-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="overflow-showcode" />
+                                <label class="form-label text-muted" for="overflow-showcode">Show Code</label>
+                                <input id="overflow-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1087,7 +1096,7 @@ export default {
                         <div class="live-preview">
                             <div>
                                 <b-row>
-                                    <b-col xl="3" sm="6">
+                                    <b-col sm="6" xl="3">
                                         <div class="mt-4 mt-xl-0">
                                             <h5 class="fs-13">Overflow Auto</h5>
 
@@ -1107,7 +1116,7 @@ export default {
                                         </div>
                                     </b-col>
 
-                                    <b-col xl="3" sm="6">
+                                    <b-col sm="6" xl="3">
                                         <div class="mt-4 mt-xl-0">
                                             <h5 class="fs-13">Overflow Hidden</h5>
 
@@ -1125,7 +1134,7 @@ export default {
                                             </div>
                                         </div>
                                     </b-col>
-                                    <b-col xl="3" sm="6">
+                                    <b-col sm="6" xl="3">
                                         <div class="mt-4 mt-xl-0">
                                             <h5 class="fs-13">Overflow Visible</h5>
 
@@ -1143,7 +1152,7 @@ export default {
                                             </div>
                                         </div>
                                     </b-col>
-                                    <b-col xl="3" sm="6">
+                                    <b-col sm="6" xl="3">
                                         <div class="mt-4 mt-xl-0">
                                             <h5 class="fs-13">Overflow Scroll</h5>
 
@@ -1191,8 +1200,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Position</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="position-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="position-showcode" />
+                                <label class="form-label text-muted" for="position-showcode">Show Code</label>
+                                <input id="position-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1204,12 +1213,12 @@ export default {
                         <div class="live-preview">
                             <div>
                                 <b-row>
-                                    <b-col xl="4" sm="6">
+                                    <b-col sm="6" xl="4">
                                         <div>
                                             <h5 class="fs-13">Arrange elements</h5>
 
                                             <div class="position-relative p-5 bg-light m-3 border rounded"
-                                                style="height: 180px;">
+                                                 style="height: 180px;">
                                                 <div class="position-absolute top-0 start-0 avatar-xs bg-dark rounded">
                                                 </div>
                                                 <div class="position-absolute top-0 end-0 avatar-xs bg-dark rounded">
@@ -1229,12 +1238,12 @@ export default {
                                         </div>
                                     </b-col>
 
-                                    <b-col xl="4" sm="6">
+                                    <b-col sm="6" xl="4">
                                         <div class="mt-4 mt-sm-0">
                                             <h5 class="fs-13 mb-4">Center elements</h5>
 
                                             <div class="position-relative m-3 bg-light border rounded"
-                                                style="height: 180px;">
+                                                 style="height: 180px;">
                                                 <div
                                                     class="position-absolute top-0 start-0 translate-middle avatar-xs bg-dark rounded">
                                                 </div>
@@ -1267,12 +1276,12 @@ export default {
                                             </div>
                                         </div>
                                     </b-col>
-                                    <b-col xl="4" sm="6">
+                                    <b-col sm="6" xl="4">
                                         <div class="mt-4 mt-sm-0">
                                             <h5 class="fs-13">Center elements</h5>
 
                                             <div class="position-relative m-3 bg-light border rounded"
-                                                style="height: 180px;">
+                                                 style="height: 180px;">
                                                 <div class="position-absolute top-0 start-0 avatar-xs bg-dark rounded">
                                                 </div>
                                                 <div
@@ -1359,8 +1368,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Shadows</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="shadow-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="shadow-showcode" />
+                                <label class="form-label text-muted" for="shadow-showcode">Show Code</label>
+                                <input id="shadow-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1381,19 +1390,23 @@ export default {
                             <b-row class="gy-3">
                                 <b-col md="6">
                                     <div class="shadow-none p-3 bg-light rounded">No
-                                        shadow</div>
+                                        shadow
+                                    </div>
                                 </b-col>
                                 <b-col md="6">
                                     <div class="shadow-sm p-3 bg-light rounded">Small
-                                        shadow</div>
+                                        shadow
+                                    </div>
                                 </b-col>
                                 <b-col md="6">
                                     <div class="shadow p-3 bg-light rounded">Regular
-                                        shadow</div>
+                                        shadow
+                                    </div>
                                 </b-col>
                                 <b-col md="6">
                                     <div class="shadow-lg p-3 bg-light rounded">Larger
-                                        shadow</div>
+                                        shadow
+                                    </div>
                                 </b-col>
                             </b-row>
                         </div>
@@ -1420,8 +1433,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Width</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="width-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="width-showcode" />
+                                <label class="form-label text-muted" for="width-showcode">Show Code</label>
+                                <input id="width-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1470,8 +1483,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Height</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="height-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="height-showcode" />
+                                <label class="form-label text-muted" for="height-showcode">Show Code</label>
+                                <input id="height-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1501,10 +1514,10 @@ export default {
                                     <div class="h-75 p-3 bg-light">Height 75%</div>
                                 </b-col>
                                 <b-col>
-                                    <div class="h-100 p-3 bg-light">Height 100% </div>
+                                    <div class="h-100 p-3 bg-light">Height 100%</div>
                                 </b-col>
                                 <b-col>
-                                    <div class="h-auto p-3 bg-light">Height auto </div>
+                                    <div class="h-auto p-3 bg-light">Height auto</div>
                                 </b-col>
                             </b-row>
                         </div>

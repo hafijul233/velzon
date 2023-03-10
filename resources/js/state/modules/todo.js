@@ -15,7 +15,7 @@ export const mutations = {
 };
 
 export const actions = {
-    fetchTodos({ commit }) {
+    fetchTodos({commit}) {
         axios.get('https://jsonplaceholder.typicode.com/todos').then(res => {
             commit('setTodos', res.data)
         })

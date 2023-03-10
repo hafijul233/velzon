@@ -23,8 +23,7 @@ function getChartColorsArray(colors) {
 }
 
 export default {
-    components: {
-    },
+    components: {},
     setup() {
         return {
             series: [{
@@ -88,7 +87,7 @@ export default {
     <b-card no-body>
         <b-card-header class="border-0 pb-0">
             <h6 class="card-title mb-0">Popularity</h6>
-            <apexchart class="apex-charts" height="240" dir="ltr" :series="series" :options="chartOptions"></apexchart>
+            <apexchart :options="chartOptions" :series="series" class="apex-charts" dir="ltr" height="240"></apexchart>
         </b-card-header>
 
     </b-card>

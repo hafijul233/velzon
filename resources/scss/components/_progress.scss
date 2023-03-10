@@ -1,6 +1,6 @@
-// 
+//
 // _progress.scss
-// 
+//
 
 // Progress height small
 .progress-sm {
@@ -115,6 +115,7 @@
         overflow: initial;
         font-size: .875rem;
         color: $white;
+
         &::after {
             content: "";
             position: absolute;
@@ -130,13 +131,16 @@
 @mixin progress-variant($bg) {
     .progress-bar {
         background-color: $bg;
-        &::after { 
+
+        &::after {
             border-left-color: $bg;
         }
+
         &:nth-child(2) {
             background-color: rgba($bg, 0.1) !important;
             color: $bg !important;
-            &::after { 
+
+            &::after {
                 border-left-color: rgba($bg, 0.1);
             }
         }

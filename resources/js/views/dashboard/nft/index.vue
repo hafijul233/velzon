@@ -22,9 +22,7 @@ function getChartColorsArray(colors) {
     });
 }
 
-import {
-    CountTo
-} from "vue3-count-to";
+import {CountTo} from "vue3-count-to";
 
 import Layout from "../../../layouts/main.vue";
 import PageHeader from "@/components/page-header";
@@ -63,10 +61,10 @@ export default {
                 text: "Dashboards",
                 href: "/",
             },
-            {
-                text: "NFT Dashboard",
-                active: true,
-            },
+                {
+                    text: "NFT Dashboard",
+                    active: true,
+                },
             ],
             date: null,
             config: {
@@ -94,44 +92,43 @@ export default {
             },
         };
     },
-    methods: {
-    }
+    methods: {}
 
 };
 </script>
-  
+
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row class="dash-nft">
             <b-col xxl="9">
                 <b-row>
                     <b-col xl="6">
-                        <b-card no-body class="overflow-hidden">
+                        <b-card class="overflow-hidden" no-body>
                             <b-card-body class="bg-marketplace d-flex">
                                 <div class="flex-grow-1">
                                     <h4 class="fs-18 lh-base fw-bold mb-0">Discover, Collect, Sell and Create <br> your
-                                        own <span class="text-success">NFTs.</span> </h4>
+                                        own <span class="text-success">NFTs.</span></h4>
                                     <p class="mb-0 mt-2 pt-1 text-muted">The world's first and largest digital
                                         marketplace.</p>
                                     <div class="d-flex gap-3 mt-4">
-                                        <b-link href="" class="btn btn-primary">Discover Now </b-link>
-                                        <b-link href="" class="btn btn-success">Create Your Own</b-link>
+                                        <b-link class="btn btn-primary" href="">Discover Now</b-link>
+                                        <b-link class="btn btn-success" href="">Create Your Own</b-link>
                                     </div>
                                 </div>
-                                <img src="@/assets/images/bg-d.png" alt="" class="img-fluid" />
+                                <img alt="" class="img-fluid" src="@/assets/images/bg-d.png"/>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xl="3" md="6">
-                        <b-card no-body class="card-height-100">
+                    <b-col md="6" xl="3">
+                        <b-card class="card-height-100" no-body>
                             <b-card-body>
                                 <div class="float-end">
                                     <div class="dropdown card-header-dropdown">
-                                        <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
+                                        <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn"
+                                                data-bs-toggle="dropdown" href="#">
                                             <span class="text-muted fs-18"><i
-                                                    class="mdi mdi-dots-vertical align-middle"></i></span>
+                                                class="mdi mdi-dots-vertical align-middle"></i></span>
                                         </b-link>
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <b-link class="dropdown-item" href="#">Today</b-link>
@@ -153,25 +150,30 @@ export default {
                                 </div>
                                 <div class="mt-4 pt-1">
                                     <h4 class="fs-22 fw-semibold ff-secondary mb-0">
-                                        $<count-to :startVal='20000' :endVal='559526' :duration='2000'></count-to>
+                                        $
+                                        <count-to :duration='2000' :endVal='559526' :startVal='20000'></count-to>
                                     </h4>
-                                    <p class="mt-4 mb-0 text-muted"><b-badge variant="soft-danger"
-                                            class="text-danger mb-0 me-1"> <i
-                                                class="ri-arrow-down-line align-middle"></i> 3.96 % </b-badge> vs. previous
-                                        month</p>
+                                    <p class="mt-4 mb-0 text-muted">
+                                        <b-badge class="text-danger mb-0 me-1"
+                                                 variant="soft-danger"><i
+                                            class="ri-arrow-down-line align-middle"></i> 3.96 %
+                                        </b-badge>
+                                        vs. previous
+                                        month
+                                    </p>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xl="3" md="6">
-                        <b-card no-body class="card-height-100">
+                    <b-col md="6" xl="3">
+                        <b-card class="card-height-100" no-body>
                             <b-card-body>
                                 <div class="float-end">
                                     <div class="dropdown card-header-dropdown">
-                                        <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
+                                        <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn"
+                                                data-bs-toggle="dropdown" href="#">
                                             <span class="text-muted fs-18"><i
-                                                    class="mdi mdi-dots-vertical align-middle"></i></span>
+                                                class="mdi mdi-dots-vertical align-middle"></i></span>
                                         </b-link>
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <b-link class="dropdown-item" href="#">Today</b-link>
@@ -193,12 +195,17 @@ export default {
                                 </div>
                                 <div class="mt-4 pt-1">
                                     <h4 class="fs-22 fw-semibold ff-secondary mb-0">
-                                        $<count-to :startVal='20000' :endVal='624562' :duration='2000'></count-to>
+                                        $
+                                        <count-to :duration='2000' :endVal='624562' :startVal='20000'></count-to>
                                     </h4>
-                                    <p class="mt-4 mb-0 text-muted"><b-badge variant="soft-success"
-                                            class="text-success mb-0"> <i
-                                                class="ri-arrow-up-line align-middle"></i> 16.24 % </b-badge> vs. previous
-                                        month</p>
+                                    <p class="mt-4 mb-0 text-muted">
+                                        <b-badge class="text-success mb-0"
+                                                 variant="soft-success"><i
+                                            class="ri-arrow-up-line align-middle"></i> 16.24 %
+                                        </b-badge>
+                                        vs. previous
+                                        month
+                                    </p>
                                 </div>
                             </b-card-body>
                         </b-card>
@@ -207,33 +214,33 @@ export default {
 
                 <b-row>
                     <b-col xxl="12">
-                        <Marketplace />
+                        <Marketplace/>
                     </b-col>
                 </b-row>
             </b-col>
 
             <b-col xxl="3">
-                <Popularity />
+                <Popularity/>
 
-                <Historyofbids />
+                <Historyofbids/>
             </b-col>
         </b-row>
 
 
         <b-row>
-            <Featurednft />
-            <Topartworks />
+            <Featurednft/>
+            <Topartworks/>
         </b-row>
 
         <b-row>
             <b-col xxl="6">
-                <Recentnfts />
+                <Recentnfts/>
             </b-col>
-            <b-col xxl="3" lg="6">
-                <Worldwidetopcrearor />
+            <b-col lg="6" xxl="3">
+                <Worldwidetopcrearor/>
             </b-col>
-            <b-col xxl="3" lg="6">
-                <Topcollaction />
+            <b-col lg="6" xxl="3">
+                <Topcollaction/>
             </b-col>
         </b-row>
     </Layout>

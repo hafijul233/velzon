@@ -1,18 +1,15 @@
-import {
-    graphic
-} from "echarts";
+import {graphic} from "echarts";
 
-function getChartColorsArray(colors){
+function getChartColorsArray(colors) {
     colors = JSON.parse(colors);
     return colors.map(function (value) {
-      var newValue = value.replace(" ", "");
-      if (newValue.indexOf(",") === -1) {
-        var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
+        var newValue = value.replace(" ", "");
+        if (newValue.indexOf(",") === -1) {
+            var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
             if (color) {
-            color = color.replace(" ", "");
-            return color;
-            }
-            else return newValue;
+                color = color.replace(" ", "");
+                return color;
+            } else return newValue;
         } else {
             var val = value.split(',');
             if (val.length == 2) {
@@ -24,7 +21,8 @@ function getChartColorsArray(colors){
             }
         }
     });
-  }
+}
+
 let data1 = [];
 for (let i = 0; i <= 360; i++) {
     let t = (i / 180) * Math.PI;
@@ -122,11 +120,11 @@ const stackedLineChart = {
         }
     },
     series: [{
-            name: 'Email',
-            type: 'line',
-            stack: 'Total',
-            data: [120, 132, 101, 134, 90, 230, 210],
-        },
+        name: 'Email',
+        type: 'line',
+        stack: 'Total',
+        data: [120, 132, 101, 134, 90, 230, 210],
+    },
         {
             name: 'Union Ads',
             type: 'line',
@@ -253,15 +251,15 @@ const stackedAreaChart = {
     },
     color: getChartColorsArray('["--vz-primary", "--vz-success", "--vz-warning", "--vz-danger", "--vz-info"]'),
     series: [{
-            name: 'Email',
-            type: 'line',
-            stack: 'Total',
-            areaStyle: {},
-            emphasis: {
-                focus: 'series'
-            },
-            data: [120, 132, 101, 134, 90, 230, 210]
+        name: 'Email',
+        type: 'line',
+        stack: 'Total',
+        areaStyle: {},
+        emphasis: {
+            focus: 'series'
         },
+        data: [120, 132, 101, 134, 90, 230, 210]
+    },
         {
             name: 'Union Ads',
             type: 'line',
@@ -357,11 +355,11 @@ const stepLineChart = {
     },
     color: getChartColorsArray('["--vz-primary", "--vz-success", "--vz-warning"]'),
     series: [{
-            name: 'Step Start',
-            type: 'line',
-            step: 'start',
-            data: [120, 132, 101, 134, 90, 230, 210]
-        },
+        name: 'Step Start',
+        type: 'line',
+        step: 'start',
+        data: [120, 132, 101, 134, 90, 230, 210]
+    },
         {
             name: 'Step Middle',
             type: 'line',
@@ -493,9 +491,7 @@ const basicBar = {
     }]
 };
 
-const barLabelChart = {
-
-}
+const barLabelChart = {}
 
 const horizontalBarChart = {
     tooltip: {
@@ -548,10 +544,10 @@ const horizontalBarChart = {
     },
     color: getChartColorsArray('["--vz-primary", "--vz-success"]'),
     series: [{
-            name: '2011',
-            type: 'bar',
-            data: [18203, 23489, 29034, 104970, 131744, 630230]
-        },
+        name: '2011',
+        type: 'bar',
+        data: [18203, 23489, 29034, 104970, 131744, 630230]
+    },
         {
             name: '2012',
             type: 'bar',
@@ -609,17 +605,17 @@ const stackedHorizontalBarChart = {
         fontFamily: 'Poppins, sans-serif'
     },
     series: [{
-            name: 'Direct',
-            type: 'bar',
-            stack: 'total',
-            label: {
-                show: true
-            },
-            emphasis: {
-                focus: 'series'
-            },
-            data: [320, 302, 301, 334, 390, 330, 320]
+        name: 'Direct',
+        type: 'bar',
+        stack: 'total',
+        label: {
+            show: true
         },
+        emphasis: {
+            focus: 'series'
+        },
+        data: [320, 302, 301, 334, 390, 330, 320]
+    },
         {
             name: 'Mail Ad',
             type: 'bar',
@@ -691,9 +687,9 @@ const pieChart = {
         radius: '55%',
         center: ['50%', '60%'],
         data: [{
-                value: 488,
-                name: 'Laptop'
-            },
+            value: 488,
+            name: 'Laptop'
+        },
             {
                 value: 310,
                 name: 'Tablet'
@@ -748,9 +744,9 @@ const doughnutChart = {
             }
         },
         data: [{
-                value: 335,
-                name: 'Laptop'
-            },
+            value: 335,
+            name: 'Laptop'
+        },
             {
                 value: 310,
                 name: 'Tablet'
@@ -837,7 +833,6 @@ const scatterChart = {
 }
 
 
-
 const graphChart = {
     tooltip: {},
     animationDurationUpdate: 1500,
@@ -857,10 +852,10 @@ const graphChart = {
             fontSize: 20
         },
         data: [{
-                name: 'Node 1',
-                x: 300,
-                y: 300
-            },
+            name: 'Node 1',
+            x: 300,
+            y: 300
+        },
             {
                 name: 'Node 2',
                 x: 800,
@@ -879,17 +874,17 @@ const graphChart = {
         ],
         // links: [],
         links: [{
-                source: 0,
-                target: 1,
-                symbolSize: [5, 20],
-                label: {
-                    show: true
-                },
-                lineStyle: {
-                    width: 5,
-                    curveness: 0.2
-                }
+            source: 0,
+            target: 1,
+            symbolSize: [5, 20],
+            label: {
+                show: true
             },
+            lineStyle: {
+                width: 5,
+                curveness: 0.2
+            }
+        },
             {
                 source: 'Node 2',
                 target: 'Node 1',
@@ -933,18 +928,18 @@ const treemapChart = {
     series: [{
         type: 'treemap',
         data: [{
-                name: 'nodeA',
-                value: 10,
-                children: [{
-                        name: 'nodeAa',
-                        value: 4
-                    },
-                    {
-                        name: 'nodeAb',
-                        value: 6
-                    }
-                ]
+            name: 'nodeA',
+            value: 10,
+            children: [{
+                name: 'nodeAa',
+                value: 4
             },
+                {
+                    name: 'nodeAb',
+                    value: 6
+                }
+            ]
+        },
             {
                 name: 'nodeB',
                 value: 20,
@@ -972,51 +967,51 @@ const sunburstChart = {
         //     focus: 'ancestor'
         // },
         data: [{
-                name: 'Grandpa',
+            name: 'Grandpa',
+            children: [{
+                name: 'Uncle Leo',
+                value: 15,
                 children: [{
-                        name: 'Uncle Leo',
-                        value: 15,
+                    name: 'Cousin Jack',
+                    value: 2
+                },
+                    {
+                        name: 'Cousin Mary',
+                        value: 5,
                         children: [{
-                                name: 'Cousin Jack',
-                                value: 2
-                            },
-                            {
-                                name: 'Cousin Mary',
-                                value: 5,
-                                children: [{
-                                    name: 'Jackson',
-                                    value: 2
-                                }]
-                            },
-                            {
-                                name: 'Cousin Ben',
-                                value: 4
-                            }
-                        ]
+                            name: 'Jackson',
+                            value: 2
+                        }]
                     },
                     {
-                        name: 'Father',
-                        value: 10,
-                        children: [{
-                                name: 'Me',
-                                value: 5
-                            },
-                            {
-                                name: 'Brother Peter',
-                                value: 1
-                            }
-                        ]
+                        name: 'Cousin Ben',
+                        value: 4
                     }
                 ]
             },
+                {
+                    name: 'Father',
+                    value: 10,
+                    children: [{
+                        name: 'Me',
+                        value: 5
+                    },
+                        {
+                            name: 'Brother Peter',
+                            value: 1
+                        }
+                    ]
+                }
+            ]
+        },
             {
                 name: 'Nancy',
                 children: [{
                     name: 'Uncle Nike',
                     children: [{
-                            name: 'Cousin Betty',
-                            value: 1
-                        },
+                        name: 'Cousin Betty',
+                        value: 1
+                    },
                         {
                             name: 'Cousin Jenny',
                             value: 2
@@ -1037,9 +1032,9 @@ const sunburstChart = {
 
 const parallelChart = {
     parallelAxis: [{
-            dim: 0,
-            name: 'Price'
-        },
+        dim: 0,
+        name: 'Price'
+    },
         {
             dim: 1,
             name: 'Net Weight'
@@ -1088,8 +1083,8 @@ const sankeyChart = {
             focus: 'adjacency'
         },
         data: [{
-                name: 'a'
-            },
+            name: 'a'
+        },
             {
                 name: 'b'
             },
@@ -1107,10 +1102,10 @@ const sankeyChart = {
             }
         ],
         links: [{
-                source: 'a',
-                target: 'a1',
-                value: 5
-            },
+            source: 'a',
+            target: 'a1',
+            value: 5
+        },
             {
                 source: 'a',
                 target: 'a2',
@@ -1198,9 +1193,9 @@ const funnelChart = {
             }
         },
         data: [{
-                value: 60,
-                name: 'Visit'
-            },
+            value: 60,
+            name: 'Visit'
+        },
             {
                 value: 40,
                 name: 'Inquiry'
@@ -1362,25 +1357,25 @@ const mixedBarChart = {
         },
     }],
     yAxis: [{
-            type: 'value',
-            name: 'Water volume',
-            min: 0,
-            max: 250,
-            interval: 50,
-            axisLine: {
-                lineStyle: {
-                    color: '#8791af'
-                },
+        type: 'value',
+        name: 'Water volume',
+        min: 0,
+        max: 250,
+        interval: 50,
+        axisLine: {
+            lineStyle: {
+                color: '#8791af'
             },
-            splitLine: {
-                lineStyle: {
-                    color: "rgba(166, 176, 207, 0.1)"
-                }
-            },
-            axisLabel: {
-                formatter: '{value} ml'
+        },
+        splitLine: {
+            lineStyle: {
+                color: "rgba(166, 176, 207, 0.1)"
             }
         },
+        axisLabel: {
+            formatter: '{value} ml'
+        }
+    },
         {
             type: 'value',
             name: 'Temperature',
@@ -1403,10 +1398,10 @@ const mixedBarChart = {
         }
     ],
     series: [{
-            name: 'Evaporation',
-            type: 'bar',
-            data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2]
-        },
+        name: 'Evaporation',
+        type: 'bar',
+        data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2]
+    },
         {
             name: 'Precipitation',
             type: 'bar',
@@ -1511,41 +1506,41 @@ const bubbleChart = {
         scale: true
     },
     series: [{
-            name: '2018',
-            data: data[0],
-            type: 'scatter',
-            symbolSize(data) {
-                return Math.sqrt(data[2]) / 5e2
-            },
+        name: '2018',
+        data: data[0],
+        type: 'scatter',
+        symbolSize(data) {
+            return Math.sqrt(data[2]) / 5e2
+        },
 
-            emphasis: {
-                label: {
-                    show: true,
-                    formatter({
-                        data
-                    }) {
-                        return data[3]
-                    },
-                    position: 'top'
-                }
-            },
-            itemStyle: {
-
-                shadowBlur: 10,
-                shadowColor: 'rgba(120, 36, 50, 0.5)',
-                shadowOffsetY: 5,
-                color: new graphic.RadialGradient(0.4, 0.3, 1, [{
-                        offset: 0,
-                        color: getChartColorsArray('["--vz-primary"]')
-                    },
-                    {
-                        offset: 1,
-                        color: getChartColorsArray('["--vz-primary"]')
-                    }
-                ])
-
+        emphasis: {
+            label: {
+                show: true,
+                formatter({
+                              data
+                          }) {
+                    return data[3]
+                },
+                position: 'top'
             }
         },
+        itemStyle: {
+
+            shadowBlur: 10,
+            shadowColor: 'rgba(120, 36, 50, 0.5)',
+            shadowOffsetY: 5,
+            color: new graphic.RadialGradient(0.4, 0.3, 1, [{
+                offset: 0,
+                color: getChartColorsArray('["--vz-primary"]')
+            },
+                {
+                    offset: 1,
+                    color: getChartColorsArray('["--vz-primary"]')
+                }
+            ])
+
+        }
+    },
         {
             name: '2019',
             data: data[1],
@@ -1558,8 +1553,8 @@ const bubbleChart = {
                 label: {
                     show: true,
                     formatter({
-                        data
-                    }) {
+                                  data
+                              }) {
                         return data[3]
                     },
                     position: 'top'
@@ -1570,9 +1565,9 @@ const bubbleChart = {
                 shadowColor: 'rgba(52, 195, 143, 0.5)',
                 shadowOffsetY: 5,
                 color: new graphic.RadialGradient(0.4, 0.3, 1, [{
-                        offset: 0,
-                        color: getChartColorsArray('["--vz-success"]')
-                    },
+                    offset: 0,
+                    color: getChartColorsArray('["--vz-success"]')
+                },
                     {
                         offset: 1,
                         color: getChartColorsArray('["--vz-success"]')
@@ -1638,9 +1633,6 @@ const candlestickChart = {
         }
     }]
 }
-
-
-
 
 
 export {

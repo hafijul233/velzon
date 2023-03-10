@@ -9,7 +9,7 @@ import "prismjs/themes/prism.css";
 export default {
     page: {
         title: "Basic",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -54,7 +54,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xl="6">
                 <b-card no-body>
@@ -62,8 +62,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Default Table</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="default-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="default-showcode">
+                                <label class="form-label text-muted" for="default-showcode">Show Code</label>
+                                <input id="default-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -74,63 +74,63 @@ export default {
                             <div class="table-responsive">
                                 <table class="table align-middle table-nowrap mb-0">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Invoice</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Invoice</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">
-                                                <b-link href="#" class="fw-medium">#VZ2110</b-link>
-                                            </th>
-                                            <td>Bobby Davis</td>
-                                            <td>October 15, 2021</td>
-                                            <td>$2,300</td>
-                                            <td>
-                                                <b-link href="javascript:void(0);" class="link-success">View More <i
-                                                        class="ri-arrow-right-line align-middle"></i></b-link>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <b-link href="#" class="fw-medium">#VZ2109</b-link>
-                                            </th>
-                                            <td>Christopher Neal</td>
-                                            <td>October 7, 2021</td>
-                                            <td>$5,500</td>
-                                            <td>
-                                                <b-link href="javascript:void(0);" class="link-success">View More <i
-                                                        class="ri-arrow-right-line align-middle"></i></b-link>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <b-link href="#" class="fw-medium">#VZ2108</b-link>
-                                            </th>
-                                            <td>Monkey Karry</td>
-                                            <td>October 5, 2021</td>
-                                            <td>$2,420</td>
-                                            <td>
-                                                <b-link href="javascript:void(0);" class="link-success">View More <i
-                                                        class="ri-arrow-right-line align-middle"></i></b-link>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <b-link href="#" class="fw-medium">#VZ2107</b-link>
-                                            </th>
-                                            <td>James White</td>
-                                            <td>October 2, 2021</td>
-                                            <td>$7,452</td>
-                                            <td>
-                                                <b-link href="javascript:void(0);" class="link-success">View More <i
-                                                        class="ri-arrow-right-line align-middle"></i></b-link>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <b-link class="fw-medium" href="#">#VZ2110</b-link>
+                                        </th>
+                                        <td>Bobby Davis</td>
+                                        <td>October 15, 2021</td>
+                                        <td>$2,300</td>
+                                        <td>
+                                            <b-link class="link-success" href="javascript:void(0);">View More <i
+                                                class="ri-arrow-right-line align-middle"></i></b-link>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <b-link class="fw-medium" href="#">#VZ2109</b-link>
+                                        </th>
+                                        <td>Christopher Neal</td>
+                                        <td>October 7, 2021</td>
+                                        <td>$5,500</td>
+                                        <td>
+                                            <b-link class="link-success" href="javascript:void(0);">View More <i
+                                                class="ri-arrow-right-line align-middle"></i></b-link>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <b-link class="fw-medium" href="#">#VZ2108</b-link>
+                                        </th>
+                                        <td>Monkey Karry</td>
+                                        <td>October 5, 2021</td>
+                                        <td>$2,420</td>
+                                        <td>
+                                            <b-link class="link-success" href="javascript:void(0);">View More <i
+                                                class="ri-arrow-right-line align-middle"></i></b-link>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <b-link class="fw-medium" href="#">#VZ2107</b-link>
+                                        </th>
+                                        <td>James White</td>
+                                        <td>October 2, 2021</td>
+                                        <td>$7,452</td>
+                                        <td>
+                                            <b-link class="link-success" href="javascript:void(0);">View More <i
+                                                class="ri-arrow-right-line align-middle"></i></b-link>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -190,9 +190,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Striped Rows</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="striped-rows-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="striped-rows-showcode">
+                                <label class="form-label text-muted" for="striped-rows-showcode">Show Code</label>
+                                <input id="striped-rows-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -204,43 +204,51 @@ export default {
                             <div class="table-responsive">
                                 <table class="table table-striped table-nowrap align-middle mb-0">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Invoice</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Invoice</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="fw-medium">01</td>
-                                            <td>Bobby Davis</td>
-                                            <td>Nov 14, 2021</td>
-                                            <td>$2,410</td>
-                                            <td><b-badge variant="success">Confirmed</b-badge></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">02</td>
-                                            <td>Christopher Neal</td>
-                                            <td>Nov 21, 2021</td>
-                                            <td>$1,450</td>
-                                            <td><b-badge class="bg-warning">Waiting</b-badge></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">03</td>
-                                            <td>Monkey Karry</td>
-                                            <td>Nov 24, 2021</td>
-                                            <td>$3,500</td>
-                                            <td><b-badge variant="success">Confirmed</b-badge></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">04</td>
-                                            <td>Aaron James</td>
-                                            <td>Nov 25, 2021</td>
-                                            <td>$6,875</td>
-                                            <td><b-badge variant="danger">Cancelled</b-badge></td>
-                                        </tr>
+                                    <tr>
+                                        <td class="fw-medium">01</td>
+                                        <td>Bobby Davis</td>
+                                        <td>Nov 14, 2021</td>
+                                        <td>$2,410</td>
+                                        <td>
+                                            <b-badge variant="success">Confirmed</b-badge>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">02</td>
+                                        <td>Christopher Neal</td>
+                                        <td>Nov 21, 2021</td>
+                                        <td>$1,450</td>
+                                        <td>
+                                            <b-badge class="bg-warning">Waiting</b-badge>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">03</td>
+                                        <td>Monkey Karry</td>
+                                        <td>Nov 24, 2021</td>
+                                        <td>$3,500</td>
+                                        <td>
+                                            <b-badge variant="success">Confirmed</b-badge>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">04</td>
+                                        <td>Aaron James</td>
+                                        <td>Nov 25, 2021</td>
+                                        <td>$6,875</td>
+                                        <td>
+                                            <b-badge variant="danger">Cancelled</b-badge>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -302,8 +310,8 @@ export default {
 
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="card-tables-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="card-tables-showcode">
+                                <label class="form-label text-muted" for="card-tables-showcode">Show Code</label>
+                                <input id="card-tables-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -316,99 +324,107 @@ export default {
                             <div class="table-responsive table-card">
                                 <table class="table align-middle table-nowrap table-striped-columns mb-0">
                                     <thead class="table-light">
-                                        <tr>
-                                            <th scope="col" style="width: 46px;">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck">
-                                                    <label class="form-check-label" for="cardtableCheck"></label>
-                                                </div>
-                                            </th>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col" style="width: 150px;">Action</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col" style="width: 46px;">
+                                            <div class="form-check">
+                                                <input id="cardtableCheck" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck"></label>
+                                            </div>
+                                        </th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col" style="width: 150px;">Action</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck01">
-                                                    <label class="form-check-label" for="cardtableCheck01"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VL2110</b-link>
-                                            </td>
-                                            <td>William Elmore</td>
-                                            <td>07 Oct, 2021</td>
-                                            <td>$24.05</td>
-                                            <td><b-badge variant="success">Paid</b-badge></td>
-                                            <td>
-                                                <b-button type="button" variant="light" size="sm">Details</b-button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck02">
-                                                    <label class="form-check-label" for="cardtableCheck02"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VL2109</b-link>
-                                            </td>
-                                            <td>Georgie Winters</td>
-                                            <td>07 Oct, 2021</td>
-                                            <td>$26.15</td>
-                                            <td><b-badge variant="success">Paid</b-badge></td>
-                                            <td>
-                                                <b-button type="button" variant="light" size="sm">Details</b-button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck03">
-                                                    <label class="form-check-label" for="cardtableCheck03"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VL2108</b-link>
-                                            </td>
-                                            <td>Whitney Meier</td>
-                                            <td>06 Oct, 2021</td>
-                                            <td>$21.25</td>
-                                            <td><b-badge variant="danger">Refund</b-badge></td>
-                                            <td>
-                                                <b-button type="button" variant="light" size="sm">Details</b-button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck04">
-                                                    <label class="form-check-label" for="cardtableCheck04"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VL2107</b-link>
-                                            </td>
-                                            <td>Justin Maier</td>
-                                            <td>05 Oct, 2021</td>
-                                            <td>$25.03</td>
-                                            <td><b-badge variant="success">Paid</b-badge></td>
-                                            <td>
-                                                <b-button type="button" variant="light" size="sm">Details</b-button>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="cardtableCheck01" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck01"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VL2110</b-link>
+                                        </td>
+                                        <td>William Elmore</td>
+                                        <td>07 Oct, 2021</td>
+                                        <td>$24.05</td>
+                                        <td>
+                                            <b-badge variant="success">Paid</b-badge>
+                                        </td>
+                                        <td>
+                                            <b-button size="sm" type="button" variant="light">Details</b-button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="cardtableCheck02" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck02"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VL2109</b-link>
+                                        </td>
+                                        <td>Georgie Winters</td>
+                                        <td>07 Oct, 2021</td>
+                                        <td>$26.15</td>
+                                        <td>
+                                            <b-badge variant="success">Paid</b-badge>
+                                        </td>
+                                        <td>
+                                            <b-button size="sm" type="button" variant="light">Details</b-button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="cardtableCheck03" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck03"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VL2108</b-link>
+                                        </td>
+                                        <td>Whitney Meier</td>
+                                        <td>06 Oct, 2021</td>
+                                        <td>$21.25</td>
+                                        <td>
+                                            <b-badge variant="danger">Refund</b-badge>
+                                        </td>
+                                        <td>
+                                            <b-button size="sm" type="button" variant="light">Details</b-button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="cardtableCheck04" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck04"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VL2107</b-link>
+                                        </td>
+                                        <td>Justin Maier</td>
+                                        <td>05 Oct, 2021</td>
+                                        <td>$25.03</td>
+                                        <td>
+                                            <b-badge variant="success">Paid</b-badge>
+                                        </td>
+                                        <td>
+                                            <b-button size="sm" type="button" variant="light">Details</b-button>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -429,7 +445,7 @@ export default {
                 &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
                 &lt;th scope=&quot;col&quot;&gt;Total&lt;/th&gt;
                 &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
-                &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;   
+                &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
             &lt;/tr&gt;
         &lt;/thead&gt;
         &lt;tbody&gt;
@@ -512,9 +528,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Tables Colors</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="striped-colors-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="striped-colors-showcode">
+                                <label class="form-label text-muted" for="striped-colors-showcode">Show Code</label>
+                                <input id="striped-colors-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -531,38 +547,38 @@ export default {
                                     <div class="table-responsive">
                                         <table class="table table-dark table-striped table-nowrap mb-0">
                                             <thead>
-                                                <tr>
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Customer</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Invoice</th>
-                                                </tr>
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Customer</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Invoice</th>
+                                            </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td class="fw-medium">01</td>
-                                                    <td>Bobby Davis</td>
-                                                    <td>Nov 14, 2021</td>
-                                                    <td>$2,410</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">02</td>
-                                                    <td>Christopher Neal</td>
-                                                    <td>Nov 21, 2021</td>
-                                                    <td>$1,450</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">03</td>
-                                                    <td>Monkey Karry</td>
-                                                    <td>Nov 24, 2021</td>
-                                                    <td>$3,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">04</td>
-                                                    <td>Aaron James</td>
-                                                    <td>Nov 25, 2021</td>
-                                                    <td>$6,875</td>
-                                                </tr>
+                                            <tr>
+                                                <td class="fw-medium">01</td>
+                                                <td>Bobby Davis</td>
+                                                <td>Nov 14, 2021</td>
+                                                <td>$2,410</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">02</td>
+                                                <td>Christopher Neal</td>
+                                                <td>Nov 21, 2021</td>
+                                                <td>$1,450</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">03</td>
+                                                <td>Monkey Karry</td>
+                                                <td>Nov 24, 2021</td>
+                                                <td>$3,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">04</td>
+                                                <td>Aaron James</td>
+                                                <td>Nov 25, 2021</td>
+                                                <td>$6,875</td>
+                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -572,91 +588,95 @@ export default {
                                     <div class="table-responsive mt-4 mt-xl-0">
                                         <table class="table table-success table-striped table-nowrap align-middle mb-0">
                                             <thead>
-                                                <tr>
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Invoice</th>
-                                                    <th scope="col">Amount</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Invoice</th>
+                                                <th scope="col">Amount</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td class="fw-medium">01</td>
-                                                    <td>Basic Plan</td>
-                                                    <td>$860</td>
-                                                    <td>Nov 22, 2021</td>
-                                                    <td><i
-                                                            class="ri-checkbox-circle-line align-middle text-success"></i>
-                                                        Subscribed</td>
-                                                    <td>
-                                                        <div class="hstack gap-3 flex-wrap">
-                                                            <b-link href="javascript:void(0);"
-                                                                class="link-success fs-15"><i
-                                                                    class="ri-edit-2-line"></i></b-link>
-                                                            <b-link href="javascript:void(0);"
-                                                                class="link-danger fs-15"><i
-                                                                    class="ri-delete-bin-line"></i></b-link>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">02</td>
-                                                    <td>Premium Plan</td>
-                                                    <td>$1200</td>
-                                                    <td>Nov 10, 2021</td>
-                                                    <td><i class="ri-close-circle-line align-middle text-danger"></i>
-                                                        Unsubscribed</td>
-                                                    <td>
-                                                        <div class="hstack gap-3 flex-wrap">
-                                                            <b-link href="javascript:void(0);"
-                                                                class="link-success fs-15"><i
-                                                                    class="ri-edit-2-line"></i></b-link>
-                                                            <b-link href="javascript:void(0);"
-                                                                class="link-danger fs-15"><i
-                                                                    class="ri-delete-bin-line"></i></b-link>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">03</td>
-                                                    <td>Basic Plan</td>
-                                                    <td>$860</td>
-                                                    <td>Nov 19, 2021</td>
-                                                    <td><i
-                                                            class="ri-checkbox-circle-line align-middle text-success"></i>
-                                                        Subscribed</td>
-                                                    <td>
-                                                        <div class="hstack gap-3 flex-wrap">
-                                                            <b-link href="javascript:void(0);"
-                                                                class="link-success fs-15"><i
-                                                                    class="ri-edit-2-line"></i></b-link>
-                                                            <b-link href="javascript:void(0);"
-                                                                class="link-danger fs-15"><i
-                                                                    class="ri-delete-bin-line"></i></b-link>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">04</td>
-                                                    <td>Corporate Plan</td>
-                                                    <td>$1599</td>
-                                                    <td>Nov 22, 2021</td>
-                                                    <td><i
-                                                            class="ri-checkbox-circle-line align-middle text-success"></i>
-                                                        Subscribed</td>
-                                                    <td>
-                                                        <div class="hstack gap-3 flex-wrap">
-                                                            <b-link href="javascript:void(0);"
-                                                                class="link-success fs-15"><i
-                                                                    class="ri-edit-2-line"></i></b-link>
-                                                            <b-link href="javascript:void(0);"
-                                                                class="link-danger fs-15"><i
-                                                                    class="ri-delete-bin-line"></i></b-link>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                            <tr>
+                                                <td class="fw-medium">01</td>
+                                                <td>Basic Plan</td>
+                                                <td>$860</td>
+                                                <td>Nov 22, 2021</td>
+                                                <td><i
+                                                    class="ri-checkbox-circle-line align-middle text-success"></i>
+                                                    Subscribed
+                                                </td>
+                                                <td>
+                                                    <div class="hstack gap-3 flex-wrap">
+                                                        <b-link class="link-success fs-15"
+                                                                href="javascript:void(0);"><i
+                                                            class="ri-edit-2-line"></i></b-link>
+                                                        <b-link class="link-danger fs-15"
+                                                                href="javascript:void(0);"><i
+                                                            class="ri-delete-bin-line"></i></b-link>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">02</td>
+                                                <td>Premium Plan</td>
+                                                <td>$1200</td>
+                                                <td>Nov 10, 2021</td>
+                                                <td><i class="ri-close-circle-line align-middle text-danger"></i>
+                                                    Unsubscribed
+                                                </td>
+                                                <td>
+                                                    <div class="hstack gap-3 flex-wrap">
+                                                        <b-link class="link-success fs-15"
+                                                                href="javascript:void(0);"><i
+                                                            class="ri-edit-2-line"></i></b-link>
+                                                        <b-link class="link-danger fs-15"
+                                                                href="javascript:void(0);"><i
+                                                            class="ri-delete-bin-line"></i></b-link>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">03</td>
+                                                <td>Basic Plan</td>
+                                                <td>$860</td>
+                                                <td>Nov 19, 2021</td>
+                                                <td><i
+                                                    class="ri-checkbox-circle-line align-middle text-success"></i>
+                                                    Subscribed
+                                                </td>
+                                                <td>
+                                                    <div class="hstack gap-3 flex-wrap">
+                                                        <b-link class="link-success fs-15"
+                                                                href="javascript:void(0);"><i
+                                                            class="ri-edit-2-line"></i></b-link>
+                                                        <b-link class="link-danger fs-15"
+                                                                href="javascript:void(0);"><i
+                                                            class="ri-delete-bin-line"></i></b-link>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">04</td>
+                                                <td>Corporate Plan</td>
+                                                <td>$1599</td>
+                                                <td>Nov 22, 2021</td>
+                                                <td><i
+                                                    class="ri-checkbox-circle-line align-middle text-success"></i>
+                                                    Subscribed
+                                                </td>
+                                                <td>
+                                                    <div class="hstack gap-3 flex-wrap">
+                                                        <b-link class="link-success fs-15"
+                                                                href="javascript:void(0);"><i
+                                                            class="ri-edit-2-line"></i></b-link>
+                                                        <b-link class="link-danger fs-15"
+                                                                href="javascript:void(0);"><i
+                                                            class="ri-delete-bin-line"></i></b-link>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -785,8 +805,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Hoverable Rows</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="hover-rows-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="hover-rows-showcode">
+                                <label class="form-label text-muted" for="hover-rows-showcode">Show Code</label>
+                                <input id="hover-rows-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -801,89 +821,89 @@ export default {
                                     <div class="table-responsive">
                                         <table class="table table-hover align-middle table-nowrap mb-0">
                                             <thead>
-                                                <tr>
-                                                    <th scope="col" style="width: 25px;">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="checkAll" value="option1">
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col">Order ID</th>
-                                                    <th scope="col">Shop</th>
-                                                    <th scope="col">Customer</th>
-                                                    <th scope="col">Price</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
+                                            <tr>
+                                                <th scope="col" style="width: 25px;">
+                                                    <div class="form-check">
+                                                        <input id="checkAll" class="form-check-input"
+                                                               type="checkbox" value="option1">
+                                                    </div>
+                                                </th>
+                                                <th scope="col">Order ID</th>
+                                                <th scope="col">Shop</th>
+                                                <th scope="col">Customer</th>
+                                                <th scope="col">Price</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox2" value="option1" checked>
-                                                        </div>
-                                                    </th>
-                                                    <td>#541254265</td>
-                                                    <td>Amezon</td>
-                                                    <td>Cleo Carson</td>
-                                                    <td>$4,521</td>
-                                                    <td>
-                                                        <b-link href="javascript:void(0);"><i
-                                                                class="ri-download-2-line fs-17 lh-1 align-middle"></i>
-                                                        </b-link>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox3" value="option1" checked>
-                                                        </div>
-                                                    </th>
-                                                    <td>#744145235</td>
-                                                    <td>Shoppers</td>
-                                                    <td>Juston Eichmann</td>
-                                                    <td>$7,546</td>
-                                                    <td>
-                                                        <b-link href="javascript:void(0);"><i
-                                                                class="ri-download-2-line fs-17 lh-1 align-middle"></i>
-                                                        </b-link>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox4" value="option1">
-                                                        </div>
-                                                    </th>
-                                                    <td>#9855126598</td>
-                                                    <td>Flipkart</td>
-                                                    <td>Bettie Johson</td>
-                                                    <td>$1,350</td>
-                                                    <td>
-                                                        <b-link href="javascript:void(0);"><i
-                                                                class="ri-download-2-line fs-17 lh-1 align-middle"></i>
-                                                        </b-link>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox5" value="option1">
-                                                        </div>
-                                                    </th>
-                                                    <td>#847512653</td>
-                                                    <td>Shoppers</td>
-                                                    <td>Maritza Blanda</td>
-                                                    <td>$4,521</td>
-                                                    <td>
-                                                        <b-link href="javascript:void(0);"><i
-                                                                class="ri-download-2-line fs-17 lh-1 align-middle"></i>
-                                                        </b-link>
-                                                    </td>
-                                                </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input id="inlineCheckbox2" checked
+                                                               class="form-check-input" type="checkbox" value="option1">
+                                                    </div>
+                                                </th>
+                                                <td>#541254265</td>
+                                                <td>Amezon</td>
+                                                <td>Cleo Carson</td>
+                                                <td>$4,521</td>
+                                                <td>
+                                                    <b-link href="javascript:void(0);"><i
+                                                        class="ri-download-2-line fs-17 lh-1 align-middle"></i>
+                                                    </b-link>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input id="inlineCheckbox3" checked
+                                                               class="form-check-input" type="checkbox" value="option1">
+                                                    </div>
+                                                </th>
+                                                <td>#744145235</td>
+                                                <td>Shoppers</td>
+                                                <td>Juston Eichmann</td>
+                                                <td>$7,546</td>
+                                                <td>
+                                                    <b-link href="javascript:void(0);"><i
+                                                        class="ri-download-2-line fs-17 lh-1 align-middle"></i>
+                                                    </b-link>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input id="inlineCheckbox4" class="form-check-input"
+                                                               type="checkbox" value="option1">
+                                                    </div>
+                                                </th>
+                                                <td>#9855126598</td>
+                                                <td>Flipkart</td>
+                                                <td>Bettie Johson</td>
+                                                <td>$1,350</td>
+                                                <td>
+                                                    <b-link href="javascript:void(0);"><i
+                                                        class="ri-download-2-line fs-17 lh-1 align-middle"></i>
+                                                    </b-link>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input id="inlineCheckbox5" class="form-check-input"
+                                                               type="checkbox" value="option1">
+                                                    </div>
+                                                </th>
+                                                <td>#847512653</td>
+                                                <td>Shoppers</td>
+                                                <td>Maritza Blanda</td>
+                                                <td>$4,521</td>
+                                                <td>
+                                                    <b-link href="javascript:void(0);"><i
+                                                        class="ri-download-2-line fs-17 lh-1 align-middle"></i>
+                                                    </b-link>
+                                                </td>
+                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -894,83 +914,87 @@ export default {
                                     <div class="table-responsive mt-4 mt-xl-0">
                                         <table class="table table-hover table-striped align-middle table-nowrap mb-0">
                                             <thead>
-                                                <tr>
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Invoice</th>
-                                                    <th scope="col">Amount</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Invoice</th>
+                                                <th scope="col">Amount</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td class="fw-medium">01</td>
-                                                    <td>Basic Plan</td>
-                                                    <td>$860</td>
-                                                    <td>Nov 22, 2021</td>
-                                                    <td><i
-                                                            class="ri-checkbox-circle-line align-middle text-success"></i>
-                                                        Subscribed</td>
-                                                    <td>
-                                                        <div class="form-check form-switch">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                role="switch" id="SwitchCheck1" checked="">
-                                                            <label class="form-check-label ms-2"
-                                                                for="SwitchCheck1">Yes/No</label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">02</td>
-                                                    <td>Premium Plan</td>
-                                                    <td>$1200</td>
-                                                    <td>Nov 10, 2021</td>
-                                                    <td><i class="ri-close-circle-line align-middle text-danger"></i>
-                                                        Unsubscribed</td>
-                                                    <td>
-                                                        <div class="form-check form-switch">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                role="switch" id="SwitchCheck2">
-                                                            <label class="form-check-label ms-2"
-                                                                for="SwitchCheck2">Yes/No</label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">03</td>
-                                                    <td>Basic Plan</td>
-                                                    <td>$860</td>
-                                                    <td>Nov 19, 2021</td>
-                                                    <td><i
-                                                            class="ri-checkbox-circle-line align-middle text-success"></i>
-                                                        Subscribed</td>
-                                                    <td>
-                                                        <div class="form-check form-switch">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                role="switch" id="SwitchCheck3">
-                                                            <label class="form-check-label ms-2"
-                                                                for="SwitchCheck3">Yes/No</label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="fw-medium">04</td>
-                                                    <td>Corporate Plan</td>
-                                                    <td>$1599</td>
-                                                    <td>Nov 22, 2021</td>
-                                                    <td><i
-                                                            class="ri-checkbox-circle-line align-middle text-success"></i>
-                                                        Subscribed</td>
-                                                    <td>
-                                                        <div class="form-check form-switch">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                role="switch" id="SwitchCheck4" checked="">
-                                                            <label class="form-check-label ms-2"
-                                                                for="SwitchCheck4">Yes/No</label>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                            <tr>
+                                                <td class="fw-medium">01</td>
+                                                <td>Basic Plan</td>
+                                                <td>$860</td>
+                                                <td>Nov 22, 2021</td>
+                                                <td><i
+                                                    class="ri-checkbox-circle-line align-middle text-success"></i>
+                                                    Subscribed
+                                                </td>
+                                                <td>
+                                                    <div class="form-check form-switch">
+                                                        <input id="SwitchCheck1" checked=""
+                                                               class="form-check-input" role="switch" type="checkbox">
+                                                        <label class="form-check-label ms-2"
+                                                               for="SwitchCheck1">Yes/No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">02</td>
+                                                <td>Premium Plan</td>
+                                                <td>$1200</td>
+                                                <td>Nov 10, 2021</td>
+                                                <td><i class="ri-close-circle-line align-middle text-danger"></i>
+                                                    Unsubscribed
+                                                </td>
+                                                <td>
+                                                    <div class="form-check form-switch">
+                                                        <input id="SwitchCheck2" class="form-check-input"
+                                                               role="switch" type="checkbox">
+                                                        <label class="form-check-label ms-2"
+                                                               for="SwitchCheck2">Yes/No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">03</td>
+                                                <td>Basic Plan</td>
+                                                <td>$860</td>
+                                                <td>Nov 19, 2021</td>
+                                                <td><i
+                                                    class="ri-checkbox-circle-line align-middle text-success"></i>
+                                                    Subscribed
+                                                </td>
+                                                <td>
+                                                    <div class="form-check form-switch">
+                                                        <input id="SwitchCheck3" class="form-check-input"
+                                                               role="switch" type="checkbox">
+                                                        <label class="form-check-label ms-2"
+                                                               for="SwitchCheck3">Yes/No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-medium">04</td>
+                                                <td>Corporate Plan</td>
+                                                <td>$1599</td>
+                                                <td>Nov 22, 2021</td>
+                                                <td><i
+                                                    class="ri-checkbox-circle-line align-middle text-success"></i>
+                                                    Subscribed
+                                                </td>
+                                                <td>
+                                                    <div class="form-check form-switch">
+                                                        <input id="SwitchCheck4" checked=""
+                                                               class="form-check-input" role="switch" type="checkbox">
+                                                        <label class="form-check-label ms-2"
+                                                               for="SwitchCheck4">Yes/No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -1130,8 +1154,8 @@ export default {
 
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="card-tables-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="card-tables-showcode">
+                                <label class="form-label text-muted" for="card-tables-showcode">Show Code</label>
+                                <input id="card-tables-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1144,99 +1168,107 @@ export default {
                             <div class="table-responsive table-card">
                                 <table class="table align-middle table-nowrap mb-0">
                                     <thead class="table-light">
-                                        <tr>
-                                            <th scope="col" style="width: 46px;">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck">
-                                                    <label class="form-check-label" for="cardtableCheck"></label>
-                                                </div>
-                                            </th>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col" style="width: 150px;">Action</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col" style="width: 46px;">
+                                            <div class="form-check">
+                                                <input id="cardtableCheck" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck"></label>
+                                            </div>
+                                        </th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col" style="width: 150px;">Action</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck01">
-                                                    <label class="form-check-label" for="cardtableCheck01"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VL2110</b-link>
-                                            </td>
-                                            <td>William Elmore</td>
-                                            <td>07 Oct, 2021</td>
-                                            <td>$24.05</td>
-                                            <td><b-badge variant="success">Paid</b-badge></td>
-                                            <td>
-                                                <b-button type="button" variant="light" size="sm">Details</b-button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck02">
-                                                    <label class="form-check-label" for="cardtableCheck02"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VL2109</b-link>
-                                            </td>
-                                            <td>Georgie Winters</td>
-                                            <td>07 Oct, 2021</td>
-                                            <td>$26.15</td>
-                                            <td><b-badge variant="success">Paid</b-badge></td>
-                                            <td>
-                                                <b-button type="button" variant="light" size="sm">Details</b-button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck03">
-                                                    <label class="form-check-label" for="cardtableCheck03"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VL2108</b-link>
-                                            </td>
-                                            <td>Whitney Meier</td>
-                                            <td>06 Oct, 2021</td>
-                                            <td>$21.25</td>
-                                            <td><b-badge variant="danger">Refund</b-badge></td>
-                                            <td>
-                                                <b-button type="button" variant="light" size="sm">Details</b-button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="cardtableCheck04">
-                                                    <label class="form-check-label" for="cardtableCheck04"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VL2107</b-link>
-                                            </td>
-                                            <td>Justin Maier</td>
-                                            <td>05 Oct, 2021</td>
-                                            <td>$25.03</td>
-                                            <td><b-badge variant="success">Paid</b-badge></td>
-                                            <td>
-                                                <b-button type="button" variant="light" size="sm">Details</b-button>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="cardtableCheck01" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck01"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VL2110</b-link>
+                                        </td>
+                                        <td>William Elmore</td>
+                                        <td>07 Oct, 2021</td>
+                                        <td>$24.05</td>
+                                        <td>
+                                            <b-badge variant="success">Paid</b-badge>
+                                        </td>
+                                        <td>
+                                            <b-button size="sm" type="button" variant="light">Details</b-button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="cardtableCheck02" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck02"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VL2109</b-link>
+                                        </td>
+                                        <td>Georgie Winters</td>
+                                        <td>07 Oct, 2021</td>
+                                        <td>$26.15</td>
+                                        <td>
+                                            <b-badge variant="success">Paid</b-badge>
+                                        </td>
+                                        <td>
+                                            <b-button size="sm" type="button" variant="light">Details</b-button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="cardtableCheck03" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck03"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VL2108</b-link>
+                                        </td>
+                                        <td>Whitney Meier</td>
+                                        <td>06 Oct, 2021</td>
+                                        <td>$21.25</td>
+                                        <td>
+                                            <b-badge variant="danger">Refund</b-badge>
+                                        </td>
+                                        <td>
+                                            <b-button size="sm" type="button" variant="light">Details</b-button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="cardtableCheck04" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="cardtableCheck04"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VL2107</b-link>
+                                        </td>
+                                        <td>Justin Maier</td>
+                                        <td>05 Oct, 2021</td>
+                                        <td>$25.03</td>
+                                        <td>
+                                            <b-badge variant="success">Paid</b-badge>
+                                        </td>
+                                        <td>
+                                            <b-button size="sm" type="button" variant="light">Details</b-button>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1341,9 +1373,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Active Tables</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="active-tables-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="active-tables-showcode">
+                                <label class="form-label text-muted" for="active-tables-showcode">Show Code</label>
+                                <input id="active-tables-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1355,90 +1387,90 @@ export default {
                             <div class="table-responsive">
                                 <table class="table align-middle table-nowrap mb-0">
                                     <thead>
-                                        <tr>
-                                            <th scope="col" style="width: 42px;">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="activetableCheck">
-                                                    <label class="form-check-label" for="activetableCheck"></label>
-                                                </div>
-                                            </th>
-                                            <th scope="col">Order ID</th>
-                                            <th scope="col">Shop</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col" style="width: 42px;">
+                                            <div class="form-check">
+                                                <input id="activetableCheck" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="activetableCheck"></label>
+                                            </div>
+                                        </th>
+                                        <th scope="col">Order ID</th>
+                                        <th scope="col">Shop</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="activetableCheck01" checked>
-                                                    <label class="form-check-label" for="activetableCheck01"></label>
-                                                </div>
-                                            </th>
-                                            <td>#541254265</td>
-                                            <td>Amezon</td>
-                                            <td>Cleo Carson</td>
-                                            <td>$4,521</td>
-                                            <td>
-                                                <b-link href="javascript:void(0);"><i
-                                                        class="ri-download-2-line fs-17 lh-1 align-middle"></i></b-link>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-active">
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="activetableCheck02" checked>
-                                                    <label class="form-check-label" for="activetableCheck02"></label>
-                                                </div>
-                                            </th>
-                                            <td>#744145235</td>
-                                            <td>Shoppers</td>
-                                            <td>Juston Eichmann</td>
-                                            <td>$7,546</td>
-                                            <td>
-                                                <b-link href="javascript:void(0);"><i
-                                                        class="ri-download-2-line fs-17 lh-1 align-middle"></i></b-link>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="activetableCheck03">
-                                                    <label class="form-check-label" for="activetableCheck03"></label>
-                                                </div>
-                                            </th>
-                                            <td>#9855126598</td>
-                                            <td>Flipkart</td>
-                                            <td>Bettie Johson</td>
-                                            <td>$1,350</td>
-                                            <td>
-                                                <b-link href="javascript:void(0);"><i
-                                                        class="ri-download-2-line fs-17 lh-1 align-middle"></i></b-link>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="activetableCheck04">
-                                                    <label class="form-check-label" for="activetableCheck04"></label>
-                                                </div>
-                                            </th>
-                                            <td>#847512653</td>
-                                            <td>Shoppers</td>
-                                            <td class="table-active">Maritza Blanda</td>
-                                            <td>$4,521</td>
-                                            <td>
-                                                <b-link href="javascript:void(0);"><i
-                                                        class="ri-download-2-line fs-17 lh-1 align-middle"></i></b-link>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="activetableCheck01" checked class="form-check-input"
+                                                       type="checkbox" value="">
+                                                <label class="form-check-label" for="activetableCheck01"></label>
+                                            </div>
+                                        </th>
+                                        <td>#541254265</td>
+                                        <td>Amezon</td>
+                                        <td>Cleo Carson</td>
+                                        <td>$4,521</td>
+                                        <td>
+                                            <b-link href="javascript:void(0);"><i
+                                                class="ri-download-2-line fs-17 lh-1 align-middle"></i></b-link>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-active">
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="activetableCheck02" checked class="form-check-input"
+                                                       type="checkbox" value="">
+                                                <label class="form-check-label" for="activetableCheck02"></label>
+                                            </div>
+                                        </th>
+                                        <td>#744145235</td>
+                                        <td>Shoppers</td>
+                                        <td>Juston Eichmann</td>
+                                        <td>$7,546</td>
+                                        <td>
+                                            <b-link href="javascript:void(0);"><i
+                                                class="ri-download-2-line fs-17 lh-1 align-middle"></i></b-link>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="activetableCheck03" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="activetableCheck03"></label>
+                                            </div>
+                                        </th>
+                                        <td>#9855126598</td>
+                                        <td>Flipkart</td>
+                                        <td>Bettie Johson</td>
+                                        <td>$1,350</td>
+                                        <td>
+                                            <b-link href="javascript:void(0);"><i
+                                                class="ri-download-2-line fs-17 lh-1 align-middle"></i></b-link>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="activetableCheck04" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="activetableCheck04"></label>
+                                            </div>
+                                        </th>
+                                        <td>#847512653</td>
+                                        <td>Shoppers</td>
+                                        <td class="table-active">Maritza Blanda</td>
+                                        <td>$4,521</td>
+                                        <td>
+                                            <b-link href="javascript:void(0);"><i
+                                                class="ri-download-2-line fs-17 lh-1 align-middle"></i></b-link>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1528,9 +1560,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Bordered Tables</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="bordered-tables-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="bordered-tables-showcode">
+                                <label class="form-label text-muted" for="bordered-tables-showcode">Show Code</label>
+                                <input id="bordered-tables-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1543,108 +1575,120 @@ export default {
                             <div class="table-responsive">
                                 <table class="table table-bordered align-middle table-nowrap mb-0">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Title</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Assignee</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col"></th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Assignee</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col"></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="fw-medium">01</td>
-                                            <td>Implement new UX</td>
-                                            <td><b-badge variant="soft-primary"
-                                                    class="badge-soft-primary">Backlog</b-badge></td>
-                                            <td>Lanora Sandoval</td>
-                                            <td>$4,521</td>
-                                            <td>
-                                                <b-dropdown variant="link" toggle-class="arrow-none p-0" no-caret>
-                                                    <template #button-content><i class="ri-more-2-fill"></i>
-                                                    </template>
-                                                    <b-dropdown-item href="#">
-                                                        View
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Edit
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Delete
-                                                    </b-dropdown-item>
-                                                </b-dropdown>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">02</td>
-                                            <td>Design syntax</td>
-                                            <td><b-badge variant="soft-secondary" class="badge-soft-secondary">In
-                                                    Progress</b-badge></td>
-                                            <td>Calvin Garrett</td>
-                                            <td>$7,546</td>
-                                            <td>
-                                                <b-dropdown variant="link" toggle-class="arrow-none p-0" no-caret>
-                                                    <template #button-content><i class="ri-more-2-fill"></i>
-                                                    </template>
-                                                    <b-dropdown-item href="#">
-                                                        View
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Edit
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Delete
-                                                    </b-dropdown-item>
-                                                </b-dropdown>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">03</td>
-                                            <td>Configurable resources</td>
-                                            <td><b-badge variant="soft-success"
-                                                    class="badge-soft-success">Done</b-badge></td>
-                                            <td>Florence Guzman</td>
-                                            <td>$1,350</td>
-                                            <td>
-                                                <b-dropdown variant="link" toggle-class="arrow-none p-0" no-caret>
-                                                    <template #button-content><i class="ri-more-2-fill"></i>
-                                                    </template>
-                                                    <b-dropdown-item href="#">
-                                                        View
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Edit
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Delete
-                                                    </b-dropdown-item>
-                                                </b-dropdown>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">04</td>
-                                            <td>Implement extensions</td>
-                                            <td><b-badge variant="soft-secondary" class="badge-soft-secondary">In
-                                                    Progress</b-badge></td>
-                                            <td>Maritza Blanda</td>
-                                            <td>$4,521</td>
-                                            <td>
-                                                <b-dropdown variant="link" toggle-class="arrow-none p-0" no-caret>
-                                                    <template #button-content><i class="ri-more-2-fill"></i>
-                                                    </template>
-                                                    <b-dropdown-item href="#">
-                                                        View
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Edit
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Delete
-                                                    </b-dropdown-item>
-                                                </b-dropdown>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td class="fw-medium">01</td>
+                                        <td>Implement new UX</td>
+                                        <td>
+                                            <b-badge class="badge-soft-primary"
+                                                     variant="soft-primary">Backlog
+                                            </b-badge>
+                                        </td>
+                                        <td>Lanora Sandoval</td>
+                                        <td>$4,521</td>
+                                        <td>
+                                            <b-dropdown no-caret toggle-class="arrow-none p-0" variant="link">
+                                                <template #button-content><i class="ri-more-2-fill"></i>
+                                                </template>
+                                                <b-dropdown-item href="#">
+                                                    View
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Edit
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Delete
+                                                </b-dropdown-item>
+                                            </b-dropdown>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">02</td>
+                                        <td>Design syntax</td>
+                                        <td>
+                                            <b-badge class="badge-soft-secondary" variant="soft-secondary">In
+                                                Progress
+                                            </b-badge>
+                                        </td>
+                                        <td>Calvin Garrett</td>
+                                        <td>$7,546</td>
+                                        <td>
+                                            <b-dropdown no-caret toggle-class="arrow-none p-0" variant="link">
+                                                <template #button-content><i class="ri-more-2-fill"></i>
+                                                </template>
+                                                <b-dropdown-item href="#">
+                                                    View
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Edit
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Delete
+                                                </b-dropdown-item>
+                                            </b-dropdown>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">03</td>
+                                        <td>Configurable resources</td>
+                                        <td>
+                                            <b-badge class="badge-soft-success"
+                                                     variant="soft-success">Done
+                                            </b-badge>
+                                        </td>
+                                        <td>Florence Guzman</td>
+                                        <td>$1,350</td>
+                                        <td>
+                                            <b-dropdown no-caret toggle-class="arrow-none p-0" variant="link">
+                                                <template #button-content><i class="ri-more-2-fill"></i>
+                                                </template>
+                                                <b-dropdown-item href="#">
+                                                    View
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Edit
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Delete
+                                                </b-dropdown-item>
+                                            </b-dropdown>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">04</td>
+                                        <td>Implement extensions</td>
+                                        <td>
+                                            <b-badge class="badge-soft-secondary" variant="soft-secondary">In
+                                                Progress
+                                            </b-badge>
+                                        </td>
+                                        <td>Maritza Blanda</td>
+                                        <td>$4,521</td>
+                                        <td>
+                                            <b-dropdown no-caret toggle-class="arrow-none p-0" variant="link">
+                                                <template #button-content><i class="ri-more-2-fill"></i>
+                                                </template>
+                                                <b-dropdown-item href="#">
+                                                    View
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Edit
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Delete
+                                                </b-dropdown-item>
+                                            </b-dropdown>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1674,7 +1718,7 @@ export default {
                     &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
                         &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
                     &lt;/a&gt;
-                  
+
                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
@@ -1694,7 +1738,7 @@ export default {
                     &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
                         &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
                     &lt;/a&gt;
-                  
+
                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
@@ -1714,7 +1758,7 @@ export default {
                     &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
                         &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
                     &lt;/a&gt;
-                  
+
                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
@@ -1734,7 +1778,7 @@ export default {
                     &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
                         &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
                     &lt;/a&gt;
-                  
+
                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
@@ -1759,9 +1803,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Tables Border Colors</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="tables-border-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="tables-border-showcode">
+                                <label class="form-label text-muted" for="tables-border-showcode">Show Code</label>
+                                <input id="tables-border-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1773,108 +1817,120 @@ export default {
                             <div class="table-responsive">
                                 <table class="table table-bordered border-secondary table-nowrap align-middle mb-0">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Title</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Assignee</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col"></th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Assignee</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col"></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="fw-medium">01</td>
-                                            <td>Implement new UX</td>
-                                            <td><b-badge variant="soft-primary"
-                                                    class="badge-soft-primary">Backlog</b-badge></td>
-                                            <td>Lanora Sandoval</td>
-                                            <td>$4,521</td>
-                                            <td>
-                                                <b-dropdown variant="link" toggle-class="arrow-none p-0" no-caret>
-                                                    <template #button-content><i class="ri-more-2-fill"></i>
-                                                    </template>
-                                                    <b-dropdown-item href="#">
-                                                        View
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Edit
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Delete
-                                                    </b-dropdown-item>
-                                                </b-dropdown>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">02</td>
-                                            <td>Design syntax</td>
-                                            <td><b-badge variant="soft-secondary" class="badge-soft-secondary">In
-                                                    Progress</b-badge></td>
-                                            <td>Calvin Garrett</td>
-                                            <td>$7,546</td>
-                                            <td>
-                                                <b-dropdown variant="link" toggle-class="arrow-none p-0" no-caret>
-                                                    <template #button-content><i class="ri-more-2-fill"></i>
-                                                    </template>
-                                                    <b-dropdown-item href="#">
-                                                        View
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Edit
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Delete
-                                                    </b-dropdown-item>
-                                                </b-dropdown>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">03</td>
-                                            <td>Configurable resources</td>
-                                            <td><b-badge variant="soft-success"
-                                                    class="badge-soft-success">Done</b-badge></td>
-                                            <td>Florence Guzman</td>
-                                            <td>$1,350</td>
-                                            <td>
-                                                <b-dropdown variant="link" toggle-class="arrow-none p-0" no-caret>
-                                                    <template #button-content><i class="ri-more-2-fill"></i>
-                                                    </template>
-                                                    <b-dropdown-item href="#">
-                                                        View
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Edit
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Delete
-                                                    </b-dropdown-item>
-                                                </b-dropdown>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">04</td>
-                                            <td>Implement extensions</td>
-                                            <td><b-badge variant="soft-secondary" class="badge-soft-secondary">In
-                                                    Progress</b-badge></td>
-                                            <td>Maritza Blanda</td>
-                                            <td>$4,521</td>
-                                            <td>
-                                                <b-dropdown variant="link" toggle-class="arrow-none p-0" no-caret>
-                                                    <template #button-content><i class="ri-more-2-fill"></i>
-                                                    </template>
-                                                    <b-dropdown-item href="#">
-                                                        View
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Edit
-                                                    </b-dropdown-item>
-                                                    <b-dropdown-item href="#">
-                                                        Delete
-                                                    </b-dropdown-item>
-                                                </b-dropdown>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td class="fw-medium">01</td>
+                                        <td>Implement new UX</td>
+                                        <td>
+                                            <b-badge class="badge-soft-primary"
+                                                     variant="soft-primary">Backlog
+                                            </b-badge>
+                                        </td>
+                                        <td>Lanora Sandoval</td>
+                                        <td>$4,521</td>
+                                        <td>
+                                            <b-dropdown no-caret toggle-class="arrow-none p-0" variant="link">
+                                                <template #button-content><i class="ri-more-2-fill"></i>
+                                                </template>
+                                                <b-dropdown-item href="#">
+                                                    View
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Edit
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Delete
+                                                </b-dropdown-item>
+                                            </b-dropdown>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">02</td>
+                                        <td>Design syntax</td>
+                                        <td>
+                                            <b-badge class="badge-soft-secondary" variant="soft-secondary">In
+                                                Progress
+                                            </b-badge>
+                                        </td>
+                                        <td>Calvin Garrett</td>
+                                        <td>$7,546</td>
+                                        <td>
+                                            <b-dropdown no-caret toggle-class="arrow-none p-0" variant="link">
+                                                <template #button-content><i class="ri-more-2-fill"></i>
+                                                </template>
+                                                <b-dropdown-item href="#">
+                                                    View
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Edit
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Delete
+                                                </b-dropdown-item>
+                                            </b-dropdown>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">03</td>
+                                        <td>Configurable resources</td>
+                                        <td>
+                                            <b-badge class="badge-soft-success"
+                                                     variant="soft-success">Done
+                                            </b-badge>
+                                        </td>
+                                        <td>Florence Guzman</td>
+                                        <td>$1,350</td>
+                                        <td>
+                                            <b-dropdown no-caret toggle-class="arrow-none p-0" variant="link">
+                                                <template #button-content><i class="ri-more-2-fill"></i>
+                                                </template>
+                                                <b-dropdown-item href="#">
+                                                    View
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Edit
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Delete
+                                                </b-dropdown-item>
+                                            </b-dropdown>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">04</td>
+                                        <td>Implement extensions</td>
+                                        <td>
+                                            <b-badge class="badge-soft-secondary" variant="soft-secondary">In
+                                                Progress
+                                            </b-badge>
+                                        </td>
+                                        <td>Maritza Blanda</td>
+                                        <td>$4,521</td>
+                                        <td>
+                                            <b-dropdown no-caret toggle-class="arrow-none p-0" variant="link">
+                                                <template #button-content><i class="ri-more-2-fill"></i>
+                                                </template>
+                                                <b-dropdown-item href="#">
+                                                    View
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Edit
+                                                </b-dropdown-item>
+                                                <b-dropdown-item href="#">
+                                                    Delete
+                                                </b-dropdown-item>
+                                            </b-dropdown>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1904,7 +1960,7 @@ export default {
                     &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
                         &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
                     &lt;/a&gt;
-                  
+
                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
@@ -1924,7 +1980,7 @@ export default {
                     &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
                         &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
                     &lt;/a&gt;
-                  
+
                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
@@ -1944,7 +2000,7 @@ export default {
                     &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
                         &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
                     &lt;/a&gt;
-                  
+
                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
@@ -1964,7 +2020,7 @@ export default {
                     &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
                         &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
                     &lt;/a&gt;
-                  
+
                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
                         &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
@@ -1986,10 +2042,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Tables Without Borders</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="tables-without-border-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="tables-without-border-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="tables-without-border-showcode">
+                                <input id="tables-without-border-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -2000,80 +2056,92 @@ export default {
                             <div class="table-responsive">
                                 <table class="table table-borderless align-middle table-nowrap mb-0">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Job Title</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col"></th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Job Title</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col"></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="fw-medium">01</td>
-                                            <td>Annette Black</td>
-                                            <td>Industrial Designer</td>
-                                            <td>10, Nov 2021</td>
-                                            <td><b-badge variant="soft-success"
-                                                    class="badge-soft-success">Active</b-badge></td>
-                                            <td>
-                                                <div class="hstack gap-3 fs-15">
-                                                    <b-link href="javascript:void(0);" class="link-primary"><i
-                                                            class="ri-settings-4-line"></i></b-link>
-                                                    <b-link href="javascript:void(0);" class="link-danger"><i
-                                                            class="ri-delete-bin-5-line"></i></b-link>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">02</td>
-                                            <td>Bessie Cooper</td>
-                                            <td>Graphic Designer</td>
-                                            <td>13, Nov 2021</td>
-                                            <td><b-badge variant="soft-success"
-                                                    class="badge-soft-success">Active</b-badge></td>
-                                            <td>
-                                                <div class="hstack gap-3 fs-15">
-                                                    <b-link href="javascript:void(0);" class="link-primary"><i
-                                                            class="ri-settings-4-line"></i></b-link>
-                                                    <b-link href="javascript:void(0);" class="link-danger"><i
-                                                            class="ri-delete-bin-5-line"></i></b-link>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">03</td>
-                                            <td>Leslie Alexander</td>
-                                            <td>Product Manager</td>
-                                            <td>17, Nov 2021</td>
-                                            <td><b-badge variant="soft-success"
-                                                    class="badge-soft-success">Active</b-badge></td>
-                                            <td>
-                                                <div class="hstack gap-3 fs-15">
-                                                    <b-link href="javascript:void(0);" class="link-primary"><i
-                                                            class="ri-settings-4-line"></i></b-link>
-                                                    <b-link href="javascript:void(0);" class="link-danger"><i
-                                                            class="ri-delete-bin-5-line"></i></b-link>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">04</td>
-                                            <td>Lenora Sandoval</td>
-                                            <td>Applications Engineer</td>
-                                            <td>25, Nov 2021</td>
-                                            <td><b-badge variant="soft-danger"
-                                                    class="badge-soft-danger">Disabled</b-badge></td>
-                                            <td>
-                                                <div class="hstack gap-3 fs-15">
-                                                    <b-link href="javascript:void(0);" class="link-primary"><i
-                                                            class="ri-settings-4-line"></i></b-link>
-                                                    <b-link href="javascript:void(0);" class="link-danger"><i
-                                                            class="ri-delete-bin-5-line"></i></b-link>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td class="fw-medium">01</td>
+                                        <td>Annette Black</td>
+                                        <td>Industrial Designer</td>
+                                        <td>10, Nov 2021</td>
+                                        <td>
+                                            <b-badge class="badge-soft-success"
+                                                     variant="soft-success">Active
+                                            </b-badge>
+                                        </td>
+                                        <td>
+                                            <div class="hstack gap-3 fs-15">
+                                                <b-link class="link-primary" href="javascript:void(0);"><i
+                                                    class="ri-settings-4-line"></i></b-link>
+                                                <b-link class="link-danger" href="javascript:void(0);"><i
+                                                    class="ri-delete-bin-5-line"></i></b-link>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">02</td>
+                                        <td>Bessie Cooper</td>
+                                        <td>Graphic Designer</td>
+                                        <td>13, Nov 2021</td>
+                                        <td>
+                                            <b-badge class="badge-soft-success"
+                                                     variant="soft-success">Active
+                                            </b-badge>
+                                        </td>
+                                        <td>
+                                            <div class="hstack gap-3 fs-15">
+                                                <b-link class="link-primary" href="javascript:void(0);"><i
+                                                    class="ri-settings-4-line"></i></b-link>
+                                                <b-link class="link-danger" href="javascript:void(0);"><i
+                                                    class="ri-delete-bin-5-line"></i></b-link>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">03</td>
+                                        <td>Leslie Alexander</td>
+                                        <td>Product Manager</td>
+                                        <td>17, Nov 2021</td>
+                                        <td>
+                                            <b-badge class="badge-soft-success"
+                                                     variant="soft-success">Active
+                                            </b-badge>
+                                        </td>
+                                        <td>
+                                            <div class="hstack gap-3 fs-15">
+                                                <b-link class="link-primary" href="javascript:void(0);"><i
+                                                    class="ri-settings-4-line"></i></b-link>
+                                                <b-link class="link-danger" href="javascript:void(0);"><i
+                                                    class="ri-delete-bin-5-line"></i></b-link>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">04</td>
+                                        <td>Lenora Sandoval</td>
+                                        <td>Applications Engineer</td>
+                                        <td>25, Nov 2021</td>
+                                        <td>
+                                            <b-badge class="badge-soft-danger"
+                                                     variant="soft-danger">Disabled
+                                            </b-badge>
+                                        </td>
+                                        <td>
+                                            <div class="hstack gap-3 fs-15">
+                                                <b-link class="link-primary" href="javascript:void(0);"><i
+                                                    class="ri-settings-4-line"></i></b-link>
+                                                <b-link class="link-danger" href="javascript:void(0);"><i
+                                                    class="ri-delete-bin-5-line"></i></b-link>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -2160,9 +2228,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Small Tables</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="tables-small-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="tables-small-showcode">
+                                <label class="form-label text-muted" for="tables-small-showcode">Show Code</label>
+                                <input id="tables-small-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -2175,51 +2243,62 @@ export default {
                             <div class="table-responsive">
                                 <table class="table table-sm table-nowrap mb-0">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Title</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Assignee</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Assignee</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="fw-medium">01</td>
-                                            <td>Implement new UX</td>
-                                            <td><b-badge variant="soft-primary"
-                                                    class="badge-soft-primary">Backlog</b-badge></td>
-                                            <td>Lanora Sandoval</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">02</td>
-                                            <td>Design syntax</td>
-                                            <td><b-badge variant="soft-secondary" class="badge-soft-secondary">In
-                                                    Progress</b-badge></td>
-                                            <td>Calvin Garrett</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">03</td>
-                                            <td>Configurable resources</td>
-                                            <td><b-badge variant="soft-success"
-                                                    class="badge-soft-success">Done</b-badge></td>
-                                            <td>Florence Guzman</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">04</td>
-                                            <td>Implement extensions</td>
-                                            <td><b-badge variant="soft-dark" class="badge-soft-dark">Backlog</b-badge>
-                                            </td>
-                                            <td>Maritza Blanda</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">05</td>
-                                            <td>Applications Engineer</td>
-                                            <td>
-                                                <b-badge variant="soft-success"
-                                                    class="badge-soft-success">Done</b-badge>
-                                            </td>
-                                            <td>Leslie Alexander</td>
-                                        </tr>
+                                    <tr>
+                                        <td class="fw-medium">01</td>
+                                        <td>Implement new UX</td>
+                                        <td>
+                                            <b-badge class="badge-soft-primary"
+                                                     variant="soft-primary">Backlog
+                                            </b-badge>
+                                        </td>
+                                        <td>Lanora Sandoval</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">02</td>
+                                        <td>Design syntax</td>
+                                        <td>
+                                            <b-badge class="badge-soft-secondary" variant="soft-secondary">In
+                                                Progress
+                                            </b-badge>
+                                        </td>
+                                        <td>Calvin Garrett</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">03</td>
+                                        <td>Configurable resources</td>
+                                        <td>
+                                            <b-badge class="badge-soft-success"
+                                                     variant="soft-success">Done
+                                            </b-badge>
+                                        </td>
+                                        <td>Florence Guzman</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">04</td>
+                                        <td>Implement extensions</td>
+                                        <td>
+                                            <b-badge class="badge-soft-dark" variant="soft-dark">Backlog</b-badge>
+                                        </td>
+                                        <td>Maritza Blanda</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">05</td>
+                                        <td>Applications Engineer</td>
+                                        <td>
+                                            <b-badge class="badge-soft-success"
+                                                     variant="soft-success">Done
+                                            </b-badge>
+                                        </td>
+                                        <td>Leslie Alexander</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -2280,8 +2359,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Table Head</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="tables-head-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="tables-head-showcode">
+                                <label class="form-label text-muted" for="tables-head-showcode">Show Code</label>
+                                <input id="tables-head-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -2294,53 +2373,53 @@ export default {
                             <div class="table-responsive">
                                 <table class="table align-middle table-nowrap mb-0">
                                     <thead class="table-light">
-                                        <tr>
-                                            <th scope="col">Student</th>
-                                            <th scope="col">Course</th>
-                                            <th scope="col">Author</th>
-                                            <th scope="col">Payment</th>
-                                            <th scope="col">Process</th>
-                                            <th scope="col">Status</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">Student</th>
+                                        <th scope="col">Course</th>
+                                        <th scope="col">Author</th>
+                                        <th scope="col">Payment</th>
+                                        <th scope="col">Process</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Milana Scot</td>
-                                            <td>UI/UX design</td>
-                                            <td>Mitchell Flores</td>
-                                            <td>$450</td>
-                                            <td>
-                                                <b-progress class="progress-sm" :value="100" variant="success" />
-                                            </td>
-                                            <td>
-                                                <b-link href="javascript:void(0);" class="link-success">Confirmed
-                                                </b-link>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jassica Welsh</td>
-                                            <td>3d Animation</td>
-                                            <td>Dan Evgeni</td>
-                                            <td>$860</td>
-                                            <td>
-                                                <b-progress class="progress-sm" :value="65" variant="warning" />
-                                            </td>
-                                            <td>
-                                                <b-link href="javascript:void(0);" class="link-warning">Waiting</b-link>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Leslie Alexander</td>
-                                            <td>Logotype Design</td>
-                                            <td>Olimpia Jordan</td>
-                                            <td>$450</td>
-                                            <td>
-                                                <b-progress class="progress-sm" :value="35" variant="warning" />
-                                            </td>
-                                            <td>
-                                                <b-link href="javascript:void(0);" class="link-warning">Waiting</b-link>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>Milana Scot</td>
+                                        <td>UI/UX design</td>
+                                        <td>Mitchell Flores</td>
+                                        <td>$450</td>
+                                        <td>
+                                            <b-progress :value="100" class="progress-sm" variant="success"/>
+                                        </td>
+                                        <td>
+                                            <b-link class="link-success" href="javascript:void(0);">Confirmed
+                                            </b-link>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jassica Welsh</td>
+                                        <td>3d Animation</td>
+                                        <td>Dan Evgeni</td>
+                                        <td>$860</td>
+                                        <td>
+                                            <b-progress :value="65" class="progress-sm" variant="warning"/>
+                                        </td>
+                                        <td>
+                                            <b-link class="link-warning" href="javascript:void(0);">Waiting</b-link>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Leslie Alexander</td>
+                                        <td>Logotype Design</td>
+                                        <td>Olimpia Jordan</td>
+                                        <td>$450</td>
+                                        <td>
+                                            <b-progress :value="35" class="progress-sm" variant="warning"/>
+                                        </td>
+                                        <td>
+                                            <b-link class="link-warning" href="javascript:void(0);">Waiting</b-link>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -2370,7 +2449,7 @@ export default {
                 &lt;/div&gt;
             &lt;/td&gt;
             &lt;td&gt;&lt;a href=&quot;javascript:void(0);&quot; class=&quot;link-success&quot;&gt;Confirmed&lt;/a&gt;&lt;/td&gt;
-        &lt;/tr&gt;   
+        &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td&gt;Jassica Welsh&lt;/td&gt;
             &lt;td&gt;3d Animation&lt;/td&gt;
@@ -2411,8 +2490,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Table Foot</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="tables-foot-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="tables-foot-showcode">
+                                <label class="form-label text-muted" for="tables-foot-showcode">Show Code</label>
+                                <input id="tables-foot-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -2425,42 +2504,42 @@ export default {
                             <div class="table-responsive">
                                 <table class="table table-nowrap mb-0">
                                     <thead class="table-light">
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Job Title</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Payment</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Job Title</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Payment</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="fw-medium">01</td>
-                                            <td>Annette Black</td>
-                                            <td>Industrial Designer</td>
-                                            <td>10, Nov 2021</td>
-                                            <td>$450</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">02</td>
-                                            <td>Bessie Cooper</td>
-                                            <td>Graphic Designer</td>
-                                            <td>13, Nov 2021</td>
-                                            <td>$875</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">03</td>
-                                            <td>Leslie Alexander</td>
-                                            <td>Product Manager</td>
-                                            <td>17, Nov 2021</td>
-                                            <td>$410</td>
-                                        </tr>
+                                    <tr>
+                                        <td class="fw-medium">01</td>
+                                        <td>Annette Black</td>
+                                        <td>Industrial Designer</td>
+                                        <td>10, Nov 2021</td>
+                                        <td>$450</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">02</td>
+                                        <td>Bessie Cooper</td>
+                                        <td>Graphic Designer</td>
+                                        <td>13, Nov 2021</td>
+                                        <td>$875</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">03</td>
+                                        <td>Leslie Alexander</td>
+                                        <td>Product Manager</td>
+                                        <td>17, Nov 2021</td>
+                                        <td>$410</td>
+                                    </tr>
                                     </tbody>
                                     <tfoot class="table-light">
-                                        <tr>
-                                            <td colspan="4">Total</td>
-                                            <td>$940</td>
-                                        </tr>
+                                    <tr>
+                                        <td colspan="4">Total</td>
+                                        <td>$940</td>
+                                    </tr>
                                     </tfoot>
                                 </table>
                             </div>
@@ -2518,9 +2597,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Captions</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="tables-caption-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="tables-caption-showcode">
+                                <label class="form-label text-muted" for="tables-caption-showcode">Show Code</label>
+                                <input id="tables-caption-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -2534,32 +2613,32 @@ export default {
                                 <table class="table caption-top table-nowrap mb-0">
                                     <caption>List of users</caption>
                                     <thead class="table-light">
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Student</th>
-                                            <th scope="col">Course</th>
-                                            <th scope="col">Author</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Student</th>
+                                        <th scope="col">Course</th>
+                                        <th scope="col">Author</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="fw-medium">01</td>
-                                            <td>Milana Scot</td>
-                                            <td>UI/UX design</td>
-                                            <td>Mitchell Flores</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">02</td>
-                                            <td>Jassica Welsh</td>
-                                            <td>3d Animation</td>
-                                            <td>Dan Evgeni</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">03</td>
-                                            <td>Leslie Alexander</td>
-                                            <td>Logotype Design</td>
-                                            <td>Olimpia Jordan</td>
-                                        </tr>
+                                    <tr>
+                                        <td class="fw-medium">01</td>
+                                        <td>Milana Scot</td>
+                                        <td>UI/UX design</td>
+                                        <td>Mitchell Flores</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">02</td>
+                                        <td>Jassica Welsh</td>
+                                        <td>3d Animation</td>
+                                        <td>Dan Evgeni</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">03</td>
+                                        <td>Leslie Alexander</td>
+                                        <td>Logotype Design</td>
+                                        <td>Olimpia Jordan</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -2573,7 +2652,7 @@ export default {
             &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
             &lt;th scope=&quot;col&quot;&gt;Job Title&lt;/th&gt;
             &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Payment&lt;/th&gt;  
+            &lt;th scope=&quot;col&quot;&gt;Payment&lt;/th&gt;
         &lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
@@ -2620,9 +2699,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Table Nesting</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="tables-nesting-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="tables-nesting-showcode">
+                                <label class="form-label text-muted" for="tables-nesting-showcode">Show Code</label>
+                                <input id="tables-nesting-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -2634,78 +2713,78 @@ export default {
                             <div class="table-responsive">
                                 <table class="table table-nowrap mb-0">
                                     <thead class="table-light">
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Job Title</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Payment</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Job Title</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Payment</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="fw-medium">01</td>
-                                            <td>Annette Black</td>
-                                            <td>Industrial Designer</td>
-                                            <td>10, Nov 2021</td>
-                                            <td>$450</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="5">
-                                                <table class="table table-nowrap mb-0">
-                                                    <thead class="table-light">
-                                                        <tr>
-                                                            <th scope="col">ID</th>
-                                                            <th scope="col">Student</th>
-                                                            <th scope="col">Course</th>
-                                                            <th scope="col">Author</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="fw-medium">I</td>
-                                                            <td>Milana Scot</td>
-                                                            <td>3d Animation</td>
-                                                            <td>James Black</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="fw-medium">II</td>
-                                                            <td>Juston Eichmann</td>
-                                                            <td>Design syntax</td>
-                                                            <td>Olimpia Jordan</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">02</td>
-                                            <td>Bessie Cooper</td>
-                                            <td>Graphic Designer</td>
-                                            <td>13, Nov 2021</td>
-                                            <td>$875</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">03</td>
-                                            <td>Leslie Alexander</td>
-                                            <td>Product Manager</td>
-                                            <td>16, Nov 2021</td>
-                                            <td>$410</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">04</td>
-                                            <td>Bettie Johson</td>
-                                            <td>Applications Engineer</td>
-                                            <td>24, Nov 2021</td>
-                                            <td>$620</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-medium">05</td>
-                                            <td>Monkey Karry</td>
-                                            <td>Implement new UX</td>
-                                            <td>25, Nov 2021</td>
-                                            <td>$795</td>
-                                        </tr>
+                                    <tr>
+                                        <td class="fw-medium">01</td>
+                                        <td>Annette Black</td>
+                                        <td>Industrial Designer</td>
+                                        <td>10, Nov 2021</td>
+                                        <td>$450</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            <table class="table table-nowrap mb-0">
+                                                <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Student</th>
+                                                    <th scope="col">Course</th>
+                                                    <th scope="col">Author</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="fw-medium">I</td>
+                                                    <td>Milana Scot</td>
+                                                    <td>3d Animation</td>
+                                                    <td>James Black</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-medium">II</td>
+                                                    <td>Juston Eichmann</td>
+                                                    <td>Design syntax</td>
+                                                    <td>Olimpia Jordan</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">02</td>
+                                        <td>Bessie Cooper</td>
+                                        <td>Graphic Designer</td>
+                                        <td>13, Nov 2021</td>
+                                        <td>$875</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">03</td>
+                                        <td>Leslie Alexander</td>
+                                        <td>Product Manager</td>
+                                        <td>16, Nov 2021</td>
+                                        <td>$410</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">04</td>
+                                        <td>Bettie Johson</td>
+                                        <td>Applications Engineer</td>
+                                        <td>24, Nov 2021</td>
+                                        <td>$620</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium">05</td>
+                                        <td>Monkey Karry</td>
+                                        <td>Implement new UX</td>
+                                        <td>25, Nov 2021</td>
+                                        <td>$795</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -2799,8 +2878,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Variants</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="variants-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="variants-showcode">
+                                <label class="form-label text-muted" for="variants-showcode">Show Code</label>
+                                <input id="variants-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -2813,68 +2892,68 @@ export default {
                             <div class="table-responsive">
                                 <table class="table table-nowrap mb-0">
                                     <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Position</th>
-                                            <th scope="col">Department</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Position</th>
+                                        <th scope="col">Department</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Default</td>
-                                            <td>Monkey Karry</td>
-                                            <td>Medical Specialist</td>
-                                            <td>Orthopedics</td>
-                                        </tr>
-                                        <tr class="table-primary">
-                                            <td>Primary</td>
-                                            <td>James White</td>
-                                            <td>Medical Assistant</td>
-                                            <td>Surgery</td>
-                                        </tr>
-                                        <tr class="table-secondary">
-                                            <td>Secondary</td>
-                                            <td>Aaron James</td>
-                                            <td>Medical Specialist</td>
-                                            <td>Neurology</td>
-                                        </tr>
-                                        <tr class="table-success">
-                                            <td>Success</td>
-                                            <td>Bettie Johson</td>
-                                            <td>Medical Specialist</td>
-                                            <td>Cardiology</td>
-                                        </tr>
-                                        <tr class="table-danger">
-                                            <td>Danger</td>
-                                            <td>Bessie Cooper</td>
-                                            <td>Medical Assistant</td>
-                                            <td>Surgery</td>
-                                        </tr>
-                                        <tr class="table-warning">
-                                            <td>Warning</td>
-                                            <td>Lenora Sandoval</td>
-                                            <td>Medical Assistant</td>
-                                            <td>Cardiology</td>
-                                        </tr>
-                                        <tr class="table-info">
-                                            <td>Info</td>
-                                            <td>Eric Pierce</td>
-                                            <td>Medical Specialist</td>
-                                            <td>Neurology</td>
-                                        </tr>
-                                        <tr class="table-light">
-                                            <td>Light</td>
-                                            <td>Ruth Zimmermann</td>
-                                            <td>Medical Specialist</td>
-                                            <td>Neurology</td>
-                                        </tr>
-                                        <tr class="table-dark">
-                                            <td>Dark</td>
-                                            <td>Leslie Alexander</td>
-                                            <td>Medical Assistant</td>
-                                            <td>Cardiology</td>
-                                        </tr>
+                                    <tr>
+                                        <td>Default</td>
+                                        <td>Monkey Karry</td>
+                                        <td>Medical Specialist</td>
+                                        <td>Orthopedics</td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <td>Primary</td>
+                                        <td>James White</td>
+                                        <td>Medical Assistant</td>
+                                        <td>Surgery</td>
+                                    </tr>
+                                    <tr class="table-secondary">
+                                        <td>Secondary</td>
+                                        <td>Aaron James</td>
+                                        <td>Medical Specialist</td>
+                                        <td>Neurology</td>
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td>Success</td>
+                                        <td>Bettie Johson</td>
+                                        <td>Medical Specialist</td>
+                                        <td>Cardiology</td>
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td>Danger</td>
+                                        <td>Bessie Cooper</td>
+                                        <td>Medical Assistant</td>
+                                        <td>Surgery</td>
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <td>Warning</td>
+                                        <td>Lenora Sandoval</td>
+                                        <td>Medical Assistant</td>
+                                        <td>Cardiology</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td>Info</td>
+                                        <td>Eric Pierce</td>
+                                        <td>Medical Specialist</td>
+                                        <td>Neurology</td>
+                                    </tr>
+                                    <tr class="table-light">
+                                        <td>Light</td>
+                                        <td>Ruth Zimmermann</td>
+                                        <td>Medical Specialist</td>
+                                        <td>Neurology</td>
+                                    </tr>
+                                    <tr class="table-dark">
+                                        <td>Dark</td>
+                                        <td>Leslie Alexander</td>
+                                        <td>Medical Assistant</td>
+                                        <td>Cardiology</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -2961,9 +3040,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Vertical alignment</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="vertical-table-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="vertical-table-showcode">
+                                <label class="form-label text-muted" for="vertical-table-showcode">Show Code</label>
+                                <input id="vertical-table-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -2980,52 +3059,58 @@ export default {
                             <div class="table-responsive">
                                 <table class="table align-middle">
                                     <thead>
-                                        <tr>
-                                            <th>Heading</th>
-                                            <th>Heading</th>
-                                            <th>Heading</th>
-                                            <th>Heading</th>
-                                        </tr>
+                                    <tr>
+                                        <th>Heading</th>
+                                        <th>Heading</th>
+                                        <th>Heading</th>
+                                        <th>Heading</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>This cell inherits <code>vertical-align: middle;</code> from the table
-                                            </td>
-                                            <td>This cell inherits <code>vertical-align: middle;</code> from the table
-                                            </td>
-                                            <td>This cell inherits <code>vertical-align: middle;</code> from the table
-                                            </td>
-                                            <td>This here is some placeholder text, intended to take up quite a bit of
-                                                vertical space, to demonstrate how the vertical alignment works in the
-                                                preceding cells. Use the vertical align classes to re-align where
-                                                needed. inherit their alignment from and are aligned to the the top by
-                                                default.</td>
-                                        </tr>
-                                        <tr class="align-bottom">
-                                            <td>This cell inherits <code>vertical-align: bottom;</code> from the table
-                                                row</td>
-                                            <td>This cell inherits <code>vertical-align: bottom;</code> from the table
-                                                row</td>
-                                            <td>This cell inherits <code>vertical-align: bottom;</code> from the table
-                                                row</td>
-                                            <td>This here is some placeholder text, intended to take up quite a bit of
-                                                vertical space, to demonstrate how the vertical alignment works in the
-                                                preceding cells. Use the vertical align classes to re-align where
-                                                needed. inherit their alignment from and are aligned to the the top by
-                                                default.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>This cell inherits <code>vertical-align: middle;</code> from the table
-                                            </td>
-                                            <td>This cell inherits <code>vertical-align: middle;</code> from the table
-                                            </td>
-                                            <td class="align-top">This cell is aligned to the top.</td>
-                                            <td>This here is some placeholder text, intended to take up quite a bit of
-                                                vertical space, to demonstrate how the vertical alignment works in the
-                                                preceding cells. Use the vertical align classes to re-align where
-                                                needed. inherit their alignment from and are aligned to the the top by
-                                                default.</td>
-                                        </tr>
+                                    <tr>
+                                        <td>This cell inherits <code>vertical-align: middle;</code> from the table
+                                        </td>
+                                        <td>This cell inherits <code>vertical-align: middle;</code> from the table
+                                        </td>
+                                        <td>This cell inherits <code>vertical-align: middle;</code> from the table
+                                        </td>
+                                        <td>This here is some placeholder text, intended to take up quite a bit of
+                                            vertical space, to demonstrate how the vertical alignment works in the
+                                            preceding cells. Use the vertical align classes to re-align where
+                                            needed. inherit their alignment from and are aligned to the the top by
+                                            default.
+                                        </td>
+                                    </tr>
+                                    <tr class="align-bottom">
+                                        <td>This cell inherits <code>vertical-align: bottom;</code> from the table
+                                            row
+                                        </td>
+                                        <td>This cell inherits <code>vertical-align: bottom;</code> from the table
+                                            row
+                                        </td>
+                                        <td>This cell inherits <code>vertical-align: bottom;</code> from the table
+                                            row
+                                        </td>
+                                        <td>This here is some placeholder text, intended to take up quite a bit of
+                                            vertical space, to demonstrate how the vertical alignment works in the
+                                            preceding cells. Use the vertical align classes to re-align where
+                                            needed. inherit their alignment from and are aligned to the the top by
+                                            default.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>This cell inherits <code>vertical-align: middle;</code> from the table
+                                        </td>
+                                        <td>This cell inherits <code>vertical-align: middle;</code> from the table
+                                        </td>
+                                        <td class="align-top">This cell is aligned to the top.</td>
+                                        <td>This here is some placeholder text, intended to take up quite a bit of
+                                            vertical space, to demonstrate how the vertical alignment works in the
+                                            preceding cells. Use the vertical align classes to re-align where
+                                            needed. inherit their alignment from and are aligned to the the top by
+                                            default.
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -3069,9 +3154,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Responsive Tables</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="responsive-table-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="responsive-table-showcode">
+                                <label class="form-label text-muted" for="responsive-table-showcode">Show Code</label>
+                                <input id="responsive-table-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -3084,174 +3169,179 @@ export default {
                             <div class="table-responsive">
                                 <table class="table align-middle table-nowrap mb-0">
                                     <thead class="table-light">
-                                        <tr>
-                                            <th scope="col" style="width: 42px;">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="responsivetableCheck">
-                                                    <label class="form-check-label" for="responsivetableCheck"></label>
-                                                </div>
-                                            </th>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Purchased</th>
-                                            <th scope="col">Revenue</th>
-                                        </tr>
+                                    <tr>
+                                        <th scope="col" style="width: 42px;">
+                                            <div class="form-check">
+                                                <input id="responsivetableCheck" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label" for="responsivetableCheck"></label>
+                                            </div>
+                                        </th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Customer</th>
+                                        <th scope="col">Purchased</th>
+                                        <th scope="col">Revenue</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="responsivetableCheck01">
-                                                    <label class="form-check-label"
-                                                        for="responsivetableCheck01"></label>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="responsivetableCheck01" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label"
+                                                       for="responsivetableCheck01"></label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VZ2110</b-link>
+                                        </td>
+                                        <td>10 Oct, 14:47</td>
+                                        <td class="text-success"><i
+                                            class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid
+                                        </td>
+                                        <td>
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img alt="" class="avatar-xs rounded-circle"
+                                                         src="@/assets/images/users/avatar-3.jpg"/>
                                                 </div>
-                                            </th>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VZ2110</b-link>
-                                            </td>
-                                            <td>10 Oct, 14:47</td>
-                                            <td class="text-success"><i
-                                                    class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid</td>
-                                            <td>
-                                                <div class="d-flex gap-2 align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                            class="avatar-xs rounded-circle" />
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        Jordan Kennedy
-                                                    </div>
+                                                <div class="flex-grow-1">
+                                                    Jordan Kennedy
                                                 </div>
-                                            </td>
-                                            <td>Mastering the grid</td>
-                                            <td>$9.98</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="responsivetableCheck02">
-                                                    <label class="form-check-label"
-                                                        for="responsivetableCheck02"></label>
+                                            </div>
+                                        </td>
+                                        <td>Mastering the grid</td>
+                                        <td>$9.98</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="responsivetableCheck02" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label"
+                                                       for="responsivetableCheck02"></label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VZ2109</b-link>
+                                        </td>
+                                        <td>17 Oct, 02:10</td>
+                                        <td class="text-success"><i
+                                            class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid
+                                        </td>
+                                        <td>
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img alt="" class="avatar-xs rounded-circle"
+                                                         src="@/assets/images/users/avatar-4.jpg"/>
                                                 </div>
-                                            </th>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VZ2109</b-link>
-                                            </td>
-                                            <td>17 Oct, 02:10</td>
-                                            <td class="text-success"><i
-                                                    class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid</td>
-                                            <td>
-                                                <div class="d-flex gap-2 align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="@/assets/images/users/avatar-4.jpg" alt=""
-                                                            class="avatar-xs rounded-circle" />
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        Jackson Graham
-                                                    </div>
+                                                <div class="flex-grow-1">
+                                                    Jackson Graham
                                                 </div>
-                                            </td>
-                                            <td>Splashify</td>
-                                            <td>$270.60</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="responsivetableCheck03">
-                                                    <label class="form-check-label"
-                                                        for="responsivetableCheck03"></label>
+                                            </div>
+                                        </td>
+                                        <td>Splashify</td>
+                                        <td>$270.60</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="responsivetableCheck03" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label"
+                                                       for="responsivetableCheck03"></label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VZ2108</b-link>
+                                        </td>
+                                        <td>26 Oct, 08:20</td>
+                                        <td class="text-primary"><i class="ri-refresh-line fs-17 align-middle"></i>
+                                            Refunded
+                                        </td>
+                                        <td>
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img alt="" class="avatar-xs rounded-circle"
+                                                         src="@/assets/images/users/avatar-5.jpg"/>
                                                 </div>
-                                            </th>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VZ2108</b-link>
-                                            </td>
-                                            <td>26 Oct, 08:20</td>
-                                            <td class="text-primary"><i class="ri-refresh-line fs-17 align-middle"></i>
-                                                Refunded</td>
-                                            <td>
-                                                <div class="d-flex gap-2 align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                                            class="avatar-xs rounded-circle" />
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        Lauren Trujillo
-                                                    </div>
+                                                <div class="flex-grow-1">
+                                                    Lauren Trujillo
                                                 </div>
-                                            </td>
-                                            <td>Wireframing Kit for Figma</td>
-                                            <td>$145.42</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="responsivetableCheck04">
-                                                    <label class="form-check-label"
-                                                        for="responsivetableCheck04"></label>
+                                            </div>
+                                        </td>
+                                        <td>Wireframing Kit for Figma</td>
+                                        <td>$145.42</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="responsivetableCheck04" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label"
+                                                       for="responsivetableCheck04"></label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VZ2107</b-link>
+                                        </td>
+                                        <td>02 Nov, 04:52</td>
+                                        <td class="text-danger"><i
+                                            class="ri-close-circle-line fs-17 align-middle"></i> Cancel
+                                        </td>
+                                        <td>
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img alt="" class="avatar-xs rounded-circle"
+                                                         src="@/assets/images/users/avatar-6.jpg"/>
                                                 </div>
-                                            </th>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VZ2107</b-link>
-                                            </td>
-                                            <td>02 Nov, 04:52</td>
-                                            <td class="text-danger"><i
-                                                    class="ri-close-circle-line fs-17 align-middle"></i> Cancel</td>
-                                            <td>
-                                                <div class="d-flex gap-2 align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                                                            class="avatar-xs rounded-circle" />
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        Curtis Weaver
-                                                    </div>
+                                                <div class="flex-grow-1">
+                                                    Curtis Weaver
                                                 </div>
-                                            </td>
-                                            <td>Wireframing Kit for Figma</td>
-                                            <td>$170.68</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="responsivetableCheck05">
-                                                    <label class="form-check-label"
-                                                        for="responsivetableCheck05"></label>
+                                            </div>
+                                        </td>
+                                        <td>Wireframing Kit for Figma</td>
+                                        <td>$170.68</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="form-check">
+                                                <input id="responsivetableCheck05" class="form-check-input" type="checkbox"
+                                                       value="">
+                                                <label class="form-check-label"
+                                                       for="responsivetableCheck05"></label>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <b-link class="fw-medium" href="#">#VZ2106</b-link>
+                                        </td>
+                                        <td>10 Nov, 07:20</td>
+                                        <td class="text-success"><i
+                                            class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid
+                                        </td>
+                                        <td>
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <img alt="" class="avatar-xs rounded-circle"
+                                                         src="@/assets/images/users/avatar-1.jpg"/>
                                                 </div>
-                                            </th>
-                                            <td>
-                                                <b-link href="#" class="fw-medium">#VZ2106</b-link>
-                                            </td>
-                                            <td>10 Nov, 07:20</td>
-                                            <td class="text-success"><i
-                                                    class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid</td>
-                                            <td>
-                                                <div class="d-flex gap-2 align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="@/assets/images/users/avatar-1.jpg" alt=""
-                                                            class="avatar-xs rounded-circle" />
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        Jason schuller
-                                                    </div>
+                                                <div class="flex-grow-1">
+                                                    Jason schuller
                                                 </div>
-                                            </td>
-                                            <td>Splashify</td>
-                                            <td>$350.87</td>
-                                        </tr>
+                                            </div>
+                                        </td>
+                                        <td>Splashify</td>
+                                        <td>$350.87</td>
+                                    </tr>
                                     </tbody>
                                     <tfoot class="table-light">
-                                        <tr>
-                                            <td colspan="6">Total</td>
-                                            <td>$947.55</td>
-                                        </tr>
+                                    <tr>
+                                        <td colspan="6">Total</td>
+                                        <td>$947.55</td>
+                                    </tr>
                                     </tfoot>
                                 </table>
                             </div>

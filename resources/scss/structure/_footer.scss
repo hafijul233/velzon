@@ -1,6 +1,6 @@
-// 
+//
 // _footer.scss
-// 
+//
 
 .footer {
     bottom: 0;
@@ -29,6 +29,7 @@
             }
         }
     }
+
     &[data-sidebar-size="md"] {
         .footer {
             left: $vertical-menu-width-md;
@@ -41,10 +42,10 @@
 
 }
 
-[data-layout="horizontal"]{
+[data-layout="horizontal"] {
     .footer {
         left: 0 !important;
-    } 
+    }
 }
 
 [data-layout="vertical"][data-layout-style="detached"] {
@@ -53,11 +54,11 @@
         .footer {
             left: 0 !important;
             background-color: transparent;
-        } 
+        }
     }
 }
 
-[data-layout="twocolumn"] { 
+[data-layout="twocolumn"] {
     .footer {
         @media (min-width: 768.1px) {
             left: calc(#{$twocolumn-menu-iconview-width} + #{$twocolumn-menu-width});

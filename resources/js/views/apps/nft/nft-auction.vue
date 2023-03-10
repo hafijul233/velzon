@@ -10,10 +10,10 @@ export default {
                 text: "NFT Marketplace",
                 href: "/",
             },
-            {
-                text: "Live Auction",
-                active: true,
-            },
+                {
+                    text: "Live Auction",
+                    active: true,
+                },
             ],
         };
     },
@@ -366,7 +366,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xxl="9">
                 <b-card no-body>
@@ -378,20 +378,24 @@ export default {
                             <div class="flex-shrink-0 mt-4 mt-lg-0">
                                 <ul class="nav nav-pills filter-btns" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link fw-medium active" type="button" data-filter="all">All
-                                            Items</button>
+                                        <button class="nav-link fw-medium active" data-filter="all" type="button">All
+                                            Items
+                                        </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link fw-medium" type="button" data-filter="upto-15">Up to
-                                            15%</button>
+                                        <button class="nav-link fw-medium" data-filter="upto-15" type="button">Up to
+                                            15%
+                                        </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link fw-medium" type="button" data-filter="upto-30">Up to
-                                            30%</button>
+                                        <button class="nav-link fw-medium" data-filter="upto-30" type="button">Up to
+                                            30%
+                                        </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link fw-medium" type="button" data-filter="upto-40">Up to
-                                            40%</button>
+                                        <button class="nav-link fw-medium" data-filter="upto-40" type="button">Up to
+                                            40%
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -399,17 +403,17 @@ export default {
                     </b-card-header>
                 </b-card>
                 <b-row>
-                    <b-col xxl="3" lg="4" md="6" class="product-item upto-15">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item upto-15" lg="4" md="6" xxl="3">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="position-relative rounded overflow-hidden">
-                                <img src="@/assets/images/nft/img-01.jpg" alt="" class="card-img-top explore-img">
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-01.jpg">
                                 <div class="discount-time">
                                     <h5 id="auction-time-1" class="mb-0 text-white"></h5>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
                                 <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 97.8 ETH </h5>
                                 <h6 class="fs-16 mb-3">
                                     <b-link href="/apps/nft-item-detail">Abstract face painting</b-link>
@@ -417,23 +421,23 @@ export default {
                                 <div>
                                     <span class="text-muted float-end">Available: 436</span>
                                     <span class="text-muted">Sold: 4187</span>
-                                    <b-progress striped :value="67" class="progress-sm mt-2" variant="warning" />
+                                    <b-progress :value="67" class="progress-sm mt-2" striped variant="warning"/>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xxl="3" lg="4" md="6" class="product-item upto-30">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item upto-30" lg="4" md="6" xxl="3">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="position-relative rounded overflow-hidden">
-                                <img src="https://img.themesbrand.com/velzon/images/img-1.gif" alt=""
-                                    class="card-img-top explore-img">
+                                <img alt="" class="card-img-top explore-img"
+                                     src="https://img.themesbrand.com/velzon/images/img-1.gif">
                                 <div class="discount-time">
                                     <h5 id="auction-time-2" class="mb-0 text-white"></h5>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 8.42k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 8.42k </p>
                                 <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 245.23ETH </h5>
                                 <h6 class="fs-16 mb-3">
                                     <b-link href="/apps/nft-item-detail">Patterns arts & culture</b-link>
@@ -441,22 +445,22 @@ export default {
                                 <div>
                                     <span class="text-muted float-end">Available: 8974</span>
                                     <span class="text-muted">Sold: 13</span>
-                                    <b-progress striped :value="10" class="progress-sm mt-2" variant="primary" />
+                                    <b-progress :value="10" class="progress-sm mt-2" striped variant="primary"/>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xxl="3" lg="4" md="6" class="product-item upto-40">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item upto-40" lg="4" md="6" xxl="3">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="position-relative rounded overflow-hidden">
-                                <img src="@/assets/images/nft/img-03.jpg" alt="" class="card-img-top explore-img">
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-03.jpg">
                                 <div class="discount-time">
                                     <h5 id="auction-time-3" class="mb-0 text-white"></h5>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
                                 <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 67.36 ETH </h5>
                                 <h6 class="fs-16 mb-3">
                                     <b-link href="/apps/nft-item-detail">Creative filtered portrait</b-link>
@@ -464,22 +468,22 @@ export default {
                                 <div>
                                     <span class="text-muted float-end">Available: 3620</span>
                                     <span class="text-muted">Sold: 345</span>
-                                    <b-progress striped :value="45" class="progress-sm mt-2" variant="warning" />
+                                    <b-progress :value="45" class="progress-sm mt-2" striped variant="warning"/>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xxl="3" lg="4" md="6" class="product-item upto-15">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item upto-15" lg="4" md="6" xxl="3">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="position-relative rounded overflow-hidden">
-                                <img src="@/assets/images/nft/img-04.jpg" alt="" class="card-img-top explore-img">
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-04.jpg">
                                 <div class="discount-time">
                                     <h5 id="auction-time-4" class="mb-0 text-white"></h5>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 34.12k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 34.12k </p>
                                 <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 34.81 ETH </h5>
                                 <h6 class="fs-16 mb-3">
                                     <b-link href="/apps/nft-item-detail">Smillevers Crypto</b-link>
@@ -487,23 +491,23 @@ export default {
                                 <div>
                                     <span class="text-muted float-end">Available: 3521</span>
                                     <span class="text-muted">Sold: 1457</span>
-                                    <b-progress striped :value="67" class="progress-sm mt-2" variant="warning" />
+                                    <b-progress :value="67" class="progress-sm mt-2" striped variant="warning"/>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xxl="3" lg="4" md="6" class="product-item upto-40">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item upto-40" lg="4" md="6" xxl="3">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="position-relative rounded overflow-hidden">
-                                <img src="https://img.themesbrand.com/velzon/images/img-5.gif" alt=""
-                                    class="card-img-top explore-img">
+                                <img alt="" class="card-img-top explore-img"
+                                     src="https://img.themesbrand.com/velzon/images/img-5.gif">
                                 <div class="discount-time">
                                     <h5 id="auction-time-5" class="mb-0 text-white"></h5>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 47.12k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 47.12k </p>
                                 <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 245.23ETH </h5>
                                 <h6 class="fs-16 mb-3">
                                     <b-link href="/apps/nft-item-detail">Long-tailed macaque</b-link>
@@ -511,22 +515,22 @@ export default {
                                 <div>
                                     <span class="text-muted float-end">Available: 30</span>
                                     <span class="text-muted">Sold: 1369</span>
-                                    <b-progress striped :value="95" class="progress-sm mt-2" variant="danger" />
+                                    <b-progress :value="95" class="progress-sm mt-2" striped variant="danger"/>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xxl="3" lg="4" md="6" class="product-item upto-15">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item upto-15" lg="4" md="6" xxl="3">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="position-relative rounded overflow-hidden">
-                                <img src="@/assets/images/nft/img-02.jpg" alt="" class="card-img-top explore-img">
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-02.jpg">
                                 <div class="discount-time">
                                     <h5 id="auction-time-6" class="mb-0 text-white"></h5>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 23.63k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 23.63k </p>
                                 <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 394.7 ETH </h5>
                                 <h6 class="fs-16 mb-3">
                                     <b-link href="/apps/nft-item-detail">The Chirstoper</b-link>
@@ -534,22 +538,22 @@ export default {
                                 <div>
                                     <span class="text-muted float-end">Available: 1474</span>
                                     <span class="text-muted">Sold: 7451</span>
-                                    <b-progress striped :value="83" class="progress-sm mt-2" variant="warning" />
+                                    <b-progress :value="83" class="progress-sm mt-2" striped variant="warning"/>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xxl="3" lg="4" md="6" class="product-item upto-30">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item upto-30" lg="4" md="6" xxl="3">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="position-relative rounded overflow-hidden">
-                                <img src="@/assets/images/nft/img-06.jpg" alt="" class="card-img-top explore-img">
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-06.jpg">
                                 <div class="discount-time">
                                     <h5 id="auction-time-7" class="mb-0 text-white"></h5>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 36.42k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 36.42k </p>
                                 <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 745.14 ETH </h5>
                                 <h6 class="fs-16 mb-3">
                                     <b-link href="/apps/nft-item-detail">Robotic Body Art</b-link>
@@ -557,23 +561,23 @@ export default {
                                 <div>
                                     <span class="text-muted float-end">Available: 4563</span>
                                     <span class="text-muted">Sold: 1024</span>
-                                    <b-progress striped :value="24" class="progress-sm mt-2" variant="primary" />
+                                    <b-progress :value="24" class="progress-sm mt-2" striped variant="primary"/>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xxl="3" lg="4" md="6" class="product-item upto-15">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item upto-15" lg="4" md="6" xxl="3">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="position-relative rounded overflow-hidden">
-                                <img src="https://img.themesbrand.com/velzon/images/img-4.gif" alt=""
-                                    class="card-img-top explore-img">
+                                <img alt="" class="card-img-top explore-img"
+                                     src="https://img.themesbrand.com/velzon/images/img-4.gif">
                                 <div class="discount-time">
                                     <h5 id="auction-time-8" class="mb-0 text-white"></h5>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 94.1k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 94.1k </p>
                                 <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 245.23ETH </h5>
                                 <h6 class="fs-16 mb-3">
                                     <b-link href="/apps/nft-item-detail">Evolved Reality</b-link>
@@ -581,7 +585,7 @@ export default {
                                 <div>
                                     <span class="text-muted float-end">Available: 26</span>
                                     <span class="text-muted">Sold: 9974</span>
-                                    <b-progress striped :value="97" class="progress-sm mt-2" variant="danger" />
+                                    <b-progress :value="97" class="progress-sm mt-2" striped variant="danger"/>
                                 </div>
                             </b-card-body>
                         </b-card>
@@ -590,7 +594,9 @@ export default {
                 <b-row>
                     <b-col lg="12">
                         <div class="text-center mb-3">
-                            <b-button variant="link" class="text-success mt-2"><i class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i> Load more </b-button>
+                            <b-button class="text-success mt-2" variant="link"><i
+                                class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i> Load more
+                            </b-button>
                         </div>
                     </b-col>
                 </b-row>
@@ -607,96 +613,96 @@ export default {
                         <div class="table-responsive table-card">
                             <table class="table table-borderless align-middle">
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/nft/img-03.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="/apps/nft-item-detail">
-                                                        <h6 class="fs-15 mb-1">Creative filtered portrait</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">Sold at 34.81 ETH</p>
-                                                </div>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/nft/img-03.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="/apps/nft-item-detail">
+                                                    <h6 class="fs-15 mb-1">Creative filtered portrait</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">Sold at 34.81 ETH</p>
                                             </div>
-                                        </td>
-                                        <td><small>Just Now</small></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="https://img.themesbrand.com/velzon/images/img-4.gif" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="/apps/nft-item-detail">
-                                                        <h6 class="fs-15 mb-1">Patterns arts & culture</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">Sold at 147.83 ETH</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td><small>Just Now</small></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="https://img.themesbrand.com/velzon/images/img-4.gif">
+                                            <div class="ms-2">
+                                                <b-link href="/apps/nft-item-detail">
+                                                    <h6 class="fs-15 mb-1">Patterns arts & culture</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">Sold at 147.83 ETH</p>
                                             </div>
-                                        </td>
-                                        <td><small>3 sec ago</small></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="https://img.themesbrand.com/velzon/images/img-3.gif" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="/apps/nft-item-detail">
-                                                        <h6 class="fs-15 mb-1">Evolved Reality</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">Sold at 34.81 ETH</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td><small>3 sec ago</small></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="https://img.themesbrand.com/velzon/images/img-3.gif">
+                                            <div class="ms-2">
+                                                <b-link href="/apps/nft-item-detail">
+                                                    <h6 class="fs-15 mb-1">Evolved Reality</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">Sold at 34.81 ETH</p>
                                             </div>
-                                        </td>
-                                        <td><small>2 min ago</small></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/nft/img-04.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="/apps/nft-item-detail">
-                                                        <h6 class="fs-15 mb-1">Smillevers Crypto</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">Sold at 47.9 ETH</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td><small>2 min ago</small></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/nft/img-04.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="/apps/nft-item-detail">
+                                                    <h6 class="fs-15 mb-1">Smillevers Crypto</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">Sold at 47.9 ETH</p>
                                             </div>
-                                        </td>
-                                        <td><small>26 min ago</small></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/nft/img-05.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="/apps/nft-item-detail">
-                                                        <h6 class="fs-15 mb-1">Robotic Body Art</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">Sold at 134.32 ETH</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td><small>26 min ago</small></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/nft/img-05.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="/apps/nft-item-detail">
+                                                    <h6 class="fs-15 mb-1">Robotic Body Art</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">Sold at 134.32 ETH</p>
                                             </div>
-                                        </td>
-                                        <td><small>1 hrs ago</small></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/nft/img-02.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="/apps/nft-item-detail">
-                                                        <h6 class="fs-15 mb-1">Trendy fashion portraits</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">Sold at 643.19 ETH</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td><small>1 hrs ago</small></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/nft/img-02.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="/apps/nft-item-detail">
+                                                    <h6 class="fs-15 mb-1">Trendy fashion portraits</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">Sold at 643.19 ETH</p>
                                             </div>
-                                        </td>
-                                        <td><small>3 hrs ago</small></td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td><small>3 hrs ago</small></td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -713,81 +719,91 @@ export default {
                         <div class="table-responsive table-card">
                             <table class="table table-borderless align-middle">
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/users/avatar-1.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="#!">
-                                                        <h6 class="fs-15 mb-1">Herbert Stokes</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">23 Products</p>
-                                                </div>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/users/avatar-1.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="#!">
+                                                    <h6 class="fs-15 mb-1">Herbert Stokes</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">23 Products</p>
                                             </div>
-                                        </td>
-                                        <td><b-button variant="success" size="sm">Follow</b-button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="#!">
-                                                        <h6 class="fs-15 mb-1">Thomas Taylor</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">123 Products</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <b-button size="sm" variant="success">Follow</b-button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/users/avatar-3.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="#!">
+                                                    <h6 class="fs-15 mb-1">Thomas Taylor</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">123 Products</p>
                                             </div>
-                                        </td>
-                                        <td><b-button variant="soft-success" size="sm">Unfllow</b-button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="#!">
-                                                        <h6 class="fs-15 mb-1">Henry Baird</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">46 Products</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <b-button size="sm" variant="soft-success">Unfllow</b-button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/users/avatar-5.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="#!">
+                                                    <h6 class="fs-15 mb-1">Henry Baird</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">46 Products</p>
                                             </div>
-                                        </td>
-                                        <td><b-button variant="success" size="sm">Follow</b-button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="#!">
-                                                        <h6 class="fs-15 mb-1">Nancy Martino</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">845 Products</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <b-button size="sm" variant="success">Follow</b-button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/users/avatar-10.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="#!">
+                                                    <h6 class="fs-15 mb-1">Nancy Martino</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">845 Products</p>
                                             </div>
-                                        </td>
-                                        <td><b-button variant="success" size="sm">Follow</b-button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                                    class="avatar-sm object-cover rounded-circle">
-                                                <div class="ms-2">
-                                                    <b-link href="#!">
-                                                        <h6 class="fs-15 mb-1">James Price</h6>
-                                                    </b-link>
-                                                    <p class="mb-0 text-muted">318 Products</p>
-                                                </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <b-button size="sm" variant="success">Follow</b-button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img alt="" class="avatar-sm object-cover rounded-circle"
+                                                 src="@/assets/images/users/avatar-8.jpg">
+                                            <div class="ms-2">
+                                                <b-link href="#!">
+                                                    <h6 class="fs-15 mb-1">James Price</h6>
+                                                </b-link>
+                                                <p class="mb-0 text-muted">318 Products</p>
                                             </div>
-                                        </td>
-                                        <td><b-button variant="soft-success" size="sm">Unfllow</b-button></td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <b-button size="sm" variant="soft-success">Unfllow</b-button>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>

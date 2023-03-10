@@ -1,6 +1,6 @@
-// 
+//
 // Widgets.scss
-// 
+//
 
 .main-chart {
     .chart-border-left {
@@ -12,7 +12,6 @@
         }
     }
 }
-
 
 
 /* Activity */
@@ -88,15 +87,15 @@
 
 
 // credit card widget
-.card-wrapper{
-    .jp-card{
-        .jp-card-back, .jp-card-front{
+.card-wrapper {
+    .jp-card {
+        .jp-card-back, .jp-card-front {
             background-color: $success;
         }
     }
 }
 
-.notification-elem{
+.notification-elem {
     position: absolute;
     top: 0;
     right: 0;
@@ -127,7 +126,7 @@
             color: $primary;
         }
 
-        input[type="radio"]:checked+label {
+        input[type="radio"]:checked + label {
             background-color: $primary;
             border-color: $primary;
             color: $white;
@@ -135,4 +134,7 @@
     }
 }
 
-.widget-pattern .s0{opacity: .05; fill: var(--vz-success)}
+.widget-pattern .s0 {
+    opacity: .05;
+    fill: var(--vz-success)
+}

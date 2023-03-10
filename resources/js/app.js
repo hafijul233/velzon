@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import {createApp} from 'vue';
 import App from './App.vue';
 import router from "./router";
 import AOS from 'aos';
@@ -37,7 +37,6 @@ import './bootstrap';
 // };
 
 // initFirebaseBackend(firebaseConfig);
-
 
 
 AOS.init({

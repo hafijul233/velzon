@@ -7,14 +7,15 @@ html {
 }
 
 
-.fc-toolbar-chunk{
+.fc-toolbar-chunk {
     .btn-group {
-        >.btn:not(:last-child):not(.dropdown-toggle) {
+        > .btn:not(:last-child):not(.dropdown-toggle) {
             border-radius: 0px;
             border-top-left-radius: $btn-border-radius;
             border-bottom-left-radius: $btn-border-radius;
         }
-        > :not(.btn-check)+.btn {
+
+        > :not(.btn-check) + .btn {
             border-radius: 0px;
             border-top-right-radius: $btn-border-radius;
             border-bottom-right-radius: $btn-border-radius;
@@ -213,50 +214,51 @@ html {
 
 // rangeslider
 
-.slider-txt-dir-rtl.slider-horizontal .slider-handle{
-    right: calc(var(--slider-handle-width, 16px)/2*-1) !important;
-    left: auto !important; 
+.slider-txt-dir-rtl.slider-horizontal .slider-handle {
+    right: calc(var(--slider-handle-width, 16px) / 2 * -1) !important;
+    left: auto !important;
 }
 
 // select plugin
-.multiselect-multiple-label, .multiselect-placeholder, .multiselect-single-label{
+.multiselect-multiple-label, .multiselect-placeholder, .multiselect-single-label {
     left: auto !important;
     right: 0;
-    padding-right: var(--ms-px,.875rem) !important;
-    padding-left: calc(1.25rem + var(--ms-px, .875rem)*3) !important;
+    padding-right: var(--ms-px, .875rem) !important;
+    padding-left: calc(1.25rem + var(--ms-px, .875rem) * 3) !important;
 }
 
-.multiselect-search{
-    padding-right: var(--ms-px,.875rem);
+.multiselect-search {
+    padding-right: var(--ms-px, .875rem);
 }
 
 // data-option-flag
-[data-option-flag-name], [data-option-flag-img-name]{
-    &::before{
+[data-option-flag-name], [data-option-flag-img-name] {
+    &::before {
         right: auto;
         left: 0.9rem;
     }
 }
 
-[data-option-flag-img-name]{
-    .flag-input{
+[data-option-flag-img-name] {
+    .flag-input {
         background-position: top 8px right 12px;
         padding-right: 45px;
         padding-left: $input-padding-x;
     }
 }
+
 // input-step
 .input-step {
-    input{
+    input {
         text-align: center;
     }
 }
 
 // toggle switch
-.toggle-on{
+.toggle-on {
     justify-content: flex-end !important;
 }
 
-.toggle-off{
+.toggle-off {
     justify-content: flex-start !important;
 }

@@ -1,8 +1,6 @@
 <script>
 export default {
-    methods: {
-
-    },
+    methods: {},
     mounted() {
         var password = document.getElementById("password-input");
         password.onchange = this.validatePassword;
@@ -19,7 +17,6 @@ export default {
                     });
                 });
             });
-
 
 
         var myInput = document.getElementById("password-input");
@@ -91,15 +88,15 @@ export default {
             <b-container>
                 <b-row>
                     <b-col lg="12">
-                        <b-card no-body class="overflow-hidden m-0">
+                        <b-card class="overflow-hidden m-0" no-body>
                             <b-row class="justify-content-center g-0">
                                 <b-col lg="6">
                                     <div class="p-lg-5 p-4 auth-one-bg h-100">
                                         <div class="bg-overlay"></div>
                                         <div class="position-relative h-100 d-flex flex-column">
                                             <div class="mb-4">
-                                                <router-link to="/" class="d-block">
-                                                    <img src="@/assets/images/logo-light.png" alt="" height="18">
+                                                <router-link class="d-block" to="/">
+                                                    <img alt="" height="18" src="@/assets/images/logo-light.png">
                                                 </router-link>
                                             </div>
                                             <div class="mt-auto">
@@ -108,15 +105,18 @@ export default {
                                                 </div>
 
                                                 <div id="qoutescarouselIndicators" class="carousel slide"
-                                                    data-bs-ride="carousel">
+                                                     data-bs-ride="carousel">
                                                     <div class="carousel-indicators">
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="0" class="active" aria-current="true"
-                                                            aria-label="Slide 1"></button>
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                        <button aria-current="true" aria-label="Slide 1"
+                                                                class="active" data-bs-slide-to="0"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
+                                                        <button aria-label="Slide 2" data-bs-slide-to="1"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
+                                                        <button aria-label="Slide 3" data-bs-slide-to="2"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
                                                     </div>
                                                     <div class="carousel-inner text-center text-white-50 pb-5">
                                                         <div class="carousel-item active">
@@ -150,19 +150,21 @@ export default {
                                             <form class="needs-validation" novalidate>
 
                                                 <div class="mb-3">
-                                                    <label for="useremail" class="form-label">Email <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="email" class="form-control" id="useremail"
-                                                        placeholder="Enter email address" required>
+                                                    <label class="form-label" for="useremail">Email <span
+                                                        class="text-danger">*</span></label>
+                                                    <input id="useremail" class="form-control"
+                                                           placeholder="Enter email address"
+                                                           required type="email">
                                                     <div class="invalid-feedback">
                                                         Please enter email
                                                     </div>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="username" class="form-label">Username <span
-                                                            class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="username"
-                                                        placeholder="Enter username" required>
+                                                    <label class="form-label" for="username">Username <span
+                                                        class="text-danger">*</span></label>
+                                                    <input id="username" class="form-control"
+                                                           placeholder="Enter username"
+                                                           required type="text">
                                                     <div class="invalid-feedback">
                                                         Please enter username
                                                     </div>
@@ -171,14 +173,16 @@ export default {
                                                 <div class="mb-3">
                                                     <label class="form-label" for="password-input">Password</label>
                                                     <div class="position-relative auth-pass-inputgroup">
-                                                        <input type="password" class="form-control pe-5 password-input"
-                                                            onpaste="return false" placeholder="Enter password"
-                                                            id="password-input" aria-describedby="passwordInput"
-                                                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-                                                        <b-button variant="link"
-                                                            class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
-                                                            type="button" id="password-addon"><i
-                                                                class="ri-eye-fill align-middle"></i></b-button>
+                                                        <input id="password-input" aria-describedby="passwordInput"
+                                                               class="form-control pe-5 password-input"
+                                                               onpaste="return false"
+                                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                                               placeholder="Enter password"
+                                                               required type="password">
+                                                        <b-button id="password-addon"
+                                                                  class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                                  type="button" variant="link"><i
+                                                            class="ri-eye-fill align-middle"></i></b-button>
                                                         <div class="invalid-feedback">
                                                             Please enter password
                                                         </div>
@@ -187,16 +191,19 @@ export default {
 
                                                 <div class="mb-4">
                                                     <p class="mb-0 fs-12 text-muted fst-italic">By registering you agree
-                                                        to the Velzon <b-link href="#"
-                                                            class="text-primary text-decoration-underline fst-normal fw-medium">
+                                                        to the Velzon
+                                                        <b-link
+                                                            class="text-primary text-decoration-underline fst-normal fw-medium"
+                                                            href="#">
                                                             Terms
-                                                            of Use</b-link>
+                                                            of Use
+                                                        </b-link>
                                                     </p>
                                                 </div>
                                                 <div id="password-contain" class="p-3 bg-light mb-2 rounded">
                                                     <h5 class="fs-13">Password must contain:</h5>
                                                     <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8
-                                                            characters</b>
+                                                        characters</b>
                                                     </p>
                                                     <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b>
                                                         letter
@@ -210,7 +217,7 @@ export default {
                                                     </p>
                                                 </div>
                                                 <div class="mt-4">
-                                                    <b-button variant="success" class="w-100" type="button">Sign Up
+                                                    <b-button class="w-100" type="button" variant="success">Sign Up
                                                     </b-button>
                                                 </div>
 
@@ -220,23 +227,24 @@ export default {
                                                     </div>
 
                                                     <div>
-                                                        <b-button type="button" variant="primary" class="btn-icon"><i
-                                                                class="ri-facebook-fill fs-16"></i></b-button>
-                                                        <b-button type="button" variant="danger" class="btn-icon ms-1">
+                                                        <b-button class="btn-icon" type="button" variant="primary"><i
+                                                            class="ri-facebook-fill fs-16"></i></b-button>
+                                                        <b-button class="btn-icon ms-1" type="button" variant="danger">
                                                             <i class="ri-google-fill fs-16"></i></b-button>
-                                                        <b-button type="button" variant="dark" class="btn-icon ms-1"><i
-                                                                class="ri-github-fill fs-16"></i></b-button>
-                                                        <b-button type="button" variant="info" class="btn-icon ms-1"><i
-                                                                class="ri-twitter-fill fs-16"></i></b-button>
+                                                        <b-button class="btn-icon ms-1" type="button" variant="dark"><i
+                                                            class="ri-github-fill fs-16"></i></b-button>
+                                                        <b-button class="btn-icon ms-1" type="button" variant="info"><i
+                                                            class="ri-twitter-fill fs-16"></i></b-button>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
 
                                         <div class="mt-5 text-center">
-                                            <p class="mb-0">Already have an account ? <router-link
-                                                    to="/auth/signin-cover"
-                                                    class="fw-semibold text-primary text-decoration-underline"> Signin
+                                            <p class="mb-0">Already have an account ?
+                                                <router-link
+                                                    class="fw-semibold text-primary text-decoration-underline"
+                                                    to="/auth/signin-cover"> Signin
                                                 </router-link>
                                             </p>
                                         </div>
@@ -256,7 +264,7 @@ export default {
                     <b-col lg="12">
                         <div class="text-center">
                             <p class="mb-0">&copy; {{ new Date().getFullYear() }} Velzon. Crafted with <i
-                                    class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                                class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                         </div>
                     </b-col>
                 </b-row>

@@ -50,7 +50,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xxl="6">
                 <b-card no-body>
@@ -58,9 +58,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Image Rounded & Circle</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="rounded-circle-image" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="rounded-circle-image" />
+                                <label class="form-label text-muted" for="rounded-circle-image">Show Code</label>
+                                <input id="rounded-circle-image" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -75,13 +75,14 @@ export default {
                         <div class="live-preview">
                             <b-row class="align-items-center">
                                 <b-col cols="6">
-                                    <img class="rounded" alt="200x200" width="200" src="@/assets/images/small/img-4.jpg"
-                                        data-holder-rendered="true" />
+                                    <img alt="200x200" class="rounded" data-holder-rendered="true"
+                                         src="@/assets/images/small/img-4.jpg"
+                                         width="200"/>
                                 </b-col>
                                 <b-col cols="6">
                                     <div class="mt-4 mt-md-0">
-                                        <img class="rounded-circle avatar-xl" alt="200x200"
-                                            src="@/assets/images/users/avatar-4.jpg" data-holder-rendered="true" />
+                                        <img alt="200x200" class="rounded-circle avatar-xl"
+                                             data-holder-rendered="true" src="@/assets/images/users/avatar-4.jpg"/>
                                     </div>
                                 </b-col>
                             </b-row>
@@ -105,8 +106,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Image Thumbnails</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="thumbnails-image" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="thumbnails-image" />
+                                <label class="form-label text-muted" for="thumbnails-image">Show Code</label>
+                                <input id="thumbnails-image" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -121,13 +122,13 @@ export default {
                         <div class="live-preview">
                             <b-row>
                                 <b-col cols="6">
-                                    <img class="img-thumbnail" alt="200x200" width="200"
-                                        src="@/assets/images/small/img-3.jpg" data-holder-rendered="true" />
+                                    <img alt="200x200" class="img-thumbnail" data-holder-rendered="true"
+                                         src="@/assets/images/small/img-3.jpg" width="200"/>
                                 </b-col>
                                 <b-col cols="6">
                                     <div class="mt-4 mt-md-0">
-                                        <img class="img-thumbnail rounded-circle avatar-xl" alt="200x200"
-                                            src="@/assets/images/users/avatar-3.jpg" data-holder-rendered="true" />
+                                        <img alt="200x200" class="img-thumbnail rounded-circle avatar-xl"
+                                             data-holder-rendered="true" src="@/assets/images/users/avatar-3.jpg"/>
                                     </div>
                                 </b-col>
                             </b-row>
@@ -152,8 +153,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Image Sizes</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="image-size" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="image-size" />
+                                <label class="form-label text-muted" for="image-size">Show Code</label>
+                                <input id="image-size" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -173,55 +174,55 @@ export default {
                             <b-row>
                                 <b-col md="12">
                                     <b-row class="g-3">
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                    class="rounded avatar-xxs" />
+                                                <img alt class="rounded avatar-xxs"
+                                                     src="@/assets/images/users/avatar-2.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-xxs</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-10.jpg" alt
-                                                    class="rounded avatar-xs" />
+                                                <img alt class="rounded avatar-xs"
+                                                     src="@/assets/images/users/avatar-10.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-xs</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                    class="rounded avatar-sm" />
+                                                <img alt class="rounded avatar-sm"
+                                                     src="@/assets/images/users/avatar-3.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-sm</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                    class="rounded avatar-md" />
+                                                <img alt class="rounded avatar-md"
+                                                     src="@/assets/images/users/avatar-4.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-md</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt
-                                                    class="rounded avatar-lg" />
+                                                <img alt class="rounded avatar-lg"
+                                                     src="@/assets/images/users/avatar-5.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-lg</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-8.jpg" alt
-                                                    class="rounded avatar-xl" />
+                                                <img alt class="rounded avatar-xl"
+                                                     src="@/assets/images/users/avatar-8.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-xl</code>
                                                 </p>
@@ -232,55 +233,55 @@ export default {
 
                                 <b-col md="12">
                                     <b-row class="g-3 mt-5">
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                    class="rounded-circle avatar-xxs" />
+                                                <img alt class="rounded-circle avatar-xxs"
+                                                     src="@/assets/images/users/avatar-2.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-xxs</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-10.jpg" alt
-                                                    class="rounded-circle avatar-xs" />
+                                                <img alt class="rounded-circle avatar-xs"
+                                                     src="@/assets/images/users/avatar-10.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-xs</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                    class="rounded-circle avatar-sm" />
+                                                <img alt class="rounded-circle avatar-sm"
+                                                     src="@/assets/images/users/avatar-3.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-sm</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                    class="rounded-circle avatar-md" />
+                                                <img alt class="rounded-circle avatar-md"
+                                                     src="@/assets/images/users/avatar-4.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-md</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt
-                                                    class="rounded-circle avatar-lg" />
+                                                <img alt class="rounded-circle avatar-lg"
+                                                     src="@/assets/images/users/avatar-5.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-lg</code>
                                                 </p>
                                             </div>
                                         </b-col>
-                                        <b-col xxl="2" md="4" cols="6">
+                                        <b-col cols="6" md="4" xxl="2">
                                             <div>
-                                                <img src="@/assets/images/users/avatar-8.jpg" alt
-                                                    class="rounded-circle avatar-xl" />
+                                                <img alt class="rounded-circle avatar-xl"
+                                                     src="@/assets/images/users/avatar-8.jpg"/>
                                                 <p class="mt-2 mb-lg-0">
                                                     <code>avatar-xl</code>
                                                 </p>
@@ -293,7 +294,7 @@ export default {
 
                         <div class="d-none code-view">
                             <pre class="language-markup"
-                                style="height: 275px;"><code>&lt;!-- Image Sizes --&gt;
+                                 style="height: 275px;"><code>&lt;!-- Image Sizes --&gt;
 &lt;b-img src=&quot;...&quot; alt=&quot;&quot; class=&quot;rounded avatar-xxs&quot;/&gt;</code>
 
 <code>&lt;b-img src=&quot;...&quot; alt=&quot;&quot; class=&quot;rounded avatar-xs&quot;&gt;&lt;/b-img&gt;</code>
@@ -330,8 +331,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Avatar With Content</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="avatar-content" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="avatar-content" />
+                                <label class="form-label text-muted" for="avatar-content">Show Code</label>
+                                <input id="avatar-content" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -345,32 +346,32 @@ export default {
 
                         <div class="live-preview">
                             <b-row class="g-3">
-                                <b-col xxl="2" md="4" cols="6">
+                                <b-col cols="6" md="4" xxl="2">
                                     <div class="avatar-xxs mt-3">
                                         <div class="avatar-title rounded bg-soft-primary text-primary fs-10">XXS</div>
                                     </div>
                                 </b-col>
-                                <b-col xxl="2" md="4" cols="6">
+                                <b-col cols="6" md="4" xxl="2">
                                     <div class="avatar-xs mt-3">
                                         <div class="avatar-title rounded bg-soft-secondary text-secondary">XS</div>
                                     </div>
                                 </b-col>
-                                <b-col xxl="2" md="4" cols="6">
+                                <b-col cols="6" md="4" xxl="2">
                                     <div class="avatar-sm mt-3">
                                         <div class="avatar-title rounded bg-soft-success text-success fs-14">SM</div>
                                     </div>
                                 </b-col>
-                                <b-col xxl="2" md="4" cols="6">
+                                <b-col cols="6" md="4" xxl="2">
                                     <div class="avatar-md mt-3">
                                         <div class="avatar-title rounded bg-soft-info text-info fs-16">MD</div>
                                     </div>
                                 </b-col>
-                                <b-col xxl="2" md="4" cols="6">
+                                <b-col cols="6" md="4" xxl="2">
                                     <div class="avatar-lg mt-3">
                                         <div class="avatar-title rounded bg-soft-warning text-warning fs-20">LG</div>
                                     </div>
                                 </b-col>
-                                <b-col xxl="2" md="4" cols="6">
+                                <b-col cols="6" md="4" xxl="2">
                                     <div class="avatar-xl mt-3">
                                         <div class="avatar-title rounded bg-soft-danger text-danger fs-22">XL</div>
                                     </div>
@@ -429,8 +430,8 @@ Xl
                         <b-card-title class="mb-0 flex-grow-1">Avatar Group</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="avatar-group" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="avatar-group" />
+                                <label class="form-label text-muted" for="avatar-group">Show Code</label>
+                                <input id="avatar-group" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -446,12 +447,12 @@ Xl
                                         </p>
                                         <div class="avatar-group">
                                             <div class="avatar-group-item">
-                                                <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                    class="rounded-circle avatar-sm" />
+                                                <img alt class="rounded-circle avatar-sm"
+                                                     src="@/assets/images/users/avatar-4.jpg"/>
                                             </div>
                                             <div class="avatar-group-item">
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt
-                                                    class="rounded-circle avatar-sm" />
+                                                <img alt class="rounded-circle avatar-sm"
+                                                     src="@/assets/images/users/avatar-5.jpg"/>
                                             </div>
                                             <div class="avatar-group-item">
                                                 <div class="avatar-sm">
@@ -460,8 +461,8 @@ Xl
                                                 </div>
                                             </div>
                                             <div class="avatar-group-item">
-                                                <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                    class="rounded-circle avatar-sm" />
+                                                <img alt class="rounded-circle avatar-sm"
+                                                     src="@/assets/images/users/avatar-2.jpg"/>
                                             </div>
                                         </div>
                                     </div>
@@ -476,25 +477,28 @@ Xl
                                             tooltip.
                                         </p>
                                         <div class="avatar-group">
-                                            <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Christi">
-                                                <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                    class="rounded-circle avatar-sm" />
+                                            <b-link class="avatar-group-item" data-bs-placement="top"
+                                                    data-bs-toggle="tooltip" href="javascript: void(0);"
+                                                    title="Christi">
+                                                <img alt class="rounded-circle avatar-sm"
+                                                     src="@/assets/images/users/avatar-4.jpg"/>
                                             </b-link>
-                                            <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Frank Hook">
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                    class="rounded-circle avatar-sm" />
+                                            <b-link class="avatar-group-item" data-bs-placement="top"
+                                                    data-bs-toggle="tooltip" href="javascript: void(0);"
+                                                    title="Frank Hook">
+                                                <img alt class="rounded-circle avatar-sm"
+                                                     src="@/assets/images/users/avatar-3.jpg"/>
                                             </b-link>
-                                            <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Christi">
+                                            <b-link class="avatar-group-item" data-bs-placement="top"
+                                                    data-bs-toggle="tooltip" href="javascript: void(0);"
+                                                    title="Christi">
                                                 <div class="avatar-sm">
                                                     <div class="avatar-title rounded-circle bg-light text-primary">C
                                                     </div>
                                                 </div>
                                             </b-link>
-                                            <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                data-bs-toggle="tooltip" data-bs-placement="top" title="mORE">
+                                            <b-link class="avatar-group-item" data-bs-placement="top"
+                                                    data-bs-toggle="tooltip" href="javascript: void(0);" title="mORE">
                                                 <div class="avatar-sm">
                                                     <div class="avatar-title rounded-circle">2+</div>
                                                 </div>
@@ -563,8 +567,8 @@ C
                         <b-card-title class="mb-0 flex-grow-1">Figures</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="Figures-image" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="Figures-image" />
+                                <label class="form-label text-muted" for="Figures-image">Show Code</label>
+                                <input id="Figures-image" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -583,15 +587,15 @@ C
                             <b-row class="g-3">
                                 <b-col sm="6">
                                     <figure class="figure mb-0">
-                                        <img src="@/assets/images/small/img-4.jpg" class="figure-img img-fluid rounded"
-                                            alt="..." />
+                                        <img alt="..." class="figure-img img-fluid rounded"
+                                             src="@/assets/images/small/img-4.jpg"/>
                                         <figcaption class="figure-caption">A caption for the above image.</figcaption>
                                     </figure>
                                 </b-col>
                                 <b-col sm="6">
                                     <figure class="figure mb-0">
-                                        <img src="@/assets/images/small/img-5.jpg" class="figure-img img-fluid rounded"
-                                            alt="..." />
+                                        <img alt="..." class="figure-img img-fluid rounded"
+                                             src="@/assets/images/small/img-5.jpg"/>
                                         <figcaption class="figure-caption text-end">A caption for the above image.
                                         </figcaption>
                                     </figure>
@@ -622,8 +626,8 @@ C
                         <b-card-title class="mb-0 flex-grow-1">Responsive Images</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="responsive-image" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="responsive-image" />
+                                <label class="form-label text-muted" for="responsive-image">Show Code</label>
+                                <input id="responsive-image" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -637,7 +641,7 @@ C
 
                         <div class="live-preview">
                             <div>
-                                <img src="@/assets/images/small/img-2.jpg" class="img-fluid" alt="Responsive image" />
+                                <img alt="Responsive image" class="img-fluid" src="@/assets/images/small/img-2.jpg"/>
                             </div>
                         </div>
 

@@ -1,15 +1,14 @@
 //  Radialbar Charts
-function getChartColorsArray(colors){
+function getChartColorsArray(colors) {
     colors = JSON.parse(colors);
     return colors.map(function (value) {
-      var newValue = value.replace(" ", "");
-      if (newValue.indexOf(",") === -1) {
-        var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
+        var newValue = value.replace(" ", "");
+        if (newValue.indexOf(",") === -1) {
+            var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
             if (color) {
-            color = color.replace(" ", "");
-            return color;
-            }
-            else return newValue;
+                color = color.replace(" ", "");
+                return color;
+            } else return newValue;
         } else {
             var val = value.split(',');
             if (val.length == 2) {
@@ -21,7 +20,8 @@ function getChartColorsArray(colors){
             }
         }
     });
-  }
+}
+
 const basicRadialBarChart = {
     series: [70],
     chartOptions: {
@@ -133,7 +133,7 @@ const circleAngleChart = {
                     show: false,
                 },
             },
-        }, ],
+        },],
     },
 };
 

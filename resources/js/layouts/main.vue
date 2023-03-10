@@ -1,5 +1,5 @@
 <script>
-import { layoutComputed } from "@/state/helpers";
+import {layoutComputed} from "@/state/helpers";
 
 import Vertical from "./vertical";
 import Horizontal from "./horizontal";
@@ -26,15 +26,15 @@ export default {
 <template>
     <div>
         <Vertical v-if="layoutType === 'vertical'" :layout="layoutType">
-            <slot />
+            <slot/>
         </Vertical>
 
         <Horizontal v-if="layoutType === 'horizontal'" :layout="layoutType">
-            <slot />
+            <slot/>
         </Horizontal>
 
         <TwoColumns v-if="layoutType === 'twocolumn'" :layout="layoutType">
-            <slot />
+            <slot/>
         </TwoColumns>
     </div>
 </template>

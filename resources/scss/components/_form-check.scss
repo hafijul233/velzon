@@ -5,7 +5,8 @@
 .form-check {
     position: relative;
     text-align: left
-        /*rtl: right*/;
+    /*rtl: right*/
+;
 
     .form-check-input {
         cursor: pointer;
@@ -290,7 +291,7 @@ $value in $theme-colors {
     .form-check-input {
         display: none;
 
-        &:checked+.form-check-label {
+        &:checked + .form-check-label {
             border-color: $primary !important;
 
             &:before {
@@ -307,7 +308,7 @@ $value in $theme-colors {
 
     &.dark {
         .form-check-input {
-            &:checked+.form-check-label {
+            &:checked + .form-check-label {
                 &:before {
                     color: $white;
                 }
@@ -316,9 +317,9 @@ $value in $theme-colors {
     }
 }
 
-[data-layout-mode="dark"]{
-    .form-switch{
-        .form-check-input, .form-check-input:focus{
+[data-layout-mode="dark"] {
+    .form-switch {
+        .form-check-input, .form-check-input:focus {
             background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$gray-400}'/></svg>"));
         }
     }

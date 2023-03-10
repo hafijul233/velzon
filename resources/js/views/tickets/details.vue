@@ -9,11 +9,10 @@ import appConfig from "../../../app.config";
 export default {
     page: {
         title: "Tickets Details",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
-        return {
-        };
+        return {};
     },
     components: {
         Layout,
@@ -25,10 +24,10 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
-                <b-card no-body class="mt-n4 mx-n4 mb-n5">
+                <b-card class="mt-n4 mx-n4 mb-n5" no-body>
                     <div class="bg-soft-warning">
                         <b-card-body class="pb-4 mb-5">
                             <b-row>
@@ -37,8 +36,8 @@ export default {
                                         <b-col md="auto">
                                             <div class="avatar-md mb-md-0 mb-4">
                                                 <div class="avatar-title bg-white rounded-circle">
-                                                    <img src="@/assets/images/companies/img-4.png" alt=""
-                                                        class="avatar-sm" />
+                                                    <img alt="" class="avatar-sm"
+                                                         src="@/assets/images/companies/img-4.png"/>
                                                 </div>
                                             </div>
                                         </b-col>
@@ -47,7 +46,7 @@ export default {
                                             </h4>
                                             <div class="hstack gap-3 flex-wrap">
                                                 <div class="text-muted"><i
-                                                        class="ri-building-line align-bottom me-1"></i> Themesbrand
+                                                    class="ri-building-line align-bottom me-1"></i> Themesbrand
                                                 </div>
                                                 <div class="vr"></div>
                                                 <div class="text-muted">Create Date : <span class="fw-medium">20 Dec,
@@ -56,22 +55,22 @@ export default {
                                                 <div class="text-muted">Due Date : <span class="fw-medium">29 Dec,
                                                         2021</span></div>
                                                 <div class="vr"></div>
-                                                <b-badge pill class="bg-info fs-12">New</b-badge>
-                                                <b-badge pill variant="danger" class="fs-12">High</b-badge>
+                                                <b-badge class="bg-info fs-12" pill>New</b-badge>
+                                                <b-badge class="fs-12" pill variant="danger">High</b-badge>
                                             </div>
                                         </b-col>
                                     </b-row>
                                 </b-col>
-                                <b-col md="auto" class="mt-md-0 mt-4">
+                                <b-col class="mt-md-0 mt-4" md="auto">
                                     <div class="hstack gap-1 flex-wrap">
-                                        <button type="button" class="btn avatar-xs mt-n1 p-0 favourite-btn active">
+                                        <button class="btn avatar-xs mt-n1 p-0 favourite-btn active" type="button">
                                             <span class="avatar-title bg-transparent fs-15">
                                                 <i class="ri-star-fill"></i>
                                             </span>
                                         </button>
-                                        <b-dropdown variant="transparent" toggle-class="fs-16 text-body arrow-none"
-                                            size="sm" no-caret>
-                                            <template #button-content> <i class="ri-share-line"></i>
+                                        <b-dropdown no-caret size="sm"
+                                                    toggle-class="fs-16 text-body arrow-none" variant="transparent">
+                                            <template #button-content><i class="ri-share-line"></i>
                                             </template>
                                             <b-dropdown-item href="/apps/tickets-details">
                                                 <i class="ri-eye-fill align-bottom me-2 text-muted"></i> View
@@ -84,7 +83,7 @@ export default {
                                                 <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                             </b-dropdown-item>
                                         </b-dropdown>
-                                        <button type="button" class="btn py-0 fs-16 text-body">
+                                        <button class="btn py-0 fs-16 text-body" type="button">
                                             <i class="ri-flag-line"></i>
                                         </button>
                                     </div>
@@ -108,8 +107,10 @@ export default {
                             On the note of consistency, color consistency is a MUST. If you’re not trying to create
                             crazy contrast in your design, then a great idea would be for you to use a color palette
                             throughout your entire design. It will subconsciously interest viewers and also is very
-                            pleasing to look at. <b-link href="javascript:void(0);"
-                                class="link-secondary text-decoration-underline">Example</b-link>
+                            pleasing to look at.
+                            <b-link class="link-secondary text-decoration-underline"
+                                    href="javascript:void(0);">Example
+                            </b-link>
                         </p>
                         <h6 class="fw-semibold text-uppercase mb-3">Create an Excellent UI for a Dashboard</h6>
                         <ul class="text-muted vstack gap-2 mb-4">
@@ -140,84 +141,97 @@ userIdx: {}
                     <b-card-body class="p-4">
                         <h5 class="card-title mb-4">Comments</h5>
 
-                        <div data-simplebar style="height: 300px;" class="px-3 mx-n3">
+                        <div class="px-3 mx-n3" data-simplebar style="height: 300px;">
                             <div class="d-flex mb-4">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                        class="avatar-xs rounded-circle" />
+                                    <img alt="" class="avatar-xs rounded-circle"
+                                         src="@/assets/images/users/avatar-8.jpg"/>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h5 class="fs-13">Joseph Parker <small class="text-muted">20 Dec 2021 -
-                                            05:47AM</small></h5>
+                                        05:47AM</small></h5>
                                     <p class="text-muted">I am getting message from customers that when they place order
                                         always get error message .</p>
-                                    <b-link href="javascript: void(0);" class="badge text-muted bg-light"><i
-                                            class="mdi mdi-reply"></i> Reply</b-link>
+                                    <b-link class="badge text-muted bg-light" href="javascript: void(0);"><i
+                                        class="mdi mdi-reply"></i> Reply
+                                    </b-link>
                                     <div class="d-flex mt-4">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                                class="avatar-xs rounded-circle" />
+                                            <img alt="" class="avatar-xs rounded-circle"
+                                                 src="@/assets/images/users/avatar-10.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h5 class="fs-13">Alexis Clarke <small class="text-muted">22 Dec 2021 -
-                                                    02:32PM</small></h5>
+                                                02:32PM</small></h5>
                                             <p class="text-muted">Please be sure to check your Spam mailbox to see if
                                                 your email filters have identified the email from Dell as spam.</p>
-                                            <b-link href="javascript: void(0);" class="badge text-muted bg-light"><i
-                                                    class="mdi mdi-reply"></i> Reply</b-link>
+                                            <b-link class="badge text-muted bg-light" href="javascript: void(0);"><i
+                                                class="mdi mdi-reply"></i> Reply
+                                            </b-link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="d-flex mb-4">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                                        class="avatar-xs rounded-circle" />
+                                    <img alt="" class="avatar-xs rounded-circle"
+                                         src="@/assets/images/users/avatar-6.jpg"/>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h5 class="fs-13">Donald Palmer <small class="text-muted">24 Dec 2021 -
-                                            05:20PM</small></h5>
+                                        05:20PM</small></h5>
                                     <p class="text-muted">If you have further questions, please contact Customer Support
-                                        from the “Action Menu” on your <b-link href="javascript:void(0);"
-                                            class="text-decoration-underline">Online Order Support</b-link>.</p>
-                                    <b-link href="javascript: void(0);" class="badge text-muted bg-light"><i
-                                            class="mdi mdi-reply"></i> Reply</b-link>
+                                        from the “Action Menu” on your
+                                        <b-link class="text-decoration-underline"
+                                                href="javascript:void(0);">Online Order Support
+                                        </b-link>
+                                        .
+                                    </p>
+                                    <b-link class="badge text-muted bg-light" href="javascript: void(0);"><i
+                                        class="mdi mdi-reply"></i> Reply
+                                    </b-link>
                                 </div>
                             </div>
                             <div class="d-flex">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                        class="avatar-xs rounded-circle" />
+                                    <img alt="" class="avatar-xs rounded-circle"
+                                         src="@/assets/images/users/avatar-10.jpg"/>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h5 class="fs-13">Alexis Clarke <small class="text-muted">26 min ago</small></h5>
-                                    <p class="text-muted">Your <b-link href="javascript:void(0)"
-                                            class="text-decoration-underline">Online Order Support</b-link> provides you
+                                    <p class="text-muted">Your
+                                        <b-link class="text-decoration-underline"
+                                                href="javascript:void(0)">Online Order Support
+                                        </b-link>
+                                        provides you
                                         with
                                         the most current status of your order. To help manage your order refer to the
-                                        “Action Menu” to initiate return, contact Customer Support and more.</p>
+                                        “Action Menu” to initiate return, contact Customer Support and more.
+                                    </p>
                                     <b-row class="g-2 mb-3">
-                                        <b-col lg="1" sm="2" cols="6">
-                                            <img src="@/assets/images/small/img-4.jpg" alt="" class="img-fluid rounded">
+                                        <b-col cols="6" lg="1" sm="2">
+                                            <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-4.jpg">
                                         </b-col>
-                                        <b-col lg="1" sm="2" cols="6">
-                                            <img src="@/assets/images/small/img-5.jpg" alt="" class="img-fluid rounded">
+                                        <b-col cols="6" lg="1" sm="2">
+                                            <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-5.jpg">
                                         </b-col>
                                     </b-row>
-                                    <b-link href="javascript: void(0);" class="badge text-muted bg-light"><i
-                                            class="mdi mdi-reply"></i> Reply</b-link>
+                                    <b-link class="badge text-muted bg-light" href="javascript: void(0);"><i
+                                        class="mdi mdi-reply"></i> Reply
+                                    </b-link>
                                     <div class="d-flex mt-4">
                                         <div class="flex-shrink-0">
-                                            <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                                                class="avatar-xs rounded-circle" />
+                                            <img alt="" class="avatar-xs rounded-circle"
+                                                 src="@/assets/images/users/avatar-6.jpg"/>
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h5 class="fs-13">Donald Palmer <small class="text-muted">8 sec ago</small>
                                             </h5>
                                             <p class="text-muted">Other shipping methods are available at checkout if
                                                 you want your purchase delivered faster.</p>
-                                            <b-link href="javascript: void(0);" class="badge text-muted bg-light"><i
-                                                    class="mdi mdi-reply"></i> Reply</b-link>
+                                            <b-link class="badge text-muted bg-light" href="javascript: void(0);"><i
+                                                class="mdi mdi-reply"></i> Reply
+                                            </b-link>
                                         </div>
                                     </div>
                                 </div>
@@ -226,13 +240,13 @@ userIdx: {}
                         <form action="javascript:void(0);" class="mt-3">
                             <b-row class="g-3">
                                 <b-col lg="12">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Leave a Comments</label>
-                                    <textarea class="form-control bg-light border-light"
-                                        id="exampleFormControlTextarea1" rows="3"
-                                        placeholder="Enter comments"></textarea>
+                                    <label class="form-label" for="exampleFormControlTextarea1">Leave a Comments</label>
+                                    <textarea id="exampleFormControlTextarea1"
+                                              class="form-control bg-light border-light" placeholder="Enter comments"
+                                              rows="3"></textarea>
                                 </b-col>
-                                <b-col lg="12" class="text-end">
-                                    <b-link href="javascript:void(0);" class="btn btn-success">Post Comments</b-link>
+                                <b-col class="text-end" lg="12">
+                                    <b-link class="btn btn-success" href="javascript:void(0);">Post Comments</b-link>
                                 </b-col>
                             </b-row>
                         </form>
@@ -248,88 +262,88 @@ userIdx: {}
                         <div class="table-responsive table-card">
                             <table class="table table-borderless align-middle mb-0">
                                 <tbody>
-                                    <tr>
-                                        <td class="fw-medium">Ticket</td>
-                                        <td>#VLZ135</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Client</td>
-                                        <td>Themesbrand</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Project</td>
-                                        <td>Velzon - Admin Dashboard</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Assigned To:</td>
-                                        <td>
-                                            <div class="avatar-group">
-                                                <b-link href="javascript:void(0);" class="avatar-group-item"
-                                                    v-b-tooltip.hover title="Erica Kernan">
-                                                    <img src="@/assets/images/users/avatar-4.jpg" alt=""
-                                                        class="rounded-circle avatar-xs" />
-                                                </b-link>
-                                                <b-link href="javascript:void(0);" class="avatar-group-item"
-                                                    v-b-tooltip.hover title="Alexis Clarke">
-                                                    <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                                        class="rounded-circle avatar-xs" />
-                                                </b-link>
-                                                <b-link href="javascript:void(0);" class="avatar-group-item"
-                                                    v-b-tooltip.hover title="James Price">
-                                                    <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                        class="rounded-circle avatar-xs" />
-                                                </b-link>
-                                                <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                    v-b-tooltip.hover title="Add Members">
-                                                    <div class="avatar-xs">
-                                                        <div
-                                                            class="avatar-title fs-16 rounded-circle bg-light border-dashed border text-primary">
-                                                            +
-                                                        </div>
+                                <tr>
+                                    <td class="fw-medium">Ticket</td>
+                                    <td>#VLZ135</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Client</td>
+                                    <td>Themesbrand</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Project</td>
+                                    <td>Velzon - Admin Dashboard</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Assigned To:</td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            <b-link v-b-tooltip.hover class="avatar-group-item"
+                                                    href="javascript:void(0);" title="Erica Kernan">
+                                                <img alt="" class="rounded-circle avatar-xs"
+                                                     src="@/assets/images/users/avatar-4.jpg"/>
+                                            </b-link>
+                                            <b-link v-b-tooltip.hover class="avatar-group-item"
+                                                    href="javascript:void(0);" title="Alexis Clarke">
+                                                <img alt="" class="rounded-circle avatar-xs"
+                                                     src="@/assets/images/users/avatar-10.jpg"/>
+                                            </b-link>
+                                            <b-link v-b-tooltip.hover class="avatar-group-item"
+                                                    href="javascript:void(0);" title="James Price">
+                                                <img alt="" class="rounded-circle avatar-xs"
+                                                     src="@/assets/images/users/avatar-3.jpg"/>
+                                            </b-link>
+                                            <b-link v-b-tooltip.hover class="avatar-group-item"
+                                                    href="javascript: void(0);" title="Add Members">
+                                                <div class="avatar-xs">
+                                                    <div
+                                                        class="avatar-title fs-16 rounded-circle bg-light border-dashed border text-primary">
+                                                        +
                                                     </div>
-                                                </b-link>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Status:</td>
-                                        <td>
-                                            <Multiselect v-model="value" :close-on-select="true" :searchable="true"
-                                                :create-option="true" :options="[
+                                                </div>
+                                            </b-link>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Status:</td>
+                                    <td>
+                                        <Multiselect v-model="value" :close-on-select="true" :create-option="true"
+                                                     :options="[
                                                     { value: 'new', label: 'New' },
                                                     { value: 'open', label: 'Open' },
                                                     { value: 'inprogress', label: 'Inprogress' },
                                                     { value: 'closed', label: 'Closed' }
-                                                ]" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Priority</td>
-                                        <td>
-                                            <b-badge variant="danger">High</b-badge>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Create Date</td>
-                                        <td>20 Dec, 2021</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Due Date</td>
-                                        <td>29 Dec, 2021</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Last Activity</td>
-                                        <td>14 min ago</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-medium">Labels</td>
-                                        <td class="hstack text-wrap gap-1">
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Admin</b-badge>
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">UI</b-badge>
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Dashboard</b-badge>
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Design</b-badge>
-                                        </td>
-                                    </tr>
+                                                ]" :searchable="true"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Priority</td>
+                                    <td>
+                                        <b-badge variant="danger">High</b-badge>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Create Date</td>
+                                    <td>20 Dec, 2021</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Due Date</td>
+                                    <td>29 Dec, 2021</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Last Activity</td>
+                                    <td>14 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium">Labels</td>
+                                    <td class="hstack text-wrap gap-1">
+                                        <b-badge class="badge-soft-primary" variant="soft-primary">Admin</b-badge>
+                                        <b-badge class="badge-soft-primary" variant="soft-primary">UI</b-badge>
+                                        <b-badge class="badge-soft-primary" variant="soft-primary">Dashboard</b-badge>
+                                        <b-badge class="badge-soft-primary" variant="soft-primary">Design</b-badge>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -353,9 +367,9 @@ userIdx: {}
                                 <small class="text-muted">3.2 MB</small>
                             </div>
                             <div class="hstack gap-3 fs-16">
-                                <b-link href="javascript:void(0);" class="text-muted"><i class="ri-download-2-line"></i>
+                                <b-link class="text-muted" href="javascript:void(0);"><i class="ri-download-2-line"></i>
                                 </b-link>
-                                <b-link href="javascript:void(0);" class="text-muted"><i class="ri-delete-bin-line"></i>
+                                <b-link class="text-muted" href="javascript:void(0);"><i class="ri-delete-bin-line"></i>
                                 </b-link>
                             </div>
                         </div>
@@ -372,9 +386,9 @@ userIdx: {}
                                 <small class="text-muted">4.5 MB</small>
                             </div>
                             <div class="hstack gap-3 fs-16">
-                                <b-link href="javascript:void(0);" class="text-muted"><i class="ri-download-2-line"></i>
+                                <b-link class="text-muted" href="javascript:void(0);"><i class="ri-download-2-line"></i>
                                 </b-link>
-                                <b-link href="javascript:void(0);" class="text-muted"><i class="ri-delete-bin-line"></i>
+                                <b-link class="text-muted" href="javascript:void(0);"><i class="ri-delete-bin-line"></i>
                                 </b-link>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 <script>
-import { VueDraggableNext } from 'vue-draggable-next';
+import {VueDraggableNext} from 'vue-draggable-next';
 import flatPickr from "vue-flatpickr-component";
 import "flatpickr/dist/flatpickr.css";
 
@@ -13,7 +13,7 @@ import animationData from "@/components/widgets/gsqxdxog.json";
 export default {
     page: {
         title: "Kanban Board",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -40,7 +40,7 @@ export default {
             },
             date: null,
             date1: null,
-            defaultOptions: { animationData: animationData },
+            defaultOptions: {animationData: animationData},
             unassigned: [
                 {
                     title: "Profile Page Satructure",
@@ -224,46 +224,48 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
 
         <b-card no-body>
             <b-card-body>
                 <b-row class="g-2">
                     <b-col lg="auto">
                         <div class="hstack gap-2">
-                            <b-button variant="primary" @click="modalShow1 = !modalShow1"><i class="ri-add-line align-bottom me-1"></i> Create Board</b-button>
+                            <b-button variant="primary" @click="modalShow1 = !modalShow1"><i
+                                class="ri-add-line align-bottom me-1"></i> Create Board
+                            </b-button>
                         </div>
                     </b-col>
-                    <b-col lg="3" class="col-auto">
+                    <b-col class="col-auto" lg="3">
                         <div class="search-box">
-                            <input type="text" class="form-control search" placeholder="Search for project, tasks...">
+                            <input class="form-control search" placeholder="Search for project, tasks..." type="text">
                             <i class="ri-search-line search-icon"></i>
                         </div>
                     </b-col>
                     <div class="col-auto ms-sm-auto">
-                        <div class="avatar-group" id="newMembar">
-                            <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover
-                                title="Nancy">
-                                <img src="@/assets/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-xs">
+                        <div id="newMembar" class="avatar-group">
+                            <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                    title="Nancy">
+                                <img alt="" class="rounded-circle avatar-xs" src="@/assets/images/users/avatar-5.jpg">
                             </b-link>
-                            <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover
-                                title="Frank">
-                                <img src="@/assets/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-xs">
+                            <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                    title="Frank">
+                                <img alt="" class="rounded-circle avatar-xs" src="@/assets/images/users/avatar-3.jpg">
                             </b-link>
-                            <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover
-                                title="Tonya">
-                                <img src="@/assets/images/users/avatar-10.jpg" alt="" class="rounded-circle avatar-xs">
+                            <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                    title="Tonya">
+                                <img alt="" class="rounded-circle avatar-xs" src="@/assets/images/users/avatar-10.jpg">
                             </b-link>
-                            <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover
-                                title="Thomas">
-                                <img src="@/assets/images/users/avatar-8.jpg" alt="" class="rounded-circle avatar-xs">
+                            <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                    title="Thomas">
+                                <img alt="" class="rounded-circle avatar-xs" src="@/assets/images/users/avatar-8.jpg">
                             </b-link>
-                            <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover
-                                title="Herbert">
-                                <img src="@/assets/images/users/avatar-2.jpg" alt="" class="rounded-circle avatar-xs">
+                            <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                    title="Herbert">
+                                <img alt="" class="rounded-circle avatar-xs" src="@/assets/images/users/avatar-2.jpg">
                             </b-link>
                             <b-link class="avatar-group-item"
-                                @click="modalShow = !modalShow">
+                                    @click="modalShow = !modalShow">
                                 <div class="avatar-xs">
                                     <div class="avatar-title rounded-circle">
                                         +
@@ -276,18 +278,20 @@ export default {
             </b-card-body>
         </b-card>
 
-        <div class="tasks-board mb-3" id="kanbanboard">
+        <div id="kanbanboard" class="tasks-board mb-3">
             <div class="tasks-list">
                 <div class="d-flex mb-3">
                     <div class="flex-grow-1">
-                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">Unassigned <b-badge tag="small" variant="success" class="align-bottom ms-1">2</b-badge></h6>
+                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">Unassigned
+                            <b-badge class="align-bottom ms-1" tag="small" variant="success">2</b-badge>
+                        </h6>
                     </div>
                     <div class="flex-shrink-0">
                         <div class="dropdown card-header-dropdown">
-                            <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn"
+                                    data-bs-toggle="dropdown" href="#">
                                 <span class="fw-medium text-muted fs-12">Priority<i
-                                        class="mdi mdi-chevron-down ms-1"></i></span>
+                                    class="mdi mdi-chevron-down ms-1"></i></span>
                             </b-link>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <b-link class="dropdown-item" href="#">Priority</b-link>
@@ -296,34 +300,36 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div data-simplebar class="tasks-wrapper px-3 mx-n3">
+                <div class="tasks-wrapper px-3 mx-n3" data-simplebar>
                     <div id="unassigned-task" class="tasks">
-                        <draggable :list="unassigned" class="dragArea" :group="{ name: 'todo' }">
-                            <b-card no-body class="tasks-box" v-for="(data, index) of unassigned" :key="index">
+                        <draggable :group="{ name: 'todo' }" :list="unassigned" class="dragArea">
+                            <b-card v-for="(data, index) of unassigned" :key="index" class="tasks-box" no-body>
                                 <b-card-body>
                                     <div class="d-flex mb-2">
                                         <h6 class="fs-15 mb-0 flex-grow-1 text-truncate">
                                             <router-link to="/apps/tasks-details">{{ data.title }}</router-link>
                                         </h6>
                                         <div class="dropdown">
-                                            <b-link href="javascript:void(0);" class="text-muted" id="dropdownMenuLink1"
-                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                    class="ri-more-fill"></i></b-link>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                            <b-link id="dropdownMenuLink1" aria-expanded="false" class="text-muted"
+                                                    data-bs-toggle="dropdown" href="javascript:void(0);"><i
+                                                class="ri-more-fill"></i></b-link>
+                                            <ul aria-labelledby="dropdownMenuLink1" class="dropdown-menu">
                                                 <li>
                                                     <router-link class="dropdown-item" to="/apps/tasks-details"><i
-                                                            class="ri-eye-fill align-bottom me-2 text-muted"></i> View
+                                                        class="ri-eye-fill align-bottom me-2 text-muted"></i> View
                                                     </router-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" href="#"><i
-                                                            class="ri-edit-2-line align-bottom me-2 text-muted"></i>
-                                                        Edit</b-link>
+                                                        class="ri-edit-2-line align-bottom me-2 text-muted"></i>
+                                                        Edit
+                                                    </b-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" @click="deleteTask"><i
-                                                            class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
-                                                        Delete</b-link>
+                                                        class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
+                                                        Delete
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -340,20 +346,23 @@ export default {
                                             </div>
                                         </div>
                                         <div class="progress rounded-3 progress-sm">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
-                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15"
+                                                 class="progress-bar bg-danger" role="progressbar"
+                                                 style="width: 15%"></div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-grow-1">
-                                            <b-badge variant="soft-primary" class="badge-soft-primary me-1"
-                                                v-for="(item, index) of data.features" :key="index">{{item}}</b-badge>
+                                            <b-badge v-for="(item, index) of data.features" :key="index"
+                                                     class="badge-soft-primary me-1" variant="soft-primary">{{ item }}
+                                            </b-badge>
                                         </div>
                                         <div class="flex-shrink-0">
                                             <div class="avatar-group">
-                                                <b-link href="javascript: void(0);" v-for="(item, index) of data.users"
-                                                    :key="index" class="avatar-group-item" v-b-tooltip.hover
-                                                    title="Alexis">
+                                                <b-link v-for="(item, index) of data.users" :key="index"
+                                                        v-b-tooltip.hover class="avatar-group-item"
+                                                        href="javascript: void(0);"
+                                                        title="Alexis">
                                                     <img :src="item" alt="" class="rounded-circle avatar-xxs">
                                                 </b-link>
                                             </div>
@@ -368,17 +377,19 @@ export default {
                                         <div class="flex-shrink-0">
                                             <ul class="link-inline mb-0">
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-eye-line align-bottom"></i> 04</b-link>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-question-answer-line align-bottom"></i> 19
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-eye-line align-bottom"></i> 04
                                                     </b-link>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-attachment-2 align-bottom"></i> 02</b-link>
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-question-answer-line align-bottom"></i> 19
+                                                    </b-link>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-attachment-2 align-bottom"></i> 02
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -389,21 +400,24 @@ export default {
                     </div>
                 </div>
                 <div class="my-3">
-                    <b-button variant="soft-info" class="w-100" @click="modalShow2 = !modalShow2">Add More</b-button>
+                    <b-button class="w-100" variant="soft-info" @click="modalShow2 = !modalShow2">Add More</b-button>
                 </div>
             </div>
             <div class="tasks-list">
                 <div class="d-flex mb-3">
                     <div class="flex-grow-1">
-                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">To Do <b-badge tag="small" variant="secondary"
-                                class="align-bottom ms-1">2</b-badge></h6>
+                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">To Do
+                            <b-badge class="align-bottom ms-1" tag="small"
+                                     variant="secondary">2
+                            </b-badge>
+                        </h6>
                     </div>
                     <div class="flex-shrink-0">
                         <div class="dropdown card-header-dropdown">
-                            <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn"
+                                    data-bs-toggle="dropdown" href="#">
                                 <span class="fw-medium text-muted fs-12">Priority<i
-                                        class="mdi mdi-chevron-down ms-1"></i></span>
+                                    class="mdi mdi-chevron-down ms-1"></i></span>
                             </b-link>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <b-link class="dropdown-item" href="#">Priority</b-link>
@@ -412,34 +426,36 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div data-simplebar class="tasks-wrapper px-3 mx-n3">
+                <div class="tasks-wrapper px-3 mx-n3" data-simplebar>
                     <div id="todo-task" class="tasks">
                         <draggable :list="todo" class="dragArea" group="todo">
-                            <b-card no-body class="tasks-box" v-for="(data, index) of todo" :key="index">
+                            <b-card v-for="(data, index) of todo" :key="index" class="tasks-box" no-body>
                                 <b-card-body>
                                     <div class="d-flex mb-2">
                                         <h6 class="fs-15 mb-0 flex-grow-1 text-truncate">
                                             <router-link to="/apps/tasks-details">{{ data.title }}</router-link>
                                         </h6>
                                         <div class="dropdown">
-                                            <b-link href="javascript:void(0);" class="text-muted" id="dropdownMenuLink1"
-                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                    class="ri-more-fill"></i></b-link>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                            <b-link id="dropdownMenuLink1" aria-expanded="false" class="text-muted"
+                                                    data-bs-toggle="dropdown" href="javascript:void(0);"><i
+                                                class="ri-more-fill"></i></b-link>
+                                            <ul aria-labelledby="dropdownMenuLink1" class="dropdown-menu">
                                                 <li>
                                                     <router-link class="dropdown-item" to="/apps/tasks-details"><i
-                                                            class="ri-eye-fill align-bottom me-2 text-muted"></i> View
+                                                        class="ri-eye-fill align-bottom me-2 text-muted"></i> View
                                                     </router-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" href="#"><i
-                                                            class="ri-edit-2-line align-bottom me-2 text-muted"></i>
-                                                        Edit</b-link>
+                                                        class="ri-edit-2-line align-bottom me-2 text-muted"></i>
+                                                        Edit
+                                                    </b-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" @click="deleteTask"><i
-                                                            class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
-                                                        Delete</b-link>
+                                                        class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
+                                                        Delete
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -456,20 +472,23 @@ export default {
                                             </div>
                                         </div>
                                         <div class="progress rounded-3 progress-sm">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
-                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15"
+                                                 class="progress-bar bg-danger" role="progressbar"
+                                                 style="width: 15%"></div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-grow-1">
-                                            <b-badge variant="soft-primary" class="badge-soft-primary me-1"
-                                                v-for="(item, index) of data.features" :key="index">{{item}}</b-badge>
+                                            <b-badge v-for="(item, index) of data.features" :key="index"
+                                                     class="badge-soft-primary me-1" variant="soft-primary">{{ item }}
+                                            </b-badge>
                                         </div>
                                         <div class="flex-shrink-0">
                                             <div class="avatar-group">
-                                                <b-link href="javascript: void(0);" v-for="(item, index) of data.users"
-                                                    :key="index" class="avatar-group-item" v-b-tooltip.hover
-                                                    title="Alexis">
+                                                <b-link v-for="(item, index) of data.users" :key="index"
+                                                        v-b-tooltip.hover class="avatar-group-item"
+                                                        href="javascript: void(0);"
+                                                        title="Alexis">
                                                     <img :src="item" alt="" class="rounded-circle avatar-xxs">
                                                 </b-link>
                                             </div>
@@ -484,17 +503,19 @@ export default {
                                         <div class="flex-shrink-0">
                                             <ul class="link-inline mb-0">
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-eye-line align-bottom"></i> 04</b-link>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-question-answer-line align-bottom"></i> 19
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-eye-line align-bottom"></i> 04
                                                     </b-link>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-attachment-2 align-bottom"></i> 02</b-link>
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-question-answer-line align-bottom"></i> 19
+                                                    </b-link>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-attachment-2 align-bottom"></i> 02
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -505,22 +526,22 @@ export default {
                     </div>
                 </div>
                 <div class="my-3">
-                    <b-button variant="soft-info" class="w-100" @click="modalShow2 = !modalShow2">Add More</b-button>
+                    <b-button class="w-100" variant="soft-info" @click="modalShow2 = !modalShow2">Add More</b-button>
                 </div>
             </div>
             <div class="tasks-list">
                 <div class="d-flex mb-3">
                     <div class="flex-grow-1">
-                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">Inprogress 
-                            <b-badge tag="small" class="bg-warning align-bottom ms-1">2</b-badge>
+                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">Inprogress
+                            <b-badge class="bg-warning align-bottom ms-1" tag="small">2</b-badge>
                         </h6>
                     </div>
                     <div class="flex-shrink-0">
                         <div class="dropdown card-header-dropdown">
-                            <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn"
+                                    data-bs-toggle="dropdown" href="#">
                                 <span class="fw-medium text-muted fs-12">Priority<i
-                                        class="mdi mdi-chevron-down ms-1"></i></span>
+                                    class="mdi mdi-chevron-down ms-1"></i></span>
                             </b-link>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <b-link class="dropdown-item" href="#">Priority</b-link>
@@ -529,34 +550,36 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div data-simplebar class="tasks-wrapper px-3 mx-n3">
+                <div class="tasks-wrapper px-3 mx-n3" data-simplebar>
                     <div id="inprogress-task" class="tasks">
                         <draggable :list="inprogress" class="dragArea" group="reviews">
-                            <b-card no-body class="tasks-box" v-for="(data, index) of inprogress" :key="index">
+                            <b-card v-for="(data, index) of inprogress" :key="index" class="tasks-box" no-body>
                                 <b-card-body>
                                     <div class="d-flex mb-2">
                                         <h6 class="fs-15 mb-0 flex-grow-1 text-truncate">
                                             <router-link to="/apps/tasks-details">{{ data.title }}</router-link>
                                         </h6>
                                         <div class="dropdown">
-                                            <b-link href="javascript:void(0);" class="text-muted" id="dropdownMenuLink1"
-                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                    class="ri-more-fill"></i></b-link>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                            <b-link id="dropdownMenuLink1" aria-expanded="false" class="text-muted"
+                                                    data-bs-toggle="dropdown" href="javascript:void(0);"><i
+                                                class="ri-more-fill"></i></b-link>
+                                            <ul aria-labelledby="dropdownMenuLink1" class="dropdown-menu">
                                                 <li>
                                                     <router-link class="dropdown-item" to="/apps/tasks-details"><i
-                                                            class="ri-eye-fill align-bottom me-2 text-muted"></i> View
+                                                        class="ri-eye-fill align-bottom me-2 text-muted"></i> View
                                                     </router-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" href="#"><i
-                                                            class="ri-edit-2-line align-bottom me-2 text-muted"></i>
-                                                        Edit</b-link>
+                                                        class="ri-edit-2-line align-bottom me-2 text-muted"></i>
+                                                        Edit
+                                                    </b-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" @click="deleteTask"><i
-                                                            class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
-                                                        Delete</b-link>
+                                                        class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
+                                                        Delete
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -573,20 +596,23 @@ export default {
                                             </div>
                                         </div>
                                         <div class="progress rounded-3 progress-sm">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
-                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15"
+                                                 class="progress-bar bg-danger" role="progressbar"
+                                                 style="width: 15%"></div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-grow-1">
-                                            <b-badge variant="soft-primary" class="badge-soft-primary me-1"
-                                                v-for="(item, index) of data.features" :key="index">{{item}}</b-badge>
+                                            <b-badge v-for="(item, index) of data.features" :key="index"
+                                                     class="badge-soft-primary me-1" variant="soft-primary">{{ item }}
+                                            </b-badge>
                                         </div>
                                         <div class="flex-shrink-0">
                                             <div class="avatar-group">
-                                                <b-link href="javascript: void(0);" v-for="(item, index) of data.users"
-                                                    :key="index" class="avatar-group-item" v-b-tooltip.hover
-                                                    title="Alexis">
+                                                <b-link v-for="(item, index) of data.users" :key="index"
+                                                        v-b-tooltip.hover class="avatar-group-item"
+                                                        href="javascript: void(0);"
+                                                        title="Alexis">
                                                     <img :src="item" alt="" class="rounded-circle avatar-xxs">
                                                 </b-link>
                                             </div>
@@ -601,17 +627,19 @@ export default {
                                         <div class="flex-shrink-0">
                                             <ul class="link-inline mb-0">
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-eye-line align-bottom"></i> 04</b-link>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-question-answer-line align-bottom"></i> 19
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-eye-line align-bottom"></i> 04
                                                     </b-link>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-attachment-2 align-bottom"></i> 02</b-link>
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-question-answer-line align-bottom"></i> 19
+                                                    </b-link>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-attachment-2 align-bottom"></i> 02
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -622,22 +650,22 @@ export default {
                     </div>
                 </div>
                 <div class="my-3">
-                    <b-button variant="soft-info" class="w-100" @click="modalShow2 = !modalShow2">Add More</b-button>
+                    <b-button class="w-100" variant="soft-info" @click="modalShow2 = !modalShow2">Add More</b-button>
                 </div>
             </div>
             <div class="tasks-list">
                 <div class="d-flex mb-3">
                     <div class="flex-grow-1">
-                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">In Reviews 
-                            <b-badge tag="small" class="bg-info align-bottom ms-1">3</b-badge>
+                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">In Reviews
+                            <b-badge class="bg-info align-bottom ms-1" tag="small">3</b-badge>
                         </h6>
                     </div>
                     <div class="flex-shrink-0">
                         <div class="dropdown card-header-dropdown">
-                            <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn"
+                                    data-bs-toggle="dropdown" href="#">
                                 <span class="fw-medium text-muted fs-12">Priority<i
-                                        class="mdi mdi-chevron-down ms-1"></i></span>
+                                    class="mdi mdi-chevron-down ms-1"></i></span>
                             </b-link>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <b-link class="dropdown-item" href="#">Priority</b-link>
@@ -646,34 +674,36 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div data-simplebar class="tasks-wrapper px-3 mx-n3">
+                <div class="tasks-wrapper px-3 mx-n3" data-simplebar>
                     <div id="reviews-task" class="tasks">
                         <draggable :list="reviews" class="dragArea" group="reviews">
-                            <b-card no-body class="tasks-box" v-for="(data, index) of reviews" :key="index">
+                            <b-card v-for="(data, index) of reviews" :key="index" class="tasks-box" no-body>
                                 <b-card-body>
                                     <div class="d-flex mb-2">
                                         <h6 class="fs-15 mb-0 flex-grow-1 text-truncate">
                                             <router-link to="/apps/tasks-details">{{ data.title }}</router-link>
                                         </h6>
                                         <div class="dropdown">
-                                            <b-link href="javascript:void(0);" class="text-muted" id="dropdownMenuLink1"
-                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                    class="ri-more-fill"></i></b-link>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                            <b-link id="dropdownMenuLink1" aria-expanded="false" class="text-muted"
+                                                    data-bs-toggle="dropdown" href="javascript:void(0);"><i
+                                                class="ri-more-fill"></i></b-link>
+                                            <ul aria-labelledby="dropdownMenuLink1" class="dropdown-menu">
                                                 <li>
                                                     <router-link class="dropdown-item" to="/apps/tasks-details"><i
-                                                            class="ri-eye-fill align-bottom me-2 text-muted"></i> View
+                                                        class="ri-eye-fill align-bottom me-2 text-muted"></i> View
                                                     </router-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" href="#"><i
-                                                            class="ri-edit-2-line align-bottom me-2 text-muted"></i>
-                                                        Edit</b-link>
+                                                        class="ri-edit-2-line align-bottom me-2 text-muted"></i>
+                                                        Edit
+                                                    </b-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" @click="deleteTask"><i
-                                                            class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
-                                                        Delete</b-link>
+                                                        class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
+                                                        Delete
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -690,20 +720,23 @@ export default {
                                             </div>
                                         </div>
                                         <div class="progress rounded-3 progress-sm">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
-                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15"
+                                                 class="progress-bar bg-danger" role="progressbar"
+                                                 style="width: 15%"></div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-grow-1">
-                                            <b-badge variant="soft-primary" class="badge-soft-primary me-1"
-                                                v-for="(item, index) of data.features" :key="index">{{item}}</b-badge>
+                                            <b-badge v-for="(item, index) of data.features" :key="index"
+                                                     class="badge-soft-primary me-1" variant="soft-primary">{{ item }}
+                                            </b-badge>
                                         </div>
                                         <div class="flex-shrink-0">
                                             <div class="avatar-group">
-                                                <b-link href="javascript: void(0);" v-for="(item, index) of data.users"
-                                                    :key="index" class="avatar-group-item" v-b-tooltip.hover
-                                                    title="Alexis">
+                                                <b-link v-for="(item, index) of data.users" :key="index"
+                                                        v-b-tooltip.hover class="avatar-group-item"
+                                                        href="javascript: void(0);"
+                                                        title="Alexis">
                                                     <img :src="item" alt="" class="rounded-circle avatar-xxs">
                                                 </b-link>
                                             </div>
@@ -718,17 +751,19 @@ export default {
                                         <div class="flex-shrink-0">
                                             <ul class="link-inline mb-0">
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-eye-line align-bottom"></i> 04</b-link>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-question-answer-line align-bottom"></i> 19
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-eye-line align-bottom"></i> 04
                                                     </b-link>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-attachment-2 align-bottom"></i> 02</b-link>
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-question-answer-line align-bottom"></i> 19
+                                                    </b-link>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-attachment-2 align-bottom"></i> 02
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -739,21 +774,22 @@ export default {
                     </div>
                 </div>
                 <div class="my-3">
-                    <b-button variant="soft-info" class="w-100" @click="modalShow2 = !modalShow2">Add More</b-button>
+                    <b-button class="w-100" variant="soft-info" @click="modalShow2 = !modalShow2">Add More</b-button>
                 </div>
             </div>
             <div class="tasks-list">
                 <div class="d-flex mb-3">
                     <div class="flex-grow-1">
-                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">Completed 
-                            <b-badge tag="small" variant="success" class="align-bottom ms-1">1</b-badge></h6>
+                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">Completed
+                            <b-badge class="align-bottom ms-1" tag="small" variant="success">1</b-badge>
+                        </h6>
                     </div>
                     <div class="flex-shrink-0">
                         <div class="dropdown card-header-dropdown">
-                            <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn"
+                                    data-bs-toggle="dropdown" href="#">
                                 <span class="fw-medium text-muted fs-12">Priority<i
-                                        class="mdi mdi-chevron-down ms-1"></i></span>
+                                    class="mdi mdi-chevron-down ms-1"></i></span>
                             </b-link>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <b-link class="dropdown-item" href="#">Priority</b-link>
@@ -762,34 +798,36 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div data-simplebar class="tasks-wrapper px-3 mx-n3">
+                <div class="tasks-wrapper px-3 mx-n3" data-simplebar>
                     <div id="completed-task" class="tasks">
                         <draggable :list="completed" class="dragArea" group="newData">
-                            <b-card no-body class="tasks-box" v-for="(data, index) of completed" :key="index">
+                            <b-card v-for="(data, index) of completed" :key="index" class="tasks-box" no-body>
                                 <b-card-body>
                                     <div class="d-flex mb-2">
                                         <h6 class="fs-15 mb-0 flex-grow-1 text-truncate">
                                             <router-link to="/apps/tasks-details">{{ data.title }}</router-link>
                                         </h6>
                                         <div class="dropdown">
-                                            <b-link href="javascript:void(0);" class="text-muted" id="dropdownMenuLink1"
-                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                    class="ri-more-fill"></i></b-link>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                            <b-link id="dropdownMenuLink1" aria-expanded="false" class="text-muted"
+                                                    data-bs-toggle="dropdown" href="javascript:void(0);"><i
+                                                class="ri-more-fill"></i></b-link>
+                                            <ul aria-labelledby="dropdownMenuLink1" class="dropdown-menu">
                                                 <li>
                                                     <router-link class="dropdown-item" to="/apps/tasks-details"><i
-                                                            class="ri-eye-fill align-bottom me-2 text-muted"></i> View
+                                                        class="ri-eye-fill align-bottom me-2 text-muted"></i> View
                                                     </router-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" href="#"><i
-                                                            class="ri-edit-2-line align-bottom me-2 text-muted"></i>
-                                                        Edit</b-link>
+                                                        class="ri-edit-2-line align-bottom me-2 text-muted"></i>
+                                                        Edit
+                                                    </b-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" @click="deleteTask"><i
-                                                            class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
-                                                        Delete</b-link>
+                                                        class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
+                                                        Delete
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -806,20 +844,23 @@ export default {
                                             </div>
                                         </div>
                                         <div class="progress rounded-3 progress-sm">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
-                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15"
+                                                 class="progress-bar bg-danger" role="progressbar"
+                                                 style="width: 15%"></div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-grow-1">
-                                            <b-badge variant="soft-primary" class="badge-soft-primary me-1"
-                                                v-for="(item, index) of data.features" :key="index">{{item}}</b-badge>
+                                            <b-badge v-for="(item, index) of data.features" :key="index"
+                                                     class="badge-soft-primary me-1" variant="soft-primary">{{ item }}
+                                            </b-badge>
                                         </div>
                                         <div class="flex-shrink-0">
                                             <div class="avatar-group">
-                                                <b-link href="javascript: void(0);" v-for="(item, index) of data.users"
-                                                    :key="index" class="avatar-group-item" v-b-tooltip.hover
-                                                    title="Alexis">
+                                                <b-link v-for="(item, index) of data.users" :key="index"
+                                                        v-b-tooltip.hover class="avatar-group-item"
+                                                        href="javascript: void(0);"
+                                                        title="Alexis">
                                                     <img :src="item" alt="" class="rounded-circle avatar-xxs">
                                                 </b-link>
                                             </div>
@@ -834,17 +875,19 @@ export default {
                                         <div class="flex-shrink-0">
                                             <ul class="link-inline mb-0">
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-eye-line align-bottom"></i> 04</b-link>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-question-answer-line align-bottom"></i> 19
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-eye-line align-bottom"></i> 04
                                                     </b-link>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-attachment-2 align-bottom"></i> 02</b-link>
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-question-answer-line align-bottom"></i> 19
+                                                    </b-link>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-attachment-2 align-bottom"></i> 02
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -855,20 +898,22 @@ export default {
                     </div>
                 </div>
                 <div class="my-3">
-                    <b-button variant="soft-info" class="w-100" @click="modalShow2 = !modalShow2">Add More</b-button>
+                    <b-button class="w-100" variant="soft-info" @click="modalShow2 = !modalShow2">Add More</b-button>
                 </div>
             </div>
             <div class="tasks-list">
                 <div class="d-flex mb-3">
                     <div class="flex-grow-1">
-                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">new <b-badge tag="small" variant="success" class="align-bottom ms-1">1</b-badge></h6>
+                        <h6 class="fs-14 text-uppercase fw-semibold mb-0">new
+                            <b-badge class="align-bottom ms-1" tag="small" variant="success">1</b-badge>
+                        </h6>
                     </div>
                     <div class="flex-shrink-0">
                         <div class="dropdown card-header-dropdown">
-                            <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn"
+                                    data-bs-toggle="dropdown" href="#">
                                 <span class="fw-medium text-muted fs-12">Priority<i
-                                        class="mdi mdi-chevron-down ms-1"></i></span>
+                                    class="mdi mdi-chevron-down ms-1"></i></span>
                             </b-link>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <b-link class="dropdown-item" href="#">Priority</b-link>
@@ -877,34 +922,36 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div data-simplebar class="tasks-wrapper px-3 mx-n3">
+                <div class="tasks-wrapper px-3 mx-n3" data-simplebar>
                     <div id="new-task" class="tasks">
                         <draggable :list="newData" class="dragArea" group="newData">
-                            <b-card no-body class="tasks-box" v-for="(data, index) of newData" :key="index">
+                            <b-card v-for="(data, index) of newData" :key="index" class="tasks-box" no-body>
                                 <b-card-body>
                                     <div class="d-flex mb-2">
                                         <h6 class="fs-15 mb-0 flex-grow-1 text-truncate">
                                             <router-link to="/apps/tasks-details">{{ data.title }}</router-link>
                                         </h6>
                                         <div class="dropdown">
-                                            <b-link href="javascript:void(0);" class="text-muted" id="dropdownMenuLink1"
-                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                    class="ri-more-fill"></i></b-link>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                            <b-link id="dropdownMenuLink1" aria-expanded="false" class="text-muted"
+                                                    data-bs-toggle="dropdown" href="javascript:void(0);"><i
+                                                class="ri-more-fill"></i></b-link>
+                                            <ul aria-labelledby="dropdownMenuLink1" class="dropdown-menu">
                                                 <li>
                                                     <router-link class="dropdown-item" to="/apps/tasks-details"><i
-                                                            class="ri-eye-fill align-bottom me-2 text-muted"></i> View
+                                                        class="ri-eye-fill align-bottom me-2 text-muted"></i> View
                                                     </router-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" href="#"><i
-                                                            class="ri-edit-2-line align-bottom me-2 text-muted"></i>
-                                                        Edit</b-link>
+                                                        class="ri-edit-2-line align-bottom me-2 text-muted"></i>
+                                                        Edit
+                                                    </b-link>
                                                 </li>
                                                 <li>
                                                     <b-link class="dropdown-item" @click="deleteTask"><i
-                                                            class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
-                                                        Delete</b-link>
+                                                        class="ri-delete-bin-5-line align-bottom me-2 text-muted"></i>
+                                                        Delete
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -921,20 +968,23 @@ export default {
                                             </div>
                                         </div>
                                         <div class="progress rounded-3 progress-sm">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
-                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15"
+                                                 class="progress-bar bg-danger" role="progressbar"
+                                                 style="width: 15%"></div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-grow-1">
-                                            <b-badge variant="soft-primary" class="badge-soft-primary me-1"
-                                                v-for="(item, index) of data.features" :key="index">{{item}}</b-badge>
+                                            <b-badge v-for="(item, index) of data.features" :key="index"
+                                                     class="badge-soft-primary me-1" variant="soft-primary">{{ item }}
+                                            </b-badge>
                                         </div>
                                         <div class="flex-shrink-0">
                                             <div class="avatar-group">
-                                                <b-link href="javascript: void(0);" v-for="(item, index) of data.users"
-                                                    :key="index" class="avatar-group-item" v-b-tooltip.hover
-                                                    title="Alexis">
+                                                <b-link v-for="(item, index) of data.users" :key="index"
+                                                        v-b-tooltip.hover class="avatar-group-item"
+                                                        href="javascript: void(0);"
+                                                        title="Alexis">
                                                     <img :src="item" alt="" class="rounded-circle avatar-xxs">
                                                 </b-link>
                                             </div>
@@ -949,17 +999,19 @@ export default {
                                         <div class="flex-shrink-0">
                                             <ul class="link-inline mb-0">
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-eye-line align-bottom"></i> 04</b-link>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-question-answer-line align-bottom"></i> 19
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-eye-line align-bottom"></i> 04
                                                     </b-link>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <b-link href="javascript:void(0)" class="text-muted"><i
-                                                            class="ri-attachment-2 align-bottom"></i> 02</b-link>
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-question-answer-line align-bottom"></i> 19
+                                                    </b-link>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <b-link class="text-muted" href="javascript:void(0)"><i
+                                                        class="ri-attachment-2 align-bottom"></i> 02
+                                                    </b-link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -970,112 +1022,113 @@ export default {
                     </div>
                 </div>
                 <div class="my-3">
-                    <b-button variant="soft-info" class="w-100" @click="modalShow2 = !modalShow2">Add More</b-button>
+                    <b-button class="w-100" variant="soft-info" @click="modalShow2 = !modalShow2">Add More</b-button>
                 </div>
             </div>
         </div>
 
 
-        <b-modal v-model="modalShow" header-class="p-3 bg-soft-warning" content-class="border-0" hide-footer
-            title="Add Member" class="v-modal-custom">
+        <b-modal v-model="modalShow" class="v-modal-custom" content-class="border-0" header-class="p-3 bg-soft-warning"
+                 hide-footer title="Add Member">
             <b-form>
                 <b-row class="g-3">
                     <b-col lg="12">
-                        <label for="submissionidInput" class="form-label">Submission ID</label>
-                        <input type="number" class="form-control" id="submissionidInput" placeholder="Submission ID">
+                        <label class="form-label" for="submissionidInput">Submission ID</label>
+                        <input id="submissionidInput" class="form-control" placeholder="Submission ID" type="number">
                     </b-col>
                     <b-col lg="12">
-                        <label for="profileimgInput" class="form-label">Profile Images</label>
-                        <input class="form-control" type="file" id="profileimgInput">
+                        <label class="form-label" for="profileimgInput">Profile Images</label>
+                        <input id="profileimgInput" class="form-control" type="file">
                     </b-col>
                     <b-col lg="6">
-                        <label for="firstnameInput" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="firstnameInput" placeholder="Enter firstname">
+                        <label class="form-label" for="firstnameInput">First Name</label>
+                        <input id="firstnameInput" class="form-control" placeholder="Enter firstname" type="text">
                     </b-col>
                     <b-col lg="6">
-                        <label for="lastnameInput" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastnameInput" placeholder="Enter lastname">
+                        <label class="form-label" for="lastnameInput">Last Name</label>
+                        <input id="lastnameInput" class="form-control" placeholder="Enter lastname" type="text">
                     </b-col>
                     <b-col lg="12">
-                        <label for="designationInput" class="form-label">Designation</label>
-                        <input type="text" class="form-control" id="designationInput" placeholder="Designation">
+                        <label class="form-label" for="designationInput">Designation</label>
+                        <input id="designationInput" class="form-control" placeholder="Designation" type="text">
                     </b-col>
                     <b-col lg="12">
-                        <label for="titleInput" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="titleInput" placeholder="Title">
+                        <label class="form-label" for="titleInput">Title</label>
+                        <input id="titleInput" class="form-control" placeholder="Title" type="text">
                     </b-col>
                     <b-col lg="6">
-                        <label for="numberInput" class="form-label">Phone Number</label>
-                        <input type="text" class="form-control" id="numberInput" placeholder="Phone number">
+                        <label class="form-label" for="numberInput">Phone Number</label>
+                        <input id="numberInput" class="form-control" placeholder="Phone number" type="text">
                     </b-col>
                     <b-col lg="6">
-                        <label for="joiningdateInput" class="form-label">Joining Date</label>
+                        <label class="form-label" for="joiningdateInput">Joining Date</label>
 
-                        <flat-pickr v-model="date" :config="config" placeholder="Select date" class="form-control">
+                        <flat-pickr v-model="date" :config="config" class="form-control" placeholder="Select date">
                         </flat-pickr>
                     </b-col>
                     <b-col lg="12">
-                        <label for="emailInput" class="form-label">Email ID</label>
-                        <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                        <label class="form-label" for="emailInput">Email ID</label>
+                        <input id="emailInput" class="form-control" placeholder="Email" type="email">
                     </b-col>
                 </b-row>
             </b-form>
             <div class="modal-footer v-modal-footer">
                 <b-button type="button" variant="light" @click="modalShow = false"><i
-                        class="ri-close-line align-bottom me-1"></i> Close</b-button>
-                <b-button type="button" variant="success" id="addMember">Add Member</b-button>
+                    class="ri-close-line align-bottom me-1"></i> Close
+                </b-button>
+                <b-button id="addMember" type="button" variant="success">Add Member</b-button>
             </div>
         </b-modal>
 
-        <b-modal v-model="modalShow1" header-class="p-3 bg-soft-info" content-class="border-0" hide-footer
-            title="Add Board" class="v-modal-custom" centered>
+        <b-modal v-model="modalShow1" centered class="v-modal-custom" content-class="border-0"
+                 header-class="p-3 bg-soft-info" hide-footer title="Add Board">
             <b-form action="#">
                 <b-row>
                     <b-col lg="12">
-                        <label for="boardName" class="form-label">Board Name</label>
-                        <input type="text" class="form-control" id="boardName" placeholder="Enter board name">
+                        <label class="form-label" for="boardName">Board Name</label>
+                        <input id="boardName" class="form-control" placeholder="Enter board name" type="text">
                     </b-col>
                     <div class="mt-4">
                         <div class="hstack gap-2 justify-content-end">
                             <b-button type="button" variant="light" @click="modalShow1 = false">Close</b-button>
-                            <b-button type="button" variant="success" id="addNewBoard">Add Board</b-button>
+                            <b-button id="addNewBoard" type="button" variant="success">Add Board</b-button>
                         </div>
                     </div>
                 </b-row>
             </b-form>
         </b-modal>
 
-        <b-modal v-model="modalShow2" header-class="p-3 bg-soft-info" content-class="border-0" hide-footer
-            title="Create New Task" class="v-modal-custom" size="lg" centered>
+        <b-modal v-model="modalShow2" centered class="v-modal-custom" content-class="border-0"
+                 header-class="p-3 bg-soft-info" hide-footer size="lg" title="Create New Task">
             <b-form action="#">
                 <b-row class="g-3">
                     <b-col lg="12">
-                        <label for="projectName" class="form-label">Project Name</label>
-                        <input type="text" class="form-control" id="projectName" placeholder="Enter project name">
+                        <label class="form-label" for="projectName">Project Name</label>
+                        <input id="projectName" class="form-control" placeholder="Enter project name" type="text">
                     </b-col>
                     <b-col lg="12">
-                        <label for="sub-tasks" class="form-label">Task Title</label>
-                        <input type="text" class="form-control" id="sub-tasks" placeholder="Task title">
+                        <label class="form-label" for="sub-tasks">Task Title</label>
+                        <input id="sub-tasks" class="form-control" placeholder="Task title" type="text">
                     </b-col>
                     <b-col lg="12">
-                        <label for="task-description" class="form-label">Task Description</label>
-                        <textarea class="form-control" id="task-description" rows="3"></textarea>
+                        <label class="form-label" for="task-description">Task Description</label>
+                        <textarea id="task-description" class="form-control" rows="3"></textarea>
                     </b-col>
                     <b-col lg="12">
-                        <label for="formFile" class="form-label">Tasks Images</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <label class="form-label" for="formFile">Tasks Images</label>
+                        <input id="formFile" class="form-control" type="file">
                     </b-col>
                     <b-col lg="12">
-                        <label for="tasks-progress" class="form-label">Add Team Member</label>
+                        <label class="form-label" for="tasks-progress">Add Team Member</label>
                         <div data-simplebar style="height: 95px;">
                             <ul class="list-unstyled vstack gap-2 mb-0">
                                 <li>
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value="" id="anna-adame">
+                                        <input id="anna-adame" class="form-check-input me-3" type="checkbox" value="">
                                         <label class="form-check-label d-flex align-items-center" for="anna-adame">
                                             <span class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-1.jpg" alt=""
-                                                    class="avatar-xxs rounded-circle" />
+                                                <img alt="" class="avatar-xxs rounded-circle"
+                                                     src="@/assets/images/users/avatar-1.jpg"/>
                                             </span>
                                             <span class="flex-grow-1 ms-2">
                                                 Anna Adame
@@ -1085,11 +1138,11 @@ export default {
                                 </li>
                                 <li>
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value="" id="frank-hook">
+                                        <input id="frank-hook" class="form-check-input me-3" type="checkbox" value="">
                                         <label class="form-check-label d-flex align-items-center" for="frank-hook">
                                             <span class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                    class="avatar-xxs rounded-circle" />
+                                                <img alt="" class="avatar-xxs rounded-circle"
+                                                     src="@/assets/images/users/avatar-3.jpg"/>
                                             </span>
                                             <span class="flex-grow-1 ms-2">
                                                 Frank Hook
@@ -1099,12 +1152,12 @@ export default {
                                 </li>
                                 <li>
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            id="alexis-clarke">
+                                        <input id="alexis-clarke" class="form-check-input me-3" type="checkbox"
+                                               value="">
                                         <label class="form-check-label d-flex align-items-center" for="alexis-clarke">
                                             <span class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                                                    class="avatar-xxs rounded-circle" />
+                                                <img alt="" class="avatar-xxs rounded-circle"
+                                                     src="@/assets/images/users/avatar-6.jpg"/>
                                             </span>
                                             <span class="flex-grow-1 ms-2">
                                                 Alexis Clarke
@@ -1114,12 +1167,12 @@ export default {
                                 </li>
                                 <li>
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            id="herbert-stokes">
+                                        <input id="herbert-stokes" class="form-check-input me-3" type="checkbox"
+                                               value="">
                                         <label class="form-check-label d-flex align-items-center" for="herbert-stokes">
                                             <span class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-2.jpg" alt=""
-                                                    class="avatar-xxs rounded-circle" />
+                                                <img alt="" class="avatar-xxs rounded-circle"
+                                                     src="@/assets/images/users/avatar-2.jpg"/>
                                             </span>
                                             <span class="flex-grow-1 ms-2">
                                                 Herbert Stokes
@@ -1129,12 +1182,12 @@ export default {
                                 </li>
                                 <li>
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            id="michael-morris">
+                                        <input id="michael-morris" class="form-check-input me-3" type="checkbox"
+                                               value="">
                                         <label class="form-check-label d-flex align-items-center" for="michael-morris">
                                             <span class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-7.jpg" alt=""
-                                                    class="avatar-xxs rounded-circle" />
+                                                <img alt="" class="avatar-xxs rounded-circle"
+                                                     src="@/assets/images/users/avatar-7.jpg"/>
                                             </span>
                                             <span class="flex-grow-1 ms-2">
                                                 Michael Morris
@@ -1144,12 +1197,12 @@ export default {
                                 </li>
                                 <li>
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            id="nancy-martino">
+                                        <input id="nancy-martino" class="form-check-input me-3" type="checkbox"
+                                               value="">
                                         <label class="form-check-label d-flex align-items-center" for="nancy-martino">
                                             <span class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                                    class="avatar-xxs rounded-circle" />
+                                                <img alt="" class="avatar-xxs rounded-circle"
+                                                     src="@/assets/images/users/avatar-5.jpg"/>
                                             </span>
                                             <span class="flex-grow-1 ms-2">
                                                 Nancy Martino
@@ -1159,12 +1212,12 @@ export default {
                                 </li>
                                 <li>
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value=""
-                                            id="thomas-taylor">
+                                        <input id="thomas-taylor" class="form-check-input me-3" type="checkbox"
+                                               value="">
                                         <label class="form-check-label d-flex align-items-center" for="thomas-taylor">
                                             <span class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                                    class="avatar-xxs rounded-circle" />
+                                                <img alt="" class="avatar-xxs rounded-circle"
+                                                     src="@/assets/images/users/avatar-8.jpg"/>
                                             </span>
                                             <span class="flex-grow-1 ms-2">
                                                 Thomas Taylor
@@ -1174,11 +1227,11 @@ export default {
                                 </li>
                                 <li>
                                     <div class="form-check d-flex align-items-center">
-                                        <input class="form-check-input me-3" type="checkbox" value="" id="tonya-noble">
+                                        <input id="tonya-noble" class="form-check-input me-3" type="checkbox" value="">
                                         <label class="form-check-label d-flex align-items-center" for="tonya-noble">
                                             <span class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                                    class="avatar-xxs rounded-circle" />
+                                                <img alt="" class="avatar-xxs rounded-circle"
+                                                     src="@/assets/images/users/avatar-10.jpg"/>
                                             </span>
                                             <span class="flex-grow-1 ms-2">
                                                 Tonya Noble
@@ -1190,19 +1243,19 @@ export default {
                         </div>
                     </b-col>
                     <b-col lg="4">
-                        <label for="due-date" class="form-label">Due Date</label>
+                        <label class="form-label" for="due-date">Due Date</label>
 
-                        <flat-pickr v-model="date1" placeholder="Select date" class="form-control">
+                        <flat-pickr v-model="date1" class="form-control" placeholder="Select date">
                         </flat-pickr>
                     </b-col>
                     <b-col lg="4">
-                        <label for="categories" class="form-label">Tags</label>
-                        <input type="text" class="form-control" id="categories" placeholder="Enter tag">
+                        <label class="form-label" for="categories">Tags</label>
+                        <input id="categories" class="form-control" placeholder="Enter tag" type="text">
                     </b-col>
                     <b-col lg="4">
-                        <label for="tasks-progress" class="form-label">Tasks Progress</label>
-                        <input type="text" class="form-control" maxlength="3" id="tasks-progress"
-                            placeholder="Enter progress">
+                        <label class="form-label" for="tasks-progress">Tasks Progress</label>
+                        <input id="tasks-progress" class="form-control" maxlength="3" placeholder="Enter progress"
+                               type="text">
                     </b-col>
                     <div class="mt-4">
                         <div class="hstack gap-2 justify-content-end">
@@ -1214,18 +1267,18 @@ export default {
             </b-form>
         </b-modal>
 
-        <b-modal v-model="modalShow3" id="deleteTask" modal-class="zoomIn" hide-footer class="v-modal-custom" centered>
+        <b-modal id="deleteTask" v-model="modalShow3" centered class="v-modal-custom" hide-footer modal-class="zoomIn">
             <div class="mt-2 text-center">
-                <lottie class="avatar-xl" colors="primary:#f7b84b,secondary:#f06548" :options="defaultOptions"
-                    :height="100" :width="100" />
+                <lottie :height="100" :options="defaultOptions" :width="100"
+                        class="avatar-xl" colors="primary:#f7b84b,secondary:#f06548"/>
                 <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
                     <h4>Are you sure ?</h4>
                     <p class="text-muted mx-4 mb-0">Are you sure you want to remove this tasks ?</p>
                 </div>
             </div>
             <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
-                <b-button type="button" variant="light" class="w-sm" data-bs-dismiss="modal">Close</b-button>
-                <b-button type="button" variant="danger" class="w-sm" id="delete-record">Yes, Delete It!</b-button>
+                <b-button class="w-sm" data-bs-dismiss="modal" type="button" variant="light">Close</b-button>
+                <b-button id="delete-record" class="w-sm" type="button" variant="danger">Yes, Delete It!</b-button>
             </div>
         </b-modal>
 

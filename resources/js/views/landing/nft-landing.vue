@@ -1,14 +1,7 @@
 <script>
 import appConfig from "../../../app.config";
-import SwiperCore, {
-    Thumbs,
-    Navigation,
-    Pagination
-} from "swiper";
-import {
-    Swiper,
-    SwiperSlide
-} from "swiper/vue";
+import SwiperCore, {Navigation, Pagination, Thumbs} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/vue";
 import "swiper/swiper-bundle.css";
 // import {
 //     CountTo
@@ -30,10 +23,10 @@ export default {
                 text: "Pages",
                 href: "/",
             },
-            {
-                text: "Starter",
-                active: true,
-            },
+                {
+                    text: "Starter",
+                    active: true,
+                },
             ],
         };
     },
@@ -110,20 +103,20 @@ export default {
 
 <template>
     <div class="layout-wrapper landing">
-        <nav class="navbar navbar-expand-lg navbar-landing navbar-light fixed-top" id="navbar">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-landing navbar-light fixed-top">
             <b-container>
                 <b-link class="navbar-brand" href="/">
-                    <img src="@/assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark"
-                        height="17">
-                    <img src="@/assets/images/logo-light.png" class="card-logo card-logo-light" alt="logo light"
-                        height="17">
+                    <img alt="logo dark" class="card-logo card-logo-dark" height="17"
+                         src="@/assets/images/logo-dark.png">
+                    <img alt="logo light" class="card-logo card-logo-light" height="17"
+                         src="@/assets/images/logo-light.png">
                 </b-link>
-                <button class="navbar-toggler py-0 fs-20 text-body" type="button" v-b-toggle.navbarSupportedContent>
+                <button v-b-toggle.navbarSupportedContent class="navbar-toggler py-0 fs-20 text-body" type="button">
                     <i class="mdi mdi-menu"></i>
                 </button>
 
-                <b-collapse class="navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
+                <b-collapse id="navbarSupportedContent" class="navbar-collapse">
+                    <ul id="navbar-example" class="navbar-nav mx-auto mt-2 mt-lg-0">
                         <li class="nav-item">
                             <b-link class="nav-link active" href="#hero">Home</b-link>
                         </li>
@@ -142,7 +135,7 @@ export default {
                     </ul>
 
                     <div class="">
-                        <router-link to="/apps/nft-wallet" class="btn btn-success">Wallet Connect</router-link>
+                        <router-link class="btn btn-success" to="/apps/nft-wallet">Wallet Connect</router-link>
                     </div>
                 </b-collapse>
 
@@ -150,7 +143,7 @@ export default {
         </nav>
         <div class="bg-overlay bg-overlay-pattern"></div>
 
-        <section class="section nft-hero" id="hero">
+        <section id="hero" class="section nft-hero">
             <div class="bg-overlay"></div>
             <b-container>
                 <b-row class="justify-content-center">
@@ -164,10 +157,10 @@ export default {
                                 physical works of art be turned into NFTs?.</p>
 
                             <div class="hstack gap-2 justify-content-center">
-                                <router-link to="/apps/nft-create" class="btn btn-primary">Create Own <i
-                                        class="ri-arrow-right-line align-middle ms-1"></i></router-link>
-                                <router-link to="/apps/nft-explore" class="btn btn-danger">Explore Now <i
-                                        class="ri-arrow-right-line align-middle ms-1"></i></router-link>
+                                <router-link class="btn btn-primary" to="/apps/nft-create">Create Own <i
+                                    class="ri-arrow-right-line align-middle ms-1"></i></router-link>
+                                <router-link class="btn btn-danger" to="/apps/nft-explore">Explore Now <i
+                                    class="ri-arrow-right-line align-middle ms-1"></i></router-link>
                             </div>
                         </div>
                     </b-col>
@@ -175,7 +168,7 @@ export default {
             </b-container>
         </section>
 
-        <section class="section" id="wallet">
+        <section id="wallet" class="section">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
@@ -189,36 +182,36 @@ export default {
 
                 <b-row class="g-4">
                     <b-col lg="4">
-                        <b-card no-body class="text-center border shadow-none">
+                        <b-card class="text-center border shadow-none" no-body>
                             <b-card-body class="py-5 px-4">
-                                <img src="@/assets/images/nft/wallet/metamask.png" alt="" height="55" class="mb-3 pb-2">
+                                <img alt="" class="mb-3 pb-2" height="55" src="@/assets/images/nft/wallet/metamask.png">
                                 <h5>Metamask</h5>
                                 <p class="text-muted pb-1">MetaMask is a software cryptocurrency wallet used to
                                     interact with the Ethereum blockchain.</p>
-                                <b-link href="#!" class="btn btn-soft-info">Connect Wallet</b-link>
+                                <b-link class="btn btn-soft-info" href="#!">Connect Wallet</b-link>
                             </b-card-body>
                         </b-card>
                     </b-col>
                     <b-col lg="4">
-                        <b-card no-body class="text-center border shadow-none">
+                        <b-card class="text-center border shadow-none" no-body>
                             <b-card-body class="py-5 px-4">
-                                <img src="@/assets/images/nft/wallet/coinbase.png" alt="" height="55" class="mb-3 pb-2">
+                                <img alt="" class="mb-3 pb-2" height="55" src="@/assets/images/nft/wallet/coinbase.png">
                                 <h5>Coinbase Wallet</h5>
                                 <p class="text-muted pb-1">Coinbase Wallet is a software product that gives you
                                     access to a wide spectrum.</p>
-                                <b-link href="#!" class="btn btn-info">Change Wallet</b-link>
+                                <b-link class="btn btn-info" href="#!">Change Wallet</b-link>
                             </b-card-body>
                         </b-card>
                     </b-col>
 
                     <b-col lg="4">
-                        <b-card no-body class="text-center border shadow-none">
+                        <b-card class="text-center border shadow-none" no-body>
                             <b-card-body class="py-5 px-4">
-                                <img src="@/assets/images/nft/wallet/binance.png" alt="" height="55" class="mb-3 pb-2">
+                                <img alt="" class="mb-3 pb-2" height="55" src="@/assets/images/nft/wallet/binance.png">
                                 <h5>Binance</h5>
                                 <p class="text-muted pb-1">Binance offers a relatively secure, versatile way to
                                     invest in and trade cryptocurrencies.</p>
-                                <b-link href="#!" class="btn btn-soft-info">Connect Wallet</b-link>
+                                <b-link class="btn btn-soft-info" href="#!">Connect Wallet</b-link>
                             </b-card-body>
                         </b-card>
                     </b-col>
@@ -226,7 +219,7 @@ export default {
             </b-container>
         </section>
 
-        <section class="section bg-light" id="marketplace">
+        <section id="marketplace" class="section bg-light">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
@@ -236,53 +229,59 @@ export default {
                                 the same type, such as a collection of pictures from a collection of articles.</p>
                             <ul class="nav nav-pills filter-btns justify-content-center" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link fw-medium active" type="button" data-filter="all">All
-                                        Items</button>
+                                    <button class="nav-link fw-medium active" data-filter="all" type="button">All
+                                        Items
+                                    </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link fw-medium" type="button"
-                                        data-filter="artwork">Artwork</button>
+                                    <button class="nav-link fw-medium" data-filter="artwork"
+                                            type="button">Artwork
+                                    </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link fw-medium" type="button" data-filter="music">Music</button>
+                                    <button class="nav-link fw-medium" data-filter="music" type="button">Music</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link fw-medium" type="button" data-filter="games">Games</button>
+                                    <button class="nav-link fw-medium" data-filter="games" type="button">Games</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link fw-medium" type="button" data-filter="crypto-card">Crypto
-                                        Card</button>
+                                    <button class="nav-link fw-medium" data-filter="crypto-card" type="button">Crypto
+                                        Card
+                                    </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link fw-medium" type="button" data-filter="3d-style">3d
-                                        Style</button>
+                                    <button class="nav-link fw-medium" data-filter="3d-style" type="button">3d
+                                        Style
+                                    </button>
                                 </li>
                             </ul>
                         </div>
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col lg="4" class="product-item artwork crypto-card 3d-style">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item artwork crypto-card 3d-style" lg="4">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                                <button type="button" class="btn btn-icon active" data-bs-toggle="button"
-                                    aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                <button aria-pressed="true" class="btn btn-icon active" data-bs-toggle="button"
+                                        type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                             </div>
                             <div class="explore-place-bid-img">
-                                <img src="@/assets/images/nft/img-03.jpg" alt="" class="card-img-top explore-img" />
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-03.jpg"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
 
                                 <h5 class="mb-1">
                                     <router-link to="/apps/nft-item-detail">Creative Filtered
-                                        Portrait</router-link>
+                                        Portrait
+                                    </router-link>
                                 </h5>
                                 <p class="text-muted mb-0">Photography</p>
                             </b-card-body>
@@ -297,23 +296,24 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col lg="4" class="product-item music crypto-card games">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item music crypto-card games" lg="4">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                                <button type="button" class="btn btn-icon active" data-bs-toggle="button"
-                                    aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                <button aria-pressed="true" class="btn btn-icon active" data-bs-toggle="button"
+                                        type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                             </div>
                             <div class="explore-place-bid-img">
-                                <img src="@/assets/images/nft/img-02.jpg" alt="" class="card-img-top explore-img" />
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-02.jpg"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 23.63k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 23.63k </p>
                                 <h5 class="mb-1">
                                     <router-link to="/apps/nft-item-detail">The Chirstoper</router-link>
                                 </h5>
@@ -330,24 +330,25 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col lg="4" class="product-item artwork music games">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item artwork music games" lg="4">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                                <button type="button" class="btn btn-icon active" data-bs-toggle="button"
-                                    aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                <button aria-pressed="true" class="btn btn-icon active" data-bs-toggle="button"
+                                        type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                             </div>
                             <div class="explore-place-bid-img">
-                                <img src="https://img.themesbrand.com/velzon/images/img-4.gif" alt=""
-                                    class="card-img-top explore-img" />
+                                <img alt="" class="card-img-top explore-img"
+                                     src="https://img.themesbrand.com/velzon/images/img-4.gif"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 15.93k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 15.93k </p>
                                 <h5 class="mb-1">
                                     <router-link to="/apps/nft-item-detail">Evolved Reality</router-link>
                                 </h5>
@@ -364,23 +365,24 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col lg="4" class="product-item crypto-card 3d-style">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item crypto-card 3d-style" lg="4">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                                <button type="button" class="btn btn-icon active" data-bs-toggle="button"
-                                    aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                <button aria-pressed="true" class="btn btn-icon active" data-bs-toggle="button"
+                                        type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                             </div>
                             <div class="explore-place-bid-img">
-                                <img src="@/assets/images/nft/img-01.jpg" alt="" class="card-img-top explore-img" />
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-01.jpg"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 14.85k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 14.85k </p>
 
                                 <h5 class="mb-1">
                                     <router-link to="/apps/nft-item-detail">Abstract Face Painting</router-link>
@@ -398,23 +400,24 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col lg="4" class="product-item games music 3d-style">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item games music 3d-style" lg="4">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                                <button type="button" class="btn btn-icon active" data-bs-toggle="button"
-                                    aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                <button aria-pressed="true" class="btn btn-icon active" data-bs-toggle="button"
+                                        type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                             </div>
                             <div class="explore-place-bid-img">
-                                <img src="@/assets/images/nft/img-05.jpg" alt="" class="card-img-top explore-img" />
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-05.jpg"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 64.10k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 64.10k </p>
 
                                 <h5 class="mb-1">
                                     <router-link to="/apps/nft-item-detail">Long-tailed Macaque</router-link>
@@ -432,23 +435,24 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col lg="4" class="product-item artwork music crypto-card">
-                        <b-card no-body class="explore-box card-animate">
+                    <b-col class="product-item artwork music crypto-card" lg="4">
+                        <b-card class="explore-box card-animate" no-body>
                             <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                                <button type="button" class="btn btn-icon active" data-bs-toggle="button"
-                                    aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                <button aria-pressed="true" class="btn btn-icon active" data-bs-toggle="button"
+                                        type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                             </div>
                             <div class="explore-place-bid-img">
-                                <img src="@/assets/images/nft/img-06.jpg" alt="" class="card-img-top explore-img" />
+                                <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-06.jpg"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 36.42k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 36.42k </p>
 
                                 <h5 class="mb-1">
                                     <router-link to="/apps/nft-item-detail">Robotic Body Art</router-link>
@@ -487,48 +491,48 @@ export default {
                     <b-col lg="3">
                         <div class="b-card no-body shadow-none">
                             <b-card-body>
-                                <img src="@/assets/images/nft/wallet.png" alt="" class="avatar-sm">
+                                <img alt="" class="avatar-sm" src="@/assets/images/nft/wallet.png">
                                 <h5 class="mt-4">Set up your wallet</h5>
                                 <p class="text-muted fs-14">You have to choose whether to use a hot wallet a cold
                                     wallet.</p>
-                                <b-link href="#!" class="link-success fs-14">Read More <i
-                                        class="ri-arrow-right-line align-bottom"></i></b-link>
+                                <b-link class="link-success fs-14" href="#!">Read More <i
+                                    class="ri-arrow-right-line align-bottom"></i></b-link>
                             </b-card-body>
                         </div>
                     </b-col>
                     <b-col lg="3">
                         <div class="b-card no-body shadow-none">
                             <b-card-body>
-                                <img src="@/assets/images/nft/money.png" alt="" class="avatar-sm">
+                                <img alt="" class="avatar-sm" src="@/assets/images/nft/money.png">
                                 <h5 class="mt-4">Create your collection</h5>
                                 <p class="text-muted fs-14">Create a collection in Opensea and give it a proper art.
                                 </p>
-                                <b-link href="#!" class="link-success fs-14">Read More <i
-                                        class="ri-arrow-right-line align-bottom"></i></b-link>
+                                <b-link class="link-success fs-14" href="#!">Read More <i
+                                    class="ri-arrow-right-line align-bottom"></i></b-link>
                             </b-card-body>
                         </div>
                     </b-col>
                     <b-col lg="3">
                         <div class="b-card no-body shadow-none">
                             <b-card-body>
-                                <img src="@/assets/images/nft/add.png" alt="" class="avatar-sm">
+                                <img alt="" class="avatar-sm" src="@/assets/images/nft/add.png">
                                 <h5 class="mt-4">Add your NFT's</h5>
                                 <p class="text-muted fs-14">Go to your profile icon and top right corner creation
                                     page.</p>
-                                <b-link href="#!" class="link-success fs-14">Read More <i
-                                        class="ri-arrow-right-line align-bottom"></i></b-link>
+                                <b-link class="link-success fs-14" href="#!">Read More <i
+                                    class="ri-arrow-right-line align-bottom"></i></b-link>
                             </b-card-body>
                         </div>
                     </b-col>
                     <b-col lg="3">
                         <div class="b-card no-body shadow-none">
                             <b-card-body>
-                                <img src="@/assets/images/nft/sell.png" alt="" class="avatar-sm">
+                                <img alt="" class="avatar-sm" src="@/assets/images/nft/sell.png">
                                 <h5 class="mt-4">Sell Your NFT's</h5>
                                 <p class="text-muted fs-14">Create a collection in Opensea and give Add items and
                                     art.</p>
-                                <b-link href="#!" class="link-success fs-14">Read More <i
-                                        class="ri-arrow-right-line align-bottom"></i></b-link>
+                                <b-link class="link-success fs-14" href="#!">Read More <i
+                                    class="ri-arrow-right-line align-bottom"></i></b-link>
                             </b-card-body>
                         </div>
                     </b-col>
@@ -536,7 +540,7 @@ export default {
             </b-container>
         </section>
 
-        <section class="section bg-light" id="categories">
+        <section id="categories" class="section bg-light">
             <b-container fluid>
                 <b-row class="justify-content-center">
                     <b-col lg="5">
@@ -551,11 +555,7 @@ export default {
                 <b-row>
                     <b-col lg="12">
                         <div class="swiper mySwiper pb-4">
-                            <swiper class="swiper responsive-swiper rounded gallery-light pb-4" :loop="true"
-                                :slidesPerView="1" :spaceBetween="10" :pagination="{
-                                    el: '.swiper-pagination',
-                                    clickable: true,
-                                }" :breakpoints="{
+                            <swiper :breakpoints="{
     640: {
         slidesPerView: 2,
         spaceBetween: 20,
@@ -568,29 +568,35 @@ export default {
         slidesPerView: 4,
         spaceBetween: 50,
     },
-}">
+}" :loop="true"
+                                    :pagination="{
+                                    el: '.swiper-pagination',
+                                    clickable: true,
+                                }" :slidesPerView="1" :spaceBetween="10" class="swiper responsive-swiper rounded gallery-light pb-4">
                                 <swiper-slide>
                                     <b-card no-body>
                                         <b-card-body>
                                             <b-row class="g-1 mb-3">
                                                 <b-col cols="6">
-                                                    <img src="@/assets/images/nft/img-06.jpg" alt=""
-                                                        class="img-fluid rounded">
-                                                    <img src="https://img.themesbrand.com/velzon/images/img-2.gif"
-                                                        alt="" class="img-fluid rounded mt-1">
+                                                    <img alt="" class="img-fluid rounded"
+                                                         src="@/assets/images/nft/img-06.jpg">
+                                                    <img alt=""
+                                                         class="img-fluid rounded mt-1" src="https://img.themesbrand.com/velzon/images/img-2.gif">
                                                 </b-col>
                                                 <b-col cols="6">
-                                                    <img src="https://img.themesbrand.com/velzon/images/img-5.gif"
-                                                        alt="" class="img-fluid rounded mb-1">
-                                                    <img src="@/assets/images/nft/img-03.jpg" alt=""
-                                                        class="img-fluid rounded">
+                                                    <img alt=""
+                                                         class="img-fluid rounded mb-1" src="https://img.themesbrand.com/velzon/images/img-5.gif">
+                                                    <img alt="" class="img-fluid rounded"
+                                                         src="@/assets/images/nft/img-03.jpg">
                                                 </b-col>
                                             </b-row>
-                                            <b-link href="#!" class="float-end"> View All <i
-                                                    class="ri-arrow-right-line align-bottom"></i></b-link>
+                                            <b-link class="float-end" href="#!"> View All <i
+                                                class="ri-arrow-right-line align-bottom"></i></b-link>
                                             <h5 class="mb-0 fs-16">
-                                                <b-link href="#!">Artwork <b-badge variant="soft-success"
-                                                        class="badge-soft-success">206</b-badge>
+                                                <b-link href="#!">Artwork
+                                                    <b-badge class="badge-soft-success"
+                                                             variant="soft-success">206
+                                                    </b-badge>
                                                 </b-link>
                                             </h5>
                                         </b-card-body>
@@ -601,23 +607,25 @@ export default {
                                         <b-card-body>
                                             <b-row class="g-1 mb-3">
                                                 <b-col cols="6">
-                                                    <img src="@/assets/images/nft/img-05.jpg" alt=""
-                                                        class="img-fluid rounded">
-                                                    <img src="https://img.themesbrand.com/velzon/images/img-1.gif"
-                                                        alt="" class="img-fluid rounded mt-1">
+                                                    <img alt="" class="img-fluid rounded"
+                                                         src="@/assets/images/nft/img-05.jpg">
+                                                    <img alt=""
+                                                         class="img-fluid rounded mt-1" src="https://img.themesbrand.com/velzon/images/img-1.gif">
                                                 </b-col>
                                                 <b-col cols="6">
-                                                    <img src="https://img.themesbrand.com/velzon/images/img-4.gif"
-                                                        alt="" class="img-fluid rounded mb-1">
-                                                    <img src="@/assets/images/nft/img-04.jpg" alt=""
-                                                        class="img-fluid rounded">
+                                                    <img alt=""
+                                                         class="img-fluid rounded mb-1" src="https://img.themesbrand.com/velzon/images/img-4.gif">
+                                                    <img alt="" class="img-fluid rounded"
+                                                         src="@/assets/images/nft/img-04.jpg">
                                                 </b-col>
                                             </b-row>
-                                            <b-link href="#!" class="float-end"> View All <i
-                                                    class="ri-arrow-right-line align-bottom"></i></b-link>
+                                            <b-link class="float-end" href="#!"> View All <i
+                                                class="ri-arrow-right-line align-bottom"></i></b-link>
                                             <h5 class="mb-0 fs-16">
-                                                <b-link href="#!">Crypto Card <b-badge variant="soft-success"
-                                                        class="badge-soft-success">743</b-badge>
+                                                <b-link href="#!">Crypto Card
+                                                    <b-badge class="badge-soft-success"
+                                                             variant="soft-success">743
+                                                    </b-badge>
                                                 </b-link>
                                             </h5>
                                         </b-card-body>
@@ -629,23 +637,25 @@ export default {
                                             <b-card-body>
                                                 <b-row class="g-1 mb-3">
                                                     <b-col cols="6">
-                                                        <img src="@/assets/images/nft/img-02.jpg" alt=""
-                                                            class="img-fluid rounded">
-                                                        <img src="https://img.themesbrand.com/velzon/images/img-3.gif"
-                                                            alt="" class="img-fluid rounded mt-1">
+                                                        <img alt="" class="img-fluid rounded"
+                                                             src="@/assets/images/nft/img-02.jpg">
+                                                        <img alt=""
+                                                             class="img-fluid rounded mt-1" src="https://img.themesbrand.com/velzon/images/img-3.gif">
                                                     </b-col>
                                                     <b-col cols="6">
-                                                        <img src="https://img.themesbrand.com/velzon/images/img-1.gif"
-                                                            alt="" class="img-fluid rounded mb-1">
-                                                        <img src="@/assets/images/nft/img-01.jpg" alt=""
-                                                            class="img-fluid rounded">
+                                                        <img alt=""
+                                                             class="img-fluid rounded mb-1" src="https://img.themesbrand.com/velzon/images/img-1.gif">
+                                                        <img alt="" class="img-fluid rounded"
+                                                             src="@/assets/images/nft/img-01.jpg">
                                                     </b-col>
                                                 </b-row>
-                                                <b-link href="#!" class="float-end"> View All <i
-                                                        class="ri-arrow-right-line align-bottom"></i></b-link>
+                                                <b-link class="float-end" href="#!"> View All <i
+                                                    class="ri-arrow-right-line align-bottom"></i></b-link>
                                                 <h5 class="mb-0 fs-16">
-                                                    <b-link href="#!">Music <b-badge variant="soft-success"
-                                                            class="badge-soft-success">679</b-badge>
+                                                    <b-link href="#!">Music
+                                                        <b-badge class="badge-soft-success"
+                                                                 variant="soft-success">679
+                                                        </b-badge>
                                                     </b-link>
                                                 </h5>
                                             </b-card-body>
@@ -657,23 +667,25 @@ export default {
                                         <b-card-body>
                                             <b-row class="g-1 mb-3">
                                                 <b-col cols="6">
-                                                    <img src="@/assets/images/nft/img-03.jpg" alt=""
-                                                        class="img-fluid rounded">
-                                                    <img src="https://img.themesbrand.com/velzon/images/img-5.gif"
-                                                        alt="" class="img-fluid rounded mt-1">
+                                                    <img alt="" class="img-fluid rounded"
+                                                         src="@/assets/images/nft/img-03.jpg">
+                                                    <img alt=""
+                                                         class="img-fluid rounded mt-1" src="https://img.themesbrand.com/velzon/images/img-5.gif">
                                                 </b-col>
                                                 <b-col cols="6">
-                                                    <img src="https://img.themesbrand.com/velzon/images/img-2.gif"
-                                                        alt="" class="img-fluid rounded mb-1">
-                                                    <img src="@/assets/images/nft/img-05.jpg" alt=""
-                                                        class="img-fluid rounded">
+                                                    <img alt=""
+                                                         class="img-fluid rounded mb-1" src="https://img.themesbrand.com/velzon/images/img-2.gif">
+                                                    <img alt="" class="img-fluid rounded"
+                                                         src="@/assets/images/nft/img-05.jpg">
                                                 </b-col>
                                             </b-row>
-                                            <b-link href="#!" class="float-end"> View All <i
-                                                    class="ri-arrow-right-line align-bottom"></i></b-link>
+                                            <b-link class="float-end" href="#!"> View All <i
+                                                class="ri-arrow-right-line align-bottom"></i></b-link>
                                             <h5 class="mb-0 fs-16">
-                                                <b-link href="#!">Games <b-badge variant="soft-success"
-                                                        class="badge-soft-success">341</b-badge>
+                                                <b-link href="#!">Games
+                                                    <b-badge class="badge-soft-success"
+                                                             variant="soft-success">341
+                                                    </b-badge>
                                                 </b-link>
                                             </h5>
                                         </b-card-body>
@@ -684,23 +696,25 @@ export default {
                                         <b-card-body>
                                             <b-row class="g-1 mb-3">
                                                 <b-col cols="6">
-                                                    <img src="@/assets/images/nft/img-02.jpg" alt=""
-                                                        class="img-fluid rounded">
-                                                    <img src="https://img.themesbrand.com/velzon/images/img-3.gif"
-                                                        alt="" class="img-fluid rounded mt-1">
+                                                    <img alt="" class="img-fluid rounded"
+                                                         src="@/assets/images/nft/img-02.jpg">
+                                                    <img alt=""
+                                                         class="img-fluid rounded mt-1" src="https://img.themesbrand.com/velzon/images/img-3.gif">
                                                 </b-col>
                                                 <b-col cols="6">
-                                                    <img src="https://img.themesbrand.com/velzon/images/img-1.gif"
-                                                        alt="" class="img-fluid rounded mb-1">
-                                                    <img src="@/assets/images/nft/img-01.jpg" alt=""
-                                                        class="img-fluid rounded">
+                                                    <img alt=""
+                                                         class="img-fluid rounded mb-1" src="https://img.themesbrand.com/velzon/images/img-1.gif">
+                                                    <img alt="" class="img-fluid rounded"
+                                                         src="@/assets/images/nft/img-01.jpg">
                                                 </b-col>
                                             </b-row>
-                                            <b-link href="#!" class="float-end"> View All <i
-                                                    class="ri-arrow-right-line align-bottom"></i></b-link>
+                                            <b-link class="float-end" href="#!"> View All <i
+                                                class="ri-arrow-right-line align-bottom"></i></b-link>
                                             <h5 class="mb-0 fs-16">
-                                                <b-link href="#!">Photography <b-badge variant="soft-success"
-                                                        class="badge-soft-success">1452</b-badge>
+                                                <b-link href="#!">Photography
+                                                    <b-badge class="badge-soft-success"
+                                                             variant="soft-success">1452
+                                                    </b-badge>
                                                 </b-link>
                                             </h5>
                                         </b-card-body>
@@ -720,18 +734,18 @@ export default {
                     <b-col lg="12">
                         <div class="d-flex align-items-center mb-5">
                             <h2 class="mb-0 fw-semibold lh-base flex-grow-1">Discover Items</h2>
-                            <router-link to="/apps/nft-explore" class="btn btn-primary">View All <i
-                                    class="ri-arrow-right-line align-bottom"></i></router-link>
+                            <router-link class="btn btn-primary" to="/apps/nft-explore">View All <i
+                                class="ri-arrow-right-line align-bottom"></i></router-link>
                         </div>
                     </b-col>
                 </b-row>
                 <b-row>
                     <b-col lg="4">
-                        <b-card no-body class="explore-box card-animate border">
+                        <b-card class="explore-box card-animate border" no-body>
                             <b-card-body>
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="@/assets/images/users/avatar-2.jpg" alt=""
-                                        class="avatar-xs rounded-circle">
+                                    <img alt="" class="avatar-xs rounded-circle"
+                                         src="@/assets/images/users/avatar-2.jpg">
                                     <div class="ms-2 flex-grow-1">
                                         <b-link href="#!">
                                             <h6 class="mb-0 fs-15">Nancy Martino</h6>
@@ -739,37 +753,39 @@ export default {
                                         <p class="mb-0 text-muted fs-13">Owners</p>
                                     </div>
                                     <div class="bookmark-icon">
-                                        <button type="button" class="btn btn-icon active" data-bs-toggle="button"
-                                            aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                        <button aria-pressed="true" class="btn btn-icon active" data-bs-toggle="button"
+                                                type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                                     </div>
                                 </div>
                                 <div class="explore-place-bid-img overflow-hidden rounded">
-                                    <img src="@/assets/images/nft/img-05.jpg" alt="" class="explore-img w-100">
+                                    <img alt="" class="explore-img w-100" src="@/assets/images/nft/img-05.jpg">
                                     <div class="bg-overlay"></div>
                                     <div class="place-bid-btn">
-                                        <b-link href="#!" class="btn btn-success"><i
-                                                class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                        <b-link class="btn btn-success" href="#!"><i
+                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                        </b-link>
                                     </div>
                                 </div>
                                 <div class="mt-3">
                                     <p class="fw-medium mb-0 float-end"><i
-                                            class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
+                                        class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
                                     <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 97.8 ETH </h5>
 
                                     <h6 class="fs-16 mb-0">
                                         <router-link to="/apps/nft-item-detail">Patterns arts &amp;
-                                            culture</router-link>
+                                            culture
+                                        </router-link>
                                     </h6>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
                     <b-col lg="4">
-                        <b-card no-body class="explore-box card-animate border">
+                        <b-card class="explore-box card-animate border" no-body>
                             <b-card-body>
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="@/assets/images/users/avatar-9.jpg" alt=""
-                                        class="avatar-xs rounded-circle">
+                                    <img alt="" class="avatar-xs rounded-circle"
+                                         src="@/assets/images/users/avatar-9.jpg">
                                     <div class="ms-2 flex-grow-1">
                                         <b-link href="#!">
                                             <h6 class="mb-0 fs-15">Henry Baird</h6>
@@ -777,21 +793,22 @@ export default {
                                         <p class="mb-0 text-muted fs-13">Creators</p>
                                     </div>
                                     <div class="bookmark-icon">
-                                        <button type="button" class="btn btn-icon" data-bs-toggle="button"
-                                            aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                        <button aria-pressed="true" class="btn btn-icon" data-bs-toggle="button"
+                                                type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                                     </div>
                                 </div>
                                 <div class="explore-place-bid-img overflow-hidden rounded">
-                                    <img src="@/assets/images/nft/img-03.jpg" alt="" class="explore-img w-100">
+                                    <img alt="" class="explore-img w-100" src="@/assets/images/nft/img-03.jpg">
                                     <div class="bg-overlay"></div>
                                     <div class="place-bid-btn">
-                                        <b-link href="#!" class="btn btn-success"><i
-                                                class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                        <b-link class="btn btn-success" href="#!"><i
+                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                        </b-link>
                                     </div>
                                 </div>
                                 <div class="mt-3">
                                     <p class="fw-medium mb-0 float-end"><i
-                                            class="mdi mdi-heart text-danger align-middle"></i> 31.64k </p>
+                                        class="mdi mdi-heart text-danger align-middle"></i> 31.64k </p>
                                     <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 475.23 ETH </h5>
 
                                     <h6 class="fs-16 mb-0">
@@ -802,11 +819,11 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="4">
-                        <b-card no-body class="explore-box card-animate border">
+                        <b-card class="explore-box card-animate border" no-body>
                             <b-card-body>
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                        class="avatar-xs rounded-circle">
+                                    <img alt="" class="avatar-xs rounded-circle"
+                                         src="@/assets/images/users/avatar-10.jpg">
                                     <div class="ms-2 flex-grow-1">
                                         <b-link href="#!">
                                             <h6 class="mb-0 fs-15">Diana Kohler</h6>
@@ -814,27 +831,29 @@ export default {
                                         <p class="mb-0 text-muted fs-13">Owners</p>
                                     </div>
                                     <div class="bookmark-icon">
-                                        <button type="button" class="btn btn-icon active" data-bs-toggle="button"
-                                            aria-pressed="true"><i class="mdi mdi-cards-heart fs-16"></i></button>
+                                        <button aria-pressed="true" class="btn btn-icon active" data-bs-toggle="button"
+                                                type="button"><i class="mdi mdi-cards-heart fs-16"></i></button>
                                     </div>
                                 </div>
                                 <div class="explore-place-bid-img overflow-hidden rounded">
-                                    <img src="https://img.themesbrand.com/velzon/images/img-1.gif" alt=""
-                                        class="img-fluid explore-img">
+                                    <img alt="" class="img-fluid explore-img"
+                                         src="https://img.themesbrand.com/velzon/images/img-1.gif">
                                     <div class="bg-overlay"></div>
                                     <div class="place-bid-btn">
-                                        <b-link href="#!" class="btn btn-success"><i
-                                                class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                        <b-link class="btn btn-success" href="#!"><i
+                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                        </b-link>
                                     </div>
                                 </div>
                                 <div class="mt-3">
                                     <p class="fw-medium mb-0 float-end"><i
-                                            class="mdi mdi-heart text-danger align-middle"></i> 8.34k </p>
+                                        class="mdi mdi-heart text-danger align-middle"></i> 8.34k </p>
                                     <h5 class="text-success"><i class="mdi mdi-ethereum"></i> 701.38 ETH </h5>
 
                                     <h6 class="fs-16 mb-0">
                                         <router-link to="/apps/nft-item-detail">Long-tailed
-                                            macaque</router-link>
+                                            macaque
+                                        </router-link>
                                     </h6>
                                 </div>
                             </b-card-body>
@@ -844,7 +863,7 @@ export default {
             </b-container>
         </section>
 
-        <section class="section bg-light" id="creators">
+        <section id="creators" class="section bg-light">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
@@ -856,13 +875,13 @@ export default {
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col xl="4" md="6">
+                    <b-col md="6" xl="4">
                         <b-card no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/nft/img-01.jpg" alt=""
-                                            class="avatar-sm object-cover rounded" />
+                                        <img alt="" class="avatar-sm object-cover rounded"
+                                             src="@/assets/images/nft/img-01.jpg"/>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
                                         <b-link href="pages-profile">
@@ -872,10 +891,10 @@ export default {
                                             4,754 ETH</p>
                                     </div>
                                     <div>
-                                        <b-dropdown variant="ghost-primary" right toggle-class="arrow-none btn-icon"
-                                            class="float-end" no-caret>
+                                        <b-dropdown class="float-end" no-caret right
+                                                    toggle-class="arrow-none btn-icon" variant="ghost-primary">
                                             <template #button-content><i
-                                                    class="ri-more-fill align-middle fs-16"></i></template>
+                                                class="ri-more-fill align-middle fs-16"></i></template>
                                             <b-dropdown-item href="#">Share</b-dropdown-item>
                                             <b-dropdown-item href="#">Report</b-dropdown-item>
                                         </b-dropdown>
@@ -884,13 +903,13 @@ export default {
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xl="4" md="6">
+                    <b-col md="6" xl="4">
                         <b-card no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                            class="avatar-sm object-cover rounded">
+                                        <img alt="" class="avatar-sm object-cover rounded"
+                                             src="@/assets/images/users/avatar-5.jpg">
                                     </div>
                                     <div class="ms-3 flex-grow-1">
                                         <b-link href="pages-profile">
@@ -900,10 +919,10 @@ export default {
                                             81,369 ETH</p>
                                     </div>
                                     <div>
-                                        <b-dropdown variant="ghost-primary" right toggle-class="arrow-none btn-icon"
-                                            class="float-end" no-caret>
+                                        <b-dropdown class="float-end" no-caret right
+                                                    toggle-class="arrow-none btn-icon" variant="ghost-primary">
                                             <template #button-content><i
-                                                    class="ri-more-fill align-middle fs-16"></i></template>
+                                                class="ri-more-fill align-middle fs-16"></i></template>
                                             <b-dropdown-item href="#">Share</b-dropdown-item>
                                             <b-dropdown-item href="#">Report</b-dropdown-item>
                                         </b-dropdown>
@@ -912,13 +931,13 @@ export default {
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xl="4" md="6">
+                    <b-col md="6" xl="4">
                         <b-card no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/nft/img-06.jpg" alt=""
-                                            class="avatar-sm object-cover rounded">
+                                        <img alt="" class="avatar-sm object-cover rounded"
+                                             src="@/assets/images/nft/img-06.jpg">
                                     </div>
                                     <div class="ms-3 flex-grow-1">
                                         <b-link href="pages-profile">
@@ -928,10 +947,10 @@ export default {
                                             13,156 ETH</p>
                                     </div>
                                     <div>
-                                        <b-dropdown variant="ghost-primary" right toggle-class="arrow-none btn-icon"
-                                            class="float-end" no-caret>
+                                        <b-dropdown class="float-end" no-caret right
+                                                    toggle-class="arrow-none btn-icon" variant="ghost-primary">
                                             <template #button-content><i
-                                                    class="ri-more-fill align-middle fs-16"></i></template>
+                                                class="ri-more-fill align-middle fs-16"></i></template>
                                             <b-dropdown-item href="#">Share</b-dropdown-item>
                                             <b-dropdown-item href="#">Report</b-dropdown-item>
                                         </b-dropdown>
@@ -940,13 +959,13 @@ export default {
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xl="4" md="6">
+                    <b-col md="6" xl="4">
                         <b-card no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="https://img.themesbrand.com/velzon/images/img-5.gif" alt=""
-                                            class="avatar-sm object-cover rounded">
+                                        <img alt="" class="avatar-sm object-cover rounded"
+                                             src="https://img.themesbrand.com/velzon/images/img-5.gif">
                                     </div>
                                     <div class="ms-3 flex-grow-1">
                                         <b-link href="pages-profile">
@@ -956,10 +975,10 @@ export default {
                                             34,754 ETH</p>
                                     </div>
                                     <div>
-                                        <b-dropdown variant="ghost-primary" right toggle-class="arrow-none btn-icon"
-                                            class="float-end" no-caret>
+                                        <b-dropdown class="float-end" no-caret right
+                                                    toggle-class="arrow-none btn-icon" variant="ghost-primary">
                                             <template #button-content><i
-                                                    class="ri-more-fill align-middle fs-16"></i></template>
+                                                class="ri-more-fill align-middle fs-16"></i></template>
                                             <b-dropdown-item href="#">Share</b-dropdown-item>
                                             <b-dropdown-item href="#">Report</b-dropdown-item>
                                         </b-dropdown>
@@ -968,13 +987,13 @@ export default {
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xl="4" md="6">
+                    <b-col md="6" xl="4">
                         <b-card no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                            class="avatar-sm object-cover rounded">
+                                        <img alt="" class="avatar-sm object-cover rounded"
+                                             src="@/assets/images/users/avatar-8.jpg">
                                     </div>
                                     <div class="ms-3 flex-grow-1">
                                         <b-link href="pages-profile">
@@ -984,10 +1003,10 @@ export default {
                                             13,841 ETH</p>
                                     </div>
                                     <div>
-                                        <b-dropdown variant="ghost-primary" right toggle-class="arrow-none btn-icon"
-                                            class="float-end" no-caret>
+                                        <b-dropdown class="float-end" no-caret right
+                                                    toggle-class="arrow-none btn-icon" variant="ghost-primary">
                                             <template #button-content><i
-                                                    class="ri-more-fill align-middle fs-16"></i></template>
+                                                class="ri-more-fill align-middle fs-16"></i></template>
                                             <b-dropdown-item href="#">Share</b-dropdown-item>
                                             <b-dropdown-item href="#">Report</b-dropdown-item>
                                         </b-dropdown>
@@ -996,13 +1015,13 @@ export default {
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xl="4" md="6">
+                    <b-col md="6" xl="4">
                         <b-card no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/nft/img-02.jpg" alt=""
-                                            class="avatar-sm object-cover rounded">
+                                        <img alt="" class="avatar-sm object-cover rounded"
+                                             src="@/assets/images/nft/img-02.jpg">
                                     </div>
                                     <div class="ms-3 flex-grow-1">
                                         <b-link href="pages-profile">
@@ -1012,10 +1031,10 @@ export default {
                                             63,710 ETH</p>
                                     </div>
                                     <div>
-                                        <b-dropdown variant="ghost-primary" right toggle-class="arrow-none btn-icon"
-                                            class="float-end" no-caret>
+                                        <b-dropdown class="float-end" no-caret right
+                                                    toggle-class="arrow-none btn-icon" variant="ghost-primary">
                                             <template #button-content><i
-                                                    class="ri-more-fill align-middle fs-16"></i></template>
+                                                class="ri-more-fill align-middle fs-16"></i></template>
                                             <b-dropdown-item href="#">Share</b-dropdown-item>
                                             <b-dropdown-item href="#">Report</b-dropdown-item>
                                         </b-dropdown>
@@ -1040,9 +1059,9 @@ export default {
 
                     <b-col sm="auto">
                         <div>
-                            <router-link to="/apps/nft-create" class="btn bg-gradient btn-danger">Create NFT
+                            <router-link class="btn bg-gradient btn-danger" to="/apps/nft-create">Create NFT
                             </router-link>
-                            <router-link to="/apps/nft-explore" class="btn bg-gradient btn-info">Discover More
+                            <router-link class="btn bg-gradient btn-info" to="/apps/nft-explore">Discover More
                             </router-link>
                         </div>
                     </b-col>
@@ -1055,10 +1074,10 @@ export default {
         <footer class="custom-footer bg-dark py-5 position-relative">
             <b-container>
                 <b-row>
-                    <b-col lg="4" class="mt-4">
+                    <b-col class="mt-4" lg="4">
                         <div>
                             <div>
-                                <img src="@/assets/images/logo-light.png" alt="logo light" height="17">
+                                <img alt="logo light" height="17" src="@/assets/images/logo-light.png">
                             </div>
                             <div class="mt-4 fs-13">
                                 <p>Premium Multipurpose Admin & Dashboard Template</p>
@@ -1069,9 +1088,9 @@ export default {
                         </div>
                     </b-col>
 
-                    <b-col lg="7" class="ms-lg-auto">
+                    <b-col class="ms-lg-auto" lg="7">
                         <b-row>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">Company</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1090,7 +1109,7 @@ export default {
                                     </ul>
                                 </div>
                             </b-col>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">Apps Pages</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1112,7 +1131,7 @@ export default {
                                     </ul>
                                 </div>
                             </b-col>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">Support</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1143,35 +1162,35 @@ export default {
                         <div class="text-sm-end mt-3 mt-sm-0">
                             <ul class="list-inline mb-0 footer-social-link">
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-facebook-fill"></i>
                                         </div>
                                     </b-link>
                                 </li>
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-github-fill"></i>
                                         </div>
                                     </b-link>
                                 </li>
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-linkedin-fill"></i>
                                         </div>
                                     </b-link>
                                 </li>
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-google-fill"></i>
                                         </div>
                                     </b-link>
                                 </li>
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-dribbble-line"></i>
                                         </div>
@@ -1183,7 +1202,7 @@ export default {
                 </b-row>
             </b-container>
         </footer>
-        <b-button variant="info" @click="topFunction" class="btn-icon" id="back-to-top">
+        <b-button id="back-to-top" class="btn-icon" variant="info" @click="topFunction">
             <i class="ri-arrow-up-line"></i>
         </b-button>
     </div>

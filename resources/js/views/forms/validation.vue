@@ -6,7 +6,7 @@ import appConfig from "../../../app.config";
 export default {
     page: {
         title: "Validation",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -35,23 +35,23 @@ export default {
                 const preview = card.querySelector(".live-preview");
                 const code = card.querySelector(".code-view");
                 if (check.checked) {
-                    // do this                                     
+                    // do this
                     preview.classList.add("d-none");
                     code.classList.remove("d-none");
                 } else {
-                    // do that                       
+                    // do that
                     preview.classList.remove("d-none");
                     code.classList.add("d-none");
                 }
             });
         });
     },
-};                                     
-</script>                              
+};
+</script>
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -59,9 +59,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Browser defaults</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="FormValidationDefault" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="FormValidationDefault">
+                                <label class="form-label text-muted" for="FormValidationDefault">Show Code</label>
+                                <input id="FormValidationDefault" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -76,49 +76,49 @@ export default {
                         <div class="live-preview">
                             <form class="row g-3">
                                 <b-col md="4">
-                                    <label for="validationDefault01" class="form-label">First name</label>
-                                    <input type="text" class="form-control" id="validationDefault01" value="Mark"
-                                        required>
+                                    <label class="form-label" for="validationDefault01">First name</label>
+                                    <input id="validationDefault01" class="form-control" required type="text"
+                                           value="Mark">
                                 </b-col>
                                 <b-col md="4">
-                                    <label for="validationDefault02" class="form-label">Last name</label>
-                                    <input type="text" class="form-control" id="validationDefault02" value="Otto"
-                                        required>
+                                    <label class="form-label" for="validationDefault02">Last name</label>
+                                    <input id="validationDefault02" class="form-control" required type="text"
+                                           value="Otto">
                                 </b-col>
                                 <b-col md="4">
-                                    <label for="validationDefaultUsername" class="form-label">Username</label>
+                                    <label class="form-label" for="validationDefaultUsername">Username</label>
                                     <div class="input-group">
-                                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                                        <input type="text" class="form-control" id="validationDefaultUsername"
-                                            aria-describedby="inputGroupPrepend2" required>
+                                        <span id="inputGroupPrepend2" class="input-group-text">@</span>
+                                        <input id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" class="form-control"
+                                               required type="text">
                                     </div>
                                 </b-col>
                                 <b-col md="6">
-                                    <label for="validationDefault03" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="validationDefault03" required>
+                                    <label class="form-label" for="validationDefault03">City</label>
+                                    <input id="validationDefault03" class="form-control" required type="text">
                                 </b-col>
                                 <b-col md="3">
-                                    <label for="validationDefault04" class="form-label">State</label>
-                                    <select class="form-select" id="validationDefault04" required>
-                                        <option selected disabled value="">Choose...</option>
+                                    <label class="form-label" for="validationDefault04">State</label>
+                                    <select id="validationDefault04" class="form-select" required>
+                                        <option disabled selected value="">Choose...</option>
                                         <option>...</option>
                                     </select>
                                 </b-col>
                                 <b-col md="3">
-                                    <label for="validationDefault05" class="form-label">Zip</label>
-                                    <input type="text" class="form-control" id="validationDefault05" required>
+                                    <label class="form-label" for="validationDefault05">Zip</label>
+                                    <input id="validationDefault05" class="form-control" required type="text">
                                 </b-col>
                                 <b-col cols="12">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
-                                            required>
+                                        <input id="invalidCheck2" class="form-check-input" required type="checkbox"
+                                               value="">
                                         <label class="form-check-label" for="invalidCheck2">
                                             Agree to terms and conditions
                                         </label>
                                     </div>
                                 </b-col>
                                 <b-col cols="12">
-                                    <b-button variant="primary" type="submit">Submit form</b-button>
+                                    <b-button type="submit" variant="primary">Submit form</b-button>
                                 </b-col>
                             </form>
                         </div>
@@ -184,8 +184,8 @@ Agree to terms and conditions
                         <b-card-title class="mb-0 flex-grow-1">Custom Styles</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="FormVaidationCustom" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="FormVaidationCustom">
+                                <label class="form-label text-muted" for="FormVaidationCustom">Show Code</label>
+                                <input id="FormVaidationCustom" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -202,43 +202,43 @@ Agree to terms and conditions
                         <div class="live-preview">
                             <form class="row g-3 needs-validation" novalidate>
                                 <b-col md="4">
-                                    <label for="validationCustom01" class="form-label">First name</label>
-                                    <input type="text" class="form-control" id="validationCustom01" value="Mark"
-                                        required>
+                                    <label class="form-label" for="validationCustom01">First name</label>
+                                    <input id="validationCustom01" class="form-control" required type="text"
+                                           value="Mark">
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                 </b-col>
                                 <b-col md="4">
-                                    <label for="validationCustom02" class="form-label">Last name</label>
-                                    <input type="text" class="form-control" id="validationCustom02" value="Otto"
-                                        required>
+                                    <label class="form-label" for="validationCustom02">Last name</label>
+                                    <input id="validationCustom02" class="form-control" required type="text"
+                                           value="Otto">
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                 </b-col>
                                 <b-col md="4">
-                                    <label for="validationCustomUsername" class="form-label">Username</label>
+                                    <label class="form-label" for="validationCustomUsername">Username</label>
                                     <div class="input-group has-validation">
-                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                        <input type="text" class="form-control" id="validationCustomUsername"
-                                            aria-describedby="inputGroupPrepend" required>
+                                        <span id="inputGroupPrepend" class="input-group-text">@</span>
+                                        <input id="validationCustomUsername" aria-describedby="inputGroupPrepend" class="form-control"
+                                               required type="text">
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
                                     </div>
                                 </b-col>
                                 <b-col md="6">
-                                    <label for="validationCustom03" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="validationCustom03" required>
+                                    <label class="form-label" for="validationCustom03">City</label>
+                                    <input id="validationCustom03" class="form-control" required type="text">
                                     <div class="invalid-feedback">
                                         Please provide a valid city.
                                     </div>
                                 </b-col>
                                 <b-col md="3">
-                                    <label for="validationCustom04" class="form-label">State</label>
-                                    <select class="form-select" id="validationCustom04" required>
-                                        <option selected disabled value="">Choose...</option>
+                                    <label class="form-label" for="validationCustom04">State</label>
+                                    <select id="validationCustom04" class="form-select" required>
+                                        <option disabled selected value="">Choose...</option>
                                         <option>...</option>
                                     </select>
                                     <div class="invalid-feedback">
@@ -246,16 +246,16 @@ Agree to terms and conditions
                                     </div>
                                 </b-col>
                                 <b-col md="3">
-                                    <label for="validationCustom05" class="form-label">Zip</label>
-                                    <input type="text" class="form-control" id="validationCustom05" required>
+                                    <label class="form-label" for="validationCustom05">Zip</label>
+                                    <input id="validationCustom05" class="form-control" required type="text">
                                     <div class="invalid-feedback">
                                         Please provide a valid zip.
                                     </div>
                                 </b-col>
                                 <b-col cols="12">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
-                                            required>
+                                        <input id="invalidCheck" class="form-check-input" required type="checkbox"
+                                               value="">
                                         <label class="form-check-label" for="invalidCheck">
                                             Agree to terms and conditions
                                         </label>
@@ -265,7 +265,7 @@ Agree to terms and conditions
                                     </div>
                                 </b-col>
                                 <b-col cols="12">
-                                    <b-button variant="primary" @click.prevent type="submit">Submit formaa</b-button>
+                                    <b-button type="submit" variant="primary" @click.prevent>Submit formaa</b-button>
                                 </b-col>
                             </form>
                         </div>
@@ -350,9 +350,9 @@ You must agree before submitting.
                             <b-card-title class="mb-0 flex-grow-1">Supported Elements</b-card-title>
                             <div class="flex-shrink-0">
                                 <div class="form-check form-switch form-switch-right form-switch-md">
-                                    <label for="FormVaidationSupported" class="form-label text-muted">Show Code</label>
-                                    <input class="form-check-input code-switcher" type="checkbox"
-                                        id="FormVaidationSupported">
+                                    <label class="form-label text-muted" for="FormVaidationSupported">Show Code</label>
+                                    <input id="FormVaidationSupported" class="form-check-input code-switcher"
+                                           type="checkbox">
                                 </div>
                             </div>
                         </b-card-header>
@@ -365,38 +365,38 @@ You must agree before submitting.
                             <div class="live-preview">
                                 <form class="was-validated">
                                     <div class="mb-3">
-                                        <label for="validationTextarea" class="form-label">Textarea</label>
-                                        <textarea class="form-control" id="validationTextarea"
-                                            placeholder="Required example textarea" required></textarea>
+                                        <label class="form-label" for="validationTextarea">Textarea</label>
+                                        <textarea id="validationTextarea" class="form-control"
+                                                  placeholder="Required example textarea" required></textarea>
                                         <div class="invalid-feedback">
                                             Please enter a message in the textarea.
                                         </div>
                                     </div>
 
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" class="form-check-input" id="validationFormCheck1"
-                                            required>
+                                        <input id="validationFormCheck1" class="form-check-input" required
+                                               type="checkbox">
                                         <label class="form-check-label" for="validationFormCheck1">Check this
                                             checkbox</label>
                                         <div class="invalid-feedback">Example invalid feedback text</div>
                                     </div>
 
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" id="validationFormCheck2"
-                                            name="radio-stacked" required>
+                                        <input id="validationFormCheck2" class="form-check-input" name="radio-stacked"
+                                               required type="radio">
                                         <label class="form-check-label" for="validationFormCheck2">Toggle this
                                             radio</label>
                                     </div>
                                     <div class="form-check mb-3">
-                                        <input type="radio" class="form-check-input" id="validationFormCheck3"
-                                            name="radio-stacked" required>
+                                        <input id="validationFormCheck3" class="form-check-input" name="radio-stacked"
+                                               required type="radio">
                                         <label class="form-check-label" for="validationFormCheck3">Or toggle this other
                                             radio</label>
                                         <div class="invalid-feedback">More example invalid feedback text</div>
                                     </div>
 
                                     <div class="mb-3">
-                                        <select class="form-select" required aria-label="select example">
+                                        <select aria-label="select example" class="form-select" required>
                                             <option value="">Open this select menu</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -406,12 +406,12 @@ You must agree before submitting.
                                     </div>
 
                                     <div class="mb-3">
-                                        <input type="file" class="form-control" aria-label="file example" required>
+                                        <input aria-label="file example" class="form-control" required type="file">
                                         <div class="invalid-feedback">Example invalid form file feedback</div>
                                     </div>
 
                                     <div class="mb-0">
-                                        <b-button variant="primary" type="submit" disabled>Submit form</b-button>
+                                        <b-button disabled type="submit" variant="primary">Submit form</b-button>
                                     </div>
                                 </form>
                             </div>
@@ -478,9 +478,9 @@ Please enter a message in the textarea.
                             <b-card-title class="mb-0 flex-grow-1">Tooltips</b-card-title>
                             <div class="flex-shrink-0">
                                 <div class="form-check form-switch form-switch-right form-switch-md">
-                                    <label for="FormVaidationTooltip" class="form-label text-muted">Show Code</label>
-                                    <input class="form-check-input code-switcher" type="checkbox"
-                                        id="FormVaidationTooltip">
+                                    <label class="form-label text-muted" for="FormVaidationTooltip">Show Code</label>
+                                    <input id="FormVaidationTooltip" class="form-check-input code-switcher"
+                                           type="checkbox">
                                 </div>
                             </div>
                         </b-card-header>
@@ -496,60 +496,60 @@ Please enter a message in the textarea.
 
                             <div class="live-preview">
                                 <form class="row g-3 needs-validation" novalidate>
-                                    <b-col md="4" class="position-relative">
-                                        <label for="validationTooltip01" class="form-label">First name</label>
-                                        <input type="text" class="form-control" id="validationTooltip01" value="Mark"
-                                            required>
+                                    <b-col class="position-relative" md="4">
+                                        <label class="form-label" for="validationTooltip01">First name</label>
+                                        <input id="validationTooltip01" class="form-control" required type="text"
+                                               value="Mark">
                                         <div class="valid-tooltip">
                                             Looks good!
                                         </div>
                                     </b-col>
-                                    <b-col md="4" class="position-relative">
-                                        <label for="validationTooltip02" class="form-label">Last name</label>
-                                        <input type="text" class="form-control" id="validationTooltip02" value="Otto"
-                                            required>
+                                    <b-col class="position-relative" md="4">
+                                        <label class="form-label" for="validationTooltip02">Last name</label>
+                                        <input id="validationTooltip02" class="form-control" required type="text"
+                                               value="Otto">
                                         <div class="valid-tooltip">
                                             Looks good!
                                         </div>
                                     </b-col>
-                                    <b-col md="4" class="position-relative">
-                                        <label for="validationTooltipUsername" class="form-label">Username</label>
+                                    <b-col class="position-relative" md="4">
+                                        <label class="form-label" for="validationTooltipUsername">Username</label>
                                         <div class="input-group has-validation">
-                                            <span class="input-group-text"
-                                                id="validationTooltipUsernamePrepend">@</span>
-                                            <input type="text" class="form-control" id="validationTooltipUsername"
-                                                aria-describedby="validationTooltipUsernamePrepend" required>
+                                            <span id="validationTooltipUsernamePrepend"
+                                                  class="input-group-text">@</span>
+                                            <input id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" class="form-control"
+                                                   required type="text">
                                             <div class="invalid-tooltip">
                                                 Please choose a unique and valid username.
                                             </div>
                                         </div>
                                     </b-col>
-                                    <b-col md="6" class="position-relative">
-                                        <label for="validationTooltip03" class="form-label">City</label>
-                                        <input type="text" class="form-control" id="validationTooltip03" required>
+                                    <b-col class="position-relative" md="6">
+                                        <label class="form-label" for="validationTooltip03">City</label>
+                                        <input id="validationTooltip03" class="form-control" required type="text">
                                         <div class="invalid-tooltip">
                                             Please provide a valid city.
                                         </div>
                                     </b-col>
-                                    <b-col md="3" class="position-relative">
-                                        <label for="validationTooltip04" class="form-label">State</label>
-                                        <select class="form-select" id="validationTooltip04" required>
-                                            <option selected disabled value="">Choose...</option>
+                                    <b-col class="position-relative" md="3">
+                                        <label class="form-label" for="validationTooltip04">State</label>
+                                        <select id="validationTooltip04" class="form-select" required>
+                                            <option disabled selected value="">Choose...</option>
                                             <option>...</option>
                                         </select>
                                         <div class="invalid-tooltip">
                                             Please select a valid state.
                                         </div>
                                     </b-col>
-                                    <b-col md="3" class="position-relative">
-                                        <label for="validationTooltip05" class="form-label">Zip</label>
-                                        <input type="text" class="form-control" id="validationTooltip05" required>
+                                    <b-col class="position-relative" md="3">
+                                        <label class="form-label" for="validationTooltip05">Zip</label>
+                                        <input id="validationTooltip05" class="form-control" required type="text">
                                         <div class="invalid-tooltip">
                                             Please provide a valid zip.
                                         </div>
                                     </b-col>
                                     <b-col cols="12">
-                                        <b-button variant="primary" type="button">Submit form</b-button>
+                                        <b-button type="button" variant="primary">Submit form</b-button>
                                     </b-col>
                                 </form>
                             </div>

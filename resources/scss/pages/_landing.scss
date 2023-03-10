@@ -9,8 +9,8 @@
     }
 }
 
-.navbar-show{
-    .vertical-overlay{
+.navbar-show {
+    .vertical-overlay {
         display: block;
     }
 }
@@ -21,7 +21,7 @@
     padding: 90px 0;
     position: relative;
 
-    @media (max-width:767.98px) {
+    @media (max-width: 767.98px) {
         padding: 50px 0;
     }
 }
@@ -82,16 +82,17 @@
 }
 
 //navbar-light
-.navbar-light{
+.navbar-light {
     .navbar-brand {
         .card-logo-dark {
             display: none;
         }
-    
+
         .card-logo-light {
             display: block;
         }
     }
+
     .navbar-nav {
         .nav-item {
             .nav-link {
@@ -99,6 +100,7 @@
             }
         }
     }
+
     &.is-sticky {
         .navbar-nav {
             .nav-item {
@@ -107,11 +109,12 @@
                 }
             }
         }
+
         .navbar-brand {
             .card-logo-dark {
                 display: block;
             }
-        
+
             .card-logo-light {
                 display: none;
             }
@@ -251,13 +254,13 @@
     }
 
     //navbar-light
-    .navbar-light{
-        &.is-sticky { 
+    .navbar-light {
+        &.is-sticky {
             .navbar-brand {
                 .card-logo-dark {
                     display: none;
                 }
-        
+
                 .card-logo-light {
                     display: block;
                 }

@@ -1,18 +1,9 @@
 <script>
 import appConfig from "../../../app.config";
-import SwiperCore, {
-    Thumbs,
-    Navigation,
-    Pagination
-} from "swiper";
-import {
-    Swiper,
-    SwiperSlide
-} from "swiper/vue";
+import SwiperCore, {Navigation, Pagination, Thumbs} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/vue";
 import "swiper/swiper-bundle.css";
-import {
-    CountTo
-} from "vue3-count-to";
+import {CountTo} from "vue3-count-to";
 
 import Img1 from "@/assets/images/demos/default.png";
 import Img2 from "@/assets/images/demos/saas.png";
@@ -40,10 +31,10 @@ export default {
                 text: "Pages",
                 href: "/",
             },
-            {
-                text: "Starter",
-                active: true,
-            },
+                {
+                    text: "Starter",
+                    active: true,
+                },
             ],
         };
     },
@@ -126,20 +117,20 @@ export default {
 
 <template>
     <div class="layout-wrapper landing">
-        <nav class="navbar navbar-expand-lg navbar-landing fixed-top" id="navbar">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-landing fixed-top">
             <b-container>
                 <b-link class="navbar-brand" href="/">
-                    <img src="@/assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark"
-                        height="17">
-                    <img src="@/assets/images/logo-light.png" class="card-logo card-logo-light" alt="logo light"
-                        height="17">
+                    <img alt="logo dark" class="card-logo card-logo-dark" height="17"
+                         src="@/assets/images/logo-dark.png">
+                    <img alt="logo light" class="card-logo card-logo-light" height="17"
+                         src="@/assets/images/logo-light.png">
                 </b-link>
-                <button class="navbar-toggler py-0 fs-20 text-body" type="button" v-b-toggle.navbarSupportedContent>
+                <button v-b-toggle.navbarSupportedContent class="navbar-toggler py-0 fs-20 text-body" type="button">
                     <i class="mdi mdi-menu"></i>
                 </button>
 
-                <b-collapse class="navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
+                <b-collapse id="navbarSupportedContent" class="navbar-collapse">
+                    <ul id="navbar-example" class="navbar-nav mx-auto mt-2 mt-lg-0">
                         <li class="nav-item">
                             <b-link class="nav-link active" href="#hero">Home</b-link>
                         </li>
@@ -164,16 +155,17 @@ export default {
                     </ul>
 
                     <div class="">
-                        <router-link to="/auth/signin-basic"
-                            class="btn btn-link fw-medium text-decoration-none text-dark">Sign
-                            in</router-link>
-                        <router-link to="/auth/signup-basic" class="btn btn-primary">Sign Up</router-link>
+                        <router-link class="btn btn-link fw-medium text-decoration-none text-dark"
+                                     to="/auth/signin-basic">Sign
+                            in
+                        </router-link>
+                        <router-link class="btn btn-primary" to="/auth/signup-basic">Sign Up</router-link>
                     </div>
                 </b-collapse>
             </b-container>
         </nav>
-        <div class="vertical-overlay" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent.show"></div>
-        <section class="section pb-0 hero-section" id="hero">
+        <div class="vertical-overlay" data-bs-target="#navbarSupportedContent.show" data-bs-toggle="collapse"></div>
+        <section id="hero" class="section pb-0 hero-section">
             <div class="bg-overlay bg-overlay-pattern"></div>
             <b-container>
                 <b-row class="justify-content-center">
@@ -186,30 +178,30 @@ export default {
                                 Bootstrap 5 Admin & Dashboard Template built in multiple frameworks.</p>
 
                             <div class="d-flex gap-2 justify-content-center mt-4">
-                                <b-link href="/auth/signin-basic" class="btn btn-primary">Get Started <i
-                                        class="ri-arrow-right-line align-middle ms-1"></i></b-link>
-                                <router-link to="/pages/pricing" class="btn btn-danger">View Plans <i
-                                        class="ri-eye-line align-middle ms-1"></i></router-link>
+                                <b-link class="btn btn-primary" href="/auth/signin-basic">Get Started <i
+                                    class="ri-arrow-right-line align-middle ms-1"></i></b-link>
+                                <router-link class="btn btn-danger" to="/pages/pricing">View Plans <i
+                                    class="ri-eye-line align-middle ms-1"></i></router-link>
                             </div>
                         </div>
 
                         <div class="mt-4 mt-sm-5 pt-sm-5 mb-sm-n5 demo-carousel">
                             <div class="demo-img-patten-top d-none d-sm-block">
-                                <img src="@/assets/images/landing/img-pattern.png" class="d-block img-fluid" alt="...">
+                                <img alt="..." class="d-block img-fluid" src="@/assets/images/landing/img-pattern.png">
                             </div>
                             <div class="demo-img-patten-bottom d-none d-sm-block">
-                                <img src="@/assets/images/landing/img-pattern.png" class="d-block img-fluid" alt="...">
+                                <img alt="..." class="d-block img-fluid" src="@/assets/images/landing/img-pattern.png">
                             </div>
 
                             <b-carousel :interval="2000" class="carousel slide carousel-fade">
                                 <div class="carousel-inner shadow-lg p-2 bg-white rounded">
-                                    <b-carousel-slide active :img-src="Img1" />
-                                    <b-carousel-slide :img-src="Img2" />
-                                    <b-carousel-slide :img-src="Img3" />
-                                    <b-carousel-slide :img-src="Img4" />
-                                    <b-carousel-slide :img-src="Img5" />
-                                    <b-carousel-slide :img-src="Img6" />
-                                    <b-carousel-slide :img-src="Img7" />
+                                    <b-carousel-slide :img-src="Img1" active/>
+                                    <b-carousel-slide :img-src="Img2"/>
+                                    <b-carousel-slide :img-src="Img3"/>
+                                    <b-carousel-slide :img-src="Img4"/>
+                                    <b-carousel-slide :img-src="Img5"/>
+                                    <b-carousel-slide :img-src="Img6"/>
+                                    <b-carousel-slide :img-src="Img7"/>
                                 </div>
                             </b-carousel>
                         </div>
@@ -217,9 +209,9 @@ export default {
                 </b-row>
             </b-container>
             <div class="position-absolute start-0 end-0 bottom-0 hero-shape-svg">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 1440 120">
-                    <g mask="url(&quot;#SvgjsMask1003&quot;)" fill="none">
+                <svg version="1.1" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g fill="none" mask="url(&quot;#SvgjsMask1003&quot;)">
                         <path d="M 0,118 C 288,98.6 1152,40.4 1440,21L1440 140L0 140z">
                         </path>
                     </g>
@@ -236,11 +228,7 @@ export default {
                             <h5 class="fs-20">Trusted <span class="text-primary text-decoration-underline">by</span> the
                                 world's best</h5>
                             <div class="trusted-client-slider mt-sm-5 mt-4 mb-sm-5 mb-4">
-                                <swiper class="swiper responsive-swiper rounded gallery-light pb-4" :loop="true"
-                                    :slidesPerView="1" :spaceBetween="10" :pagination="{
-    el: '.swiper-pagination',
-    clickable: true,
-}" :breakpoints="{
+                                <swiper :breakpoints="{
     640: {
         slidesPerView: 2,
         spaceBetween: 20,
@@ -253,12 +241,16 @@ export default {
         slidesPerView: 4,
         spaceBetween: 50,
     },
-}">
+}" :loop="true"
+                                        :pagination="{
+    el: '.swiper-pagination',
+    clickable: true,
+}" :slidesPerView="1" :spaceBetween="10" class="swiper responsive-swiper rounded gallery-light pb-4">
                                     <swiper-slide>
                                         <div class="swiper-slide">
                                             <div class="client-images">
-                                                <img src="@/assets/images/clients/amazon.svg" alt="client-img"
-                                                    class="mx-auto img-fluid d-block">
+                                                <img alt="client-img" class="mx-auto img-fluid d-block"
+                                                     src="@/assets/images/clients/amazon.svg">
                                             </div>
                                         </div>
                                     </swiper-slide>
@@ -266,8 +258,8 @@ export default {
                                     <swiper-slide>
                                         <div class="swiper-slide">
                                             <div class="client-images">
-                                                <img src="@/assets/images/clients/walmart.svg" alt="client-img"
-                                                    class="mx-auto img-fluid d-block">
+                                                <img alt="client-img" class="mx-auto img-fluid d-block"
+                                                     src="@/assets/images/clients/walmart.svg">
                                             </div>
                                         </div>
                                     </swiper-slide>
@@ -275,32 +267,32 @@ export default {
                                     <swiper-slide>
                                         <div class="swiper-slide">
                                             <div class="client-images">
-                                                <img src="@/assets/images/clients/lenovo.svg" alt="client-img"
-                                                    class="mx-auto img-fluid d-block">
+                                                <img alt="client-img" class="mx-auto img-fluid d-block"
+                                                     src="@/assets/images/clients/lenovo.svg">
                                             </div>
                                         </div>
                                     </swiper-slide>
                                     <swiper-slide>
                                         <div class="swiper-slide">
                                             <div class="client-images">
-                                                <img src="@/assets/images/clients/paypal.svg" alt="client-img"
-                                                    class="mx-auto img-fluid d-block">
+                                                <img alt="client-img" class="mx-auto img-fluid d-block"
+                                                     src="@/assets/images/clients/paypal.svg">
                                             </div>
                                         </div>
                                     </swiper-slide>
                                     <swiper-slide>
                                         <div class="swiper-slide">
                                             <div class="client-images">
-                                                <img src="@/assets/images/clients/shopify.svg" alt="client-img"
-                                                    class="mx-auto img-fluid d-block">
+                                                <img alt="client-img" class="mx-auto img-fluid d-block"
+                                                     src="@/assets/images/clients/shopify.svg">
                                             </div>
                                         </div>
                                     </swiper-slide>
                                     <swiper-slide>
                                         <div class="swiper-slide">
                                             <div class="client-images">
-                                                <img src="@/assets/images/clients/verizon.svg" alt="client-img"
-                                                    class="mx-auto img-fluid d-block">
+                                                <img alt="client-img" class="mx-auto img-fluid d-block"
+                                                     src="@/assets/images/clients/verizon.svg">
                                             </div>
                                         </div>
                                     </swiper-slide>
@@ -315,8 +307,7 @@ export default {
         </div>
 
 
-
-        <section class="section" id="services">
+        <section id="services" class="section">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
@@ -344,8 +335,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">The creative design includes designs that are
                                     unique, effective and memorable.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -364,8 +355,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">The collection of rules and guidelines which
                                     designers use to communicate with users through appealing.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -384,8 +375,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">Business development firm that provides
                                     strategic planning, market research services and project.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -404,8 +395,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">Awesome Support is the most versatile and
                                     feature-rich support plugin for all version.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -424,8 +415,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">You usually get a broad range of options to play
                                     with. This enables you to use a single theme across multiple.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -444,8 +435,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">Personalise your own website, no matter what
                                     theme and what customization options.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -465,8 +456,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">Responsive design is a graphic user interface
                                     (GUI) design approach used to create content.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -485,8 +476,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">Google Fonts is a collection of 915 fonts, all
                                     available to use for free on your website.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -505,8 +496,8 @@ export default {
                                 <p class="text-muted my-3 ff-secondary">An industrial specialist works with industrial
                                     operations to ensure that manufacturing facilities work.</p>
                                 <div>
-                                    <b-link href="#" class="fs-13 fw-medium">Learn More <i
-                                            class="ri-arrow-right-s-line align-bottom"></i></b-link>
+                                    <b-link class="fs-13 fw-medium" href="#">Learn More <i
+                                        class="ri-arrow-right-s-line align-bottom"></i></b-link>
                                 </div>
                             </div>
                         </div>
@@ -516,13 +507,12 @@ export default {
         </section>
 
 
-
-        <section class="section bg-light py-5" id="features">
+        <section id="features" class="section bg-light py-5">
             <b-container>
                 <b-row class="align-items-center gy-4">
-                    <b-col lg="6" sm="7" class="mx-auto">
+                    <b-col class="mx-auto" lg="6" sm="7">
                         <div>
-                            <img src="@/assets/images/landing/features/img-1.png" alt="" class="img-fluid mx-auto">
+                            <img alt="" class="img-fluid mx-auto" src="@/assets/images/landing/features/img-1.png">
                         </div>
                     </b-col>
                     <b-col lg="6">
@@ -564,7 +554,6 @@ export default {
         </section>
 
 
-
         <section class="py-5 bg-primary position-relative">
             <div class="bg-overlay bg-overlay-pattern opacity-50"></div>
             <b-container>
@@ -576,10 +565,11 @@ export default {
                     </b-col>
                     <b-col sm="auto">
                         <div>
-                            <b-link href="https://1.envato.market/velzon-admin" target="_blank"
-                                class="btn bg-gradient btn-danger"><i
-                                    class="ri-shopping-cart-2-line align-middle me-1"></i>
-                                Buy Now</b-link>
+                            <b-link class="btn bg-gradient btn-danger" href="https://1.envato.market/velzon-admin"
+                                    target="_blank"><i
+                                class="ri-shopping-cart-2-line align-middle me-1"></i>
+                                Buy Now
+                            </b-link>
                         </div>
                     </b-col>
                 </b-row>
@@ -675,22 +665,22 @@ export default {
                             </b-row>
 
                             <div class="mt-4">
-                                <b-link href="/" class="btn btn-primary">Learn More <i
-                                        class="ri-arrow-right-line align-middle ms-1"></i></b-link>
+                                <b-link class="btn btn-primary" href="/">Learn More <i
+                                    class="ri-arrow-right-line align-middle ms-1"></i></b-link>
                             </div>
                         </div>
                     </b-col>
-                    <b-col lg="6" sm="7" cols="10" order="1" order-lg="2" class="ms-auto">
+                    <b-col class="ms-auto" cols="10" lg="6" order="1" order-lg="2" sm="7">
                         <div>
-                            <img src="@/assets/images/landing/features/img-2.png" alt="" class="img-fluid">
+                            <img alt="" class="img-fluid" src="@/assets/images/landing/features/img-2.png">
                         </div>
                     </b-col>
                 </b-row>
 
                 <b-row class="align-items-center mt-5 pt-lg-5 gy-4">
-                    <b-col lg="6" sm="7" cols="10" class="mx-auto">
+                    <b-col class="mx-auto" cols="10" lg="6" sm="7">
                         <div>
-                            <img src="@/assets/images/landing/features/img-3.png" alt="" class="img-fluid">
+                            <img alt="" class="img-fluid" src="@/assets/images/landing/features/img-3.png">
                         </div>
                     </b-col>
                     <b-col lg="6">
@@ -746,8 +736,7 @@ export default {
         </section>
 
 
-
-        <section class="section bg-light" id="plans">
+        <section id="plans" class="section bg-light">
             <div class="bg-overlay bg-overlay-pattern"></div>
             <b-container>
                 <b-row class="justify-content-center">
@@ -762,12 +751,14 @@ export default {
                                     <h5 class="fs-14 mb-0">Month</h5>
                                 </div>
                                 <div class="form-check form-switch fs-20 ms-3 ">
-                                    <input class="form-check-input" type="checkbox" id="plan-switch">
+                                    <input id="plan-switch" class="form-check-input" type="checkbox">
                                     <label class="form-check-label" for="plan-switch"></label>
                                 </div>
                                 <div>
-                                    <h5 class="fs-14 mb-0">Annual <b-badge variant="soft-success"
-                                            class="badge-soft-success">Save 20%</b-badge>
+                                    <h5 class="fs-14 mb-0">Annual
+                                        <b-badge class="badge-soft-success"
+                                                 variant="soft-success">Save 20%
+                                        </b-badge>
                                     </h5>
                                 </div>
                             </div>
@@ -777,7 +768,7 @@ export default {
 
                 <b-row class="gy-4">
                     <b-col lg="4">
-                        <b-card no-body class="plan-box mb-0">
+                        <b-card class="plan-box mb-0" no-body>
                             <b-card-body class="p-4 m-2">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-grow-1">
@@ -792,10 +783,10 @@ export default {
                                 </div>
                                 <div class="py-4 text-center">
                                     <h1 class="month"><sup><small>$</small></sup><span
-                                            class="ff-secondary fw-bold">19</span> <span
-                                            class="fs-13 text-muted">/Month</span></h1>
+                                        class="ff-secondary fw-bold">19</span> <span
+                                        class="fs-13 text-muted">/Month</span></h1>
                                     <h1 class="annual"><sup><small>$</small></sup><span
-                                            class="ff-secondary fw-bold ">171</span>
+                                        class="ff-secondary fw-bold ">171</span>
                                         <span class="fs-13 text-muted">/Year</span>
                                     </h1>
                                 </div>
@@ -874,15 +865,16 @@ export default {
                                         </li>
                                     </ul>
                                     <div class="mt-4">
-                                        <b-link href="javascript:void(0);" class="btn btn-soft-success w-100">Get
-                                            Started</b-link>
+                                        <b-link class="btn btn-soft-success w-100" href="javascript:void(0);">Get
+                                            Started
+                                        </b-link>
                                     </div>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
                     <b-col lg="4">
-                        <b-card no-body class="plan-box mb-0 ribbon-box right">
+                        <b-card class="plan-box mb-0 ribbon-box right" no-body>
                             <b-card-body class="p-4 m-2">
                                 <div class="ribbon-two ribbon-two-danger"><span>Popular</span></div>
                                 <div class="d-flex align-items-center">
@@ -898,10 +890,10 @@ export default {
                                 </div>
                                 <div class="py-4 text-center">
                                     <h1 class="month"><sup><small>$</small></sup><span
-                                            class="ff-secondary fw-bold">29</span> <span
-                                            class="fs-13 text-muted">/Month</span></h1>
+                                        class="ff-secondary fw-bold">29</span> <span
+                                        class="fs-13 text-muted">/Month</span></h1>
                                     <h1 class="annual"><sup><small>$</small></sup><span
-                                            class="ff-secondary fw-bold">261</span>
+                                        class="ff-secondary fw-bold">261</span>
                                         <span class="fs-13 text-muted">/Year</span>
                                     </h1>
                                 </div>
@@ -980,15 +972,16 @@ export default {
                                         </li>
                                     </ul>
                                     <div class="mt-4">
-                                        <b-link href="javascript:void(0);" class="btn btn-soft-success w-100">Get
-                                            Started</b-link>
+                                        <b-link class="btn btn-soft-success w-100" href="javascript:void(0);">Get
+                                            Started
+                                        </b-link>
                                     </div>
                                 </div>
                             </b-card-body>
                         </b-card>
                     </b-col>
                     <b-col lg="4">
-                        <b-card no-body class="plan-box mb-0">
+                        <b-card class="plan-box mb-0" no-body>
                             <b-card-body class="p-4 m-2">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-grow-1">
@@ -1003,10 +996,10 @@ export default {
                                 </div>
                                 <div class="py-4 text-center">
                                     <h1 class="month"><sup><small>$</small></sup><span
-                                            class="ff-secondary fw-bold">39</span> <span
-                                            class="fs-13 text-muted">/Month</span></h1>
+                                        class="ff-secondary fw-bold">39</span> <span
+                                        class="fs-13 text-muted">/Month</span></h1>
                                     <h1 class="annual"><sup><small>$</small></sup><span
-                                            class="ff-secondary fw-bold">351</span>
+                                        class="ff-secondary fw-bold">351</span>
                                         <span class="fs-13 text-muted">/Year</span>
                                     </h1>
                                 </div>
@@ -1085,8 +1078,9 @@ export default {
                                         </li>
                                     </ul>
                                     <div class="mt-4">
-                                        <b-link href="javascript:void(0);" class="btn btn-soft-success w-100">Get
-                                            Started</b-link>
+                                        <b-link class="btn btn-soft-success w-100" href="javascript:void(0);">Get
+                                            Started
+                                        </b-link>
                                     </div>
                                 </div>
                             </b-card-body>
@@ -1096,7 +1090,6 @@ export default {
 
             </b-container>
         </section>
-
 
 
         <section class="section">
@@ -1110,12 +1103,14 @@ export default {
                                 always contact us or email us. We will answer you shortly!</p>
 
                             <div class="hstack gap-2 justify-content-center">
-                                <b-button type="button" pill variant="primary" class="btn-label"><i
-                                        class="ri-mail-line label-icon align-middle rounded-pill fs-16 me-2"></i> Email
-                                    Us</b-button>
-                                <b-button type="button" pill variant="info" class="btn-label"><i
-                                        class="ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2"></i>
-                                    Send Us Tweet</b-button>
+                                <b-button class="btn-label" pill type="button" variant="primary"><i
+                                    class="ri-mail-line label-icon align-middle rounded-pill fs-16 me-2"></i> Email
+                                    Us
+                                </b-button>
+                                <b-button class="btn-label" pill type="button" variant="info"><i
+                                    class="ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2"></i>
+                                    Send Us Tweet
+                                </b-button>
                             </div>
                         </div>
                     </b-col>
@@ -1131,8 +1126,8 @@ export default {
                                 <h5 class="mb-0 fw-semibold">General Questions</h5>
                             </div>
                         </div>
-                        <b-accordion class="custom-accordionwithicon custom-accordion-border accordion-border-box"
-                            id="genques-accordion">
+                        <b-accordion id="genques-accordion"
+                                     class="custom-accordionwithicon custom-accordion-border accordion-border-box">
                             <b-accordion-item title="What is the purpose of using themes ?" visible>
                                 <div class="ff-secondary">
                                     A theme is a set of colors, fonts, effects, and more that can be applied to your
@@ -1182,8 +1177,8 @@ export default {
                             </div>
                         </div>
 
-                        <b-accordion class="custom-accordionwithicon custom-accordion-border accordion-border-box"
-                            id="privacy-accordion">
+                        <b-accordion id="privacy-accordion"
+                                     class="custom-accordionwithicon custom-accordion-border accordion-border-box">
                             <b-accordion-item title="Does Word have night mode?">
                                 <div class="ff-secondary">
                                     You can run Microsoft Word in dark mode, which uses a dark color palette to help
@@ -1226,8 +1221,7 @@ export default {
         </section>
 
 
-
-        <section class="section bg-primary" id="reviews">
+        <section id="reviews" class="section bg-primary">
             <div class="bg-overlay bg-overlay-pattern"></div>
             <b-container>
                 <b-row class="justify-content-center">
@@ -1239,16 +1233,16 @@ export default {
                             <h4 class="text-white mb-5"><span class="text-success">19k</span>+ Satisfied clients</h4>
 
                             <div class="client-review-swiper rounded">
-                                <swiper class="navigation-swiper rounded" :loop="true" :autoplay="{
+                                <swiper :autoplay="{
     delay: 2500,
     disableOnInteraction: false,
-}" :navigation="{
+}" :loop="true" :navigation="{
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
 }" :pagination="{
     clickable: true,
     el: '.swiper-pagination',
-}">
+}" class="navigation-swiper rounded">
                                     <swiper-slide>
                                         <div class="swiper-slide">
                                             <b-row class="justify-content-center">
@@ -1317,7 +1311,6 @@ export default {
                             </div>
 
 
-
                         </div>
                     </b-col>
                 </b-row>
@@ -1325,40 +1318,41 @@ export default {
         </section>
 
 
-
         <section class="py-5 position-relative bg-light">
             <b-container>
                 <b-row class="text-center gy-4">
-                    <b-col lg="3" cols="6">
+                    <b-col cols="6" lg="3">
                         <div>
                             <h2 class="mb-2">
-                                <count-to :startVal='0' :endVal='100' :duration='5000'>0</count-to>+
+                                <count-to :duration='5000' :endVal='100' :startVal='0'>0</count-to>
+                                +
                             </h2>
                             <div class="text-muted">Projects Completed</div>
                         </div>
                     </b-col>
 
-                    <b-col lg="3" cols="6">
+                    <b-col cols="6" lg="3">
                         <div>
                             <h2 class="mb-2">
-                                <count-to :startVal='0' :endVal='24' :duration='5000'>0</count-to>
+                                <count-to :duration='5000' :endVal='24' :startVal='0'>0</count-to>
                             </h2>
                             <div class="text-muted">Win Awards</div>
                         </div>
                     </b-col>
 
-                    <b-col lg="3" cols="6">
+                    <b-col cols="6" lg="3">
                         <div>
                             <h2 class="mb-2">
-                                <count-to :startVal='0' :endVal='20' :duration='5000'>0</count-to>k
+                                <count-to :duration='5000' :endVal='20' :startVal='0'>0</count-to>
+                                k
                             </h2>
                             <div class="text-muted">Satisfied Clients</div>
                         </div>
                     </b-col>
-                    <b-col lg="3" cols="6">
+                    <b-col cols="6" lg="3">
                         <div>
                             <h2 class="mb-2">
-                                <count-to :startVal='0' :endVal='50' :duration='5000'>0</count-to>
+                                <count-to :duration='5000' :endVal='50' :startVal='0'>0</count-to>
                             </h2>
                             <div class="text-muted">Employees</div>
                         </div>
@@ -1366,7 +1360,6 @@ export default {
                 </b-row>
             </b-container>
         </section>
-
 
 
         <section class="section">
@@ -1387,7 +1380,7 @@ export default {
                     <b-col lg="4">
                         <div class="process-card mt-4">
                             <div class="process-arrow-img d-none d-lg-block">
-                                <img src="@/assets/images/landing/process-arrow-img.png" alt="" class="img-fluid">
+                                <img alt="" class="img-fluid" src="@/assets/images/landing/process-arrow-img.png">
                             </div>
                             <div class="avatar-sm icon-effect mx-auto mb-4">
                                 <div class="avatar-title bg-transparent text-success rounded-circle h1">
@@ -1403,7 +1396,7 @@ export default {
                     <b-col lg="4">
                         <div class="process-card mt-4">
                             <div class="process-arrow-img d-none d-lg-block">
-                                <img src="@/assets/images/landing/process-arrow-img.png" alt="" class="img-fluid">
+                                <img alt="" class="img-fluid" src="@/assets/images/landing/process-arrow-img.png">
                             </div>
                             <div class="avatar-sm icon-effect mx-auto mb-4">
                                 <div class="avatar-title bg-transparent text-success rounded-circle h1">
@@ -1433,7 +1426,7 @@ export default {
             </b-container>
         </section>
 
-        <section class="section bg-light" id="team">
+        <section id="team" class="section bg-light">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
@@ -1450,17 +1443,17 @@ export default {
                         <b-card n-body>
                             <b-card-body class="text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="@/assets/images/users/avatar-2.jpg" alt=""
-                                        class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
-                                        class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
+                                    <img alt="" class="img-fluid rounded-circle"
+                                         src="@/assets/images/users/avatar-2.jpg">
+                                    <b-link class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
+                                            href="/mailbox">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
                                     </b-link>
                                 </div>
                                 <h5 class="mb-1">
-                                    <b-link href="/pages/profile" class="text-body">Nancy Martino</b-link>
+                                    <b-link class="text-body" href="/pages/profile">Nancy Martino</b-link>
                                 </h5>
                                 <p class="text-muted mb-0 ff-secondary">Team Leader</p>
                             </b-card-body>
@@ -1470,17 +1463,17 @@ export default {
                         <b-card n-body>
                             <b-card-body class="text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                        class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
-                                        class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
+                                    <img alt="" class="img-fluid rounded-circle"
+                                         src="@/assets/images/users/avatar-10.jpg">
+                                    <b-link class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
+                                            href="/mailbox">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
                                     </b-link>
                                 </div>
                                 <h5 class="mb-1">
-                                    <b-link href="/pages/profile" class="text-body">Henry Baird</b-link>
+                                    <b-link class="text-body" href="/pages/profile">Henry Baird</b-link>
                                 </h5>
                                 <p class="text-muted mb-0 ff-secondary">Full Stack Developer</p>
                             </b-card-body>
@@ -1490,17 +1483,17 @@ export default {
                         <b-card n-body>
                             <b-card-body class="text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                        class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
-                                        class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
+                                    <img alt="" class="img-fluid rounded-circle"
+                                         src="@/assets/images/users/avatar-3.jpg">
+                                    <b-link class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
+                                            href="/mailbox">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
                                     </b-link>
                                 </div>
                                 <h5 class="mb-1">
-                                    <b-link href="/pages/profile" class="text-body">Frank Hook</b-link>
+                                    <b-link class="text-body" href="/pages/profile">Frank Hook</b-link>
                                 </h5>
                                 <p class="text-muted mb-0 ff-secondary">Project Manager</p>
                             </b-card-body>
@@ -1510,17 +1503,17 @@ export default {
                         <b-card n-body>
                             <b-card-body class="text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                        class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
-                                        class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
+                                    <img alt="" class="img-fluid rounded-circle"
+                                         src="@/assets/images/users/avatar-8.jpg">
+                                    <b-link class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
+                                            href="/mailbox">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
                                     </b-link>
                                 </div>
                                 <h5 class="mb-1">
-                                    <b-link href="/pages/profile" class="text-body">Donald Palmer</b-link>
+                                    <b-link class="text-body" href="/pages/profile">Donald Palmer</b-link>
                                 </h5>
                                 <p class="text-muted mb-0 ff-secondary">UI/UX Designer</p>
                             </b-card-body>
@@ -1532,17 +1525,17 @@ export default {
                         <b-card n-body>
                             <b-card-body class="text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                        class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
-                                        class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
+                                    <img alt="" class="img-fluid rounded-circle"
+                                         src="@/assets/images/users/avatar-5.jpg">
+                                    <b-link class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
+                                            href="/mailbox">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
                                     </b-link>
                                 </div>
                                 <h5 class="mb-1">
-                                    <b-link href="/pages/profile" class="text-body">Erica Kernan</b-link>
+                                    <b-link class="text-body" href="/pages/profile">Erica Kernan</b-link>
                                 </h5>
                                 <p class="text-muted mb-0 ff-secondary">Web Designer</p>
                             </b-card-body>
@@ -1552,17 +1545,17 @@ export default {
                         <b-card n-body>
                             <b-card-body class="text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="@/assets/images/users/avatar-4.jpg" alt=""
-                                        class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
-                                        class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
+                                    <img alt="" class="img-fluid rounded-circle"
+                                         src="@/assets/images/users/avatar-4.jpg">
+                                    <b-link class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
+                                            href="/mailbox">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
                                     </b-link>
                                 </div>
                                 <h5 class="mb-1">
-                                    <b-link href="/pages/profile" class="text-body">Alexis Clarke</b-link>
+                                    <b-link class="text-body" href="/pages/profile">Alexis Clarke</b-link>
                                 </h5>
                                 <p class="text-muted mb-0 ff-secondary">Backend Developer</p>
                             </b-card-body>
@@ -1572,17 +1565,17 @@ export default {
                         <b-card n-body>
                             <b-card-body class="text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                                        class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
-                                        class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
+                                    <img alt="" class="img-fluid rounded-circle"
+                                         src="@/assets/images/users/avatar-6.jpg">
+                                    <b-link class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
+                                            href="/mailbox">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
                                     </b-link>
                                 </div>
                                 <h5 class="mb-1">
-                                    <b-link href="/pages/profile" class="text-body">Marie Ward</b-link>
+                                    <b-link class="text-body" href="/pages/profile">Marie Ward</b-link>
                                 </h5>
                                 <p class="text-muted mb-0 ff-secondary">Full Stack Developer</p>
                             </b-card-body>
@@ -1593,17 +1586,17 @@ export default {
                         <b-card n-body>
                             <b-card-body class="text-center p-4">
                                 <div class="avatar-xl mx-auto mb-4 position-relative">
-                                    <img src="@/assets/images/users/avatar-7.jpg" alt=""
-                                        class="img-fluid rounded-circle">
-                                    <b-link href="/mailbox"
-                                        class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs">
+                                    <img alt="" class="img-fluid rounded-circle"
+                                         src="@/assets/images/users/avatar-7.jpg">
+                                    <b-link class="btn btn-success btn-sm position-absolute bottom-0 end-0 rounded-circle avatar-xs"
+                                            href="/mailbox">
                                         <div class="avatar-title bg-transparent">
                                             <i class="ri-mail-fill align-bottom"></i>
                                         </div>
                                     </b-link>
                                 </div>
                                 <h5 class="mb-1">
-                                    <b-link href="/pages/profile" class="text-body">Jack Gough</b-link>
+                                    <b-link class="text-body" href="/pages/profile">Jack Gough</b-link>
                                 </h5>
                                 <p class="text-muted mb-0 ff-secondary">React Js Developer</p>
                             </b-card-body>
@@ -1613,15 +1606,15 @@ export default {
                 <b-row>
                     <b-col lg="12">
                         <div class="text-center mt-2">
-                            <b-link href="/pages/team" class="btn btn-primary">View All Members <i
-                                    class="ri-arrow-right-line ms-1 align-bottom"></i></b-link>
+                            <b-link class="btn btn-primary" href="/pages/team">View All Members <i
+                                class="ri-arrow-right-line ms-1 align-bottom"></i></b-link>
                         </div>
                     </b-col>
                 </b-row>
             </b-container>
         </section>
 
-        <section class="section" id="contact">
+        <section id="contact" class="section">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
@@ -1640,11 +1633,11 @@ export default {
                         <div>
                             <div class="mt-4">
                                 <h5 class="fs-13 text-muted text-uppercase">Office Address 1:</h5>
-                                <div class="ff-secondary fw-semibold">4461 Cedar Street Moro, <br />AR 72368</div>
+                                <div class="ff-secondary fw-semibold">4461 Cedar Street Moro, <br/>AR 72368</div>
                             </div>
                             <div class="mt-4">
                                 <h5 class="fs-13 text-muted text-uppercase">Office Address 2:</h5>
-                                <div class="ff-secondary fw-semibold">2467 Swick Hill Street <br />New Orleans, LA</div>
+                                <div class="ff-secondary fw-semibold">2467 Swick Hill Street <br/>New Orleans, LA</div>
                             </div>
                             <div class="mt-4">
                                 <h5 class="fs-13 text-muted text-uppercase">Working Hours:</h5>
@@ -1658,42 +1651,42 @@ export default {
                                 <b-row>
                                     <b-col lg="6">
                                         <div class="mb-4">
-                                            <label for="name" class="form-label fs-13">Name</label>
-                                            <input name="name" id="name" type="text"
-                                                class="form-control bg-light border-light" placeholder="Your name*">
+                                            <label class="form-label fs-13" for="name">Name</label>
+                                            <input id="name" class="form-control bg-light border-light" name="name"
+                                                   placeholder="Your name*" type="text">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="mb-4">
-                                            <label for="email" class="form-label fs-13">Email</label>
-                                            <input name="email" id="email" type="email"
-                                                class="form-control bg-light border-light" placeholder="Your email*">
+                                            <label class="form-label fs-13" for="email">Email</label>
+                                            <input id="email" class="form-control bg-light border-light" name="email"
+                                                   placeholder="Your email*" type="email">
                                         </div>
                                     </b-col>
                                 </b-row>
                                 <b-row>
                                     <b-col lg="12">
                                         <div class="mb-4">
-                                            <label for="subject" class="form-label fs-13">Subject</label>
-                                            <input type="text" class="form-control bg-light border-light" id="subject"
-                                                name="subject" placeholder="Your Subject.." />
+                                            <label class="form-label fs-13" for="subject">Subject</label>
+                                            <input id="subject" class="form-control bg-light border-light" name="subject"
+                                                   placeholder="Your Subject.." type="text"/>
                                         </div>
                                     </b-col>
                                 </b-row>
                                 <b-row>
                                     <b-col lg="12">
                                         <div class="mb-3">
-                                            <label for="comments" class="form-label fs-13">Message</label>
-                                            <textarea name="comments" id="comments" rows="3"
-                                                class="form-control bg-light border-light"
-                                                placeholder="Your message..."></textarea>
+                                            <label class="form-label fs-13" for="comments">Message</label>
+                                            <textarea id="comments" class="form-control bg-light border-light" name="comments"
+                                                      placeholder="Your message..."
+                                                      rows="3"></textarea>
                                         </div>
                                     </b-col>
                                 </b-row>
                                 <b-row>
-                                    <b-col lg="12" class="text-end">
-                                        <input type="submit" id="submit" name="send" class="submitBnt btn btn-primary"
-                                            value="Send Message">
+                                    <b-col class="text-end" lg="12">
+                                        <input id="submit" class="submitBnt btn btn-primary" name="send" type="submit"
+                                               value="Send Message">
                                     </b-col>
                                 </b-row>
                             </form>
@@ -1714,10 +1707,11 @@ export default {
                     </b-col>
                     <b-col sm="auto">
                         <div>
-                            <b-link href="https://1.envato.market/velzon-admin" target="_blank"
-                                class="btn bg-gradient btn-danger"><i
-                                    class="ri-shopping-cart-2-line align-middle me-1"></i>
-                                Buy Now</b-link>
+                            <b-link class="btn bg-gradient btn-danger" href="https://1.envato.market/velzon-admin"
+                                    target="_blank"><i
+                                class="ri-shopping-cart-2-line align-middle me-1"></i>
+                                Buy Now
+                            </b-link>
                         </div>
                     </b-col>
                 </b-row>
@@ -1727,10 +1721,10 @@ export default {
         <footer class="custom-footer bg-dark py-5 position-relative">
             <b-container>
                 <b-row>
-                    <b-col lg="4" class="mt-4">
+                    <b-col class="mt-4" lg="4">
                         <div>
                             <div>
-                                <img src="@/assets/images/logo-light.png" alt="logo light" height="17">
+                                <img alt="logo light" height="17" src="@/assets/images/logo-light.png">
                             </div>
                             <div class="mt-4 fs-13">
                                 <p>Premium Multipurpose Admin & Dashboard Template</p>
@@ -1741,9 +1735,9 @@ export default {
                         </div>
                     </b-col>
 
-                    <b-col lg="7" class="ms-lg-auto">
+                    <b-col class="ms-lg-auto" lg="7">
                         <b-row>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">Company</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1762,7 +1756,7 @@ export default {
                                     </ul>
                                 </div>
                             </b-col>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">Apps Pages</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1784,7 +1778,7 @@ export default {
                                     </ul>
                                 </div>
                             </b-col>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">Support</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1814,35 +1808,35 @@ export default {
                         <div class="text-sm-end mt-3 mt-sm-0">
                             <ul class="list-inline mb-0 footer-social-link">
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-facebook-fill"></i>
                                         </div>
                                     </b-link>
                                 </li>
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-github-fill"></i>
                                         </div>
                                     </b-link>
                                 </li>
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-linkedin-fill"></i>
                                         </div>
                                     </b-link>
                                 </li>
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-google-fill"></i>
                                         </div>
                                     </b-link>
                                 </li>
                                 <li class="list-inline-item">
-                                    <b-link href="javascript: void(0);" class="avatar-xs d-block">
+                                    <b-link class="avatar-xs d-block" href="javascript: void(0);">
                                         <div class="avatar-title rounded-circle">
                                             <i class="ri-dribbble-line"></i>
                                         </div>
@@ -1854,7 +1848,7 @@ export default {
                 </b-row>
             </b-container>
         </footer>
-        <b-button variant="danger" @click="topFunction" class="btn-icon" id="back-to-top">
+        <b-button id="back-to-top" class="btn-icon" variant="danger" @click="topFunction">
             <i class="ri-arrow-up-line"></i>
         </b-button>
     </div>

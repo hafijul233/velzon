@@ -1,15 +1,14 @@
 // Basic Column Chart
-function getChartColorsArray(colors){
+function getChartColorsArray(colors) {
     colors = JSON.parse(colors);
     return colors.map(function (value) {
-      var newValue = value.replace(" ", "");
-      if (newValue.indexOf(",") === -1) {
-        var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
+        var newValue = value.replace(" ", "");
+        if (newValue.indexOf(",") === -1) {
+            var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
             if (color) {
-            color = color.replace(" ", "");
-            return color;
-            }
-            else return newValue;
+                color = color.replace(" ", "");
+                return color;
+            } else return newValue;
         } else {
             var val = value.split(',');
             if (val.length == 2) {
@@ -21,12 +20,13 @@ function getChartColorsArray(colors){
             }
         }
     });
-  }
+}
+
 const basicColumnChart = {
     series: [{
-            name: "Net Profit",
-            data: [46, 57, 59, 54, 62, 58, 64, 60, 66],
-        },
+        name: "Net Profit",
+        data: [46, 57, 59, 54, 62, 58, 64, 60, 66],
+    },
         {
             name: "Revenue",
             data: [74, 83, 102, 97, 86, 106, 93, 114, 94],
@@ -100,7 +100,7 @@ const columnDatalabelChart = {
     series: [{
         name: "Inflation",
         data: [2.5, 3.2, 5.0, 10.1, 4.2, 3.8, 3, 2.4, 4.0, 1.2, 3.5, 0.8],
-    }, ],
+    },],
     chartOptions: {
         chart: {
             height: 350,
@@ -216,9 +216,9 @@ const columnDatalabelChart = {
 
 const stackedColumnsChart = {
     series: [{
-            name: "PRODUCT A",
-            data: [44, 55, 41, 67, 22, 43],
-        },
+        name: "PRODUCT A",
+        data: [44, 55, 41, 67, 22, 43],
+    },
         {
             name: "PRODUCT B",
             data: [13, 23, 20, 8, 13, 27],
@@ -253,7 +253,7 @@ const stackedColumnsChart = {
                     offsetY: 0,
                 },
             },
-        }, ],
+        },],
         plotOptions: {
             bar: {
                 horizontal: false,
@@ -286,9 +286,9 @@ const stackedColumnsChart = {
 
 const columnStackedChart = {
     series: [{
-            name: "PRODUCT A",
-            data: [44, 55, 41, 67, 22, 43, 21, 49],
-        },
+        name: "PRODUCT A",
+        data: [44, 55, 41, 67, 22, 43, 21, 49],
+    },
         {
             name: "PRODUCT B",
             data: [13, 23, 20, 8, 13, 27, 33, 12],
@@ -317,7 +317,7 @@ const columnStackedChart = {
                     offsetY: 0,
                 },
             },
-        }, ],
+        },],
         xaxis: {
             categories: [
                 "2011 Q1",
@@ -348,15 +348,15 @@ const columnMarkersChart = {
     series: [{
         name: "Actual",
         data: [{
-                x: "2011",
-                y: 1292,
-                goals: [{
-                    name: "Expected",
-                    value: 1400,
-                    strokeWidth: 5,
-                    strokeColor: "#775DD0",
-                }, ],
-            },
+            x: "2011",
+            y: 1292,
+            goals: [{
+                name: "Expected",
+                value: 1400,
+                strokeWidth: 5,
+                strokeColor: "#775DD0",
+            },],
+        },
             {
                 x: "2012",
                 y: 4432,
@@ -365,7 +365,7 @@ const columnMarkersChart = {
                     value: 5400,
                     strokeWidth: 5,
                     strokeColor: "#775DD0",
-                }, ],
+                },],
             },
             {
                 x: "2013",
@@ -375,7 +375,7 @@ const columnMarkersChart = {
                     value: 5200,
                     strokeWidth: 5,
                     strokeColor: "#775DD0",
-                }, ],
+                },],
             },
             {
                 x: "2014",
@@ -385,7 +385,7 @@ const columnMarkersChart = {
                     value: 6500,
                     strokeWidth: 5,
                     strokeColor: "#775DD0",
-                }, ],
+                },],
             },
             {
                 x: "2015",
@@ -395,7 +395,7 @@ const columnMarkersChart = {
                     value: 6600,
                     strokeWidth: 5,
                     strokeColor: "#775DD0",
-                }, ],
+                },],
             },
             {
                 x: "2016",
@@ -405,7 +405,7 @@ const columnMarkersChart = {
                     value: 7500,
                     strokeWidth: 5,
                     strokeColor: "#775DD0",
-                }, ],
+                },],
             },
             {
                 x: "2017",
@@ -415,7 +415,7 @@ const columnMarkersChart = {
                     value: 8700,
                     strokeWidth: 5,
                     strokeColor: "#775DD0",
-                }, ],
+                },],
             },
             {
                 x: "2018",
@@ -425,10 +425,10 @@ const columnMarkersChart = {
                     value: 7300,
                     strokeWidth: 5,
                     strokeColor: "#775DD0",
-                }, ],
+                },],
             },
         ],
-    }, ],
+    },],
     chartOptions: {
         chart: {
             height: 350,
@@ -463,9 +463,9 @@ const columnRotatedLabel = {
     series: [{
         name: "Servings",
         data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65, 35],
-    }, ],
+    },],
     chartOptions: {
-        colors:getChartColorsArray('["--vz-info"]'),
+        colors: getChartColorsArray('["--vz-info"]'),
         annotations: {
             points: [{
                 x: "Bananas",
@@ -479,7 +479,7 @@ const columnRotatedLabel = {
                     },
                     text: "Bananas are good",
                 },
-            }, ],
+            },],
         },
         chart: {
             height: 350,
@@ -582,9 +582,9 @@ const columnNegativeChart = {
             -21.4,
             -2.4,
         ],
-    }, ],
+    },],
     chartOptions: {
-        colors:getChartColorsArray('["--vz-success", "--vz-primary", "--vz-warning"]'),
+        colors: getChartColorsArray('["--vz-success", "--vz-primary", "--vz-warning"]'),
         chart: {
             type: "bar",
             height: 350,
@@ -596,10 +596,10 @@ const columnNegativeChart = {
             bar: {
                 colors: {
                     ranges: [{
-                            from: -100,
-                            to: -46,
-                            color: "#f56e6e",
-                        },
+                        from: -100,
+                        to: -46,
+                        color: "#f56e6e",
+                    },
                         {
                             from: -45,
                             to: 0,
@@ -671,29 +671,29 @@ const columnNegativeChart = {
 
 const rangeColumnChart = {
     series: [{
-            data: [{
-                    x: "Team A",
-                    y: [1, 5],
-                },
-                {
-                    x: "Team B",
-                    y: [4, 6],
-                },
-                {
-                    x: "Team C",
-                    y: [5, 8],
-                },
-                {
-                    x: "Team D",
-                    y: [3, 11],
-                },
-            ],
+        data: [{
+            x: "Team A",
+            y: [1, 5],
         },
+            {
+                x: "Team B",
+                y: [4, 6],
+            },
+            {
+                x: "Team C",
+                y: [5, 8],
+            },
+            {
+                x: "Team D",
+                y: [3, 11],
+            },
+        ],
+    },
         {
             data: [{
-                    x: "Team A",
-                    y: [2, 6],
-                },
+                x: "Team A",
+                y: [2, 6],
+            },
                 {
                     x: "Team B",
                     y: [1, 3],
@@ -737,11 +737,11 @@ function makeData() {
     var dataSet = shuffleArray(arrayData);
 
     var dataYearSeries = [{
-            x: "2011",
-            y: dataSet[0].y,
-            color: colors[0],
-            quarters: dataSet[0].quarters,
-        },
+        x: "2011",
+        y: dataSet[0].y,
+        color: colors[0],
+        quarters: dataSet[0].quarters,
+    },
         {
             x: "2012",
             y: dataSet[1].y,
@@ -807,7 +807,7 @@ function updateQuarterChart(sourceChart, destChartIDToUpdate) {
         if (series.length === 0)
             series = [{
                 data: [],
-            }, ];
+            },];
 
         return window.ApexCharts.exec(destChartIDToUpdate, "updateOptions", {
             series: series,
@@ -822,31 +822,31 @@ function updateQuarterChart(sourceChart, destChartIDToUpdate) {
 const colors = getChartColorsArray('["--vz-primary", "--vz-success", "--vz-warning", "--vz-danger", "--vz-dark", "--vz-info"]');
 
 export const arrayData = [{
-        y: 400,
-        quarters: [{
-                x: "Q1",
-                y: 120,
-            },
-            {
-                x: "Q2",
-                y: 90,
-            },
-            {
-                x: "Q3",
-                y: 100,
-            },
-            {
-                x: "Q4",
-                y: 90,
-            },
-        ],
+    y: 400,
+    quarters: [{
+        x: "Q1",
+        y: 120,
     },
+        {
+            x: "Q2",
+            y: 90,
+        },
+        {
+            x: "Q3",
+            y: 100,
+        },
+        {
+            x: "Q4",
+            y: 90,
+        },
+    ],
+},
     {
         y: 430,
         quarters: [{
-                x: "Q1",
-                y: 120,
-            },
+            x: "Q1",
+            y: 120,
+        },
             {
                 x: "Q2",
                 y: 110,
@@ -864,9 +864,9 @@ export const arrayData = [{
     {
         y: 448,
         quarters: [{
-                x: "Q1",
-                y: 70,
-            },
+            x: "Q1",
+            y: 70,
+        },
             {
                 x: "Q2",
                 y: 100,
@@ -884,9 +884,9 @@ export const arrayData = [{
     {
         y: 470,
         quarters: [{
-                x: "Q1",
-                y: 150,
-            },
+            x: "Q1",
+            y: 150,
+        },
             {
                 x: "Q2",
                 y: 60,
@@ -904,9 +904,9 @@ export const arrayData = [{
     {
         y: 540,
         quarters: [{
-                x: "Q1",
-                y: 120,
-            },
+            x: "Q1",
+            y: 120,
+        },
             {
                 x: "Q2",
                 y: 120,
@@ -924,9 +924,9 @@ export const arrayData = [{
     {
         y: 580,
         quarters: [{
-                x: "Q1",
-                y: 170,
-            },
+            x: "Q1",
+            y: 170,
+        },
             {
                 x: "Q2",
                 y: 130,
@@ -947,7 +947,7 @@ const chartYearOption = {
     series: [{
         name: "year",
         data: makeData(),
-    }, ],
+    },],
     chartOptions: {
         chart: {
             id: "barYear",
@@ -1047,7 +1047,7 @@ const chartYearOption = {
 const quarterChartOption = {
     series: [{
         data: [],
-    }, ],
+    },],
     chartOptions: {
         chart: {
             id: "barQuarter",
@@ -1111,7 +1111,7 @@ const quarterChartOption = {
 const distributedColumnchart = {
     series: [{
         data: [21, 22, 10, 28, 16, 21, 13, 30],
-    }, ],
+    },],
     chartOptions: {
         chart: {
             height: 350,
@@ -1160,7 +1160,7 @@ const dynamicQuarterLoadedChart = {
     series: [{
         name: "quarter",
         data: [],
-    }, ],
+    },],
     chartOptions: {
         chart: {
             id: "barQuarter",

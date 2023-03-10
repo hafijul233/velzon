@@ -7,54 +7,54 @@ import "prismjs";
 import "prismjs/themes/prism.css";
 
 export default {
-  page: {
-    title: "Highlight",
-    meta: [{
-      name: "description",
-      content: appConfig.description
-    }],
-  },
-  data() {
-    return {
-      title: "Highlight",
-      items: [{
-        text: "Advance UI",
-        href: "/",
-      },
-      {
-        text: "Highlight",
-        active: true,
-      },
-      ],
-    };
-  },
-  components: {
-    Layout,
-    PageHeader,
-  },
+    page: {
+        title: "Highlight",
+        meta: [{
+            name: "description",
+            content: appConfig.description
+        }],
+    },
+    data() {
+        return {
+            title: "Highlight",
+            items: [{
+                text: "Advance UI",
+                href: "/",
+            },
+                {
+                    text: "Highlight",
+                    active: true,
+                },
+            ],
+        };
+    },
+    components: {
+        Layout,
+        PageHeader,
+    },
 };
 </script>
 
 <template>
-  <Layout>
-    <PageHeader :title="title" :items="items" />
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <div class="flex-grow-1">
-              <b-card-title class="mb-0">HTML Highlight</b-card-title>
-            </div>
-          </b-card-header>
+    <Layout>
+        <PageHeader :items="items" :title="title"/>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <div class="flex-grow-1">
+                            <b-card-title class="mb-0">HTML Highlight</b-card-title>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              HTML highlight is used to mark or highlight text that is of
-              property, relevance, or special interest to an HTML document. here
-              is the example shown below.
-            </p>
+                    <b-card-body>
+                        <p class="text-muted">
+                            HTML highlight is used to mark or highlight text that is of
+                            property, relevance, or special interest to an HTML document. here
+                            is the example shown below.
+                        </p>
 
-            <div>
+                        <div>
               <pre class="live-preview">
 <code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -71,61 +71,61 @@ export default {
         &lt;!-- end div content --&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <div class="flex-grow-1">
-              <b-card-title class="mb-0">CSS Highlight</b-card-title>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <div class="flex-grow-1">
+                            <b-card-title class="mb-0">CSS Highlight</b-card-title>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              CSS highlight is used to mark or highlight text that is of
-              property, relevance, or special interest to a CSS document. Here
-              is the example shown below.
-            </p>
-            <div>
+                    <b-card-body>
+                        <p class="text-muted">
+                            CSS highlight is used to mark or highlight text that is of
+                            property, relevance, or special interest to a CSS document. Here
+                            is the example shown below.
+                        </p>
+                        <div>
               <pre class="live-preview">
 <code class="language-css">body {
-    color: #212529; 
+    color: #212529;
     background-color: #f3f3f9;
     font-family: "Poppins",sans-serif;
 }
 
 .example {
     margin: 0;
-    color: #74788d; 
+    color: #74788d;
 }</code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <div class="flex-grow-1">
-              <b-card-title class="mb-0">Javascript Highlight</b-card-title>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <div class="flex-grow-1">
+                            <b-card-title class="mb-0">Javascript Highlight</b-card-title>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Javascript highlight is used to mark or highlight text that is of
-              property, relevance, or special interest to a Javascript document.
-              Here is the example shown below.
-            </p>
-            <div>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Javascript highlight is used to mark or highlight text that is of
+                            property, relevance, or special interest to a Javascript document.
+                            Here is the example shown below.
+                        </p>
+                        <div>
               <pre class="live-preview">
 <code class="language-js">function myFunction() {
     var divElement = document.getElementById("myDIV");
@@ -135,10 +135,10 @@ export default {
       divElement.style.display = "none";
     }
 }</code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
-  </Layout>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
+    </Layout>
 </template>

@@ -50,23 +50,23 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
-                    <b-card-header  class="align-items-center d-flex">
+                    <b-card-header class="align-items-center d-flex">
                         <b-card-title class="mb-0 flex-grow-1">Bootstrap Toasts</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="bootstraptoast-showcode" class="form-label text-muted">
+                                <label class="form-label text-muted" for="bootstraptoast-showcode">
                                     Show
                                     Code
                                 </label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="bootstraptoast-showcode" />
+                                <input id="bootstraptoast-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
-                    </b-card-header >
+                    </b-card-header>
 
                     <b-card-body>
                         <div class="live-preview">
@@ -78,15 +78,15 @@ export default {
                                         <code>toast</code> class to set a default toast.
                                     </p>
                                     <!-- Basic Toasts Example -->
-                                    <div class="toast fade show" role="alert" aria-live="assertive"
-                                        data-bs-autohide="false" aria-atomic="true">
+                                    <div aria-atomic="true" aria-live="assertive" class="toast fade show"
+                                         data-bs-autohide="false" role="alert">
                                         <div class="toast-header">
-                                            <img src="@/assets/images/logo-sm.png" class="rounded me-2" alt="..."
-                                                height="20" />
+                                            <img alt="..." class="rounded me-2" height="20"
+                                                 src="@/assets/images/logo-sm.png"/>
                                             <span class="fw-semibold me-auto">Velzon</span>
                                             <small>06 mins ago</small>
-                                            <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                                aria-label="Close"></button>
+                                            <button aria-label="Close" class="btn-close" data-bs-dismiss="toast"
+                                                    type="button"></button>
                                         </div>
                                         <div class="toast-body">Hello, world! This is a toast message.</div>
                                     </div>
@@ -100,15 +100,15 @@ export default {
                                         </p>
                                         <!-- Toasts Translucent -->
                                         <div class="p-3 bg-light">
-                                            <div class="toast fade show" role="alert" aria-live="assertive"
-                                                data-bs-autohide="false" aria-atomic="true">
+                                            <div aria-atomic="true" aria-live="assertive" class="toast fade show"
+                                                 data-bs-autohide="false" role="alert">
                                                 <div class="toast-header">
-                                                    <img src="@/assets/images/logo-sm.png" class="rounded me-2"
-                                                        alt="..." height="20" />
+                                                    <img alt="..." class="rounded me-2"
+                                                         height="20" src="@/assets/images/logo-sm.png"/>
                                                     <span class="fw-semibold me-auto">Velzon</span>
                                                     <small>11 mins ago</small>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                                        aria-label="Close"></button>
+                                                    <button aria-label="Close" class="btn-close" data-bs-dismiss="toast"
+                                                            type="button"></button>
                                                 </div>
                                                 <div class="toast-body">Hello, world! This is a toast message.</div>
                                             </div>
@@ -127,28 +127,28 @@ export default {
 
                                         <div class="p-3 bg-light">
                                             <!-- Toasts Stacking -->
-                                            <div class="toast fade show" role="alert" aria-live="assertive"
-                                                data-bs-autohide="false" aria-atomic="true">
+                                            <div aria-atomic="true" aria-live="assertive" class="toast fade show"
+                                                 data-bs-autohide="false" role="alert">
                                                 <div class="toast-header">
-                                                    <img src="@/assets/images/logo-sm.png" class="rounded me-2"
-                                                        alt="..." height="20" />
+                                                    <img alt="..." class="rounded me-2"
+                                                         height="20" src="@/assets/images/logo-sm.png"/>
                                                     <span class="fw-semibold me-auto">Velzon</span>
                                                     <small>Just now</small>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                                        aria-label="Close"></button>
+                                                    <button aria-label="Close" class="btn-close" data-bs-dismiss="toast"
+                                                            type="button"></button>
                                                 </div>
                                                 <div class="toast-body">See? Just like this.</div>
                                             </div>
 
-                                            <div class="toast fade show" role="alert" aria-live="assertive"
-                                                data-bs-autohide="false" aria-atomic="true">
+                                            <div aria-atomic="true" aria-live="assertive" class="toast fade show"
+                                                 data-bs-autohide="false" role="alert">
                                                 <div class="toast-header">
-                                                    <img src="@/assets/images/logo-sm.png" class="rounded me-2"
-                                                        alt="..." height="20" />
+                                                    <img alt="..." class="rounded me-2"
+                                                         height="20" src="@/assets/images/logo-sm.png"/>
                                                     <span class="fw-semibold me-auto">Velzon</span>
                                                     <small>2 seconds ago</small>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                                        aria-label="Close"></button>
+                                                    <button aria-label="Close" class="btn-close" data-bs-dismiss="toast"
+                                                            type="button"></button>
                                                 </div>
                                                 <div class="toast-body">Heads up, toasts will stack automatically</div>
                                             </div>
@@ -174,18 +174,19 @@ export default {
                                             </p>
 
                                             <!-- Toasts Placement -->
-                                            <div class="bg-light" aria-live="polite" aria-atomic="true"
-                                                style="position: relative; min-height: 200px;">
-                                                <div class="toast fade show" role="alert" aria-live="assertive"
-                                                    aria-atomic="true" data-bs-toggle="toast"
-                                                    style="position: absolute; top: 16px; right: 16px;">
+                                            <div aria-atomic="true" aria-live="polite" class="bg-light"
+                                                 style="position: relative; min-height: 200px;">
+                                                <div aria-atomic="true" aria-live="assertive" class="toast fade show"
+                                                     data-bs-toggle="toast" role="alert"
+                                                     style="position: absolute; top: 16px; right: 16px;">
                                                     <div class="toast-header">
-                                                        <img src="@/assets/images/logo-sm.png" class="rounded me-2"
-                                                            alt="..." height="20" />
+                                                        <img alt="..." class="rounded me-2"
+                                                             height="20" src="@/assets/images/logo-sm.png"/>
                                                         <span class="fw-semibold me-auto">Velzon</span>
                                                         <small>06 mins ago</small>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                                            aria-label="Close"></button>
+                                                        <button aria-label="Close" class="btn-close"
+                                                                data-bs-dismiss="toast"
+                                                                type="button"></button>
                                                     </div>
                                                     <div class="toast-body">Hello, world! This is a toast message.</div>
                                                 </div>
@@ -203,18 +204,19 @@ export default {
                                             </p>
 
                                             <!-- Flexbox container for aligning the toasts -->
-                                            <div aria-live="polite" aria-atomic="true"
-                                                class="bg-light d-flex justify-content-center align-items-center"
-                                                style="height: 200px;">
-                                                <div class="toast fade show" role="alert" aria-live="assertive"
-                                                    data-bs-autohide="false" aria-atomic="true">
+                                            <div aria-atomic="true" aria-live="polite"
+                                                 class="bg-light d-flex justify-content-center align-items-center"
+                                                 style="height: 200px;">
+                                                <div aria-atomic="true" aria-live="assertive" class="toast fade show"
+                                                     data-bs-autohide="false" role="alert">
                                                     <div class="toast-header">
-                                                        <img src="@/assets/images/logo-sm.png" class="rounded me-2"
-                                                            alt="..." height="20" />
+                                                        <img alt="..." class="rounded me-2"
+                                                             height="20" src="@/assets/images/logo-sm.png"/>
                                                         <span class="fw-semibold me-auto">Velzon</span>
                                                         <small>11 mins ago</small>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                                            aria-label="Close"></button>
+                                                        <button aria-label="Close" class="btn-close"
+                                                                data-bs-dismiss="toast"
+                                                                type="button"></button>
                                                     </div>
                                                     <div class="toast-body">Hello, world! This is a toast message.</div>
                                                 </div>
@@ -227,7 +229,7 @@ export default {
 
                         <div class="d-none code-view">
                             <pre class="language-markup" style="height: 275px;">
-<code>&lt;!-- Default Toast --&gt; 
+<code>&lt;!-- Default Toast --&gt;
 &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot;
     data-bs-autohide=&quot;false&quot; aria-atomic=&quot;true&quot;&gt;
     &lt;div class=&quot;toast-header&quot;&gt;
@@ -243,7 +245,7 @@ export default {
     &lt;/div&gt;
 &lt;/div&gt;</code>
 
-<code>&lt;!-- Translucent Toast --&gt; 
+<code>&lt;!-- Translucent Toast --&gt;
 &lt;div class=&quot;p-3 bg-light&quot;&gt;
     &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot;
         data-bs-autohide=&quot;false&quot; aria-atomic=&quot;true&quot;&gt;
@@ -261,7 +263,7 @@ export default {
     &lt;/div&gt;
 &lt;/div&gt;</code>
 
-<code>&lt;!-- Stacking Toast --&gt; 
+<code>&lt;!-- Stacking Toast --&gt;
 &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot;
     data-bs-autohide=&quot;false&quot; aria-atomic=&quot;true&quot;&gt;
     &lt;div class=&quot;toast-header&quot;&gt;
@@ -277,7 +279,7 @@ export default {
     &lt;/div&gt;
 &lt;/div&gt;</code>
 
-<code>&lt;!-- Placement Toast --&gt; 
+<code>&lt;!-- Placement Toast --&gt;
 &lt;div class=&quot;bg-light&quot; aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot;
     style=&quot;position: relative; min-height: 200px;&quot;&gt;
     &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot;

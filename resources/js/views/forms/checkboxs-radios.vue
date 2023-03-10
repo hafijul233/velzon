@@ -6,7 +6,7 @@ import appConfig from "../../../app.config";
 export default {
     page: {
         title: "Checkboxs & Radios",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -51,7 +51,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -59,8 +59,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Checkbox</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="default" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="default">
+                                <label class="form-label text-muted" for="default">Show Code</label>
+                                <input id="default" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -75,13 +75,13 @@ export default {
                                             checkbox and add <code>checked</code>
                                             attribute to set a checkbox checked by default.</p>
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input" type="checkbox" id="formCheck1">
+                                            <input id="formCheck1" class="form-check-input" type="checkbox">
                                             <label class="form-check-label" for="formCheck1">
                                                 Default checkbox
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked>
+                                            <input id="formCheck2" checked class="form-check-input" type="checkbox">
                                             <label class="form-check-label" for="formCheck2">
                                                 Checked checkbox
                                             </label>
@@ -97,8 +97,8 @@ export default {
                                             attribute to set a checkbox checked by default.</p>
                                         <div>
                                             <div class="form-check form-check-right mb-2">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckDisabled" disabled>
+                                                <input id="flexCheckDisabled" class="form-check-input" disabled
+                                                       type="checkbox" value="">
                                                 <label class="form-check-label" for="flexCheckDisabled">
                                                     Disabled checkbox
                                                 </label>
@@ -106,8 +106,8 @@ export default {
                                         </div>
                                         <div>
                                             <div class="form-check form-check-right">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckCheckedDisabled" checked disabled>
+                                                <input id="flexCheckCheckedDisabled" checked class="form-check-input"
+                                                       disabled type="checkbox" value="">
                                                 <label class="form-check-label" for="flexCheckCheckedDisabled">
                                                     Disabled checked checkbox
                                                 </label>
@@ -122,16 +122,16 @@ export default {
                                         <p class="text-muted">Use <code>form-check-right</code> class to form-check
                                             class to set a checkbox on the right side.</p>
                                         <div class="form-check form-check-right mb-2">
-                                            <input class="form-check-input" type="checkbox" name="formCheckboxRight"
-                                                id="formCheckboxRight1" checked="">
+                                            <input id="formCheckboxRight1" checked="" class="form-check-input"
+                                                   name="formCheckboxRight" type="checkbox">
                                             <label class="form-check-label" for="formCheckboxRight1">
                                                 Form Radio Right
                                             </label>
                                         </div>
                                         <div>
                                             <div class="form-check form-check-right">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="flexCheckCheckedRightDisabled" checked disabled>
+                                                <input id="flexCheckCheckedRightDisabled" checked class="form-check-input"
+                                                       disabled type="checkbox" value="">
                                                 <label class="form-check-label" for="flexCheckCheckedRightDisabled">
                                                     Disabled checked checkbox
                                                 </label>
@@ -145,8 +145,8 @@ export default {
                                         <p class="text-muted fw-medium">Indeterminate</p>
                                         <div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="defaultIndeterminateCheck">
+                                                <input id="defaultIndeterminateCheck" class="form-check-input" type="checkbox"
+                                                       value="">
                                                 <label class="form-check-label" for="defaultIndeterminateCheck">
                                                     Indeterminate checkbox
                                                 </label>
@@ -227,9 +227,9 @@ Indeterminate checkbox
                         <b-card-title class="mb-0 flex-grow-1">Custom Checkboxes</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="custom-checkboxes-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="custom-checkboxes-showcode">
+                                <label class="form-label text-muted" for="custom-checkboxes-showcode">Show Code</label>
+                                <input id="custom-checkboxes-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -243,46 +243,46 @@ Indeterminate checkbox
                                             color variation to set a color checkbox.</p>
                                         <div>
                                             <div class="form-check mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck6" checked>
+                                                <input id="formCheck6" checked class="form-check-input" type="checkbox">
                                                 <label class="form-check-label" for="formCheck6">
                                                     Checkbox Primary
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-secondary mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck7" checked>
+                                                <input id="formCheck7" checked class="form-check-input" type="checkbox">
                                                 <label class="form-check-label" for="formCheck7">
                                                     Checkbox Secondary
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-success mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck8" checked>
+                                                <input id="formCheck8" checked class="form-check-input" type="checkbox">
                                                 <label class="form-check-label" for="formCheck8">
                                                     Checkbox Success
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-warning mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck9" checked>
+                                                <input id="formCheck9" checked class="form-check-input" type="checkbox">
                                                 <label class="form-check-label" for="formCheck9">
                                                     Checkbox Warning
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-danger mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck10"
-                                                    checked>
+                                                <input id="formCheck10" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck10">
                                                     Checkbox Danger
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-info mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck11"
-                                                    checked>
+                                                <input id="formCheck11" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck11">
                                                     Checkbox Info
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-dark">
-                                                <input class="form-check-input" type="checkbox" id="formCheck12"
-                                                    checked>
+                                                <input id="formCheck12" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck12">
                                                     Checkbox Dark
                                                 </label>
@@ -299,50 +299,50 @@ Indeterminate checkbox
                                         </p>
                                         <div>
                                             <div class="form-check form-check-outline form-check-primary mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck13"
-                                                    checked>
+                                                <input id="formCheck13" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck13">
                                                     Checkbox Outline Primary
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-outline form-check-secondary mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck14"
-                                                    checked>
+                                                <input id="formCheck14" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck14">
                                                     Checkbox Outline Secondary
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-outline form-check-success mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck15"
-                                                    checked>
+                                                <input id="formCheck15" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck15">
                                                     Checkbox Outline Success
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-outline form-check-warning mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck16"
-                                                    checked>
+                                                <input id="formCheck16" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck16">
                                                     Checkbox Outline Warning
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-outline form-check-danger mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck17"
-                                                    checked>
+                                                <input id="formCheck17" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck17">
                                                     Checkbox Outline Danger
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-outline form-check-info mb-3">
-                                                <input class="form-check-input" type="checkbox" id="formCheck18"
-                                                    checked>
+                                                <input id="formCheck18" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck18">
                                                     Checkbox Outline Info
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-outline form-check-dark">
-                                                <input class="form-check-input" type="checkbox" id="formCheck19"
-                                                    checked>
+                                                <input id="formCheck19" checked class="form-check-input"
+                                                       type="checkbox">
                                                 <label class="form-check-label" for="formCheck19">
                                                     Checkbox Outline Dark
                                                 </label>
@@ -468,8 +468,8 @@ Checkbox Outline light
                         <b-card-title class="mb-0 flex-grow-1">Radios</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="radios-btn-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="radios-btn-showcode">
+                                <label class="form-label text-muted" for="radios-btn-showcode">Show Code</label>
+                                <input id="radios-btn-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -484,15 +484,15 @@ Checkbox Outline light
                                             button and add <code>checked</code>
                                             attribute to set a radio checked by default.</p>
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault1">
+                                            <input id="flexRadioDefault1" class="form-check-input" name="flexRadioDefault"
+                                                   type="radio">
                                             <label class="form-check-label" for="flexRadioDefault1">
                                                 Default radio
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2" checked>
+                                            <input id="flexRadioDefault2" checked class="form-check-input"
+                                                   name="flexRadioDefault" type="radio">
                                             <label class="form-check-label" for="flexRadioDefault2">
                                                 Default checked radio
                                             </label>
@@ -506,16 +506,16 @@ Checkbox Outline light
                                             disabled and add <code>checked</code>
                                             attribute to set a radio checked by default.</p>
                                         <div class="form-check mb-2">
-                                            <input class="form-check-input" type="radio" name="flexRadioDisabled"
-                                                id="flexRadioDisabled" disabled>
+                                            <input id="flexRadioDisabled" class="form-check-input" disabled
+                                                   name="flexRadioDisabled" type="radio">
                                             <label class="form-check-label" for="flexRadioDisabled">
                                                 Disabled radio
                                             </label>
                                         </div>
                                         <div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDisabled"
-                                                    id="flexRadioCheckedDisabled" checked disabled>
+                                                <input id="flexRadioCheckedDisabled" checked class="form-check-input"
+                                                       disabled name="flexRadioDisabled" type="radio">
                                                 <label class="form-check-label" for="flexRadioCheckedDisabled">
                                                     Disabled checked radio
                                                 </label>
@@ -530,17 +530,17 @@ Checkbox Outline light
                                         <p class="text-muted">Use <code>form-check-right</code> class to form-check
                                             class to set a radio button on the right side.</p>
                                         <div class="form-check form-check-right mb-2">
-                                            <input class="form-check-input" type="radio" name="formradioRight"
-                                                id="formradioRight1">
+                                            <input id="formradioRight1" class="form-check-input" name="formradioRight"
+                                                   type="radio">
                                             <label class="form-check-label" for="formradioRight1">
                                                 Form Radio Right
                                             </label>
                                         </div>
                                         <div>
                                             <div class="form-check form-check-right">
-                                                <input class="form-check-input" type="radio" value=""
-                                                    name="formradioRight" id="flexCheckCheckedDisabled2" checked
-                                                    disabled>
+                                                <input id="flexCheckCheckedDisabled2" checked class="form-check-input"
+                                                       disabled name="formradioRight" type="radio"
+                                                       value="">
                                                 <label class="form-check-label" for="flexCheckCheckedDisabled2">
                                                     Disabled checked radio
                                                 </label>
@@ -613,9 +613,9 @@ Disabled checked radio
                         <b-card-title class="mb-0 flex-grow-1">Custom Radio</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="custom-radio-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="custom-radio-showcode">
+                                <label class="form-label text-muted" for="custom-radio-showcode">Show Code</label>
+                                <input id="custom-radio-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -628,56 +628,56 @@ Disabled checked radio
                                             color variation to set a color radio.</p>
 
                                         <div class="form-check form-radio-primary mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor1"
-                                                id="formradioRight5" checked>
+                                            <input id="formradioRight5" checked class="form-check-input"
+                                                   name="formradiocolor1" type="radio">
                                             <label class="form-check-label" for="formradioRight5">
                                                 Radio Primary
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-secondary mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor2"
-                                                id="formradioRight6" checked>
+                                            <input id="formradioRight6" checked class="form-check-input"
+                                                   name="formradiocolor2" type="radio">
                                             <label class="form-check-label" for="formradioRight6">
                                                 Radio Secondary
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-success mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor3"
-                                                id="formradioRight7" checked>
+                                            <input id="formradioRight7" checked class="form-check-input"
+                                                   name="formradiocolor3" type="radio">
                                             <label class="form-check-label" for="formradioRight7">
                                                 Radio Success
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-warning mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor4"
-                                                id="formradioRight8" checked>
+                                            <input id="formradioRight8" checked class="form-check-input"
+                                                   name="formradiocolor4" type="radio">
                                             <label class="form-check-label" for="formradioRight8">
                                                 Radio Warning
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-danger mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor5"
-                                                id="formradioRight9" checked>
+                                            <input id="formradioRight9" checked class="form-check-input"
+                                                   name="formradiocolor5" type="radio">
                                             <label class="form-check-label" for="formradioRight9">
                                                 Radio Danger
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-info mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor6"
-                                                id="formradioRight10" checked>
+                                            <input id="formradioRight10" checked class="form-check-input"
+                                                   name="formradiocolor6" type="radio">
                                             <label class="form-check-label" for="formradioRight10">
                                                 Radio Info
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-dark">
-                                            <input class="form-check-input" type="radio" name="formradiocolor7"
-                                                id="formradioRight11" checked>
+                                            <input id="formradioRight11" checked class="form-check-input"
+                                                   name="formradiocolor7" type="radio">
                                             <label class="form-check-label" for="formradioRight11">
                                                 Radio Dark
                                             </label>
@@ -693,56 +693,56 @@ Disabled checked radio
                                         </p>
 
                                         <div class="form-check form-radio-outline form-radio-primary mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor9"
-                                                id="formradioRight13" checked>
+                                            <input id="formradioRight13" checked class="form-check-input"
+                                                   name="formradiocolor9" type="radio">
                                             <label class="form-check-label" for="formradioRight13">
                                                 Radio Outline Primary
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-outline form-radio-secondary mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor10"
-                                                id="formradioRight14" checked>
+                                            <input id="formradioRight14" checked class="form-check-input"
+                                                   name="formradiocolor10" type="radio">
                                             <label class="form-check-label" for="formradioRight14">
                                                 Radio Outline Secondary
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-outline form-radio-success mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor11"
-                                                id="formradioRight15" checked>
+                                            <input id="formradioRight15" checked class="form-check-input"
+                                                   name="formradiocolor11" type="radio">
                                             <label class="form-check-label" for="formradioRight15">
                                                 Radio Outline Success
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-outline form-radio-warning mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor12"
-                                                id="formradioRight16" checked>
+                                            <input id="formradioRight16" checked class="form-check-input"
+                                                   name="formradiocolor12" type="radio">
                                             <label class="form-check-label" for="formradioRight16">
                                                 Radio Outline Warning
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-outline form-radio-danger mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor13"
-                                                id="formradioRight17" checked>
+                                            <input id="formradioRight17" checked class="form-check-input"
+                                                   name="formradiocolor13" type="radio">
                                             <label class="form-check-label" for="formradioRight17">
                                                 Radio Outline Danger
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-outline form-radio-info mb-3">
-                                            <input class="form-check-input" type="radio" name="formradiocolor14"
-                                                id="formradioRight18" checked>
+                                            <input id="formradioRight18" checked class="form-check-input"
+                                                   name="formradiocolor14" type="radio">
                                             <label class="form-check-label" for="formradioRight18">
                                                 Radio Outline Info
                                             </label>
                                         </div>
 
                                         <div class="form-check form-radio-outline form-radio-dark">
-                                            <input class="form-check-input" type="radio" name="formradiocolor15"
-                                                id="formradioRight19" checked>
+                                            <input id="formradioRight19" checked class="form-check-input"
+                                                   name="formradiocolor15" type="radio">
                                             <label class="form-check-label" for="formradioRight19">
                                                 Radio Outline Dark
                                             </label>
@@ -866,8 +866,8 @@ Radio Outline light
                         <b-card-title class="mb-0 flex-grow-1">Switches</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="switches-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="switches-showcode">
+                                <label class="form-label text-muted" for="switches-showcode">Show Code</label>
+                                <input id="switches-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -882,15 +882,15 @@ Radio Outline light
                                             set a switch and add <code>checked</code>
                                             attribute to set a switch checked by default.</p>
                                         <div class="form-check form-switch mb-2">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckDefault">
+                                            <input id="flexSwitchCheckDefault" class="form-check-input" role="switch"
+                                                   type="checkbox">
                                             <label class="form-check-label" for="flexSwitchCheckDefault">Default switch
                                                 input</label>
                                         </div>
 
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckChecked" checked>
+                                            <input id="flexSwitchCheckChecked" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch
                                                 input</label>
                                         </div>
@@ -904,17 +904,17 @@ Radio Outline light
                                             disabled and add <code>checked</code>
                                             attribute to set a switch checked by default.</p>
                                         <div class="form-check form-switch mb-2">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckDisabled" disabled>
+                                            <input id="flexSwitchCheckDisabled" class="form-check-input" disabled
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="flexSwitchCheckDisabled">Switch
                                                 input</label>
                                         </div>
 
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckCheckedDisabled1" checked disabled>
+                                            <input id="flexSwitchCheckCheckedDisabled1" checked class="form-check-input"
+                                                   disabled role="switch" type="checkbox">
                                             <label class="form-check-label"
-                                                for="flexSwitchCheckCheckedDisabled1">Disabled checked switch
+                                                   for="flexSwitchCheckCheckedDisabled1">Disabled checked switch
                                                 input</label>
                                         </div>
                                     </div>
@@ -927,19 +927,19 @@ Radio Outline light
                                             class to set a switch button on the right side.</p>
                                         <div>
                                             <div class="form-check form-switch form-check-right mb-2">
-                                                <input class="form-check-input" type="checkbox" role="switch"
-                                                    id="flexSwitchCheckRightDisabled" checked>
+                                                <input id="flexSwitchCheckRightDisabled" checked class="form-check-input"
+                                                       role="switch" type="checkbox">
                                                 <label class="form-check-label"
-                                                    for="flexSwitchCheckRightDisabled">Switch Right input</label>
+                                                       for="flexSwitchCheckRightDisabled">Switch Right input</label>
                                             </div>
                                         </div>
 
                                         <div>
                                             <div class="form-check form-switch form-check-right">
-                                                <input class="form-check-input" type="checkbox" role="switch"
-                                                    id="flexSwitchCheckCheckedDisabled2" disabled>
+                                                <input id="flexSwitchCheckCheckedDisabled2" class="form-check-input" disabled
+                                                       role="switch" type="checkbox">
                                                 <label class="form-check-label"
-                                                    for="flexSwitchCheckCheckedDisabled2">Disabled checked switch
+                                                       for="flexSwitchCheckCheckedDisabled2">Disabled checked switch
                                                     input</label>
                                             </div>
                                         </div>
@@ -958,21 +958,21 @@ Radio Outline light
                                         </p>
 
                                         <div class="form-check form-switch mb-3" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="customSwitchsizesm"
-                                                checked="">
+                                            <input id="customSwitchsizesm" checked="" class="form-check-input"
+                                                   type="checkbox">
                                             <label class="form-check-label" for="customSwitchsizesm">Small Size
                                                 Switch</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-md mb-3" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="customSwitchsizemd">
+                                            <input id="customSwitchsizemd" class="form-check-input" type="checkbox">
                                             <label class="form-check-label" for="customSwitchsizemd">Medium Size
                                                 Switch</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-lg" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="customSwitchsizelg"
-                                                checked="">
+                                            <input id="customSwitchsizelg" checked="" class="form-check-input"
+                                                   type="checkbox">
                                             <label class="form-check-label" for="customSwitchsizelg">Large Size
                                                 Switch</label>
                                         </div>
@@ -1044,9 +1044,9 @@ Radio Outline light
                         <b-card-title class="mb-0 flex-grow-1">Switches Color</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="switches-color-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="switches-color-showcode">
+                                <label class="form-label text-muted" for="switches-color-showcode">Show Code</label>
+                                <input id="switches-color-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1059,26 +1059,26 @@ Radio Outline light
                                 <b-col md="6">
                                     <div>
                                         <div class="form-check form-switch mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck1" checked>
+                                            <input id="SwitchCheck1" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck1">Switch Default</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-secondary mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck2" checked>
+                                            <input id="SwitchCheck2" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck2">Switch Secondary</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-success mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck3" checked>
+                                            <input id="SwitchCheck3" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck3">Switch Success</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-warning mb-2 mb-md-0">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck4" checked>
+                                            <input id="SwitchCheck4" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck4">Switch Warning</label>
                                         </div>
                                     </div>
@@ -1087,20 +1087,20 @@ Radio Outline light
                                 <b-col md="6">
                                     <div>
                                         <div class="form-check form-switch form-switch-danger mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck5" checked>
+                                            <input id="SwitchCheck5" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck5">Switch Danger</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-info mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck6" checked>
+                                            <input id="SwitchCheck6" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck6">Switch Info</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-dark mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck7" checked>
+                                            <input id="SwitchCheck7" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck7">Switch Dark</label>
                                         </div>
                                     </div>
@@ -1151,9 +1151,9 @@ Radio Outline light
                         <b-card-title class="mb-0 flex-grow-1">Custom Switches</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="custom-switches-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="custom-switches-showcode">
+                                <label class="form-label text-muted" for="custom-switches-showcode">Show Code</label>
+                                <input id="custom-switches-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1167,28 +1167,28 @@ Radio Outline light
                                 <b-col md="6">
                                     <div>
                                         <div class="form-check form-switch form-switch-custom form-switch-primary mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck9" checked>
+                                            <input id="SwitchCheck9" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck9">Switch Primary</label>
                                         </div>
 
                                         <div
                                             class="form-check form-switch form-switch-custom form-switch-secondary mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck10" checked>
+                                            <input id="SwitchCheck10" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck10">Switch Secondary</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-custom form-switch-success mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck11" checked>
+                                            <input id="SwitchCheck11" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck11">Switch Success</label>
                                         </div>
 
                                         <div
                                             class="form-check form-switch form-switch-custom form-switch-warning mb-2 mb-md-0">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck12" checked>
+                                            <input id="SwitchCheck12" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck12">Switch Warning</label>
                                         </div>
                                     </div>
@@ -1197,20 +1197,20 @@ Radio Outline light
                                 <b-col md="6">
                                     <div class="mt-4 mt-md-0">
                                         <div class="form-check form-switch form-switch-custom form-switch-danger mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck13" checked>
+                                            <input id="SwitchCheck13" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck13">Switch Danger</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-custom form-switch-info mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck14" checked>
+                                            <input id="SwitchCheck14" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck14">Switch Info</label>
                                         </div>
 
                                         <div class="form-check form-switch form-switch-custom form-switch-dark mb-3">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="SwitchCheck15" checked>
+                                            <input id="SwitchCheck15" checked class="form-check-input"
+                                                   role="switch" type="checkbox">
                                             <label class="form-check-label" for="SwitchCheck15">Switch Dark</label>
                                         </div>
                                     </div>
@@ -1266,8 +1266,8 @@ Radio Outline light
                         <b-card-title class="mb-0 flex-grow-1">Inline Checkbox & Radios</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="Inline-shocade" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="Inline-shocade">
+                                <label class="form-label text-muted" for="Inline-shocade">Show Code</label>
+                                <input id="Inline-shocade" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1280,18 +1280,18 @@ Radio Outline light
                                 <b-col lg="4">
                                     <div class="mt-4 mt-lg-0">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox6"
-                                                value="option1">
+                                            <input id="inlineCheckbox6" class="form-check-input" type="checkbox"
+                                                   value="option1">
                                             <label class="form-check-label" for="inlineCheckbox6">1</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox7"
-                                                value="option2">
+                                            <input id="inlineCheckbox7" class="form-check-input" type="checkbox"
+                                                   value="option2">
                                             <label class="form-check-label" for="inlineCheckbox7">2</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox8"
-                                                value="option3" disabled>
+                                            <input id="inlineCheckbox8" class="form-check-input" disabled
+                                                   type="checkbox" value="option3">
                                             <label class="form-check-label" for="inlineCheckbox8">3 (disabled)</label>
                                         </div>
                                     </div>
@@ -1300,18 +1300,18 @@ Radio Outline light
                                 <b-col lg="4">
                                     <div class="mt-4 mt-lg-0">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1"
-                                                id="inlineRadio1" value="option1">
+                                            <input id="inlineRadio1" class="form-check-input" name="inlineRadioOptions1"
+                                                   type="radio" value="option1">
                                             <label class="form-check-label" for="inlineRadio1">1</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2"
-                                                id="inlineRadio2" value="option2">
+                                            <input id="inlineRadio2" class="form-check-input" name="inlineRadioOptions2"
+                                                   type="radio" value="option2">
                                             <label class="form-check-label" for="inlineRadio2">2</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions3"
-                                                id="inlineRadio3" value="option3" disabled>
+                                            <input id="inlineRadio3" class="form-check-input" disabled
+                                                   name="inlineRadioOptions3" type="radio" value="option3">
                                             <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
                                         </div>
                                     </div>
@@ -1320,16 +1320,16 @@ Radio Outline light
                                 <b-col lg="4">
                                     <div class="mt-4 mt-lg-0">
                                         <div class="form-check form-switch form-check-inline" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="inlineswitch5">
+                                            <input id="inlineswitch5" class="form-check-input" type="checkbox">
                                             <label class="form-check-label" for="inlineswitch5">1</label>
                                         </div>
                                         <div class="form-check form-switch form-check-inline" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="inlineswitch6">
+                                            <input id="inlineswitch6" class="form-check-input" type="checkbox">
                                             <label class="form-check-label" for="inlineswitch6">2</label>
                                         </div>
                                         <div class="form-check form-switch form-check-inline" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="inlineswitchdisabled2"
-                                                disabled>
+                                            <input id="inlineswitchdisabled2" class="form-check-input" disabled
+                                                   type="checkbox">
                                             <label class="form-check-label" for="inlineswitchdisabled2">2</label>
                                         </div>
                                     </div>
@@ -1391,9 +1391,9 @@ Radio Outline light
                         <b-card-title class="mb-0 flex-grow-1">Without Labels</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="without-labels-shocade" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="without-labels-shocade">
+                                <label class="form-label text-muted" for="without-labels-shocade">Show Code</label>
+                                <input id="without-labels-shocade" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1409,16 +1409,16 @@ Radio Outline light
                                 <b-col lg="4">
                                     <div class="mt-4 mt-lg-0">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                                value="option1">
+                                            <input id="inlineCheckbox1" class="form-check-input" type="checkbox"
+                                                   value="option1">
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                value="option2">
+                                            <input id="inlineCheckbox2" class="form-check-input" type="checkbox"
+                                                   value="option2">
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
-                                                value="option3" disabled>
+                                            <input id="inlineCheckbox3" class="form-check-input" disabled
+                                                   type="checkbox" value="option3">
                                         </div>
                                     </div>
                                 </b-col>
@@ -1427,16 +1427,16 @@ Radio Outline light
                                 <b-col lg="4">
                                     <div class="mt-4 mt-lg-0">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="WithoutinlineRadio1" value="option1">
+                                            <input id="WithoutinlineRadio1" class="form-check-input" name="inlineRadioOptions"
+                                                   type="radio" value="option1">
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="WithoutinlineRadio2" value="option2">
+                                            <input id="WithoutinlineRadio2" class="form-check-input" name="inlineRadioOptions"
+                                                   type="radio" value="option2">
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="WithoutinlineRadio3" value="option3" disabled>
+                                            <input id="WithoutinlineRadio3" class="form-check-input" disabled
+                                                   name="inlineRadioOptions" type="radio" value="option3">
                                         </div>
                                     </div>
                                 </b-col>
@@ -1445,14 +1445,14 @@ Radio Outline light
                                 <b-col lg="4">
                                     <div class="mt-4 mt-lg-0">
                                         <div class="form-check form-switch form-check-inline" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="inlineswitch">
+                                            <input id="inlineswitch" class="form-check-input" type="checkbox">
                                         </div>
                                         <div class="form-check form-switch form-check-inline" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="inlineswitch1">
+                                            <input id="inlineswitch1" class="form-check-input" type="checkbox">
                                         </div>
                                         <div class="form-check form-switch form-check-inline" dir="ltr">
-                                            <input type="checkbox" class="form-check-input" id="inlineswitchdisabled"
-                                                disabled>
+                                            <input id="inlineswitchdisabled" class="form-check-input" disabled
+                                                   type="checkbox">
                                         </div>
                                     </div>
                                 </b-col>
@@ -1510,8 +1510,8 @@ Radio Outline light
                         <b-card-title class="mb-0 flex-grow-1">Radio Toggle Buttons</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="radio-toggle-shocade" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="radio-toggle-shocade">
+                                <label class="form-label text-muted" for="radio-toggle-shocade">Show Code</label>
+                                <input id="radio-toggle-shocade" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1520,23 +1520,25 @@ Radio Outline light
                         <p class="text-muted">Create button-like checkboxes and radio buttons by using
                             <code>btn</code>
                             styles rather than form-check-label class on the &lt;label&gt; elements. These toggle
-                            buttons can further be grouped in a <b-link
+                            buttons can further be grouped in a
+                            <b-link
                                 href="https://getbootstrap.com/docs/5.1/components/button-group/">button group
-                            </b-link> if
+                            </b-link>
+                            if
                             needed.
                         </p>
                         <div class="live-preview">
                             <div class="hstack gap-2 flex-wrap">
-                                <input type="radio" class="btn-check" name="options" id="option1" checked>
+                                <input id="option1" checked class="btn-check" name="options" type="radio">
                                 <label class="btn btn-secondary" for="option1">Checked</label>
 
-                                <input type="radio" class="btn-check" name="options" id="option2">
+                                <input id="option2" class="btn-check" name="options" type="radio">
                                 <label class="btn btn-secondary" for="option2">Radio</label>
 
-                                <input type="radio" class="btn-check" name="options" id="option3" disabled>
+                                <input id="option3" class="btn-check" disabled name="options" type="radio">
                                 <label class="btn btn-secondary" for="option3">Disabled</label>
 
-                                <input type="radio" class="btn-check" name="options" id="option4">
+                                <input id="option4" class="btn-check" name="options" type="radio">
                                 <label class="btn btn-secondary" for="option4">Radio</label>
                             </div>
                         </div>
@@ -1567,9 +1569,9 @@ Radio Outline light
                         <b-card-title class="mb-0 flex-grow-1">Outlined Styles</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="outline-style-shocade" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="outline-style-shocade">
+                                <label class="form-label text-muted" for="outline-style-shocade">Show Code</label>
+                                <input id="outline-style-shocade" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1580,19 +1582,19 @@ Radio Outline light
                         <div class="live-preview">
 
                             <div class="hstack gap-2 flex-wrap">
-                                <input type="checkbox" class="btn-check" id="btn-check-outlined">
+                                <input id="btn-check-outlined" class="btn-check" type="checkbox">
                                 <label class="btn btn-outline-primary" for="btn-check-outlined">Single
                                     toggle</label>
 
-                                <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked>
+                                <input id="btn-check-2-outlined" checked class="btn-check" type="checkbox">
                                 <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label>
 
-                                <input type="radio" class="btn-check" name="options-outlined" id="success-outlined"
-                                    checked>
+                                <input id="success-outlined" checked class="btn-check" name="options-outlined"
+                                       type="radio">
                                 <label class="btn btn-outline-success" for="success-outlined">Checked success
                                     radio</label>
 
-                                <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined">
+                                <input id="danger-outlined" class="btn-check" name="options-outlined" type="radio">
                                 <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
                             </div>
                         </div>

@@ -8,6 +8,7 @@
     background-color: rgba($primary, 0.2);
     backdrop-filter: blur(2px);
     border-radius: 8px;
+
     &::after {
         font-family: remixicon !important;
         font-size: 28px;
@@ -21,31 +22,34 @@
         content: "\ea64" !important;
     }
 }
+
 .swiper-button-next {
     &::after {
         content: "\ea6e" !important;
     }
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     width: 22px;
     height: 5px;
     background-color: $white;
     border-radius: 50px;
     box-shadow: $element-shadow;
-    .swiper-pagination-bullet-active{
+
+    .swiper-pagination-bullet-active {
         opacity: 1;
     }
 }
 
-.dynamic-pagination{
+.dynamic-pagination {
     .swiper-pagination-bullet {
         width: 8px;
         height: 8px;
         background-color: $white;
         opacity: 0.5;
         transition: all 0.5s ease;
-        &.swiper-pagination-bullet-active{
+
+        &.swiper-pagination-bullet-active {
             opacity: 1;
             width: 20px;
         }
@@ -60,7 +64,7 @@
 }
 
 
-.pagination-custom{
+.pagination-custom {
     .swiper-pagination-bullet {
         height: 25px;
         width: 25px;
@@ -69,16 +73,18 @@
         background-color: $white;
         opacity: 0.5;
         transition: all 0.5s ease;
-        &.swiper-pagination-bullet-active{
+
+        &.swiper-pagination-bullet-active {
             color: $secondary;
             opacity: 1;
         }
     }
 }
 
-.swiper-pagination-progressbar{
+.swiper-pagination-progressbar {
     height: 6px !important;
     background-color: rgba($success, 0.25);
+
     .swiper-pagination-progressbar-fill {
         background-color: $success;
     }
@@ -90,6 +96,7 @@
     backdrop-filter: blur(2px);
     padding: 1.2px;
     height: 6px !important;
+
     .swiper-scrollbar-drag {
         background-color: $white;
     }
@@ -99,20 +106,24 @@
     .swiper-pagination-bullet {
         background-color: $secondary;
     }
-    .dynamic-pagination{
-        .swiper-pagination-bullet { 
+
+    .dynamic-pagination {
+        .swiper-pagination-bullet {
             background-color: $secondary;
         }
     }
-    &.pagination-custom{
-        .swiper-pagination-bullet { 
+
+    &.pagination-custom {
+        .swiper-pagination-bullet {
             color: $white;
-            &.swiper-pagination-bullet-active{
+
+            &.swiper-pagination-bullet-active {
                 opacity: 1;
             }
         }
     }
-    &.swiper-scrollbar { 
-        background-color: rgba($dark, 0.35); 
+
+    &.swiper-scrollbar {
+        background-color: rgba($dark, 0.35);
     }
 }

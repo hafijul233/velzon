@@ -1,6 +1,7 @@
 <script>
 var echarts = require("echarts");
 import worldJson from "../../../components/widgets/world.json";
+
 export default {
     mounted() {
         let chartuser = document.getElementById("users-by-country");
@@ -50,7 +51,7 @@ export default {
         <b-card-header class="align-items-center d-flex">
             <b-card-title class="mb-0 flex-grow-1">Worldwide Top Creators</b-card-title>
             <div class="flex-shrink-0">
-                <b-button type="button" variant="soft-primary" size="sm">
+                <b-button size="sm" type="button" variant="soft-primary">
                     Export Report
                 </b-button>
             </div>
@@ -60,19 +61,19 @@ export default {
 
             <div id="users-by-country" style="height: 269px"></div>
             <div class="mt-1">
-                <p class="mb-1"><img src="@/assets/images/flags/us.svg" alt="" height="15" class="rounded me-2"> United
+                <p class="mb-1"><img alt="" class="rounded me-2" height="15" src="@/assets/images/flags/us.svg"> United
                     States <span class="float-end">34%</span></p>
-                <p class="mb-1"><img src="@/assets/images/flags/russia.svg" alt="" height="15" class="rounded me-2">
+                <p class="mb-1"><img alt="" class="rounded me-2" height="15" src="@/assets/images/flags/russia.svg">
                     Russia <span class="float-end">27%</span></p>
-                <p class="mb-1"><img src="@/assets/images/flags/spain.svg" alt="" height="15" class="rounded me-2">
+                <p class="mb-1"><img alt="" class="rounded me-2" height="15" src="@/assets/images/flags/spain.svg">
                     Spain
                     <span class="float-end">21%</span>
                 </p>
-                <p class="mb-1"><img src="@/assets/images/flags/italy.svg" alt="" height="15" class="rounded me-2">
+                <p class="mb-1"><img alt="" class="rounded me-2" height="15" src="@/assets/images/flags/italy.svg">
                     Italy
                     <span class="float-end">13%</span>
                 </p>
-                <p class="mb-0"><img src="@/assets/images/flags/germany.svg" alt="" height="15" class="rounded me-2">
+                <p class="mb-0"><img alt="" class="rounded me-2" height="15" src="@/assets/images/flags/germany.svg">
                     Germany <span class="float-end">5%</span></p>
             </div>
         </b-card-body>

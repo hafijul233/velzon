@@ -5,7 +5,7 @@ import Lottie from "@/components/widgets/lottie.vue";
 export default {
     data() {
         return {
-            defaultOptions: { animationData: animationData },
+            defaultOptions: {animationData: animationData},
         };
     },
     components: {
@@ -21,15 +21,15 @@ export default {
             <b-container>
                 <b-row>
                     <b-col lg="12">
-                        <b-card no-body class="overflow-hidden">
+                        <b-card class="overflow-hidden" no-body>
                             <b-row class="justify-content-center g-0">
                                 <b-col lg="6">
                                     <div class="p-lg-5 p-4 auth-one-bg h-100">
                                         <div class="bg-overlay"></div>
                                         <div class="position-relative h-100 d-flex flex-column">
                                             <div class="mb-4">
-                                                <router-link to="/" class="d-block">
-                                                    <img src="@/assets/images/logo-light.png" alt="" height="18">
+                                                <router-link class="d-block" to="/">
+                                                    <img alt="" height="18" src="@/assets/images/logo-light.png">
                                                 </router-link>
                                             </div>
                                             <div class="mt-auto">
@@ -38,15 +38,18 @@ export default {
                                                 </div>
 
                                                 <div id="qoutescarouselIndicators" class="carousel slide"
-                                                    data-bs-ride="carousel">
+                                                     data-bs-ride="carousel">
                                                     <div class="carousel-indicators">
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="0" class="active" aria-current="true"
-                                                            aria-label="Slide 1"></button>
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                        <button aria-current="true" aria-label="Slide 1"
+                                                                class="active" data-bs-slide-to="0"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
+                                                        <button aria-label="Slide 2" data-bs-slide-to="1"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
+                                                        <button aria-label="Slide 3" data-bs-slide-to="2"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
                                                     </div>
                                                     <div class="carousel-inner text-center text-white-50 pb-5">
                                                         <div class="carousel-item active">
@@ -70,16 +73,17 @@ export default {
 
                                 <b-col lg="6">
                                     <div class="p-lg-5 p-4 text-center">
-                                        <lottie colors="primary:#405189,secondary:#08a88a" :options="defaultOptions"
-                                            :height="180" :width="180" />
+                                        <lottie :height="180" :options="defaultOptions"
+                                                :width="180" colors="primary:#405189,secondary:#08a88a"/>
 
                                         <div class="mt-4 pt-2">
                                             <h5>You are Logged Out</h5>
                                             <p class="text-muted">Thank you for using <span
-                                                    class="fw-semibold">velzon</span> admin template</p>
+                                                class="fw-semibold">velzon</span> admin template</p>
                                             <div class="mt-4">
-                                                <router-link to="/auth/signin-basic" class="btn btn-success w-100">Sign
-                                                    In</router-link>
+                                                <router-link class="btn btn-success w-100" to="/auth/signin-basic">Sign
+                                                    In
+                                                </router-link>
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +102,7 @@ export default {
                     <b-col lg="12">
                         <div class="text-center">
                             <p class="mb-0">&copy; {{ new Date().getFullYear() }} Velzon. Crafted with <i
-                                    class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                                class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                         </div>
                     </b-col>
                 </b-row>

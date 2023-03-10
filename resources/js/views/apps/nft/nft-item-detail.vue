@@ -10,10 +10,10 @@ export default {
                 text: "NFT Marketplace",
                 href: "/",
             },
-            {
-                text: "Item Details",
-                active: true,
-            },
+                {
+                    text: "Item Details",
+                    active: true,
+                },
             ],
         };
     },
@@ -68,70 +68,76 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-card no-body>
             <b-card-body>
                 <b-row class="g-4">
                     <b-col lg="4">
                         <div class="sticky-side-div">
-                            <b-card no-body class="ribbon-box border shadow-none right">
+                            <b-card class="ribbon-box border shadow-none right" no-body>
                                 <div class="ribbon-two ribbon-two-danger"><span><i
-                                            class="ri-fire-fill align-bottom"></i> Hot</span></div>
-                                <img src="@/assets/images/nft/img-05.jpg" alt="" class="img-fluid rounded">
+                                    class="ri-fire-fill align-bottom"></i> Hot</span></div>
+                                <img alt="" class="img-fluid rounded" src="@/assets/images/nft/img-05.jpg">
                                 <div class="position-absolute bottom-0 p-3">
                                     <div class="position-absolute top-0 end-0 start-0 bottom-0 bg-white opacity-25">
                                     </div>
                                     <b-row class="justify-content-center">
                                         <b-col cols="3">
-                                            <img src="@/assets/images/nft/img-02.jpg" alt="" class="img-fluid rounded">
+                                            <img alt="" class="img-fluid rounded" src="@/assets/images/nft/img-02.jpg">
                                         </b-col>
                                         <b-col cols="3">
-                                            <img src="@/assets/images/nft/img-03.jpg" alt="" class="img-fluid rounded">
+                                            <img alt="" class="img-fluid rounded" src="@/assets/images/nft/img-03.jpg">
                                         </b-col>
                                         <b-col cols="3">
-                                            <img src="https://img.themesbrand.com/velzon/images/img-3.gif" alt=""
-                                                class="img-fluid rounded h-100 object-cover">
+                                            <img alt="" class="img-fluid rounded h-100 object-cover"
+                                                 src="https://img.themesbrand.com/velzon/images/img-3.gif">
                                         </b-col>
                                         <b-col cols="3">
-                                            <img src="@/assets/images/nft/img-06.jpg" alt="" class="img-fluid rounded">
+                                            <img alt="" class="img-fluid rounded" src="@/assets/images/nft/img-06.jpg">
                                         </b-col>
                                     </b-row>
                                 </div>
                             </b-card>
                             <div class="hstack gap-2">
-                                <b-button variant="success" class="w-100">Place Bid</b-button>
+                                <b-button class="w-100" variant="success">Place Bid</b-button>
                             </div>
                         </div>
                     </b-col>
                     <b-col lg="8">
                         <div>
                             <div class="dropdown float-end">
-                                <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                        data-bs-toggle="dropdown" type="button">
                                     <i class="ri-more-fill align-middle fs-16"></i>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <li>
                                         <b-link class="dropdown-item view-item-btn" href="javascript:void(0);"><i
-                                                class="ri-eye-fill align-bottom me-2 text-muted"></i>View</b-link>
+                                            class="ri-eye-fill align-bottom me-2 text-muted"></i>View
+                                        </b-link>
                                     </li>
                                     <li>
                                         <b-link class="dropdown-item edit-item-btn" href="#showModal"><i
-                                                class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</b-link>
+                                            class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit
+                                        </b-link>
                                     </li>
                                     <li>
                                         <b-link class="dropdown-item remove-item-btn" href="#deleteRecordModal"><i
-                                                class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                            class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                         </b-link>
                                     </li>
                                 </ul>
                             </div>
-                            <b-badge variant="soft-info" class="badge-soft-info mb-3 fs-12"><i class="ri-eye-line me-1 align-bottom"></i>
-                                8,634 people views this</b-badge>
+                            <b-badge class="badge-soft-info mb-3 fs-12" variant="soft-info"><i
+                                class="ri-eye-line me-1 align-bottom"></i>
+                                8,634 people views this
+                            </b-badge>
                             <h4>Patterns arts & culture</h4>
                             <div class="hstack gap-3 flex-wrap">
-                                <div class="text-muted">Creators : <b-link href="#" class="text-primary fw-medium">Nancy
-                                        Martino</b-link>
+                                <div class="text-muted">Creators :
+                                    <b-link class="text-primary fw-medium" href="#">Nancy
+                                        Martino
+                                    </b-link>
                                 </div>
                                 <div class="vr"></div>
                                 <div class="text-muted">Seller : <span class="text-body fw-medium">Rickey Teran</span>
@@ -196,173 +202,180 @@ export default {
                             <div class="product-content mt-5">
                                 <h5 class="fs-14 mb-3">Product Description :</h5>
                                 <nav>
-                                    <ul class="nav nav-tabs nav-tabs-custom nav-success" id="nav-tab" role="tablist">
+                                    <ul id="nav-tab" class="nav nav-tabs nav-tabs-custom nav-success" role="tablist">
                                         <li class="nav-item">
-                                            <b-link class="nav-link active" id="nav-speci-tab" data-bs-toggle="tab"
-                                                href="#nav-speci" role="tab" aria-controls="nav-speci"
-                                                aria-selected="true">Place Bids</b-link>
+                                            <b-link id="nav-speci-tab" aria-controls="nav-speci" aria-selected="true"
+                                                    class="nav-link active" data-bs-toggle="tab" href="#nav-speci"
+                                                    role="tab">Place Bids
+                                            </b-link>
                                         </li>
                                         <li class="nav-item">
-                                            <b-link class="nav-link" id="nav-additional-tab" data-bs-toggle="tab"
-                                                href="#nav-additional" role="tab" aria-controls="nav-additional"
-                                                aria-selected="false">Additional Information</b-link>
+                                            <b-link id="nav-additional-tab" aria-controls="nav-additional"
+                                                    aria-selected="false"
+                                                    class="nav-link" data-bs-toggle="tab" href="#nav-additional"
+                                                    role="tab">Additional Information
+                                            </b-link>
                                         </li>
                                         <li class="nav-item">
-                                            <b-link class="nav-link" id="nav-detail-tab" data-bs-toggle="tab"
-                                                href="#nav-detail" role="tab" aria-controls="nav-detail"
-                                                aria-selected="false">Details</b-link>
+                                            <b-link id="nav-detail-tab" aria-controls="nav-detail" aria-selected="false"
+                                                    class="nav-link" data-bs-toggle="tab" href="#nav-detail"
+                                                    role="tab">Details
+                                            </b-link>
                                         </li>
                                     </ul>
                                 </nav>
-                                <div class="tab-content border border-top-0 p-4" id="nav-tabContent">
-                                    <div class="tab-pane fade show active" id="nav-speci" role="tabpanel"
-                                        aria-labelledby="nav-speci-tab">
+                                <div id="nav-tabContent" class="tab-content border border-top-0 p-4">
+                                    <div id="nav-speci" aria-labelledby="nav-speci-tab"
+                                         class="tab-pane fade show active"
+                                         role="tabpanel">
                                         <div class="table-responsive">
                                             <table class="table align-middle table-nowrap mb-0">
                                                 <tbody>
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="@/assets/images/nft/img-01.jpg" alt=""
-                                                                    class="avatar-xs rounded object-cover" />
-                                                                <b-link href="/apps/nft-item-detail" class="link-dark">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center">
+                                                            <img alt="" class="avatar-xs rounded object-cover"
+                                                                 src="@/assets/images/nft/img-01.jpg"/>
+                                                            <b-link class="link-dark" href="/apps/nft-item-detail">
                                                                     <span class="mb-0 ms-2">Brave
                                                                         Tigers NFT</span>
+                                                            </b-link>
+                                                        </div>
+                                                    </th>
+                                                    <td>0.235 ETH</td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img alt="" class="avatar-xs rounded object-cover"
+                                                                 src="@/assets/images/users/avatar-1.jpg"/>
+                                                            <div class="ms-2">
+                                                                <b-link href="#!">
+                                                                    <h6 class="mb-1">Alexis Clarke</h6>
                                                                 </b-link>
+                                                                <p class="text-muted mb-0">Creators</p>
                                                             </div>
-                                                        </th>
-                                                        <td>0.235 ETH</td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="@/assets/images/users/avatar-1.jpg" alt=""
-                                                                    class="avatar-xs rounded object-cover" />
-                                                                <div class="ms-2">
-                                                                    <b-link href="#!">
-                                                                        <h6 class="mb-1">Alexis Clarke</h6>
-                                                                    </b-link>
-                                                                    <p class="text-muted mb-0">Creators</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>29 min ago</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="@/assets/images/nft/img-03.jpg" alt=""
-                                                                    class="avatar-xs rounded object-cover" />
-                                                                <b-link href="/apps/nft-item-detail" class="link-dark">
+                                                        </div>
+                                                    </td>
+                                                    <td>29 min ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center">
+                                                            <img alt="" class="avatar-xs rounded object-cover"
+                                                                 src="@/assets/images/nft/img-03.jpg"/>
+                                                            <b-link class="link-dark" href="/apps/nft-item-detail">
                                                                     <span class="mb-0 ms-2">Creative
                                                                         filtered portrait</span>
+                                                            </b-link>
+                                                        </div>
+                                                    </th>
+                                                    <td>571.24 ETH</td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img alt="" class="avatar-xs rounded object-cover"
+                                                                 src="@/assets/images/users/avatar-3.jpg"/>
+                                                            <div class="ms-2">
+                                                                <b-link href="#!">
+                                                                    <h6 class="mb-1">Glen Matney</h6>
                                                                 </b-link>
+                                                                <p class="text-muted mb-0">Creators</p>
                                                             </div>
-                                                        </th>
-                                                        <td>571.24 ETH</td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                                    class="avatar-xs rounded object-cover" />
-                                                                <div class="ms-2">
-                                                                    <b-link href="#!">
-                                                                        <h6 class="mb-1">Glen Matney</h6>
-                                                                    </b-link>
-                                                                    <p class="text-muted mb-0">Creators</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>37 min ago</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="https://img.themesbrand.com/velzon/images/img-4.gif"
-                                                                    alt="" class="avatar-xs rounded object-cover" />
-                                                                <b-link href="/apps/nft-item-detail" class="link-dark">
+                                                        </div>
+                                                    </td>
+                                                    <td>37 min ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center">
+                                                            <img
+                                                                alt=""
+                                                                class="avatar-xs rounded object-cover"
+                                                                src="https://img.themesbrand.com/velzon/images/img-4.gif"/>
+                                                            <b-link class="link-dark" href="/apps/nft-item-detail">
                                                                     <span class="mb-0 ms-2">Evolved
                                                                         Reality</span>
+                                                            </b-link>
+                                                        </div>
+                                                    </th>
+                                                    <td>130.39 ETH</td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img alt="" class="avatar-xs rounded object-cover"
+                                                                 src="@/assets/images/users/avatar-5.jpg"/>
+                                                            <div class="ms-2">
+                                                                <b-link href="#!">
+                                                                    <h6 class="mb-1">Herbert Stokes</h6>
                                                                 </b-link>
+                                                                <p class="text-muted mb-0">Creators</p>
                                                             </div>
-                                                        </th>
-                                                        <td>130.39 ETH</td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                                                    class="avatar-xs rounded object-cover" />
-                                                                <div class="ms-2">
-                                                                    <b-link href="#!">
-                                                                        <h6 class="mb-1">Herbert Stokes</h6>
-                                                                    </b-link>
-                                                                    <p class="text-muted mb-0">Creators</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>1 hrs ago</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="@/assets/images/nft/img-06.jpg" alt=""
-                                                                    class="avatar-xs rounded object-cover" />
-                                                                <b-link href="/apps/nft-item-detail" class="link-dark">
+                                                        </div>
+                                                    </td>
+                                                    <td>1 hrs ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center">
+                                                            <img alt="" class="avatar-xs rounded object-cover"
+                                                                 src="@/assets/images/nft/img-06.jpg"/>
+                                                            <b-link class="link-dark" href="/apps/nft-item-detail">
                                                                     <span class="mb-0 ms-2">Robotic
                                                                         Body Art</span>
+                                                            </b-link>
+                                                        </div>
+                                                    </th>
+                                                    <td>81.72 ETH</td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img alt="" class="avatar-xs rounded object-cover"
+                                                                 src="@/assets/images/users/avatar-8.jpg"/>
+                                                            <div class="ms-2">
+                                                                <b-link href="#!">
+                                                                    <h6 class="mb-1">Michael Morris</h6>
                                                                 </b-link>
+                                                                <p class="text-muted mb-0">Creators</p>
                                                             </div>
-                                                        </th>
-                                                        <td>81.72 ETH</td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                                                    class="avatar-xs rounded object-cover" />
-                                                                <div class="ms-2">
-                                                                    <b-link href="#!">
-                                                                        <h6 class="mb-1">Michael Morris</h6>
-                                                                    </b-link>
-                                                                    <p class="text-muted mb-0">Creators</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>1 hrs ago</td>
-                                                    </tr>
+                                                        </div>
+                                                    </td>
+                                                    <td>1 hrs ago</td>
+                                                </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-additional" role="tabpanel"
-                                        aria-labelledby="nav-additional-tab">
+                                    <div id="nav-additional" aria-labelledby="nav-additional-tab" class="tab-pane fade"
+                                         role="tabpanel">
                                         <div class="table-responsive">
                                             <table class="table mb-0">
                                                 <tbody>
-                                                    <tr>
-                                                        <th scope="row" style="width: 200px;">Size</th>
-                                                        <td>650 x 650px (66.8 KB)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Brand</th>
-                                                        <td>Patterns arts & culture </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Formats</th>
-                                                        <td>JPEG / PNG / PDF</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Token</th>
-                                                        <td>VLZ74516523</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Blockchain</th>
-                                                        <td>Ethereum</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Contacts</th>
-                                                        <td>E545D145S5646544DS541SFDB213C5Z</td>
-                                                    </tr>
+                                                <tr>
+                                                    <th scope="row" style="width: 200px;">Size</th>
+                                                    <td>650 x 650px (66.8 KB)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Brand</th>
+                                                    <td>Patterns arts & culture</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Formats</th>
+                                                    <td>JPEG / PNG / PDF</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Token</th>
+                                                    <td>VLZ74516523</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Blockchain</th>
+                                                    <td>Ethereum</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Contacts</th>
+                                                    <td>E545D145S5646544DS541SFDB213C5Z</td>
+                                                </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-detail" role="tabpanel"
-                                        aria-labelledby="nav-detail-tab">
+                                    <div id="nav-detail" aria-labelledby="nav-detail-tab" class="tab-pane fade"
+                                         role="tabpanel">
                                         <div>
                                             <h5 class="font-size-16 mb-3">Patterns arts & culture</h5>
                                             <p>Cultural patterns are the similar behaviors within similar situations we
@@ -373,16 +386,16 @@ export default {
                                             </p>
                                             <div>
                                                 <p class="mb-2"><i
-                                                        class="mdi mdi-circle-medium me-1 text-muted align-middle"></i>
+                                                    class="mdi mdi-circle-medium me-1 text-muted align-middle"></i>
                                                     On digital or printed media</p>
                                                 <p class="mb-2"><i
-                                                        class="mdi mdi-circle-medium me-1 text-muted align-middle"></i>
+                                                    class="mdi mdi-circle-medium me-1 text-muted align-middle"></i>
                                                     For commercial and personal projects</p>
                                                 <p class="mb-2"><i
-                                                        class="mdi mdi-circle-medium me-1 text-muted align-middle"></i>
+                                                    class="mdi mdi-circle-medium me-1 text-muted align-middle"></i>
                                                     From anywhere in the world</p>
                                                 <p class="mb-0"><i
-                                                        class="mdi mdi-circle-medium me-1 text-muted align-middle"></i>
+                                                    class="mdi mdi-circle-medium me-1 text-muted align-middle"></i>
                                                     Full copyrights sale</p>
                                             </div>
                                         </div>
@@ -429,7 +442,9 @@ export default {
                                                     </div>
                                                     <b-col>
                                                         <div class="p-2">
-                                                            <b-progress variant="success" class="animated-progess progress-sm" :value="50.16" />
+                                                            <b-progress :value="50.16"
+                                                                        class="animated-progess progress-sm"
+                                                                        variant="success"/>
                                                         </div>
                                                     </b-col>
                                                     <div class="col-auto">
@@ -447,7 +462,9 @@ export default {
                                                     </div>
                                                     <b-col>
                                                         <div class="p-2">
-                                                            <b-progress variant="success" class="animated-progess progress-sm" :value="19.32" />
+                                                            <b-progress :value="19.32"
+                                                                        class="animated-progess progress-sm"
+                                                                        variant="success"/>
                                                         </div>
                                                     </b-col>
                                                     <div class="col-auto">
@@ -465,7 +482,9 @@ export default {
                                                     </div>
                                                     <b-col>
                                                         <div class="p-2">
-                                                            <b-progress variant="success" class="animated-progess progress-sm" :value="18.12" />
+                                                            <b-progress :value="18.12"
+                                                                        class="animated-progess progress-sm"
+                                                                        variant="success"/>
                                                         </div>
                                                     </b-col>
                                                     <div class="col-auto">
@@ -483,7 +502,9 @@ export default {
                                                     </div>
                                                     <b-col>
                                                         <div class="p-2">
-                                                            <b-progress variant="warning" class="animated-progess progress-sm" :value="7.42" />                                                            
+                                                            <b-progress :value="7.42"
+                                                                        class="animated-progess progress-sm"
+                                                                        variant="warning"/>
                                                         </div>
                                                     </b-col>
 
@@ -502,7 +523,9 @@ export default {
                                                     </div>
                                                     <b-col>
                                                         <div class="p-2">
-                                                            <b-progress variant="danger" class="animated-progess progress-sm" :value="4.98" />
+                                                            <b-progress :value="4.98"
+                                                                        class="animated-progess progress-sm"
+                                                                        variant="danger"/>
                                                         </div>
                                                     </b-col>
                                                     <div class="col-auto">
@@ -527,7 +550,8 @@ export default {
                                                         <div class="border border-dashed rounded p-3">
                                                             <div class="d-flex align-items-start mb-3">
                                                                 <div class="hstack gap-3">
-                                                                    <b-badge variant="success" tag="div" pill class="mb-0">
+                                                                    <b-badge class="mb-0" pill tag="div"
+                                                                             variant="success">
                                                                         <i class="mdi mdi-star"></i> 4.2
                                                                     </b-badge>
                                                                     <div class="vr"></div>
@@ -539,17 +563,17 @@ export default {
                                                             </div>
 
                                                             <div class="d-flex flex-grow-1 gap-2 mb-3">
-                                                                <b-link href="#" class="d-block">
-                                                                    <img src="@/assets/images/small/img-12.jpg" alt=""
-                                                                        class="avatar-sm rounded object-cover" />
+                                                                <b-link class="d-block" href="#">
+                                                                    <img alt="" class="avatar-sm rounded object-cover"
+                                                                         src="@/assets/images/small/img-12.jpg"/>
                                                                 </b-link>
-                                                                <b-link href="#" class="d-block">
-                                                                    <img src="@/assets/images/small/img-11.jpg" alt=""
-                                                                        class="avatar-sm rounded object-cover" />
+                                                                <b-link class="d-block" href="#">
+                                                                    <img alt="" class="avatar-sm rounded object-cover"
+                                                                         src="@/assets/images/small/img-11.jpg"/>
                                                                 </b-link>
-                                                                <b-link href="#" class="d-block">
-                                                                    <img src="@/assets/images/small/img-10.jpg" alt=""
-                                                                        class="avatar-sm rounded object-cover" />
+                                                                <b-link class="d-block" href="#">
+                                                                    <img alt="" class="avatar-sm rounded object-cover"
+                                                                         src="@/assets/images/small/img-10.jpg"/>
                                                                 </b-link>
                                                             </div>
 
@@ -568,7 +592,8 @@ export default {
                                                         <div class="border border-dashed rounded p-3">
                                                             <div class="d-flex align-items-start mb-3">
                                                                 <div class="hstack gap-3">
-                                                                    <b-badge variant="success" tag="div" pill class="mb-0">
+                                                                    <b-badge class="mb-0" pill tag="div"
+                                                                             variant="success">
                                                                         <i class="mdi mdi-star"></i> 4.0
                                                                     </b-badge>
                                                                     <div class="vr"></div>
@@ -594,7 +619,8 @@ export default {
                                                             <div class="d-flex align-items-start mb-3">
                                                                 <div class="hstack gap-3">
 
-                                                                    <b-badge variant="success" tag="div" pill class="mb-0">
+                                                                    <b-badge class="mb-0" pill tag="div"
+                                                                             variant="success">
                                                                         <i class="mdi mdi-star"></i> 4.2
                                                                     </b-badge>
                                                                     <div class="vr"></div>
@@ -619,7 +645,8 @@ export default {
                                                         <div class="border border-dashed rounded p-3">
                                                             <div class="d-flex align-items-start mb-3">
                                                                 <div class="hstack gap-3">
-                                                                    <b-badge variant="success" tag="div" pill class="mb-0">
+                                                                    <b-badge class="mb-0" pill tag="div"
+                                                                             variant="success">
                                                                         <i class="mdi mdi-star"></i> 4.1
                                                                     </b-badge>
                                                                     <div class="vr"></div>

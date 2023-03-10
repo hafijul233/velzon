@@ -1,6 +1,6 @@
-// 
+//
 // toastify.scss
-// 
+//
 
 
 .toastify {
@@ -17,6 +17,7 @@
     text-decoration: none;
     max-width: calc(50% - 20px);
     z-index: 2147483647;
+
     &.on {
         opacity: 1;
     }
@@ -39,6 +40,7 @@
 
 .toastify-left {
     left: 15px;
+
     .toast-close {
         left: -4px;
         margin-left: 0;

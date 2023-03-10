@@ -1,8 +1,5 @@
 <script>
-import {
-  ref,
-  watch
-} from "vue";
+import {ref, watch} from "vue";
 import Multiselect from "@vueform/multiselect";
 import "@vueform/multiselect/themes/default.css";
 
@@ -17,284 +14,309 @@ import appConfig from "../../../../app.config";
 import PageHeader from "@/components/page-header";
 
 export default {
-  page: {
-    title: "Create Product",
-    meta: [{
-      name: "description",
-      content: appConfig.description,
-    },],
-  },
-  setup() {
-    let files = ref([]);
-    let dropzoneFile = ref("");
-    const drop = (e) => {
-      dropzoneFile.value = e.dataTransfer.files[0];
-      files.value.push(dropzoneFile.value);
-    };
-    const selectedFile = () => {
-      dropzoneFile.value = document.querySelector(".dropzoneFile").files[0];
-      files.value.push(dropzoneFile.value);
-    };
-    watch(
-      () => [...files.value],
-      (currentValue) => {
-        return currentValue;
-      }
-    );
-    return {
-      dropzoneFile,
-      drop,
-      selectedFile,
-      v$: useVuelidate(),
-      files
-    };
-  },
-  data() {
-    return {
-      title: "Create Product",
-      items: [{
-        text: "Ecommerce",
-        href: "/",
-      },
-      {
-        text: "Create Product",
-        active: true,
-      },
-      ],
-      date1: null,
-      datetimeConfig: {
-        enableTime: true,
-        dateFormat: "d.m.y",
-        time_24hr: true,
-      },
-      value1: ["Scheduled"],
-      value2: ["Hidden"],
-      value3: ["Fashion"],
-      editor: ClassicEditor,
-      editorData: "<p>Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton. This is one of the world’s leading designer lifestyle brands and is internationally recognized for celebrating the essence of classic American cool style, featuring preppy with a twist designs.</p><ul><li>Full Sleeve</li><li>Cotton</li><li>All Sizes available</li><li>4 Different Color</li></ul>",
-      content: "<h1>Some initial content</h1>",
-    };
-  },
-  components: {
-    DropZone,
-    Layout,
-    PageHeader,
-    ckeditor: CKEditor.component,
-    Multiselect,
-    flatPickr
-  },
-  methods: {
-    deleteRecord(ele) {
-      ele.target.parentElement.parentElement.parentElement.remove();
+    page: {
+        title: "Create Product",
+        meta: [{
+            name: "description",
+            content: appConfig.description,
+        },],
     },
-  },
+    setup() {
+        let files = ref([]);
+        let dropzoneFile = ref("");
+        const drop = (e) => {
+            dropzoneFile.value = e.dataTransfer.files[0];
+            files.value.push(dropzoneFile.value);
+        };
+        const selectedFile = () => {
+            dropzoneFile.value = document.querySelector(".dropzoneFile").files[0];
+            files.value.push(dropzoneFile.value);
+        };
+        watch(
+            () => [...files.value],
+            (currentValue) => {
+                return currentValue;
+            }
+        );
+        return {
+            dropzoneFile,
+            drop,
+            selectedFile,
+            v$: useVuelidate(),
+            files
+        };
+    },
+    data() {
+        return {
+            title: "Create Product",
+            items: [{
+                text: "Ecommerce",
+                href: "/",
+            },
+                {
+                    text: "Create Product",
+                    active: true,
+                },
+            ],
+            date1: null,
+            datetimeConfig: {
+                enableTime: true,
+                dateFormat: "d.m.y",
+                time_24hr: true,
+            },
+            value1: ["Scheduled"],
+            value2: ["Hidden"],
+            value3: ["Fashion"],
+            editor: ClassicEditor,
+            editorData: "<p>Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton. This is one of the world’s leading designer lifestyle brands and is internationally recognized for celebrating the essence of classic American cool style, featuring preppy with a twist designs.</p><ul><li>Full Sleeve</li><li>Cotton</li><li>All Sizes available</li><li>4 Different Color</li></ul>",
+            content: "<h1>Some initial content</h1>",
+        };
+    },
+    components: {
+        DropZone,
+        Layout,
+        PageHeader,
+        ckeditor: CKEditor.component,
+        Multiselect,
+        flatPickr
+    },
+    methods: {
+        deleteRecord(ele) {
+            ele.target.parentElement.parentElement.parentElement.remove();
+        },
+    },
 };
 </script>
 
 <template>
-  <Layout>
-    <PageHeader :title="title" :items="items" />
+    <Layout>
+        <PageHeader :items="items" :title="title"/>
 
-    <b-row>
-      <b-col lg="8">
-        <form>
-          <b-card no-body>
-            <b-card-body>
-              <div class="mb-3">
-                <label class="form-label" for="product-title-input">Product Title</label>
-                <input type="text" class="form-control" id="product-title-input" placeholder="Enter product title" />
-              </div>
-              <div>
-                <label>Product Description</label>
-                <ckeditor v-model="editorData" :editor="editor"></ckeditor>
-              </div>
-            </b-card-body>
-          </b-card>
-
-          <b-card no-body>
-            <b-card-header>
-              <h5 class="card-title mb-0">Product Gallery</h5>
-            </b-card-header>
-            <b-card-body>
-              <div class="mb-4">
-                <h5 class="fs-14 mb-1">Product Image</h5>
-                <p class="text-muted">Add Product main Image.</p>
-                <input class="form-control" id="product-image-input" type="file"
-                  accept="image/png, image/gif, image/jpeg" />
-              </div>
-              <div class="vstack gap-2">
-                <h5 class="fs-14 mb-1">Product Gallery</h5>
-                <p class="text-muted">Add Product Gallery Images.</p>
-                <DropZone @drop.prevent="drop" @change="selectedFile" />
-
-                <div class="border rounded" v-for="(file, index) of files" :key="index">
-                  <div class="d-flex align-items-center p-2">
-                    <div class="flex-grow-1">
-                      <div class="pt-1">
-                        <h5 class="fs-14 mb-1" data-dz-name="">
-                          {{ file.name }}
-                        </h5>
-                        <p class="fs-13 text-muted mb-0" data-dz-size="">
-                          <strong>{{ file.size / 1024 }}</strong> KB
-                        </p>
-                        <strong class="error text-danger" data-dz-errormessage=""></strong>
-                      </div>
-                    </div>
-                    <div class="flex-shrink-0 ms-3">
-                      <b-button data-dz-remove="" variant="danger" size="sm" @click="deleteRecord">
-                        Delete
-                      </b-button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </b-card-body>
-          </b-card>
-
-          <b-card no-body>
-            <b-card-header>
-              <ul class="nav nav-tabs-custom card-header-tabs border-bottom-0" role="tablist">
-                <li class="nav-item">
-                  <b-link class="nav-link active" data-bs-toggle="tab" href="#addproduct-general-info" role="tab">
-                    General Info
-                  </b-link>
-                </li>
-                <li class="nav-item">
-                  <b-link class="nav-link" data-bs-toggle="tab" href="#addproduct-metadata" role="tab">
-                    Meta Data
-                  </b-link>
-                </li>
-              </ul>
-            </b-card-header>
-            <b-card-body>
-              <div class="tab-content">
-                <div class="tab-pane active" id="addproduct-general-info" role="tabpanel">
-                  <div class="mb-3">
-                    <label class="form-label" for="manufacturer-name-input">Manufacturer Name</label>
-                    <input type="text" class="form-control" id="manufacturer-name-input"
-                      placeholder="Enter manufacturer name" />
-                  </div>
-                  <b-row>
-                    <b-col lg="6">
-                      <div class="mb-3">
-                        <label class="form-label" for="manufacturer-brand-input">Manufacturer Brand</label>
-                        <input type="text" class="form-control" id="manufacturer-brand-input"
-                          placeholder="Enter manufacturer brand" />
-                      </div>
-                    </b-col>
-                    <b-col lg="6">
-                      <b-row>
-                        <b-col sm="6">
-                          <div class="mb-3">
-                            <label class="form-label" for="product-price-input">Price</label>
-                            <div class="input-group mb-3">
-                              <span class="input-group-text" id="product-price-addon">$</span>
-                              <input type="text" class="form-control" id="product-price-input" placeholder="Enter price"
-                                aria-label="Price" aria-describedby="product-price-addon" />
+        <b-row>
+            <b-col lg="8">
+                <form>
+                    <b-card no-body>
+                        <b-card-body>
+                            <div class="mb-3">
+                                <label class="form-label" for="product-title-input">Product Title</label>
+                                <input id="product-title-input" class="form-control" placeholder="Enter product title"
+                                       type="text"/>
                             </div>
-                          </div>
-                        </b-col>
-                        <b-col sm="6">
-                          <div class="mb-3">
-                            <label class="form-label" for="product-discount-input">Discount</label>
-                            <div class="input-group mb-3">
-                              <span class="input-group-text" id="product-discount-addon">%</span>
-                              <input type="text" class="form-control" id="product-discount-input"
-                                placeholder="Enter discount" aria-label="discount"
-                                aria-describedby="product-discount-addon" />
+                            <div>
+                                <label>Product Description</label>
+                                <ckeditor v-model="editorData" :editor="editor"></ckeditor>
                             </div>
-                          </div>
-                        </b-col>
-                      </b-row>
-                    </b-col>
-                  </b-row>
-                </div>
+                        </b-card-body>
+                    </b-card>
 
-                <div class="tab-pane" id="addproduct-metadata" role="tabpanel">
-                  <b-row>
-                    <b-col lg="6">
-                      <div class="mb-3">
-                        <label class="form-label" for="meta-title-input">Meta title</label>
-                        <input type="text" class="form-control" placeholder="Enter meta title" id="meta-title-input" />
-                      </div>
-                    </b-col>
+                    <b-card no-body>
+                        <b-card-header>
+                            <h5 class="card-title mb-0">Product Gallery</h5>
+                        </b-card-header>
+                        <b-card-body>
+                            <div class="mb-4">
+                                <h5 class="fs-14 mb-1">Product Image</h5>
+                                <p class="text-muted">Add Product main Image.</p>
+                                <input id="product-image-input" accept="image/png, image/gif, image/jpeg"
+                                       class="form-control"
+                                       type="file"/>
+                            </div>
+                            <div class="vstack gap-2">
+                                <h5 class="fs-14 mb-1">Product Gallery</h5>
+                                <p class="text-muted">Add Product Gallery Images.</p>
+                                <DropZone @change="selectedFile" @drop.prevent="drop"/>
 
-                    <b-col lg="6">
-                      <div class="mb-3">
-                        <label class="form-label" for="meta-keywords-input">Meta Keywords</label>
-                        <input type="text" class="form-control" placeholder="Enter meta keywords"
-                          id="meta-keywords-input" />
-                      </div>
-                    </b-col>
-                  </b-row>
+                                <div v-for="(file, index) of files" :key="index" class="border rounded">
+                                    <div class="d-flex align-items-center p-2">
+                                        <div class="flex-grow-1">
+                                            <div class="pt-1">
+                                                <h5 class="fs-14 mb-1" data-dz-name="">
+                                                    {{ file.name }}
+                                                </h5>
+                                                <p class="fs-13 text-muted mb-0" data-dz-size="">
+                                                    <strong>{{ file.size / 1024 }}</strong> KB
+                                                </p>
+                                                <strong class="error text-danger" data-dz-errormessage=""></strong>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <b-button data-dz-remove="" size="sm" variant="danger"
+                                                      @click="deleteRecord">
+                                                Delete
+                                            </b-button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </b-card-body>
+                    </b-card>
 
-                  <div>
-                    <label class="form-label" for="meta-description-input">Meta Description</label>
-                    <textarea class="form-control" id="meta-description-input" placeholder="Enter meta description"
-                      rows="3"></textarea>
-                  </div>
-                </div>
-              </div>
-            </b-card-body>
-          </b-card>
-          <div class="text-end mb-3">
-            <b-button type="button" variant="success" class="w-sm">Submit</b-button>
-          </div>
-        </form>
-      </b-col>
+                    <b-card no-body>
+                        <b-card-header>
+                            <ul class="nav nav-tabs-custom card-header-tabs border-bottom-0" role="tablist">
+                                <li class="nav-item">
+                                    <b-link class="nav-link active" data-bs-toggle="tab" href="#addproduct-general-info"
+                                            role="tab">
+                                        General Info
+                                    </b-link>
+                                </li>
+                                <li class="nav-item">
+                                    <b-link class="nav-link" data-bs-toggle="tab" href="#addproduct-metadata"
+                                            role="tab">
+                                        Meta Data
+                                    </b-link>
+                                </li>
+                            </ul>
+                        </b-card-header>
+                        <b-card-body>
+                            <div class="tab-content">
+                                <div id="addproduct-general-info" class="tab-pane active" role="tabpanel">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="manufacturer-name-input">Manufacturer
+                                            Name</label>
+                                        <input id="manufacturer-name-input" class="form-control"
+                                               placeholder="Enter manufacturer name"
+                                               type="text"/>
+                                    </div>
+                                    <b-row>
+                                        <b-col lg="6">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="manufacturer-brand-input">Manufacturer
+                                                    Brand</label>
+                                                <input id="manufacturer-brand-input" class="form-control"
+                                                       placeholder="Enter manufacturer brand"
+                                                       type="text"/>
+                                            </div>
+                                        </b-col>
+                                        <b-col lg="6">
+                                            <b-row>
+                                                <b-col sm="6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label"
+                                                               for="product-price-input">Price</label>
+                                                        <div class="input-group mb-3">
+                                                            <span id="product-price-addon"
+                                                                  class="input-group-text">$</span>
+                                                            <input id="product-price-input"
+                                                                   aria-describedby="product-price-addon"
+                                                                   aria-label="Price" class="form-control"
+                                                                   placeholder="Enter price"
+                                                                   type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </b-col>
+                                                <b-col sm="6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label"
+                                                               for="product-discount-input">Discount</label>
+                                                        <div class="input-group mb-3">
+                                                            <span id="product-discount-addon"
+                                                                  class="input-group-text">%</span>
+                                                            <input id="product-discount-input"
+                                                                   aria-describedby="product-discount-addon"
+                                                                   aria-label="discount"
+                                                                   class="form-control" placeholder="Enter discount"
+                                                                   type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </b-col>
+                                            </b-row>
+                                        </b-col>
+                                    </b-row>
+                                </div>
 
-      <b-col lg="4">
-        <b-card no-body>
-          <b-card-header>
-            <h5 class="card-title mb-0">Publish</h5>
-          </b-card-header>
-          <b-card-body>
-            <div class="mb-3">
-              <label for="choices-publish-status-input" class="form-label">Status</label>
-              <Multiselect class="form-control" v-model="value1" :close-on-select="true" :searchable="true"
-                :create-option="true" :options="[
+                                <div id="addproduct-metadata" class="tab-pane" role="tabpanel">
+                                    <b-row>
+                                        <b-col lg="6">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="meta-title-input">Meta title</label>
+                                                <input id="meta-title-input" class="form-control"
+                                                       placeholder="Enter meta title"
+                                                       type="text"/>
+                                            </div>
+                                        </b-col>
+
+                                        <b-col lg="6">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="meta-keywords-input">Meta
+                                                    Keywords</label>
+                                                <input id="meta-keywords-input" class="form-control"
+                                                       placeholder="Enter meta keywords"
+                                                       type="text"/>
+                                            </div>
+                                        </b-col>
+                                    </b-row>
+
+                                    <div>
+                                        <label class="form-label" for="meta-description-input">Meta Description</label>
+                                        <textarea id="meta-description-input" class="form-control"
+                                                  placeholder="Enter meta description"
+                                                  rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </b-card-body>
+                    </b-card>
+                    <div class="text-end mb-3">
+                        <b-button class="w-sm" type="button" variant="success">Submit</b-button>
+                    </div>
+                </form>
+            </b-col>
+
+            <b-col lg="4">
+                <b-card no-body>
+                    <b-card-header>
+                        <h5 class="card-title mb-0">Publish</h5>
+                    </b-card-header>
+                    <b-card-body>
+                        <div class="mb-3">
+                            <label class="form-label" for="choices-publish-status-input">Status</label>
+                            <Multiselect v-model="value1" :close-on-select="true" :create-option="true"
+                                         :options="[
                   { value: 'Published', label: 'Published' },
                   { value: 'Scheduled', label: 'Scheduled' },
                   { value: 'Draft', label: 'Draft' },
-                ]" />
-            </div>
+                ]"
+                                         :searchable="true" class="form-control"/>
+                        </div>
 
-            <div>
-              <label for="choices-publish-visibility-input" class="form-label">Visibility</label>
-              <Multiselect class="form-control" v-model="value2" :close-on-select="true" :searchable="true"
-                :create-option="true" :options="[
+                        <div>
+                            <label class="form-label" for="choices-publish-visibility-input">Visibility</label>
+                            <Multiselect v-model="value2" :close-on-select="true" :create-option="true"
+                                         :options="[
                   { value: 'Public', label: 'Public' },
                   { value: 'Hidden', label: 'Hidden' },
-                ]" />
-            </div>
-          </b-card-body>
-        </b-card>
+                ]"
+                                         :searchable="true" class="form-control"/>
+                        </div>
+                    </b-card-body>
+                </b-card>
 
-        <b-card no-body>
-          <b-card-header>
-            <h5 class="card-title mb-0">Publish Schedule</h5>
-          </b-card-header>
-          <b-card-body>
-            <div>
-              <label for="datepicker-publish-input" class="form-label">Publish Date & Time</label>
+                <b-card no-body>
+                    <b-card-header>
+                        <h5 class="card-title mb-0">Publish Schedule</h5>
+                    </b-card-header>
+                    <b-card-body>
+                        <div>
+                            <label class="form-label" for="datepicker-publish-input">Publish Date & Time</label>
 
-              <flat-pickr v-model="date1" :config="datetimeConfig" placeholder="Enter publish date"
-                class="form-control"></flat-pickr>
-            </div>
-          </b-card-body>
-        </b-card>
+                            <flat-pickr v-model="date1" :config="datetimeConfig" class="form-control"
+                                        placeholder="Enter publish date"></flat-pickr>
+                        </div>
+                    </b-card-body>
+                </b-card>
 
-        <b-card no-body>
-          <b-card-header>
-            <h5 class="card-title mb-0">Product Categories</h5>
-          </b-card-header>
-          <b-card-body>
-            <p class="text-muted mb-2">
-              <b-link href="#" class="float-end text-decoration-underline">Add New</b-link>Select product category
-            </p>
+                <b-card no-body>
+                    <b-card-header>
+                        <h5 class="card-title mb-0">Product Categories</h5>
+                    </b-card-header>
+                    <b-card-body>
+                        <p class="text-muted mb-2">
+                            <b-link class="float-end text-decoration-underline" href="#">Add New</b-link>
+                            Select product category
+                        </p>
 
-            <Multiselect class="form-control" v-model="value3" :close-on-select="true" :searchable="true"
-              :create-option="true" :options="[
+                        <Multiselect v-model="value3" :close-on-select="true" :create-option="true" :options="[
                 { value: 'All', label: 'All' },
                 { value: 'Appliances', label: 'Appliances' },
                 { value: 'Fashion', label: 'Fashion' },
@@ -303,33 +325,36 @@ export default {
                 { value: 'Home & Furniture', label: 'Home & Furniture' },
                 { value: 'Kids', label: 'Kids' },
                 { value: 'Mobiles', label: 'Mobiles' },
-              ]" />
-          </b-card-body>
-        </b-card>
-        <b-card no-body>
-          <b-card-header>
-            <h5 class="card-title mb-0">Product Tags</h5>
-          </b-card-header>
-          <b-card-body>
-            <div class="hstack gap-3 align-items-start">
-              <div class="flex-grow-1">
-                <input class="form-control" data-choices data-choices-multiple-remove="true" placeholder="Enter tags"
-                  type="text" value="Cotton" />
-              </div>
-            </div>
-          </b-card-body>
-        </b-card>
+              ]"
+                                     :searchable="true" class="form-control"/>
+                    </b-card-body>
+                </b-card>
+                <b-card no-body>
+                    <b-card-header>
+                        <h5 class="card-title mb-0">Product Tags</h5>
+                    </b-card-header>
+                    <b-card-body>
+                        <div class="hstack gap-3 align-items-start">
+                            <div class="flex-grow-1">
+                                <input class="form-control" data-choices data-choices-multiple-remove="true"
+                                       placeholder="Enter tags"
+                                       type="text" value="Cotton"/>
+                            </div>
+                        </div>
+                    </b-card-body>
+                </b-card>
 
-        <b-card no-body>
-          <b-card-header>
-            <h5 class="card-title mb-0">Product Short Description</h5>
-          </b-card-header>
-          <b-card-body>
-            <p class="text-muted mb-2">Add short description for product</p>
-            <textarea class="form-control" placeholder="Must enter minimum of a 100 characters" rows="3"></textarea>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
-  </Layout>
+                <b-card no-body>
+                    <b-card-header>
+                        <h5 class="card-title mb-0">Product Short Description</h5>
+                    </b-card-header>
+                    <b-card-body>
+                        <p class="text-muted mb-2">Add short description for product</p>
+                        <textarea class="form-control" placeholder="Must enter minimum of a 100 characters"
+                                  rows="3"></textarea>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
+    </Layout>
 </template>

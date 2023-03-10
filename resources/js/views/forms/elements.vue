@@ -18,10 +18,10 @@ export default {
                 text: "Forms",
                 href: "/",
             },
-            {
-                text: "Basic Elements",
-                active: true,
-            },
+                {
+                    text: "Basic Elements",
+                    active: true,
+                },
             ],
         };
     },
@@ -53,7 +53,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -61,156 +61,156 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Input Example</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="form-grid-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="form-grid-showcode">
+                                <label class="form-label text-muted" for="form-grid-showcode">Show Code</label>
+                                <input id="form-grid-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
                     <b-card-body>
                         <div class="live-preview">
                             <b-row class="gy-4">
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="basiInput" class="form-label">Basic Input</label>
-                                        <input type="password" class="form-control" id="basiInput">
+                                        <label class="form-label" for="basiInput">Basic Input</label>
+                                        <input id="basiInput" class="form-control" type="password">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="labelInput" class="form-label">Input with Label</label>
-                                        <input type="password" class="form-control" id="labelInput">
+                                        <label class="form-label" for="labelInput">Input with Label</label>
+                                        <input id="labelInput" class="form-control" type="password">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="placeholderInput" class="form-label">Input with Placeholder</label>
-                                        <input type="password" class="form-control" id="placeholderInput"
-                                            placeholder="Placeholder">
+                                        <label class="form-label" for="placeholderInput">Input with Placeholder</label>
+                                        <input id="placeholderInput" class="form-control" placeholder="Placeholder"
+                                               type="password">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="valueInput" class="form-label">Input with Value</label>
-                                        <input type="text" class="form-control" id="valueInput" value="Input value">
+                                        <label class="form-label" for="valueInput">Input with Value</label>
+                                        <input id="valueInput" class="form-control" type="text" value="Input value">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="readonlyPlaintext" class="form-label">Readonly Plain Text
+                                        <label class="form-label" for="readonlyPlaintext">Readonly Plain Text
                                             Input</label>
-                                        <input type="text" class="form-control-plaintext" id="readonlyPlaintext"
-                                            value="Readonly input" readonly>
+                                        <input id="readonlyPlaintext" class="form-control-plaintext" readonly
+                                               type="text" value="Readonly input">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="readonlyInput" class="form-label">Readonly Input</label>
-                                        <input type="text" class="form-control" id="readonlyInput"
-                                            value="Readonly input" readonly>
+                                        <label class="form-label" for="readonlyInput">Readonly Input</label>
+                                        <input id="readonlyInput" class="form-control" readonly
+                                               type="text" value="Readonly input">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="disabledInput" class="form-label">Disabled Input</label>
-                                        <input type="text" class="form-control" id="disabledInput"
-                                            value="Disabled input" disabled>
+                                        <label class="form-label" for="disabledInput">Disabled Input</label>
+                                        <input id="disabledInput" class="form-control" disabled
+                                               type="text" value="Disabled input">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="iconInput" class="form-label">Input with Icon</label>
+                                        <label class="form-label" for="iconInput">Input with Icon</label>
                                         <div class="form-icon">
-                                            <input type="email" class="form-control form-control-icon" id="iconInput"
-                                                placeholder="example@gmail.com">
+                                            <input id="iconInput" class="form-control form-control-icon" placeholder="example@gmail.com"
+                                                   type="email">
                                             <i class="ri-mail-unread-line"></i>
                                         </div>
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="iconrightInput" class="form-label">Input with Icon Right</label>
+                                        <label class="form-label" for="iconrightInput">Input with Icon Right</label>
                                         <div class="form-icon right">
-                                            <input type="email" class="form-control form-control-icon"
-                                                id="iconrightInput" placeholder="example@gmail.com">
+                                            <input id="iconrightInput" class="form-control form-control-icon"
+                                                   placeholder="example@gmail.com" type="email">
                                             <i class="ri-mail-unread-line"></i>
                                         </div>
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="exampleInputdate" class="form-label">Input Date</label>
-                                        <input type="date" class="form-control" id="exampleInputdate">
+                                        <label class="form-label" for="exampleInputdate">Input Date</label>
+                                        <input id="exampleInputdate" class="form-control" type="date">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="exampleInputtime" class="form-label">Input Time</label>
-                                        <input type="time" class="form-control" id="exampleInputtime">
+                                        <label class="form-label" for="exampleInputtime">Input Time</label>
+                                        <input id="exampleInputtime" class="form-control" type="time">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="exampleInputpassword" class="form-label">Input Password</label>
-                                        <input type="password" class="form-control" id="exampleInputpassword"
-                                            value="44512465">
+                                        <label class="form-label" for="exampleInputpassword">Input Password</label>
+                                        <input id="exampleInputpassword" class="form-control" type="password"
+                                               value="44512465">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="exampleFormControlTextarea5" class="form-label">Example
+                                        <label class="form-label" for="exampleFormControlTextarea5">Example
                                             Textarea</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea5"
-                                            rows="3"></textarea>
+                                        <textarea id="exampleFormControlTextarea5" class="form-control"
+                                                  rows="3"></textarea>
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="formtextInput" class="form-label">Form Text</label>
-                                        <input type="password" class="form-control" id="formtextInput">
+                                        <label class="form-label" for="formtextInput">Form Text</label>
+                                        <input id="formtextInput" class="form-control" type="password">
                                         <div id="passwordHelpBlock" class="form-text">
                                             Must be 8-20 characters long.
                                         </div>
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="colorPicker" class="form-label">Color Picker</label>
-                                        <input type="color" class="form-control form-control-color w-100"
-                                            id="colorPicker" value="#364574">
+                                        <label class="form-label" for="colorPicker">Color Picker</label>
+                                        <input id="colorPicker" class="form-control form-control-color w-100"
+                                               type="color" value="#364574">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="borderInput" class="form-label">Input Border Style</label>
-                                        <input type="text" class="form-control border-dashed" id="borderInput"
-                                            placeholder="Enter your name">
+                                        <label class="form-label" for="borderInput">Input Border Style</label>
+                                        <input id="borderInput" class="form-control border-dashed" placeholder="Enter your name"
+                                               type="text">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
-                                    <label for="exampleDataList" class="form-label">Datalist example</label>
-                                    <input class="form-control" list="datalistOptions" id="exampleDataList"
-                                        placeholder="Search your country...">
+                                <b-col md="6" xxl="3">
+                                    <label class="form-label" for="exampleDataList">Datalist example</label>
+                                    <input id="exampleDataList" class="form-control" list="datalistOptions"
+                                           placeholder="Search your country...">
                                     <datalist id="datalistOptions">
-                                        <option value="Switzerland" />
-                                        <option value="New York" />
-                                        <option value="France" />
-                                        <option value="Spain" />
-                                        <option value="Chicago" />
-                                        <option value="Bulgaria" />
-                                        <option value="Hong Kong" />
+                                        <option value="Switzerland"/>
+                                        <option value="New York"/>
+                                        <option value="France"/>
+                                        <option value="Spain"/>
+                                        <option value="Chicago"/>
+                                        <option value="Bulgaria"/>
+                                        <option value="Hong Kong"/>
                                     </datalist>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div>
-                                        <label for="exampleInputrounded" class="form-label">Rounded Input</label>
-                                        <input type="text" class="form-control rounded-pill" id="exampleInputrounded"
-                                            placeholder="Enter your name">
+                                        <label class="form-label" for="exampleInputrounded">Rounded Input</label>
+                                        <input id="exampleInputrounded" class="form-control rounded-pill" placeholder="Enter your name"
+                                               type="text">
                                     </div>
                                 </b-col>
-                                <b-col xxl="3" md="6">
+                                <b-col md="6" xxl="3">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="firstnamefloatingInput"
-                                            placeholder="Enter your firstname">
+                                        <input id="firstnamefloatingInput" class="form-control" placeholder="Enter your firstname"
+                                               type="text">
                                         <label for="firstnamefloatingInput">Floating Input</label>
                                     </div>
                                 </b-col>
@@ -353,9 +353,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Input Sizing</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="sizing-input-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="sizing-input-showcode">
+                                <label class="form-label text-muted" for="sizing-input-showcode">Show Code</label>
+                                <input id="sizing-input-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -367,15 +367,15 @@ export default {
                         <div class="live-preview">
                             <b-row class="align-items-center g-3">
                                 <b-col lg="4">
-                                    <input class="form-control form-control-sm" type="text"
-                                        placeholder=".form-control-sm">
+                                    <input class="form-control form-control-sm" placeholder=".form-control-sm"
+                                           type="text">
                                 </b-col>
                                 <b-col lg="4">
-                                    <input class="form-control" type="text" placeholder=".form-control">
+                                    <input class="form-control" placeholder=".form-control" type="text">
                                 </b-col>
                                 <b-col lg="4">
-                                    <input class="form-control form-control-lg" type="text"
-                                        placeholder=".form-control-lg">
+                                    <input class="form-control form-control-lg" placeholder=".form-control-lg"
+                                           type="text">
                                 </b-col>
                             </b-row>
                         </div>
@@ -402,8 +402,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">File Input</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="file-input-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="file-input-showcode">
+                                <label class="form-label text-muted" for="file-input-showcode">Show Code</label>
+                                <input id="file-input-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -412,29 +412,29 @@ export default {
                             <b-row class="align-items-center g-3">
                                 <b-col lg="4">
                                     <div>
-                                        <label for="formFile" class="form-label">Default File Input Example</label>
+                                        <label class="form-label" for="formFile">Default File Input Example</label>
                                         <p class="text-muted">Use <code>input</code> attribute with
                                             <code>type="file"</code> tag for default file input.
                                         </p>
-                                        <input class="form-control" type="file" id="formFile">
+                                        <input id="formFile" class="form-control" type="file">
                                     </div>
                                 </b-col>
                                 <b-col lg="4">
                                     <div>
-                                        <label for="formFileMultiple" class="form-label">Multiple Files Input
+                                        <label class="form-label" for="formFileMultiple">Multiple Files Input
                                             Example</label>
                                         <p class="text-muted">Use <code>multiple</code> attribute within the input
                                             attribute to select multiple files.</p>
-                                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                        <input id="formFileMultiple" class="form-control" multiple type="file">
                                     </div>
                                 </b-col>
                                 <b-col lg="4">
                                     <div>
-                                        <label for="formFileDisabled" class="form-label">Disabled File Input
+                                        <label class="form-label" for="formFileDisabled">Disabled File Input
                                             Example</label>
                                         <p class="text-muted">Use <code>disabled</code> attribute within the input
                                             attribute to disable the file input.</p>
-                                        <input class="form-control" type="file" id="formFileDisabled" disabled>
+                                        <input id="formFileDisabled" class="form-control" disabled type="file">
                                     </div>
                                 </b-col>
                             </b-row>
@@ -442,32 +442,32 @@ export default {
                                 <h5 class="fs-14">File Input Sizing</h5>
                                 <b-col lg="4">
                                     <div>
-                                        <label for="formSizeSmall" class="form-label">Small Size File Input
+                                        <label class="form-label" for="formSizeSmall">Small Size File Input
                                             Example</label>
                                         <p class="text-muted">Use <code>form-control-sm</code> class within the
                                             form-control class to set a small size file input.</p>
-                                        <input class="form-control form-control-sm" id="formSizeSmall" type="file">
+                                        <input id="formSizeSmall" class="form-control form-control-sm" type="file">
                                     </div>
                                 </b-col>
                                 <b-col lg="4">
                                     <div>
-                                        <label for="formSizeDefault" class="form-label">Default Size File Input
+                                        <label class="form-label" for="formSizeDefault">Default Size File Input
                                             Example</label>
                                         <p class="text-muted">Use <code>form-control </code>class and
                                             <code>type="file"</code> attribute within the input attribute to set a
                                             default size file input.
                                         </p>
-                                        <input class="form-control" id="formSizeDefault" type="file">
+                                        <input id="formSizeDefault" class="form-control" type="file">
                                     </div>
                                 </b-col>
                                 <b-col lg="4">
                                     <div>
-                                        <label for="formSizeLarge" class="form-label">Large Size File Input
+                                        <label class="form-label" for="formSizeLarge">Large Size File Input
                                             Example</label>
                                         <p class="text-muted">Use <code>form-control-lg</code> class within the
                                             form-control class to set a large size file input.</p>
 
-                                        <input class="form-control form-control-lg" id="formSizeLarge" type="file">
+                                        <input id="formSizeLarge" class="form-control form-control-lg" type="file">
                                     </div>
                                 </b-col>
                             </b-row>
@@ -518,8 +518,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Input Group</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="input-group-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="input-group-showcode">
+                                <label class="form-label text-muted" for="input-group-showcode">Show Code</label>
+                                <input id="input-group-showcode" class="form-check-input code-switcher" type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -532,49 +532,49 @@ export default {
                                 <b-row class="g-3">
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon1">@</span>
-                                            <input type="text" class="form-control" placeholder="Username"
-                                                aria-label="Username" aria-describedby="basic-addon1">
+                                            <span id="basic-addon1" class="input-group-text">@</span>
+                                            <input aria-describedby="basic-addon1" aria-label="Username" class="form-control"
+                                                   placeholder="Username" type="text">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Recipient's username"
-                                                aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                            <span class="input-group-text" id="basic-addon2">@example.com</span>
+                                            <input aria-describedby="basic-addon2" aria-label="Recipient's username" class="form-control"
+                                                   placeholder="Recipient's username" type="text">
+                                            <span id="basic-addon2" class="input-group-text">@example.com</span>
                                         </div>
                                     </b-col>
                                     <b-col lg="12">
                                         <div class="input-group">
                                             <span class="input-group-text">$</span>
-                                            <input type="text" class="form-control"
-                                                aria-label="Amount (to the nearest dollar)">
+                                            <input aria-label="Amount (to the nearest dollar)" class="form-control"
+                                                   type="text">
                                             <span class="input-group-text">.00</span>
                                         </div>
                                     </b-col>
                                     <b-col lg="12">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Username"
-                                                aria-label="Username">
+                                            <input aria-label="Username" class="form-control" placeholder="Username"
+                                                   type="text">
                                             <span class="input-group-text">@</span>
-                                            <input type="text" class="form-control" placeholder="Server"
-                                                aria-label="Server">
+                                            <input aria-label="Server" class="form-control" placeholder="Server"
+                                                   type="text">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
                                             <span class="input-group-text">With textarea</span>
-                                            <textarea class="form-control" aria-label="With textarea"
-                                                rows="2"></textarea>
+                                            <textarea aria-label="With textarea" class="form-control"
+                                                      rows="2"></textarea>
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
-                                        <label for="basic-url" class="form-label">Your vanity URL</label>
+                                        <label class="form-label" for="basic-url">Your vanity URL</label>
                                         <div class="input-group">
-                                            <span class="input-group-text"
-                                                id="basic-addon3">https://example.com/users/</span>
-                                            <input type="text" class="form-control" id="basic-url"
-                                                aria-describedby="basic-addon3">
+                                            <span id="basic-addon3"
+                                                  class="input-group-text">https://example.com/users/</span>
+                                            <input id="basic-url" aria-describedby="basic-addon3" class="form-control"
+                                                   type="text">
                                         </div>
                                     </b-col>
                                 </b-row>
@@ -586,9 +586,9 @@ export default {
                                     order to accommodate custom form field validation within an input group. You may
                                     disable this with <code>flex-nowrap</code> class.</p>
                                 <div class="input-group flex-nowrap">
-                                    <span class="input-group-text" id="addon-wrapping">@</span>
-                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                        aria-describedby="addon-wrapping">
+                                    <span id="addon-wrapping" class="input-group-text">@</span>
+                                    <input aria-describedby="addon-wrapping" aria-label="Username" class="form-control" placeholder="Username"
+                                           type="text">
                                 </div>
                             </div>
                         </div>
@@ -640,9 +640,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Input Group Sizing</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="input-group-sizing-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="input-group-sizing-showcode">
+                                <label class="form-label text-muted" for="input-group-sizing-showcode">Show Code</label>
+                                <input id="input-group-sizing-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -655,23 +655,23 @@ export default {
                             <b-row class="align-items-center g-3">
                                 <b-col lg="4">
                                     <div class="input-group input-group-sm">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-                                        <input type="text" class="form-control" aria-label="Sizing example input"
-                                            aria-describedby="inputGroup-sizing-sm">
+                                        <span id="inputGroup-sizing-sm" class="input-group-text">Small</span>
+                                        <input aria-describedby="inputGroup-sizing-sm" aria-label="Sizing example input" class="form-control"
+                                               type="text">
                                     </div>
                                 </b-col>
                                 <b-col lg="4">
                                     <div class="input-group">
-                                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-                                        <input type="text" class="form-control" aria-label="Sizing example input"
-                                            aria-describedby="inputGroup-sizing-default">
+                                        <span id="inputGroup-sizing-default" class="input-group-text">Default</span>
+                                        <input aria-describedby="inputGroup-sizing-default" aria-label="Sizing example input" class="form-control"
+                                               type="text">
                                     </div>
                                 </b-col>
                                 <b-col lg="4">
                                     <div class="input-group input-group-lg">
-                                        <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
-                                        <input type="text" class="form-control" aria-label="Sizing example input"
-                                            aria-describedby="inputGroup-sizing-lg">
+                                        <span id="inputGroup-sizing-lg" class="input-group-text">Large</span>
+                                        <input aria-describedby="inputGroup-sizing-lg" aria-label="Sizing example input" class="form-control"
+                                               type="text">
                                     </div>
                                 </b-col>
                             </b-row>
@@ -705,10 +705,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Multiple Inputs</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="input-group-multiple-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="input-group-multiple-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="input-group-multiple-showcode">
+                                <input id="input-group-multiple-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -720,20 +720,20 @@ export default {
                         <div class="live-preview">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">First and last name</span>
-                                <input type="text" aria-label="First name" class="form-control">
-                                <input type="text" aria-label="Last name" class="form-control">
+                                <input aria-label="First name" class="form-control" type="text">
+                                <input aria-label="Last name" class="form-control" type="text">
                             </div>
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text">$</span>
                                 <span class="input-group-text">0.00</span>
-                                <input type="text" class="form-control"
-                                    aria-label="Dollar amount (with dot and two decimal places)">
+                                <input aria-label="Dollar amount (with dot and two decimal places)" class="form-control"
+                                       type="text">
                             </div>
 
                             <div class="input-group">
-                                <input type="text" class="form-control"
-                                    aria-label="Dollar amount (with dot and two decimal places)">
+                                <input aria-label="Dollar amount (with dot and two decimal places)" class="form-control"
+                                       type="text">
                                 <span class="input-group-text">$</span>
                                 <span class="input-group-text">0.00</span>
                             </div>
@@ -751,7 +751,7 @@ export default {
     &lt;span class=&quot;input-group-text&quot;&gt;0.00&lt;/span&gt;
     &lt;input type=&quot;text&quot; class=&quot;form-control&quot; aria-label=&quot;Dollar amount (with dot and two decimal places)&quot;&gt;
 &lt;/div&gt;</code>
-    
+
 <code>&lt;div class=&quot;input-group&quot;&gt;
     &lt;input type=&quot;text&quot; class=&quot;form-control&quot; aria-label=&quot;Dollar amount (with dot and two decimal places)&quot;&gt;
     &lt;span class=&quot;input-group-text&quot;&gt;$&lt;/span&gt;
@@ -770,10 +770,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Buttons, Checkboxs and Radios Group</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="input-group-btncheck-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="input-group-btncheck-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="input-group-btncheck-showcode">
+                                <input id="input-group-btncheck-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -788,54 +788,56 @@ export default {
                                     <b-col lg="6">
                                         <div class="input-group">
                                             <div class="input-group-text">
-                                                <input class="form-check-input mt-0" type="checkbox" value=""
-                                                    aria-label="Checkbox for following text input">
+                                                <input aria-label="Checkbox for following text input" class="form-check-input mt-0" type="checkbox"
+                                                       value="">
                                             </div>
-                                            <input type="text" class="form-control"
-                                                aria-label="Text input with checkbox">
+                                            <input aria-label="Text input with checkbox" class="form-control"
+                                                   type="text">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
                                             <div class="input-group-text">
-                                                <input class="form-check-input mt-0" type="radio" value=""
-                                                    aria-label="Radio button for following text input">
+                                                <input aria-label="Radio button for following text input" class="form-check-input mt-0" type="radio"
+                                                       value="">
                                             </div>
-                                            <input type="text" class="form-control"
-                                                aria-label="Text input with radio button">
+                                            <input aria-label="Text input with radio button" class="form-control"
+                                                   type="text">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <b-button variant="outline-primary" type="button"
-                                                id="button-addon1">Button</b-button>
-                                            <input type="text" class="form-control" placeholder=""
-                                                aria-label="Example text with button addon"
-                                                aria-describedby="button-addon1">
+                                            <b-button id="button-addon1" type="button"
+                                                      variant="outline-primary">Button
+                                            </b-button>
+                                            <input aria-describedby="button-addon1" aria-label="Example text with button addon" class="form-control"
+                                                   placeholder=""
+                                                   type="text">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" aria-label="Recipient's username"
-                                                aria-describedby="button-addon2">
-                                            <b-button variant="outline-success" type="button"
-                                                id="button-addon2">Button</b-button>
+                                            <input aria-describedby="button-addon2" aria-label="Recipient's username" class="form-control"
+                                                   type="text">
+                                            <b-button id="button-addon2" type="button"
+                                                      variant="outline-success">Button
+                                            </b-button>
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <b-button variant="primary" type="button">Button</b-button>
-                                            <b-button variant="success" type="button">Button</b-button>
-                                            <input type="text" class="form-control" placeholder=""
-                                                aria-label="Example text with two button addons">
+                                            <b-button type="button" variant="primary">Button</b-button>
+                                            <b-button type="button" variant="success">Button</b-button>
+                                            <input aria-label="Example text with two button addons" class="form-control" placeholder=""
+                                                   type="text">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <input type="text" class="form-control"
-                                                aria-label="Recipient's username with two button addons">
-                                            <b-button variant="primary" type="button">Button</b-button>
-                                            <b-button variant="success" type="button">Button</b-button>
+                                            <input aria-label="Recipient's username with two button addons" class="form-control"
+                                                   type="text">
+                                            <b-button type="button" variant="primary">Button</b-button>
+                                            <b-button type="button" variant="success">Button</b-button>
                                         </div>
                                     </b-col>
                                 </b-row>
@@ -890,10 +892,10 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Buttons with dropdowns</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="input-group-dropdown-showcode" class="form-label text-muted">Show
+                                <label class="form-label text-muted" for="input-group-dropdown-showcode">Show
                                     Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="input-group-dropdown-showcode">
+                                <input id="input-group-dropdown-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -905,22 +907,22 @@ export default {
                                 <b-row class="g-3">
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <b-dropdown variant="primary" text="Dropdown">
+                                            <b-dropdown text="Dropdown" variant="primary">
                                                 <b-dropdown-item>Action</b-dropdown-item>
                                                 <b-dropdown-item>Another action</b-dropdown-item>
                                                 <b-dropdown-item>Something else here</b-dropdown-item>
                                                 <b-dropdown-divider></b-dropdown-divider>
                                                 <b-dropdown-item>Separated link</b-dropdown-item>
                                             </b-dropdown>
-                                            <input type="text" class="form-control"
-                                                aria-label="Text input with dropdown button">
+                                            <input aria-label="Text input with dropdown button" class="form-control"
+                                                   type="text">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <input type="text" class="form-control"
-                                                aria-label="Text input with dropdown button">
-                                            <b-dropdown variant="success" text="Dropdown" right>
+                                            <input aria-label="Text input with dropdown button" class="form-control"
+                                                   type="text">
+                                            <b-dropdown right text="Dropdown" variant="success">
                                                 <b-dropdown-item>Action</b-dropdown-item>
                                                 <b-dropdown-item>Another action</b-dropdown-item>
                                                 <b-dropdown-item>Something else here</b-dropdown-item>
@@ -931,7 +933,7 @@ export default {
                                     </b-col>
                                     <b-col lg="12">
                                         <div class="input-group">
-                                            <b-dropdown variant="outline-secondary" text="Dropdown">
+                                            <b-dropdown text="Dropdown" variant="outline-secondary">
                                                 <b-dropdown-item>Action</b-dropdown-item>
                                                 <b-dropdown-item>Another action</b-dropdown-item>
                                                 <b-dropdown-item>Something else here</b-dropdown-item>
@@ -939,9 +941,9 @@ export default {
                                                 <b-dropdown-item>Separated link</b-dropdown-item>
                                             </b-dropdown>
 
-                                            <input type="text" class="form-control"
-                                                aria-label="Text input with 2 dropdown buttons">
-                                            <b-dropdown variant="outline-secondary" text="Dropdown" right>
+                                            <input aria-label="Text input with 2 dropdown buttons" class="form-control"
+                                                   type="text">
+                                            <b-dropdown right text="Dropdown" variant="outline-secondary">
                                                 <b-dropdown-item>Action</b-dropdown-item>
                                                 <b-dropdown-item>Another action</b-dropdown-item>
                                                 <b-dropdown-item>Something else here</b-dropdown-item>
@@ -1011,9 +1013,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Custom Forms</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="input-group-custom-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="input-group-custom-showcode">
+                                <label class="form-label text-muted" for="input-group-custom-showcode">Show Code</label>
+                                <input id="input-group-custom-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -1027,7 +1029,7 @@ export default {
                                     <b-col lg="6">
                                         <div class="input-group">
                                             <label class="input-group-text" for="inputGroupSelect01">Options</label>
-                                            <select class="form-select" id="inputGroupSelect01">
+                                            <select id="inputGroupSelect01" class="form-select">
                                                 <option selected>Choose...</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -1037,7 +1039,7 @@ export default {
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <select class="form-select" id="inputGroupSelect02">
+                                            <select id="inputGroupSelect02" class="form-select">
                                                 <option selected>Choose...</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -1048,9 +1050,9 @@ export default {
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <b-button variant="outline-primary" type="button">Button</b-button>
-                                            <select class="form-select" id="inputGroupSelect03"
-                                                aria-label="Example select with button addon">
+                                            <b-button type="button" variant="outline-primary">Button</b-button>
+                                            <select id="inputGroupSelect03" aria-label="Example select with button addon"
+                                                    class="form-select">
                                                 <option selected>Choose...</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -1060,14 +1062,14 @@ export default {
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <select class="form-select" id="inputGroupSelect04"
-                                                aria-label="Example select with button addon">
+                                            <select id="inputGroupSelect04" aria-label="Example select with button addon"
+                                                    class="form-select">
                                                 <option selected>Choose...</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
                                             </select>
-                                            <b-button variant="outline-secondary" type="button">Button</b-button>
+                                            <b-button type="button" variant="outline-secondary">Button</b-button>
                                         </div>
                                     </b-col>
                                 </b-row>
@@ -1079,29 +1081,31 @@ export default {
                                     <b-col lg="6">
                                         <div class="input-group">
                                             <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                            <input type="file" class="form-control" id="inputGroupFile01">
+                                            <input id="inputGroupFile01" class="form-control" type="file">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <input type="file" class="form-control" id="inputGroupFile02">
+                                            <input id="inputGroupFile02" class="form-control" type="file">
                                             <label class="input-group-text" for="inputGroupFile02">Upload</label>
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <b-button variant="outline-primary" type="button"
-                                                id="inputGroupFileAddon03">Button</b-button>
-                                            <input type="file" class="form-control" id="inputGroupFile03"
-                                                aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+                                            <b-button id="inputGroupFileAddon03" type="button"
+                                                      variant="outline-primary">Button
+                                            </b-button>
+                                            <input id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload"
+                                                   class="form-control" type="file">
                                         </div>
                                     </b-col>
                                     <b-col lg="6">
                                         <div class="input-group">
-                                            <input type="file" class="form-control" id="inputGroupFile04"
-                                                aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                                            <b-button variant="outline-success" type="button"
-                                                id="inputGroupFileAddon04">Button</b-button>
+                                            <input id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"
+                                                   class="form-control" type="file">
+                                            <b-button id="inputGroupFileAddon04" type="button"
+                                                      variant="outline-success">Button
+                                            </b-button>
                                         </div>
                                     </b-col>
                                 </b-row>

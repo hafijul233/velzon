@@ -1,7 +1,5 @@
 <script>
-export default {
-
-};
+export default {};
 </script>
 
 <template>
@@ -12,19 +10,21 @@ export default {
                 <ul class="nav justify-content-end nav-tabs-custom rounded card-header-tabs border-bottom-0"
                     role="tablist">
                     <li class="nav-item">
-                        <b-link class="nav-link active" data-bs-toggle="tab" href="#buy-tab" role="tab"
-                            aria-selected="false">Buy</b-link>
+                        <b-link aria-selected="false" class="nav-link active" data-bs-toggle="tab" href="#buy-tab"
+                                role="tab">Buy
+                        </b-link>
                     </li>
                     <li class="nav-item">
-                        <b-link class="nav-link" data-bs-toggle="tab" href="#sell-tab" role="tab" aria-selected="true">
-                            Sell</b-link>
+                        <b-link aria-selected="true" class="nav-link" data-bs-toggle="tab" href="#sell-tab" role="tab">
+                            Sell
+                        </b-link>
                     </li>
                 </ul>
             </div>
         </b-card-header>
         <b-card-body class="p-0">
             <div class="tab-content p-0">
-                <div class="tab-pane active" id="buy-tab" role="tabpanel">
+                <div id="buy-tab" class="tab-pane active" role="tabpanel">
                     <div class="p-3 bg-soft-warning">
                         <div class="float-end ms-2">
                             <h6 class="text-warning mb-0">USD Balance : <span class="text-dark">$12,426.07</span></h6>
@@ -58,25 +58,25 @@ export default {
                         <div>
                             <div class="input-group mb-3">
                                 <label class="input-group-text">Amount</label>
-                                <input type="text" class="form-control" placeholder="0">
+                                <input class="form-control" placeholder="0" type="text">
                             </div>
 
                             <div class="input-group mb-3">
                                 <label class="input-group-text">Price</label>
-                                <input type="text" class="form-control" placeholder="2.045585">
+                                <input class="form-control" placeholder="2.045585" type="text">
                                 <label class="input-group-text">$</label>
                             </div>
 
                             <div class="input-group mb-0">
                                 <label class="input-group-text">Total</label>
-                                <input type="text" class="form-control" placeholder="2700.16">
+                                <input class="form-control" placeholder="2700.16" type="text">
                             </div>
                         </div>
                         <div class="mt-3 pt-2">
                             <div class="d-flex mb-2">
                                 <div class="flex-grow-1">
                                     <p class="fs-13 mb-0">Transaction Fees<span
-                                            class="text-muted ms-1 fs-11">(0.05%)</span></p>
+                                        class="text-muted ms-1 fs-11">(0.05%)</span></p>
                                 </div>
                                 <div class="flex-shrink-0">
                                     <h6 class="mb-0">$1.08</h6>
@@ -85,7 +85,7 @@ export default {
                             <div class="d-flex mb-2">
                                 <div class="flex-grow-1">
                                     <p class="fs-13 mb-0">Minimum Received<span
-                                            class="text-muted ms-1 fs-11">(2%)</span></p>
+                                        class="text-muted ms-1 fs-11">(2%)</span></p>
                                 </div>
                                 <div class="flex-shrink-0">
                                     <h6 class="mb-0">$7.85</h6>
@@ -101,12 +101,12 @@ export default {
                             </div>
                         </div>
                         <div class="mt-3 pt-2">
-                            <b-button type="button" variant="primary" class="w-100">Buy Coin</b-button>
+                            <b-button class="w-100" type="button" variant="primary">Buy Coin</b-button>
                         </div>
                     </div>
                 </div>
 
-                <div class="tab-pane" id="sell-tab" role="tabpanel">
+                <div id="sell-tab" class="tab-pane" role="tabpanel">
                     <div class="p-3 bg-soft-warning">
                         <div class="float-end ms-2">
                             <h6 class="text-warning mb-0">USD Balance : <span class="text-dark">$12,426.07</span></h6>
@@ -128,30 +128,30 @@ export default {
                             <b-col cols="6">
                                 <div class="mb-3">
                                     <label>Email :</label>
-                                    <input type="email" class="form-control" placeholder="example@email.com">
+                                    <input class="form-control" placeholder="example@email.com" type="email">
                                 </div>
                             </b-col>
                         </b-row>
                         <div>
                             <div class="input-group mb-3">
                                 <label class="input-group-text">Amount</label>
-                                <input type="text" class="form-control" placeholder="0">
+                                <input class="form-control" placeholder="0" type="text">
                             </div>
                             <div class="input-group mb-3">
                                 <label class="input-group-text">Price</label>
-                                <input type="text" class="form-control" placeholder="2.045585">
+                                <input class="form-control" placeholder="2.045585" type="text">
                                 <label class="input-group-text">$</label>
                             </div>
                             <div class="input-group mb-0">
                                 <label class="input-group-text">Total</label>
-                                <input type="text" class="form-control" placeholder="2700.16">
+                                <input class="form-control" placeholder="2700.16" type="text">
                             </div>
                         </div>
                         <div class="mt-3 pt-2">
                             <div class="d-flex mb-2">
                                 <div class="flex-grow-1">
                                     <p class="fs-13 mb-0">Transaction Fees<span
-                                            class="text-muted ms-1 fs-11">(0.05%)</span></p>
+                                        class="text-muted ms-1 fs-11">(0.05%)</span></p>
                                 </div>
                                 <div class="flex-shrink-0">
                                     <h6 class="mb-0">$1.08</h6>
@@ -160,7 +160,7 @@ export default {
                             <div class="d-flex mb-2">
                                 <div class="flex-grow-1">
                                     <p class="fs-13 mb-0">Minimum Received<span
-                                            class="text-muted ms-1 fs-11">(2%)</span></p>
+                                        class="text-muted ms-1 fs-11">(2%)</span></p>
                                 </div>
                                 <div class="flex-shrink-0">
                                     <h6 class="mb-0">$7.85</h6>
@@ -176,7 +176,7 @@ export default {
                             </div>
                         </div>
                         <div class="mt-3 pt-2">
-                            <b-button type="button" variant="danger" class="w-100">Sell Coin</b-button>
+                            <b-button class="w-100" type="button" variant="danger">Sell Coin</b-button>
                         </div>
                     </div>
                 </div>

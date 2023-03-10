@@ -1,4 +1,4 @@
-import { authHeader } from './auth-header';
+import {authHeader} from './auth-header';
 
 export const userService = {
     login,
@@ -10,8 +10,8 @@ export const userService = {
 function login(email, password) {
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email, password})
     };
 
     return fetch(`/users/authenticate`, requestOptions)
@@ -34,7 +34,7 @@ function logout() {
 function register(user) {
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(user)
     };
     return fetch(`/users/register`, requestOptions).then(handleResponse);

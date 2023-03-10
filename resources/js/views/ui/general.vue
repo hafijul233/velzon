@@ -6,116 +6,118 @@ import "prismjs";
 import "prismjs/themes/prism.css";
 
 export default {
-  data() {
-    return {
-      title: "General",
-      items: [
-        {
-          text: "Base UI",
-          href: "/",
-        },
-        {
-          text: "General",
-          active: true,
-        },
-      ],
-    };
-  },
-  name: "General",
-  components: {
-    Layout,
-    PageHeader,
-  },
-  mounted() {
-    const checkbox = document.getElementsByClassName("code-switcher");
-    Array.from(checkbox).forEach((check) => {
-      check.addEventListener("change", () => {
-        const card = check.closest(".card");
-        const preview = card.querySelector(".live-preview");
-        const code = card.querySelector(".code-view");
-        if (check.checked) {
-          // do this
-          preview.classList.add("d-none");
-          code.classList.remove("d-none");
-        } else {
-          // do that
-          preview.classList.remove("d-none");
-          code.classList.add("d-none");
-        }
-      });
-    });
-  },
+    data() {
+        return {
+            title: "General",
+            items: [
+                {
+                    text: "Base UI",
+                    href: "/",
+                },
+                {
+                    text: "General",
+                    active: true,
+                },
+            ],
+        };
+    },
+    name: "General",
+    components: {
+        Layout,
+        PageHeader,
+    },
+    mounted() {
+        const checkbox = document.getElementsByClassName("code-switcher");
+        Array.from(checkbox).forEach((check) => {
+            check.addEventListener("change", () => {
+                const card = check.closest(".card");
+                const preview = card.querySelector(".live-preview");
+                const code = card.querySelector(".code-view");
+                if (check.checked) {
+                    // do this
+                    preview.classList.add("d-none");
+                    code.classList.remove("d-none");
+                } else {
+                    // do that
+                    preview.classList.remove("d-none");
+                    code.classList.add("d-none");
+                }
+            });
+        });
+    },
 };
 </script>
 
 <template>
-  <Layout>
-    <PageHeader :title="title" :items="items" />
-    <b-row>
-      <b-col>
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Popovers</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="popover-showcode" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="popover-showcode">
-              </div>
-            </div>
-          </b-card-header>
+    <Layout>
+        <PageHeader :items="items" :title="title"/>
+        <b-row>
+            <b-col>
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Popovers</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="popover-showcode">Show Code</label>
+                                <input id="popover-showcode" class="form-check-input code-switcher" type="checkbox">
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
+                    <b-card-body>
 
-            <p class="text-muted">Popovers example are available with follwing options , Directions are mirrored when
-              using in Bootstrap RTL.</p>
-            <div class="live-preview">
-              <div class="hstack flex-wrap gap-2">
+                        <p class="text-muted">Popovers example are available with follwing options , Directions are
+                            mirrored when
+                            using in Bootstrap RTL.</p>
+                        <div class="live-preview">
+                            <div class="hstack flex-wrap gap-2">
 
-                <b-button variant="light" id="popover-button-top">
-                  Popover on top
-                </b-button>
-                <b-popover target="popover-button-top" triggers="focus" html placement="top">
-                  <template #title>Top Popover</template>
-                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                </b-popover>
+                                <b-button id="popover-button-top" variant="light">
+                                    Popover on top
+                                </b-button>
+                                <b-popover html placement="top" target="popover-button-top" triggers="focus">
+                                    <template #title>Top Popover</template>
+                                    Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
+                                </b-popover>
 
-                <b-button variant="light" id="popover-button-right">
-                  Popover on right
-                </b-button>
-                <b-popover target="popover-button-right" triggers="focus" html placement="right">
-                  <template #title>Right Popover</template>
-                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                </b-popover>
+                                <b-button id="popover-button-right" variant="light">
+                                    Popover on right
+                                </b-button>
+                                <b-popover html placement="right" target="popover-button-right" triggers="focus">
+                                    <template #title>Right Popover</template>
+                                    Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
+                                </b-popover>
 
-                <b-button variant="light" id="popover-button-bottom">
-                  Popover on bottom
-                </b-button>
-                <b-popover target="popover-button-bottom" triggers="focus" html placement="bottom">
-                  <template #title>Bottom Popover</template>
-                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                </b-popover>
+                                <b-button id="popover-button-bottom" variant="light">
+                                    Popover on bottom
+                                </b-button>
+                                <b-popover html placement="bottom" target="popover-button-bottom" triggers="focus">
+                                    <template #title>Bottom Popover</template>
+                                    Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
+                                </b-popover>
 
 
-                <b-button variant="light" id="popover-button-left">
-                  Popover on left
-                </b-button>
-                <b-popover target="popover-button-left" triggers="focus" html placement="left">
-                  <template #title>Left Popover</template>
-                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
-                </b-popover>
+                                <b-button id="popover-button-left" variant="light">
+                                    Popover on left
+                                </b-button>
+                                <b-popover html placement="left" target="popover-button-left" triggers="focus">
+                                    <template #title>Left Popover</template>
+                                    Vivamus sagittis lacus vel augue laoreet rutrum faucibus.
+                                </b-popover>
 
-                <b-button variant="success" id="popover-button-variant" href="#" tabindex="0">Dismissible popover
-                </b-button>
-                <b-popover target="popover-button-variant" variant="danger" triggers="focus" html>
-                  <template #title>Dismissible Popover</template>
-                  And here some amazing content. Its very engaging. Right?
-                </b-popover>
-              </div>
-            </div>
+                                <b-button id="popover-button-variant" href="#" tabindex="0" variant="success">
+                                    Dismissible popover
+                                </b-button>
+                                <b-popover html target="popover-button-variant" triggers="focus" variant="danger">
+                                    <template #title>Dismissible Popover</template>
+                                    And here some amazing content. Its very engaging. Right?
+                                </b-popover>
+                            </div>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup"
-                style="height: 275px;"><code>&lt;div class=&quot;hstack flex-wrap gap-2&quot;&gt;
+                   style="height: 275px;"><code>&lt;div class=&quot;hstack flex-wrap gap-2&quot;&gt;
 &lt;b-button type=&quot;button&quot; variant=&quot;light&quot; v-b-popover.click.top=&quot;&lsquo;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&rsquo;&quot; title=&quot;Top Popover&quot;&gt;
 Popover on top
 &lt;/b-button&gt;
@@ -131,42 +133,48 @@ Popover on left
 &lt;b-button variant=&quot;success&quot; id=&quot;popover-button-variant&quot; href=&quot;#&quot; tabindex=&quot;0&quot;&gt;Dismissible popover&lt;/b-button&gt;
 &lt;b-popover target=&quot;popover-button-variant&quot; variant=&quot;danger&quot; triggers=&quot;focus&quot;&gt;
 &lt;template #title&gt;Dismissible Popover&lt;/template&gt; And here some amazing content. Its very engaging. Right?&lt;/b-popover&gt;</code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Tooltips</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="tooltips-showcode" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="tooltips-showcode">
-              </div>
-            </div>
-          </b-card-header>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col>
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Tooltips</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="tooltips-showcode">Show Code</label>
+                                <input id="tooltips-showcode" class="form-check-input code-switcher" type="checkbox">
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">Tooltip example are available with follwing options, Directions are mirrored when
-              using in Bootstrap RTL.</p>
-            <div class="live-preview">
-              <div class="hstack flex-wrap gap-2">
-                <b-button variant="light" v-b-tooltip.hover title="Tooltip on top">Tooltip on top</b-button>
-                <b-button variant="light" v-b-tooltip.hover.right title="Tooltip on right">Tooltip on right
-                </b-button>
-                <b-button variant="light" v-b-tooltip.hover.bottom title="Tooltip on bottom">Tooltip on bottom
-                </b-button>
-                <b-button variant="light" v-b-tooltip.hover.left title="Tooltip on left">Tooltip on left
-                </b-button>
-                <b-button variant="primary" v-b-tooltip.hover title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
-                  Tooltip with HTML</b-button>
-              </div>
-            </div>
+                    <b-card-body>
+                        <p class="text-muted">Tooltip example are available with follwing options, Directions are
+                            mirrored when
+                            using in Bootstrap RTL.</p>
+                        <div class="live-preview">
+                            <div class="hstack flex-wrap gap-2">
+                                <b-button v-b-tooltip.hover title="Tooltip on top" variant="light">Tooltip on top
+                                </b-button>
+                                <b-button v-b-tooltip.hover.right title="Tooltip on right" variant="light">Tooltip on
+                                    right
+                                </b-button>
+                                <b-button v-b-tooltip.hover.bottom title="Tooltip on bottom" variant="light">Tooltip on
+                                    bottom
+                                </b-button>
+                                <b-button v-b-tooltip.hover.left title="Tooltip on left" variant="light">Tooltip on left
+                                </b-button>
+                                <b-button v-b-tooltip.hover title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"
+                                          variant="primary">
+                                    Tooltip with HTML
+                                </b-button>
+                            </div>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="height: 275px;"><code>&lt;!-- Tooltips --&gt;
 &lt;div class=&quot;hstack flex-wrap gap-2&quot;&gt;
 &lt;b-button type=&quot;button&quot; variant=&quot;light&quot; v-b-tooltip.hover title=&quot;Tooltip on top&quot; &gt;
@@ -185,82 +193,82 @@ Tooltip on left
 Tooltip with HTML
 &lt;/b-button&gt;
 &lt;/div&gt;</code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Breadcrumb</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="breadcrumb-showcode" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="breadcrumb-showcode" />
-              </div>
-            </div>
-          </b-card-header>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col>
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Breadcrumb</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="breadcrumb-showcode">Show Code</label>
+                                <input id="breadcrumb-showcode" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Indicate the current page’s location within a navigational
-              hierarchy
-            </p>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Indicate the current page’s location within a navigational
+                            hierarchy
+                        </p>
 
-            <div class="live-preview">
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb p-3 py-2 bg-light">
-                  <li class="breadcrumb-item active" aria-current="page">
-                    Home
-                  </li>
-                </ol>
-              </nav>
+                        <div class="live-preview">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb p-3 py-2 bg-light">
+                                    <li aria-current="page" class="breadcrumb-item active">
+                                        Home
+                                    </li>
+                                </ol>
+                            </nav>
 
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb p-3 py-2 bg-light">
-                  <li class="breadcrumb-item">
-                    <b-link href="#">Home</b-link>
-                  </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    Library
-                  </li>
-                </ol>
-              </nav>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb p-3 py-2 bg-light">
+                                    <li class="breadcrumb-item">
+                                        <b-link href="#">Home</b-link>
+                                    </li>
+                                    <li aria-current="page" class="breadcrumb-item active">
+                                        Library
+                                    </li>
+                                </ol>
+                            </nav>
 
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb p-3 py-2 bg-light">
-                  <li class="breadcrumb-item">
-                    <b-link href="#">Home</b-link>
-                  </li>
-                  <li class="breadcrumb-item">
-                    <b-link href="#">Base UI</b-link>
-                  </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    General
-                  </li>
-                </ol>
-              </nav>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb p-3 py-2 bg-light">
+                                    <li class="breadcrumb-item">
+                                        <b-link href="#">Home</b-link>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <b-link href="#">Base UI</b-link>
+                                    </li>
+                                    <li aria-current="page" class="breadcrumb-item active">
+                                        General
+                                    </li>
+                                </ol>
+                            </nav>
 
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb p-3 py-2 bg-light mb-0">
-                  <li class="breadcrumb-item">
-                    <b-link href="#">
-                      <i class="ri-home-5-fill"></i>
-                    </b-link>
-                  </li>
-                  <li class="breadcrumb-item">
-                    <b-link href="#">Base UI</b-link>
-                  </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    General
-                  </li>
-                </ol>
-              </nav>
-            </div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb p-3 py-2 bg-light mb-0">
+                                    <li class="breadcrumb-item">
+                                        <b-link href="#">
+                                            <i class="ri-home-5-fill"></i>
+                                        </b-link>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <b-link href="#">Base UI</b-link>
+                                    </li>
+                                    <li aria-current="page" class="breadcrumb-item active">
+                                        General
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="height: 275px"><code>&lt;nav aria-label=&quot;breadcrumb&quot;&gt;
 &lt;b-breadcrumb&gt;
 &lt;b-breadcrumb-item active aria-current=&quot;page&quot;&gt;Home&lt;/b-breadcrumb-item&gt;
@@ -288,427 +296,434 @@ Tooltip with HTML
 &lt;b-breadcrumb-item active aria-current=&quot;page&quot;&gt;General&lt;/b-breadcrumb-item&gt;
 &lt;/b-breadcrumb&gt;
 &lt;/nav&gt;</code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col>
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Pagination</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="pagination-showcode" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="pagination-showcode" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col>
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Pagination</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="pagination-showcode">Show Code</label>
+                                <input id="pagination-showcode" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <div class="live-preview">
-              <b-row>
-                <b-col lg="6">
-                  <h5 class="fs-15">Default Pagination</h5>
-                  <p class="text-muted">
-                    Use
-                    <code>pagination</code> class to ul element to indicate a
-                    series of related content exists across multiple pages.
-                  </p>
+                    <b-card-body>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col lg="6">
+                                    <h5 class="fs-15">Default Pagination</h5>
+                                    <p class="text-muted">
+                                        Use
+                                        <code>pagination</code> class to ul element to indicate a
+                                        series of related content exists across multiple pages.
+                                    </p>
 
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                      <li class="page-item">
-                        <b-link class="page-link" href="#">Previous</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link class="page-link" href="#">1</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link class="page-link" href="#">2</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link class="page-link" href="#">3</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link class="page-link" href="#">Next</b-link>
-                      </li>
-                    </ul>
-                  </nav>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">Previous</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">1</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">2</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">3</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">Next</b-link>
+                                            </li>
+                                        </ul>
+                                    </nav>
 
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                      <li class="page-item">
-                        <b-link class="page-link" href="#" aria-label="Previous">← &nbsp; Prev</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link class="page-link" href="#">1</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link class="page-link" href="#">2</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link class="page-link" href="#">3</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link class="page-link" href="#" aria-label="Next">Next &nbsp; →</b-link>
-                      </li>
-                    </ul>
-                  </nav>
-                </b-col>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <b-link aria-label="Previous" class="page-link" href="#">← &nbsp; Prev
+                                                </b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">1</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">2</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">3</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link aria-label="Next" class="page-link" href="#">Next &nbsp; →
+                                                </b-link>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </b-col>
 
-                <b-col lg="6">
-                  <div class="mt-4 mt-lg-0">
-                    <h5 class="fs-15">Disabled and Active states</h5>
-                    <p class="text-muted">
-                      Use
-                      <code>disabled</code> class to links that appear
-                      un-clickable and <code>active</code> class to indicate the
-                      current page.
-                    </p>
+                                <b-col lg="6">
+                                    <div class="mt-4 mt-lg-0">
+                                        <h5 class="fs-15">Disabled and Active states</h5>
+                                        <p class="text-muted">
+                                            Use
+                                            <code>disabled</code> class to links that appear
+                                            un-clickable and <code>active</code> class to indicate the
+                                            current page.
+                                        </p>
 
-                    <!-- Pagination Disabled & Active -->
-                    <nav aria-label="...">
-                      <ul class="pagination">
-                        <li class="page-item disabled">
-                          <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">1</b-link>
-                        </li>
-                        <li class="page-item active">
-                          <b-link class="page-link" href="#">
-                            2
-                            <span class="sr-only">(current)</span>
-                          </b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">3</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">Next &nbsp; →</b-link>
-                        </li>
-                      </ul>
-                    </nav>
+                                        <!-- Pagination Disabled & Active -->
+                                        <nav aria-label="...">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                    <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev
+                                                    </b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">1</b-link>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <b-link class="page-link" href="#">
+                                                        2
+                                                        <span class="sr-only">(current)</span>
+                                                    </b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">3</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">Next &nbsp; →</b-link>
+                                                </li>
+                                            </ul>
+                                        </nav>
 
-                    <nav aria-label="...">
-                      <ul class="pagination">
-                        <li class="page-item disabled">
+                                        <nav aria-label="...">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
                           <span class="page-link">
                             <i class="mdi mdi-chevron-left"></i>
                           </span>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">1</b-link>
-                        </li>
-                        <li class="page-item active">
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">1</b-link>
+                                                </li>
+                                                <li class="page-item active">
                           <span class="page-link">
                             2
                             <span class="sr-only">(current)</span>
                           </span>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">3</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">
-                            <i class="mdi mdi-chevron-right"></i>
-                          </b-link>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </b-col>
-              </b-row>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">3</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">
+                                                        <i class="mdi mdi-chevron-right"></i>
+                                                    </b-link>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </b-col>
+                            </b-row>
 
-              <b-row>
-                <b-col lg="6">
-                  <div class="mt-4">
-                    <h5 class="fs-15">Sizing</h5>
-                    <p class="text-muted">
-                      Use
-                      <code>pagination-lg</code> or
-                      <code>pagination-sm</code> to set different pagination
-                      sizes.
-                    </p>
-                    <!-- Pagination Large -->
-                    <nav aria-label="...">
-                      <ul class="pagination pagination-lg">
-                        <li class="page-item disabled">
-                          <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">1</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">2</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">3</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">Next &nbsp; →</b-link>
-                        </li>
-                      </ul>
-                    </nav>
+                            <b-row>
+                                <b-col lg="6">
+                                    <div class="mt-4">
+                                        <h5 class="fs-15">Sizing</h5>
+                                        <p class="text-muted">
+                                            Use
+                                            <code>pagination-lg</code> or
+                                            <code>pagination-sm</code> to set different pagination
+                                            sizes.
+                                        </p>
+                                        <!-- Pagination Large -->
+                                        <nav aria-label="...">
+                                            <ul class="pagination pagination-lg">
+                                                <li class="page-item disabled">
+                                                    <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev
+                                                    </b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">1</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">2</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">3</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">Next &nbsp; →</b-link>
+                                                </li>
+                                            </ul>
+                                        </nav>
 
-                    <!-- Pagination Small -->
-                    <nav aria-label="...">
-                      <ul class="pagination pagination-sm">
-                        <li class="page-item disabled">
-                          <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">1</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">2</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">3</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">Next &nbsp; →</b-link>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </b-col>
+                                        <!-- Pagination Small -->
+                                        <nav aria-label="...">
+                                            <ul class="pagination pagination-sm">
+                                                <li class="page-item disabled">
+                                                    <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev
+                                                    </b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">1</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">2</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">3</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">Next &nbsp; →</b-link>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </b-col>
 
-                <b-col lg="6">
-                  <div class="mt-4">
-                    <h5 class="fs-15">Alignment</h5>
+                                <b-col lg="6">
+                                    <div class="mt-4">
+                                        <h5 class="fs-15">Alignment</h5>
 
-                    <p class="text-muted">
-                      Use
-                      <code>justify-content-start</code>,
-                      <code>justify-content-start</code>, or
-                      <code>justify-content-start</code>, class to pagination
-                      class to change the alignment of pagination respectively.
-                    </p>
-                    <!-- Pagination Alignment -->
+                                        <p class="text-muted">
+                                            Use
+                                            <code>justify-content-start</code>,
+                                            <code>justify-content-start</code>, or
+                                            <code>justify-content-start</code>, class to pagination
+                                            class to change the alignment of pagination respectively.
+                                        </p>
+                                        <!-- Pagination Alignment -->
 
-                    <!-- Center Alignment -->
-                    <nav aria-label="Page navigation example">
-                      <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                          <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">1</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">2</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">3</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">Next &nbsp; →</b-link>
-                        </li>
-                      </ul>
-                    </nav>
+                                        <!-- Center Alignment -->
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-center">
+                                                <li class="page-item disabled">
+                                                    <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev
+                                                    </b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">1</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">2</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">3</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">Next &nbsp; →</b-link>
+                                                </li>
+                                            </ul>
+                                        </nav>
 
-                    <!-- Right Alignment -->
-                    <nav aria-label="Page navigation example">
-                      <ul class="pagination justify-content-end">
-                        <li class="page-item disabled">
-                          <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">1</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">2</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">3</b-link>
-                        </li>
-                        <li class="page-item">
-                          <b-link class="page-link" href="#">Next &nbsp; →</b-link>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </b-col>
-              </b-row>
+                                        <!-- Right Alignment -->
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-end">
+                                                <li class="page-item disabled">
+                                                    <b-link class="page-link" href="#" tabindex="-1">← &nbsp; Prev
+                                                    </b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">1</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">2</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">3</b-link>
+                                                </li>
+                                                <li class="page-item">
+                                                    <b-link class="page-link" href="#">Next &nbsp; →</b-link>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </b-col>
+                            </b-row>
 
-              <b-row>
-                <b-col lg="6">
-                  <div class="mt-4">
-                    <h5 class="fs-15">Custom Separated Pagination</h5>
-                    <p class="text-muted">
-                      Use
-                      <code>pagination-separated</code> class to pagination
-                      class to set custom separated pagination.
-                    </p>
-                    <!-- Custom Separated Pagination Large -->
-                    <ul class="pagination pagination-lg pagination-separated">
-                      <li class="page-item disabled">
-                        <b-link href="#" class="page-link">←</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">1</b-link>
-                      </li>
-                      <li class="page-item active">
-                        <b-link href="#" class="page-link">2</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">3</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">4</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">5</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">→</b-link>
-                      </li>
-                    </ul>
+                            <b-row>
+                                <b-col lg="6">
+                                    <div class="mt-4">
+                                        <h5 class="fs-15">Custom Separated Pagination</h5>
+                                        <p class="text-muted">
+                                            Use
+                                            <code>pagination-separated</code> class to pagination
+                                            class to set custom separated pagination.
+                                        </p>
+                                        <!-- Custom Separated Pagination Large -->
+                                        <ul class="pagination pagination-lg pagination-separated">
+                                            <li class="page-item disabled">
+                                                <b-link class="page-link" href="#">←</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">1</b-link>
+                                            </li>
+                                            <li class="page-item active">
+                                                <b-link class="page-link" href="#">2</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">3</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">4</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">5</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">→</b-link>
+                                            </li>
+                                        </ul>
 
-                    <!-- Pagination rounded -->
-                    <ul class="pagination pagination-separated">
-                      <li class="page-item disabled">
-                        <b-link href="#" class="page-link">←</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">1</b-link>
-                      </li>
-                      <li class="page-item active">
-                        <b-link href="#" class="page-link">2</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">3</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">4</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">5</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">→</b-link>
-                      </li>
-                    </ul>
+                                        <!-- Pagination rounded -->
+                                        <ul class="pagination pagination-separated">
+                                            <li class="page-item disabled">
+                                                <b-link class="page-link" href="#">←</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">1</b-link>
+                                            </li>
+                                            <li class="page-item active">
+                                                <b-link class="page-link" href="#">2</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">3</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">4</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">5</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">→</b-link>
+                                            </li>
+                                        </ul>
 
-                    <!-- Custom Separated Pagination Large -->
-                    <ul class="pagination pagination-sm pagination-separated">
-                      <li class="page-item disabled">
-                        <b-link href="#" class="page-link">←</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">1</b-link>
-                      </li>
-                      <li class="page-item active">
-                        <b-link href="#" class="page-link">2</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">3</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">4</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">5</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">→</b-link>
-                      </li>
-                    </ul>
-                  </div>
-                </b-col>
+                                        <!-- Custom Separated Pagination Large -->
+                                        <ul class="pagination pagination-sm pagination-separated">
+                                            <li class="page-item disabled">
+                                                <b-link class="page-link" href="#">←</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">1</b-link>
+                                            </li>
+                                            <li class="page-item active">
+                                                <b-link class="page-link" href="#">2</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">3</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">4</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">5</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">→</b-link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </b-col>
 
-                <b-col lg="6">
-                  <div class="mt-4">
-                    <h5 class="fs-15">Custom Rounded Pagination</h5>
-                    <p class="text-muted">
-                      Use
-                      <code>pagination-rounded</code> class to pagination class
-                      to set custom rounded pagination.
-                    </p>
-                    <!-- Pagination rounded -->
-                    <ul class="pagination pagination-lg pagination-rounded">
-                      <li class="page-item disabled">
-                        <b-link href="#" class="page-link">←</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">1</b-link>
-                      </li>
-                      <li class="page-item active">
-                        <b-link href="#" class="page-link">2</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">3</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">4</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">5</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">→</b-link>
-                      </li>
-                    </ul>
+                                <b-col lg="6">
+                                    <div class="mt-4">
+                                        <h5 class="fs-15">Custom Rounded Pagination</h5>
+                                        <p class="text-muted">
+                                            Use
+                                            <code>pagination-rounded</code> class to pagination class
+                                            to set custom rounded pagination.
+                                        </p>
+                                        <!-- Pagination rounded -->
+                                        <ul class="pagination pagination-lg pagination-rounded">
+                                            <li class="page-item disabled">
+                                                <b-link class="page-link" href="#">←</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">1</b-link>
+                                            </li>
+                                            <li class="page-item active">
+                                                <b-link class="page-link" href="#">2</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">3</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">4</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">5</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">→</b-link>
+                                            </li>
+                                        </ul>
 
-                    <!-- Pagination rounded -->
-                    <ul class="pagination pagination-rounded">
-                      <li class="page-item disabled">
-                        <b-link href="#" class="page-link">←</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">1</b-link>
-                      </li>
-                      <li class="page-item active">
-                        <b-link href="#" class="page-link">2</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">3</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">4</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">5</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">→</b-link>
-                      </li>
-                    </ul>
+                                        <!-- Pagination rounded -->
+                                        <ul class="pagination pagination-rounded">
+                                            <li class="page-item disabled">
+                                                <b-link class="page-link" href="#">←</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">1</b-link>
+                                            </li>
+                                            <li class="page-item active">
+                                                <b-link class="page-link" href="#">2</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">3</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">4</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">5</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">→</b-link>
+                                            </li>
+                                        </ul>
 
-                    <!-- Pagination rounded -->
-                    <ul class="pagination pagination-sm pagination-rounded">
-                      <li class="page-item disabled">
-                        <b-link href="#" class="page-link">←</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">1</b-link>
-                      </li>
-                      <li class="page-item active">
-                        <b-link href="#" class="page-link">2</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">3</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">4</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">5</b-link>
-                      </li>
-                      <li class="page-item">
-                        <b-link href="#" class="page-link">→</b-link>
-                      </li>
-                    </ul>
-                  </div>
-                </b-col>
-              </b-row>
-            </div>
+                                        <!-- Pagination rounded -->
+                                        <ul class="pagination pagination-sm pagination-rounded">
+                                            <li class="page-item disabled">
+                                                <b-link class="page-link" href="#">←</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">1</b-link>
+                                            </li>
+                                            <li class="page-item active">
+                                                <b-link class="page-link" href="#">2</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">3</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">4</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">5</b-link>
+                                            </li>
+                                            <li class="page-item">
+                                                <b-link class="page-link" href="#">→</b-link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="height: 275px"><code>&lt;nav aria-label=&quot;Page navigation example&quot;&gt;
 &lt;ul class=&quot;pagination&quot;&gt;
 &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
@@ -865,75 +880,75 @@ Tooltip with HTML
 &lt;a href=&quot;#&quot; class=&quot;page-link&quot;&gt;&lt;i class=&quot;mdi mdi-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col>
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Spinners</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="spinners-showcode" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="spinners-showcode" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col>
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Spinners</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="spinners-showcode">Show Code</label>
+                                <input id="spinners-showcode" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <div class="live-preview">
-              <b-row>
-                <b-col lg="6">
-                  <div>
-                    <h5 class="fs-15">Border spinner</h5>
-                    <p class="text-muted">
-                      Use
-                      <code>spinner-border</code> class for a lightweight
-                      loading indicator.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3 mb-2">
-                      <!-- Border spinner -->
-                      <b-spinner variant="primary" label="Spinning" />
-                      <b-spinner variant="secondary" label="Spinning" />
-                      <b-spinner variant="success" label="Spinning" />
-                      <b-spinner variant="info" label="Spinning" />
-                      <b-spinner variant="warning" label="Spinning" />
-                      <b-spinner variant="danger" label="Spinning" />
-                      <b-spinner variant="dark" label="Spinning" />
-                      <b-spinner variant="light" label="Spinning" />
-                    </div>
-                  </div>
-                </b-col>
+                    <b-card-body>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col lg="6">
+                                    <div>
+                                        <h5 class="fs-15">Border spinner</h5>
+                                        <p class="text-muted">
+                                            Use
+                                            <code>spinner-border</code> class for a lightweight
+                                            loading indicator.
+                                        </p>
+                                        <div class="d-flex flex-wrap gap-3 mb-2">
+                                            <!-- Border spinner -->
+                                            <b-spinner label="Spinning" variant="primary"/>
+                                            <b-spinner label="Spinning" variant="secondary"/>
+                                            <b-spinner label="Spinning" variant="success"/>
+                                            <b-spinner label="Spinning" variant="info"/>
+                                            <b-spinner label="Spinning" variant="warning"/>
+                                            <b-spinner label="Spinning" variant="danger"/>
+                                            <b-spinner label="Spinning" variant="dark"/>
+                                            <b-spinner label="Spinning" variant="light"/>
+                                        </div>
+                                    </div>
+                                </b-col>
 
-                <b-col lg="6">
-                  <div>
-                    <h5 class="fs-15">Growing spinner</h5>
-                    <p class="text-muted">
-                      Use
-                      <code>spinner-grow</code> class for a lightweight spinner
-                      with growing effect.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3 mb-2">
-                      <!-- Growing spinner -->
-                      <b-spinner variant="primary" type="grow" label="Spinning" />
-                      <b-spinner variant="secondary" type="grow" label="Spinning" />
-                      <b-spinner variant="success" type="grow" label="Spinning" />
-                      <b-spinner variant="info" type="grow" label="Spinning" />
-                      <b-spinner variant="warning" type="grow" label="Spinning" />
-                      <b-spinner variant="danger" type="grow" label="Spinning" />
-                      <b-spinner variant="dark" type="grow" label="Spinning" />
-                      <b-spinner variant="light" type="grow" label="Spinning" />
-                    </div>
-                  </div>
-                </b-col>
-              </b-row>
-            </div>
+                                <b-col lg="6">
+                                    <div>
+                                        <h5 class="fs-15">Growing spinner</h5>
+                                        <p class="text-muted">
+                                            Use
+                                            <code>spinner-grow</code> class for a lightweight spinner
+                                            with growing effect.
+                                        </p>
+                                        <div class="d-flex flex-wrap gap-3 mb-2">
+                                            <!-- Growing spinner -->
+                                            <b-spinner label="Spinning" type="grow" variant="primary"/>
+                                            <b-spinner label="Spinning" type="grow" variant="secondary"/>
+                                            <b-spinner label="Spinning" type="grow" variant="success"/>
+                                            <b-spinner label="Spinning" type="grow" variant="info"/>
+                                            <b-spinner label="Spinning" type="grow" variant="warning"/>
+                                            <b-spinner label="Spinning" type="grow" variant="danger"/>
+                                            <b-spinner label="Spinning" type="grow" variant="dark"/>
+                                            <b-spinner label="Spinning" type="grow" variant="light"/>
+                                        </div>
+                                    </div>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="height: 275px">
 <code>&lt;!-- Border spinner --&gt;
 
@@ -971,10 +986,10 @@ Tooltip with HTML
 
 &lt;b-spinner type=&quot;grow&quot; variant=&quot;light&quot;&gt;&lt;/b-spinner&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
-  </Layout>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
+    </Layout>
 </template>

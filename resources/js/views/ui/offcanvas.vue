@@ -50,7 +50,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -58,8 +58,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Default Offcanvas</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="default-example" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="default-example" />
+                                <label class="form-label text-muted" for="default-example">Show Code</label>
+                                <input id="default-example" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -70,33 +70,40 @@ export default {
                         </p>
                         <div class="live-preview">
                             <div class="hstack flex-wrap gap-2">
-                                <b-link class="btn btn-secondary" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                                    role="button" aria-controls="offcanvasExample">Link with href</b-link>
-                                <b-button variant="secondary" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Button with
-                                    data-bs-target</b-button>
+                                <b-link aria-controls="offcanvasExample" class="btn btn-secondary"
+                                        data-bs-toggle="offcanvas"
+                                        href="#offcanvasExample" role="button">Link with href
+                                </b-link>
+                                <b-button aria-controls="offcanvasExample" data-bs-target="#offcanvasExample"
+                                          data-bs-toggle="offcanvas"
+                                          type="button" variant="secondary">Button
+                                    with
+                                    data-bs-target
+                                </b-button>
                             </div>
 
-                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                                aria-labelledby="offcanvasExampleLabel">
+                            <div id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
+                                 class="offcanvas offcanvas-start"
+                                 tabindex="-1">
                                 <div class="offcanvas-header border-bottom">
-                                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Recent Acitivity</h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                                    <h5 id="offcanvasExampleLabel" class="offcanvas-title">Recent Acitivity</h5>
+                                    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            type="button"></button>
                                 </div>
                                 <div class="offcanvas-body p-0 overflow-hidden">
                                     <div data-simplebar style="height: calc(100vh - 112px);">
                                         <div class="acitivity-timeline p-4">
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-1.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-1.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Oliver Phillips
-                                                        <b-badge variant="soft-primary"
-                                                            class="text-primary align-middle">New</b-badge>
+                                                        <b-badge class="text-primary align-middle"
+                                                                 variant="soft-primary">New
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">We talked about a project on linkedin.
                                                     </p>
@@ -107,44 +114,53 @@ export default {
                                                 <div class="flex-shrink-0 avatar-xs acitivity-avatar">
                                                     <div
                                                         class="avatar-title bg-soft-success text-success rounded-circle">
-                                                        N</div>
+                                                        N
+                                                    </div>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Nancy Martino
-                                                        <b-badge variant="soft-secondary"
-                                                            class="text-secondary align-middle">In
-                                                            Progress</b-badge>
+                                                        <b-badge class="text-secondary align-middle"
+                                                                 variant="soft-secondary">In
+                                                            Progress
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         <i class="ri-file-text-line align-middle ms-2"></i> Create new
                                                         project Buildng product
                                                     </p>
                                                     <div class="avatar-group mb-2">
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Christi">
-                                                            <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Christi"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-4.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Frank Hook">
-                                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Frank Hook"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title=" Ruby">
+                                                        <b-link class="avatar-group-item" data-bs-original-title=" Ruby"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div
                                                                     class="avatar-title rounded-circle bg-light text-primary">
-                                                                    R</div>
+                                                                    R
+                                                                </div>
                                                             </div>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="more">
+                                                        <b-link class="avatar-group-item" data-bs-original-title="more"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div class="avatar-title rounded-circle">2+</div>
                                                             </div>
@@ -155,28 +171,29 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-2.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Natasha Carey
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">Adding a new event with attachments</p>
                                                     <b-row class="border border-dashed gx-2 p-2 mb-2">
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-2.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-2.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-3.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-3.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-4.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-4.jpg"/>
                                                         </b-col>
                                                     </b-row>
                                                     <small class="mb-0 text-muted">25 Nov</small>
@@ -184,8 +201,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-6.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-6.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Bethany Johnson</h6>
@@ -206,9 +223,10 @@ export default {
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Your order is placed
-                                                        <b-badge variant="soft-danger"
-                                                            class="text-danger align-middle ms-1">Out
-                                                            of Delivery</b-badge>
+                                                        <b-badge class="text-danger align-middle ms-1"
+                                                                 variant="soft-danger">Out
+                                                            of Delivery
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">These customers can rest assured their
                                                         order has been placed.</p>
@@ -217,8 +235,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-7.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-7.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Lewis Pratt</h6>
@@ -241,23 +259,25 @@ export default {
                                                     <p class="text-muted mb-2">
                                                         <span class="text-danger">2 days left</span> notification to
                                                         submit the monthly sales report.
-                                                        <b-link href="javascript:void(0);"
-                                                            class="link-warning text-decoration-underline">Reports
-                                                            Builder</b-link>
+                                                        <b-link class="link-warning text-decoration-underline"
+                                                                href="javascript:void(0);">Reports
+                                                            Builder
+                                                        </b-link>
                                                     </p>
                                                     <small class="mb-0 text-muted">15 Oct</small>
                                                 </div>
                                             </div>
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-8.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-8.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         New ticket received
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         User
@@ -270,7 +290,7 @@ export default {
                                     </div>
                                 </div>
                                 <div class="offcanvas-foorter border-top p-3 text-center">
-                                    <b-link href="javascript:void(0);" class="link-success">
+                                    <b-link class="link-success" href="javascript:void(0);">
                                         View All Acitivity
                                         <i class="ri-arrow-right-s-line align-middle ms-1"></i>
                                     </b-link>
@@ -312,8 +332,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Placement Offcanvas</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="placement-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="placement-showcode" />
+                                <label class="form-label text-muted" for="placement-showcode">Show Code</label>
+                                <input id="placement-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -327,36 +347,46 @@ export default {
                         </p>
                         <div class="live-preview">
                             <div class="d-flex flex-wrap gap-2">
-                                <b-button variant="primary" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle Top
-                                    Offcanvas</b-button>
-                                <b-button variant="secondary" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle Right
-                                    Offcanvas</b-button>
-                                <b-button variant="success" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle Bottom
-                                    Offcanvas</b-button>
-                                <b-button variant="danger" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">Toggle Left
-                                    Offcanvas</b-button>
+                                <b-button aria-controls="offcanvasTop" data-bs-target="#offcanvasTop"
+                                          data-bs-toggle="offcanvas"
+                                          type="button" variant="primary">Toggle Top
+                                    Offcanvas
+                                </b-button>
+                                <b-button aria-controls="offcanvasRight" data-bs-target="#offcanvasRight"
+                                          data-bs-toggle="offcanvas"
+                                          type="button" variant="secondary">Toggle Right
+                                    Offcanvas
+                                </b-button>
+                                <b-button aria-controls="offcanvasBottom" data-bs-target="#offcanvasBottom"
+                                          data-bs-toggle="offcanvas"
+                                          type="button" variant="success">Toggle
+                                    Bottom
+                                    Offcanvas
+                                </b-button>
+                                <b-button aria-controls="offcanvasLeft" data-bs-target="#offcanvasLeft"
+                                          data-bs-toggle="offcanvas"
+                                          type="button" variant="danger">Toggle Left
+                                    Offcanvas
+                                </b-button>
                             </div>
 
                             <!-- top offcanvas -->
-                            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop"
-                                aria-labelledby="offcanvasTopLabel" style="min-height:46vh;">
+                            <div id="offcanvasTop" aria-labelledby="offcanvasTopLabel" class="offcanvas offcanvas-top"
+                                 style="min-height:46vh;" tabindex="-1">
                                 <div class="offcanvas-header border-bottom">
-                                    <h5 class="offcanvas-title" id="offcanvasTopLabel">Gallery</h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                                    <h5 id="offcanvasTopLabel" class="offcanvas-title">Gallery</h5>
+                                    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            type="button"></button>
                                 </div>
                                 <div class="offcanvas-body">
                                     <b-row class="gallery-light">
-                                        <b-col xl="3" lg="4" sm="6">
+                                        <b-col lg="4" sm="6" xl="3">
                                             <div class="gallery-box card light mb-0">
                                                 <div class="gallery-container">
                                                     <b-link href="#" title>
-                                                        <img class="gallery-img img-fluid mx-auto"
-                                                            src="@/assets/images/small/img-12.jpg" alt />
+                                                        <img alt
+                                                             class="gallery-img img-fluid mx-auto"
+                                                             src="@/assets/images/small/img-12.jpg"/>
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">A mix of friends and strangers
                                                                 heading off to find an adventure.</h5>
@@ -367,19 +397,23 @@ export default {
                                                     <div class="d-flex align-items-center mt-1">
                                                         <div class="flex-grow-1 text-muted">
                                                             by
-                                                            <b-link href class="text-body text-truncate">Erica Kernan
+                                                            <b-link class="text-body text-truncate" href>Erica Kernan
                                                             </b-link>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <div class="d-flex gap-3">
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                     3.4K
                                                                 </b-button>
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                     1.3k
@@ -390,12 +424,13 @@ export default {
                                                 </div>
                                             </div>
                                         </b-col>
-                                        <b-col xl="3" lg="4" sm="6">
+                                        <b-col lg="4" sm="6" xl="3">
                                             <div class="gallery-box card light mb-0">
                                                 <div class="gallery-container">
                                                     <b-link href="#" title>
-                                                        <img class="gallery-img img-fluid mx-auto"
-                                                            src="@/assets/images/small/img-9.jpg" alt />
+                                                        <img alt
+                                                             class="gallery-img img-fluid mx-auto"
+                                                             src="@/assets/images/small/img-9.jpg"/>
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">Dramatic clouds at the Golden
                                                                 Gate Bridge</h5>
@@ -406,19 +441,23 @@ export default {
                                                     <div class="d-flex align-items-center mt-1">
                                                         <div class="flex-grow-1 text-muted">
                                                             by
-                                                            <b-link href class="text-body text-truncate">Ron Mackie
+                                                            <b-link class="text-body text-truncate" href>Ron Mackie
                                                             </b-link>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <div class="d-flex gap-3">
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                     5.1K
                                                                 </b-button>
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                     4.7k
@@ -429,12 +468,13 @@ export default {
                                                 </div>
                                             </div>
                                         </b-col>
-                                        <b-col xl="3" lg="4" sm="6">
+                                        <b-col lg="4" sm="6" xl="3">
                                             <div class="gallery-box card mb-0">
                                                 <div class="gallery-container">
                                                     <b-link href="#" title>
-                                                        <img class="gallery-img img-fluid mx-auto"
-                                                            src="@/assets/images/small/img-11.jpg" alt />
+                                                        <img alt
+                                                             class="gallery-img img-fluid mx-auto"
+                                                             src="@/assets/images/small/img-11.jpg"/>
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">Cycling in the countryside</h5>
                                                         </div>
@@ -445,19 +485,23 @@ export default {
                                                     <div class="d-flex align-items-center mt-1">
                                                         <div class="flex-grow-1 text-muted">
                                                             by
-                                                            <b-link href class="text-body text-truncate">Nancy Martino
+                                                            <b-link class="text-body text-truncate" href>Nancy Martino
                                                             </b-link>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <div class="d-flex gap-3">
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                     3.2K
                                                                 </b-button>
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                     1.1K
@@ -468,12 +512,13 @@ export default {
                                                 </div>
                                             </div>
                                         </b-col>
-                                        <b-col xl="3" lg="4" sm="6" class="d-md-none d-xl-block">
+                                        <b-col class="d-md-none d-xl-block" lg="4" sm="6" xl="3">
                                             <div class="gallery-box card mb-0">
                                                 <div class="gallery-container">
                                                     <b-link href="#" title>
-                                                        <img class="gallery-img img-fluid mx-auto"
-                                                            src="@/assets/images/small/img-10.jpg" alt />
+                                                        <img alt
+                                                             class="gallery-img img-fluid mx-auto"
+                                                             src="@/assets/images/small/img-10.jpg"/>
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">Fun day at the Hill Station</h5>
                                                         </div>
@@ -483,19 +528,23 @@ export default {
                                                     <div class="d-flex align-items-center mt-1">
                                                         <div class="flex-grow-1 text-muted">
                                                             by
-                                                            <b-link href class="text-body text-truncate">Henry Baird
+                                                            <b-link class="text-body text-truncate" href>Henry Baird
                                                             </b-link>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <div class="d-flex gap-3">
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                     632
                                                                 </b-button>
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                     95
@@ -511,26 +560,28 @@ export default {
                             </div>
 
                             <!-- right offcanvas -->
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                                aria-labelledby="offcanvasRightLabel">
+                            <div id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+                                 class="offcanvas offcanvas-end"
+                                 tabindex="-1">
                                 <div class="offcanvas-header border-bottom">
-                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Recent Acitivity</h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                                    <h5 id="offcanvasRightLabel" class="offcanvas-title">Recent Acitivity</h5>
+                                    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            type="button"></button>
                                 </div>
                                 <div class="offcanvas-body p-0 overflow-hidden">
                                     <div data-simplebar style="height: calc(100vh - 112px);">
                                         <div class="acitivity-timeline p-4">
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-1.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-1.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Oliver Phillips
-                                                        <b-badge variant="soft-primary"
-                                                            class="text-primary align-middle">New</b-badge>
+                                                        <b-badge class="text-primary align-middle"
+                                                                 variant="soft-primary">New
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">We talked about a project on linkedin.
                                                     </p>
@@ -541,44 +592,53 @@ export default {
                                                 <div class="flex-shrink-0 avatar-xs acitivity-avatar">
                                                     <div
                                                         class="avatar-title bg-soft-success text-success rounded-circle">
-                                                        N</div>
+                                                        N
+                                                    </div>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Nancy Martino
-                                                        <b-badge variant="soft-secondary"
-                                                            class="text-secondary align-middle">In
-                                                            Progress</b-badge>
+                                                        <b-badge class="text-secondary align-middle"
+                                                                 variant="soft-secondary">In
+                                                            Progress
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         <i class="ri-file-text-line align-middle ms-2"></i> Create new
                                                         project Buildng product
                                                     </p>
                                                     <div class="avatar-group mb-2">
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Christi">
-                                                            <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Christi"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-4.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Frank Hook">
-                                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Frank Hook"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title=" Ruby">
+                                                        <b-link class="avatar-group-item" data-bs-original-title=" Ruby"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div
                                                                     class="avatar-title rounded-circle bg-light text-primary">
-                                                                    R</div>
+                                                                    R
+                                                                </div>
                                                             </div>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="more">
+                                                        <b-link class="avatar-group-item" data-bs-original-title="more"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div class="avatar-title rounded-circle">2+</div>
                                                             </div>
@@ -589,28 +649,29 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-2.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Natasha Carey
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">Adding a new event with attachments</p>
                                                     <b-row class="border border-dashed gx-2 p-2 mb-2">
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-2.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-2.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-3.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-3.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-4.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-4.jpg"/>
                                                         </b-col>
                                                     </b-row>
                                                     <small class="mb-0 text-muted">25 Nov</small>
@@ -618,8 +679,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-6.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-6.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Bethany Johnson</h6>
@@ -640,9 +701,10 @@ export default {
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Your order is placed
-                                                        <b-badge variant="soft-danger"
-                                                            class="text-danger align-middle ms-1">Out
-                                                            of Delivery</b-badge>
+                                                        <b-badge class="text-danger align-middle ms-1"
+                                                                 variant="soft-danger">Out
+                                                            of Delivery
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">These customers can rest assured their
                                                         order has been placed.</p>
@@ -651,8 +713,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-7.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-7.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Lewis Pratt</h6>
@@ -675,23 +737,25 @@ export default {
                                                     <p class="text-muted mb-2">
                                                         <span class="text-danger">2 days left</span> notification to
                                                         submit the monthly sales report.
-                                                        <b-link href="javascript:void(0);"
-                                                            class="link-warning text-decoration-underline">Reports
-                                                            Builder</b-link>
+                                                        <b-link class="link-warning text-decoration-underline"
+                                                                href="javascript:void(0);">Reports
+                                                            Builder
+                                                        </b-link>
                                                     </p>
                                                     <small class="mb-0 text-muted">15 Oct</small>
                                                 </div>
                                             </div>
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-8.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-8.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         New ticket received
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         User
@@ -704,7 +768,7 @@ export default {
                                     </div>
                                 </div>
                                 <div class="offcanvas-foorter border p-3 text-center">
-                                    <b-link href="javascript:void(0);" class="link-success">
+                                    <b-link class="link-success" href="javascript:void(0);">
                                         View All Acitivity
                                         <i class="ri-arrow-right-s-line align-middle ms-1"></i>
                                     </b-link>
@@ -712,21 +776,23 @@ export default {
                             </div>
 
                             <!-- bottom offcanvas -->
-                            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom"
-                                aria-labelledby="offcanvasBottomLabel" style="min-height:46vh;">
+                            <div id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel"
+                                 class="offcanvas offcanvas-bottom"
+                                 style="min-height:46vh;" tabindex="-1">
                                 <div class="offcanvas-header border-bottom">
-                                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Gallery</h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                                    <h5 id="offcanvasBottomLabel" class="offcanvas-title">Gallery</h5>
+                                    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            type="button"></button>
                                 </div>
                                 <div class="offcanvas-body">
                                     <b-row class="gallery-light">
-                                        <b-col xl="3" lg="4" sm="6">
+                                        <b-col lg="4" sm="6" xl="3">
                                             <div class="gallery-box card light mb-0">
                                                 <div class="gallery-container">
                                                     <b-link href="#" title>
-                                                        <img class="gallery-img img-fluid mx-auto"
-                                                            src="@/assets/images/small/img-12.jpg" alt />
+                                                        <img alt
+                                                             class="gallery-img img-fluid mx-auto"
+                                                             src="@/assets/images/small/img-12.jpg"/>
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">A mix of friends and strangers
                                                                 heading off to find an adventure.</h5>
@@ -737,19 +803,23 @@ export default {
                                                     <div class="d-flex align-items-center mt-1">
                                                         <div class="flex-grow-1 text-muted">
                                                             by
-                                                            <b-link href class="text-body text-truncate">Erica Kernan
+                                                            <b-link class="text-body text-truncate" href>Erica Kernan
                                                             </b-link>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <div class="d-flex gap-3">
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                     3.4K
                                                                 </b-button>
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                     1.3k
@@ -760,12 +830,13 @@ export default {
                                                 </div>
                                             </div>
                                         </b-col>
-                                        <b-col xl="3" lg="4" sm="6">
+                                        <b-col lg="4" sm="6" xl="3">
                                             <div class="gallery-box card light mb-0">
                                                 <div class="gallery-container">
                                                     <b-link href="#" title>
-                                                        <img class="gallery-img img-fluid mx-auto"
-                                                            src="@/assets/images/small/img-9.jpg" alt />
+                                                        <img alt
+                                                             class="gallery-img img-fluid mx-auto"
+                                                             src="@/assets/images/small/img-9.jpg"/>
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">Dramatic clouds at the Golden
                                                                 Gate Bridge</h5>
@@ -776,19 +847,23 @@ export default {
                                                     <div class="d-flex align-items-center mt-1">
                                                         <div class="flex-grow-1 text-muted">
                                                             by
-                                                            <b-link href class="text-body text-truncate">Ron Mackie
+                                                            <b-link class="text-body text-truncate" href>Ron Mackie
                                                             </b-link>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <div class="d-flex gap-3">
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                     5.1K
                                                                 </b-button>
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                     4.7k
@@ -799,12 +874,13 @@ export default {
                                                 </div>
                                             </div>
                                         </b-col>
-                                        <b-col xl="3" lg="4" sm="6">
+                                        <b-col lg="4" sm="6" xl="3">
                                             <div class="gallery-box card mb-0">
                                                 <div class="gallery-container">
                                                     <b-link href="#" title>
-                                                        <img class="gallery-img img-fluid mx-auto"
-                                                            src="@/assets/images/small/img-11.jpg" alt />
+                                                        <img alt
+                                                             class="gallery-img img-fluid mx-auto"
+                                                             src="@/assets/images/small/img-11.jpg"/>
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">Cycling in the countryside</h5>
                                                         </div>
@@ -815,19 +891,23 @@ export default {
                                                     <div class="d-flex align-items-center mt-1">
                                                         <div class="flex-grow-1 text-muted">
                                                             by
-                                                            <b-link href class="text-body text-truncate">Nancy Martino
+                                                            <b-link class="text-body text-truncate" href>Nancy Martino
                                                             </b-link>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <div class="d-flex gap-3">
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                     3.2K
                                                                 </b-button>
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                     1.1K
@@ -838,12 +918,13 @@ export default {
                                                 </div>
                                             </div>
                                         </b-col>
-                                        <b-col xl="3" lg="4" sm="6" class="d-md-none d-xl-block">
+                                        <b-col class="d-md-none d-xl-block" lg="4" sm="6" xl="3">
                                             <div class="gallery-box card mb-0">
                                                 <div class="gallery-container">
                                                     <b-link href="#" title>
-                                                        <img class="gallery-img img-fluid mx-auto"
-                                                            src="@/assets/images/small/img-10.jpg" alt />
+                                                        <img alt
+                                                             class="gallery-img img-fluid mx-auto"
+                                                             src="@/assets/images/small/img-10.jpg"/>
                                                         <div class="gallery-overlay">
                                                             <h5 class="overlay-caption">Fun day at the Hill Station</h5>
                                                         </div>
@@ -853,19 +934,23 @@ export default {
                                                     <div class="d-flex align-items-center mt-1">
                                                         <div class="flex-grow-1 text-muted">
                                                             by
-                                                            <b-link href class="text-body text-truncate">Henry Baird
+                                                            <b-link class="text-body text-truncate" href>Henry Baird
                                                             </b-link>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <div class="d-flex gap-3">
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-thumb-up-fill text-muted align-bottom me-1"></i>
                                                                     632
                                                                 </b-button>
-                                                                <b-button variant="link" size="sm" type="button"
-                                                                    class="fs-12 text-body text-decoration-none px-0">
+                                                                <b-button
+                                                                    class="fs-12 text-body text-decoration-none px-0"
+                                                                    size="sm" type="button"
+                                                                    variant="link">
                                                                     <i
                                                                         class="ri-question-answer-fill text-muted align-bottom me-1"></i>
                                                                     95
@@ -881,26 +966,28 @@ export default {
                             </div>
 
                             <!-- left offcanvas -->
-                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft"
-                                aria-labelledby="offcanvasLeftLabel">
+                            <div id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel"
+                                 class="offcanvas offcanvas-start"
+                                 tabindex="-1">
                                 <div class="offcanvas-header border-bottom">
-                                    <h5 class="offcanvas-title" id="offcanvasLeftLabel">Recent Acitivity</h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                                    <h5 id="offcanvasLeftLabel" class="offcanvas-title">Recent Acitivity</h5>
+                                    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            type="button"></button>
                                 </div>
                                 <div class="offcanvas-body p-0 overflow-hidden">
                                     <div data-simplebar style="height: calc(100vh - 112px);">
                                         <div class="acitivity-timeline p-4">
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-1.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-1.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Oliver Phillips
-                                                        <b-badge variant="soft-primary"
-                                                            class="text-primary align-middle">New</b-badge>
+                                                        <b-badge class="text-primary align-middle"
+                                                                 variant="soft-primary">New
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">We talked about a project on linkedin.
                                                     </p>
@@ -911,44 +998,53 @@ export default {
                                                 <div class="flex-shrink-0 avatar-xs acitivity-avatar">
                                                     <div
                                                         class="avatar-title bg-soft-success text-success rounded-circle">
-                                                        N</div>
+                                                        N
+                                                    </div>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Nancy Martino
-                                                        <b-badge variant="soft-secondary"
-                                                            class="text-secondary align-middle">In
-                                                            Progress</b-badge>
+                                                        <b-badge class="text-secondary align-middle"
+                                                                 variant="soft-secondary">In
+                                                            Progress
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         <i class="ri-file-text-line align-middle ms-2"></i> Create new
                                                         project Buildng product
                                                     </p>
                                                     <div class="avatar-group mb-2">
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Christi">
-                                                            <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Christi"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-4.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Frank Hook">
-                                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Frank Hook"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title=" Ruby">
+                                                        <b-link class="avatar-group-item" data-bs-original-title=" Ruby"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div
                                                                     class="avatar-title rounded-circle bg-light text-primary">
-                                                                    R</div>
+                                                                    R
+                                                                </div>
                                                             </div>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="more">
+                                                        <b-link class="avatar-group-item" data-bs-original-title="more"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div class="avatar-title rounded-circle">2+</div>
                                                             </div>
@@ -959,28 +1055,29 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-2.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Natasha Carey
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">Adding a new event with attachments</p>
                                                     <b-row class="border border-dashed gx-2 p-2 mb-2">
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-2.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-2.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-3.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-3.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-4.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-4.jpg"/>
                                                         </b-col>
                                                     </b-row>
                                                     <small class="mb-0 text-muted">25 Nov</small>
@@ -988,8 +1085,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-6.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-6.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Bethany Johnson</h6>
@@ -1010,9 +1107,10 @@ export default {
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Your order is placed
-                                                        <b-badge variant="soft-danger"
-                                                            class="text-danger align-middle ms-1">Out
-                                                            of Delivery</b-badge>
+                                                        <b-badge class="text-danger align-middle ms-1"
+                                                                 variant="soft-danger">Out
+                                                            of Delivery
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">These customers can rest assured their
                                                         order has been placed.</p>
@@ -1021,8 +1119,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-7.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-7.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Lewis Pratt</h6>
@@ -1045,23 +1143,25 @@ export default {
                                                     <p class="text-muted mb-2">
                                                         <span class="text-danger">2 days left</span> notification to
                                                         submit the monthly sales report.
-                                                        <b-link href="javascript:void(0);"
-                                                            class="link-warning text-decoration-underline">Reports
-                                                            Builder</b-link>
+                                                        <b-link class="link-warning text-decoration-underline"
+                                                                href="javascript:void(0);">Reports
+                                                            Builder
+                                                        </b-link>
                                                     </p>
                                                     <small class="mb-0 text-muted">15 Oct</small>
                                                 </div>
                                             </div>
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-8.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-8.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         New ticket received
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         User
@@ -1074,7 +1174,7 @@ export default {
                                     </div>
                                 </div>
                                 <div class="offcanvas-foorter border-top p-3 text-center">
-                                    <b-link href="javascript:void(0);" class="link-success">
+                                    <b-link class="link-success" href="javascript:void(0);">
                                         View All Acitivity
                                         <i class="ri-arrow-right-s-line align-middle ms-1"></i>
                                     </b-link>
@@ -1147,8 +1247,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Backdrop Offcanvas</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="backdrop-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="backdrop-showcode" />
+                                <label class="form-label text-muted" for="backdrop-showcode">Show Code</label>
+                                <input id="backdrop-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1157,37 +1257,48 @@ export default {
                             visible.</p>
                         <div class="live-preview">
                             <div class="d-flex flex-wrap gap-2">
-                                <b-button variant="light" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable Body
-                                    Scrolling</b-button>
-                                <b-button variant="light" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable
-                                    Backdrop (Default)</b-button>
-                                <b-button variant="light" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                                    Enable Both Scrolling & Backdrop</b-button>
+                                <b-button aria-controls="offcanvasScrolling" data-bs-target="#offcanvasScrolling"
+                                          data-bs-toggle="offcanvas"
+                                          type="button" variant="light">Enable
+                                    Body
+                                    Scrolling
+                                </b-button>
+                                <b-button aria-controls="offcanvasWithBackdrop" data-bs-target="#offcanvasWithBackdrop"
+                                          data-bs-toggle="offcanvas"
+                                          type="button" variant="light">
+                                    Enable
+                                    Backdrop (Default)
+                                </b-button>
+                                <b-button aria-controls="offcanvasWithBothOptions"
+                                          data-bs-target="#offcanvasWithBothOptions" data-bs-toggle="offcanvas"
+                                          type="button"
+                                          variant="light">
+                                    Enable Both Scrolling & Backdrop
+                                </b-button>
                             </div>
 
-                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
-                                tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <div id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel"
+                                 class="offcanvas offcanvas-start"
+                                 data-bs-backdrop="false" data-bs-scroll="true" tabindex="-1">
                                 <div class="offcanvas-header border-bottom">
-                                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Customer Activity</h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                                    <h5 id="offcanvasScrollingLabel" class="offcanvas-title">Customer Activity</h5>
+                                    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            type="button"></button>
                                 </div>
                                 <div class="offcanvas-body p-0 overflow-hidden">
                                     <div data-simplebar style="height: calc(100vh - 112px);">
                                         <div class="acitivity-timeline p-4">
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-1.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-1.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Oliver Phillips
-                                                        <b-badge variant="soft-primary"
-                                                            class="text-primary align-middle">New</b-badge>
+                                                        <b-badge class="text-primary align-middle"
+                                                                 variant="soft-primary">New
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">We talked about a project on linkedin.
                                                     </p>
@@ -1198,44 +1309,53 @@ export default {
                                                 <div class="flex-shrink-0 avatar-xs acitivity-avatar">
                                                     <div
                                                         class="avatar-title bg-soft-success text-success rounded-circle">
-                                                        N</div>
+                                                        N
+                                                    </div>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Nancy Martino
-                                                        <b-badge variant="soft-secondary"
-                                                            class="text-secondary align-middle">In
-                                                            Progress</b-badge>
+                                                        <b-badge class="text-secondary align-middle"
+                                                                 variant="soft-secondary">In
+                                                            Progress
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         <i class="ri-file-text-line align-middle ms-2"></i> Create new
                                                         project Buildng product
                                                     </p>
                                                     <div class="avatar-group mb-2">
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Christi">
-                                                            <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Christi"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-4.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Frank Hook">
-                                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Frank Hook"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title=" Ruby">
+                                                        <b-link class="avatar-group-item" data-bs-original-title=" Ruby"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div
                                                                     class="avatar-title rounded-circle bg-light text-primary">
-                                                                    R</div>
+                                                                    R
+                                                                </div>
                                                             </div>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="more">
+                                                        <b-link class="avatar-group-item" data-bs-original-title="more"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div class="avatar-title rounded-circle">2+</div>
                                                             </div>
@@ -1246,28 +1366,29 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-2.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Natasha Carey
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">Adding a new event with attachments</p>
                                                     <b-row class="border border-dashed gx-2 p-2 mb-2">
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-2.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-2.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-3.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-3.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-4.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-4.jpg"/>
                                                         </b-col>
                                                     </b-row>
                                                     <small class="mb-0 text-muted">25 Nov</small>
@@ -1275,8 +1396,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-6.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-6.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Bethany Johnson</h6>
@@ -1297,9 +1418,10 @@ export default {
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Your order is placed
-                                                        <b-badge variant="soft-danger"
-                                                            class="text-danger align-middle ms-1">Out
-                                                            of Delivery</b-badge>
+                                                        <b-badge class="text-danger align-middle ms-1"
+                                                                 variant="soft-danger">Out
+                                                            of Delivery
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">These customers can rest assured their
                                                         order has been placed.</p>
@@ -1308,8 +1430,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-7.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-7.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Lewis Pratt</h6>
@@ -1332,23 +1454,25 @@ export default {
                                                     <p class="text-muted mb-2">
                                                         <span class="text-danger">2 days left</span> notification to
                                                         submit the monthly sales report.
-                                                        <b-link href="javascript:void(0);"
-                                                            class="link-warning text-decoration-underline">Reports
-                                                            Builder</b-link>
+                                                        <b-link class="link-warning text-decoration-underline"
+                                                                href="javascript:void(0);">Reports
+                                                            Builder
+                                                        </b-link>
                                                     </p>
                                                     <small class="mb-0 text-muted">15 Oct</small>
                                                 </div>
                                             </div>
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-8.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-8.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         New ticket received
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         User
@@ -1361,33 +1485,35 @@ export default {
                                     </div>
                                 </div>
                                 <div class="offcanvas-foorter border-top p-3 text-center">
-                                    <b-link href="javascript:void(0);" class="link-success">
+                                    <b-link class="link-success" href="javascript:void(0);">
                                         View All Acitivity
                                         <i class="ri-arrow-right-s-line align-middle ms-1"></i>
                                     </b-link>
                                 </div>
                             </div>
 
-                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
-                                aria-labelledby="offcanvasWithBackdropLabel">
+                            <div id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel"
+                                 class="offcanvas offcanvas-start"
+                                 tabindex="-1">
                                 <div class="offcanvas-header border-bottom">
-                                    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Customer Activity</h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                                    <h5 id="offcanvasWithBackdropLabel" class="offcanvas-title">Customer Activity</h5>
+                                    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            type="button"></button>
                                 </div>
                                 <div class="offcanvas-body p-0 overflow-hidden">
                                     <div data-simplebar style="height: calc(100vh - 112px);">
                                         <div class="acitivity-timeline p-4">
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-1.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-1.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Oliver Phillips
-                                                        <b-badge variant="soft-primary"
-                                                            class="text-primary align-middle">New</b-badge>
+                                                        <b-badge class="text-primary align-middle"
+                                                                 variant="soft-primary">New
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">We talked about a project on linkedin.
                                                     </p>
@@ -1398,44 +1524,53 @@ export default {
                                                 <div class="flex-shrink-0 avatar-xs acitivity-avatar">
                                                     <div
                                                         class="avatar-title bg-soft-success text-success rounded-circle">
-                                                        N</div>
+                                                        N
+                                                    </div>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Nancy Martino
-                                                        <b-badge variant="soft-secondary"
-                                                            class="text-secondary align-middle">In
-                                                            Progress</b-badge>
+                                                        <b-badge class="text-secondary align-middle"
+                                                                 variant="soft-secondary">In
+                                                            Progress
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         <i class="ri-file-text-line align-middle ms-2"></i> Create new
                                                         project Buildng product
                                                     </p>
                                                     <div class="avatar-group mb-2">
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Christi">
-                                                            <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Christi"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-4.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Frank Hook">
-                                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Frank Hook"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title=" Ruby">
+                                                        <b-link class="avatar-group-item" data-bs-original-title=" Ruby"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div
                                                                     class="avatar-title rounded-circle bg-light text-primary">
-                                                                    R</div>
+                                                                    R
+                                                                </div>
                                                             </div>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="more">
+                                                        <b-link class="avatar-group-item" data-bs-original-title="more"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div class="avatar-title rounded-circle">2+</div>
                                                             </div>
@@ -1446,28 +1581,29 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-2.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Natasha Carey
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">Adding a new event with attachments</p>
                                                     <b-row class="border border-dashed gx-2 p-2 mb-2">
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-2.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-2.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-3.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-3.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-4.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-4.jpg"/>
                                                         </b-col>
                                                     </b-row>
                                                     <small class="mb-0 text-muted">25 Nov</small>
@@ -1475,8 +1611,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-6.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-6.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Bethany Johnson</h6>
@@ -1497,9 +1633,10 @@ export default {
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Your order is placed
-                                                        <b-badge variant="soft-danger"
-                                                            class="text-danger align-middle ms-1">Out
-                                                            of Delivery</b-badge>
+                                                        <b-badge class="text-danger align-middle ms-1"
+                                                                 variant="soft-danger">Out
+                                                            of Delivery
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">These customers can rest assured their
                                                         order has been placed.</p>
@@ -1508,8 +1645,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-7.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-7.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Lewis Pratt</h6>
@@ -1532,23 +1669,25 @@ export default {
                                                     <p class="text-muted mb-2">
                                                         <span class="text-danger">2 days left</span> notification to
                                                         submit the monthly sales report.
-                                                        <b-link href="javascript:void(0);"
-                                                            class="link-warning text-decoration-underline">Reports
-                                                            Builder</b-link>
+                                                        <b-link class="link-warning text-decoration-underline"
+                                                                href="javascript:void(0);">Reports
+                                                            Builder
+                                                        </b-link>
                                                     </p>
                                                     <small class="mb-0 text-muted">15 Oct</small>
                                                 </div>
                                             </div>
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-8.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-8.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         New ticket received
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         User
@@ -1561,34 +1700,36 @@ export default {
                                     </div>
                                 </div>
                                 <div class="offcanvas-foorter border-top p-3 text-center">
-                                    <b-link href="javascript:void(0);" class="link-success">
+                                    <b-link class="link-success" href="javascript:void(0);">
                                         View All Acitivity
                                         <i class="ri-arrow-right-s-line align-middle ms-1"></i>
                                     </b-link>
                                 </div>
                             </div>
 
-                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
-                                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                            <div id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel"
+                                 class="offcanvas offcanvas-start"
+                                 data-bs-scroll="true" tabindex="-1">
                                 <div class="offcanvas-header border-bottom">
-                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Customer Activity
+                                    <h5 id="offcanvasWithBothOptionsLabel" class="offcanvas-title">Customer Activity
                                     </h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                                    <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            type="button"></button>
                                 </div>
                                 <div class="offcanvas-body p-0 overflow-hidden">
                                     <div data-simplebar style="height: calc(100vh - 112px);">
                                         <div class="acitivity-timeline p-4">
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-1.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-1.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Oliver Phillips
-                                                        <b-badge variant="soft-primary"
-                                                            class="text-primary align-middle">New</b-badge>
+                                                        <b-badge class="text-primary align-middle"
+                                                                 variant="soft-primary">New
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">We talked about a project on linkedin.
                                                     </p>
@@ -1599,44 +1740,53 @@ export default {
                                                 <div class="flex-shrink-0 avatar-xs acitivity-avatar">
                                                     <div
                                                         class="avatar-title bg-soft-success text-success rounded-circle">
-                                                        N</div>
+                                                        N
+                                                    </div>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Nancy Martino
-                                                        <b-badge variant="soft-secondary"
-                                                            class="text-secondary align-middle">In
-                                                            Progress</b-badge>
+                                                        <b-badge class="text-secondary align-middle"
+                                                                 variant="soft-secondary">In
+                                                            Progress
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         <i class="ri-file-text-line align-middle ms-2"></i> Create new
                                                         project Buildng product
                                                     </p>
                                                     <div class="avatar-group mb-2">
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Christi">
-                                                            <img src="@/assets/images/users/avatar-4.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Christi"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-4.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="Frank Hook">
-                                                            <img src="@/assets/images/users/avatar-3.jpg" alt
-                                                                class="rounded-circle avatar-xs" />
+                                                        <b-link class="avatar-group-item"
+                                                                data-bs-original-title="Frank Hook"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
+                                                            <img alt class="rounded-circle avatar-xs"
+                                                                 src="@/assets/images/users/avatar-3.jpg"/>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title=" Ruby">
+                                                        <b-link class="avatar-group-item" data-bs-original-title=" Ruby"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div
                                                                     class="avatar-title rounded-circle bg-light text-primary">
-                                                                    R</div>
+                                                                    R
+                                                                </div>
                                                             </div>
                                                         </b-link>
-                                                        <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top" title
-                                                            data-bs-original-title="more">
+                                                        <b-link class="avatar-group-item" data-bs-original-title="more"
+                                                                data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                href="javascript: void(0);"
+                                                                title>
                                                             <div class="avatar-xs">
                                                                 <div class="avatar-title rounded-circle">2+</div>
                                                             </div>
@@ -1647,28 +1797,29 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-2.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-2.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Natasha Carey
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">Adding a new event with attachments</p>
                                                     <b-row class="border border-dashed gx-2 p-2 mb-2">
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-2.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-2.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-3.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-3.jpg"/>
                                                         </b-col>
                                                         <b-col cols="4">
-                                                            <img src="@/assets/images/small/img-4.jpg" alt
-                                                                class="img-fluid rounded" />
+                                                            <img alt class="img-fluid rounded"
+                                                                 src="@/assets/images/small/img-4.jpg"/>
                                                         </b-col>
                                                     </b-row>
                                                     <small class="mb-0 text-muted">25 Nov</small>
@@ -1676,8 +1827,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-6.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-6.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Bethany Johnson</h6>
@@ -1698,9 +1849,10 @@ export default {
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         Your order is placed
-                                                        <b-badge variant="soft-danger"
-                                                            class="text-danger align-middle ms-1">Out
-                                                            of Delivery</b-badge>
+                                                        <b-badge class="text-danger align-middle ms-1"
+                                                                 variant="soft-danger">Out
+                                                            of Delivery
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">These customers can rest assured their
                                                         order has been placed.</p>
@@ -1709,8 +1861,8 @@ export default {
                                             </div>
                                             <div class="acitivity-item py-3 d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-7.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-7.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">Lewis Pratt</h6>
@@ -1733,23 +1885,25 @@ export default {
                                                     <p class="text-muted mb-2">
                                                         <span class="text-danger">2 days left</span> notification to
                                                         submit the monthly sales report.
-                                                        <b-link href="javascript:void(0);"
-                                                            class="link-warning text-decoration-underline">Reports
-                                                            Builder</b-link>
+                                                        <b-link class="link-warning text-decoration-underline"
+                                                                href="javascript:void(0);">Reports
+                                                            Builder
+                                                        </b-link>
                                                     </p>
                                                     <small class="mb-0 text-muted">15 Oct</small>
                                                 </div>
                                             </div>
                                             <div class="acitivity-item d-flex">
                                                 <div class="flex-shrink-0">
-                                                    <img src="@/assets/images/users/avatar-8.jpg" alt
-                                                        class="avatar-xs rounded-circle acitivity-avatar" />
+                                                    <img alt class="avatar-xs rounded-circle acitivity-avatar"
+                                                         src="@/assets/images/users/avatar-8.jpg"/>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h6 class="mb-1">
                                                         New ticket received
-                                                        <b-badge variant="soft-success"
-                                                            class="text-success align-middle">Completed</b-badge>
+                                                        <b-badge class="text-success align-middle"
+                                                                 variant="soft-success">Completed
+                                                        </b-badge>
                                                     </h6>
                                                     <p class="text-muted mb-2">
                                                         User
@@ -1762,7 +1916,7 @@ export default {
                                     </div>
                                 </div>
                                 <div class="offcanvas-foorter border-top p-3 text-center">
-                                    <b-link href="javascript:void(0);" class="link-success">
+                                    <b-link class="link-success" href="javascript:void(0);">
                                         View All Acitivity
                                         <i class="ri-arrow-right-s-line align-middle ms-1"></i>
                                     </b-link>
@@ -1776,7 +1930,7 @@ export default {
     &lt;button class=&quot;btn btn-light&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasScrolling&quot; aria-controls=&quot;offcanvasScrolling&quot;&gt;Enable body scrolling&lt;/button&gt;
     &lt;button class=&quot;btn btn-light&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasWithBackdrop&quot; aria-controls=&quot;offcanvasWithBackdrop&quot;&gt;Enable backdrop (default)&lt;/button&gt;
     &lt;button class=&quot;btn btn-light&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasWithBothOptions&quot; aria-controls=&quot;offcanvasWithBothOptions&quot;&gt;Enable both scrolling &amp; backdrop&lt;/button&gt;
-&lt;/div&gt;</code>    
+&lt;/div&gt;</code>
 
 <code>&lt;div class=&quot;offcanvas offcanvas-start&quot; data-bs-scroll=&quot;true&quot; data-bs-backdrop=&quot;false&quot; tabindex=&quot;-1&quot; id=&quot;offcanvasScrolling&quot; aria-labelledby=&quot;offcanvasScrollingLabel&quot;&gt;
     &lt;div class=&quot;offcanvas-header&quot;&gt;

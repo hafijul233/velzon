@@ -1,18 +1,17 @@
 <script>
-import SwiperCore, { Thumbs } from "swiper";
+import SwiperCore, {Thumbs} from "swiper";
 
 import "swiper/swiper-bundle.css";
-
-SwiperCore.use([Thumbs]);
-
 import Layout from "../../layouts/main.vue";
 import PageHeader from "@/components/page-header";
 import appConfig from "../../../app.config";
 
+SwiperCore.use([Thumbs]);
+
 export default {
     page: {
         title: "Timeline",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -38,7 +37,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <div>
@@ -50,18 +49,20 @@ export default {
                             <div class="content">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded">
+                                        <img alt="" class="avatar-sm rounded" src="@/assets/images/users/avatar-5.jpg">
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h5 class="fs-15">@Erica245 <small class="text-muted fs-13 fw-normal">- 10 min
-                                                Ago</small></h5>
+                                            Ago</small></h5>
                                         <p class="text-muted mb-2">Wish someone a sincere ‘good luck in your new job’
                                             with these sweet messages. Make sure you pick out a good luck new job card
                                             to go with the words, and pop a beautiful bunch of flowers from our gift
                                             range in your basket, to make them feel super special.</p>
                                         <div class="hstack gap-2">
-                                            <b-link class="btn btn-sm btn-light"><span class="me-1">&#128293;</span> 19</b-link>
-                                            <b-link class="btn btn-sm btn-light"><span class="me-1">&#129321;</span> 22</b-link>
+                                            <b-link class="btn btn-sm btn-light"><span class="me-1">&#128293;</span> 19
+                                            </b-link>
+                                            <b-link class="btn btn-sm btn-light"><span class="me-1">&#129321;</span> 22
+                                            </b-link>
                                         </div>
                                     </div>
                                 </div>
@@ -86,8 +87,11 @@ export default {
 
                                             </div>
                                             <div class="flex-grow-1 overflow-hidden ms-2">
-                                                <h6 class="text-truncate mb-0"><b-link href="javascript:void(0);"
-                                                        class="stretched-link">Business Template - UI/UX design</b-link></h6>
+                                                <h6 class="text-truncate mb-0">
+                                                    <b-link class="stretched-link"
+                                                            href="javascript:void(0);">Business Template - UI/UX design
+                                                    </b-link>
+                                                </h6>
                                                 <small>685 KB</small>
                                             </div>
                                         </div>
@@ -100,8 +104,11 @@ export default {
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 ms-2 overflow-hidden">
-                                                <h6 class="mb-0 text-truncate"><b-link href="javascript:void(0);"
-                                                        class="stretched-link">Bank Management System - PSD</b-link></h6>
+                                                <h6 class="mb-0 text-truncate">
+                                                    <b-link class="stretched-link"
+                                                            href="javascript:void(0);">Bank Management System - PSD
+                                                    </b-link>
+                                                </h6>
                                                 <small>8.78 MB</small>
                                             </div>
                                         </div>
@@ -117,22 +124,26 @@ export default {
                                 <p class="text-muted">Every team project can have a velzon. Use the velzon to share
                                     information with your team to understand and contribute to your project.</p>
                                 <div class="avatar-group mb-2">
-                                    <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover title="Christi">
-                                        <img src="@/assets/images/users/avatar-4.jpg" alt=""
-                                            class="rounded-circle avatar-xs">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                            title="Christi">
+                                        <img alt="" class="rounded-circle avatar-xs"
+                                             src="@/assets/images/users/avatar-4.jpg">
                                     </b-link>
-                                    <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover title="Frank Hook">
-                                        <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                            class="rounded-circle avatar-xs">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                            title="Frank Hook">
+                                        <img alt="" class="rounded-circle avatar-xs"
+                                             src="@/assets/images/users/avatar-3.jpg">
                                     </b-link>
-                                    <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover title="Ruby">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                            title="Ruby">
                                         <div class="avatar-xs">
                                             <div class="avatar-title rounded-circle bg-light text-primary">
                                                 R
                                             </div>
                                         </div>
                                     </b-link>
-                                    <b-link href="javascript: void(0);" class="avatar-group-item" v-b-tooltip.hover title="more">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="javascript: void(0);"
+                                            title="more">
                                         <div class="avatar-xs">
                                             <div class="avatar-title rounded-circle">
                                                 2+
@@ -147,7 +158,7 @@ export default {
                             <div class="date">18 May 2021</div>
                             <div class="content">
                                 <h5>Donald Palmer <small class="text-muted fs-13 fw-normal">- Has changed 2
-                                        attributes</small></h5>
+                                    attributes</small></h5>
                                 <p class="text-muted fst-italic mb-2">" This is an awesome admin dashboard template. It
                                     is extremely well structured and uses state of the art components (e.g. one of the
                                     only templates using boostrap 5.1.3 so far). I integrated it into a Rails 6 project.
@@ -169,16 +180,16 @@ export default {
                                     The maximum file size for uploads in this demo :</p>
                                 <b-row class="border border-dashed rounded gx-2 p-2">
                                     <b-col cols="3">
-                                        <img src="@/assets/images/small/img-2.jpg" alt="" class="img-fluid rounded">
+                                        <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-2.jpg">
                                     </b-col>
                                     <b-col cols="3">
-                                        <img src="@/assets/images/small/img-3.jpg" alt="" class="img-fluid rounded">
+                                        <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-3.jpg">
                                     </b-col>
                                     <b-col cols="3">
-                                        <img src="@/assets/images/small/img-4.jpg" alt="" class="img-fluid rounded">
+                                        <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-4.jpg">
                                     </b-col>
                                     <b-col cols="3">
-                                        <img src="@/assets/images/small/img-6.jpg" alt="" class="img-fluid rounded">
+                                        <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-6.jpg">
                                     </b-col>
                                 </b-row>
                             </div>
@@ -187,15 +198,18 @@ export default {
                             <i class="icon ri-fire-line"></i>
                             <div class="date">01 Jan 2021</div>
                             <div class="content">
-                                <h5>New ticket received <b-badge variant="soft-success"
-                                        class="text-success fs-10 align-middle ms-1">Completed</b-badge>
+                                <h5>New ticket received
+                                    <b-badge class="text-success fs-10 align-middle ms-1"
+                                             variant="soft-success">Completed
+                                    </b-badge>
                                 </h5>
                                 <p class="text-muted mb-2">
                                     It is important for us that we receive email notifications when a ticket is created
                                     as our IT staff are mobile and will not always be looking at the dashboard for new
                                     tickets.
                                 </p>
-                                <b-link href="javascript:void(0);" class="link-primary text-decoration-underline">Read More
+                                <b-link class="link-primary text-decoration-underline" href="javascript:void(0);">Read
+                                    More
                                     <i class="ri-arrow-right-line"></i></b-link>
                             </div>
                         </div>
@@ -223,8 +237,8 @@ export default {
                                     <div class="timeline-box">
                                         <div class="timeline-text">
                                             <div class="d-flex">
-                                                <img src="@/assets/images/users/avatar-7.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-7.jpg"/>
                                                 <div class="flex-grow-1 ms-3">
                                                     <h5 class="mb-1">Frank hook joined with our company</h5>
                                                     <p class="text-muted mb-0">It makes a statement, it’s impressive
@@ -254,23 +268,23 @@ export default {
                                             <b-row class="border border-dashed rounded gx-2 p-2">
                                                 <b-col cols="3">
                                                     <b-link href="javascript:void(0);"><img
-                                                            src="@/assets/images/small/img-7.jpg" alt=""
-                                                            class="img-fluid rounded"></b-link>
+                                                        alt="" class="img-fluid rounded"
+                                                        src="@/assets/images/small/img-7.jpg"></b-link>
                                                 </b-col>
                                                 <b-col cols="3">
                                                     <b-link href="javascript:void(0);"><img
-                                                            src="@/assets/images/small/img-3.jpg" alt=""
-                                                            class="img-fluid rounded"></b-link>
+                                                        alt="" class="img-fluid rounded"
+                                                        src="@/assets/images/small/img-3.jpg"></b-link>
                                                 </b-col>
                                                 <b-col cols="3">
                                                     <b-link href="javascript:void(0);"><img
-                                                            src="@/assets/images/small/img-10.jpg" alt=""
-                                                            class="img-fluid rounded"></b-link>
+                                                        alt="" class="img-fluid rounded"
+                                                        src="@/assets/images/small/img-10.jpg"></b-link>
                                                 </b-col>
                                                 <b-col cols="3">
                                                     <b-link href="javascript:void(0);"><img
-                                                            src="@/assets/images/small/img-9.jpg" alt=""
-                                                            class="img-fluid rounded"></b-link>
+                                                        alt="" class="img-fluid rounded"
+                                                        src="@/assets/images/small/img-9.jpg"></b-link>
                                                 </b-col>
                                             </b-row>
                                         </div>

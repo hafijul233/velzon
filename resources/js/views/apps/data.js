@@ -5,7 +5,7 @@ const chatData = [
         name: 'Steven Franklin',
         message: 'Hey! there I\'m available',
         time: '',
-        color: 'secondary'  
+        color: 'secondary'
     },
     {
         id: 2,
@@ -85,4 +85,4 @@ const chatMessagesData = [
     }
 ];
 
-export { chatData, chatMessagesData };
+export {chatData, chatMessagesData};

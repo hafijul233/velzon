@@ -55,7 +55,7 @@ class FirebaseAuthBackend {
      */
     forgetPassword(email) {
         return new Promise((resolve, reject) => {
-            firebase.auth().sendPasswordResetEmail(email, { url: window.location.protocol + "//" + window.location.host + "/login" }).then(() => {
+            firebase.auth().sendPasswordResetEmail(email, {url: window.location.protocol + "//" + window.location.host + "/login"}).then(() => {
                 resolve(true);
             }).catch((error) => {
                 reject(this._handleError(error));
@@ -92,7 +92,7 @@ class FirebaseAuthBackend {
 
     /**
      * Handle the error
-     * @param {*} error 
+     * @param {*} error
      */
     _handleError(error) {
         var errorMessage = error.message;
@@ -104,7 +104,7 @@ let _fireBaseBackend = null;
 
 /**
  * Initilize the backend
- * @param {*} config 
+ * @param {*} config
  */
 const initFirebaseBackend = (config) => {
     if (!_fireBaseBackend) {
@@ -120,4 +120,4 @@ const getFirebaseBackend = () => {
     return _fireBaseBackend;
 };
 
-export { initFirebaseBackend, getFirebaseBackend };
+export {initFirebaseBackend, getFirebaseBackend};

@@ -6,126 +6,126 @@ import "prismjs";
 import "prismjs/themes/prism.css";
 
 export default {
-  data() {
-    return {
-      title: "Alerts",
-      items: [
-        {
-          text: "Base UI",
-          href: "/",
-        },
-        {
-          text: "Alerts",
-          active: true,
-        },
-      ],
-    };
-  },
-  components: {
-    Layout,
-    PageHeader,
-  },
-  mounted() {
-    const checkbox = document.getElementsByClassName("code-switcher");
-    Array.from(checkbox).forEach((check) => {
-      check.addEventListener("change", () => {
-        const card = check.closest(".card");
-        const preview = card.querySelector(".live-preview");
-        const code = card.querySelector(".code-view");
-        if (check.checked) {
-          // do this
-          preview.classList.add("d-none");
-          code.classList.remove("d-none");
-        } else {
-          // do that
-          preview.classList.remove("d-none");
-          code.classList.add("d-none");
-        }
-      });
-    });
-  },
+    data() {
+        return {
+            title: "Alerts",
+            items: [
+                {
+                    text: "Base UI",
+                    href: "/",
+                },
+                {
+                    text: "Alerts",
+                    active: true,
+                },
+            ],
+        };
+    },
+    components: {
+        Layout,
+        PageHeader,
+    },
+    mounted() {
+        const checkbox = document.getElementsByClassName("code-switcher");
+        Array.from(checkbox).forEach((check) => {
+            check.addEventListener("change", () => {
+                const card = check.closest(".card");
+                const preview = card.querySelector(".live-preview");
+                const code = card.querySelector(".code-view");
+                if (check.checked) {
+                    // do this
+                    preview.classList.add("d-none");
+                    code.classList.remove("d-none");
+                } else {
+                    // do that
+                    preview.classList.remove("d-none");
+                    code.classList.add("d-none");
+                }
+            });
+        });
+    },
 };
 </script>
 
 <template>
-  <Layout>
-    <PageHeader :title="title" :items="items" />
+    <Layout>
+        <PageHeader :items="items" :title="title"/>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Default Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="default" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="default" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Default Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="default">Show Code</label>
+                                <input id="default" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>b-alert</code> selector to show a default alert.
-            </p>
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert show variant="primary">
-                    <strong>Hi!</strong> A simple <b>Primary alert</b> —check it
-                    out!
-                  </b-alert>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>b-alert</code> selector to show a default alert.
+                        </p>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert show variant="primary">
+                                        <strong>Hi!</strong> A simple <b>Primary alert</b> —check it
+                                        out!
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert show variant="secondary">
-                    <strong>How are you!</strong> A simple
-                    <b>secondary alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert show variant="secondary">
+                                        <strong>How are you!</strong> A simple
+                                        <b>secondary alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert show variant="success">
-                    <strong>Yey! Everything worked!</strong> A simple
-                    <b>success alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert show variant="success">
+                                        <strong>Yey! Everything worked!</strong> A simple
+                                        <b>success alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert show variant="danger mb-xl-0">
-                    <strong>Something is very wrong!</strong> A simple
-                    <b>danger alert</b> —check it out!
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert show variant="danger mb-xl-0">
+                                        <strong>Something is very wrong!</strong> A simple
+                                        <b>danger alert</b> —check it out!
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert show variant="warning">
-                    <strong>Uh oh, something went wrong</strong> A simple
-                    <b>warning alert</b> —check it out!
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert show variant="warning">
+                                        <strong>Uh oh, something went wrong</strong> A simple
+                                        <b>warning alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Info Alert</h6>
-                  <b-alert show variant="info">
-                    <strong>Don't forget' it !</strong> A simple
-                    <b>info alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Info Alert</h6>
+                                    <b-alert show variant="info">
+                                        <strong>Don't forget' it !</strong> A simple
+                                        <b>info alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert show variant="light">
-                    <strong>Mind Your Step!</strong> A simple
-                    <b>light alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert show variant="light">
+                                        <strong>Mind Your Step!</strong> A simple
+                                        <b>light alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert show variant="dark" class="mb-0">
-                    <strong>Did you know?</strong> A simple
-                    <b>dark alert</b> —check it out!
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class="mb-0" show variant="dark">
+                                        <strong>Did you know?</strong> A simple
+                                        <b>dark alert</b> —check it out!
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="height: 352px">
     <code>&lt;!-- Primary Alert --&gt;
     &lt;b-alert show variant=&quot;primary&quot;&gt;
@@ -167,88 +167,88 @@ export default {
     &lt;strong&gt; Did you know? &lt;/strong&gt; A simple &lt;b&gt;dark alert&lt;/b&gt; &mdash;check it out!
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Borderless Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="borderless-alerts" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="borderless-alerts" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Borderless Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="borderless-alerts">Show Code</label>
+                                <input id="borderless-alerts" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-borderless</code> class to set alert without border.
-            </p>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-borderless</code> class to set alert without border.
+                        </p>
 
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert variant="primary" class="alert-borderless" show>
-                    <strong>Hi!</strong> A simple <b>Primary alert</b> —check it
-                    out!
-                  </b-alert>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert class="alert-borderless" show variant="primary">
+                                        <strong>Hi!</strong> A simple <b>Primary alert</b> —check it
+                                        out!
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert variant="secondary" class="alert-borderless" show>
-                    <strong>How are you!</strong> A simple
-                    <b>secondary alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert class="alert-borderless" show variant="secondary">
+                                        <strong>How are you!</strong> A simple
+                                        <b>secondary alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert variant="success" class="alert-borderless" show>
-                    <strong>Yey! Everything worked!</strong> A simple
-                    <b>success alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert class="alert-borderless" show variant="success">
+                                        <strong>Yey! Everything worked!</strong> A simple
+                                        <b>success alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert variant="danger" class="alert-borderless mb-xl-0" show>
-                    <strong>Something is very wrong!</strong> A simple danger
-                    alert—check it out!
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert class="alert-borderless mb-xl-0" show variant="danger">
+                                        <strong>Something is very wrong!</strong> A simple danger
+                                        alert—check it out!
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert variant="warning" class="alert-borderless" show>
-                    <strong>Uh oh, something went wrong</strong> A simple
-                    <b>warning alert</b> —check it out!
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert class="alert-borderless" show variant="warning">
+                                        <strong>Uh oh, something went wrong</strong> A simple
+                                        <b>warning alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Info Alert</h6>
-                  <b-alert variant="info" class="alert-borderless" show>
-                    <strong>Don't forget' it !</strong> A simple
-                    <b>info alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Info Alert</h6>
+                                    <b-alert class="alert-borderless" show variant="info">
+                                        <strong>Don't forget' it !</strong> A simple
+                                        <b>info alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert variant="light" class="alert-borderless bg-light" show>
-                    <strong>Mind Your Step!</strong> A simple
-                    <b>light alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert class="alert-borderless bg-light" show variant="light">
+                                        <strong>Mind Your Step!</strong> A simple
+                                        <b>light alert</b> —check it out!
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert variant="dark" class="alert-borderless mb-0" show>
-                    <strong>Did you know?</strong> A simple
-                    <b>dark alert</b> —check it out!
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class="alert-borderless mb-0" show variant="dark">
+                                        <strong>Did you know?</strong> A simple
+                                        <b>dark alert</b> —check it out!
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="height: 352px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show variant=&quot;primary&quot; class=&quot;alert-borderless &quot; role=&quot;alert&quot;&gt;
@@ -282,7 +282,7 @@ export default {
 </code>
 <code>&lt;!-- Light Alert --&gt;
 &lt;b-alert show variant=&quot;light&quot; class=&quot;alert-borderless &quot; role=&quot;alert&quot;&gt;
-&lt;strong&gt; Mind Your Step! &lt;/strong&gt; A simple &lt;b&gt;light alert&lt;/b&gt; &mdash;check it out!  
+&lt;strong&gt; Mind Your Step! &lt;/strong&gt; A simple &lt;b&gt;light alert&lt;/b&gt; &mdash;check it out!
 &lt;/b-alert&gt;
 </code>
 <code>&lt;!-- Dark Alert --&gt;
@@ -290,80 +290,87 @@ export default {
 &lt;strong&gt; Did you know? &lt;/strong&gt; A simple &lt;b&gt;dark alert&lt;/b&gt; &mdash;check it out!
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Dismissing Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="1" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="1" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Dismissing Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="1">Show Code</label>
+                                <input id="1" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>dismissible</code> to <code>b-alert</code> to add dismissing button to
-              the alert.
-            </p>
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert show dismissible variant="primary">
-                    <strong>Hi!</strong> A simple <b>Dismissible primary Alert</b> — check it out!
-                  </b-alert>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>dismissible</code> to <code>b-alert</code> to add dismissing button to
+                            the alert.
+                        </p>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert dismissible show variant="primary">
+                                        <strong>Hi!</strong> A simple <b>Dismissible primary Alert</b> — check it out!
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert variant="secondary" show dismissible>
-                    <strong>How are you!</strong> A simple <b>Dismissible secondary alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert dismissible show variant="secondary">
+                                        <strong>How are you!</strong> A simple <b>Dismissible secondary alert</b> —check
+                                        it out!
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert variant="success" show dismissible>
-                    <strong>Right Way !</strong> A simple <b>Dismissible success alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert dismissible show variant="success">
+                                        <strong>Right Way !</strong> A simple <b>Dismissible success alert</b> —check it
+                                        out!
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert variant="danger" show dismissible>
-                    <strong>Something is very wrong!</strong> A simple <b>Dismissible danger alert</b> —check it out!
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert dismissible show variant="danger">
+                                        <strong>Something is very wrong!</strong> A simple <b>Dismissible danger
+                                        alert</b> —check it out!
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert variant="warning" show dismissible>
-                    <strong>Welcome Back!</strong> A simple <b>Dismissible warning alert</b> —check it out!
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert dismissible show variant="warning">
+                                        <strong>Welcome Back!</strong> A simple <b>Dismissible warning alert</b> —check
+                                        it out!
+                                    </b-alert>
 
-                  <h6>Info Alert</h6>
-                  <b-alert variant="info" show dismissible>
-                    <strong>Don't forget' it !</strong> A simple <b>Dismissible info alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Info Alert</h6>
+                                    <b-alert dismissible show variant="info">
+                                        <strong>Don't forget' it !</strong> A simple <b>Dismissible info alert</b>
+                                        —check it out!
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert variant="light" show dismissible>
-                    <strong>Mind Your Step!</strong> A simple <b>Dismissible light alert</b> —check it out!
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert dismissible show variant="light">
+                                        <strong>Mind Your Step!</strong> A simple <b>Dismissible light alert</b> —check
+                                        it out!
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert variant="dark" show dismissible>
-                    <strong>Did you know?</strong> A simple <b>Dismissible dark alert</b>—check it out!
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert dismissible show variant="dark">
+                                        <strong>Did you know?</strong> A simple <b>Dismissible dark alert</b>—check it
+                                        out!
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="height: 352px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show dismissible variant=&quot;primary&quot; class=&quot;fade show&quot; role=&quot;alert&quot;&gt;
@@ -413,97 +420,105 @@ export default {
 &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Link Color Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="2" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="2" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Link Color Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="2">Show Code</label>
+                                <input id="2" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-link</code> class at &lt;a&gt; tag to show matching
-              colored links within the given alert.
-            </p>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-link</code> class at &lt;a&gt; tag to show matching
+                            colored links within the given alert.
+                        </p>
 
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert variant="primary" show>
-                    A simple Primary alert with
-                    <b-link href="#" class="alert-link"> an example link </b-link>. Give
-                    it a click if you like.
-                  </b-alert>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert show variant="primary">
+                                        A simple Primary alert with
+                                        <b-link class="alert-link" href="#"> an example link</b-link>
+                                        . Give
+                                        it a click if you like.
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert variant="secondary" show>
-                    A simple Secondary alert with
-                    <b-link href="#" class="alert-link"> an example link </b-link>. Give
-                    it a click if you like.
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert show variant="secondary">
+                                        A simple Secondary alert with
+                                        <b-link class="alert-link" href="#"> an example link</b-link>
+                                        . Give
+                                        it a click if you like.
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert variant="success" show>
-                    A simple Success alert with
-                    <b-link href="#" class="alert-link"> an example link </b-link>. Give
-                    it a click if you like.
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert show variant="success">
+                                        A simple Success alert with
+                                        <b-link class="alert-link" href="#"> an example link</b-link>
+                                        . Give
+                                        it a click if you like.
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert variant="danger" class="mb-xl-0" show>
-                    A simple Danger alert with
-                    <b-link href="#" class="alert-link"> an example link </b-link>. Give
-                    it a click if you like.
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert class="mb-xl-0" show variant="danger">
+                                        A simple Danger alert with
+                                        <b-link class="alert-link" href="#"> an example link</b-link>
+                                        . Give
+                                        it a click if you like.
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert variant="warning" show>
-                    A simple Warning alert with
-                    <b-link href="#" class="alert-link"> an example link </b-link>. Give
-                    it a click if you like.
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert show variant="warning">
+                                        A simple Warning alert with
+                                        <b-link class="alert-link" href="#"> an example link</b-link>
+                                        . Give
+                                        it a click if you like.
+                                    </b-alert>
 
-                  <h6>Info Alert</h6>
-                  <b-alert variant="info" show>
-                    A simple Info alert with
-                    <b-link href="#" class="alert-link"> an example link </b-link>. Give
-                    it a click if you like.
-                  </b-alert>
+                                    <h6>Info Alert</h6>
+                                    <b-alert show variant="info">
+                                        A simple Info alert with
+                                        <b-link class="alert-link" href="#"> an example link</b-link>
+                                        . Give
+                                        it a click if you like.
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert variant="light" show>
-                    A simple Light alert with
-                    <b-link href="#" class="alert-link"> an example link </b-link>. Give
-                    it a click if you like.
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert show variant="light">
+                                        A simple Light alert with
+                                        <b-link class="alert-link" href="#"> an example link</b-link>
+                                        . Give
+                                        it a click if you like.
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert variant="dark" class="mb-0" show>
-                    A simple Dark alert with
-                    <b-link href="#" class="alert-link"> an example link </b-link>. Give
-                    it a click if you like.
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class="mb-0" show variant="dark">
+                                        A simple Dark alert with
+                                        <b-link class="alert-link" href="#"> an example link</b-link>
+                                        . Give
+                                        it a click if you like.
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show variant=&quot;primary&quot; role=&quot;alert&quot;&gt;
@@ -545,75 +560,76 @@ A simple &lt;b&gt;Light alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quo
 A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Outline Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="4" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="4" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Outline Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="4">Show Code</label>
+                                <input id="4" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-outline</code> class to set an alert with outline.
-            </p>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-outline</code> class to set an alert with outline.
+                        </p>
 
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Outline Alert</h6>
-                  <b-alert show dismissible variant="primary" class="alert-outline">
-                    <strong>Hi!</strong> - Outline <b>primary alert</b> example
-                  </b-alert>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Outline Alert</h6>
+                                    <b-alert class="alert-outline" dismissible show variant="primary">
+                                        <strong>Hi!</strong> - Outline <b>primary alert</b> example
+                                    </b-alert>
 
-                  <h6>Secondary Outline Alert</h6>
-                  <b-alert show dismissible variant="secondary" class="alert-outline">
-                    <strong>Hi!</strong> - Outline <b>secondary alert</b> example
-                  </b-alert>
+                                    <h6>Secondary Outline Alert</h6>
+                                    <b-alert class="alert-outline" dismissible show variant="secondary">
+                                        <strong>Hi!</strong> - Outline <b>secondary alert</b> example
+                                    </b-alert>
 
-                  <h6>Success Outline Alert</h6>
-                  <b-alert show dismissible variant="success" class="alert-outline">
-                    <strong>Yey! Everything worked!</strong> - Outline <b>success alert</b> example
-                  </b-alert>
+                                    <h6>Success Outline Alert</h6>
+                                    <b-alert class="alert-outline" dismissible show variant="success">
+                                        <strong>Yey! Everything worked!</strong> - Outline <b>success alert</b> example
+                                    </b-alert>
 
-                  <h6>Danger Outline Alert</h6>
-                  <b-alert show dismissible variant="danger" class="alert-outline">
-                    <strong>Something is very wrong!</strong> - Outline <b>danger alert</b> example
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Outline Alert</h6>
+                                    <b-alert class="alert-outline" dismissible show variant="danger">
+                                        <strong>Something is very wrong!</strong> - Outline <b>danger alert</b> example
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Outline Alert</h6>
-                  <b-alert show dismissible variant="warning" class="alert-outline">
-                    <strong>Uh oh, something went wrong!</strong> - Outline <b>warning alert</b> example
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Outline Alert</h6>
+                                    <b-alert class="alert-outline" dismissible show variant="warning">
+                                        <strong>Uh oh, something went wrong!</strong> - Outline <b>warning alert</b>
+                                        example
+                                    </b-alert>
 
-                  <h6>Info Outline Alert</h6>
-                  <b-alert show dismissible variant="info" class="alert-outline">
-                    <strong>Don't forget' it !</strong> - Outline <b>info alert</b> example
-                  </b-alert>
+                                    <h6>Info Outline Alert</h6>
+                                    <b-alert class="alert-outline" dismissible show variant="info">
+                                        <strong>Don't forget' it !</strong> - Outline <b>info alert</b> example
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert show dismissible variant="dark" class="alert-outline">
-                    <strong>Did you know?</strong> - Outline <b>dark alert</b> example
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class="alert-outline" dismissible show variant="dark">
+                                        <strong>Did you know?</strong> - Outline <b>dark alert</b> example
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show dismissible variant=&quot;primary&quot; class=&quot;alert-outline fade show&quot; role=&quot;alert&quot;&gt;
@@ -657,85 +673,92 @@ A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot
 &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Left Border Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="5" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="5" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Left Border Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="5">Show Code</label>
+                                <input id="5" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-border-left</code> class to set an alert with the left
-              border & outline.
-            </p>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-border-left</code> class to set an alert with the left
+                            border & outline.
+                        </p>
 
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert show dismissible variant="primary" class="alert-border-left">
-                    <i class="ri-user-smile-line me-3 align-middle fs-16"></i><strong>Primary</strong> - Left border
-                    alert
-                  </b-alert>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert class="alert-border-left" dismissible show variant="primary">
+                                        <i class="ri-user-smile-line me-3 align-middle fs-16"></i><strong>Primary</strong>
+                                        - Left border
+                                        alert
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert show dismissible variant="secondary" class="alert-border-left">
-                    <i class="ri-check-double-line me-3 align-middle fs-16"></i>
-                    <strong>Secondary</strong> - Left border alert
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert class="alert-border-left" dismissible show variant="secondary">
+                                        <i class="ri-check-double-line me-3 align-middle fs-16"></i>
+                                        <strong>Secondary</strong> - Left border alert
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert show dismissible variant="success" class="alert-border-left">
-                    <i class="ri-notification-off-line me-3 align-middle fs-16"></i><strong>Success</strong> - Left
-                    border alert
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert class="alert-border-left" dismissible show variant="success">
+                                        <i class="ri-notification-off-line me-3 align-middle fs-16"></i><strong>Success</strong>
+                                        - Left
+                                        border alert
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert show dismissible variant="danger" class="alert-border-left">
-                    <i class="ri-error-warning-line me-3 align-middle fs-16"></i><strong>Danger</strong>- Left border
-                    alert
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert class="alert-border-left" dismissible show variant="danger">
+                                        <i class="ri-error-warning-line me-3 align-middle fs-16"></i><strong>Danger</strong>-
+                                        Left border
+                                        alert
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert show dismissible variant="warning" class="alert-border-left">
-                    <i class="ri-alert-line me-3 align-middle fs-16"></i><strong>Warning</strong>- Left border alert
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert class="alert-border-left" dismissible show variant="warning">
+                                        <i class="ri-alert-line me-3 align-middle fs-16"></i><strong>Warning</strong>-
+                                        Left border alert
+                                    </b-alert>
 
-                  <h6>Info Alert</h6>
-                  <b-alert show dismissible variant="info" class="alert-border-left">
-                    <i class="ri-airplay-line me-3 align-middle fs-16"></i><strong>Info</strong>- Left border alert
-                  </b-alert>
+                                    <h6>Info Alert</h6>
+                                    <b-alert class="alert-border-left" dismissible show variant="info">
+                                        <i class="ri-airplay-line me-3 align-middle fs-16"></i><strong>Info</strong>-
+                                        Left border alert
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert show dismissible variant="light" class="alert-border-left">
-                    <i class="ri-mail-line me-3 align-middle fs-16"></i><strong>Light</strong>- Left border alert
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert class="alert-border-left" dismissible show variant="light">
+                                        <i class="ri-mail-line me-3 align-middle fs-16"></i><strong>Light</strong>- Left
+                                        border alert
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert show dismissible variant="dark" class="alert-border-left">
-                    <i class="ri-refresh-line me-3 align-middle fs-16"></i><strong>Dark</strong>- Left border alert
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class="alert-border-left" dismissible show variant="dark">
+                                        <i class="ri-refresh-line me-3 align-middle fs-16"></i><strong>Dark</strong>-
+                                        Left border alert
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show dismissible variant=&quot;primary&quot; class=&quot;alert-border-left fade show&quot; role=&quot;alert&quot;&gt;
@@ -785,99 +808,109 @@ A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot
 &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Label Icon Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="6" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="6" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Label Icon Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="6">Show Code</label>
+                                <input id="6" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-label-icon</code> class to set an alert with a label
-              icon.
-            </p>
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert dismissible variant="primary" class="alert-solid alert-label-icon" show>
-                    <i class="ri-user-smile-line label-icon"></i>
-                    <strong>Primary</strong> - Label icon alert
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-                  </b-alert>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-label-icon</code> class to set an alert with a label
+                            icon.
+                        </p>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert class="alert-solid alert-label-icon" dismissible show variant="primary">
+                                        <i class="ri-user-smile-line label-icon"></i>
+                                        <strong>Primary</strong> - Label icon alert
+                                        <button aria-label="Close" class="btn-close btn-close-white"
+                                                type="button"></button>
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert dismissible variant="secondary" class="alert-solid alert-label-icon" show>
-                    <i class="ri-check-double-line label-icon"></i>
-                    <strong>Secondary</strong>
-                    - Label icon alert
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert class="alert-solid alert-label-icon" dismissible show variant="secondary">
+                                        <i class="ri-check-double-line label-icon"></i>
+                                        <strong>Secondary</strong>
+                                        - Label icon alert
+                                        <button aria-label="Close" class="btn-close btn-close-white"
+                                                type="button"></button>
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert dismissible variant="success" class="alert-solid alert-label-icon" show>
-                    <i class="ri-notification-off-line label-icon"></i>
-                    <strong>Success</strong>
-                    - Label icon alert
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert class="alert-solid alert-label-icon" dismissible show variant="success">
+                                        <i class="ri-notification-off-line label-icon"></i>
+                                        <strong>Success</strong>
+                                        - Label icon alert
+                                        <button aria-label="Close" class="btn-close btn-close-white"
+                                                type="button"></button>
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert dismissible variant="danger" class="alert-solid alert-label-icon mb-xl-0" show>
-                    <i class="ri-error-warning-line label-icon"></i>
-                    <strong>Danger</strong>
-                    - Label icon alert
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert class="alert-solid alert-label-icon mb-xl-0" dismissible show
+                                             variant="danger">
+                                        <i class="ri-error-warning-line label-icon"></i>
+                                        <strong>Danger</strong>
+                                        - Label icon alert
+                                        <button aria-label="Close" class="btn-close btn-close-white"
+                                                type="button"></button>
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert dismissible variant="warning" class=" alert-solid alert-label-icon" show>
-                    <i class="ri-alert-line label-icon"></i>
-                    <strong>warning</strong> - Label icon alert
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert class=" alert-solid alert-label-icon" dismissible show variant="warning">
+                                        <i class="ri-alert-line label-icon"></i>
+                                        <strong>warning</strong> - Label icon alert
+                                        <button aria-label="Close" class="btn-close btn-close-white"
+                                                type="button"></button>
+                                    </b-alert>
 
-                  <h6>Info Alert</h6>
-                  <b-alert dismissible variant="info" class=" alert-solid alert-label-icon" show>
-                    <i class="ri-airplay-line label-icon"></i>
-                    <strong>Info</strong> - Label icon alert
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-                  </b-alert>
+                                    <h6>Info Alert</h6>
+                                    <b-alert class=" alert-solid alert-label-icon" dismissible show variant="info">
+                                        <i class="ri-airplay-line label-icon"></i>
+                                        <strong>Info</strong> - Label icon alert
+                                        <button aria-label="Close" class="btn-close btn-close-white"
+                                                type="button"></button>
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert dismissible variant="light ale" class=" alert-solid alert-label-icon" show>
-                    <i class="ri-mail-line label-icon"></i>
-                    <strong>Light</strong> - Label icon alert
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert class=" alert-solid alert-label-icon" dismissible show variant="light ale">
+                                        <i class="ri-mail-line label-icon"></i>
+                                        <strong>Light</strong> - Label icon alert
+                                        <button aria-label="Close" class="btn-close btn-close-white"
+                                                type="button"></button>
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert dismissible variant="dark aler" class=" alert-solid alert-label-icon mb-0" show>
-                    <i class="ri-refresh-line label-icon"></i>
-                    <strong>Dark</strong> - Label icon alert
-                    <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class=" alert-solid alert-label-icon mb-0" dismissible show
+                                             variant="dark aler">
+                                        <i class="ri-refresh-line label-icon"></i>
+                                        <strong>Dark</strong> - Label icon alert
+                                        <button aria-label="Close" class="btn-close btn-close-white"
+                                                type="button"></button>
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show dismissible variant=&quot;primary&quot; class=&quot;alert-solid alert-label-icon fade show&quot; role=&quot;alert&quot;&gt;
@@ -927,139 +960,139 @@ A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot
 &lt;button type=&quot;button&quot; class=&quot;btn-close btn-close-white&quot; data-bs-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1"> Additional Content Alerts </b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="7" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="7" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1"> Additional Content Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="7">Show Code</label>
+                                <input id="7" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-additional</code> class and Use the
-              <code>alert-</code> class to HTML elements like headings,
-              paragraphs, dividers etc.
-            </p>
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-additional</code> class and Use the
+                            <code>alert-</code> class to HTML elements like headings,
+                            paragraphs, dividers etc.
+                        </p>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
 
-                  <b-alert show dismissible variant="primary" class="alert-additional">
-                    <div class="alert-body">
-                      <div class="d-flex">
-                        <div class="flex-shrink-0 me-3">
-                          <i class="ri-error-warning-line fs-16 align-middle"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                          <h5 class="alert-heading">Well done !</h5>
-                          <p class="mb-0">
-                            Aww yeah, you successfully read this important alert
-                            message.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="alert-content">
-                      <p class="mb-0">
-                        Whenever you need to, be sure to use margin utilities to
-                        keep things nice and tidy.
-                      </p>
-                    </div>
-                  </b-alert>
-                  <h6>Danger Alert</h6>
-                  <b-alert show dismissible variant="danger" class="alert-additional mb-xl-0">
-                    <div class="alert-body">
-                      <div class="d-flex">
-                        <div class="flex-shrink-0 me-3">
-                          <i class="ri-alert-line fs-16 align-middle"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                          <h5 class="alert-heading">
-                            Something is very wrong!
-                          </h5>
-                          <p class="mb-0">
-                            Change a few things up and try submitting again.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="alert-content">
-                      <p class="mb-0">
-                        Whenever you need to, be sure to use margin utilities to
-                        keep things nice and tidy.
-                      </p>
-                    </div>
-                  </b-alert>
-                </b-col>
+                                    <b-alert class="alert-additional" dismissible show variant="primary">
+                                        <div class="alert-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <i class="ri-error-warning-line fs-16 align-middle"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h5 class="alert-heading">Well done !</h5>
+                                                    <p class="mb-0">
+                                                        Aww yeah, you successfully read this important alert
+                                                        message.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="alert-content">
+                                            <p class="mb-0">
+                                                Whenever you need to, be sure to use margin utilities to
+                                                keep things nice and tidy.
+                                            </p>
+                                        </div>
+                                    </b-alert>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert class="alert-additional mb-xl-0" dismissible show variant="danger">
+                                        <div class="alert-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <i class="ri-alert-line fs-16 align-middle"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h5 class="alert-heading">
+                                                        Something is very wrong!
+                                                    </h5>
+                                                    <p class="mb-0">
+                                                        Change a few things up and try submitting again.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="alert-content">
+                                            <p class="mb-0">
+                                                Whenever you need to, be sure to use margin utilities to
+                                                keep things nice and tidy.
+                                            </p>
+                                        </div>
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Success Alert</h6>
-                  <b-alert show dismissible variant="success" class="alert-additional">
-                    <div class="alert-body">
-                      <div class="d-flex">
-                        <div class="flex-shrink-0 me-3">
-                          <i class="ri-notification-off-line fs-16 align-middle"></i>
-                        </div>
-                        <div class="flex-grow-1">
-                          <h5 class="alert-heading">Yey! Everything worked!</h5>
-                          <p class="mb-0">
-                            This alert needs your attention, but it's not super
-                            important.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="alert-content">
-                      <p class="mb-0">
-                        Whenever you need to, be sure to use margin utilities to
-                        keep things nice and tidy.
-                      </p>
-                    </div>
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Success Alert</h6>
+                                    <b-alert class="alert-additional" dismissible show variant="success">
+                                        <div class="alert-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <i class="ri-notification-off-line fs-16 align-middle"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h5 class="alert-heading">Yey! Everything worked!</h5>
+                                                    <p class="mb-0">
+                                                        This alert needs your attention, but it's not super
+                                                        important.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="alert-content">
+                                            <p class="mb-0">
+                                                Whenever you need to, be sure to use margin utilities to
+                                                keep things nice and tidy.
+                                            </p>
+                                        </div>
+                                    </b-alert>
 
-                  <h6>Warning Alert</h6>
-                  <b-alert show dismissible variant="warning" class="alert-additional mb-xl-0">
-                    <div class="alert-body">
-                      <div class="d-flex">
-                        <div class="flex-shrink-0 me-3">
-                          <i class="ri-alert-line fs-16 align-middle"></i>
+                                    <h6>Warning Alert</h6>
+                                    <b-alert class="alert-additional mb-xl-0" dismissible show variant="warning">
+                                        <div class="alert-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <i class="ri-alert-line fs-16 align-middle"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h5 class="alert-heading">
+                                                        Uh oh, something went wrong!
+                                                    </h5>
+                                                    <p class="mb-0">
+                                                        Better check yourself, you're not looking too good.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="alert-content">
+                                            <p class="mb-0">
+                                                Whenever you need to, be sure to use margin utilities to
+                                                keep things nice and tidy.
+                                            </p>
+                                        </div>
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
                         </div>
-                        <div class="flex-grow-1">
-                          <h5 class="alert-heading">
-                            Uh oh, something went wrong!
-                          </h5>
-                          <p class="mb-0">
-                            Better check yourself, you're not looking too good.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="alert-content">
-                      <p class="mb-0">
-                        Whenever you need to, be sure to use margin utilities to
-                        keep things nice and tidy.
-                      </p>
-                    </div>
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert dismissible show variant=&quot;primary&quot; class=&quot;alert-additional fade show&quot; role=&quot;alert&quot;&gt;
@@ -1136,90 +1169,95 @@ A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot
 &lt;p class=&quot;mb-0&quot;&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
 &lt;/div&gt;
 &lt;b-alert&gt;</code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1"> Top Border with Outline Alerts </b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="8" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="8" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1"> Top Border with Outline Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="8">Show Code</label>
+                                <input id="8" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-top-border</code> class to set an alert with the top
-              border and outline.
-            </p>
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert show dismissible variant="primary" class="alert-top-border">
-                    <i class="ri-user-smile-line me-3 align-middle fs-16 text-primary"></i><strong>Primary</strong>- Top
-                    border alert
-                  </b-alert>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-top-border</code> class to set an alert with the top
+                            border and outline.
+                        </p>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert class="alert-top-border" dismissible show variant="primary">
+                                        <i class="ri-user-smile-line me-3 align-middle fs-16 text-primary"></i><strong>Primary</strong>-
+                                        Top
+                                        border alert
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert show dismissible variant="secondary" class="alert-top-border">
-                    <i
-                      class="ri-check-double-line me-3 align-middle fs-16 text-secondary"></i><strong>Secondary</strong>-
-                    Top border alert
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert class="alert-top-border" dismissible show variant="secondary">
+                                        <i
+                                            class="ri-check-double-line me-3 align-middle fs-16 text-secondary"></i><strong>Secondary</strong>-
+                                        Top border alert
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert show dismissible variant="success" class="alert-top-border">
-                    <i
-                      class="ri-notification-off-line me-3 align-middle fs-16 text-success"></i><strong>Success</strong>-
-                    Top border alert
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert class="alert-top-border" dismissible show variant="success">
+                                        <i
+                                            class="ri-notification-off-line me-3 align-middle fs-16 text-success"></i><strong>Success</strong>-
+                                        Top border alert
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert show dismissible variant="danger" class="alert-top-border">
-                    <i class="ri-error-warning-line me-3 align-middle fs-16 text-danger"></i><strong>Danger</strong>-
-                    Top border alert
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert class="alert-top-border" dismissible show variant="danger">
+                                        <i class="ri-error-warning-line me-3 align-middle fs-16 text-danger"></i><strong>Danger</strong>-
+                                        Top border alert
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert show dismissible variant="warning" class="alert-top-border">
-                    <i class="ri-alert-line me-3 align-middle fs-16 text-warning"></i><strong>Warning</strong>- Top
-                    border alert
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert class="alert-top-border" dismissible show variant="warning">
+                                        <i class="ri-alert-line me-3 align-middle fs-16 text-warning"></i><strong>Warning</strong>-
+                                        Top
+                                        border alert
+                                    </b-alert>
 
-                  <h6>Info Alert</h6>
-                  <b-alert show dismissible variant="info" class="alert-top-border">
-                    <i class="ri-airplay-line me-3 align-middle fs-16 text-info"></i><strong>Info</strong>- Top border
-                    alert
-                  </b-alert>
+                                    <h6>Info Alert</h6>
+                                    <b-alert class="alert-top-border" dismissible show variant="info">
+                                        <i class="ri-airplay-line me-3 align-middle fs-16 text-info"></i><strong>Info</strong>-
+                                        Top border
+                                        alert
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert show dismissible variant="light" class="alert-top-border">
-                    <i class="ri-mail-line me-3 align-middle fs-16 text-dark"></i><strong>Light</strong>- Top border
-                    alert
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert class="alert-top-border" dismissible show variant="light">
+                                        <i class="ri-mail-line me-3 align-middle fs-16 text-dark"></i><strong>Light</strong>-
+                                        Top border
+                                        alert
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert show dismissible variant="dark" class="alert-top-border">
-                    <i class="ri-refresh-line me-3 align-middle fs-16 text-dark"></i><strong>Dark</strong>- Top border
-                    alert
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class="alert-top-border" dismissible show variant="dark">
+                                        <i class="ri-refresh-line me-3 align-middle fs-16 text-dark"></i><strong>Dark</strong>-
+                                        Top border
+                                        alert
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show dismissible variant=&quot;primary&quot; class=&quot;alert-top-border fade show&quot; role=&quot;alert&quot;&gt;
@@ -1269,80 +1307,88 @@ A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot
 &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Label Icon Arrow Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="9" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="9" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Label Icon Arrow Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="9">Show Code</label>
+                                <input id="9" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-label-icon label-arrow</code> class to show an alert
-              with label icon and arrow.
-            </p>
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert show dismissible variant="primary" class="alert-label-icon label-arrow">
-                    <i class="ri-user-smile-line label-icon"></i><strong>Primary</strong> - Label icon arrow alert
-                  </b-alert>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-label-icon label-arrow</code> class to show an alert
+                            with label icon and arrow.
+                        </p>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert class="alert-label-icon label-arrow" dismissible show variant="primary">
+                                        <i class="ri-user-smile-line label-icon"></i><strong>Primary</strong> - Label
+                                        icon arrow alert
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert show dismissible variant="secondary" class="alert-label-icon label-arrow">
-                    <i class="ri-check-double-line label-icon"></i><strong>Secondary</strong> - Label icon arrow alert
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert class="alert-label-icon label-arrow" dismissible show variant="secondary">
+                                        <i class="ri-check-double-line label-icon"></i><strong>Secondary</strong> -
+                                        Label icon arrow alert
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert show dismissible variant="success" class="alert-label-icon label-arrow">
-                    <i class="ri-notification-off-line label-icon"></i><strong>Success</strong>- Label icon arrow alert
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert class="alert-label-icon label-arrow" dismissible show variant="success">
+                                        <i class="ri-notification-off-line label-icon"></i><strong>Success</strong>-
+                                        Label icon arrow alert
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert show dismissible variant="danger" class="alert-label-icon label-arrow">
-                    <i class="ri-error-warning-line label-icon"></i><strong>Danger</strong>- Label icon arrow alert
-                  </b-alert>
-                </b-col>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert class="alert-label-icon label-arrow" dismissible show variant="danger">
+                                        <i class="ri-error-warning-line label-icon"></i><strong>Danger</strong>- Label
+                                        icon arrow alert
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert show dismissible variant="warning" class="alert-label-icon label-arrow">
-                    <i class="ri-alert-line label-icon"></i><strong>Warning</strong> - Label icon arrow alert
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert class="alert-label-icon label-arrow" dismissible show variant="warning">
+                                        <i class="ri-alert-line label-icon"></i><strong>Warning</strong> - Label icon
+                                        arrow alert
+                                    </b-alert>
 
-                  <h6>info Alert</h6>
-                  <b-alert show dismissible variant="info" class="alert-label-icon label-arrow">
-                    <i class="ri-airplay-line label-icon"></i><strong>Info</strong> - Label icon arrow alert
-                  </b-alert>
+                                    <h6>info Alert</h6>
+                                    <b-alert class="alert-label-icon label-arrow" dismissible show variant="info">
+                                        <i class="ri-airplay-line label-icon"></i><strong>Info</strong> - Label icon
+                                        arrow alert
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert show dismissible variant="light" class="alert-label-icon label-arrow">
-                    <i class="ri-mail-line label-icon"></i><strong>Light</strong>- Label icon arrow alert
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert class="alert-label-icon label-arrow" dismissible show variant="light">
+                                        <i class="ri-mail-line label-icon"></i><strong>Light</strong>- Label icon arrow
+                                        alert
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert show dismissible variant="dark" class="alert-label-icon label-arrow">
-                    <i class="ri-refresh-line label-icon"></i><strong>Dark</strong>- Label icon arrow alert
-                  </b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class="alert-label-icon label-arrow" dismissible show variant="dark">
+                                        <i class="ri-refresh-line label-icon"></i><strong>Dark</strong>- Label icon
+                                        arrow alert
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show variant=&quot;primary&quot; class=&quot;alert-dismissible alert-label-icon label-arrow fade show&quot; role=&quot;alert&quot;&gt;
@@ -1392,82 +1438,91 @@ A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot
 &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot; alert&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1"> Rounded Label Icon Alerts </b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="10" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="10" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1"> Rounded Label Icon Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="10">Show Code</label>
+                                <input id="10" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-label-icon rounded-label</code> class to set an alert
-              with a rounded label icon.
-            </p>
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Alert</h6>
-                  <b-alert show dismissible variant="primary" class="alert-label-icon rounded-label">
-                    <i class="ri-user-smile-line label-icon"></i><strong>Primary</strong> - Rounded label alert
-                  </b-alert>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-label-icon rounded-label</code> class to set an alert
+                            with a rounded label icon.
+                        </p>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Alert</h6>
+                                    <b-alert class="alert-label-icon rounded-label" dismissible show variant="primary">
+                                        <i class="ri-user-smile-line label-icon"></i><strong>Primary</strong> - Rounded
+                                        label alert
+                                    </b-alert>
 
-                  <h6>Secondary Alert</h6>
-                  <b-alert show dismissible variant="secondary" class="alert-label-icon rounded-label">
-                    <i class="ri-check-double-line label-icon"></i><strong>Secondary</strong>- Rounded label alert
-                  </b-alert>
+                                    <h6>Secondary Alert</h6>
+                                    <b-alert class="alert-label-icon rounded-label" dismissible show
+                                             variant="secondary">
+                                        <i class="ri-check-double-line label-icon"></i><strong>Secondary</strong>-
+                                        Rounded label alert
+                                    </b-alert>
 
-                  <h6>Success Alert</h6>
-                  <b-alert show dismissible variant="success" class="alert-label-icon rounded-label">
-                    <i class="ri-notification-off-line label-icon"></i><strong>Success</strong>- Rounded label alert
-                  </b-alert>
+                                    <h6>Success Alert</h6>
+                                    <b-alert class="alert-label-icon rounded-label" dismissible show variant="success">
+                                        <i class="ri-notification-off-line label-icon"></i><strong>Success</strong>-
+                                        Rounded label alert
+                                    </b-alert>
 
-                  <h6>Danger Alert</h6>
-                  <b-alert show dismissible variant="danger" class="alert-label-icon rounded-label">
-                    <i class="ri-error-warning-line label-icon"></i><strong>Danger</strong>- Rounded label alert
-                  </b-alert>
+                                    <h6>Danger Alert</h6>
+                                    <b-alert class="alert-label-icon rounded-label" dismissible show variant="danger">
+                                        <i class="ri-error-warning-line label-icon"></i><strong>Danger</strong>- Rounded
+                                        label alert
+                                    </b-alert>
 
-                </b-col>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Alert</h6>
-                  <b-alert show dismissible variant="warning" class="alert-label-icon rounded-label">
-                    <i class="ri-alert-line label-icon"></i><strong>Warning</strong> - Rounded label alert
-                  </b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Alert</h6>
+                                    <b-alert class="alert-label-icon rounded-label" dismissible show variant="warning">
+                                        <i class="ri-alert-line label-icon"></i><strong>Warning</strong> - Rounded label
+                                        alert
+                                    </b-alert>
 
-                  <h6>Info Alert</h6>
-                  <b-alert show dismissible variant="info" class="alert-label-icon rounded-label">
-                    <i class="ri-airplay-line label-icon"></i><strong>Info</strong> - Rounded label alert
-                  </b-alert>
+                                    <h6>Info Alert</h6>
+                                    <b-alert class="alert-label-icon rounded-label" dismissible show variant="info">
+                                        <i class="ri-airplay-line label-icon"></i><strong>Info</strong> - Rounded label
+                                        alert
+                                    </b-alert>
 
-                  <h6>Light Alert</h6>
-                  <b-alert show dismissible variant="light" class="alert-label-icon rounded-label">
-                    <i class="ri-mail-line label-icon"></i><strong>Light</strong> - Rounded label alert
-                  </b-alert>
+                                    <h6>Light Alert</h6>
+                                    <b-alert class="alert-label-icon rounded-label" dismissible show variant="light">
+                                        <i class="ri-mail-line label-icon"></i><strong>Light</strong> - Rounded label
+                                        alert
+                                    </b-alert>
 
-                  <h6>Dark Alert</h6>
-                  <b-alert show dismissible variant="dark" class="alert-label-icon rounded-label">
-                    <i class="ri-refresh-line label-icon"></i><strong>Dark</strong> - Rounded label alert
-                  </b-alert>
+                                    <h6>Dark Alert</h6>
+                                    <b-alert class="alert-label-icon rounded-label" dismissible show variant="dark">
+                                        <i class="ri-refresh-line label-icon"></i><strong>Dark</strong> - Rounded label
+                                        alert
+                                    </b-alert>
 
-                </b-col>
-              </b-row>
-            </div>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show dismissible variant=&quot;primary&quot; class=&quot;alert-label-icon rounded-label fade show&quot; role=&quot;alert&quot;&gt;
@@ -1517,72 +1572,88 @@ A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot
 &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
 
-    <b-row>
-      <b-col lg="12">
-        <b-card no-body>
-          <b-card-header class="align-items-center d-flex">
-            <b-card-title class="mb-0 flex-grow-1">Solid Alerts</b-card-title>
-            <div class="flex-shrink-0">
-              <div class="form-check form-switch form-switch-right form-switch-md">
-                <label for="solid-alerts-code" class="form-label text-muted">Show Code</label>
-                <input class="form-check-input code-switcher" type="checkbox" id="solid-alerts-code" />
-              </div>
-            </div>
-          </b-card-header>
+        <b-row>
+            <b-col lg="12">
+                <b-card no-body>
+                    <b-card-header class="align-items-center d-flex">
+                        <b-card-title class="mb-0 flex-grow-1">Solid Alerts</b-card-title>
+                        <div class="flex-shrink-0">
+                            <div class="form-check form-switch form-switch-right form-switch-md">
+                                <label class="form-label text-muted" for="solid-alerts-code">Show Code</label>
+                                <input id="solid-alerts-code" class="form-check-input code-switcher" type="checkbox"/>
+                            </div>
+                        </div>
+                    </b-card-header>
 
-          <b-card-body>
-            <p class="text-muted">
-              Use the
-              <code>alert-solid</code> class to set an alert with solid style.
-            </p>
+                    <b-card-body>
+                        <p class="text-muted">
+                            Use the
+                            <code>alert-solid</code> class to set an alert with solid style.
+                        </p>
 
-            <div class="live-preview">
-              <b-row>
-                <b-col xl="6">
-                  <h6>Primary Solid Alert</h6>
-                  <b-alert show variant="primary" class="alert-solid"><strong>Hi!</strong> - Solid <b>primary alert</b>
-                    example</b-alert>
+                        <div class="live-preview">
+                            <b-row>
+                                <b-col xl="6">
+                                    <h6>Primary Solid Alert</h6>
+                                    <b-alert class="alert-solid" show variant="primary"><strong>Hi!</strong> - Solid <b>primary
+                                        alert</b>
+                                        example
+                                    </b-alert>
 
-                  <h6>Secondary Solid Alert</h6>
-                  <b-alert show variant="secondary" class="alert-solid"><strong>Hi!</strong> - Solid <b>primary
-                      alert</b> example</b-alert>
+                                    <h6>Secondary Solid Alert</h6>
+                                    <b-alert class="alert-solid" show variant="secondary"><strong>Hi!</strong> - Solid
+                                        <b>primary
+                                            alert</b> example
+                                    </b-alert>
 
-                  <h6>Success Solid Alert</h6>
-                  <b-alert show variant="success" class="alert-solid"><strong>Hi!</strong> - Solid <b>primary alert</b>
-                    example</b-alert>
+                                    <h6>Success Solid Alert</h6>
+                                    <b-alert class="alert-solid" show variant="success"><strong>Hi!</strong> - Solid <b>primary
+                                        alert</b>
+                                        example
+                                    </b-alert>
 
-                  <h6>Danger Solid Alert</h6>
-                  <b-alert show variant="danger" class="alert-solid"><strong>Hi!</strong> - Solid <b>primary alert</b>
-                    example</b-alert>
-                </b-col>
+                                    <h6>Danger Solid Alert</h6>
+                                    <b-alert class="alert-solid" show variant="danger"><strong>Hi!</strong> - Solid <b>primary
+                                        alert</b>
+                                        example
+                                    </b-alert>
+                                </b-col>
 
-                <b-col xl="6">
-                  <h6>Warning Solid Alert</h6>
-                  <b-alert show variant="warning" class="alert-solid"><strong>Hi!</strong> - Solid <b>primary alert</b>
-                    example</b-alert>
+                                <b-col xl="6">
+                                    <h6>Warning Solid Alert</h6>
+                                    <b-alert class="alert-solid" show variant="warning"><strong>Hi!</strong> - Solid <b>primary
+                                        alert</b>
+                                        example
+                                    </b-alert>
 
-                  <h6>Info Solid Alert</h6>
-                  <b-alert show variant="info" class="alert-solid"><strong>Hi!</strong> - Solid <b>primary alert</b>
-                    example</b-alert>
+                                    <h6>Info Solid Alert</h6>
+                                    <b-alert class="alert-solid" show variant="info"><strong>Hi!</strong> - Solid <b>primary
+                                        alert</b>
+                                        example
+                                    </b-alert>
 
-                  <h6>Light Solid Alert</h6>
-                  <b-alert show variant="light" class="alert-solid"><strong>Hi!</strong> - Solid <b>primary alert</b>
-                    example</b-alert>
+                                    <h6>Light Solid Alert</h6>
+                                    <b-alert class="alert-solid" show variant="light"><strong>Hi!</strong> - Solid <b>primary
+                                        alert</b>
+                                        example
+                                    </b-alert>
 
-                  <h6>Dark Solid Alert</h6>
-                  <b-alert show variant="dark" class="alert-solid"><strong>Hi!</strong> - Solid <b>primary alert</b>
-                    example</b-alert>
-                </b-col>
-              </b-row>
-            </div>
+                                    <h6>Dark Solid Alert</h6>
+                                    <b-alert class="alert-solid" show variant="dark"><strong>Hi!</strong> - Solid <b>primary
+                                        alert</b>
+                                        example
+                                    </b-alert>
+                                </b-col>
+                            </b-row>
+                        </div>
 
-            <div class="d-none code-view">
+                        <div class="d-none code-view">
               <pre class="language-markup" style="max-height: 260px">
 <code>&lt;!-- Primary Alert --&gt;
 &lt;b-alert show variant=&quot;primary&quot; class=&quot;alert-solid&quot; role=&quot;alert&quot;&gt;
@@ -1624,10 +1695,10 @@ A simple &lt;b&gt;Dark alert&lt;/b&gt; with &lt;a href=&quot;#&quot; class=&quot
 &lt;strong&gt;Did you know?&lt;/strong&gt; - Solid &lt;b&gt;dark alert&lt;/b&gt; example
 &lt;/b-alert&gt;
 </code></pre>
-            </div>
-          </b-card-body>
-        </b-card>
-      </b-col>
-    </b-row>
-  </Layout>
+                        </div>
+                    </b-card-body>
+                </b-card>
+            </b-col>
+        </b-row>
+    </Layout>
 </template>

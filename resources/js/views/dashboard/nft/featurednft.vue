@@ -1,7 +1,8 @@
 <script>
-import SwiperCore, { Thumbs, Pagination, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/vue";
+import SwiperCore, {Navigation, Pagination, Thumbs} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/vue";
 import "swiper/swiper-bundle.css";
+
 SwiperCore.use([Thumbs, Pagination, Navigation]);
 export default {
     components: {
@@ -17,27 +18,28 @@ export default {
                 <h5 class="card-title fs-18 mb-1">Featured NFTs Artworks</h5>
             </div>
             <div class="swiper-wrapper">
-                <swiper class="swiper responsive-swiper rounded gallery-light pb-4" :loop="true" :slidesPerView="2"
-                    :spaceBetween="10" :navigation="{
+                <swiper :loop="true" :navigation="{
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
-                    }">
+                    }" :slidesPerView="2"
+                        :spaceBetween="10" class="swiper responsive-swiper rounded gallery-light pb-4">
                     <swiper-slide>
-                        <b-card no-body class="explore-box card-animate rounded">
+                        <b-card class="explore-box card-animate rounded" no-body>
                             <div class="explore-place-bid-img">
-                                <img src="https://img.themesbrand.com/velzon/images/img-3.gif" alt=""
-                                    class="img-fluid card-img-top explore-img" />
+                                <img alt="" class="img-fluid card-img-top explore-img"
+                                     src="https://img.themesbrand.com/velzon/images/img-3.gif"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 37.41k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 37.41k </p>
                                 <h5 class="mb-1">
-                                    <b-link href="/apps/nft-item-detail" class="link-dark">Walking On Air</b-link>
+                                    <b-link class="link-dark" href="/apps/nft-item-detail">Walking On Air</b-link>
                                 </h5>
                                 <p class="text-muted mb-0">Artwork</p>
                             </b-card-body>
@@ -53,21 +55,22 @@ export default {
                         </b-card>
                     </swiper-slide>
                     <swiper-slide>
-                        <b-card no-body class="explore-box card-animate rounded">
+                        <b-card class="explore-box card-animate rounded" no-body>
                             <div class="explore-place-bid-img">
-                                <img src="@/assets/images/nft/img-03.jpg" alt=""
-                                    class="img-fluid card-img-top explore-img" />
+                                <img alt="" class="img-fluid card-img-top explore-img"
+                                     src="@/assets/images/nft/img-03.jpg"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 19.29k </p>
                                 <h5 class="mb-1">
-                                    <b-link href="/apps/nft-item-detail" class="link-dark">Filtered Portrait
+                                    <b-link class="link-dark" href="/apps/nft-item-detail">Filtered Portrait
                                     </b-link>
                                 </h5>
                                 <p class="text-muted mb-0">Photography</p>
@@ -84,21 +87,22 @@ export default {
                         </b-card>
                     </swiper-slide>
                     <swiper-slide>
-                        <b-card no-body class="explore-box card-animate rounded">
+                        <b-card class="explore-box card-animate rounded" no-body>
                             <div class="explore-place-bid-img">
-                                <img src="https://img.themesbrand.com/velzon/images/img-1.gif" alt=""
-                                    class="img-fluid card-img-top explore-img" />
+                                <img alt="" class="img-fluid card-img-top explore-img"
+                                     src="https://img.themesbrand.com/velzon/images/img-1.gif"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 8.42k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 8.42k </p>
                                 <h5 class="mb-1">
-                                    <b-link href="/apps/nft-item-detail" class="link-dark">Patterns Arts & Culture
+                                    <b-link class="link-dark" href="/apps/nft-item-detail">Patterns Arts & Culture
                                     </b-link>
                                 </h5>
                                 <p class="text-muted mb-0">Artwork</p>
@@ -115,21 +119,22 @@ export default {
                         </b-card>
                     </swiper-slide>
                     <swiper-slide>
-                        <b-card no-body class="explore-box card-animate rounded">
+                        <b-card class="explore-box card-animate rounded" no-body>
                             <div class="explore-place-bid-img">
-                                <img src="https://img.themesbrand.com/velzon/images/img-4.gif" alt=""
-                                    class="img-fluid card-img-top explore-img" />
+                                <img alt="" class="img-fluid card-img-top explore-img"
+                                     src="https://img.themesbrand.com/velzon/images/img-4.gif"/>
                                 <div class="bg-overlay"></div>
                                 <div class="place-bid-btn">
-                                    <b-link href="#!" class="btn btn-success"><i
-                                            class="ri-auction-fill align-bottom me-1"></i> Place Bid</b-link>
+                                    <b-link class="btn btn-success" href="#!"><i
+                                        class="ri-auction-fill align-bottom me-1"></i> Place Bid
+                                    </b-link>
                                 </div>
                             </div>
                             <b-card-body>
                                 <p class="fw-medium mb-0 float-end"><i
-                                        class="mdi mdi-heart text-danger align-middle"></i> 15.93k </p>
+                                    class="mdi mdi-heart text-danger align-middle"></i> 15.93k </p>
                                 <h5 class="mb-1">
-                                    <b-link href="/apps/nft-item-detail" class="link-dark">Evolved Reality</b-link>
+                                    <b-link class="link-dark" href="/apps/nft-item-detail">Evolved Reality</b-link>
                                 </h5>
                                 <p class="text-muted mb-0">Video</p>
                             </b-card-body>

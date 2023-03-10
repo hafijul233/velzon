@@ -10,7 +10,7 @@ import Swal from "sweetalert2";
 export default {
     page: {
         title: "Starter",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -277,16 +277,16 @@ export default {
             priorityvalue: null,
             selectedimage: [],
             options: [
-                { name: 'James Forbes', value: require('@/assets/images/users/avatar-2.jpg') },
-                { name: 'John Robles', value: require('@/assets/images/users/avatar-3.jpg') },
-                { name: 'Mary Gant', value: require('@/assets/images/users/avatar-4.jpg') },
-                { name: 'Curtis Saenz', value: require('@/assets/images/users/avatar-1.jpg') },
-                { name: 'Virgie Price', value: require('@/assets/images/users/avatar-5.jpg') },
-                { name: 'Anthony Mills', value: require('@/assets/images/users/avatar-10.jpg') },
-                { name: 'Marian Angel', value: require('@/assets/images/users/avatar-6.jpg') },
-                { name: 'Johnnie Walton', value: require('@/assets/images/users/avatar-7.jpg') },
-                { name: 'Donna Weston', value: require('@/assets/images/users/avatar-8.jpg') },
-                { name: 'Diego Norris', value: require('@/assets/images/users/avatar-9.jpg') },
+                {name: 'James Forbes', value: require('@/assets/images/users/avatar-2.jpg')},
+                {name: 'John Robles', value: require('@/assets/images/users/avatar-3.jpg')},
+                {name: 'Mary Gant', value: require('@/assets/images/users/avatar-4.jpg')},
+                {name: 'Curtis Saenz', value: require('@/assets/images/users/avatar-1.jpg')},
+                {name: 'Virgie Price', value: require('@/assets/images/users/avatar-5.jpg')},
+                {name: 'Anthony Mills', value: require('@/assets/images/users/avatar-10.jpg')},
+                {name: 'Marian Angel', value: require('@/assets/images/users/avatar-6.jpg')},
+                {name: 'Johnnie Walton', value: require('@/assets/images/users/avatar-7.jpg')},
+                {name: 'Donna Weston', value: require('@/assets/images/users/avatar-8.jpg')},
+                {name: 'Diego Norris', value: require('@/assets/images/users/avatar-9.jpg')},
             ]
         };
     },
@@ -296,8 +296,10 @@ export default {
         Multiselect
     },
     watch: {
-        todoList() { },
-        selectedimage() { },
+        todoList() {
+        },
+        selectedimage() {
+        },
     },
     computed: {
         resultQuery() {
@@ -362,7 +364,7 @@ export default {
                 this.todoList[result].dueDate = document.getElementById("task-duedate-input").value;
                 var editimage = [];
                 this.selectedimage.map(function (item) {
-                    editimage.push({ assigneeImg: item });
+                    editimage.push({assigneeImg: item});
                 });
                 this.todoList[result].assignedto = editimage;
                 this.todoList[result].status = this.statusvalue;
@@ -374,15 +376,14 @@ export default {
                 var date = document.getElementById("task-duedate-input").value;
                 var createimage = [];
                 this.selectedimage.map(function (item) {
-                    createimage.push({ assigneeImg: item });
+                    createimage.push({assigneeImg: item});
                 });
                 var status = this.statusvalue;
                 var priority = this.priorityvalue ? this.priorityvalue : 'High';
                 var id = this.todoList.length + 1;
                 if (title == "" || date == "" || status == "" || priority == "" || title == null || date == null || status == null || priority == null) {
                     document.getElementById('task-error-msg').innerHTML = "please fill all detail";
-                }
-                else {
+                } else {
                     var data = {
                         id: id,
                         checkedElem: false,
@@ -475,8 +476,8 @@ export default {
                 var uniqueid = Math.floor(Math.random() * 100);
                 const projectlisthtml =
                     '<li id="projectlist-' + uniqueid + '">\
-                        <a data-bs-toggle="collapse" href="#projectCollapse-'+ uniqueid + '" class="nav-link fs-13">' + projectName + '</a>\
-                        <div class="collapse" id="projectCollapse-'+ uniqueid + '">\
+                        <a data-bs-toggle="collapse" href="#projectCollapse-' + uniqueid + '" class="nav-link fs-13">' + projectName + '</a>\
+                        <div class="collapse" id="projectCollapse-' + uniqueid + '">\
                             <ul class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">\
                                 <li>\
                                     <a href="#!"><i class="ri-stop-mini-fill align-middle fs-15 text-danger"></i> v1.0.0</a>\
@@ -499,7 +500,7 @@ export default {
 
 };
 </script>
-    
+
 <template>
     <Layout>
 
@@ -507,42 +508,49 @@ export default {
             <div class="file-manager-sidebar">
                 <div class="p-4 d-flex flex-column h-100">
                     <div class="mb-3">
-                        <b-button variant="success" class="w-100" @click="projectModal = !projectModal"><i
-                                class="ri-add-line align-bottom"></i> Add Project</b-button>
+                        <b-button class="w-100" variant="success" @click="projectModal = !projectModal"><i
+                            class="ri-add-line align-bottom"></i> Add Project
+                        </b-button>
                     </div>
 
                     <div class="px-4 mx-n4" data-simplebar style="height: calc(100vh - 468px);">
-                        <ul class="to-do-menu list-unstyled" id="projectlist-data">
+                        <ul id="projectlist-data" class="to-do-menu list-unstyled">
                             <li>
                                 <b-link v-b-toggle.velzonAdmin class="nav-link fs-13 active">
                                     Velzon
-                                    Admin & Dashboard</b-link>
+                                    Admin & Dashboard
+                                </b-link>
                                 <b-collapse id="velzonAdmin" visible>
                                     <ul class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-danger"></i>
-                                                v1.4.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-danger"></i>
+                                                v1.4.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-secondary"></i>
-                                                v1.5.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-secondary"></i>
+                                                v1.5.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-info"></i>
-                                                v1.6.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-info"></i>
+                                                v1.6.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-primary"></i>
-                                                v1.7.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-primary"></i>
+                                                v1.7.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-warning"></i>
-                                                v1.8.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-warning"></i>
+                                                v1.8.0
+                                            </b-link>
                                         </li>
                                     </ul>
                                 </b-collapse>
@@ -550,28 +558,33 @@ export default {
                             <li>
                                 <b-link v-b-toggle.projectManagement class="nav-link fs-13">
                                     Project
-                                    Management</b-link>
+                                    Management
+                                </b-link>
                                 <b-collapse id="projectManagement">
                                     <ul class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-danger"></i>
-                                                v2.1.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-danger"></i>
+                                                v2.1.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-secondary"></i>
-                                                v2.2.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-secondary"></i>
+                                                v2.2.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-info"></i>
-                                                v2.3.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-info"></i>
+                                                v2.3.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-primary"></i>
-                                                v2.4.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-primary"></i>
+                                                v2.4.0
+                                            </b-link>
                                         </li>
                                     </ul>
                                 </b-collapse>
@@ -579,18 +592,21 @@ export default {
                             <li>
                                 <b-link v-b-toggle.skoteAdmin class="nav-link fs-13">Skote Admin
                                     &
-                                    Dashboard</b-link>
+                                    Dashboard
+                                </b-link>
                                 <b-collapse id="skoteAdmin">
                                     <ul class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-danger"></i>
-                                                v4.1.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-danger"></i>
+                                                v4.1.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-secondary"></i>
-                                                v4.2.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-secondary"></i>
+                                                v4.2.0
+                                            </b-link>
                                         </li>
                                     </ul>
                                 </b-collapse>
@@ -598,23 +614,27 @@ export default {
                             <li>
                                 <b-link v-b-toggle.ecommerceProject class="nav-link fs-13">Doot -
                                     Chat
-                                    App Template</b-link>
+                                    App Template
+                                </b-link>
                                 <b-collapse id="ecommerceProject">
                                     <ul class="mb-0 sub-menu list-unstyled ps-3 vstack gap-2 mb-2">
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-danger"></i>
-                                                v1.0.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-danger"></i>
+                                                v1.0.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-secondary"></i>
-                                                v1.1.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-secondary"></i>
+                                                v1.1.0
+                                            </b-link>
                                         </li>
                                         <li>
                                             <b-link href="#!"><i
-                                                    class="ri-stop-mini-fill align-middle fs-15 text-info"></i>
-                                                v1.2.0</b-link>
+                                                class="ri-stop-mini-fill align-middle fs-15 text-info"></i>
+                                                v1.2.0
+                                            </b-link>
                                         </li>
                                     </ul>
                                 </b-collapse>
@@ -624,30 +644,30 @@ export default {
 
 
                     <div class="mt-auto text-center">
-                        <img src="@/assets/images/task.png" alt="Task" class="img-fluid" />
+                        <img alt="Task" class="img-fluid" src="@/assets/images/task.png"/>
                     </div>
                 </div>
             </div>
             <!--end side content-->
             <div class="file-manager-content w-100 p-4 pb-0">
                 <b-row class="mb-4">
-                    <div order="1" class="col-auto d-block d-lg-none">
-                        <button type="button" class="btn btn-soft-success btn-icon btn-sm fs-16 file-menu-btn">
+                    <div class="col-auto d-block d-lg-none" order="1">
+                        <button class="btn btn-soft-success btn-icon btn-sm fs-16 file-menu-btn" type="button">
                             <i class="ri-menu-2-fill align-bottom"></i>
                         </button>
                     </div>
-                    <b-col order="3" order-sm="2" class="mt-3 mt-sm-0" sm>
+                    <b-col class="mt-3 mt-sm-0" order="3" order-sm="2" sm>
                         <h5 class="fw-semibold mb-0">Velzon Admin & Dashboard <span
-                                class="badge bg-primary align-bottom ms-2">v2.0.0</span></h5>
+                            class="badge bg-primary align-bottom ms-2">v2.0.0</span></h5>
                     </b-col>
 
-                    <div order="2" order-sm="3" class="col-auto ms-auto">
+                    <div class="col-auto ms-auto" order="2" order-sm="3">
                         <div class="hstack gap-2">
                             <b-button-group>
-                                <b-button variant="soft-danger" class="btn btn-icon fw-semibold"><i
-                                        class="ri-arrow-go-back-line"></i></b-button>
-                                <b-button variant="soft-success" class="btn btn-icon fw-semibold"><i
-                                        class="ri-arrow-go-forward-line"></i></b-button>
+                                <b-button class="btn btn-icon fw-semibold" variant="soft-danger"><i
+                                    class="ri-arrow-go-back-line"></i></b-button>
+                                <b-button class="btn btn-icon fw-semibold" variant="soft-success"><i
+                                    class="ri-arrow-go-forward-line"></i></b-button>
                             </b-button-group>
                         </div>
                     </div>
@@ -655,16 +675,16 @@ export default {
                 <div class="p-3 bg-light rounded mb-4">
                     <b-row class="g-2">
                         <b-col lg="auto">
-                            <select class="form-control" data-choices data-choices-search-false
-                                name="choices-select-sortlist" id="choices-select-sortlist">
+                            <select id="choices-select-sortlist" class="form-control" data-choices
+                                    data-choices-search-false name="choices-select-sortlist">
                                 <option value="">Sort</option>
                                 <option value="By ID">By ID</option>
                                 <option value="By Name">By Name</option>
                             </select>
                         </b-col>
                         <b-col lg="auto">
-                            <select class="form-control" data-choices data-choices-search-false
-                                name="choices-select-status" id="choices-select-status" v-model="status">
+                            <select id="choices-select-status" v-model="status" class="form-control"
+                                    data-choices data-choices-search-false name="choices-select-status">
                                 <option value="All Tasks">All Tasks</option>
                                 <option value="Completed">Completed</option>
                                 <option value="Inprogress">Inprogress</option>
@@ -674,8 +694,8 @@ export default {
                         </b-col>
                         <b-col lg>
                             <div class="search-box">
-                                <input type="text" id="searchTaskList" class="form-control search"
-                                    placeholder="Search task name" v-model="searchQuery">
+                                <input id="searchTaskList" v-model="searchQuery" class="form-control search"
+                                       placeholder="Search task name" type="text">
                                 <i class="ri-search-line search-icon"></i>
                             </div>
                         </b-col>
@@ -684,110 +704,128 @@ export default {
                                 data-bs-target="#createTask" @click="create">
                                 <i class="ri-add-fill align-bottom"></i> Add Tasks
                             </b-button> -->
-                            <b-button variant="primary" class="createTask" @click="create"> <i
-                                    class="ri-add-fill align-bottom"></i> Add Tasks
+                            <b-button class="createTask" variant="primary" @click="create"><i
+                                class="ri-add-fill align-bottom"></i> Add Tasks
                             </b-button>
                         </b-col>
                     </b-row>
                 </div>
 
-                <div class="todo-content position-relative px-4 mx-n4" id="todo-content">
+                <div id="todo-content" class="todo-content position-relative px-4 mx-n4">
                     <div id="elmLoader">
                         <div class="spinner-border text-primary avatar-sm" role="status">
                             <span class="visually-hidden">Loading...</span>
                         </div>
                     </div>
-                    <div class="todo-task" id="todo-task">
+                    <div id="todo-task" class="todo-task">
                         <div class="table-responsive">
                             <table class="table align-middle position-relative table-nowrap">
                                 <thead class="table-active">
-                                    <tr>
-                                        <th scope="col">Task Name</th>
-                                        <th scope="col">Assigned</th>
-                                        <th scope="col">Due Date</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Priority</th>
-                                        <th scope="col">Action</th>
-                                    </tr>
+                                <tr>
+                                    <th scope="col">Task Name</th>
+                                    <th scope="col">Assigned</th>
+                                    <th scope="col">Due Date</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Priority</th>
+                                    <th scope="col">Action</th>
+                                </tr>
                                 </thead>
 
                                 <tbody id="task-lists">
-                                    <tr v-for="(singleTodo, index) of this.resultQuery" :key="index">
-                                        <td>
-                                            <div class="d-flex align-items-start">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <div class="task-handle px-1 bg-light rounded">: :</div>
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            :value="singleTodo.id" :id="singleTodo.id" checked
-                                                            v-if="singleTodo.checkedElem"
-                                                            @click="(e) => todoListStatus(e)">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            :value="singleTodo.id" :id="singleTodo.id"
-                                                            v-if="!singleTodo.checkedElem"
-                                                            @click="(e) => todoListStatus(e)">
-                                                        <label class="form-check-label ms-1" :for="singleTodo.id">
-                                                            {{ singleTodo.todo }}</label>
-                                                    </div>
+                                <tr v-for="(singleTodo, index) of this.resultQuery" :key="index">
+                                    <td>
+                                        <div class="d-flex align-items-start">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="task-handle px-1 bg-light rounded">: :</div>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <div class="form-check">
+                                                    <input v-if="singleTodo.checkedElem" :id="singleTodo.id"
+                                                           :value="singleTodo.id" checked class="form-check-input"
+                                                           type="checkbox"
+                                                           @click="(e) => todoListStatus(e)">
+                                                    <input v-if="!singleTodo.checkedElem" :id="singleTodo.id"
+                                                           :value="singleTodo.id" class="form-check-input"
+                                                           type="checkbox"
+                                                           @click="(e) => todoListStatus(e)">
+                                                    <label :for="singleTodo.id" class="form-check-label ms-1">
+                                                        {{ singleTodo.todo }}</label>
                                                 </div>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <div class="avatar-group">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="avatar-group">
                                                 <span v-for="(img, index) of singleTodo.assignedto" :key="index">
-                                                    <b-link href="javascript: void(0);" class="avatar-group-item"
-                                                        data-img="{{img.assigneeImg}}" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" title="">
+                                                    <b-link class="avatar-group-item" data-bs-placement="top"
+                                                            data-bs-toggle="tooltip" data-img="{{img.assigneeImg}}"
+                                                            href="javascript: void(0);" title="">
                                                         <img :src="img.assigneeImg" alt=""
-                                                            class="rounded-circle avatar-xxs" />
+                                                             class="rounded-circle avatar-xxs"/>
                                                     </b-link>
                                                 </span>
-                                            </div>
-                                        </td>
-                                        <td> {{ singleTodo.dueDate }} </td>
-                                        <td v-if="singleTodo.status == 'Pending'"><b-badge variant="soft-warning"
-                                                class="badge-soft-warning text-uppercase">{{ singleTodo.status }}
-                                            </b-badge> </td>
-                                        <td v-if="singleTodo.status == 'Inprogress'"><b-badge variant="soft-secondary"
-                                                class="badge-soft-secondary text-uppercase">{{ singleTodo.status
-}}
-                                            </b-badge> </td>
-                                        <td v-if="singleTodo.status == 'Completed'"><b-badge variant="soft-success"
-                                                class="badge-soft-success text-uppercase">{{ singleTodo.status }}
-                                            </b-badge> </td>
-                                        <td v-if="singleTodo.status == 'New'"><b-badge variant="soft-info"
-                                                class="badge-soft-info text-uppercase">{{ singleTodo.status }}
-                                            </b-badge> </td>
-                                        <td v-if="singleTodo.priority == 'High'"><b-badge variant="danger"
-                                                class="text-uppercase">{{ singleTodo.priority }}</b-badge>
-                                        </td>
-                                        <td v-if="singleTodo.priority == 'Low'"><b-badge variant="success"
-                                                class="text-uppercase">{{ singleTodo.priority }}</b-badge>
-                                        </td>
-                                        <td v-if="singleTodo.priority == 'Medium'"><b-badge
-                                                class="bg-warning text-uppercase">{{ singleTodo.priority }}</b-badge>
-                                        </td>
-                                        <td>
-                                            <div class="hstack gap-2">
-                                                <b-button variant="soft-danger" size="sm" class="remove-list"
-                                                    data-remove-id={{singleTodo.id}} @click="deletedata(singleTodo)"><i
-                                                        class="ri-delete-bin-5-fill align-bottom"></i></b-button>
-                                                <b-button variant="primary" size="sm" class="edit-list"
-                                                    data-edit-id={{singleTodo.id}} @click="editdata(singleTodo)"><i
-                                                        class="ri-pencil-fill align-bottom"></i>
-                                                </b-button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td> {{ singleTodo.dueDate }}</td>
+                                    <td v-if="singleTodo.status == 'Pending'">
+                                        <b-badge class="badge-soft-warning text-uppercase"
+                                                 variant="soft-warning">{{ singleTodo.status }}
+                                        </b-badge>
+                                    </td>
+                                    <td v-if="singleTodo.status == 'Inprogress'">
+                                        <b-badge class="badge-soft-secondary text-uppercase"
+                                                 variant="soft-secondary">{{
+                                                singleTodo.status
+                                            }}
+                                        </b-badge>
+                                    </td>
+                                    <td v-if="singleTodo.status == 'Completed'">
+                                        <b-badge class="badge-soft-success text-uppercase"
+                                                 variant="soft-success">{{ singleTodo.status }}
+                                        </b-badge>
+                                    </td>
+                                    <td v-if="singleTodo.status == 'New'">
+                                        <b-badge class="badge-soft-info text-uppercase"
+                                                 variant="soft-info">{{ singleTodo.status }}
+                                        </b-badge>
+                                    </td>
+                                    <td v-if="singleTodo.priority == 'High'">
+                                        <b-badge class="text-uppercase"
+                                                 variant="danger">{{ singleTodo.priority }}
+                                        </b-badge>
+                                    </td>
+                                    <td v-if="singleTodo.priority == 'Low'">
+                                        <b-badge class="text-uppercase"
+                                                 variant="success">{{ singleTodo.priority }}
+                                        </b-badge>
+                                    </td>
+                                    <td v-if="singleTodo.priority == 'Medium'">
+                                        <b-badge
+                                            class="bg-warning text-uppercase">{{ singleTodo.priority }}
+                                        </b-badge>
+                                    </td>
+                                    <td>
+                                        <div class="hstack gap-2">
+                                            <b-button class="remove-list" data-remove-id={{singleTodo.id}} size="sm"
+                                                      variant="soft-danger" @click="deletedata(singleTodo)">
+                                                <i
+                                                    class="ri-delete-bin-5-fill align-bottom"></i></b-button>
+                                            <b-button class="edit-list" data-edit-id={{singleTodo.id}} size="sm"
+                                                      variant="primary" @click="editdata(singleTodo)"><i
+                                                class="ri-pencil-fill align-bottom"></i>
+                                            </b-button>
+                                        </div>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div class="py-4 mt-4 text-center" id="noresult" style="display: none;">
-                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
-                            colors="primary:#405189,secondary:#0ab39c" style="width:72px;height:72px"></lord-icon>
+                    <div id="noresult" class="py-4 mt-4 text-center" style="display: none;">
+                        <lord-icon colors="primary:#405189,secondary:#0ab39c"
+                                   src="https://cdn.lordicon.com/msoeawqm.json"
+                                   style="width:72px;height:72px"
+                                   trigger="loop"></lord-icon>
                         <h5 class="mt-4">Sorry! No Result Found</h5>
                     </div>
                 </div>
@@ -795,81 +833,86 @@ export default {
             </div>
         </div>
 
-        <b-modal v-model="projectModal" hide-footer title="Create Project" class="v-modal-custom" modal-class="zoomIn"
-            centered header-class="p-3 bg-soft-success">
+        <b-modal v-model="projectModal" centered class="v-modal-custom" header-class="p-3 bg-soft-success" hide-footer
+                 modal-class="zoomIn" title="Create Project">
             <b-form id="projectForm" autocomplete="off" class="needs-validation createProject-form" novalidate>
                 <div class="mb-4">
-                    <label for="projectname-input" class="form-label">Project Name</label>
-                    <input type="text" class="form-control" id="projectname-input" autocomplete="off"
-                        placeholder="Enter project name" required>
+                    <label class="form-label" for="projectname-input">Project Name</label>
+                    <input id="projectname-input" autocomplete="off" class="form-control"
+                           placeholder="Enter project name"
+                           required type="text">
                     <div class="invalid-feedback">Please enter a project name</div>
-                    <input type="hidden" class="form-control" id="projectid-input" value=""
-                        placeholder="Enter project name">
+                    <input id="projectid-input" class="form-control" placeholder="Enter project name" type="hidden"
+                           value="">
                 </div>
                 <div class="hstack gap-2 justify-content-end">
-                    <b-button type="button" variant="ghost-success" id="addProjectBtn-close"
-                        @click="projectModal = false"><i class="ri-close-line align-bottom"></i> Close</b-button>
-                    <b-button type="submit" variant="primary" id="addNewProject">Add Project
+                    <b-button id="addProjectBtn-close" type="button" variant="ghost-success"
+                              @click="projectModal = false"><i class="ri-close-line align-bottom"></i> Close
+                    </b-button>
+                    <b-button id="addNewProject" type="submit" variant="primary">Add Project
                     </b-button>
                 </div>
             </b-form>
         </b-modal>
 
-        <b-modal v-model="taskModal" hide-footer title="Create Task" title-class="task-modal" class="v-modal-custom"
-            modal-class="zoomIn" centered header-class="p-3 bg-soft-success">
+        <b-modal v-model="taskModal" centered class="v-modal-custom" header-class="p-3 bg-soft-success" hide-footer
+                 modal-class="zoomIn" title="Create Task" title-class="task-modal">
             <div id="task-error-msg" class="alert alert-danger py-2"></div>
-            <b-form autocomplete="off" action="" id="creattask-form">
-                <input type="hidden" id="taskid-input" class="form-control">
+            <b-form id="creattask-form" action="" autocomplete="off">
+                <input id="taskid-input" class="form-control" type="hidden">
                 <div class="mb-3">
-                    <label for="task-title-input" class="form-label">Task Title</label>
-                    <input type="text" id="task-title-input" class="form-control" placeholder="Enter task title">
+                    <label class="form-label" for="task-title-input">Task Title</label>
+                    <input id="task-title-input" class="form-control" placeholder="Enter task title" type="text">
                 </div>
                 <div class="mb-3 position-relative">
-                    <label for="task-assign-input" class="form-label">Assigned To</label>
-                    <div class="avatar-group justify-content-center" id="assignee-member">
+                    <label class="form-label" for="task-assign-input">Assigned To</label>
+                    <div id="assignee-member" class="avatar-group justify-content-center">
                         <span v-for="(img, index) of selectedimage" :key="index">
-                            <b-link href="javascript: void(0);" class="avatar-group-item mb-2" data-img="{{img}}"
-                                data-bs-toggle="tooltip" data-bs-placement="top" title="{{img}}">
-                                <img :src="img" alt="" class="rounded-circle avatar-xs" />
+                            <b-link class="avatar-group-item mb-2" data-bs-placement="top" data-bs-toggle="tooltip"
+                                    data-img="{{img}}" href="javascript: void(0);" title="{{img}}">
+                                <img :src="img" alt="" class="rounded-circle avatar-xs"/>
                             </b-link>
                         </span>
                     </div>
-                    <Multiselect v-model="value" :options="options" mode="multiple" :multiple="true"
-                        :close-on-select="false" :clear-on-select="false" :searchable="false" :create-option="true"
-                        placeholder="Pick some" label="name" @input="onChange">
+                    <Multiselect v-model="value" :clear-on-select="false" :close-on-select="false" :create-option="true"
+                                 :multiple="true" :options="options" :searchable="false"
+                                 label="name"
+                                 mode="multiple" placeholder="Pick some" @input="onChange">
                         <template v-slot="{ values, isOpen }">
-                            <span class="multiselect__single" v-if="values.length && !isOpen">Assigned
-                                To<b>{{ values.length
-}}</b> Members</span>
+                            <span v-if="values.length && !isOpen" class="multiselect__single">Assigned
+                                To<b>{{
+                                        values.length
+                                    }}</b> Members</span>
                         </template>
                     </Multiselect>
                 </div>
                 <b-row class="g-4 mb-3">
                     <b-col lg="6">
-                        <label for="task-status" class="form-label">Status</label>
-                        <Multiselect placeholder="select status" v-model="statusvalue"
-                            :options="['New', 'Inprogress', 'Pending', 'Completed']" />
+                        <label class="form-label" for="task-status">Status</label>
+                        <Multiselect v-model="statusvalue" :options="['New', 'Inprogress', 'Pending', 'Completed']"
+                                     placeholder="select status"/>
                     </b-col>
 
                     <b-col lg="6">
-                        <label for="priority-field" class="form-label">Priority</label>
-                        <Multiselect v-model="priorityvalue" placeholder="select priority"
-                            :options="['High', 'Medium', 'Low']" />
+                        <label class="form-label" for="priority-field">Priority</label>
+                        <Multiselect v-model="priorityvalue" :options="['High', 'Medium', 'Low']"
+                                     placeholder="select priority"/>
                     </b-col>
 
                 </b-row>
                 <div class="mb-4">
-                    <label for="task-duedate-input" class="form-label">Due Date:</label>
-                    <flat-pickr placeholder="Due date" v-model="date" :config="timeConfig"
-                        class="form-control flatpickr-input" id="task-duedate-input"></flat-pickr>
+                    <label class="form-label" for="task-duedate-input">Due Date:</label>
+                    <flat-pickr id="task-duedate-input" v-model="date" :config="timeConfig"
+                                class="form-control flatpickr-input" placeholder="Due date"></flat-pickr>
                 </div>
 
                 <div class="hstack gap-2 justify-content-end">
-                    <b-button type="button" variant="ghost-success" id="createTaskBtn-close" @click="taskModal = false">
+                    <b-button id="createTaskBtn-close" type="button" variant="ghost-success" @click="taskModal = false">
                         <i class="ri-close-fill align-bottom"></i> Close
                     </b-button>
-                    <b-button type="button" variant="primary" id="addNewTodo" @click="upsert">Add
-                        Task</b-button>
+                    <b-button id="addNewTodo" type="button" variant="primary" @click="upsert">Add
+                        Task
+                    </b-button>
                 </div>
             </b-form>
         </b-modal>

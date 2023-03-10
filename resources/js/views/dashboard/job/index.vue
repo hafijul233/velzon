@@ -9,50 +9,50 @@ import RecomendedJobs from "./recomended-jobs.vue";
 import RecentApplicants from "./recent-applicants.vue";
 
 export default {
-  page: {
-    title: "Job Dashboard",
-    meta: [{ name: "description", content: appConfig.description }],
-  },
-  data() {
-    return {
-      title: "Job Dashboard",
-      items: [
-        {
-          text: "Dashboards",
-          href: "/",
-        },
-        {
-          text: "Job Dashboard",
-          active: true,
-        },
-      ],
-    };
-  },
-  components: {
-    Layout,
-    PageHeader,
-    JobWidgets,
-    FeaturedCompanies,
-    ApplicationsStatistic,
-    RecomendedJobs,
-    RecentApplicants
-  },
+    page: {
+        title: "Job Dashboard",
+        meta: [{name: "description", content: appConfig.description}],
+    },
+    data() {
+        return {
+            title: "Job Dashboard",
+            items: [
+                {
+                    text: "Dashboards",
+                    href: "/",
+                },
+                {
+                    text: "Job Dashboard",
+                    active: true,
+                },
+            ],
+        };
+    },
+    components: {
+        Layout,
+        PageHeader,
+        JobWidgets,
+        FeaturedCompanies,
+        ApplicationsStatistic,
+        RecomendedJobs,
+        RecentApplicants
+    },
 };
 </script>
 
 <template>
-  <Layout>
-    <PageHeader :title="title" :items="items" />
+    <Layout>
+        <PageHeader :items="items" :title="title"/>
 
-    <b-row>
-      <JobWidgets />
-      <FeaturedCompanies />
-    </b-row>
+        <b-row>
+            <JobWidgets/>
+            <FeaturedCompanies/>
+        </b-row>
 
-    <ApplicationsStatistic />
+        <ApplicationsStatistic/>
 
-    <RecomendedJobs />
+        <RecomendedJobs/>
 
-    <RecentApplicants />
-  </Layout>
+        <RecentApplicants/>
+    </Layout>
 </template>

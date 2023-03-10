@@ -13,77 +13,77 @@ import UpcomingActivity from "./activities.vue";
 import ClosingDeals from "./closing-deals.vue";
 
 export default {
-  page: {
-    title: "CRM",
-    meta: [{ name: "description", content: appConfig.description }],
-  },
-  data() {
-    return {
-      title: "CRM",
-      items: [
-        {
-          text: "Dashboards",
-          href: "/",
-        },
-        {
-          text: "CRM",
-          active: true,
-        },
-      ],
-    };
-  },
-  components: {
-    Layout,
-    PageHeader,
-    Widget,
-    SalesForecast,
-    DealType,
-    BalanceOverview,
-    DealStatus,
-    Tasks,
-    UpcomingActivity,
-    ClosingDeals
-  },
+    page: {
+        title: "CRM",
+        meta: [{name: "description", content: appConfig.description}],
+    },
+    data() {
+        return {
+            title: "CRM",
+            items: [
+                {
+                    text: "Dashboards",
+                    href: "/",
+                },
+                {
+                    text: "CRM",
+                    active: true,
+                },
+            ],
+        };
+    },
+    components: {
+        Layout,
+        PageHeader,
+        Widget,
+        SalesForecast,
+        DealType,
+        BalanceOverview,
+        DealStatus,
+        Tasks,
+        UpcomingActivity,
+        ClosingDeals
+    },
 };
 </script>
 
 <template>
-  <Layout>
-    <PageHeader :title="title" :items="items" />
-    
-    <b-row>
-      <b-col xl="12">
-        <Widget />
-      </b-col>
-    </b-row>
+    <Layout>
+        <PageHeader :items="items" :title="title"/>
 
-    <b-row>
-      <b-col xxl="3" md="6">
-        <SalesForecast />
-      </b-col>
+        <b-row>
+            <b-col xl="12">
+                <Widget/>
+            </b-col>
+        </b-row>
 
-      <b-col xxl="3" md="6">
-        <DealType />
-      </b-col>
-      <b-col xxl="6">
-        <BalanceOverview />
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col xl="7">
-          <DealStatus />
-      </b-col>
-      <b-col xl="5">
-          <Tasks />
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col xxl="5">
-          <UpcomingActivity />
-      </b-col>
-      <b-col xxl="7">
-          <ClosingDeals />
-      </b-col>
-    </b-row>
-  </Layout>
+        <b-row>
+            <b-col md="6" xxl="3">
+                <SalesForecast/>
+            </b-col>
+
+            <b-col md="6" xxl="3">
+                <DealType/>
+            </b-col>
+            <b-col xxl="6">
+                <BalanceOverview/>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col xl="7">
+                <DealStatus/>
+            </b-col>
+            <b-col xl="5">
+                <Tasks/>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col xxl="5">
+                <UpcomingActivity/>
+            </b-col>
+            <b-col xxl="7">
+                <ClosingDeals/>
+            </b-col>
+        </b-row>
+    </Layout>
 </template>

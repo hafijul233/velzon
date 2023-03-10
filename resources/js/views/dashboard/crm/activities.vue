@@ -10,9 +10,9 @@ export default {
                     time: "12:00am - 03:30pm",
                     caption: "Meeting for campaign with sales team",
                     subItem: [
-                        { id: 1, img: require("@/assets/images/users/avatar-1.jpg") },
-                        { id: 2, img: require("@/assets/images/users/avatar-2.jpg") },
-                        { id: 3, img: require("@/assets/images/users/avatar-3.jpg") }],
+                        {id: 1, img: require("@/assets/images/users/avatar-1.jpg")},
+                        {id: 2, img: require("@/assets/images/users/avatar-2.jpg")},
+                        {id: 3, img: require("@/assets/images/users/avatar-3.jpg")}],
                     imgNumber: "5",
                     bgcolor: "bg-info"
                 },
@@ -23,10 +23,10 @@ export default {
                     time: "02:00pm - 03:45pm",
                     caption: "Adding a new event with attachments",
                     subItem: [
-                        { id: 1, img: require("@/assets/images/users/avatar-4.jpg") },
-                        { id: 2, img: require("@/assets/images/users/avatar-5.jpg") },
-                        { id: 3, img: require("@/assets/images/users/avatar-6.jpg") },
-                        { id: 4, img: require("@/assets/images/users/avatar-7.jpg") }],
+                        {id: 1, img: require("@/assets/images/users/avatar-4.jpg")},
+                        {id: 2, img: require("@/assets/images/users/avatar-5.jpg")},
+                        {id: 3, img: require("@/assets/images/users/avatar-6.jpg")},
+                        {id: 4, img: require("@/assets/images/users/avatar-7.jpg")}],
                     imgNumber: "3",
                     bgcolor: "bg-success"
                 },
@@ -37,9 +37,9 @@ export default {
                     time: "04:30pm - 07:15pm",
                     caption: "Create new project Bundling Product",
                     subItem: [
-                        { id: 1, img: require("@/assets/images/users/avatar-8.jpg") },
-                        { id: 2, img: require("@/assets/images/users/avatar-1.jpg") },
-                        { id: 3, img: require("@/assets/images/users/avatar-2.jpg") }],
+                        {id: 1, img: require("@/assets/images/users/avatar-8.jpg")},
+                        {id: 2, img: require("@/assets/images/users/avatar-1.jpg")},
+                        {id: 3, img: require("@/assets/images/users/avatar-2.jpg")}],
                     imgNumber: "4",
                     bgcolor: "bg-primary"
                 },
@@ -50,9 +50,9 @@ export default {
                     time: "10:30am - 01:15pm",
                     caption: "Weekly closed sales won checking with sales team",
                     subItem: [
-                        { id: 1, img: require("@/assets/images/users/avatar-1.jpg") },
-                        { id: 2, img: require("@/assets/images/users/avatar-5.jpg") },
-                        { id: 3, img: require("@/assets/images/users/avatar-2.jpg") }],
+                        {id: 1, img: require("@/assets/images/users/avatar-1.jpg")},
+                        {id: 2, img: require("@/assets/images/users/avatar-5.jpg")},
+                        {id: 3, img: require("@/assets/images/users/avatar-2.jpg")}],
                     imgNumber: "9",
                     bgcolor: "bg-warning"
                 },
@@ -68,8 +68,8 @@ export default {
             <b-card-title class="mb-0 flex-grow-1">Upcoming Activities</b-card-title>
             <div class="flex-shrink-0">
                 <div class="dropdown card-header-dropdown">
-                    <b-link class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
+                    <b-link aria-expanded="false" aria-haspopup="true" class="text-reset dropdown-btn" data-bs-toggle="dropdown"
+                            href="#">
                         <span class="text-muted fs-18"><i class="mdi mdi-dots-vertical"></i></span>
                     </b-link>
                     <div class="dropdown-menu dropdown-menu-end">
@@ -81,7 +81,7 @@ export default {
         </b-card-header>
         <b-card-body class="pt-0">
             <ul class="list-group list-group-flush border-dashed">
-                <li class="list-group-item ps-0" v-for="(item, index) of activities" :key="index">
+                <li v-for="(item, index) of activities" :key="index" class="list-group-item ps-0">
                     <b-row class="align-items-center g-3">
                         <div class="col-auto">
                             <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
@@ -93,13 +93,13 @@ export default {
                         </div>
                         <b-col>
                             <h5 class="text-muted mt-0 mb-1 fs-13">{{ item.time }}</h5>
-                            <b-link href="#" class="text-reset fs-14 mb-0">{{ item.caption }}</b-link>
+                            <b-link class="text-reset fs-14 mb-0" href="#">{{ item.caption }}</b-link>
                         </b-col>
                         <b-col sm="auto">
                             <div class="avatar-group">
-                                <div class="avatar-group-item" v-for="(subitem, index) of item.subItem" :key="index">
-                                    <b-link href="javascript: void(0);" class="d-inline-block" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="" data-bs-original-title="Stine Nielsen">
+                                <div v-for="(subitem, index) of item.subItem" :key="index" class="avatar-group-item">
+                                    <b-link class="d-inline-block" data-bs-original-title="Stine Nielsen" data-bs-placement="top"
+                                            data-bs-toggle="tooltip" href="javascript: void(0);" title="">
                                         <img :src="`${subitem.img}`" alt="" class="rounded-circle avatar-xxs">
                                     </b-link>
                                 </div>
@@ -122,26 +122,26 @@ export default {
             <b-row class="align-items-center mt-2 g-3 text-center text-sm-start">
                 <b-col sm>
                     <div class="text-muted">Showing<span class="fw-semibold">4</span> of <span
-                            class="fw-semibold">125</span> Results
+                        class="fw-semibold">125</span> Results
                     </div>
                 </b-col>
                 <b-col sm="auto">
                     <ul
                         class="pagination pagination-separated pagination-sm justify-content-center justify-content-sm-start mb-0">
                         <li class="page-item disabled">
-                            <b-link href="#" class="page-link">←</b-link>
+                            <b-link class="page-link" href="#">←</b-link>
                         </li>
                         <li class="page-item">
-                            <b-link href="#" class="page-link">1</b-link>
+                            <b-link class="page-link" href="#">1</b-link>
                         </li>
                         <li class="page-item active">
-                            <b-link href="#" class="page-link">2</b-link>
+                            <b-link class="page-link" href="#">2</b-link>
                         </li>
                         <li class="page-item">
-                            <b-link href="#" class="page-link">3</b-link>
+                            <b-link class="page-link" href="#">3</b-link>
                         </li>
                         <li class="page-item">
-                            <b-link href="#" class="page-link">→</b-link>
+                            <b-link class="page-link" href="#">→</b-link>
                         </li>
                     </ul>
                 </b-col>

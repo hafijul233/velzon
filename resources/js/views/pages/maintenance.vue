@@ -3,19 +3,19 @@ export default {};
 </script>
 
 <template>
-  <div class="auth-page-wrapper pt-5">
+    <div class="auth-page-wrapper pt-5">
 
-    <div class="auth-one-bg-position auth-one-bg" id="auth-particles">
-      <div class="bg-overlay"></div>
+        <div id="auth-particles" class="auth-one-bg-position auth-one-bg">
+            <div class="bg-overlay"></div>
 
-      <div class="shape">
+            <div class="shape">
 
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 1440 120">
-          <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
-        </svg>
-      </div>
-      <Particles id="tsparticles" :options="{
+                <svg version="1.1" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
+                </svg>
+            </div>
+            <Particles id="tsparticles" :options="{
         particles: {
           number: {
             value: 90,
@@ -130,50 +130,51 @@ export default {};
           background_repeat: 'no-repeat',
           background_size: 'cover',
         },
-      }" />
-    </div>
+      }"/>
+        </div>
 
-    <div class="auth-page-content">
-      <b-container>
-        <b-row>
-          <b-col lg="12">
-            <div class="text-center mt-sm-5 pt-4">
-              <div class="mb-5 text-white-50">
-                <h1 class="display-5 coming-soon-text">
-                  Site is Under Maintenance
-                </h1>
-                <p class="fs-14">Please check back in sometime</p>
-                <div class="mt-4 pt-2">
-                  <router-link to="/" class="btn btn-success"><i class="mdi mdi-home me-1"></i> Back to Home
-                  </router-link>
-                </div>
-              </div>
-              <b-row class="justify-content-center mb-5">
-                <b-col xl="4" lg="8">
-                  <div>
-                    <img src="@/assets/images/maintenance.png" alt="" class="img-fluid" />
-                  </div>
-                </b-col>
-              </b-row>
-            </div>
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
+        <div class="auth-page-content">
+            <b-container>
+                <b-row>
+                    <b-col lg="12">
+                        <div class="text-center mt-sm-5 pt-4">
+                            <div class="mb-5 text-white-50">
+                                <h1 class="display-5 coming-soon-text">
+                                    Site is Under Maintenance
+                                </h1>
+                                <p class="fs-14">Please check back in sometime</p>
+                                <div class="mt-4 pt-2">
+                                    <router-link class="btn btn-success" to="/"><i class="mdi mdi-home me-1"></i> Back
+                                        to Home
+                                    </router-link>
+                                </div>
+                            </div>
+                            <b-row class="justify-content-center mb-5">
+                                <b-col lg="8" xl="4">
+                                    <div>
+                                        <img alt="" class="img-fluid" src="@/assets/images/maintenance.png"/>
+                                    </div>
+                                </b-col>
+                            </b-row>
+                        </div>
+                    </b-col>
+                </b-row>
+            </b-container>
+        </div>
 
-    <footer class="footer">
-      <b-container>
-        <b-row>
-          <b-col lg="12">
-            <div class="text-center">
-              <p class="mb-0 text-muted">
-                &copy; {{ new Date().getFullYear() }} Velzon. Crafted with
-                <i class="mdi mdi-heart text-danger"></i> by Themesbrand
-              </p>
-            </div>
-          </b-col>
-        </b-row>
-      </b-container>
-    </footer>
-  </div>
+        <footer class="footer">
+            <b-container>
+                <b-row>
+                    <b-col lg="12">
+                        <div class="text-center">
+                            <p class="mb-0 text-muted">
+                                &copy; {{ new Date().getFullYear() }} Velzon. Crafted with
+                                <i class="mdi mdi-heart text-danger"></i> by Themesbrand
+                            </p>
+                        </div>
+                    </b-col>
+                </b-row>
+            </b-container>
+        </footer>
+    </div>
 </template>

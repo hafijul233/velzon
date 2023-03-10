@@ -51,7 +51,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xl="6">
                 <b-card no-body>
@@ -59,9 +59,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Ratio Video 16:9</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ratiovideo1-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="ratiovideo1-showcode" />
+                                <label class="form-label text-muted" for="ratiovideo1-showcode">Show Code</label>
+                                <input id="ratiovideo1-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -74,8 +74,8 @@ export default {
                         <div class="live-preview">
                             <!-- 16:9 aspect ratio -->
                             <div class="ratio ratio-16x9">
-                                <iframe class="rounded" src="https://www.youtube.com/embed/1y_kfWUCFDQ"
-                                    title="YouTube video" allowfullscreen></iframe>
+                                <iframe allowfullscreen class="rounded"
+                                        src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video"></iframe>
                             </div>
                         </div>
                         <div class="d-none code-view">
@@ -93,9 +93,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Ratio Video 4:3</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ratiovideo3-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="ratiovideo3-showcode" />
+                                <label class="form-label text-muted" for="ratiovideo3-showcode">Show Code</label>
+                                <input id="ratiovideo3-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -107,8 +107,8 @@ export default {
                         <div class="live-preview">
                             <!-- 4:3 aspect ratio -->
                             <div class="ratio ratio-4x3">
-                                <iframe class="rounded" src="https://www.youtube.com/embed/PHcgN1GTjdU"
-                                    title="YouTube video" allowfullscreen></iframe>
+                                <iframe allowfullscreen class="rounded"
+                                        src="https://www.youtube.com/embed/PHcgN1GTjdU" title="YouTube video"></iframe>
                             </div>
                         </div>
                         <div class="d-none code-view">
@@ -126,9 +126,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Custom Ratios</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ratiovideocustom-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="ratiovideocustom-showcode" />
+                                <label class="form-label text-muted" for="ratiovideocustom-showcode">Show Code</label>
+                                <input id="ratiovideocustom-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -140,8 +140,8 @@ export default {
                         <div class="live-preview">
                             <!-- 16:9 aspect ratio -->
                             <div class="ratio" style="--vz-aspect-ratio: 50%;">
-                                <iframe class="rounded" src="https://www.youtube.com/embed/2RZQN_ko0iU"
-                                    title="YouTube video" allowfullscreen></iframe>
+                                <iframe allowfullscreen class="rounded"
+                                        src="https://www.youtube.com/embed/2RZQN_ko0iU" title="YouTube video"></iframe>
                             </div>
                         </div>
                         <div class="d-none code-view">
@@ -161,9 +161,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Ratio Video 21:9</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ratiovideo2-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="ratiovideo2-showcode" />
+                                <label class="form-label text-muted" for="ratiovideo2-showcode">Show Code</label>
+                                <input id="ratiovideo2-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -175,8 +175,8 @@ export default {
                         <div class="live-preview">
                             <!-- 21:9 aspect ratio -->
                             <div class="ratio ratio-21x9">
-                                <iframe class="rounded" src="https://www.youtube.com/embed/Z-fV2lGKnnU"
-                                    title="YouTube video" allowfullscreen></iframe>
+                                <iframe allowfullscreen class="rounded"
+                                        src="https://www.youtube.com/embed/Z-fV2lGKnnU" title="YouTube video"></iframe>
                             </div>
                         </div>
                         <div class="d-none code-view">
@@ -194,9 +194,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Ratio Video 1:1</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ratiovideo4-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="ratiovideo4-showcode" />
+                                <label class="form-label text-muted" for="ratiovideo4-showcode">Show Code</label>
+                                <input id="ratiovideo4-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -208,8 +208,8 @@ export default {
                         <div class="live-preview">
                             <!-- 1:1 aspect ratio -->
                             <div class="ratio ratio-1x1">
-                                <iframe class="rounded" src="https://www.youtube.com/embed/GfSZtaoc5bw"
-                                    title="YouTube video" allowfullscreen></iframe>
+                                <iframe allowfullscreen class="rounded"
+                                        src="https://www.youtube.com/embed/GfSZtaoc5bw" title="YouTube video"></iframe>
                             </div>
                         </div>
                         <div class="d-none code-view">

@@ -50,7 +50,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -58,9 +58,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Default Placeholder</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="baseexample-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="baseexample-showcode" />
+                                <label class="form-label text-muted" for="baseexample-showcode">Show Code</label>
+                                <input id="baseexample-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -75,21 +75,21 @@ export default {
                                     <b-row class="justify-content-between">
                                         <b-col lg="5" sm="6">
                                             <b-card no-body>
-                                                <img src="@/assets/images/small/img-1.jpg" class="card-img-top"
-                                                    alt="card img" />
+                                                <img alt="card img" class="card-img-top"
+                                                     src="@/assets/images/small/img-1.jpg"/>
 
                                                 <b-card-body>
                                                     <h5 class="card-title">Card title</h5>
                                                     <p class="card-text">Some quick example text to build on the card
                                                         title and make up the bulk of the card's content.</p>
-                                                    <b-link href="#" class="btn btn-primary">Go somewhere</b-link>
+                                                    <b-link class="btn btn-primary" href="#">Go somewhere</b-link>
                                                 </b-card-body>
                                             </b-card>
                                         </b-col>
                                         <b-col lg="5" sm="6">
-                                            <b-card no-body aria-hidden="true">
-                                                <img src="@/assets/images/small/img-2.jpg" class="card-img-top"
-                                                    alt="card dummy img" />
+                                            <b-card aria-hidden="true" no-body>
+                                                <img alt="card dummy img" class="card-img-top"
+                                                     src="@/assets/images/small/img-2.jpg"/>
                                                 <b-card-body>
                                                     <h5 class="card-title placeholder-glow">
                                                         <span class="placeholder col-6"></span>
@@ -100,8 +100,8 @@ export default {
                                                         <span class="placeholder col-4"></span>
                                                         <span class="placeholder col-6"></span>
                                                     </p>
-                                                    <b-link href="#" tabindex="-1"
-                                                        class="btn btn-primary disabled placeholder col-6"></b-link>
+                                                    <b-link class="btn btn-primary disabled placeholder col-6" href="#"
+                                                            tabindex="-1"></b-link>
                                                 </b-card-body>
                                             </b-card>
                                         </b-col>
@@ -150,8 +150,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Width</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="width-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="width-showcode" />
+                                <label class="form-label text-muted" for="width-showcode">Show Code</label>
+                                <input id="width-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -185,8 +185,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Sizing</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="sizing-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="sizing-showcode" />
+                                <label class="form-label text-muted" for="sizing-showcode">Show Code</label>
+                                <input id="sizing-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -236,8 +236,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Color</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="color-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="color-showcode" />
+                                <label class="form-label text-muted" for="color-showcode">Show Code</label>
+                                <input id="color-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>

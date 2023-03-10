@@ -1,6 +1,6 @@
-// 
+//
 // _gridjs.scss
-// 
+//
 
 .gridjs-container {
     color: $table-color !important;
@@ -13,7 +13,7 @@
     border: 1px solid $table-border-color !important;
     border-radius: 0px !important;
 
-     &::-webkit-scrollbar {
+    &::-webkit-scrollbar {
         -webkit-appearance: none;
     }
 
@@ -232,9 +232,7 @@ button {
         @if $enable-gradients {
             background-image: escape-svg($form-check-input-checked-bg-image),
             var(--#{$prefix}gradient);
-        }
-
-        @else {
+        } @else {
             background-image: escape-svg($form-check-input-checked-bg-image);
         }
     }

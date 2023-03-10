@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/main.vue";
 import PageHeader from "@/components/page-header";
 import Slider from "@vueform/slider";
+
 export default {
     data() {
         return {
@@ -10,10 +11,10 @@ export default {
                 text: "NFT Marketplace",
                 href: "/",
             },
-            {
-                text: "Explore Now",
-                active: true,
-            },
+                {
+                    text: "Explore Now",
+                    active: true,
+                },
             ],
             sliderCustomzie: [18.33, 75.00],
         };
@@ -23,16 +24,15 @@ export default {
         PageHeader,
         Slider,
     },
-    methods: {
-
+    methods: {},
+    mounted() {
     },
-    mounted() { },
 };
 </script>
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -41,15 +41,16 @@ export default {
                             <h5 class="card-title mb-0 flex-grow-1">Explore Product</h5>
                             <div>
                                 <b-link class="btn btn-success" data-bs-toggle="collapse" href="#collapseExample"><i
-                                        class="ri-filter-2-line align-bottom"></i> Filters</b-link>
+                                    class="ri-filter-2-line align-bottom"></i> Filters
+                                </b-link>
                             </div>
                         </div>
-                        <div class="collaps show" id="collapseExample">
+                        <div id="collapseExample" class="collaps show">
                             <b-row class="row-cols-xxl-5 row-cols-lg-3 row-cols-md-2 row-cols-1 mt-3 g-3">
                                 <b-col>
                                     <h6 class="text-uppercase fs-12 mb-2">Sort by Likes</h6>
-                                    <select class="form-control" data-choices name="sort-by-likes"
-                                        data-choices-search-false id="sort-by-likes">
+                                    <select id="sort-by-likes" class="form-control" data-choices
+                                            data-choices-search-false name="sort-by-likes">
                                         <option value="">Sort by Likes</option>
                                         <option value="Latest Likes">Latest Likes</option>
                                         <option value="Popular Likes">Popular Likes</option>
@@ -58,8 +59,8 @@ export default {
                                 </b-col>
                                 <b-col>
                                     <h6 class="text-uppercase fs-12 mb-2">Select Category</h6>
-                                    <select class="form-control" data-choices name="select-category"
-                                        data-choices-search-false id="select-category">
+                                    <select id="select-category" class="form-control" data-choices
+                                            data-choices-search-false name="select-category">
                                         <option value="">Select Category</option>
                                         <option value="Artwork">Artwork</option>
                                         <option value="3d Style">3d Style</option>
@@ -72,8 +73,8 @@ export default {
                                 </b-col>
                                 <b-col>
                                     <h6 class="text-uppercase fs-12 mb-2">File Type</h6>
-                                    <select class="form-control" data-choices name="file-type" data-choices-search-false
-                                        id="file-type">
+                                    <select id="file-type" class="form-control" data-choices data-choices-search-false
+                                            name="file-type">
                                         <option value="">File Type</option>
                                         <option value="Choice 1">Images</option>
                                         <option value="Choice 2">Video</option>
@@ -83,8 +84,8 @@ export default {
                                 </b-col>
                                 <b-col>
                                     <h6 class="text-uppercase fs-12 mb-2">Sales Type</h6>
-                                    <select class="form-control" data-choices name="all-sales-type"
-                                        data-choices-search-false id="all-sales-type">
+                                    <select id="all-sales-type" class="form-control" data-choices
+                                            data-choices-search-false name="all-sales-type">
                                         <option value="">All Sales Type</option>
                                         <option value="All Sale">All Sale</option>
                                         <option value="On Auction">On Auction</option>
@@ -94,7 +95,7 @@ export default {
                                 </b-col>
                                 <b-col>
                                     <h6 class="text-uppercase fs-12 mb-5">Price</h6>
-                                    <Slider v-model="sliderCustomzie" :min="0" :max="100" />
+                                    <Slider v-model="sliderCustomzie" :max="100" :min="0"/>
                                 </b-col>
                             </b-row>
                         </div>
@@ -108,11 +109,11 @@ export default {
                     </div>
                     <div class="flex-shrink-0">
                         <div class="dropdown">
-                            <b-link class="text-muted fs-14 dropdown-toggle" href="#" role="button"
-                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b-link id="dropdownMenuLink" aria-expanded="false" class="text-muted fs-14 dropdown-toggle"
+                                    data-bs-toggle="dropdown" href="#" role="button">
                                 All View
                             </b-link>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <ul aria-labelledby="dropdownMenuLink" class="dropdown-menu">
                                 <li>
                                     <b-link class="dropdown-item" href="#">Action</b-link>
                                 </li>
@@ -131,20 +132,21 @@ export default {
 
         <b-row class="row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="https://img.themesbrand.com/velzon/images/img-3.gif" alt=""
-                            class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img"
+                             src="https://img.themesbrand.com/velzon/images/img-3.gif"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i>
@@ -158,7 +160,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">10.35ETH</span>
+                                class="fw-medium">10.35ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">14.167 ETH</h5>
                         </div>
@@ -166,19 +168,20 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="@/assets/images/nft/img-03.jpg" alt="" class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-03.jpg"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon active" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon active" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i>
@@ -192,7 +195,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">75.3ETH</span>
+                                class="fw-medium">75.3ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">67.36 ETH</h5>
                         </div>
@@ -200,19 +203,20 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="@/assets/images/nft/img-02.jpg" alt="" class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-02.jpg"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon active" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon active" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i>
@@ -226,7 +230,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">412.30ETH</span>
+                                class="fw-medium">412.30ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">394.7 ETH</h5>
                         </div>
@@ -234,20 +238,21 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="https://img.themesbrand.com/velzon/images/img-4.gif" alt=""
-                            class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img"
+                             src="https://img.themesbrand.com/velzon/images/img-4.gif"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon active" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon active" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i>
@@ -261,7 +266,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">2.75ETH</span>
+                                class="fw-medium">2.75ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">3.167 ETH</h5>
                         </div>
@@ -269,19 +274,20 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="@/assets/images/nft/img-01.jpg" alt="" class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-01.jpg"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <button type="button" class="btn btn-icon" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></button>
+                        <button aria-pressed="true" class="btn btn-icon" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i>
@@ -295,7 +301,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">122.34ETH</span>
+                                class="fw-medium">122.34ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">97.8 ETH</h5>
                         </div>
@@ -303,19 +309,20 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="@/assets/images/nft/img-05.jpg" alt="" class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-05.jpg"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon active" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon active" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i>
@@ -329,7 +336,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">874.01ETH</span>
+                                class="fw-medium">874.01ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">745.14 ETH</h5>
                         </div>
@@ -337,19 +344,20 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="@/assets/images/nft/img-06.jpg" alt="" class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-06.jpg"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon active" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon active" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i>
@@ -363,7 +371,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">41.658 ETH</span>
+                                class="fw-medium">41.658 ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">34.81 ETH</h5>
                         </div>
@@ -371,20 +379,21 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="https://img.themesbrand.com/velzon/images/img-2.gif" alt=""
-                            class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img"
+                             src="https://img.themesbrand.com/velzon/images/img-2.gif"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon active" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon active" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i> 94.1k
@@ -398,7 +407,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">674.92 ETH</span>
+                                class="fw-medium">674.92 ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">563.81 ETH</h5>
                         </div>
@@ -406,19 +415,20 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="@/assets/images/nft/img-04.jpg" alt="" class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img" src="@/assets/images/nft/img-04.jpg"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon active" data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon active" data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i>
@@ -432,7 +442,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">41.658 ETH</span>
+                                class="fw-medium">41.658 ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">34.81 ETH</h5>
                         </div>
@@ -440,20 +450,21 @@ export default {
                 </b-card>
             </b-col>
             <b-col>
-                <b-card no-body class="explore-box card-animate">
+                <b-card class="explore-box card-animate" no-body>
                     <div class="explore-place-bid-img">
-                        <img src="https://img.themesbrand.com/velzon/images/img-1.gif" alt=""
-                            class="card-img-top explore-img" />
+                        <img alt="" class="card-img-top explore-img"
+                             src="https://img.themesbrand.com/velzon/images/img-1.gif"/>
                         <div class="bg-overlay"></div>
                         <div class="place-bid-btn">
-                            <b-link href="#!" class="btn btn-success"><i class="ri-auction-fill align-bottom me-1"></i>
+                            <b-link class="btn btn-success" href="#!"><i class="ri-auction-fill align-bottom me-1"></i>
                                 Place
-                                Bid</b-link>
+                                Bid
+                            </b-link>
                         </div>
                     </div>
                     <div class="bookmark-icon position-absolute top-0 end-0 p-2">
-                        <b-button type="button" class="btn-icon " data-bs-toggle="button" aria-pressed="true"><i
-                                class="mdi mdi-cards-heart fs-16"></i></b-button>
+                        <b-button aria-pressed="true" class="btn-icon " data-bs-toggle="button" type="button"><i
+                            class="mdi mdi-cards-heart fs-16"></i></b-button>
                     </div>
                     <b-card-body>
                         <p class="fw-medium mb-0 float-end"><i class="mdi mdi-heart text-danger align-middle"></i> 8.42k
@@ -467,7 +478,7 @@ export default {
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1 fs-14">
                                 <i class="ri-price-tag-3-fill text-warning align-bottom me-1"></i> Highest: <span
-                                    class="fw-medium">9.64ETH</span>
+                                class="fw-medium">9.64ETH</span>
                             </div>
                             <h5 class="flex-shrink-0 fs-14 text-primary mb-0">14.167 ETH</h5>
                         </div>
@@ -476,7 +487,9 @@ export default {
             </b-col>
         </b-row>
         <div class="text-center mb-3">
-            <b-button variant="link" class="text-success mt-2"><i class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i> Load more </b-button>
+            <b-button class="text-success mt-2" variant="link"><i
+                class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i> Load more
+            </b-button>
         </div>
     </Layout>
 </template>

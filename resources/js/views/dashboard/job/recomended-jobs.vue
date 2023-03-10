@@ -184,8 +184,7 @@ export default {
         }
     },
 
-    components: {
-    },
+    components: {},
 };
 
 </script>
@@ -204,8 +203,8 @@ export default {
                         <b-col sm>
                             <div class="d-flex justify-content-sm-end">
                                 <div class="search-box ms-2">
-                                    <input type="text" class="form-control" id="searchResultList"
-                                        placeholder="Search for jobs..." v-model="searchQuery">
+                                    <input id="searchResultList" v-model="searchQuery" class="form-control"
+                                           placeholder="Search for jobs..." type="text">
                                     <i class="ri-search-line search-icon"></i>
                                 </div>
                             </div>
@@ -214,64 +213,67 @@ export default {
                 </b-card-header>
                 <b-card-body>
                     <div id="recomended-jobs" class="table-card">
-                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                        <div class="gridjs gridjs-container" role="complementary" style="width: 100%;">
                             <div class="gridjs-wrapper" style="height: auto;">
-                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                <table class="gridjs-table" role="grid" style="height: auto;">
                                     <thead class="gridjs-thead">
-                                        <tr class="gridjs-tr">
-                                            <th data-column-id="position" class="gridjs-th gridjs-th-sort" tabindex="0">
-                                                <div class="gridjs-th-content">Position</div>
-                                            </th>
-                                            <th data-column-id="companyName" class="gridjs-th gridjs-th-sort"
-                                                tabindex="0">
-                                                <div class="gridjs-th-content">Company Name</div>
-                                            </th>
-                                            <th data-column-id="location" class="gridjs-th gridjs-th-sort" tabindex="0">
-                                                <div class="gridjs-th-content">Location</div>
-                                            </th>
-                                            <th data-column-id="salary" class="gridjs-th gridjs-th-sort" tabindex="0">
-                                                <div class="gridjs-th-content">Salary</div>
-                                            </th>
-                                            <th data-column-id="experience" class="gridjs-th gridjs-th-sort"
-                                                tabindex="0">
-                                                <div class="gridjs-th-content">Experience</div>
-                                            </th>
-                                            <th data-column-id="jobType" class="gridjs-th gridjs-th-sort" tabindex="0">
-                                                <div class="gridjs-th-content">Job Type</div>
-                                            </th>
-                                        </tr>
+                                    <tr class="gridjs-tr">
+                                        <th class="gridjs-th gridjs-th-sort" data-column-id="position" tabindex="0">
+                                            <div class="gridjs-th-content">Position</div>
+                                        </th>
+                                        <th class="gridjs-th gridjs-th-sort" data-column-id="companyName"
+                                            tabindex="0">
+                                            <div class="gridjs-th-content">Company Name</div>
+                                        </th>
+                                        <th class="gridjs-th gridjs-th-sort" data-column-id="location" tabindex="0">
+                                            <div class="gridjs-th-content">Location</div>
+                                        </th>
+                                        <th class="gridjs-th gridjs-th-sort" data-column-id="salary" tabindex="0">
+                                            <div class="gridjs-th-content">Salary</div>
+                                        </th>
+                                        <th class="gridjs-th gridjs-th-sort" data-column-id="experience"
+                                            tabindex="0">
+                                            <div class="gridjs-th-content">Experience</div>
+                                        </th>
+                                        <th class="gridjs-th gridjs-th-sort" data-column-id="jobType" tabindex="0">
+                                            <div class="gridjs-th-content">Job Type</div>
+                                        </th>
+                                    </tr>
                                     </thead>
                                     <tbody class="gridjs-tbody">
-                                        <tr class="gridjs-tr" v-for="(data, index) of resultQuery" :key="index">
-                                            <td data-column-id="position" class="gridjs-td">{{ data.position }}</td>
-                                            <td data-column-id="companyName" class="gridjs-td">{{ data.c_name }}</td>
-                                            <td data-column-id="location" class="gridjs-td">{{ data.location }}</td>
-                                            <td data-column-id="salary" class="gridjs-td">{{ data.salary }}</td>
-                                            <td data-column-id="experience" class="gridjs-td">{{ data.experience }}</td>
-                                            <td data-column-id="jobType" class="gridjs-td">{{ data.job_type }}</td>
-                                        </tr>
+                                    <tr v-for="(data, index) of resultQuery" :key="index" class="gridjs-tr">
+                                        <td class="gridjs-td" data-column-id="position">{{ data.position }}</td>
+                                        <td class="gridjs-td" data-column-id="companyName">{{ data.c_name }}</td>
+                                        <td class="gridjs-td" data-column-id="location">{{ data.location }}</td>
+                                        <td class="gridjs-td" data-column-id="salary">{{ data.salary }}</td>
+                                        <td class="gridjs-td" data-column-id="experience">{{ data.experience }}</td>
+                                        <td class="gridjs-td" data-column-id="jobType">{{ data.job_type }}</td>
+                                    </tr>
 
                                     </tbody>
                                 </table>
                             </div>
                             <div class="gridjs-footer">
                                 <div class="gridjs-pagination">
-                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 3">
+                                    <div aria-live="polite" class="gridjs-summary" role="status" title="Page 1 of 3">
                                         Showing <b>{{ page }}</b> to <b>{{ resultQuery.length }}</b> of <b>{{
-                                                recomendedjob.length
+                                            recomendedjob.length
                                         }}</b> results
                                     </div>
                                     <div class="gridjs-pages">
-                                        <button tabindex="0" role="button" title="Previous" @click="page--"
-                                            v-if="page != 1">Previous</button>
+                                        <button v-if="page != 1" role="button" tabindex="0" title="Previous"
+                                                @click="page--">Previous
+                                        </button>
 
-                                        <button tabindex="0" role="button" class="gridjs"
-                                            :class="{ active: pageNumber == page, disabled: pageNumber == '...', }"
-                                            v-for="(pageNumber, index) in pages" :key="index"
-                                            @click="page = pageNumber">{{ pageNumber }}</button>
+                                        <button v-for="(pageNumber, index) in pages" :key="index" :class="{ active: pageNumber == page, disabled: pageNumber == '...', }"
+                                                class="gridjs"
+                                                role="button" tabindex="0"
+                                                @click="page = pageNumber">{{ pageNumber }}
+                                        </button>
 
-                                        <button tabindex="0" role="button" title="Next" @click="page++"
-                                            v-if="page < pages.length">Next</button>
+                                        <button v-if="page < pages.length" role="button" tabindex="0" title="Next"
+                                                @click="page++">Next
+                                        </button>
                                     </div>
                                 </div>
                             </div>

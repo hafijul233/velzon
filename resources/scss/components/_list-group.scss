@@ -25,14 +25,18 @@ $value in $theme-colors {
 
 .list-group-item {
     margin-bottom: 0px;
+
     .list-text {
         color: $text-muted;
     }
+
     &.active {
         box-shadow: $element-shadow;
+
         .list-title {
             color: $white;
         }
+
         .list-text {
             color: rgba($white, 0.50);
         }

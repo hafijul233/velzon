@@ -47,36 +47,36 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
 
         <b-row>
             <b-col sm="6" xl="3">
                 <b-card no-body>
-                    <img class="card-img-top img-fluid" src="@/assets/images/small/img-1.jpg" alt="Card image cap" />
+                    <img alt="Card image cap" class="card-img-top img-fluid" src="@/assets/images/small/img-1.jpg"/>
                     <b-card-body>
                         <b-card-title class="mb-2">Web Developer</b-card-title>
                         <p class="card-text">At missed advice my it no sister. Miss told ham dull knew see she spot near
                             can. Spirit her entire her called.</p>
                         <div class="text-end">
-                            <b-link href="javascript:void(0);" class="btn btn-primary">Submit</b-link>
+                            <b-link class="btn btn-primary" href="javascript:void(0);">Submit</b-link>
                         </div>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col sm="6" xl="3">
                 <b-card no-body>
-                    <img class="card-img-top img-fluid" src="@/assets/images/small/img-2.jpg" alt="Card image cap" />
+                    <img alt="Card image cap" class="card-img-top img-fluid" src="@/assets/images/small/img-2.jpg"/>
                     <b-card-body>
                         <b-card-title class="mb-2">How apps is changing the IT world</b-card-title>
                         <p class="card-text mb-0">Whether article spirits new her covered hastily sitting her. Money
                             witty books nor son add. Chicken age had evening believe but proceed pretend mrs.</p>
                     </b-card-body>
                     <b-card-footer>
-                        <b-link href="javascript:void(0);" class="card-link link-secondary">
+                        <b-link class="card-link link-secondary" href="javascript:void(0);">
                             Read More
                             <i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
                         </b-link>
-                        <b-link href="javascript:void(0);" class="card-link link-success">
+                        <b-link class="card-link link-success" href="javascript:void(0);">
                             Bookmark
                             <i class="ri-bookmark-line align-middle ms-1 lh-1"></i>
                         </b-link>
@@ -85,7 +85,7 @@ export default {
             </b-col>
             <b-col sm="6" xl="3">
                 <b-card no-body>
-                    <img class="card-img-top img-fluid" src="@/assets/images/small/img-3.jpg" alt="Card image cap" />
+                    <img alt="Card image cap" class="card-img-top img-fluid" src="@/assets/images/small/img-3.jpg"/>
                     <b-card-body>
                         <p class="card-text">We quickly learn to fear and thus automatically avoid potentially stressful
                             situations of all kinds, including the most common of all making mistakes.</p>
@@ -103,17 +103,17 @@ export default {
                         <b-card-title class="mb-2">What planning process needs ?</b-card-title>
                         <h6 class="card-subtitle font-14 text-muted">Development</h6>
                     </b-card-body>
-                    <img class="img-fluid" src="@/assets/images/small/img-4.jpg" alt="Card image cap" />
+                    <img alt="Card image cap" class="img-fluid" src="@/assets/images/small/img-4.jpg"/>
                     <b-card-body>
                         <p class="card-text">Objectively pursue diverse catalysts for change for interoperable
                             meta-services. Distinctively re-engineer revolutionary meta-services.</p>
                     </b-card-body>
                     <b-card-footer>
-                        <b-link href="javascript:void(0);" class="card-link link-secondary">
+                        <b-link class="card-link link-secondary" href="javascript:void(0);">
                             Read More
                             <i class="ri-arrow-right-s-line ms-1 align-middle lh-1"></i>
                         </b-link>
-                        <b-link href="javascript:void(0);" class="card-link link-success">
+                        <b-link class="card-link link-success" href="javascript:void(0);">
                             Bookmark
                             <i class="ri-bookmark-line align-middle ms-1 lh-1"></i>
                         </b-link>
@@ -129,11 +129,11 @@ export default {
                 </div>
                 <b-row class="row-cols-xxl-5 row-cols-lg-3 row-cols-1">
                     <b-col>
-                        <b-card no-body class="card-body">
+                        <b-card class="card-body" no-body>
                             <div class="d-flex mb-4 align-items-center">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-1.jpg" alt
-                                        class="avatar-sm rounded-circle" />
+                                    <img alt class="avatar-sm rounded-circle"
+                                         src="@/assets/images/users/avatar-1.jpg"/>
                                 </div>
                                 <div class="flex-grow-1 ms-2">
                                     <h5 class="card-title mb-1">Oliver Phillips</h5>
@@ -142,15 +142,15 @@ export default {
                             </div>
                             <h6 class="mb-1">$15,548</h6>
                             <p class="card-text text-muted">Expense Account</p>
-                            <b-link href="javascript:void(0)" class="btn btn-primary btn-sm">See Details</b-link>
+                            <b-link class="btn btn-primary btn-sm" href="javascript:void(0)">See Details</b-link>
                         </b-card>
                     </b-col>
                     <b-col>
-                        <b-card no-body class="card-body">
+                        <b-card class="card-body" no-body>
                             <div class="d-flex mb-4 align-items-center">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-4.jpg" alt
-                                        class="avatar-sm rounded-circle" />
+                                    <img alt class="avatar-sm rounded-circle"
+                                         src="@/assets/images/users/avatar-4.jpg"/>
                                 </div>
                                 <div class="flex-grow-1 ms-2">
                                     <h5 class="card-title mb-1">Natasha Carey</h5>
@@ -159,15 +159,15 @@ export default {
                             </div>
                             <h6 class="mb-1">$8,785</h6>
                             <p class="card-text text-muted">Expense Account</p>
-                            <b-link href="javascript:void(0)" class="btn btn-primary btn-sm">See Details</b-link>
+                            <b-link class="btn btn-primary btn-sm" href="javascript:void(0)">See Details</b-link>
                         </b-card>
                     </b-col>
                     <b-col>
-                        <b-card no-body class="card-body">
+                        <b-card class="card-body" no-body>
                             <div class="d-flex mb-4 align-items-center">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-3.jpg" alt
-                                        class="avatar-sm rounded-circle" />
+                                    <img alt class="avatar-sm rounded-circle"
+                                         src="@/assets/images/users/avatar-3.jpg"/>
                                 </div>
                                 <div class="flex-grow-1 ms-2">
                                     <h5 class="card-title mb-1">Bethany Johnson</h5>
@@ -176,15 +176,15 @@ export default {
                             </div>
                             <h6 class="mb-1">$1,542</h6>
                             <p class="card-text text-muted">Expense Account</p>
-                            <b-link href="javascript:void(0)" class="btn btn-primary btn-sm">See Details</b-link>
+                            <b-link class="btn btn-primary btn-sm" href="javascript:void(0)">See Details</b-link>
                         </b-card>
                     </b-col>
                     <b-col>
-                        <b-card no-body class="card-body">
+                        <b-card class="card-body" no-body>
                             <div class="d-flex mb-4 align-items-center">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-5.jpg" alt
-                                        class="avatar-sm rounded-circle" />
+                                    <img alt class="avatar-sm rounded-circle"
+                                         src="@/assets/images/users/avatar-5.jpg"/>
                                 </div>
                                 <div class="flex-grow-1 ms-2">
                                     <h5 class="card-title mb-1">Erica Kernan</h5>
@@ -193,15 +193,15 @@ export default {
                             </div>
                             <h6 class="mb-1">$798</h6>
                             <p class="card-text text-muted">Expense Account</p>
-                            <b-link href="javascript:void(0)" class="btn btn-primary btn-sm">See Details</b-link>
+                            <b-link class="btn btn-primary btn-sm" href="javascript:void(0)">See Details</b-link>
                         </b-card>
                     </b-col>
                     <b-col>
-                        <b-card no-body class="card-body">
+                        <b-card class="card-body" no-body>
                             <div class="d-flex mb-4 align-items-center">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-6.jpg" alt
-                                        class="avatar-sm rounded-circle" />
+                                    <img alt class="avatar-sm rounded-circle"
+                                         src="@/assets/images/users/avatar-6.jpg"/>
                                 </div>
                                 <div class="flex-grow-1 ms-2">
                                     <h5 class="card-title mb-1">Lewis Pratt</h5>
@@ -210,7 +210,7 @@ export default {
                             </div>
                             <h6 class="mb-1">$2,856</h6>
                             <p class="card-text text-muted">Expense Account</p>
-                            <b-link href="javascript:void(0)" class="btn btn-primary btn-sm">See Details</b-link>
+                            <b-link class="btn btn-primary btn-sm" href="javascript:void(0)">See Details</b-link>
                         </b-card>
                     </b-col>
                 </b-row>
@@ -223,8 +223,8 @@ export default {
                     <h5 class="mb-0 pb-1 text-decoration-underline">Card Text Alignment</h5>
                 </div>
                 <b-row>
-                    <b-col xxl="4" lg="6">
-                        <b-card no-body class="card-body">
+                    <b-col lg="6" xxl="4">
+                        <b-card class="card-body" no-body>
                             <div class="avatar-sm mb-3">
                                 <div class="avatar-title bg-soft-success text-success fs-17 rounded">
                                     <i class="ri-smartphone-line"></i>
@@ -233,11 +233,11 @@ export default {
                             <b-card-title>Text Application</b-card-title>
                             <p class="card-text text-muted">Send a link to apply on mobile device. Appropriately
                                 communicate one-to-one technology.</p>
-                            <b-link href="javascript:void(0);" class="btn btn-success">Apply Now</b-link>
+                            <b-link class="btn btn-success" href="javascript:void(0);">Apply Now</b-link>
                         </b-card>
                     </b-col>
-                    <b-col xxl="4" lg="6">
-                        <b-card no-body class="card-body text-center">
+                    <b-col lg="6" xxl="4">
+                        <b-card class="card-body text-center" no-body>
                             <div class="avatar-sm mx-auto mb-3">
                                 <div class="avatar-title bg-soft-success text-success fs-17 rounded">
                                     <i class="ri-add-line"></i>
@@ -246,11 +246,11 @@ export default {
                             <b-card-title>Add New Application</b-card-title>
                             <p class="card-text text-muted">Send a link to apply on mobile device. Appropriately
                                 communicate one-to-one technology.</p>
-                            <b-link href="javascript:void(0);" class="btn btn-success">Add New</b-link>
+                            <b-link class="btn btn-success" href="javascript:void(0);">Add New</b-link>
                         </b-card>
                     </b-col>
-                    <b-col xxl="4" lg="6">
-                        <b-card no-body class="card-body text-end">
+                    <b-col lg="6" xxl="4">
+                        <b-card class="card-body text-end" no-body>
                             <div class="avatar-sm ms-auto mb-3">
                                 <div class="avatar-title bg-soft-success text-success fs-17 rounded">
                                     <i class="ri-gift-fill"></i>
@@ -259,7 +259,7 @@ export default {
                             <b-card-title>Text Application</b-card-title>
                             <p class="card-text text-muted">Send a link to apply on mobile device. Appropriately
                                 communicate one-to-one technology.</p>
-                            <b-link href="javascript:void(0);" class="btn btn-success">Add New</b-link>
+                            <b-link class="btn btn-success" href="javascript:void(0);">Add New</b-link>
                         </b-card>
                     </b-col>
                 </b-row>
@@ -272,10 +272,10 @@ export default {
                     <h5 class="mb-0 pb-1 text-decoration-underline">Card Header and Footer</h5>
                 </div>
                 <b-row>
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
                             <b-card-header>
-                                <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button>
+                                <button aria-label="Close" class="btn-close float-end fs-11" type="button"></button>
                                 <h6 class="card-title mb-0">Hi, Erica Kernan</h6>
                             </b-card-header>
                             <b-card-body>
@@ -285,7 +285,7 @@ export default {
                                     she spot near can. Spirit her entire her called.</p>
                             </b-card-body>
                             <b-card-footer>
-                                <b-link href="javascript:void(0);" class="link-success float-end">
+                                <b-link class="link-success float-end" href="javascript:void(0);">
                                     Read More
                                     <i class="ri-arrow-right-s-line align-middle ms-1 lh-1"></i>
                                 </b-link>
@@ -293,10 +293,10 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
                             <b-card-header>
-                                <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button>
+                                <button aria-label="Close" class="btn-close float-end fs-11" type="button"></button>
                                 <h6 class="card-title mb-0">
                                     Invoice
                                     <span class="text-secondary">#45155468</span>
@@ -309,7 +309,7 @@ export default {
                                     distract the viewer's attention from the layout.</p>
                             </b-card-body>
                             <b-card-footer>
-                                <b-link href="javascript:void(0);" class="link-success float-end">
+                                <b-link class="link-success float-end" href="javascript:void(0);">
                                     Payment Now
                                     <i class="ri-arrow-right-s-line align-middle ms-1 lh-1"></i>
                                 </b-link>
@@ -317,7 +317,7 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <h6 class="card-title mb-0">Creative Agency Quote</h6>
@@ -333,7 +333,7 @@ export default {
                                         </blockquote>
                                         <figcaption class="blockquote-footer fs-13 text-end mb-0">
                                             Creative Agency
-                                            <cite title="Source Title" class="text-primary fw-semibold">Alice
+                                            <cite class="text-primary fw-semibold" title="Source Title">Alice
                                                 Mellor</cite>
                                         </figcaption>
                                     </figure>
@@ -349,8 +349,9 @@ export default {
             <b-col xl="4">
                 <b-card no-body>
                     <b-card-body>
-                        <b-card-title class="mb-3"> <i class="ri-user-3-fill align-middle me-1 text-muted"></i> Natasha
-                            Carey </b-card-title>
+                        <b-card-title class="mb-3"><i class="ri-user-3-fill align-middle me-1 text-muted"></i> Natasha
+                            Carey
+                        </b-card-title>
                         <p class="text-muted">Too much or too little spacing, as in the example below, can make things
                             unpleasant for the reader. The goal is to make your text as comfortable to read as possible.
                         </p>
@@ -358,7 +359,7 @@ export default {
                             but it alsogives rise to self-criticism.</p>
                     </b-card-body>
                     <b-card-footer class="text-center">
-                        <b-link href="javascript:void(0);" class="link-secondary">
+                        <b-link class="link-secondary" href="javascript:void(0);">
                             View All Notification (2)
                             <i class="ri-arrow-right-s-line align-middle ms-1 lh-1"></i>
                         </b-link>
@@ -375,9 +376,10 @@ export default {
                     <b-card-body>
                         <p class="text-muted">
                             Contrary to popular belief, you don’t have to work endless nights and hours to create a
-                            <b-link href="javascript:void(0);" class="text-decoration-underline">
+                            <b-link class="text-decoration-underline" href="javascript:void(0);">
                                 <b>Fantastic Design</b>
-                            </b-link> by using complicated 3D elements. Flat design is your friend. Remember that. And
+                            </b-link>
+                            by using complicated 3D elements. Flat design is your friend. Remember that. And
                             the
                             great thing about flat design is that it has become more and more popular over the years.
                         </p>
@@ -401,10 +403,10 @@ export default {
                     </b-card-body>
                     <b-card-footer>
                         <div class="hstack gap-2 justify-content-end">
-                            <b-link href="javascript:void(0)" class="btn btn-link btn-sm link-success">
+                            <b-link class="btn btn-link btn-sm link-success" href="javascript:void(0)">
                                 <i class="ri-close-line align-middle lh-1"></i> Close
                             </b-link>
-                            <b-link href="javasceript:void(0);" class="btn btn-primary btn-sm">Read More</b-link>
+                            <b-link class="btn btn-primary btn-sm" href="javasceript:void(0);">Read More</b-link>
                         </div>
                     </b-card-footer>
                 </b-card>
@@ -415,12 +417,12 @@ export default {
             <b-col xl="4">
                 <b-card no-body>
                     <b-card-header>
-                        <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button>
+                        <button aria-label="Close" class="btn-close float-end fs-11" type="button"></button>
                         <h6 class="card-title mb-0">Employee Card</h6>
                     </b-card-header>
                     <b-card-body class="p-4 text-center">
                         <div class="mx-auto avatar-md mb-3">
-                            <img src="@/assets/images/users/avatar-8.jpg" alt class="img-fluid rounded-circle" />
+                            <img alt class="img-fluid rounded-circle" src="@/assets/images/users/avatar-8.jpg"/>
                         </div>
                         <h5 class="card-title mb-1">Gabriel Palmer</h5>
                         <p class="text-muted mb-0">Graphic Designer</p>
@@ -428,22 +430,22 @@ export default {
                     <b-card-footer class="text-center">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-secondary">
+                                <b-link class="lh-1 align-middle link-secondary" href="javascript:void(0);">
                                     <i class="ri-facebook-fill"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-success">
+                                <b-link class="lh-1 align-middle link-success" href="javascript:void(0);">
                                     <i class="ri-whatsapp-line"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-primary">
+                                <b-link class="lh-1 align-middle link-primary" href="javascript:void(0);">
                                     <i class="ri-linkedin-fill"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-danger">
+                                <b-link class="lh-1 align-middle link-danger" href="javascript:void(0);">
                                     <i class="ri-slack-fill"></i>
                                 </b-link>
                             </li>
@@ -454,12 +456,12 @@ export default {
             <b-col xl="4">
                 <b-card no-body>
                     <b-card-header>
-                        <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button>
+                        <button aria-label="Close" class="btn-close float-end fs-11" type="button"></button>
                         <h6 class="card-title mb-0">Employee Card</h6>
                     </b-card-header>
                     <b-card-body class="p-4 text-center">
                         <div class="mx-auto avatar-md mb-3">
-                            <img src="@/assets/images/users/avatar-5.jpg" alt class="img-fluid rounded-circle" />
+                            <img alt class="img-fluid rounded-circle" src="@/assets/images/users/avatar-5.jpg"/>
                         </div>
                         <h5 class="card-title mb-1">Amelie Townsend</h5>
                         <p class="text-muted mb-0">Project Manager</p>
@@ -467,22 +469,22 @@ export default {
                     <b-card-footer class="text-center">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-secondary">
+                                <b-link class="lh-1 align-middle link-secondary" href="javascript:void(0);">
                                     <i class="ri-facebook-fill"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-success">
+                                <b-link class="lh-1 align-middle link-success" href="javascript:void(0);">
                                     <i class="ri-whatsapp-line"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-primary">
+                                <b-link class="lh-1 align-middle link-primary" href="javascript:void(0);">
                                     <i class="ri-linkedin-fill"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-danger">
+                                <b-link class="lh-1 align-middle link-danger" href="javascript:void(0);">
                                     <i class="ri-slack-fill"></i>
                                 </b-link>
                             </li>
@@ -493,12 +495,12 @@ export default {
             <b-col xl="4">
                 <b-card no-body>
                     <b-card-header>
-                        <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button>
+                        <button aria-label="Close" class="btn-close float-end fs-11" type="button"></button>
                         <h6 class="card-title mb-0">Employee Card</h6>
                     </b-card-header>
                     <b-card-body class="p-4 text-center">
                         <div class="mx-auto avatar-md mb-3">
-                            <img src="@/assets/images/users/avatar-3.jpg" alt class="img-fluid rounded-circle" />
+                            <img alt class="img-fluid rounded-circle" src="@/assets/images/users/avatar-3.jpg"/>
                         </div>
                         <h5 class="card-title mb-1">Jeffrey Montgomery</h5>
                         <p class="text-muted mb-0">UI/UX Designer</p>
@@ -506,22 +508,22 @@ export default {
                     <b-card-footer class="text-center">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-secondary">
+                                <b-link class="lh-1 align-middle link-secondary" href="javascript:void(0);">
                                     <i class="ri-facebook-fill"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-success">
+                                <b-link class="lh-1 align-middle link-success" href="javascript:void(0);">
                                     <i class="ri-whatsapp-line"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-primary">
+                                <b-link class="lh-1 align-middle link-primary" href="javascript:void(0);">
                                     <i class="ri-linkedin-fill"></i>
                                 </b-link>
                             </li>
                             <li class="list-inline-item">
-                                <b-link href="javascript:void(0);" class="lh-1 align-middle link-danger">
+                                <b-link class="lh-1 align-middle link-danger" href="javascript:void(0);">
                                     <i class="ri-slack-fill"></i>
                                 </b-link>
                             </li>
@@ -532,7 +534,7 @@ export default {
         </b-row>
 
         <b-row>
-            <b-col xl="4" id="card-none1">
+            <b-col id="card-none1" xl="4">
                 <b-card no-body>
                     <b-card-header>
                         <div class="d-flex align-items-center">
@@ -547,28 +549,30 @@ export default {
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <b-link class="align-middle minimize-card" data-bs-toggle="collapse"
-                                            href="#collapseexample1" role="button" aria-expanded="false"
-                                            aria-controls="collapseExample2">
+                                        <b-link aria-controls="collapseExample2" aria-expanded="false"
+                                                class="align-middle minimize-card" data-bs-toggle="collapse"
+                                                href="#collapseexample1"
+                                                role="button">
                                             <i class="mdi mdi-plus align-middle plus"></i>
                                             <i class="mdi mdi-minus align-middle minus"></i>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <button type="button" onclick="delthis('card-none1')"
-                                            class="btn-close fs-10 align-middle"></button>
+                                        <button class="btn-close fs-10 align-middle" onclick="delthis('card-none1')"
+                                                type="button"></button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </b-card-header>
-                    <b-card-body class="collapse show" id="collapseexample1">
+                    <b-card-body id="collapseexample1" class="collapse show">
                         <div class="d-flex">
                             <div class="flex-shrink-0">
                                 <i class="ri-checkbox-circle-fill text-success"></i>
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">Some placeholder content for the collapse
-                                component. This panel is hidden by default but revealed when the user activates.</div>
+                                component. This panel is hidden by default but revealed when the user activates.
+                            </div>
                         </div>
                         <div class="d-flex mt-2">
                             <div class="flex-shrink-0">
@@ -576,7 +580,8 @@ export default {
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">Too much or too little spacing, as in the example
                                 below, can make things unpleasant for the reader. The goal is to make your text as
-                                comfortable to read as possible.</div>
+                                comfortable to read as possible.
+                            </div>
                         </div>
                         <div class="d-flex mt-2">
                             <div class="flex-shrink-0">
@@ -584,12 +589,13 @@ export default {
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">This may be the most commonly encountered tip I
                                 received from the designers I spoke with. They highly encourage that you use different
-                                fonts in one design, but do not over-exaggerate and go overboard.</div>
+                                fonts in one design, but do not over-exaggerate and go overboard.
+                            </div>
                         </div>
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="4" id="card-none2">
+            <b-col id="card-none2" xl="4">
                 <b-card no-body>
                     <b-card-header>
                         <div class="d-flex align-items-center">
@@ -599,34 +605,36 @@ export default {
                             <div class="flex-shrink-0">
                                 <ul class="list-inline card-toolbar-menu d-flex align-items-center mb-0">
                                     <li class="list-inline-item">
-                                        <b-link class="align-middle" href="javascript:void(0);"
-                                            data-toggle="growing-reload">
+                                        <b-link class="align-middle" data-toggle="growing-reload"
+                                                href="javascript:void(0);">
                                             <i class="mdi mdi-refresh align-middle"></i>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <b-link class="align-middle minimize-card" data-bs-toggle="collapse"
-                                            href="#collapseExample2" role="button" aria-expanded="false"
-                                            aria-controls="collapseExample2">
+                                        <b-link aria-controls="collapseExample2" aria-expanded="false"
+                                                class="align-middle minimize-card" data-bs-toggle="collapse"
+                                                href="#collapseExample2"
+                                                role="button">
                                             <i class="mdi mdi-plus align-middle plus"></i>
                                             <i class="mdi mdi-minus align-middle minus"></i>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <button type="button" onclick="delthis('card-none2')"
-                                            class="btn-close fs-10 align-middle"></button>
+                                        <button class="btn-close fs-10 align-middle" onclick="delthis('card-none2')"
+                                                type="button"></button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </b-card-header>
-                    <b-card-body class="collapse show" id="collapseExample2">
+                    <b-card-body id="collapseExample2" class="collapse show">
                         <div class="d-flex">
                             <div class="flex-shrink-0">
                                 <i class="ri-checkbox-circle-fill text-success"></i>
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">Some placeholder content for the collapse
-                                component. This panel is hidden by default but revealed when the user activates.</div>
+                                component. This panel is hidden by default but revealed when the user activates.
+                            </div>
                         </div>
                         <div class="d-flex mt-2">
                             <div class="flex-shrink-0">
@@ -634,7 +642,8 @@ export default {
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">Too much or too little spacing, as in the example
                                 below, can make things unpleasant for the reader. The goal is to make your text as
-                                comfortable to read as possible.</div>
+                                comfortable to read as possible.
+                            </div>
                         </div>
                         <div class="d-flex mt-2">
                             <div class="flex-shrink-0">
@@ -642,12 +651,13 @@ export default {
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">This may be the most commonly encountered tip I
                                 received from the designers I spoke with. They highly encourage that you use different
-                                fonts in one design, but do not over-exaggerate and go overboard.</div>
+                                fonts in one design, but do not over-exaggerate and go overboard.
+                            </div>
                         </div>
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="4" id="card-none3">
+            <b-col id="card-none3" xl="4">
                 <b-card no-body>
                     <b-card-header>
                         <div class="d-flex align-items-center">
@@ -657,34 +667,36 @@ export default {
                             <div class="flex-shrink-0">
                                 <ul class="list-inline card-toolbar-menu d-flex align-items-center mb-0">
                                     <li class="list-inline-item">
-                                        <b-link class="align-middle" href="javascript:void(0);"
-                                            data-toggle="customer-loader">
+                                        <b-link class="align-middle" data-toggle="customer-loader"
+                                                href="javascript:void(0);">
                                             <i class="mdi mdi-refresh align-middle"></i>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <b-link class="align-middle minimize-card" data-bs-toggle="collapse"
-                                            href="#collapseExample3" role="button" aria-expanded="false"
-                                            aria-controls="collapseExample2">
+                                        <b-link aria-controls="collapseExample2" aria-expanded="false"
+                                                class="align-middle minimize-card" data-bs-toggle="collapse"
+                                                href="#collapseExample3"
+                                                role="button">
                                             <i class="mdi mdi-plus align-middle plus"></i>
                                             <i class="mdi mdi-minus align-middle minus"></i>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <button type="button" onclick="delthis('card-none3')"
-                                            class="btn-close fs-10 align-middle"></button>
+                                        <button class="btn-close fs-10 align-middle" onclick="delthis('card-none3')"
+                                                type="button"></button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </b-card-header>
-                    <b-card-body class="collapse show" id="collapseExample3">
+                    <b-card-body id="collapseExample3" class="collapse show">
                         <div class="d-flex">
                             <div class="flex-shrink-0">
                                 <i class="ri-checkbox-circle-fill text-success"></i>
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">Some placeholder content for the collapse
-                                component. This panel is hidden by default but revealed when the user activates.</div>
+                                component. This panel is hidden by default but revealed when the user activates.
+                            </div>
                         </div>
                         <div class="d-flex mt-2">
                             <div class="flex-shrink-0">
@@ -692,7 +704,8 @@ export default {
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">Too much or too little spacing, as in the example
                                 below, can make things unpleasant for the reader. The goal is to make your text as
-                                comfortable to read as possible.</div>
+                                comfortable to read as possible.
+                            </div>
                         </div>
                         <div class="d-flex mt-2">
                             <div class="flex-shrink-0">
@@ -700,7 +713,8 @@ export default {
                             </div>
                             <div class="flex-grow-1 ms-2 text-muted">This may be the most commonly encountered tip I
                                 received from the designers I spoke with. They highly encourage that you use different
-                                fonts in one design, but do not over-exaggerate and go overboard.</div>
+                                fonts in one design, but do not over-exaggerate and go overboard.
+                            </div>
                         </div>
                     </b-card-body>
                 </b-card>
@@ -713,9 +727,9 @@ export default {
                     <h5 class="mb-0 text-decoration-underline">Card Image Caps & Overlays</h5>
                 </div>
                 <b-row>
-                    <b-col xxl="4" lg="6">
-                        <b-card no-body class="card-overlay">
-                            <img class="card-img img-fluid" src="@/assets/images/small/img-12.jpg" alt="Card image" />
+                    <b-col lg="6" xxl="4">
+                        <b-card class="card-overlay" no-body>
+                            <img alt="Card image" class="card-img img-fluid" src="@/assets/images/small/img-12.jpg"/>
                             <div class="card-img-overlay p-0 d-flex flex-column">
                                 <b-card-header class="bg-transparent">
                                     <b-card-title class="text-white mb-0">Design your apps in your own way
@@ -730,7 +744,7 @@ export default {
                                     </p>
                                 </b-card-body>
                                 <b-card-footer class="bg-transparent text-center">
-                                    <b-link href="javascript:void(0);" class="link-light">
+                                    <b-link class="link-light" href="javascript:void(0);">
                                         Read More
                                         <i class="ri-arrow-right-s-line align-middle ms-1 lh-1"></i>
                                     </b-link>
@@ -738,9 +752,9 @@ export default {
                             </div>
                         </b-card>
                     </b-col>
-                    <b-col xxl="4" lg="6">
-                        <b-card no-body class="card-overlay">
-                            <img class="card-img img-fluid" src="@/assets/images/small/img-1.jpg" alt="Card image" />
+                    <b-col lg="6" xxl="4">
+                        <b-card class="card-overlay" no-body>
+                            <img alt="Card image" class="card-img img-fluid" src="@/assets/images/small/img-1.jpg"/>
                             <div class="card-img-overlay p-0">
                                 <b-card-header class="bg-transparent">
                                     <b-card-title class="text-white mb-0">Design your apps in your own way
@@ -757,9 +771,9 @@ export default {
                             </div>
                         </b-card>
                     </b-col>
-                    <b-col xxl="4" lg="6">
-                        <b-card no-body class="card-overlay">
-                            <img class="card-img img-fluid" src="@/assets/images/small/img-5.jpg" alt="Card image" />
+                    <b-col lg="6" xxl="4">
+                        <b-card class="card-overlay" no-body>
+                            <img alt="Card image" class="card-img img-fluid" src="@/assets/images/small/img-5.jpg"/>
                             <div class="card-img-overlay p-0" style="top:auto;">
                                 <b-card-body>
                                     <p class="card-text text-white mb-2">Each design is a new, unique piece of art
@@ -779,10 +793,10 @@ export default {
                 </b-row>
 
                 <b-row>
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
-                            <img class="card-img-top img-fluid" src="@/assets/images/small/img-6.jpg"
-                                alt="Card image cap" />
+                            <img alt="Card image cap" class="card-img-top img-fluid"
+                                 src="@/assets/images/small/img-6.jpg"/>
                             <b-card-body>
                                 <b-card-title class="mb-2">A day in the of a professional fashion designer
                                 </b-card-title>
@@ -793,7 +807,7 @@ export default {
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
                             <b-card-body>
                                 <b-card-title class="mb-2">A day in the of a professional fashion designer
@@ -803,12 +817,12 @@ export default {
                                     commodo enim craft beer mlkshk aliquip jean shorts ullamco.</p>
                                 <p class="card-text">Last updated 3 mins ago</p>
                             </b-card-body>
-                            <img class="card-img-bottom img-fluid" src="@/assets/images/small/img-7.jpg"
-                                alt="Card image cap" />
+                            <img alt="Card image cap" class="card-img-bottom img-fluid"
+                                 src="@/assets/images/small/img-7.jpg"/>
                         </b-card>
                     </b-col>
 
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
                             <b-card-body>
                                 <b-card-title class="mb-2">A day in the of a professional fashion designer
@@ -817,15 +831,15 @@ export default {
                                     leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
                                 </p>
                             </b-card-body>
-                            <img class="card-img rounded-0 img-fluid" src="@/assets/images/small/img-8.jpg"
-                                alt="Card image cap" />
+                            <img alt="Card image cap" class="card-img rounded-0 img-fluid"
+                                 src="@/assets/images/small/img-8.jpg"/>
                             <b-card-footer>
                                 <p class="card-text mb-0">Last updated 3 mins ago</p>
                             </b-card-footer>
                         </b-card>
                     </b-col>
 
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">A day in the of a professional fashion designer
@@ -836,18 +850,18 @@ export default {
                                     leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
                                 </p>
                             </b-card-body>
-                            <img class="card-img rounded-0 img-fluid" src="@/assets/images/small/img-10.jpg"
-                                alt="Card image cap" />
+                            <img alt="Card image cap" class="card-img rounded-0 img-fluid"
+                                 src="@/assets/images/small/img-10.jpg"/>
                             <b-card-footer>
                                 <p class="card-text mb-0">Last updated 3 mins ago</p>
                             </b-card-footer>
                         </b-card>
                     </b-col>
 
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
-                            <img class="card-img-top img-fluid" src="@/assets/images/small/img-11.jpg"
-                                alt="Card image cap" />
+                            <img alt="Card image cap" class="card-img-top img-fluid"
+                                 src="@/assets/images/small/img-11.jpg"/>
                             <b-card-header>
                                 <b-card-title class="mb-0">A day in the of a professional fashion designer
                                 </b-card-title>
@@ -863,7 +877,7 @@ export default {
                         </b-card>
                     </b-col>
 
-                    <b-col xxl="4" lg="6">
+                    <b-col lg="6" xxl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">A day in the of a professional fashion designer
@@ -875,8 +889,8 @@ export default {
                                     ommodo enim craft beer mlkshk aliquip jean shorts ullamco.</p>
                                 <p class="card-text mb-0">Last updated 3 mins ago</p>
                             </b-card-body>
-                            <img class="card-img-bottom img-fluid" src="@/assets/images/small/img-11.jpg"
-                                alt="Card image cap" />
+                            <img alt="Card image cap" class="card-img-bottom img-fluid"
+                                 src="@/assets/images/small/img-11.jpg"/>
                         </b-card>
                     </b-col>
                 </b-row>
@@ -893,8 +907,9 @@ export default {
                         <b-card no-body>
                             <b-row class="g-0">
                                 <b-col md="4">
-                                    <img class="rounded-start img-fluid h-100 object-cover"
-                                        src="@/assets/images/small/img-12.jpg" alt="Card image" />
+                                    <img alt="Card image"
+                                         class="rounded-start img-fluid h-100 object-cover"
+                                         src="@/assets/images/small/img-12.jpg"/>
                                 </b-col>
                                 <b-col md="8">
                                     <b-card-header>
@@ -929,8 +944,9 @@ export default {
                                     </b-card-body>
                                 </b-col>
                                 <b-col md="4">
-                                    <img class="rounded-end img-fluid h-100 object-cover"
-                                        src="@/assets/images/small/img-4.jpg" alt="Card image" />
+                                    <img alt="Card image"
+                                         class="rounded-end img-fluid h-100 object-cover"
+                                         src="@/assets/images/small/img-4.jpg"/>
                                 </b-col>
                             </b-row>
                         </b-card>
@@ -940,8 +956,9 @@ export default {
                         <b-card no-body>
                             <b-row class="g-0">
                                 <b-col md="4">
-                                    <img class="rounded-start img-fluid h-100 object-cover"
-                                        src="@/assets/images/small/img-9.jpg" alt="Card image" />
+                                    <img alt="Card image"
+                                         class="rounded-start img-fluid h-100 object-cover"
+                                         src="@/assets/images/small/img-9.jpg"/>
                                 </b-col>
                                 <b-col md="8">
                                     <b-card-body>
@@ -977,8 +994,9 @@ export default {
                                     </b-card-footer>
                                 </b-col>
                                 <b-col md="4">
-                                    <img class="rounded-end img-fluid h-100 object-cover"
-                                        src="@/assets/images/small/img-2.jpg" alt="Card image" />
+                                    <img alt="Card image"
+                                         class="rounded-end img-fluid h-100 object-cover"
+                                         src="@/assets/images/small/img-2.jpg"/>
                                 </b-col>
                             </b-row>
                         </b-card>
@@ -994,12 +1012,12 @@ export default {
                 </div>
                 <b-row>
                     <b-col xxl="4">
-                        <b-card no-body class="card-primary">
+                        <b-card class="card-primary" no-body>
                             <b-card-body>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-1.jpg" alt
-                                            class="avatar-sm rounded-circle" />
+                                        <img alt class="avatar-sm rounded-circle"
+                                             src="@/assets/images/users/avatar-1.jpg"/>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <p class="card-text">
@@ -1011,7 +1029,7 @@ export default {
                             </b-card-body>
                             <b-card-footer>
                                 <div class="text-center">
-                                    <b-link href="javascript:void(0);" class="link-light">
+                                    <b-link class="link-light" href="javascript:void(0);">
                                         Connect Now
                                         <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                                     </b-link>
@@ -1020,12 +1038,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col xxl="4">
-                        <b-card no-body class="card-success">
+                        <b-card class="card-success" no-body>
                             <b-card-body>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-2.jpg" alt
-                                            class="avatar-sm rounded-circle" />
+                                        <img alt class="avatar-sm rounded-circle"
+                                             src="@/assets/images/users/avatar-2.jpg"/>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <p class="card-text">
@@ -1037,7 +1055,7 @@ export default {
                             </b-card-body>
                             <b-card-footer>
                                 <div class="text-center">
-                                    <b-link href="javascript:void(0);" class="link-light">
+                                    <b-link class="link-light" href="javascript:void(0);">
                                         Connect Now
                                         <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                                     </b-link>
@@ -1046,12 +1064,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col xxl="4">
-                        <b-card no-body class="card-info">
+                        <b-card class="card-info" no-body>
                             <b-card-body>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-3.jpg" alt
-                                            class="avatar-sm rounded-circle" />
+                                        <img alt class="avatar-sm rounded-circle"
+                                             src="@/assets/images/users/avatar-3.jpg"/>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <p class="card-text">
@@ -1063,7 +1081,7 @@ export default {
                             </b-card-body>
                             <b-card-footer>
                                 <div class="text-center">
-                                    <b-link href="javascript:void(0);" class="link-light">
+                                    <b-link class="link-light" href="javascript:void(0);">
                                         Connect Now
                                         <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                                     </b-link>
@@ -1077,11 +1095,11 @@ export default {
 
         <b-row>
             <b-col xxl="4">
-                <b-card no-body class="card-warning">
+                <b-card class="card-warning" no-body>
                     <b-card-body>
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/users/avatar-4.jpg" alt class="avatar-sm rounded-circle" />
+                                <img alt class="avatar-sm rounded-circle" src="@/assets/images/users/avatar-4.jpg"/>
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p class="card-text">
@@ -1093,7 +1111,7 @@ export default {
                     </b-card-body>
                     <b-card-footer>
                         <div class="text-center">
-                            <b-link href="javascript:void(0);" class="link-light">
+                            <b-link class="link-light" href="javascript:void(0);">
                                 Connect Now
                                 <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                             </b-link>
@@ -1102,11 +1120,11 @@ export default {
                 </b-card>
             </b-col>
             <b-col xxl="4">
-                <b-card no-body class="card-danger">
+                <b-card class="card-danger" no-body>
                     <b-card-body>
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/users/avatar-6.jpg" alt class="avatar-sm rounded-circle" />
+                                <img alt class="avatar-sm rounded-circle" src="@/assets/images/users/avatar-6.jpg"/>
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p class="card-text">
@@ -1118,7 +1136,7 @@ export default {
                     </b-card-body>
                     <b-card-footer>
                         <div class="text-center">
-                            <b-link href="javascript:void(0);" class="link-light">
+                            <b-link class="link-light" href="javascript:void(0);">
                                 Connect Now
                                 <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                             </b-link>
@@ -1127,11 +1145,11 @@ export default {
                 </b-card>
             </b-col>
             <b-col xxl="4">
-                <b-card no-body class="card-dark">
+                <b-card class="card-dark" no-body>
                     <b-card-body>
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/users/avatar-5.jpg" alt class="avatar-sm rounded-circle" />
+                                <img alt class="avatar-sm rounded-circle" src="@/assets/images/users/avatar-5.jpg"/>
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p class="card-text">
@@ -1143,7 +1161,7 @@ export default {
                     </b-card-body>
                     <b-card-footer>
                         <div class="text-center">
-                            <b-link href="javascript:void(0);" class="link-light">
+                            <b-link class="link-light" href="javascript:void(0);">
                                 Connect Now
                                 <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                             </b-link>
@@ -1155,11 +1173,11 @@ export default {
 
         <b-row>
             <b-col xxl="4">
-                <b-card no-body class="card-secondary">
+                <b-card class="card-secondary" no-body>
                     <b-card-body>
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/users/avatar-7.jpg" alt class="avatar-sm rounded-circle" />
+                                <img alt class="avatar-sm rounded-circle" src="@/assets/images/users/avatar-7.jpg"/>
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p class="card-text">
@@ -1171,7 +1189,7 @@ export default {
                     </b-card-body>
                     <b-card-footer>
                         <div class="text-center">
-                            <b-link href="javascript:void(0);" class="link-light">
+                            <b-link class="link-light" href="javascript:void(0);">
                                 Connect Now
                                 <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                             </b-link>
@@ -1180,11 +1198,11 @@ export default {
                 </b-card>
             </b-col>
             <b-col xxl="4">
-                <b-card no-body class="card-light">
+                <b-card class="card-light" no-body>
                     <b-card-body>
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/users/avatar-8.jpg" alt class="avatar-sm rounded-circle" />
+                                <img alt class="avatar-sm rounded-circle" src="@/assets/images/users/avatar-8.jpg"/>
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p class="card-text">
@@ -1196,7 +1214,7 @@ export default {
                     </b-card-body>
                     <b-card-footer>
                         <div class="text-center">
-                            <b-link href="javascript:void(0);" class="link-dark">
+                            <b-link class="link-dark" href="javascript:void(0);">
                                 Connect Now
                                 <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                             </b-link>
@@ -1214,12 +1232,12 @@ export default {
 
                 <b-row>
                     <b-col xxl="4">
-                        <b-card no-body class="border card-border-primary">
+                        <b-card class="border card-border-primary" no-body>
                             <b-card-header>
                                 <span class="float-end">75%</span>
                                 <h6 class="card-title mb-0">
                                     Handle to Forcast
-                                    <b-badge variant="danger" class="align-middle fs-10">Poor</b-badge>
+                                    <b-badge class="align-middle fs-10" variant="danger">Poor</b-badge>
                                 </h6>
                             </b-card-header>
                             <b-card-body>
@@ -1227,7 +1245,7 @@ export default {
                                     witty books nor son add build on the card Chicken age had evening believe but
                                     proceed pretend mrs.</p>
                                 <div class="text-end">
-                                    <b-link href="javascript:void(0);" class="link-primary fw-medium">
+                                    <b-link class="link-primary fw-medium" href="javascript:void(0);">
                                         Read More
                                         <i class="ri-arrow-right-line align-middle"></i>
                                     </b-link>
@@ -1236,12 +1254,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col xxl="4">
-                        <b-card no-body class="border card-border-success">
+                        <b-card class="border card-border-success" no-body>
                             <b-card-header>
                                 <span class="float-end">100%</span>
                                 <h6 class="card-title mb-0">
                                     Quality Forcast
-                                    <b-badge variant="success" class="align-middle fs-10">Excellent</b-badge>
+                                    <b-badge class="align-middle fs-10" variant="success">Excellent</b-badge>
                                 </h6>
                             </b-card-header>
                             <b-card-body>
@@ -1249,7 +1267,7 @@ export default {
                                     can come across as casual or neutral, exotic or graphic. Cosby sweater eu banh mi,
                                     qui irure terry richardson ex squid.</p>
                                 <div class="text-end">
-                                    <b-link href="javascript:void(0);" class="link-success fw-medium">
+                                    <b-link class="link-success fw-medium" href="javascript:void(0);">
                                         Read More
                                         <i class="ri-arrow-right-line align-middle"></i>
                                     </b-link>
@@ -1258,7 +1276,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col xxl="4">
-                        <b-card no-body class="border card-border-info">
+                        <b-card class="border card-border-info" no-body>
                             <b-card-header>
                                 <h6 class="card-title mb-0">
                                     Check your E-mails
@@ -1270,7 +1288,7 @@ export default {
                                     can come across as casual or neutral, exotic or graphic. Cosby sweater eu banh mi,
                                     qui irure terry richardson ex squid.</p>
                                 <div class="text-end">
-                                    <b-link href="javascript:void(0);" class="link-info fw-medium">
+                                    <b-link class="link-info fw-medium" href="javascript:void(0);">
                                         Read More
                                         <i class="ri-arrow-right-line align-middle"></i>
                                     </b-link>
@@ -1284,7 +1302,7 @@ export default {
 
         <b-row>
             <b-col xxl="4">
-                <b-card no-body class="border card-border-warning">
+                <b-card class="border card-border-warning" no-body>
                     <b-card-header>
                         <h6 class="card-title mb-0">
                             Check your Payment
@@ -1296,7 +1314,7 @@ export default {
                             across as casual or neutral, exotic or graphic. Cosby sweater eu banh mi, qui irure terry
                             richardson ex squid.</p>
                         <div class="text-end">
-                            <b-link href="javascript:void(0);" class="link-warning fw-medium">
+                            <b-link class="link-warning fw-medium" href="javascript:void(0);">
                                 Read More
                                 <i class="ri-arrow-right-line align-middle"></i>
                             </b-link>
@@ -1305,11 +1323,11 @@ export default {
                 </b-card>
             </b-col>
             <b-col xxl="4">
-                <b-card no-body class="border card-border-danger">
+                <b-card class="border card-border-danger" no-body>
                     <b-card-header>
                         <h6 class="card-title mb-0">
                             Your Ordered Cancel
-                            <b-badge variant="danger" class="align-middle fs-10">Cancel</b-badge>
+                            <b-badge class="align-middle fs-10" variant="danger">Cancel</b-badge>
                         </h6>
                     </b-card-header>
                     <b-card-body>
@@ -1317,7 +1335,7 @@ export default {
                             across as casual or neutral, exotic or graphic. Cosby sweater eu banh mi, qui irure terry
                             richardson ex squid.</p>
                         <div class="text-end">
-                            <b-link href="javascript:void(0);" class="link-danger fw-medium">
+                            <b-link class="link-danger fw-medium" href="javascript:void(0);">
                                 Read More
                                 <i class="ri-arrow-right-line align-middle"></i>
                             </b-link>
@@ -1326,7 +1344,7 @@ export default {
                 </b-card>
             </b-col>
             <b-col xxl="4">
-                <b-card no-body class="border card-border-dark">
+                <b-card class="border card-border-dark" no-body>
                     <b-card-header>
                         <b-card-title class="mb-0">Handle to Forcast</b-card-title>
                     </b-card-header>
@@ -1335,7 +1353,7 @@ export default {
                             across as casual or neutral, exotic or graphic. Cosby sweater eu banh mi, qui irure terry
                             richardson ex squid.</p>
                         <div class="text-end">
-                            <b-link href="javascript:void(0);" class="link-dark fw-medium">
+                            <b-link class="link-dark fw-medium" href="javascript:void(0);">
                                 Read More
                                 <i class="ri-arrow-right-line align-middle"></i>
                             </b-link>
@@ -1347,7 +1365,7 @@ export default {
 
         <b-row>
             <b-col xxl="4">
-                <b-card no-body class="border card-border-secondary">
+                <b-card class="border card-border-secondary" no-body>
                     <b-card-header>
                         <b-card-title class="mb-0">Quality Forcast</b-card-title>
                     </b-card-header>
@@ -1356,7 +1374,7 @@ export default {
                             across as casual or neutral, exotic or graphic. Cosby sweater eu banh mi, qui irure terry
                             richardson ex squid.</p>
                         <div class="text-end">
-                            <b-link href="javascript:void(0);" class="link-secondary fw-medium">
+                            <b-link class="link-secondary fw-medium" href="javascript:void(0);">
                                 Read More
                                 <i class="ri-arrow-right-line align-middle"></i>
                             </b-link>
@@ -1365,7 +1383,7 @@ export default {
                 </b-card>
             </b-col>
             <b-col xxl="4">
-                <b-card no-body class="border card-border-light">
+                <b-card class="border card-border-light" no-body>
                     <b-card-header>
                         <b-card-title class="mb-0">Check your E-mails</b-card-title>
                     </b-card-header>
@@ -1374,7 +1392,7 @@ export default {
                             across as casual or neutral, exotic or graphic. Cosby sweater eu banh mi, qui irure terry
                             richardson ex squid.</p>
                         <div class="text-end">
-                            <b-link href="javascript:void(0);" class="link-dark fw-medium">
+                            <b-link class="link-dark fw-medium" href="javascript:void(0);">
                                 Read More
                                 <i class="ri-arrow-right-line align-middle"></i>
                             </b-link>
@@ -1390,9 +1408,9 @@ export default {
                     <h5 class="mb-0 pb-1 text-decoration-underline">Card Groups</h5>
                 </div>
                 <div class="card-group">
-                    <b-card no-body class="mb-4">
-                        <img class="card-img-top img-fluid" src="@/assets/images/small/img-4.jpg"
-                            alt="Card image cap" />
+                    <b-card class="mb-4" no-body>
+                        <img alt="Card image cap" class="card-img-top img-fluid"
+                             src="@/assets/images/small/img-4.jpg"/>
                         <b-card-body>
                             <b-card-title>A day in the of a professional fashion designer</b-card-title>
                             <p class="card-text">
@@ -1407,9 +1425,9 @@ export default {
                             </p>
                         </b-card-footer>
                     </b-card>
-                    <b-card no-body class="mb-4">
-                        <img class="card-img-top img-fluid" src="@/assets/images/small/img-5.jpg"
-                            alt="Card image cap" />
+                    <b-card class="mb-4" no-body>
+                        <img alt="Card image cap" class="card-img-top img-fluid"
+                             src="@/assets/images/small/img-5.jpg"/>
                         <b-card-body>
                             <b-card-title>Manage white space in responsive layouts ?</b-card-title>
                             <p class="card-text">
@@ -1423,9 +1441,9 @@ export default {
                             </p>
                         </b-card-footer>
                     </b-card>
-                    <b-card no-body class="mb-4">
-                        <img class="card-img-top img-fluid" src="@/assets/images/small/img-6.jpg"
-                            alt="Card image cap" />
+                    <b-card class="mb-4" no-body>
+                        <img alt="Card image cap" class="card-img-top img-fluid"
+                             src="@/assets/images/small/img-6.jpg"/>
                         <b-card-body>
                             <b-card-title>Give your text a good structure?</b-card-title>
                             <p class="card-text">
@@ -1448,12 +1466,12 @@ export default {
             <div class="justify-content-between d-flex align-items-center mt-3 mb-4">
                 <h5 class="mb-0 pb-1 text-decoration-underline">Grid Card Groups</h5>
             </div>
-            <b-col xxl cols="6">
-                <b-card no-body class="h-100">
+            <b-col cols="6" xxl>
+                <b-card class="h-100" no-body>
                     <b-card-header>
                         <b-card-title class="mb-0">A day in the of a professional fashion designer</b-card-title>
                     </b-card-header>
-                    <img class="img-fluid" src="@/assets/images/small/img-11.jpg" alt="Card image cap" />
+                    <img alt="Card image cap" class="img-fluid" src="@/assets/images/small/img-11.jpg"/>
                     <b-card-body>
                         <p class="card-text">This may be the most commonly encountered tip I received from the designers
                             I spoke with. They highly encourage that you use different fonts in one design, but do not
@@ -1466,9 +1484,9 @@ export default {
                     </b-card-footer>
                 </b-card>
             </b-col>
-            <b-col xxl cols="6">
-                <b-card no-body class="h-100">
-                    <img class="card-img-top img-fluid" src="@/assets/images/small/img-10.jpg" alt="Card image cap" />
+            <b-col cols="6" xxl>
+                <b-card class="h-100" no-body>
+                    <img alt="Card image cap" class="card-img-top img-fluid" src="@/assets/images/small/img-10.jpg"/>
                     <b-card-body>
                         <b-card-title>Give your text a good structure?</b-card-title>
                         <p class="card-text">
@@ -1484,9 +1502,9 @@ export default {
                     </b-card-footer>
                 </b-card>
             </b-col>
-            <b-col xxl cols="6">
-                <b-card no-body class="h-100">
-                    <img class="card-img-top img-fluid" src="@/assets/images/small/img-5.jpg" alt="Card image cap" />
+            <b-col cols="6" xxl>
+                <b-card class="h-100" no-body>
+                    <img alt="Card image cap" class="card-img-top img-fluid" src="@/assets/images/small/img-5.jpg"/>
                     <b-card-body>
                         <b-card-title>Manage white space in responsive layouts ?</b-card-title>
                         <p class="card-text">Exercitation +1 labore velit, blog sartorial PBR leggings next level wes
@@ -1508,9 +1526,9 @@ export default {
                     <h5 class="mb-0 pb-1 text-decoration-underline">Cards Masonry</h5>
                 </div>
                 <b-row data-masonry="{'percentPosition': true }">
-                    <b-col sm="6" lg="4">
+                    <b-col lg="4" sm="6">
                         <b-card no-body>
-                            <img src="@/assets/images/small/img-3.jpg" class="card-img-top" alt="..." />
+                            <img alt="..." class="card-img-top" src="@/assets/images/small/img-3.jpg"/>
                             <b-card-body>
                                 <h5 class="card-title mb-1">Card title that wraps to a new line</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural
@@ -1518,7 +1536,7 @@ export default {
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col sm="6" lg="4">
+                    <b-col lg="4" sm="6">
                         <b-card no-body>
                             <b-card-body>
                                 <b-card-title class="mb-2">A day in the of a professional fashion designer
@@ -1527,20 +1545,20 @@ export default {
                                     leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
                                 </p>
                             </b-card-body>
-                            <img class="card-img rounded-0 img-fluid" src="@/assets/images/small/img-8.jpg"
-                                alt="Card image cap" />
+                            <img alt="Card image cap" class="card-img rounded-0 img-fluid"
+                                 src="@/assets/images/small/img-8.jpg"/>
                             <b-card-footer>
                                 <p class="card-text mb-0">Last updated 3 mins ago</p>
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col sm="6" lg="4">
+                    <b-col lg="4" sm="6">
                         <b-card no-body>
-                            <img src="@/assets/images/small/img-7.jpg" class="card-img" alt="..." />
+                            <img alt="..." class="card-img" src="@/assets/images/small/img-7.jpg"/>
                         </b-card>
                     </b-col>
-                    <b-col sm="6" lg="4">
-                        <b-card no-body class="p-3">
+                    <b-col lg="4" sm="6">
+                        <b-card class="p-3" no-body>
                             <figure class="mb-0">
                                 <blockquote class="blockquote">
                                     <p class="lead">"A business consulting agency is involved in the planning,
@@ -1548,15 +1566,15 @@ export default {
                                 </blockquote>
                                 <figcaption class="blockquote-footer fs-13 text-end mb-0">
                                     Creative Agency
-                                    <cite title="Source Title" class="text-primary fw-semibold">Alice Mellor</cite>
+                                    <cite class="text-primary fw-semibold" title="Source Title">Alice Mellor</cite>
                                 </figcaption>
                             </figure>
                         </b-card>
                     </b-col>
-                    <b-col sm="6" lg="4">
+                    <b-col lg="4" sm="6">
                         <b-card no-body>
                             <b-card-header>
-                                <button type="button" class="btn-close float-end fs-11" aria-label="Close"></button>
+                                <button aria-label="Close" class="btn-close float-end fs-11" type="button"></button>
                                 <h6 class="fs-15 mb-0">Hi, Erica Kernan</h6>
                             </b-card-header>
                             <b-card-body>
@@ -1566,7 +1584,7 @@ export default {
                                     she spot near can. Spirit her entire her called.</p>
                             </b-card-body>
                             <b-card-footer>
-                                <b-link href="javascript:void(0);" class="link-success float-end">
+                                <b-link class="link-success float-end" href="javascript:void(0);">
                                     Read More
                                     <i class="ri-arrow-right-s-line align-middle ms-1 lh-1"></i>
                                 </b-link>
@@ -1574,8 +1592,8 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col sm="6" lg="4">
-                        <b-card no-body class="bg-primary text-white text-center p-3">
+                    <b-col lg="4" sm="6">
+                        <b-card class="bg-primary text-white text-center p-3" no-body>
                             <blockquote class="card-blockquote m-0">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
                                 <footer class="blockquote-footer text-white font-size-12 mt-0 mb-0">
@@ -1585,13 +1603,13 @@ export default {
                             </blockquote>
                         </b-card>
                     </b-col>
-                    <b-col sm="6" lg="4">
-                        <b-card no-body class="card-success">
+                    <b-col lg="4" sm="6">
+                        <b-card class="card-success" no-body>
                             <b-card-body>
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-2.jpg" alt
-                                            class="avatar-sm rounded-circle" />
+                                        <img alt class="avatar-sm rounded-circle"
+                                             src="@/assets/images/users/avatar-2.jpg"/>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <p class="card-text">
@@ -1603,7 +1621,7 @@ export default {
                             </b-card-body>
                             <b-card-footer>
                                 <div class="text-center">
-                                    <b-link href="javascript:void(0);" class="link-light">
+                                    <b-link class="link-light" href="javascript:void(0);">
                                         Connect Now
                                         <i class="ri-arrow-right-s-line align-middle lh-1"></i>
                                     </b-link>
@@ -1611,7 +1629,7 @@ export default {
                             </b-card-footer>
                         </b-card>
                     </b-col>
-                    <b-col sm="6" lg="4">
+                    <b-col lg="4" sm="6">
                         <b-card no-body>
                             <b-card-body>
                                 <h5 class="card-title mb-1">Card title</h5>
@@ -1623,8 +1641,8 @@ export default {
                             </b-card-body>
                         </b-card>
                     </b-col>
-                    <b-col sm="6" lg="4">
-                        <b-card no-body class="text-center">
+                    <b-col lg="4" sm="6">
+                        <b-card class="text-center" no-body>
                             <b-card-body>
                                 <h5 class="card-title mb-1">Card title</h5>
                                 <p class="card-text">This card has a regular title and short paragraphy of text below
@@ -1647,12 +1665,12 @@ export default {
                 <b-row>
                     <b-col xl="4">
                         <b-card no-body>
-                            <img src="@/assets/images/small/img-3.jpg" class="card-img-top" alt="..." />
+                            <img alt="..." class="card-img-top" src="@/assets/images/small/img-3.jpg"/>
                             <b-card-body>
                                 <h5 class="card-title">Card with stretched link</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's content.</p>
-                                <b-link href="javascript:void(0);" class="btn btn-primary stretched-link">Go somewhere
+                                <b-link class="btn btn-primary stretched-link" href="javascript:void(0);">Go somewhere
                                 </b-link>
                             </b-card-body>
                         </b-card>
@@ -1661,14 +1679,15 @@ export default {
                         <b-card no-body>
                             <b-card-body>
                                 <div class="d-flex position-relative">
-                                    <img src="@/assets/images/users/avatar-3.jpg"
-                                        class="flex-shrink-0 me-3 avatar-xl rounded" alt="..." />
+                                    <img alt="..."
+                                         class="flex-shrink-0 me-3 avatar-xl rounded"
+                                         src="@/assets/images/users/avatar-3.jpg"/>
                                     <div>
                                         <h5 class="mt-0">Custom component with stretched link</h5>
                                         <p>This is some placeholder content for the custom component. It is intended to
                                             mimic what some real-world content would look like, and we're using it here
                                             to give the component a bit of body and size.</p>
-                                        <b-link href="javascript:void(0);" class="stretched-link">Go somewhere</b-link>
+                                        <b-link class="stretched-link" href="javascript:void(0);">Go somewhere</b-link>
                                     </div>
                                 </div>
                             </b-card-body>
@@ -1677,15 +1696,15 @@ export default {
                             <b-card-body>
                                 <b-row class="g-0 bg-light position-relative">
                                     <b-col md="5">
-                                        <img src="@/assets/images/small/img-4.jpg" class="rounded-start img-fluid"
-                                            alt="..." />
+                                        <img alt="..." class="rounded-start img-fluid"
+                                             src="@/assets/images/small/img-4.jpg"/>
                                     </b-col>
-                                    <b-col md="7" class="p-4">
+                                    <b-col class="p-4" md="7">
                                         <h5 class="mt-0">Columns with stretched link</h5>
                                         <p>Another instance of placeholder content for this other custom component. It
                                             is intended to mimic what some real-world content would look like, and we're
                                             using it here to give the component a bit of body and size.</p>
-                                        <b-link href="javascript:void(0);" class="stretched-link">Go somewhere</b-link>
+                                        <b-link class="stretched-link" href="javascript:void(0);">Go somewhere</b-link>
                                     </b-col>
                                 </b-row>
                             </b-card-body>

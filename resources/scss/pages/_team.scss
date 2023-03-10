@@ -2,7 +2,7 @@
 // _team.scss
 //
 
-.team-box .team-cover, .profile-offcanvas .team-cover, .modal-team-cover{
+.team-box .team-cover, .profile-offcanvas .team-cover, .modal-team-cover {
     display: none;
     position: relative;
     margin-bottom: -140px;
@@ -58,7 +58,7 @@
                 }
 
                 .dropdown {
-                    >a {
+                    > a {
                         color: $white;
                     }
                 }
@@ -182,7 +182,7 @@
     }
 }
 
-.modal-team-cover{
+.modal-team-cover {
     display: block;
 }
 
@@ -195,18 +195,19 @@
     }
 }
 
-.profile-offcanvas  {
+.profile-offcanvas {
     .team-cover {
         margin-bottom: -132px;
         display: block;
         z-index: -1;
     }
+
     .btn-star {
         color: $white;
     }
 
     .dropdown {
-        >a {
+        > a {
             color: $white;
         }
     }

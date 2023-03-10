@@ -4,9 +4,11 @@
 
 .apex-charts {
     min-height: 10px !important;
+
     text {
         font-family: $font-family-base !important;
     }
+
     .apexcharts-canvas {
         margin: 0 auto;
     }
@@ -14,25 +16,26 @@
 
 .apexcharts-tooltip-title,
 .apexcharts-tooltip-text {
-    font-family: $font-family-base !important;  
+    font-family: $font-family-base !important;
 }
 
-.apexcharts-tooltip{
+.apexcharts-tooltip {
     border: 1px solid $border-color !important;
     background-color: var(--#{$prefix}card-bg-custom) !important;
     box-shadow: $box-shadow !important;
+
     * {
         font-family: $font-family-base !important;
         color: $gray-600 !important;
     }
 
-    .apexcharts-tooltip-title{
+    .apexcharts-tooltip-title {
         background-color: rgba(var(--#{$prefix}light-rgb), .75) !important;
         border-bottom: 1px solid $border-color !important;
     }
 }
 
-.apexcharts-tooltip.apexcharts-theme-dark{
+.apexcharts-tooltip.apexcharts-theme-dark {
     * {
         color: $white !important;
     }
@@ -57,7 +60,7 @@
     fill: $white !important;
 }
 
-.apexcharts-title-text, .apexcharts-subtitle-text{
+.apexcharts-title-text, .apexcharts-subtitle-text {
     fill: $gray-500;
 }
 
@@ -101,6 +104,7 @@
     position: relative;
     transition: 1s ease transform;
     z-index: 3;
+
     &.chart-quarter-activated {
         transform: translateX(0);
         transition: 1s ease transform;
@@ -112,6 +116,7 @@
     position: relative;
     z-index: -2;
     transition: 1s ease transform;
+
     &.active {
         transition: 1.1s ease-in-out transform;
         transform: translateX(0);
@@ -130,17 +135,18 @@
 
 // radar chart
 
-.apexcharts-radar-series{
-    polygon, line{
+.apexcharts-radar-series {
+    polygon, line {
         stroke: $border-color;
     }
 }
 
-.apexcharts-pie{
-    circle ,line{
+.apexcharts-pie {
+    circle, line {
         stroke: $border-color;
     }
-    text{
+
+    text {
         fill: var(--#{$prefix}body-color);
     }
 }

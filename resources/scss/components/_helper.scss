@@ -209,7 +209,7 @@ $value in $theme-colors {
     }
 }
 
-// Search 
+// Search
 .search-box {
     position: relative;
 
@@ -253,7 +253,7 @@ $value in $theme-colors {
     z-index: 1000;
 }
 
-// 
+//
 code {
     user-select: all;
 }
@@ -325,18 +325,21 @@ code {
     white-space: normal;
 }
 
-// Favourite button 
-.favourite-btn{
+// Favourite button
+.favourite-btn {
     border-color: transparent !important;
-    .ri-star-fill{
+
+    .ri-star-fill {
         color: $text-muted;
     }
-    &.active{
+
+    &.active {
         border-color: transparent;
-        .ri-star-fill{
+
+        .ri-star-fill {
             color: $warning;
-            
-            &:before{
+
+            &:before {
                 content: "\f186";
             }
         }
@@ -352,15 +355,16 @@ code {
     display: var(--#{$variable-prefix}card-logo-dark);
 }
 
-.border-white{
+.border-white {
     border-color: var(--#{$prefix}card-bg-custom) !important;
 }
 
 //link
-[data-layout-mode="dark"]{
-    .link-dark, .link-light{
+[data-layout-mode="dark"] {
+    .link-dark, .link-light {
         color: var(--#{$prefix}dark) !important;
-        &:focus, &:hover{
+
+        &:focus, &:hover {
             color: rgba(var(--#{$prefix}dark-rgb), 0.75) !important;
         }
     }

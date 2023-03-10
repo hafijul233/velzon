@@ -9,7 +9,7 @@ import "prismjs/themes/prism.css";
 export default {
     page: {
         title: "Scrollspy",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     mounted() {
         const checkbox = document.getElementsByClassName("code-switcher");
@@ -54,7 +54,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -62,9 +62,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Scrollspy in Navbar</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="navbarscrollspy-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="navbarscrollspy-showcode">
+                                <label class="form-label text-muted" for="navbarscrollspy-showcode">Show Code</label>
+                                <input id="navbarscrollspy-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -79,10 +79,10 @@ export default {
 
                             <nav id="navbar-example" class="navbar navbar-dark bg-light px-3">
                                 <b-link class="navbar-brand" href="#">
-                                    <img src="@/assets/images/logo-dark.png" class="card-logo card-logo-dark"
-                                        alt="logo dark" height="14">
-                                    <img src="@/assets/images/logo-light.png" class="card-logo card-logo-light"
-                                        alt="logo light" height="14">
+                                    <img alt="logo dark" class="card-logo card-logo-dark"
+                                         height="14" src="@/assets/images/logo-dark.png">
+                                    <img alt="logo light" class="card-logo card-logo-light"
+                                         height="14" src="@/assets/images/logo-light.png">
                                 </b-link>
                                 <ul class="nav nav-pills">
                                     <li class="nav-item">
@@ -92,19 +92,20 @@ export default {
                                         <b-link class="nav-link" href="#mdo">@mdo</b-link>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <b-link class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                                            role="button" aria-haspopup="true" aria-expanded="false">Dropdown</b-link>
+                                        <b-link aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                                                data-bs-toggle="dropdown" href="#" role="button">Dropdown
+                                        </b-link>
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <b-link class="dropdown-item" href="#one">one</b-link>
                                             <b-link class="dropdown-item" href="#two">two</b-link>
-                                            <div role="separator" class="dropdown-divider"></div>
+                                            <div class="dropdown-divider" role="separator"></div>
                                             <b-link class="dropdown-item" href="#three">three</b-link>
                                         </div>
                                     </li>
                                 </ul>
                             </nav>
-                            <div data-bs-spy="scroll" data-bs-target="#navbar-example" class="scrollspy-example p-2"
-                                data-bs-offset="8">
+                            <div class="scrollspy-example p-2" data-bs-offset="8" data-bs-spy="scroll"
+                                 data-bs-target="#navbar-example">
                                 <div class="text-muted">
                                     <h5 id="fat">@fat</h5>
                                     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
@@ -205,9 +206,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Scrollspy with nested nav</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="nestednavscrollspy-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="nestednavscrollspy-showcode">
+                                <label class="form-label text-muted" for="nestednavscrollspy-showcode">Show Code</label>
+                                <input id="nestednavscrollspy-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -221,41 +222,41 @@ export default {
                                 <b-col xxl="3">
                                     <nav id="navbar-examplenested" class="navbar navbar-dark bg-light flex-column">
                                         <b-link class="navbar-brand mb-2" href="#">
-                                            <img src="@/assets/images/logo-dark.png" class="card-logo card-logo-dark"
-                                                alt="logo dark" height="15">
-                                            <img src="@/assets/images/logo-light.png" class="card-logo card-logo-light"
-                                                alt="logo light" height="15">
+                                            <img alt="logo dark" class="card-logo card-logo-dark"
+                                                 height="15" src="@/assets/images/logo-dark.png">
+                                            <img alt="logo light" class="card-logo card-logo-light"
+                                                 height="15" src="@/assets/images/logo-light.png">
                                         </b-link>
                                         <nav class="nav nav-pills flex-column p-3 w-100">
                                             <b-link class="nav-link active" href="#item-1"><i
-                                                    class="ri-dashboard-2-line align-middle me-2 fs-16"></i>
+                                                class="ri-dashboard-2-line align-middle me-2 fs-16"></i>
                                                 <span>Dashboards</span>
                                             </b-link>
                                             <nav class="nav nav-pills flex-column">
                                                 <b-link class="nav-link" href="#item-1-1"><i
-                                                        class="ri-subtract-fill align-middle me-2 fs-15"></i>
+                                                    class="ri-subtract-fill align-middle me-2 fs-15"></i>
                                                     <span>Ecommerce</span>
                                                 </b-link>
                                                 <b-link class="nav-link" href="#item-1-2"><i
-                                                        class="ri-subtract-fill align-middle me-2 fs-15"></i>
+                                                    class="ri-subtract-fill align-middle me-2 fs-15"></i>
                                                     <span>Analytics</span>
                                                 </b-link>
                                             </nav>
                                             <b-link class="nav-link" href="#item-2"><i
-                                                    class="ri-pencil-ruler-2-line align-middle me-2 fs-16"></i>
+                                                class="ri-pencil-ruler-2-line align-middle me-2 fs-16"></i>
                                                 <span>Base UI</span>
                                             </b-link>
                                             <b-link class="nav-link" href="#item-3"><i
-                                                    class="ri-apps-2-line align-middle me-2 fs-16"></i>
+                                                class="ri-apps-2-line align-middle me-2 fs-16"></i>
                                                 <span>Apps</span>
                                             </b-link>
                                             <nav class="nav nav-pills flex-column">
                                                 <b-link class="nav-link" href="#item-3-1"><i
-                                                        class="ri-subtract-fill align-middle me-2 fs-15"></i>
+                                                    class="ri-subtract-fill align-middle me-2 fs-15"></i>
                                                     <span>Chat</span>
                                                 </b-link>
                                                 <b-link class="nav-link" href="#item-3-2"><i
-                                                        class="ri-subtract-fill align-middle me-2 fs-15"></i>
+                                                    class="ri-subtract-fill align-middle me-2 fs-15"></i>
                                                     <span>Email</span>
                                                 </b-link>
                                             </nav>
@@ -264,8 +265,8 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="9">
-                                    <div data-bs-spy="scroll" data-bs-target="#navbar-examplenested" data-bs-offset="0"
-                                        class="scrollspy-example-2">
+                                    <div class="scrollspy-example-2" data-bs-offset="0" data-bs-spy="scroll"
+                                         data-bs-target="#navbar-examplenested">
                                         <div class="text-muted">
                                             <h5 id="item-1">Item 1</h5>
                                             <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat
@@ -408,9 +409,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Scrollspy with list-group</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="listgroupscrollspy-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="listgroupscrollspy-showcode">
+                                <label class="form-label text-muted" for="listgroupscrollspy-showcode">Show Code</label>
+                                <input id="listgroupscrollspy-showcode" class="form-check-input code-switcher"
+                                       type="checkbox">
                             </div>
                         </div>
                     </b-card-header>
@@ -424,18 +425,22 @@ export default {
                                 <b-col xxl="3">
                                     <div id="list-example" class="list-group">
                                         <b-link class="list-group-item list-group-item-action" href="#list-item-1">Item
-                                            1</b-link>
+                                            1
+                                        </b-link>
                                         <b-link class="list-group-item list-group-item-action active"
-                                            href="#list-item-2">Item 2</b-link>
+                                                href="#list-item-2">Item 2
+                                        </b-link>
                                         <b-link class="list-group-item list-group-item-action" href="#list-item-3">Item
-                                            3</b-link>
+                                            3
+                                        </b-link>
                                         <b-link class="list-group-item list-group-item-action" href="#list-item-4">Item
-                                            4</b-link>
+                                            4
+                                        </b-link>
                                     </div>
                                 </b-col>
                                 <b-col xxl="9">
-                                    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0"
-                                        class="scrollspy-example mt-0">
+                                    <div class="scrollspy-example mt-0" data-bs-offset="0" data-bs-spy="scroll"
+                                         data-bs-target="#list-example">
                                         <div class="text-muted">
                                             <h5 id="list-item-1">Item 1</h5>
                                             <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat

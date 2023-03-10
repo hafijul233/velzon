@@ -37,7 +37,6 @@
 }
 
 
-
 body {
     background-image: var(--#{$prefix}body-bg-image);
     background-attachment: fixed;
@@ -57,7 +56,7 @@ body {
     }
 }
 
-[data-layout="vertical"][data-sidebar-size="sm"] .navbar-menu .navbar-nav .nav-item:hover>.menu-dropdown {
+[data-layout="vertical"][data-sidebar-size="sm"] .navbar-menu .navbar-nav .nav-item:hover > .menu-dropdown {
     background-color: $white;
 }
 
@@ -133,13 +132,13 @@ body {
     }
 
     &[data-layout="vertical"][data-sidebar="dark"][data-sidebar-size="sm"] {
-        .navbar-menu .navbar-nav .nav-item:hover>.menu-dropdown {
+        .navbar-menu .navbar-nav .nav-item:hover > .menu-dropdown {
             background-color: var(--#{$prefix}card-bg-fill);
         }
     }
 
     &[data-layout="vertical"][data-sidebar-size="sm"] {
-        .navbar-menu .navbar-nav .nav-item:hover>a.menu-link {
+        .navbar-menu .navbar-nav .nav-item:hover > a.menu-link {
             background-color: var(--#{$prefix}card-bg-fill);
         }
     }
@@ -158,12 +157,12 @@ body {
 @media (max-width: 767.98px) {
     [data-topbar="light"] {
         .app-menu {
-           background-color: $white;
+            background-color: $white;
         }
     }
-   [data-layout-mode="dark"] {
-    .vertical-sidebar-enable .app-menu {
-        background-color: var(--#{$prefix}card-bg-fill);
+    [data-layout-mode="dark"] {
+        .vertical-sidebar-enable .app-menu {
+            background-color: var(--#{$prefix}card-bg-fill);
+        }
     }
-   }
 }

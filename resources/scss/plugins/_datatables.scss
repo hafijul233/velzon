@@ -10,12 +10,12 @@ table.dataTable th.dataTables_empty {
     --vz-table-accent-bg: var(--#{$prefix}card-bg-custom);
 }
 
-table.dataTable>thead .sorting:before,
-table.dataTable>thead .sorting_asc:before,
-table.dataTable>thead .sorting_desc:before,
-table.dataTable>thead .sorting_asc_disabled:before,
-table.dataTable>thead .sorting_desc_disabled:before {
-    content:"\f0360";
+table.dataTable > thead .sorting:before,
+table.dataTable > thead .sorting_asc:before,
+table.dataTable > thead .sorting_desc:before,
+table.dataTable > thead .sorting_asc_disabled:before,
+table.dataTable > thead .sorting_desc_disabled:before {
+    content: "\f0360";
     position: absolute;
     right: 0.5rem;
     top: 12px;
@@ -23,11 +23,11 @@ table.dataTable>thead .sorting_desc_disabled:before {
     font-family: "Material Design Icons";
 }
 
-table.dataTable>thead .sorting:after,
-table.dataTable>thead .sorting_asc:after,
-table.dataTable>thead .sorting_desc:after,
-table.dataTable>thead .sorting_asc_disabled:after,
-table.dataTable>thead .sorting_desc_disabled:after {
+table.dataTable > thead .sorting:after,
+table.dataTable > thead .sorting_asc:after,
+table.dataTable > thead .sorting_desc:after,
+table.dataTable > thead .sorting_asc_disabled:after,
+table.dataTable > thead .sorting_desc_disabled:after {
     content: "\f035d";
     position: absolute;
     right: 0.5rem;
@@ -36,22 +36,22 @@ table.dataTable>thead .sorting_desc_disabled:after {
     font-family: "Material Design Icons";
 }
 
-table.dataTable>tbody>tr.child span.dtr-title {
+table.dataTable > tbody > tr.child span.dtr-title {
     font-weight: $font-weight-semibold;
     min-width: 150px;
 }
 
 
-//responsive 
+//responsive
 table {
     &.dataTable {
         &.dtr-inline {
             &.collapsed {
-                >tbody {
-                    >tr {
+                > tbody {
+                    > tr {
 
-                        >th,
-                        >td {
+                        > th,
+                        > td {
                             &.dtr-control {
                                 &::before {
                                     background-color: $primary;
@@ -62,7 +62,7 @@ table {
 
                         &.parent {
                             &.parent {
-                                >th {
+                                > th {
                                     &.dtr-control {
                                         &::before {
                                             background-color: $danger;
@@ -71,7 +71,7 @@ table {
                                 }
                             }
 
-                            >td {
+                            > td {
                                 &.dtr-control {
                                     &::before {
                                         background-color: $danger;
@@ -84,8 +84,8 @@ table {
             }
         }
 
-        >tbody {
-            >tr {
+        > tbody {
+            > tr {
                 &.child {
                     span {
                         &.dtr-title {
@@ -132,7 +132,7 @@ table {
 }
 
 
-div{
+div {
     &.dtr-modal {
         div {
             &.dtr-modal-display {
@@ -141,14 +141,17 @@ div{
                 box-shadow: none;
                 height: 70%;
             }
+
             &.dtr-modal-content {
                 padding: $modal-inner-padding;
+
                 h2 {
                     font-size: $font-size-lg;
                     font-weight: $font-weight-semibold;
                     margin-bottom: 15px;
                 }
-                .dtr-details{
+
+                .dtr-details {
                     tr {
                         td {
                             padding: $table-cell-padding-y $table-cell-padding-x;
@@ -156,6 +159,7 @@ div{
                     }
                 }
             }
+
             &.dtr-modal-close {
                 font-size: 24px;
                 top: 9px;
@@ -165,6 +169,7 @@ div{
                 line-height: 30px;
                 background-color: var(--#{$prefix}card-bg-custom);
                 border-color: $border-color;
+
                 &:hover {
                     background-color: var(--#{$prefix}light);
                 }
@@ -172,8 +177,6 @@ div{
         }
     }
 }
-
-
 
 
 .dt-buttons {

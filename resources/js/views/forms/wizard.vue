@@ -9,7 +9,7 @@ import Lottie from "@/components/widgets/lottie.vue";
 export default {
     page: {
         title: "Wizard",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -24,7 +24,7 @@ export default {
                     active: true,
                 },
             ],
-            defaultOptions: { animationData: animationData },
+            defaultOptions: {animationData: animationData},
         };
     },
     components: {
@@ -110,7 +110,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xl="6">
                 <b-card no-body>
@@ -118,41 +118,47 @@ export default {
                         <b-card-title class="mb-0">Progress Nav Steps</b-card-title>
                     </b-card-header>
                     <b-card-body>
-                        <form action="#" class="form-steps" autocomplete="off">
+                        <form action="#" autocomplete="off" class="form-steps">
                             <div class="text-center pt-3 pb-4 mb-1">
                                 <h5>Signup Your Account</h5>
                             </div>
                             <div id="custom-progress-bar" class="progress-nav mb-4">
                                 <div class="progress" style="height: 1px;">
-                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar"
+                                         role="progressbar" style="width: 0%;"></div>
                                 </div>
 
                                 <ul class="nav nav-pills progress-bar-tab custom-nav" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <b-button pill variant="link" class="nav-link active"
-                                            data-progressbar="custom-progress-bar" id="pills-gen-info-tab"
-                                            data-bs-toggle="pill" data-bs-target="#pills-gen-info" type="button"
-                                            role="tab" aria-controls="pills-gen-info" aria-selected="true">1</b-button>
+                                        <b-button id="pills-gen-info-tab" aria-controls="pills-gen-info" aria-selected="true"
+                                                  class="nav-link active" data-bs-target="#pills-gen-info"
+                                                  data-bs-toggle="pill" data-progressbar="custom-progress-bar" pill
+                                                  role="tab" type="button" variant="link">1
+                                        </b-button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <b-button pill variant="link" class="nav-link" data-progressbar="custom-progress-bar"
-                                            id="pills-info-desc-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-info-desc" type="button" role="tab"
-                                            aria-controls="pills-info-desc" aria-selected="false">2</b-button>
+                                        <b-button id="pills-info-desc-tab" aria-controls="pills-info-desc" aria-selected="false"
+                                                  class="nav-link"
+                                                  data-bs-target="#pills-info-desc" data-bs-toggle="pill"
+                                                  data-progressbar="custom-progress-bar" pill role="tab"
+                                                  type="button" variant="link">2
+                                        </b-button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <b-button pill variant="link" class="nav-link" data-progressbar="custom-progress-bar"
-                                            id="pills-success-tab" data-bs-toggle="pill" data-bs-target="#pills-success"
-                                            type="button" role="tab" aria-controls="pills-success"
-                                            aria-selected="false">3</b-button>
+                                        <b-button id="pills-success-tab" aria-controls="pills-success" aria-selected="false"
+                                                  class="nav-link"
+                                                  data-bs-target="#pills-success" data-bs-toggle="pill"
+                                                  data-progressbar="custom-progress-bar"
+                                                  pill role="tab" type="button"
+                                                  variant="link">3
+                                        </b-button>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="tab-content">
-                                <div class="tab-pane fade show active" id="pills-gen-info" role="tabpanel"
-                                    aria-labelledby="pills-gen-info-tab">
+                                <div id="pills-gen-info" aria-labelledby="pills-gen-info-tab" class="tab-pane fade show active"
+                                     role="tabpanel">
                                     <div>
                                         <div class="mb-4">
                                             <div>
@@ -164,8 +170,8 @@ export default {
                                             <b-col lg="6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="gen-info-email-input">Email</label>
-                                                    <input type="email" class="form-control" id="gen-info-email-input"
-                                                        placeholder="Enter email" required>
+                                                    <input id="gen-info-email-input" class="form-control" placeholder="Enter email"
+                                                           required type="email">
                                                     <div class="invalid-feedback">Please enter an email address</div>
                                                 </div>
                                             </b-col>
@@ -173,39 +179,41 @@ export default {
                                                 <div class="mb-3">
                                                     <label class="form-label" for="gen-info-username-input">User
                                                         Name</label>
-                                                    <input type="text" class="form-control" id="gen-info-username-input"
-                                                        placeholder="Enter user name" required>
+                                                    <input id="gen-info-username-input" class="form-control" placeholder="Enter user name"
+                                                           required type="text">
                                                     <div class="invalid-feedback">Please enter a user name</div>
                                                 </div>
                                             </b-col>
                                         </b-row>
                                         <div class="mb-3">
                                             <label class="form-label" for="gen-info-password-input">Password</label>
-                                            <input type="password" class="form-control" id="gen-info-password-input"
-                                                placeholder="Enter Password" required>
+                                            <input id="gen-info-password-input" class="form-control" placeholder="Enter Password"
+                                                   required type="password">
                                             <div class="invalid-feedback">Please enter a password</div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
-                                        <b-button type="button" variant="success" class="btn-label right ms-auto nexttab
-nexttab" data-nexttab="pills-info-desc-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to
-                                            more info</b-button>
+                                        <b-button class="btn-label right ms-auto nexttab
+nexttab" data-nexttab="pills-info-desc-tab" type="button" variant="success"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to
+                                            more info
+                                        </b-button>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="pills-info-desc" role="tabpanel"
-                                    aria-labelledby="pills-info-desc-tab">
+                                <div id="pills-info-desc" aria-labelledby="pills-info-desc-tab" class="tab-pane fade"
+                                     role="tabpanel">
                                     <div>
                                         <div class="text-center">
                                             <div class="profile-user position-relative d-inline-block mx-auto mb-2">
-                                                <img src="@/assets/images/users/user-dummy-img.jpg"
-                                                    class="rounded-circle avatar-lg img-thumbnail user-profile-image"
-                                                    alt="user-profile-image">
+                                                <img alt="user-profile-image"
+                                                     class="rounded-circle avatar-lg img-thumbnail user-profile-image"
+                                                     src="@/assets/images/users/user-dummy-img.jpg">
                                                 <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
-                                                    <input id="profile-img-file-input" type="file"
-                                                        class="profile-img-file-input" accept="image/png, image/jpeg">
-                                                    <label for="profile-img-file-input"
-                                                        class="profile-photo-edit avatar-xs">
+                                                    <input id="profile-img-file-input" accept="image/png, image/jpeg"
+                                                           class="profile-img-file-input"
+                                                           type="file">
+                                                    <label class="profile-photo-edit avatar-xs"
+                                                           for="profile-img-file-input">
                                                         <span class="avatar-title rounded-circle bg-light text-body">
                                                             <i class="ri-camera-fill"></i>
                                                         </span>
@@ -217,32 +225,34 @@ nexttab" data-nexttab="pills-info-desc-tab"><i class="ri-arrow-right-line label-
                                         </div>
                                         <div>
                                             <label class="form-label"
-                                                for="gen-info-description-input">Description</label>
-                                            <textarea class="form-control" placeholder="Enter Description"
-                                                id="gen-info-description-input" rows="2" required></textarea>
+                                                   for="gen-info-description-input">Description</label>
+                                            <textarea id="gen-info-description-input" class="form-control"
+                                                      placeholder="Enter Description" required rows="2"></textarea>
                                             <div class="invalid-feedback">Please enter a description</div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
-                                        <b-button variant="link" type="button"
-                                            class="text-decoration-none btn-label previestab"
-                                            data-previous="pills-gen-info-tab"><i
-                                                class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back
-                                            to General</b-button>
-                                        <b-button type="button" variant="success" class="btn-label right ms-auto nexttab
-nexttab" data-nexttab="pills-success-tab"><i
-                                                class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit</b-button>
+                                        <b-button class="text-decoration-none btn-label previestab" data-previous="pills-gen-info-tab"
+                                                  type="button"
+                                                  variant="link"><i
+                                            class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back
+                                            to General
+                                        </b-button>
+                                        <b-button class="btn-label right ms-auto nexttab
+nexttab" data-nexttab="pills-success-tab" type="button" variant="success"><i
+                                            class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit
+                                        </b-button>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="pills-success" role="tabpanel"
-                                    aria-labelledby="pills-success-tab">
+                                <div id="pills-success" aria-labelledby="pills-success-tab" class="tab-pane fade"
+                                     role="tabpanel">
                                     <div>
                                         <div class="text-center">
 
                                             <div class="mb-4">
-                                                <lottie colors="primary:#0ab39c,secondary:#405189"
-                                                    :options="defaultOptions" :height="120" :width="120" />
+                                                <lottie :height="120"
+                                                        :options="defaultOptions" :width="120" colors="primary:#0ab39c,secondary:#405189"/>
                                             </div>
                                             <h5>Well Done !</h5>
                                             <p class="text-muted">You have Successfully Signed Up</p>
@@ -261,109 +271,121 @@ nexttab" data-nexttab="pills-success-tab"><i
                         <b-card-title class="mb-0">Arrow Nav Steps</b-card-title>
                     </b-card-header>
                     <b-card-body>
-                        <form action="#" class="form-steps" autocomplete="off">
+                        <form action="#" autocomplete="off" class="form-steps">
                             <div class="text-center pt-3 pb-4 mb-1">
-                                <img src="@/assets/images/logo-dark.png" alt="" height="17">
+                                <img alt="" height="17" src="@/assets/images/logo-dark.png">
                             </div>
                             <div class="step-arrow-nav mb-4">
 
                                 <ul class="nav nav-pills custom-nav nav-justified" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <b-button variant="link" class="nav-link done" id="steparrow-gen-info-tab" data-bs-toggle="pill"
-                                            data-bs-target="#steparrow-gen-info" type="button" role="tab"
-                                            aria-controls="steparrow-gen-info" aria-selected="true">General</b-button>
+                                        <b-button id="steparrow-gen-info-tab" aria-controls="steparrow-gen-info" aria-selected="true"
+                                                  class="nav-link done"
+                                                  data-bs-target="#steparrow-gen-info" data-bs-toggle="pill" role="tab"
+                                                  type="button" variant="link">General
+                                        </b-button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <b-button variant="link" class="nav-link active" id="steparrow-description-info-tab"
-                                            data-bs-toggle="pill" data-bs-target="#steparrow-description-info"
-                                            type="button" role="tab" aria-controls="steparrow-description-info"
-                                            aria-selected="false">Description</b-button>
+                                        <b-button id="steparrow-description-info-tab" aria-controls="steparrow-description-info"
+                                                  aria-selected="false"
+                                                  class="nav-link active" data-bs-target="#steparrow-description-info"
+                                                  data-bs-toggle="pill" role="tab" type="button"
+                                                  variant="link">Description
+                                        </b-button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <b-button variant="link" class="nav-link" id="pills-experience-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-experience" type="button" role="tab"
-                                            aria-controls="pills-experience" aria-selected="false">Finish</b-button>
+                                        <b-button id="pills-experience-tab" aria-controls="pills-experience" aria-selected="false"
+                                                  class="nav-link"
+                                                  data-bs-target="#pills-experience" data-bs-toggle="pill" role="tab"
+                                                  type="button" variant="link">Finish
+                                        </b-button>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="tab-content">
-                                <div class="tab-pane fade" id="steparrow-gen-info" role="tabpanel"
-                                    aria-labelledby="steparrow-gen-info-tab">
+                                <div id="steparrow-gen-info" aria-labelledby="steparrow-gen-info-tab" class="tab-pane fade"
+                                     role="tabpanel">
                                     <div>
                                         <b-row>
                                             <b-col lg="6">
                                                 <div class="mb-3">
                                                     <label class="form-label"
-                                                        for="steparrow-gen-info-email-input">Email</label>
-                                                    <input type="email" class="form-control"
-                                                        id="steparrow-gen-info-email-input" placeholder="Enter email"
-                                                        required>
+                                                           for="steparrow-gen-info-email-input">Email</label>
+                                                    <input id="steparrow-gen-info-email-input" class="form-control"
+                                                           placeholder="Enter email" required
+                                                           type="email">
                                                     <div class="invalid-feedback">Please enter an email address</div>
                                                 </div>
                                             </b-col>
                                             <b-col lg="6">
                                                 <div class="mb-3">
                                                     <label class="form-label"
-                                                        for="steparrow-gen-info-username-input">User Name</label>
-                                                    <input type="text" class="form-control"
-                                                        id="steparrow-gen-info-username-input"
-                                                        placeholder="Enter user name" required>
+                                                           for="steparrow-gen-info-username-input">User Name</label>
+                                                    <input id="steparrow-gen-info-username-input" class="form-control"
+                                                           placeholder="Enter user name"
+                                                           required type="text">
                                                     <div class="invalid-feedback">Please enter a user name</div>
                                                 </div>
                                             </b-col>
                                         </b-row>
                                         <div class="mb-3">
                                             <label class="form-label"
-                                                for="steparrow-gen-info-password-input">Password</label>
-                                            <input type="password" class="form-control"
-                                                id="steparrow-gen-info-password-input" placeholder="Enter password"
-                                                required>
+                                                   for="steparrow-gen-info-password-input">Password</label>
+                                            <input id="steparrow-gen-info-password-input" class="form-control"
+                                                   placeholder="Enter password" required
+                                                   type="password">
                                             <div class="invalid-feedback">Please enter a password</div>
                                         </div>
                                         <div>
                                             <label class="form-label"
-                                                for="steparrow-gen-info-confirm-password-input">Confirm Password</label>
-                                            <input type="password" class="form-control"
-                                                id="steparrow-gen-info-confirm-password-input"
-                                                placeholder="Enter confirm password">
+                                                   for="steparrow-gen-info-confirm-password-input">Confirm
+                                                Password</label>
+                                            <input id="steparrow-gen-info-confirm-password-input" class="form-control"
+                                                   placeholder="Enter confirm password"
+                                                   type="password">
                                             <div class="invalid-feedback">Please enter a confirm password</div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
-                                        <b-button type="button" variant="success" class="btn-label right ms-auto nexttab nexttab" data-nexttab="steparrow-description-info-tab"><i
-                                                class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to
-                                            more info</b-button>
+                                        <b-button class="btn-label right ms-auto nexttab nexttab" data-nexttab="steparrow-description-info-tab"
+                                                  type="button"
+                                                  variant="success"><i
+                                            class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to
+                                            more info
+                                        </b-button>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade show active" id="steparrow-description-info" role="tabpanel"
-                                    aria-labelledby="steparrow-description-info-tab">
+                                <div id="steparrow-description-info" aria-labelledby="steparrow-description-info-tab" class="tab-pane fade show active"
+                                     role="tabpanel">
                                     <div>
                                         <div class="mb-3">
-                                            <label for="formFile" class="form-label">Upload Image</label>
-                                            <input class="form-control" type="file" id="formFile">
+                                            <label class="form-label" for="formFile">Upload Image</label>
+                                            <input id="formFile" class="form-control" type="file">
                                         </div>
                                         <div>
                                             <label class="form-label"
-                                                for="des-info-description-input">Description</label>
-                                            <textarea class="form-control" placeholder="Enter Description"
-                                                id="des-info-description-input" rows="3" required></textarea>
+                                                   for="des-info-description-input">Description</label>
+                                            <textarea id="des-info-description-input" class="form-control"
+                                                      placeholder="Enter Description" required rows="3"></textarea>
                                             <div class="invalid-feedback">Please enter a description</div>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
-                                        <b-button type="button" variant="light" class="btn-label previestab"
-                                            data-previous="steparrow-gen-info-tab"><i
-                                                class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back
-                                            to General</b-button>
-                                        <b-button type="button" variant="success" class="btn-label right ms-auto nexttab
-nexttab" data-nexttab="pills-experience-tab"><i
-                                                class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit</b-button>
+                                        <b-button class="btn-label previestab" data-previous="steparrow-gen-info-tab" type="button"
+                                                  variant="light"><i
+                                            class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back
+                                            to General
+                                        </b-button>
+                                        <b-button class="btn-label right ms-auto nexttab
+nexttab" data-nexttab="pills-experience-tab" type="button" variant="success"><i
+                                            class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit
+                                        </b-button>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="pills-experience" role="tabpanel">
+                                <div id="pills-experience" class="tab-pane fade" role="tabpanel">
                                     <div class="text-center">
 
                                         <div class="avatar-md mt-5 mb-4 mx-auto">
@@ -392,38 +414,42 @@ nexttab" data-nexttab="pills-experience-tab"><i
                         <form class="vertical-navs-step">
                             <b-row class="gy-5">
                                 <b-col lg="3">
-                                    <div class="nav flex-column custom-nav nav-pills" role="tablist"
-                                        aria-orientation="vertical">
-                                        <b-button variant="link" class="nav-link done" id="v-pills-bill-info-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-bill-info" type="button" role="tab"
-                                            aria-controls="v-pills-bill-info" aria-selected="true">
+                                    <div aria-orientation="vertical" class="nav flex-column custom-nav nav-pills"
+                                         role="tablist">
+                                        <b-button id="v-pills-bill-info-tab" aria-controls="v-pills-bill-info" aria-selected="true"
+                                                  class="nav-link done"
+                                                  data-bs-target="#v-pills-bill-info" data-bs-toggle="pill" role="tab"
+                                                  type="button" variant="link">
                                             <span class="step-title me-2">
                                                 <i class="ri-close-circle-fill step-icon me-2"></i>
                                                 Step 1
                                             </span>
                                             Billing Info
                                         </b-button>
-                                        <b-button variant="link" class="nav-link active" id="v-pills-bill-address-tab"
-                                            data-bs-toggle="pill" data-bs-target="#v-pills-bill-address" type="button"
-                                            role="tab" aria-controls="v-pills-bill-address" aria-selected="false">
+                                        <b-button id="v-pills-bill-address-tab" aria-controls="v-pills-bill-address" aria-selected="false"
+                                                  class="nav-link active" data-bs-target="#v-pills-bill-address"
+                                                  data-bs-toggle="pill"
+                                                  role="tab" type="button" variant="link">
                                             <span class="step-title me-2">
                                                 <i class="ri-close-circle-fill step-icon me-2"></i>
                                                 Step 2
                                             </span>
                                             Address
                                         </b-button>
-                                        <b-button variant="link" class="nav-link" id="v-pills-payment-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-payment" type="button" role="tab"
-                                            aria-controls="v-pills-payment" aria-selected="false">
+                                        <b-button id="v-pills-payment-tab" aria-controls="v-pills-payment" aria-selected="false"
+                                                  class="nav-link"
+                                                  data-bs-target="#v-pills-payment" data-bs-toggle="pill" role="tab"
+                                                  type="button" variant="link">
                                             <span class="step-title me-2">
                                                 <i class="ri-close-circle-fill step-icon me-2"></i>
                                                 Step 3
                                             </span>
                                             Payment
                                         </b-button>
-                                        <b-button variant="link" class="nav-link" id="v-pills-finish-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-finish" type="button" role="tab"
-                                            aria-controls="v-pills-finish" aria-selected="false">
+                                        <b-button id="v-pills-finish-tab" aria-controls="v-pills-finish" aria-selected="false"
+                                                  class="nav-link"
+                                                  data-bs-target="#v-pills-finish" data-bs-toggle="pill" role="tab"
+                                                  type="button" variant="link">
                                             <span class="step-title me-2">
                                                 <i class="ri-close-circle-fill step-icon me-2"></i>
                                                 Step 4
@@ -435,8 +461,8 @@ nexttab" data-nexttab="pills-experience-tab"><i
                                 <b-col lg="6">
                                     <div class="px-lg-4">
                                         <div class="tab-content">
-                                            <div class="tab-pane fade" id="v-pills-bill-info" role="tabpanel"
-                                                aria-labelledby="v-pills-bill-info-tab">
+                                            <div id="v-pills-bill-info" aria-labelledby="v-pills-bill-info-tab" class="tab-pane fade"
+                                                 role="tabpanel">
                                                 <div>
                                                     <h5>Billing Info</h5>
                                                     <p class="text-muted">Fill all information below</p>
@@ -445,50 +471,51 @@ nexttab" data-nexttab="pills-experience-tab"><i
                                                 <div>
                                                     <b-row class="g-3">
                                                         <b-col sm="6">
-                                                            <label for="firstName" class="form-label">First
+                                                            <label class="form-label" for="firstName">First
                                                                 name</label>
-                                                            <input type="text" class="form-control" id="firstName"
-                                                                placeholder="Enter first name" value="" required>
+                                                            <input id="firstName" class="form-control" placeholder="Enter first name"
+                                                                   required type="text" value="">
                                                             <div class="invalid-feedback">Please enter a first name
                                                             </div>
                                                         </b-col>
 
                                                         <b-col sm="6">
-                                                            <label for="lastName" class="form-label">Last
+                                                            <label class="form-label" for="lastName">Last
                                                                 name</label>
-                                                            <input type="text" class="form-control" id="lastName"
-                                                                placeholder="Enter Last Name" value="" required>
+                                                            <input id="lastName" class="form-control" placeholder="Enter Last Name"
+                                                                   required type="text" value="">
                                                             <div class="invalid-feedback">Please enter a last name</div>
                                                         </b-col>
 
                                                         <b-col cols="12">
-                                                            <label for="username" class="form-label">Username</label>
+                                                            <label class="form-label" for="username">Username</label>
                                                             <div class="input-group">
                                                                 <span class="input-group-text">@</span>
-                                                                <input type="text" class="form-control" id="username"
-                                                                    placeholder="Username" required>
+                                                                <input id="username" class="form-control" placeholder="Username"
+                                                                       required type="text">
                                                                 <div class="invalid-feedback">Please enter a user name
                                                                 </div>
                                                             </div>
                                                         </b-col>
 
                                                         <b-col cols="12">
-                                                            <label for="email" class="form-label">Email <span
-                                                                    class="text-muted">(Optional)</span></label>
-                                                            <input type="email" class="form-control" id="email"
-                                                                placeholder="Enter Email" />
+                                                            <label class="form-label" for="email">Email <span
+                                                                class="text-muted">(Optional)</span></label>
+                                                            <input id="email" class="form-control" placeholder="Enter Email"
+                                                                   type="email"/>
                                                         </b-col>
                                                     </b-row>
                                                 </div>
 
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <b-button type="button" variant="success" class="btn-label right ms-auto nexttab
-nexttab" data-nexttab="v-pills-bill-address-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go
-                                                        to Shipping</b-button>
+                                                    <b-button class="btn-label right ms-auto nexttab
+nexttab" data-nexttab="v-pills-bill-address-tab" type="button" variant="success"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go
+                                                        to Shipping
+                                                    </b-button>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade show active" id="v-pills-bill-address"
-                                                role="tabpanel" aria-labelledby="v-pills-bill-address-tab">
+                                            <div id="v-pills-bill-address" aria-labelledby="v-pills-bill-address-tab"
+                                                 class="tab-pane fade show active" role="tabpanel">
                                                 <div>
                                                     <h5>Shipping Address</h5>
                                                     <p class="text-muted">Fill all information below</p>
@@ -497,22 +524,22 @@ nexttab" data-nexttab="v-pills-bill-address-tab"><i class="ri-arrow-right-line l
                                                 <div>
                                                     <b-row class="g-3">
                                                         <b-col cols="12">
-                                                            <label for="address" class="form-label">Address</label>
-                                                            <input type="text" class="form-control" id="address"
-                                                                placeholder="1234 Main St" required>
+                                                            <label class="form-label" for="address">Address</label>
+                                                            <input id="address" class="form-control" placeholder="1234 Main St"
+                                                                   required type="text">
                                                             <div class="invalid-feedback">Please enter a address</div>
                                                         </b-col>
 
                                                         <b-col cols="12">
-                                                            <label for="address2" class="form-label">Address 2 <span
-                                                                    class="text-muted">(Optional)</span></label>
-                                                            <input type="text" class="form-control" id="address2"
-                                                                placeholder="Apartment or suite" />
+                                                            <label class="form-label" for="address2">Address 2 <span
+                                                                class="text-muted">(Optional)</span></label>
+                                                            <input id="address2" class="form-control" placeholder="Apartment or suite"
+                                                                   type="text"/>
                                                         </b-col>
 
                                                         <b-col md="5">
-                                                            <label for="country" class="form-label">Country</label>
-                                                            <select class="form-select" id="country" required>
+                                                            <label class="form-label" for="country">Country</label>
+                                                            <select id="country" class="form-select" required>
                                                                 <option value="">Choose...</option>
                                                                 <option>United States</option>
                                                             </select>
@@ -520,8 +547,8 @@ nexttab" data-nexttab="v-pills-bill-address-tab"><i class="ri-arrow-right-line l
                                                         </b-col>
 
                                                         <b-col md="4">
-                                                            <label for="state" class="form-label">State</label>
-                                                            <select class="form-select" id="state">
+                                                            <label class="form-label" for="state">State</label>
+                                                            <select id="state" class="form-select">
                                                                 <option value="">Choose...</option>
                                                                 <option>California</option>
                                                             </select>
@@ -529,39 +556,41 @@ nexttab" data-nexttab="v-pills-bill-address-tab"><i class="ri-arrow-right-line l
                                                         </b-col>
 
                                                         <b-col md="3">
-                                                            <label for="zip" class="form-label">Zip</label>
-                                                            <input type="text" class="form-control" id="zip"
-                                                                placeholder="" />
+                                                            <label class="form-label" for="zip">Zip</label>
+                                                            <input id="zip" class="form-control" placeholder=""
+                                                                   type="text"/>
                                                         </b-col>
                                                     </b-row>
 
                                                     <hr class="my-4 text-muted">
 
                                                     <div class="form-check mb-2">
-                                                        <input type="checkbox" class="form-check-input"
-                                                            id="same-address">
+                                                        <input id="same-address" class="form-check-input"
+                                                               type="checkbox">
                                                         <label class="form-check-label" for="same-address">Shipping
                                                             address is the same as my billing address</label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="save-info">
+                                                        <input id="save-info" class="form-check-input" type="checkbox">
                                                         <label class="form-check-label" for="save-info">Save this
                                                             information for next time</label>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <b-button variant="light" type="button" class="btn-label previestab"
-                                                        data-previous="v-pills-bill-info-tab"><i
-                                                            class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i>
-                                                        Back to Billing Info</b-button>
-                                                    <b-button type="button" variant="success" class="btn-label right ms-auto nexttab
-nexttab" data-nexttab="v-pills-payment-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to
-                                                        Payment</b-button>
+                                                    <b-button class="btn-label previestab" data-previous="v-pills-bill-info-tab" type="button"
+                                                              variant="light"><i
+                                                        class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i>
+                                                        Back to Billing Info
+                                                    </b-button>
+                                                    <b-button class="btn-label right ms-auto nexttab
+nexttab" data-nexttab="v-pills-payment-tab" type="button" variant="success"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to
+                                                        Payment
+                                                    </b-button>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="v-pills-payment" role="tabpanel"
-                                                aria-labelledby="v-pills-payment-tab">
+                                            <div id="v-pills-payment" aria-labelledby="v-pills-payment-tab" class="tab-pane fade"
+                                                 role="tabpanel">
                                                 <div>
                                                     <h5>Payment</h5>
                                                     <p class="text-muted">Fill all information below</p>
@@ -570,30 +599,30 @@ nexttab" data-nexttab="v-pills-payment-tab"><i class="ri-arrow-right-line label-
                                                 <div>
                                                     <div class="my-3">
                                                         <div class="form-check form-check-inline">
-                                                            <input id="credit" name="paymentMethod" type="radio"
-                                                                class="form-check-input" checked required>
+                                                            <input id="credit" checked class="form-check-input"
+                                                                   name="paymentMethod" required type="radio">
                                                             <label class="form-check-label" for="credit">Credit
                                                                 card</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                            <input id="debit" name="paymentMethod" type="radio"
-                                                                class="form-check-input" required>
+                                                            <input id="debit" class="form-check-input" name="paymentMethod"
+                                                                   required type="radio">
                                                             <label class="form-check-label" for="debit">Debit
                                                                 card</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                            <input id="paypal" name="paymentMethod" type="radio"
-                                                                class="form-check-input" required>
+                                                            <input id="paypal" class="form-check-input" name="paymentMethod"
+                                                                   required type="radio">
                                                             <label class="form-check-label" for="paypal">PayPal</label>
                                                         </div>
                                                     </div>
 
                                                     <b-row class="gy-3">
                                                         <b-col md="12">
-                                                            <label for="cc-name" class="form-label">Name on
+                                                            <label class="form-label" for="cc-name">Name on
                                                                 card</label>
-                                                            <input type="text" class="form-control" id="cc-name"
-                                                                placeholder="" required>
+                                                            <input id="cc-name" class="form-control" placeholder=""
+                                                                   required type="text">
                                                             <small class="text-muted">Full name as displayed on
                                                                 card</small>
                                                             <div class="invalid-feedback">
@@ -602,29 +631,29 @@ nexttab" data-nexttab="v-pills-payment-tab"><i class="ri-arrow-right-line label-
                                                         </b-col>
 
                                                         <b-col md="6">
-                                                            <label for="cc-number" class="form-label">Credit card
+                                                            <label class="form-label" for="cc-number">Credit card
                                                                 number</label>
-                                                            <input type="text" class="form-control" id="cc-number"
-                                                                placeholder="" required>
+                                                            <input id="cc-number" class="form-control" placeholder=""
+                                                                   required type="text">
                                                             <div class="invalid-feedback">
                                                                 Credit card number is required
                                                             </div>
                                                         </b-col>
 
                                                         <b-col md="3">
-                                                            <label for="cc-expiration"
-                                                                class="form-label">Expiration</label>
-                                                            <input type="text" class="form-control" id="cc-expiration"
-                                                                placeholder="" required>
+                                                            <label class="form-label"
+                                                                   for="cc-expiration">Expiration</label>
+                                                            <input id="cc-expiration" class="form-control" placeholder=""
+                                                                   required type="text">
                                                             <div class="invalid-feedback">
                                                                 Expiration date required
                                                             </div>
                                                         </b-col>
 
                                                         <b-col md="3">
-                                                            <label for="cc-cvv" class="form-label">CVV</label>
-                                                            <input type="text" class="form-control" id="cc-cvv"
-                                                                placeholder="" required>
+                                                            <label class="form-label" for="cc-cvv">CVV</label>
+                                                            <input id="cc-cvv" class="form-control" placeholder=""
+                                                                   required type="text">
                                                             <div class="invalid-feedback">
                                                                 Security code required
                                                             </div>
@@ -633,22 +662,24 @@ nexttab" data-nexttab="v-pills-payment-tab"><i class="ri-arrow-right-line label-
                                                 </div>
 
                                                 <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <b-button type="button" variant="light" class="btn-label previestab"
-                                                        data-previous="v-pills-bill-address-tab"><i
-                                                            class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i>
-                                                        Back to Shipping Info</b-button>
-                                                    <b-button type="button" variant="success" class="btn-label right ms-auto nexttab
-nexttab" data-nexttab="v-pills-finish-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i> Order
-                                                        Complete</b-button>
+                                                    <b-button class="btn-label previestab" data-previous="v-pills-bill-address-tab" type="button"
+                                                              variant="light"><i
+                                                        class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i>
+                                                        Back to Shipping Info
+                                                    </b-button>
+                                                    <b-button class="btn-label right ms-auto nexttab
+nexttab" data-nexttab="v-pills-finish-tab" type="button" variant="success"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i> Order
+                                                        Complete
+                                                    </b-button>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="v-pills-finish" role="tabpanel"
-                                                aria-labelledby="v-pills-finish-tab">
+                                            <div id="v-pills-finish" aria-labelledby="v-pills-finish-tab" class="tab-pane fade"
+                                                 role="tabpanel">
                                                 <div class="text-center pt-4 pb-2">
 
                                                     <div class="mb-4">
-                                                        <lottie colors="primary:#0ab39c,secondary:#405189"
-                                                            :options="defaultOptions" :height="120" :width="120" />
+                                                        <lottie :height="120"
+                                                                :options="defaultOptions" :width="120" colors="primary:#0ab39c,secondary:#405189"/>
                                                     </div>
                                                     <h5>Your Order is Completed !</h5>
                                                     <p class="text-muted">You Will receive an order confirmation
@@ -663,8 +694,8 @@ nexttab" data-nexttab="v-pills-finish-tab"><i class="ri-arrow-right-line label-i
                                 <b-col lg="3">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h5 class="fs-14 text-primary mb-0"><i
-                                                class="ri-shopping-cart-fill align-middle me-2"></i> Your cart</h5>
-                                        <b-badge variant="danger" pill class="rounded-pill">3</b-badge>
+                                            class="ri-shopping-cart-fill align-middle me-2"></i> Your cart</h5>
+                                        <b-badge class="rounded-pill" pill variant="danger">3</b-badge>
                                     </div>
                                     <ul class="list-group mb-3">
                                         <li class="list-group-item d-flex justify-content-between lh-sm">

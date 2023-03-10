@@ -104,7 +104,7 @@
         padding-left: 48px;
         padding-right: 0px;
 
-        &.right,  &.left {
+        &.right, &.left {
             left: 0%;
 
             .icon {
@@ -163,6 +163,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+
             span {
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
@@ -204,7 +205,7 @@
         border-radius: 6px;
         background: var(--#{$prefix}card-bg-custom);
         max-width: 695px;
-        @media (max-width: 991.98px){
+        @media (max-width: 991.98px) {
             margin-right: 0;
         }
 
@@ -377,6 +378,7 @@
             font-size: 24px;
             color: $white;
         }
+
         &.swiper-button-disabled {
             background-color: rgba($primary, 0.5);
             opacity: 1;
@@ -434,10 +436,11 @@
             top: 5px;
             z-index: 0;
         }
+
         &:last-child {
-           &::before {
-               border-color: transparent;
-           }
+            &::before {
+                border-color: transparent;
+            }
         }
     }
 }

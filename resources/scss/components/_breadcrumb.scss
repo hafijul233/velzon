@@ -1,4 +1,4 @@
-// 
+//
 // breadcrumb.scss
 //
 
@@ -8,7 +8,8 @@
     > a {
         color: var(--#{$variable-prefix}gray-700);
     }
-    +.breadcrumb-item {
+
+    + .breadcrumb-item {
         &::before {
             font-family: "Material Design Icons";
             font-size: 15px;
@@ -16,4 +17,3 @@
         }
     }
 }
-  

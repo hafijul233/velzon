@@ -10,10 +10,10 @@ export default {
                 text: "NFT Marketplace",
                 href: "/",
             },
-            {
-                text: "Creators",
-                active: true,
-            },
+                {
+                    text: "Creators",
+                    active: true,
+                },
             ],
         };
     },
@@ -21,9 +21,7 @@ export default {
         Layout,
         PageHeader,
     },
-    methods: {
-
-    },
+    methods: {},
     mounted() {
 
     },
@@ -32,25 +30,26 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row class="g-4 mb-3">
             <b-col sm>
                 <div>
-                    <b-link href="/apps/projects-create" class="btn btn-success"><i
-                            class="ri-add-line align-bottom me-1"></i> Add New</b-link>
+                    <b-link class="btn btn-success" href="/apps/projects-create"><i
+                        class="ri-add-line align-bottom me-1"></i> Add New
+                    </b-link>
                 </div>
             </b-col>
             <b-col sm="auto">
                 <div class="d-flex justify-content-sm-end gap-2">
                     <div class="search-box ms-2">
-                        <input type="text" class="form-control" placeholder="Search...">
+                        <input class="form-control" placeholder="Search..." type="text">
                         <i class="ri-search-line search-icon"></i>
                     </div>
 
                     <select class="form-control w-md" data-choices data-choices-search-false>
                         <option value="All">All</option>
                         <option value="Today">Today</option>
-                        <option value="Yesterday" selected>Yesterday</option>
+                        <option selected value="Yesterday">Yesterday</option>
                         <option value="Last 7 Days">Last 7 Days</option>
                         <option value="Last 30 Days">Last 30 Days</option>
                         <option value="This Month">This Month</option>
@@ -61,12 +60,12 @@ export default {
         </b-row>
 
         <b-row>
-            <b-col xl="3" lg="4" md="6">
+            <b-col lg="4" md="6" xl="3">
                 <b-card no-body>
                     <b-card-body>
                         <div class="d-flex">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/nft/img-01.jpg" alt="" class="avatar-sm object-cover rounded">
+                                <img alt="" class="avatar-sm object-cover rounded" src="@/assets/images/nft/img-01.jpg">
                             </div>
                             <div class="ms-3 flex-grow-1">
                                 <b-link href="/pages/profile">
@@ -77,15 +76,19 @@ export default {
                             </div>
                             <div>
                                 <div class="dropdown float-end">
-                                    <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                            data-bs-toggle="dropdown" type="button">
                                         <i class="ri-more-fill align-middle fs-16"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><b-link class="dropdown-item view-item-btn"
-                                                href="javascript:void(0);">Share</b-link>
+                                        <li>
+                                            <b-link class="dropdown-item view-item-btn"
+                                                    href="javascript:void(0);">Share
+                                            </b-link>
                                         </li>
-                                        <li><b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link></li>
+                                        <li>
+                                            <b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -93,13 +96,13 @@ export default {
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="3" lg="4" md="6">
+            <b-col lg="4" md="6" xl="3">
                 <b-card no-body>
                     <b-card-body>
                         <div class="d-flex">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                    class="avatar-sm object-cover rounded">
+                                <img alt="" class="avatar-sm object-cover rounded"
+                                     src="@/assets/images/users/avatar-5.jpg">
                             </div>
                             <div class="ms-3 flex-grow-1">
                                 <b-link href="/pages/profile">
@@ -110,15 +113,19 @@ export default {
                             </div>
                             <div>
                                 <div class="dropdown float-end">
-                                    <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                            data-bs-toggle="dropdown" type="button">
                                         <i class="ri-more-fill align-middle fs-16"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><b-link class="dropdown-item view-item-btn"
-                                                href="javascript:void(0);">Share</b-link>
+                                        <li>
+                                            <b-link class="dropdown-item view-item-btn"
+                                                    href="javascript:void(0);">Share
+                                            </b-link>
                                         </li>
-                                        <li><b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link></li>
+                                        <li>
+                                            <b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -126,12 +133,12 @@ export default {
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="3" lg="4" md="6">
+            <b-col lg="4" md="6" xl="3">
                 <b-card no-body>
                     <b-card-body>
                         <div class="d-flex">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/nft/img-06.jpg" alt="" class="avatar-sm object-cover rounded">
+                                <img alt="" class="avatar-sm object-cover rounded" src="@/assets/images/nft/img-06.jpg">
                             </div>
                             <div class="ms-3 flex-grow-1">
                                 <b-link href="/pages/profile">
@@ -142,15 +149,19 @@ export default {
                             </div>
                             <div>
                                 <div class="dropdown float-end">
-                                    <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                            data-bs-toggle="dropdown" type="button">
                                         <i class="ri-more-fill align-middle fs-16"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><b-link class="dropdown-item view-item-btn"
-                                                href="javascript:void(0);">Share</b-link>
+                                        <li>
+                                            <b-link class="dropdown-item view-item-btn"
+                                                    href="javascript:void(0);">Share
+                                            </b-link>
                                         </li>
-                                        <li><b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link></li>
+                                        <li>
+                                            <b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -158,13 +169,13 @@ export default {
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="3" lg="4" md="6">
+            <b-col lg="4" md="6" xl="3">
                 <b-card no-body>
                     <b-card-body>
                         <div class="d-flex">
                             <div class="flex-shrink-0">
-                                <img src="https://img.themesbrand.com/velzon/images/img-5.gif" alt=""
-                                    class="avatar-sm object-cover rounded">
+                                <img alt="" class="avatar-sm object-cover rounded"
+                                     src="https://img.themesbrand.com/velzon/images/img-5.gif">
                             </div>
                             <div class="ms-3 flex-grow-1">
                                 <b-link href="/pages/profile">
@@ -175,15 +186,19 @@ export default {
                             </div>
                             <div>
                                 <div class="dropdown float-end">
-                                    <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                            data-bs-toggle="dropdown" type="button">
                                         <i class="ri-more-fill align-middle fs-16"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><b-link class="dropdown-item view-item-btn"
-                                                href="javascript:void(0);">Share</b-link>
+                                        <li>
+                                            <b-link class="dropdown-item view-item-btn"
+                                                    href="javascript:void(0);">Share
+                                            </b-link>
                                         </li>
-                                        <li><b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link></li>
+                                        <li>
+                                            <b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -191,13 +206,13 @@ export default {
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="3" lg="4" md="6">
+            <b-col lg="4" md="6" xl="3">
                 <b-card no-body>
                     <b-card-body>
                         <div class="d-flex">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                    class="avatar-sm object-cover rounded">
+                                <img alt="" class="avatar-sm object-cover rounded"
+                                     src="@/assets/images/users/avatar-8.jpg">
                             </div>
                             <div class="ms-3 flex-grow-1">
                                 <b-link href="/pages/profile">
@@ -208,15 +223,19 @@ export default {
                             </div>
                             <div>
                                 <div class="dropdown float-end">
-                                    <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                            data-bs-toggle="dropdown" type="button">
                                         <i class="ri-more-fill align-middle fs-16"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><b-link class="dropdown-item view-item-btn"
-                                                href="javascript:void(0);">Share</b-link>
+                                        <li>
+                                            <b-link class="dropdown-item view-item-btn"
+                                                    href="javascript:void(0);">Share
+                                            </b-link>
                                         </li>
-                                        <li><b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link></li>
+                                        <li>
+                                            <b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -224,12 +243,12 @@ export default {
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="3" lg="4" md="6">
+            <b-col lg="4" md="6" xl="3">
                 <b-card no-body>
                     <b-card-body>
                         <div class="d-flex">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/nft/img-04.jpg" alt="" class="avatar-sm object-cover rounded">
+                                <img alt="" class="avatar-sm object-cover rounded" src="@/assets/images/nft/img-04.jpg">
                             </div>
                             <div class="ms-3 flex-grow-1">
                                 <b-link href="/pages/profile">
@@ -240,15 +259,19 @@ export default {
                             </div>
                             <div>
                                 <div class="dropdown float-end">
-                                    <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                            data-bs-toggle="dropdown" type="button">
                                         <i class="ri-more-fill align-middle fs-16"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><b-link class="dropdown-item view-item-btn"
-                                                href="javascript:void(0);">Share</b-link>
+                                        <li>
+                                            <b-link class="dropdown-item view-item-btn"
+                                                    href="javascript:void(0);">Share
+                                            </b-link>
                                         </li>
-                                        <li><b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link></li>
+                                        <li>
+                                            <b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -256,12 +279,12 @@ export default {
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="3" lg="4" md="6">
+            <b-col lg="4" md="6" xl="3">
                 <b-card no-body>
                     <b-card-body>
                         <div class="d-flex">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/nft/img-05.jpg" alt="" class="avatar-sm object-cover rounded">
+                                <img alt="" class="avatar-sm object-cover rounded" src="@/assets/images/nft/img-05.jpg">
                             </div>
                             <div class="ms-3 flex-grow-1">
                                 <b-link href="/pages/profile">
@@ -272,15 +295,19 @@ export default {
                             </div>
                             <div>
                                 <div class="dropdown float-end">
-                                    <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                            data-bs-toggle="dropdown" type="button">
                                         <i class="ri-more-fill align-middle fs-16"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><b-link class="dropdown-item view-item-btn"
-                                                href="javascript:void(0);">Share</b-link>
+                                        <li>
+                                            <b-link class="dropdown-item view-item-btn"
+                                                    href="javascript:void(0);">Share
+                                            </b-link>
                                         </li>
-                                        <li><b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link></li>
+                                        <li>
+                                            <b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -288,12 +315,12 @@ export default {
                     </b-card-body>
                 </b-card>
             </b-col>
-            <b-col xl="3" lg="4" md="6">
+            <b-col lg="4" md="6" xl="3">
                 <b-card no-body>
                     <b-card-body>
                         <div class="d-flex">
                             <div class="flex-shrink-0">
-                                <img src="@/assets/images/nft/img-02.jpg" alt="" class="avatar-sm object-cover rounded">
+                                <img alt="" class="avatar-sm object-cover rounded" src="@/assets/images/nft/img-02.jpg">
                             </div>
                             <div class="ms-3 flex-grow-1">
                                 <b-link href="/pages/profile">
@@ -304,15 +331,19 @@ export default {
                             </div>
                             <div>
                                 <div class="dropdown float-end">
-                                    <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                            data-bs-toggle="dropdown" type="button">
                                         <i class="ri-more-fill align-middle fs-16"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><b-link class="dropdown-item view-item-btn"
-                                                href="javascript:void(0);">Share</b-link>
+                                        <li>
+                                            <b-link class="dropdown-item view-item-btn"
+                                                    href="javascript:void(0);">Share
+                                            </b-link>
                                         </li>
-                                        <li><b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link></li>
+                                        <li>
+                                            <b-link class="dropdown-item edit-item-btn" href="#!">Report</b-link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -331,165 +362,175 @@ export default {
         <b-row class="row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1">
             <b-col>
                 <b-card no-body>
-                    <img src="@/assets/images/nft/img-03.jpg" alt="" class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top" height="120" src="@/assets/images/nft/img-03.jpg">
                     <b-card-body class="text-center">
-                        <img src="@/assets/images/users/avatar-2.jpg" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="@/assets/images/users/avatar-2.jpg">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Michael Morris</h5>
                         </b-link>
                         <p class="text-muted mb-2">9784 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="soft-success" class="w-100">Unfollow</b-button>
+                        <b-button class="w-100" variant="soft-success">Unfollow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="https://img.themesbrand.com/velzon/images/img-2.gif" alt=""
-                        class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top"
+                         height="120" src="https://img.themesbrand.com/velzon/images/img-2.gif">
                     <b-card-body class="text-center">
-                        <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="@/assets/images/users/avatar-6.jpg">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Charles Kubik</h5>
                         </b-link>
                         <p class="text-muted mb-2">4678 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="success" class="w-100">Follow</b-button>
+                        <b-button class="w-100" variant="success">Follow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="@/assets/images/nft/img-05.jpg" alt="" class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top" height="120" src="@/assets/images/nft/img-05.jpg">
                     <b-card-body class="text-center">
-                        <img src="@/assets/images/nft/img-06.jpg" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="@/assets/images/nft/img-06.jpg">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Alexis Clarke</h5>
                         </b-link>
                         <p class="text-muted mb-2">861 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="soft-success" class="w-100">Unfollow</b-button>
+                        <b-button class="w-100" variant="soft-success">Unfollow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="@/assets/images/nft/img-06.jpg" alt="" class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top" height="120" src="@/assets/images/nft/img-06.jpg">
                     <b-card-body class="text-center">
-                        <img src="https://img.themesbrand.com/velzon/images/img-1.gif" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="https://img.themesbrand.com/velzon/images/img-1.gif">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">James Morris</h5>
                         </b-link>
                         <p class="text-muted mb-2">30174 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="soft-success" class="w-100">Unfollow</b-button>
+                        <b-button class="w-100" variant="soft-success">Unfollow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="https://img.themesbrand.com/velzon/images/img-3.gif" alt=""
-                        class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top"
+                         height="120" src="https://img.themesbrand.com/velzon/images/img-3.gif">
                     <b-card-body class="text-center">
-                        <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="@/assets/images/users/avatar-8.jpg">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Herbert Stokes</h5>
                         </b-link>
                         <p class="text-muted mb-2">6487 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="success" class="w-100">Follow</b-button>
+                        <b-button class="w-100" variant="success">Follow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="@/assets/images/nft/img-03.jpg" alt="" class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top" height="120" src="@/assets/images/nft/img-03.jpg">
                     <b-card-body class="text-center">
-                        <img src="@/assets/images/users/avatar-2.jpg" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="@/assets/images/users/avatar-2.jpg">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Michael Morris</h5>
                         </b-link>
                         <p class="text-muted mb-2">10137/ Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="soft-success" class="w-100">Unfollow</b-button>
+                        <b-button class="w-100" variant="soft-success">Unfollow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="https://img.themesbrand.com/velzon/images/img-2.gif" alt=""
-                        class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top"
+                         height="120" src="https://img.themesbrand.com/velzon/images/img-2.gif">
                     <b-card-body class="text-center">
-                        <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="@/assets/images/users/avatar-6.jpg">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Tonya Noble</h5>
                         </b-link>
                         <p class="text-muted mb-2">364 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="success" class="w-100">Follow</b-button>
+                        <b-button class="w-100" variant="success">Follow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="@/assets/images/nft/img-05.jpg" alt="" class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top" height="120" src="@/assets/images/nft/img-05.jpg">
                     <b-card-body class="text-center">
-                        <img src="@/assets/images/nft/img-06.jpg" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="@/assets/images/nft/img-06.jpg">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Nancy Martino</h5>
                         </b-link>
                         <p class="text-muted mb-2">9513 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="soft-success" class="w-100">Unfollow</b-button>
+                        <b-button class="w-100" variant="soft-success">Unfollow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="@/assets/images/nft/img-01.jpg" alt="" class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top" height="120" src="@/assets/images/nft/img-01.jpg">
                     <b-card-body class="text-center">
-                        <img src="https://img.themesbrand.com/velzon/images/img-1.gif" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="https://img.themesbrand.com/velzon/images/img-1.gif">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Kevin Dawson</h5>
                         </b-link>
                         <p class="text-muted mb-2">6374 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="success" class="w-100">Follow</b-button>
+                        <b-button class="w-100" variant="success">Follow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
             <b-col>
                 <b-card no-body>
-                    <img src="https://img.themesbrand.com/velzon/images/img-4.gif" alt=""
-                        class="object-cover card-img-top" height="120">
+                    <img alt="" class="object-cover card-img-top"
+                         height="120" src="https://img.themesbrand.com/velzon/images/img-4.gif">
                     <b-card-body class="text-center">
-                        <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                            class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block">
+                        <img alt=""
+                             class="avatar-md rounded-circle object-cover mt-n5 border border-5 border-white mx-auto d-block"
+                             src="@/assets/images/users/avatar-10.jpg">
                         <b-link href="/pages/profile">
                             <h5 class="mt-2 mb-1">Glen Matney</h5>
                         </b-link>
                         <p class="text-muted mb-2">7809 Products</p>
                         <p class="text-muted">You can make an NFT of a digital painting, a text, a piece of music, a
                             video.</p>
-                        <b-button variant="soft-success" class="w-100">Unfollow</b-button>
+                        <b-button class="w-100" variant="soft-success">Unfollow</b-button>
                     </b-card-body>
                 </b-card>
             </b-col>
@@ -499,33 +540,33 @@ export default {
             <b-col sm="6">
                 <div>
                     <p class="mb-sm-0 text-muted">Showing <span class="fw-semibold">1</span> to <span
-                            class="fw-semibold">10</span> of <span
-                            class="fw-semibold text-decoration-underline">12</span> entries</p>
+                        class="fw-semibold">10</span> of <span
+                        class="fw-semibold text-decoration-underline">12</span> entries</p>
                 </div>
             </b-col>
 
             <b-col sm="6">
                 <ul class="pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
                     <li class="page-item disabled">
-                        <b-link href="#" class="page-link">Previous</b-link>
+                        <b-link class="page-link" href="#">Previous</b-link>
                     </li>
                     <li class="page-item active">
-                        <b-link href="#" class="page-link">1</b-link>
+                        <b-link class="page-link" href="#">1</b-link>
                     </li>
                     <li class="page-item ">
-                        <b-link href="#" class="page-link">2</b-link>
+                        <b-link class="page-link" href="#">2</b-link>
                     </li>
                     <li class="page-item">
-                        <b-link href="#" class="page-link">3</b-link>
+                        <b-link class="page-link" href="#">3</b-link>
                     </li>
                     <li class="page-item">
-                        <b-link href="#" class="page-link">4</b-link>
+                        <b-link class="page-link" href="#">4</b-link>
                     </li>
                     <li class="page-item">
-                        <b-link href="#" class="page-link">5</b-link>
+                        <b-link class="page-link" href="#">5</b-link>
                     </li>
                     <li class="page-item">
-                        <b-link href="#" class="page-link">Next</b-link>
+                        <b-link class="page-link" href="#">Next</b-link>
                     </li>
                 </ul>
             </b-col>

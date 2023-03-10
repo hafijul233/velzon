@@ -10,10 +10,10 @@ export default {
                 text: "Base UI",
                 href: "/",
             },
-            {
-                text: "Tabs",
-                active: true,
-            },
+                {
+                    text: "Tabs",
+                    active: true,
+                },
             ],
         };
     },
@@ -27,7 +27,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xxl="6">
                 <h5 class="mb-3">Default Tabs</h5>
@@ -37,32 +37,33 @@ export default {
 
                         <ul class="nav nav-tabs mb-3" role="tablist">
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#home" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab" href="#home"
+                                        role="tab">
                                     Home
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link active" data-bs-toggle="tab" href="#product1" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link active" data-bs-toggle="tab"
+                                        href="#product1"
+                                        role="tab">
                                     Product
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#messages" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab" href="#messages"
+                                        role="tab">
                                     Messages
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#settings" role="tab"
-                                    aria-selected="true">
+                                <b-link aria-selected="true" class="nav-link" data-bs-toggle="tab" href="#settings"
+                                        role="tab">
                                     Settings
                                 </b-link>
                             </li>
                         </ul>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane" id="home" role="tabpanel">
+                            <div id="home" class="tab-pane" role="tabpanel">
                                 <h6>Graphic Design</h6>
                                 <p class="mb-0">
                                     They all have something to say beyond the words on the page. They can come across as
@@ -71,7 +72,7 @@ export default {
                                     richardson ex squid.
                                 </p>
                             </div>
-                            <div class="tab-pane active" id="product1" role="tabpanel">
+                            <div id="product1" class="tab-pane active" role="tabpanel">
                                 <h6>Product</h6>
                                 <p class="mb-0">
                                     You've probably heard that opposites attract. The same is true for fonts. Don't be
@@ -80,7 +81,7 @@ export default {
                                     commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="messages" role="tabpanel">
+                            <div id="messages" class="tab-pane" role="tabpanel">
                                 <h6>Messages</h6>
                                 <p class="mb-0">
                                     Etsy mixtape wayfarers, ethical wes anderson tofu before they
@@ -90,7 +91,7 @@ export default {
                                     salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="settings" role="tabpanel">
+                            <div id="settings" class="tab-pane" role="tabpanel">
                                 <h6>Settings</h6>
                                 <p class="mb-0">
                                     Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
@@ -115,33 +116,36 @@ export default {
 
                         <ul class="nav nav-tabs nav-justified mb-3" role="tablist">
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#base-justified-home" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#base-justified-home"
+                                        role="tab">
                                     Home
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link active" data-bs-toggle="tab" href="#base-justified-product"
-                                    role="tab" aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link active" data-bs-toggle="tab"
+                                        href="#base-justified-product" role="tab">
                                     Product
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#base-justified-messages" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#base-justified-messages"
+                                        role="tab">
                                     Messages
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#base-justified-settings" role="tab"
-                                    aria-selected="true">
+                                <b-link aria-selected="true" class="nav-link" data-bs-toggle="tab"
+                                        href="#base-justified-settings"
+                                        role="tab">
                                     Settings
                                 </b-link>
                             </li>
                         </ul>
 
                         <div class="tab-content  text-muted">
-                            <div class="tab-pane" id="base-justified-home" role="tabpanel">
+                            <div id="base-justified-home" class="tab-pane" role="tabpanel">
                                 <h6>Graphic Design</h6>
                                 <p class="mb-0">
                                     They all have something to say beyond the words on the page. They can come across as
@@ -150,7 +154,7 @@ export default {
                                     richardson ex squid.
                                 </p>
                             </div>
-                            <div class="tab-pane active" id="product" role="tabpanel">
+                            <div id="product" class="tab-pane active" role="tabpanel">
                                 <h6>Product</h6>
                                 <p class="mb-0">
                                     You've probably heard that opposites attract. The same is true for fonts. Don't be
@@ -159,7 +163,7 @@ export default {
                                     commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="base-justified-messages" role="tabpanel">
+                            <div id="base-justified-messages" class="tab-pane" role="tabpanel">
                                 <h6>Messages</h6>
                                 <p class="mb-0">
                                     Etsy mixtape wayfarers, ethical wes anderson tofu before they
@@ -169,7 +173,7 @@ export default {
                                     salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="base-justified-settings" role="tabpanel">
+                            <div id="base-justified-settings" class="tab-pane" role="tabpanel">
                                 <h6>Settings</h6>
                                 <p class="mb-0">
                                     Trust fund seitan letterpress, keytar raw denim keffiyeh etsy
@@ -214,7 +218,7 @@ export default {
                         </ul>
 
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="home-1" role="tabpanel">
+                            <div id="home-1" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -235,7 +239,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="profile-1" role="tabpanel">
+                            <div id="profile-1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -255,7 +259,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="messages-1" role="tabpanel">
+                            <div id="messages-1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -275,7 +279,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="settings-1" role="tabpanel">
+                            <div id="settings-1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mt-2">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -311,32 +315,32 @@ export default {
                         <ul class="nav nav-pills nav-justified mb-3" role="tablist">
                             <li class="nav-item waves-effect waves-light">
                                 <b-link class="nav-link active" data-bs-toggle="tab" href="#pill-justified-home-1"
-                                    role="tab">
+                                        role="tab">
                                     Home
                                 </b-link>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#pill-justified-profile-1"
-                                    role="tab">
+                                        role="tab">
                                     Profile
                                 </b-link>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#pill-justified-messages-1"
-                                    role="tab">
+                                        role="tab">
                                     Messages
                                 </b-link>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#pill-justified-settings-1"
-                                    role="tab">
+                                        role="tab">
                                     Settings
                                 </b-link>
                             </li>
                         </ul>
 
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="pill-justified-home-1" role="tabpanel">
+                            <div id="pill-justified-home-1" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -357,7 +361,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="pill-justified-profile-1" role="tabpanel">
+                            <div id="pill-justified-profile-1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -377,7 +381,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="pill-justified-messages-1" role="tabpanel">
+                            <div id="pill-justified-messages-1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -397,7 +401,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="pill-justified-settings-1" role="tabpanel">
+                            <div id="pill-justified-settings-1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mt-2">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -431,30 +435,39 @@ export default {
                         <p class="text-muted">Use <code>flex-column</code> class to create Vertical nav tabs.</p>
                         <b-row>
                             <b-col md="3">
-                                <div class="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist"
-                                    aria-orientation="vertical">
-                                    <b-link class="nav-link mb-2 active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                        href="#v-pills-home" role="tab" aria-controls="v-pills-home"
-                                        aria-selected="true">Home</b-link>
-                                    <b-link class="nav-link mb-2" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                        href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
-                                        aria-selected="false">Profile</b-link>
-                                    <b-link class="nav-link mb-2" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                        href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
-                                        aria-selected="false">Messages</b-link>
-                                    <b-link class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
-                                        href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
-                                        aria-selected="false">Settings</b-link>
+                                <div id="v-pills-tab" aria-orientation="vertical"
+                                     class="nav flex-column nav-pills text-center"
+                                     role="tablist">
+                                    <b-link id="v-pills-home-tab" aria-controls="v-pills-home" aria-selected="true"
+                                            class="nav-link mb-2 active" data-bs-toggle="pill" href="#v-pills-home"
+                                            role="tab">Home
+                                    </b-link>
+                                    <b-link id="v-pills-profile-tab" aria-controls="v-pills-profile"
+                                            aria-selected="false"
+                                            class="nav-link mb-2" data-bs-toggle="pill" href="#v-pills-profile"
+                                            role="tab">Profile
+                                    </b-link>
+                                    <b-link id="v-pills-messages-tab" aria-controls="v-pills-messages"
+                                            aria-selected="false"
+                                            class="nav-link mb-2" data-bs-toggle="pill" href="#v-pills-messages"
+                                            role="tab">Messages
+                                    </b-link>
+                                    <b-link id="v-pills-settings-tab" aria-controls="v-pills-settings"
+                                            aria-selected="false"
+                                            class="nav-link" data-bs-toggle="pill" href="#v-pills-settings"
+                                            role="tab">Settings
+                                    </b-link>
                                 </div>
                             </b-col>
                             <b-col md="9">
-                                <div class="tab-content text-muted mt-4 mt-md-0" id="v-pills-tabContent">
-                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                        aria-labelledby="v-pills-home-tab">
+                                <div id="v-pills-tabContent" class="tab-content text-muted mt-4 mt-md-0">
+                                    <div id="v-pills-home" aria-labelledby="v-pills-home-tab"
+                                         class="tab-pane fade show active"
+                                         role="tabpanel">
                                         <div class="d-flex mb-2">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-4.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-4.jpg"
+                                                     width="150">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <p class="mb-0">You always want to make sure that your fonts work well
@@ -470,12 +483,13 @@ export default {
                                             design, but do not over-exaggerate and go overboard.
                                         </p>
                                     </div>
-                                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                        aria-labelledby="v-pills-profile-tab">
+                                    <div id="v-pills-profile" aria-labelledby="v-pills-profile-tab"
+                                         class="tab-pane fade"
+                                         role="tabpanel">
                                         <div class="d-flex mb-2">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-5.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-5.jpg"
+                                                     width="150">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <p class="mb-0"> I also decreased the transparency in the text so that
@@ -490,12 +504,13 @@ export default {
                                             You can always play around with the text that is overlaid on an image.
                                         </p>
                                     </div>
-                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                        aria-labelledby="v-pills-messages-tab">
+                                    <div id="v-pills-messages" aria-labelledby="v-pills-messages-tab"
+                                         class="tab-pane fade"
+                                         role="tabpanel">
                                         <div class="d-flex mb-2">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-6.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-6.jpg"
+                                                     width="150">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <p class="mb-0">In this image, you can see that the line height has been
@@ -510,12 +525,13 @@ export default {
                                             tip I received from the designers I spoke with.
                                         </p>
                                     </div>
-                                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                        aria-labelledby="v-pills-settings-tab">
+                                    <div id="v-pills-settings" aria-labelledby="v-pills-settings-tab"
+                                         class="tab-pane fade"
+                                         role="tabpanel">
                                         <div class="d-flex mb-2">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-7.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-7.jpg"
+                                                     width="150">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <p class="mb-0">When designing, the goal is to draw someone’s attention
@@ -568,9 +584,9 @@ export default {
                     <b-card-body>
 
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="home2" role="tabpanel">
-                                <p class="flex-grow-1 mb-0"><img src="@/assets/images/users/avatar-2.jpg" alt=""
-                                        class="avatar-lg rounded float-start me-3">
+                            <div id="home2" class="tab-pane active" role="tabpanel">
+                                <p class="flex-grow-1 mb-0"><img alt="" class="avatar-lg rounded float-start me-3"
+                                                                 src="@/assets/images/users/avatar-2.jpg">
                                     Food truck fixie locavore, accusamus mcsweeney's marfa nulla
                                     single-origin coffee squid. Exercitation +1 labore velit, blog
                                     sartorial PBR leggings next level wes anderson artisan four loko
@@ -584,10 +600,10 @@ export default {
                                     principal object is larger than assumenda.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="profile2" role="tabpanel">
+                            <div id="profile2" class="tab-pane" role="tabpanel">
                                 <p class="me-3 mb-0">
-                                    <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                        class="avatar-lg rounded float-end ms-3"> Experiment and play around with the
+                                    <img alt="" class="avatar-lg rounded float-end ms-3"
+                                         src="@/assets/images/users/avatar-3.jpg"> Experiment and play around with the
                                     fonts that you already have in the software you’re working with reputable font
                                     websites. commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
                                     PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus.commodo enim
@@ -597,10 +613,11 @@ export default {
                                     depending on the situation and try, try again until it looks right, and each.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="messages2" role="tabpanel">
+                            <div id="messages2" class="tab-pane" role="tabpanel">
                                 <p class="ms-3 mb-0">
-                                    <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                        class="avatar-lg rounded float-start me-3">Trust fund seitan letterpress, keytar
+                                    <img alt="" class="avatar-lg rounded float-start me-3"
+                                         src="@/assets/images/users/avatar-5.jpg">Trust fund seitan letterpress,
+                                    keytar
                                     raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free
                                     squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party
                                     locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR,
@@ -650,7 +667,7 @@ export default {
 
 
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="home1" role="tabpanel">
+                            <div id="home1" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-multiple-blank-fill text-success"></i>
@@ -661,7 +678,7 @@ export default {
                                         Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo
                                         park Austin. Cred vinyl keffiyeh DIY salvia PBR.
                                         <div class="mt-2">
-                                            <b-link href="javascript:void(0);" class="btn btn-sm btn-soft-primary">Read
+                                            <b-link class="btn btn-sm btn-soft-primary" href="javascript:void(0);">Read
                                                 More
                                                 <i class="ri-arrow-right-line ms-1 align-middle"></i>
                                             </b-link>
@@ -669,7 +686,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="profile1" role="tabpanel">
+                            <div id="profile1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-multiple-blank-fill text-success"></i>
@@ -681,7 +698,7 @@ export default {
                                         grass by the trickling stream; and, as I lie close to the earth, a thousand
                                         unknown.
                                         <div class="mt-2">
-                                            <b-link href="javascript:void(0);" class="btn btn-sm btn-soft-primary">Read
+                                            <b-link class="btn btn-sm btn-soft-primary" href="javascript:void(0);">Read
                                                 More
                                                 <i class="ri-arrow-right-line ms-1 align-middle"></i>
                                             </b-link>
@@ -689,7 +706,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="messages1" role="tabpanel">
+                            <div id="messages1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-multiple-blank-fill text-success"></i>
@@ -700,7 +717,7 @@ export default {
                                         Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore
                                         carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
                                         <div class="mt-2">
-                                            <b-link href="javascript:void(0);" class="btn btn-sm btn-soft-primary">Read
+                                            <b-link class="btn btn-sm btn-soft-primary" href="javascript:void(0);">Read
                                                 More
                                                 <i class="ri-arrow-right-line ms-1 align-middle"></i>
                                             </b-link>
@@ -708,7 +725,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="settings1" role="tabpanel">
+                            <div id="settings1" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-multiple-blank-fill text-success"></i>
@@ -719,7 +736,7 @@ export default {
                                         with longing, Oh, would I could describe these conceptions, could impress upon
                                         paper all that is living so full and warm within me, that it might be the.
                                         <div class="mt-2">
-                                            <b-link href="javascript:void(0);" class="btn btn-sm btn-soft-primary">Read
+                                            <b-link class="btn btn-sm btn-soft-primary" href="javascript:void(0);">Read
                                                 More
                                                 <i class="ri-arrow-right-line ms-1 align-middle"></i>
                                             </b-link>
@@ -759,40 +776,46 @@ export default {
                         </ul>
 
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="arrow-overview" role="tabpanel">
+                            <div id="arrow-overview" class="tab-pane active" role="tabpanel">
                                 <h6>Give your text a good structure</h6>
                                 <p class="mb-0">
                                     Contrary to popular belief, you don’t have to work endless nights and hours to
-                                    cb-linkeate a <b-link href="javascript:void(0);" class="text-decoration-underline">
+                                    cb-linkeate a
+                                    <b-link class="text-decoration-underline" href="javascript:void(0);">
                                         <b>Fantastic Design</b>
-                                    </b-link> by using
+                                    </b-link>
+                                    by using
                                     complicated 3D elements. Flat design is your friend. Remember that. And the great
                                     thing about flat design is that it has become more and more popular over the years,
                                     which is excellent news to the beginner and advanced designer.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="arrow-profile" role="tabpanel">
+                            <div id="arrow-profile" class="tab-pane" role="tabpanel">
                                 <h6>Use a color palette</h6>
                                 <p class="mb-0">
                                     Opposites attract, and that’s a fact. It’s in our nature to be interested in the
-                                    ub-linkusual, and that’s why using contrasting colors in <b-link
-                                        href="javascript:void(0);" class="text-decoration-underline"><b>Graphic
-                                            Design</b></b-link> is a must. It’s
+                                    ub-linkusual, and that’s why using contrasting colors in
+                                    <b-link
+                                        class="text-decoration-underline" href="javascript:void(0);"><b>Graphic
+                                        Design</b></b-link>
+                                    is a must. It’s
                                     eye-catching, it makes a statement, it’s impressive graphic design. Increase or
                                     decrease the letter spacing depending on the situation and try, try again until it
                                     looks right, and each letter has the perfect spot of its own.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="arrow-contact" role="tabpanel">
+                            <div id="arrow-contact" class="tab-pane" role="tabpanel">
                                 <h6>Contact</h6>
                                 <p class="mb-0">
                                     Consistency is the one thing that can take all of the different elements in your
                                     design, and tie them all together and make them work. In an awareness campaign, it
                                     is vital for people to begin put 2 and 2 together and begin to recognize your cause.
                                     Consistency piques people’s interest is that it has become more and more popular
-                                    over the years, which is excellent news to the beginner and advanced <b-link
-                                        href="javascript:void(0);" class="text-decoration-underline"><b>Contact
-                                            Designer</b></b-link>.
+                                    over the years, which is excellent news to the beginner and advanced
+                                    <b-link
+                                        class="text-decoration-underline" href="javascript:void(0);"><b>Contact
+                                        Designer</b></b-link>
+                                    .
                                 </p>
                             </div>
                         </div>
@@ -831,13 +854,13 @@ export default {
                     <b-card-body>
 
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="developers" role="tabpanel">
+                            <div id="developers" class="tab-pane active" role="tabpanel">
                                 <b-row>
                                     <b-col sm="6">
                                         <div class="d-flex">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-8.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Dominic Charlton</h6>
@@ -846,8 +869,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-7.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-7.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Charlie Pritchard</h6>
@@ -856,8 +879,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-6.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Harvey Wells</h6>
@@ -868,8 +891,8 @@ export default {
                                     <b-col sm="6">
                                         <div class="d-flex mt-3 mt-sm-0">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-5.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Amelie Townsend</h6>
@@ -878,8 +901,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-4.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-4.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Emily Slater</h6>
@@ -888,8 +911,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-3.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Declan Long</h6>
@@ -899,13 +922,13 @@ export default {
                                     </b-col>
                                 </b-row>
                             </div>
-                            <div class="tab-pane" id="designers" role="tabpanel">
+                            <div id="designers" class="tab-pane" role="tabpanel">
                                 <b-row>
                                     <b-col sm="6">
                                         <div class="d-flex">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-1.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-1.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Luke Brown</h6>
@@ -914,8 +937,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-2.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-2.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Matilda Walker</h6>
@@ -924,8 +947,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-3.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Leo Stokes</h6>
@@ -936,8 +959,8 @@ export default {
                                     <b-col sm="6">
                                         <div class="d-flex mt-3 mt-sm-0">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-4.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-4.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Chelsea Preston</h6>
@@ -946,8 +969,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-5.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Jennifer Barker</h6>
@@ -956,8 +979,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-6.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-6.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Callum Murray</h6>
@@ -967,13 +990,13 @@ export default {
                                     </b-col>
                                 </b-row>
                             </div>
-                            <div class="tab-pane" id="managers" role="tabpanel">
+                            <div id="managers" class="tab-pane" role="tabpanel">
                                 <b-row>
                                     <b-col sm="6">
                                         <div class="d-flex">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-7.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-7.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Dominic Charlton</h6>
@@ -982,8 +1005,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-8.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Matilda Walker</h6>
@@ -992,8 +1015,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-4.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-4.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Jennifer Barker</h6>
@@ -1004,8 +1027,8 @@ export default {
                                     <b-col sm="6">
                                         <div class="d-flex mt-3 mt-sm-0">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-5.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Amelie Townsend</h6>
@@ -1014,8 +1037,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-1.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-1.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Emily Slater</h6>
@@ -1024,8 +1047,8 @@ export default {
                                         </div>
                                         <div class="d-flex mt-3">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/users/avatar-2.jpg" alt=""
-                                                    class="avatar-sm rounded" />
+                                                <img alt="" class="avatar-sm rounded"
+                                                     src="@/assets/images/users/avatar-2.jpg"/>
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h6 class="mb-1 fs-14">Declan Long</h6>
@@ -1047,7 +1070,7 @@ export default {
                         <p class="text-muted">Use <code>card-footer-tabs</code> class to create the bottom card nav
                             justify tab.</p>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="bottomtabs-home" role="tabpanel">
+                            <div id="bottomtabs-home" class="tab-pane active" role="tabpanel">
                                 <h5><i class="ri-home-3-line align-bottom me-1"></i> Home</h5>
                                 <p class="mb-2">
                                     On the note of consistency, color consistency is a MUST. If you’re not trying to
@@ -1060,7 +1083,7 @@ export default {
                                     to do with them, for the simple fact that it is beautiful to look at.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="bottomtabs-profile" role="tabpanel">
+                            <div id="bottomtabs-profile" class="tab-pane" role="tabpanel">
                                 <h5><i class="ri-user-2-line align-bottom me-1"></i> Profile</h5>
                                 <p class="mb-2">
                                     Just like in the image where we talked about using multiple fonts, you can see that
@@ -1073,7 +1096,7 @@ export default {
                                     Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="bottomtabs-messages" role="tabpanel">
+                            <div id="bottomtabs-messages" class="tab-pane" role="tabpanel">
                                 <h5><i class="ri-mail-line align-bottom me-1"></i> Messages</h5>
                                 <p class="mb-2">
                                     Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck.
@@ -1091,17 +1114,17 @@ export default {
                     <b-card-footer class="bg-transparent border-top">
 
                         <ul class="nav nav-pills nav-justified card-footer-tabs fs-17" role="tablist">
-                            <li class="nav-item" v-b-tooltip.hover title="Home">
+                            <li v-b-tooltip.hover class="nav-item" title="Home">
                                 <b-link class="nav-link active" data-bs-toggle="tab" href="#bottomtabs-home" role="tab">
                                     <i class="ri-home-3-line"></i>
                                 </b-link>
                             </li>
-                            <li class="nav-item" v-b-tooltip.hover title="Profile">
+                            <li v-b-tooltip.hover class="nav-item" title="Profile">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#bottomtabs-profile" role="tab">
                                     <i class="ri-user-2-line"></i>
                                 </b-link>
                             </li>
-                            <li class="nav-item" v-b-tooltip.hover title="Messages">
+                            <li v-b-tooltip.hover class="nav-item" title="Messages">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#bottomtabs-messages" role="tab">
                                     <i class="ri-mail-line"></i>
                                 </b-link>
@@ -1123,22 +1146,22 @@ export default {
                     <div class="border">
                         <ul class="nav nav-pills custom-hover-nav-tabs">
                             <li class="nav-item">
-                                <b-link href="#custom-hover-customere" data-bs-toggle="tab" aria-expanded="false"
-                                    class="nav-link active">
+                                <b-link aria-expanded="false" class="nav-link active" data-bs-toggle="tab"
+                                        href="#custom-hover-customere">
                                     <i class="ri-user-fill nav-icon nav-tab-position"></i>
                                     <h5 class="nav-titl nav-tab-position m-0">Customer</h5>
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link href="#custom-hover-description" data-bs-toggle="tab" aria-expanded="true"
-                                    class="nav-link">
+                                <b-link aria-expanded="true" class="nav-link" data-bs-toggle="tab"
+                                        href="#custom-hover-description">
                                     <i class="ri-file-text-line nav-icon nav-tab-position"></i>
                                     <h5 class="nav-titl nav-tab-position m-0">Description</h5>
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link href="#custom-hover-reviews" data-bs-toggle="tab" aria-expanded="false"
-                                    class="nav-link">
+                                <b-link aria-expanded="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#custom-hover-reviews">
                                     <i class="ri-star-half-line nav-icon nav-tab-position"></i>
                                     <h5 class="nav-titl nav-tab-position m-0">Reviews</h5>
                                 </b-link>
@@ -1147,91 +1170,91 @@ export default {
                     </div>
                     <b-card-body>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane show active" id="custom-hover-customere">
+                            <div id="custom-hover-customere" class="tab-pane show active">
                                 <h6>Customer Details</h6>
                                 <div class="table-responsive">
                                     <table class="table mb-0">
                                         <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">Address</th>
-                                                <th scope="col">Country</th>
-                                                <th scope="col">Pincode</th>
-                                            </tr>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">Country</th>
+                                            <th scope="col">Pincode</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Ruby Butcher</td>
-                                                <td>412 Rosewood Lane</td>
-                                                <td>New York</td>
-                                                <td>10019</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Martha T Goldberg</td>
-                                                <td>2760 Clarksburg Park Road</td>
-                                                <td>Arizona</td>
-                                                <td>86038</td>
-                                            </tr>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Ruby Butcher</td>
+                                            <td>412 Rosewood Lane</td>
+                                            <td>New York</td>
+                                            <td>10019</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Martha T Goldberg</td>
+                                            <td>2760 Clarksburg Park Road</td>
+                                            <td>Arizona</td>
+                                            <td>86038</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="custom-hover-description">
+                            <div id="custom-hover-description" class="tab-pane">
                                 <h6>Description</h6>
                                 <div class="table-responsive">
                                     <table class="table mb-0">
                                         <thead>
-                                            <tr>
-                                                <th scope="col">Title</th>
-                                                <th scope="col">Categories</th>
-                                                <th scope="col">Author</th>
-                                            </tr>
+                                        <tr>
+                                            <th scope="col">Title</th>
+                                            <th scope="col">Categories</th>
+                                            <th scope="col">Author</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Building Web Apps With Wordpress</td>
-                                                <td>Web, Wordpress, Design</td>
-                                                <td>Lucia Victor</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Information Technology</th>
-                                                <td>Management, Manager, Design</td>
-                                                <td>Arora Sumita</td>
-                                            </tr>
+                                        <tr>
+                                            <td>Building Web Apps With Wordpress</td>
+                                            <td>Web, Wordpress, Design</td>
+                                            <td>Lucia Victor</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Information Technology</th>
+                                            <td>Management, Manager, Design</td>
+                                            <td>Arora Sumita</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="custom-hover-reviews">
+                            <div id="custom-hover-reviews" class="tab-pane">
                                 <h6>Customer Reviews</h6>
                                 <div class="table-responsive">
                                     <table class="table mb-0">
                                         <thead>
-                                            <tr>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">Location</th>
-                                                <th scope="col">Amount</th>
-                                                <th scope="col">Ratings</th>
-                                            </tr>
+                                        <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Ratings</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Luke Brown</td>
-                                                <td>New York</td>
-                                                <td>$745</td>
-                                                <td>4.4 <i class="ri-star-s-fill ms-1 text-warning align-middle"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Matilda Walker</td>
-                                                <td>USA</td>
-                                                <td>$87.125</td>
-                                                <td>2.7 <i class="ri-star-s-fill ms-1 text-warning align-middle"></i>
-                                                </td>
-                                            </tr>
+                                        <tr>
+                                            <td>Luke Brown</td>
+                                            <td>New York</td>
+                                            <td>$745</td>
+                                            <td>4.4 <i class="ri-star-s-fill ms-1 text-warning align-middle"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Matilda Walker</td>
+                                            <td>USA</td>
+                                            <td>$87.125</td>
+                                            <td>2.7 <i class="ri-star-s-fill ms-1 text-warning align-middle"></i>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -1249,23 +1272,27 @@ export default {
                             tabs.</p>
                         <b-row>
                             <b-col lg="3">
-                                <div class="nav nav-pills flex-column nav-pills-tab custom-verti-nav-pills text-center"
-                                    role="tablist" aria-orientation="vertical">
-                                    <b-link class="nav-link active show" id="custom-v-pills-home-tab"
-                                        data-bs-toggle="pill" href="#custom-v-pills-home" role="tab"
-                                        aria-controls="custom-v-pills-home" aria-selected="true">
+                                <div aria-orientation="vertical"
+                                     class="nav nav-pills flex-column nav-pills-tab custom-verti-nav-pills text-center"
+                                     role="tablist">
+                                    <b-link id="custom-v-pills-home-tab" aria-controls="custom-v-pills-home"
+                                            aria-selected="true" class="nav-link active show" data-bs-toggle="pill"
+                                            href="#custom-v-pills-home" role="tab">
                                         <i class="ri-home-4-line d-block fs-20 mb-1"></i>
                                         Home
                                     </b-link>
-                                    <b-link class="nav-link" id="custom-v-pills-profile-tab" data-bs-toggle="pill"
-                                        href="#custom-v-pills-profile" role="tab" aria-controls="custom-v-pills-profile"
-                                        aria-selected="false">
+                                    <b-link id="custom-v-pills-profile-tab" aria-controls="custom-v-pills-profile"
+                                            aria-selected="false"
+                                            class="nav-link" data-bs-toggle="pill"
+                                            href="#custom-v-pills-profile"
+                                            role="tab">
                                         <i class="ri-user-2-line d-block fs-20 mb-1"></i>
                                         Profile
                                     </b-link>
-                                    <b-link class="nav-link" id="custom-v-pills-messages-tab" data-bs-toggle="pill"
-                                        href="#custom-v-pills-messages" role="tab"
-                                        aria-controls="custom-v-pills-messages" aria-selected="false">
+                                    <b-link id="custom-v-pills-messages-tab" aria-controls="custom-v-pills-messages"
+                                            aria-selected="false"
+                                            class="nav-link" data-bs-toggle="pill"
+                                            href="#custom-v-pills-messages" role="tab">
                                         <i class="ri-mail-line d-block fs-20 mb-1"></i>
                                         Messages
                                     </b-link>
@@ -1273,12 +1300,13 @@ export default {
                             </b-col>
                             <b-col lg="9">
                                 <div class="tab-content text-muted mt-3 mt-lg-0">
-                                    <div class="tab-pane fade active show" id="custom-v-pills-home" role="tabpanel"
-                                        aria-labelledby="custom-v-pills-home-tab">
+                                    <div id="custom-v-pills-home" aria-labelledby="custom-v-pills-home-tab"
+                                         class="tab-pane fade active show"
+                                         role="tabpanel">
                                         <div class="d-flex mb-4">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-4.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-4.jpg"
+                                                     width="150">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <p class="mb-0">Experiment and play around with the fonts that you
@@ -1297,17 +1325,18 @@ export default {
                                                 </p>
                                             </div>
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-5.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-5.jpg"
+                                                     width="150">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="custom-v-pills-profile" role="tabpanel"
-                                        aria-labelledby="custom-v-pills-profile-tab">
+                                    <div id="custom-v-pills-profile" aria-labelledby="custom-v-pills-profile-tab"
+                                         class="tab-pane fade"
+                                         role="tabpanel">
                                         <div class="d-flex mb-4">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-3.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-3.jpg"
+                                                     width="150">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <p class="mb-0">In some designs, you might adjust your tracking to
@@ -1325,17 +1354,18 @@ export default {
                                                     and spoke to many different professional graphic designers.</p>
                                             </div>
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-6.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-6.jpg"
+                                                     width="150">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="custom-v-pills-messages" role="tabpanel"
-                                        aria-labelledby="custom-v-pills-messages-tab">
+                                    <div id="custom-v-pills-messages" aria-labelledby="custom-v-pills-messages-tab"
+                                         class="tab-pane fade"
+                                         role="tabpanel">
                                         <div class="d-flex mb-4">
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-7.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-7.jpg"
+                                                     width="150">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <p class="mb-0">Trust fund seitan letterpress, keytar raw denim keffiyeh
@@ -1354,8 +1384,8 @@ export default {
                                                     ex squid.</p>
                                             </div>
                                             <div class="flex-shrink-0">
-                                                <img src="@/assets/images/small/img-8.jpg" alt="" width="150"
-                                                    class="rounded">
+                                                <img alt="" class="rounded" src="@/assets/images/small/img-8.jpg"
+                                                     width="150">
                                             </div>
                                         </div>
                                     </div>
@@ -1397,7 +1427,7 @@ export default {
                             </li>
                         </ul>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="animation-home" role="tabpanel">
+                            <div id="animation-home" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1418,7 +1448,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="animation-profile" role="tabpanel">
+                            <div id="animation-profile" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1438,7 +1468,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="animation-messages" role="tabpanel">
+                            <div id="animation-messages" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1458,7 +1488,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="animation-settings" role="tabpanel">
+                            <div id="animation-settings" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mt-2">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1490,33 +1520,36 @@ export default {
 
                         <ul class="nav nav-tabs nav-justified mb-3" role="tablist">
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#nav-badge-home" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#nav-badge-home"
+                                        role="tab">
                                     Explore
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link align-middle" data-bs-toggle="tab" href="#nav-badge-profile"
-                                    role="tab" aria-selected="false">
-                                    Profile <b-badge variant="success">Done</b-badge>
+                                <b-link aria-selected="false" class="nav-link align-middle" data-bs-toggle="tab"
+                                        href="#nav-badge-profile" role="tab">
+                                    Profile
+                                    <b-badge variant="success">Done</b-badge>
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link align-middle" data-bs-toggle="tab" href="#nav-badge-messages"
-                                    role="tab" aria-selected="false">
-                                    Messages <b-badge variant="danger" class="rounded-circle">5</b-badge>
+                                <b-link aria-selected="false" class="nav-link align-middle" data-bs-toggle="tab"
+                                        href="#nav-badge-messages" role="tab">
+                                    Messages
+                                    <b-badge class="rounded-circle" variant="danger">5</b-badge>
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link active" data-bs-toggle="tab" href="#nav-badge-settings"
-                                    role="tab" aria-selected="true">
+                                <b-link aria-selected="true" class="nav-link active" data-bs-toggle="tab"
+                                        href="#nav-badge-settings" role="tab">
                                     Settings
                                 </b-link>
                             </li>
                         </ul>
 
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="nav-badge-home" role="tabpanel">
+                            <div id="nav-badge-home" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1537,7 +1570,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="nav-badge-profile" role="tabpanel">
+                            <div id="nav-badge-profile" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1557,7 +1590,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="nav-badge-messages" role="tabpanel">
+                            <div id="nav-badge-messages" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1577,7 +1610,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="nav-badge-settings" role="tabpanel">
+                            <div id="nav-badge-settings" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mt-2">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1613,32 +1646,35 @@ export default {
 
                         <ul class="nav nav-tabs nav-border-top nav-border-top-primary mb-3" role="tablist">
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#nav-border-top-home" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#nav-border-top-home"
+                                        role="tab">
                                     Home
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#nav-border-top-profile" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#nav-border-top-profile"
+                                        role="tab">
                                     Profile
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#nav-border-top-messages" role="tab"
-                                    aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#nav-border-top-messages"
+                                        role="tab">
                                     Messages
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link active" data-bs-toggle="tab" href="#nav-border-top-settings"
-                                    role="tab" aria-selected="true">
+                                <b-link aria-selected="true" class="nav-link active" data-bs-toggle="tab"
+                                        href="#nav-border-top-settings" role="tab">
                                     Settings
                                 </b-link>
                             </li>
                         </ul>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="nav-border-top-home" role="tabpanel">
+                            <div id="nav-border-top-home" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-line text-success"></i>
@@ -1649,13 +1685,13 @@ export default {
                                         Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo
                                         park Austin. Cred vinyl keffiyeh DIY salvia PBR.
                                         <div class="mt-2">
-                                            <b-link href="javascript:void(0);" class="btn btn-link">Read More <i
-                                                    class="ri-arrow-right-line ms-1 align-middle"></i></b-link>
+                                            <b-link class="btn btn-link" href="javascript:void(0);">Read More <i
+                                                class="ri-arrow-right-line ms-1 align-middle"></i></b-link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="nav-border-top-profile" role="tabpanel">
+                            <div id="nav-border-top-profile" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-line text-success"></i>
@@ -1667,13 +1703,13 @@ export default {
                                         grass by the trickling stream; and, as I lie close to the earth, a thousand
                                         unknown.
                                         <div class="mt-2">
-                                            <b-link href="javascript:void(0);" class="btn btn-link">Read More <i
-                                                    class="ri-arrow-right-line ms-1 align-middle"></i></b-link>
+                                            <b-link class="btn btn-link" href="javascript:void(0);">Read More <i
+                                                class="ri-arrow-right-line ms-1 align-middle"></i></b-link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="nav-border-top-messages" role="tabpanel">
+                            <div id="nav-border-top-messages" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-line text-success"></i>
@@ -1684,13 +1720,13 @@ export default {
                                         Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore
                                         carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
                                         <div class="mt-2">
-                                            <b-link href="javascript:void(0);" class="btn btn-link">Read More <i
-                                                    class="ri-arrow-right-line ms-1 align-middle"></i></b-link>
+                                            <b-link class="btn btn-link" href="javascript:void(0);">Read More <i
+                                                class="ri-arrow-right-line ms-1 align-middle"></i></b-link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="nav-border-top-settings" role="tabpanel">
+                            <div id="nav-border-top-settings" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-line text-success"></i>
@@ -1701,8 +1737,8 @@ export default {
                                         with longing, Oh, would I could describe these conceptions, could impress upon
                                         paper all that is living so full and warm within me, that it might be the.
                                         <div class="mt-2">
-                                            <b-link href="javascript:void(0);" class="btn btn-link">Read More <i
-                                                    class="ri-arrow-right-line ms-1 align-middle"></i></b-link>
+                                            <b-link class="btn btn-link" href="javascript:void(0);">Read More <i
+                                                class="ri-arrow-right-line ms-1 align-middle"></i></b-link>
                                         </div>
                                     </div>
                                 </div>
@@ -1722,59 +1758,65 @@ export default {
                         <ul class="nav nav-tabs nav-justified nav-border-top nav-border-top-success mb-3"
                             role="tablist">
                             <li class="nav-item">
-                                <b-link class="nav-link active" data-bs-toggle="tab" href="#nav-border-justified-home"
-                                    role="tab" aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link active" data-bs-toggle="tab"
+                                        href="#nav-border-justified-home" role="tab">
                                     <i class="ri-home-5-line align-middle me-1"></i> Home
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#nav-border-justified-profile"
-                                    role="tab" aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#nav-border-justified-profile" role="tab">
                                     <i class="ri-user-line me-1 align-middle"></i> Profile
                                 </b-link>
                             </li>
                             <li class="nav-item">
-                                <b-link class="nav-link" data-bs-toggle="tab" href="#nav-border-justified-messages"
-                                    role="tab" aria-selected="false">
+                                <b-link aria-selected="false" class="nav-link" data-bs-toggle="tab"
+                                        href="#nav-border-justified-messages" role="tab">
                                     <i class="ri-question-answer-line align-middle me-1"></i>Messages
                                 </b-link>
                             </li>
                         </ul>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="nav-border-justified-home" role="tabpanel">
+                            <div id="nav-border-justified-home" class="tab-pane active" role="tabpanel">
                                 <h6>Give your text a good structure</h6>
                                 <p class="mb-0">
                                     Contrary to popular belief, you don’t have to work endless nights and hours to
-                                    cb-linkeate a <b-link href="javascript:void(0);" class="text-decoration-underline">
+                                    cb-linkeate a
+                                    <b-link class="text-decoration-underline" href="javascript:void(0);">
                                         <b>Fantastic Design</b>
-                                    </b-link> by using
+                                    </b-link>
+                                    by using
                                     complicated 3D elements. Flat design is your friend. Remember that. And the great
                                     thing about flat design is that it has become more and more popular over the years,
                                     which is excellent news to the beginner and advanced designer.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="nav-border-justified-profile" role="tabpanel">
+                            <div id="nav-border-justified-profile" class="tab-pane" role="tabpanel">
                                 <h6>Use a color palette</h6>
                                 <p class="mb-0">
                                     Opposites attract, and that’s a fact. It’s in our nature to be interested in the
-                                    ub-linkusual, and that’s why using contrasting colors in <b-link
-                                        href="javascript:void(0);" class="text-decoration-underline"><b>Graphic
-                                            Design</b></b-link> is a must. It’s
+                                    ub-linkusual, and that’s why using contrasting colors in
+                                    <b-link
+                                        class="text-decoration-underline" href="javascript:void(0);"><b>Graphic
+                                        Design</b></b-link>
+                                    is a must. It’s
                                     eye-catching, it makes a statement, it’s impressive graphic design. Increase or
                                     decrease the letter spacing depending on the situation and try, try again until it
                                     looks right, and each letter has the perfect spot of its own.
                                 </p>
                             </div>
-                            <div class="tab-pane" id="nav-border-justified-messages" role="tabpanel">
+                            <div id="nav-border-justified-messages" class="tab-pane" role="tabpanel">
                                 <h6>Message</h6>
                                 <p class="mb-0">
                                     Consistency is the one thing that can take all of the different elements in your
                                     design, and tie them all together and make them work. In an awareness campaign, it
                                     is vital for people to begin put 2 and 2 together and begin to recognize your cause.
                                     Consistency piques people’s interest is that it has become more and more popular
-                                    over the years, which is excellent news to the beginner and advanced <b-link
-                                        href="javascript:void(0);" class="text-decoration-underline"><b>Contact
-                                            Designer</b></b-link>.
+                                    over the years, which is excellent news to the beginner and advanced
+                                    <b-link
+                                        class="text-decoration-underline" href="javascript:void(0);"><b>Contact
+                                        Designer</b></b-link>
+                                    .
                                 </p>
                             </div>
                         </div>
@@ -1792,24 +1834,28 @@ export default {
                         <ul class="nav nav-pills nav-custom-outline nav-primary mb-3" role="tablist">
                             <li class="nav-item waves-effect waves-light">
                                 <b-link class="nav-link active" data-bs-toggle="tab" href="#border-nav-home" role="tab">
-                                    Home</b-link>
+                                    Home
+                                </b-link>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#border-nav-profile" role="tab">
-                                    Profile</b-link>
+                                    Profile
+                                </b-link>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#border-nav-messages" role="tab">
-                                    Messages</b-link>
+                                    Messages
+                                </b-link>
                             </li>
                             <li class="nav-item waves-effect waves-light">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#border-nav-settings" role="tab">
-                                    Settings</b-link>
+                                    Settings
+                                </b-link>
                             </li>
                         </ul>
 
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="border-nav-home" role="tabpanel">
+                            <div id="border-nav-home" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1830,7 +1876,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="border-nav-profile" role="tabpanel">
+                            <div id="border-nav-profile" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1852,7 +1898,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="border-nav-messages" role="tabpanel">
+                            <div id="border-nav-messages" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1874,7 +1920,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="border-nav-settings" role="tabpanel">
+                            <div id="border-nav-settings" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mt-2">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1910,23 +1956,27 @@ export default {
                         <ul class="nav nav-pills nav-customs nav-danger mb-3" role="tablist">
                             <li class="nav-item">
                                 <b-link class="nav-link active" data-bs-toggle="tab" href="#border-navs-home"
-                                    role="tab">Home</b-link>
+                                        role="tab">Home
+                                </b-link>
                             </li>
                             <li class="nav-item">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#border-navs-profile" role="tab">
-                                    Profile</b-link>
+                                    Profile
+                                </b-link>
                             </li>
                             <li class="nav-item">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#border-navs-messages" role="tab">
-                                    Messages</b-link>
+                                    Messages
+                                </b-link>
                             </li>
                             <li class="nav-item">
                                 <b-link class="nav-link" data-bs-toggle="tab" href="#border-navs-settings" role="tab">
-                                    Settings</b-link>
+                                    Settings
+                                </b-link>
                             </li>
                         </ul>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="border-navs-home" role="tabpanel">
+                            <div id="border-navs-home" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1948,7 +1998,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="border-navs-profile" role="tabpanel">
+                            <div id="border-navs-profile" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1972,7 +2022,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="border-navs-messages" role="tabpanel">
+                            <div id="border-navs-messages" class="tab-pane" role="tabpanel">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -1996,7 +2046,7 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="border-navs-settings" role="tabpanel">
+                            <div id="border-navs-settings" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mt-2">
                                     <div class="flex-shrink-0">
                                         <i class="ri-checkbox-circle-fill text-success"></i>
@@ -2035,7 +2085,7 @@ export default {
                         <ul class="nav nav-pills nav-custom nav-custom-success mb-3" role="tablist">
                             <li class="nav-item">
                                 <b-link class="nav-link active" data-bs-toggle="tab" href="#nav-colored-home"
-                                    role="tab">
+                                        role="tab">
                                     Home
                                 </b-link>
                             </li>
@@ -2051,10 +2101,10 @@ export default {
                             </li>
                         </ul>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="nav-colored-home" role="tabpanel">
+                            <div id="nav-colored-home" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex mb-3">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-2.jpg" alt="" class="avatar-md rounded">
+                                        <img alt="" class="avatar-md rounded" src="@/assets/images/users/avatar-2.jpg">
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         Food truck fixie locavore, accusamus mcsweeney's marfa nulla
@@ -2071,14 +2121,14 @@ export default {
                                         cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus.
                                     </div>
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-3.jpg" alt="" class="avatar-md rounded">
+                                        <img alt="" class="avatar-md rounded" src="@/assets/images/users/avatar-3.jpg">
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="nav-colored-profile" role="tabpanel">
+                            <div id="nav-colored-profile" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mb-3">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-4.jpg" alt="" class="avatar-md rounded">
+                                        <img alt="" class="avatar-md rounded" src="@/assets/images/users/avatar-4.jpg">
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         Increase or decrease the letter spacing depending on the situation and try, try
@@ -2094,14 +2144,14 @@ export default {
                                         aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic.
                                     </div>
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded">
+                                        <img alt="" class="avatar-md rounded" src="@/assets/images/users/avatar-1.jpg">
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="nav-colored-messages" role="tabpanel">
+                            <div id="nav-colored-messages" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mb-3">
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-4.jpg" alt="" class="avatar-md rounded">
+                                        <img alt="" class="avatar-md rounded" src="@/assets/images/users/avatar-4.jpg">
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before
@@ -2117,7 +2167,7 @@ export default {
                                         assumenda labore aesthetic magna elements, buttons, everything..
                                     </div>
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded">
+                                        <img alt="" class="avatar-md rounded" src="@/assets/images/users/avatar-1.jpg">
                                     </div>
                                 </div>
                             </div>
@@ -2150,7 +2200,7 @@ export default {
                             </li>
                         </ul>
                         <div class="tab-content text-muted">
-                            <div class="tab-pane active" id="nav-light-home" role="tabpanel">
+                            <div id="nav-light-home" class="tab-pane active" role="tabpanel">
                                 <div class="d-flex mb-1">
                                     <div class="flex-grow-1 me-3">
                                         Experiment and play around with the fonts that you already have in the software
@@ -2160,7 +2210,7 @@ export default {
                                         our nature to be interested in the unusual, and that’s why using contrasting.
                                     </div>
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/small/img-4.jpg" alt="" width="150" class="rounded">
+                                        <img alt="" class="rounded" src="@/assets/images/small/img-4.jpg" width="150">
                                     </div>
                                 </div>
                                 <p class="mb-0"> Food truck fixie locavore, accusamus mcsweeney's marfa nulla
@@ -2169,7 +2219,7 @@ export default {
                                     farm-to-table craft beer twee. commodo enim craft beer mlkshk aliquip jean shorts
                                     ullamco.</p>
                             </div>
-                            <div class="tab-pane" id="nav-light-profile" role="tabpanel">
+                            <div id="nav-light-profile" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mb-1">
                                     <div class="flex-grow-1 me-3">
                                         Just like in the image where we talked about using multiple fonts, you can see
@@ -2179,7 +2229,7 @@ export default {
                                         what you have to see, even if your design has nothing to do with them.
                                     </div>
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/small/img-5.jpg" alt="" width="150" class="rounded">
+                                        <img alt="" class="rounded" src="@/assets/images/small/img-5.jpg" width="150">
                                     </div>
                                 </div>
                                 <p class="mb-0">It makes a statement, it’s impressive graphic design. Increase or
@@ -2187,7 +2237,7 @@ export default {
                                     looks right, and each letter has the perfect spot of its own. commodo enim craft
                                     beer mlkshk aliquip jean shorts ullamco.</p>
                             </div>
-                            <div class="tab-pane" id="nav-light-messages" role="tabpanel">
+                            <div id="nav-light-messages" class="tab-pane" role="tabpanel">
                                 <div class="d-flex mb-1">
                                     <div class="flex-grow-1 me-3">
                                         Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before
@@ -2197,7 +2247,7 @@ export default {
                                         not trying to create crazy contrast in your design.
                                     </div>
                                     <div class="flex-shrink-0">
-                                        <img src="@/assets/images/small/img-5.jpg" alt="" width="150" class="rounded">
+                                        <img alt="" class="rounded" src="@/assets/images/small/img-5.jpg" width="150">
                                     </div>
                                 </div>
                                 <p class="mb-0">Big July earthquakes confound zany experimental vow. My girl wove six

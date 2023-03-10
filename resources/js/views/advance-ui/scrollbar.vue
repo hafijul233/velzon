@@ -6,7 +6,7 @@ import appConfig from "../../../app.config";
 export default {
     page: {
         title: "Scrollbar",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -32,7 +32,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xl="6">
                 <b-card no-body>
@@ -46,7 +46,7 @@ export default {
                         </p>
 
                         <div class="mx-n3">
-                            <div data-simplebar style="max-height: 220px;" class="px-3">
+                            <div class="px-3" data-simplebar style="max-height: 220px;">
                                 <p>If several languages coalesce, the grammar of the resulting language is more simple
                                     and regular than that of the individual languages. The new common language will be
                                     more simple and regular than the existing</p>
@@ -80,8 +80,8 @@ export default {
                         </p>
 
                         <div class="mx-n3">
-                            <div data-simplebar data-simplebar-auto-hide="false" style="max-height: 220px;"
-                                class="px-3">
+                            <div class="px-3" data-simplebar data-simplebar-auto-hide="false"
+                                 style="max-height: 220px;">
                                 <p>If several languages coalesce, the grammar of the resulting language is more simple
                                     and regular than that of the individual languages. The new common language will be
                                     more simple and regular than the existing</p>
@@ -118,7 +118,7 @@ export default {
                         </p>
 
                         <div class="mx-n3">
-                            <div data-simplebar data-simplebar-direction="rtl" style="max-height: 220px;" class="px-3">
+                            <div class="px-3" data-simplebar data-simplebar-direction="rtl" style="max-height: 220px;">
                                 <p>If several languages coalesce, the grammar of the resulting language is more simple
                                     and regular than that of the individual languages. The new common language will be
                                     more simple and regular than the existing</p>
@@ -149,7 +149,7 @@ export default {
                 </div>
 
                 <b-row>
-                    <b-col xl="4" lg="6">
+                    <b-col lg="6" xl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">Primary Track</b-card-title>
@@ -161,8 +161,8 @@ export default {
 
                                 <div class="mx-n3">
                                     <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="primary"
-                                        style="max-height: 275px;">
-                                        <b-link href="#!" class="text-reset notification-item d-block dropdown-item">
+                                         style="max-height: 275px;">
+                                        <b-link class="text-reset notification-item d-block dropdown-item" href="#!">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 avatar-xs me-3">
                                                     <span
@@ -184,12 +184,12 @@ export default {
                                             </div>
                                         </b-link>
 
-                                        <b-link href="#!"
-                                            class="text-reset notification-item d-block dropdown-item active">
+                                        <b-link class="text-reset notification-item d-block dropdown-item active"
+                                                href="#!">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 avatar-xs me-3">
-                                                    <img src="@/assets/images/users/avatar-2.jpg"
-                                                        class="rounded-circle img-fluid" alt="user-pic">
+                                                    <img alt="user-pic"
+                                                         class="rounded-circle img-fluid" src="@/assets/images/users/avatar-2.jpg">
                                                 </div>
                                                 <div class="flex-grow-1 text-muted">
                                                     <h6 class="mb-1 fs-14">Angela Bernier</h6>
@@ -205,7 +205,7 @@ export default {
                                             </div>
                                         </b-link>
 
-                                        <b-link href="#!" class="text-reset notification-item d-block dropdown-item">
+                                        <b-link class="text-reset notification-item d-block dropdown-item" href="#!">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 avatar-xs me-3">
                                                     <span
@@ -215,7 +215,7 @@ export default {
                                                 </div>
                                                 <div class="flex-grow-1 text-muted">
                                                     <p class="m-0">You have received <span
-                                                            class="fw-semibold text-success">20</span> new messages in
+                                                        class="fw-semibold text-success">20</span> new messages in
                                                         the conversation</p>
                                                 </div>
                                                 <div class="flex-shrink-0 ms-2">
@@ -226,11 +226,11 @@ export default {
                                             </div>
                                         </b-link>
 
-                                        <b-link href="#!" class="text-reset notification-item d-block dropdown-item">
+                                        <b-link class="text-reset notification-item d-block dropdown-item" href="#!">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 avatar-xs me-3">
-                                                    <img src="@/assets/images/users/avatar-8.jpg"
-                                                        class="rounded-circle img-fluid" alt="user-pic">
+                                                    <img alt="user-pic"
+                                                         class="rounded-circle img-fluid" src="@/assets/images/users/avatar-8.jpg">
                                                 </div>
                                                 <div class="flex-grow-1 text-muted">
                                                     <h6 class="mb-1 fs-14">Maureen Gibson</h6>
@@ -243,7 +243,7 @@ export default {
                                                 </div>
                                             </div>
                                         </b-link>
-                                        <b-link href="#!" class="text-reset notification-item d-block dropdown-item">
+                                        <b-link class="text-reset notification-item d-block dropdown-item" href="#!">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 avatar-xs me-3">
                                                     <span
@@ -265,9 +265,10 @@ export default {
                                             </div>
                                         </b-link>
                                         <div class="text-center my-2">
-                                            <b-link href="javascript:void(0);" class="text-success"><i
-                                                    class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i> Load
-                                                more </b-link>
+                                            <b-link class="text-success" href="javascript:void(0);"><i
+                                                class="mdi mdi-loading mdi-spin fs-20 align-middle me-2"></i> Load
+                                                more
+                                            </b-link>
                                         </div>
                                     </div>
                                 </div>
@@ -275,7 +276,7 @@ export default {
                         </b-card>
                     </b-col>
 
-                    <b-col xl="4" lg="6">
+                    <b-col lg="6" xl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">Secondary Track</b-card-title>
@@ -287,9 +288,9 @@ export default {
 
                                 <div class="mx-n3">
                                     <div data-simplebar data-simplebar-auto-hide="false"
-                                        data-simplebar-track="secondary" style="max-height: 274px;">
+                                         data-simplebar-track="secondary" style="max-height: 274px;">
                                         <div class="list-group list-group-flush">
-                                            <b-link href="#" class="list-group-item text-muted py-3">
+                                            <b-link class="list-group-item text-muted py-3" href="#">
                                                 <div class="d-flex align-items-start">
                                                     <div class="flex-shrink-0 align-self-center me-3">
                                                         <div class="avatar-xs">
@@ -307,7 +308,7 @@ export default {
                                                     <div class="fs-11">06 mins</div>
                                                 </div>
                                             </b-link>
-                                            <b-link href="#" class="list-group-item text-muted py-3">
+                                            <b-link class="list-group-item text-muted py-3" href="#">
                                                 <div class="d-flex align-items-start">
                                                     <div class="flex-shrink-0 align-self-center me-3">
                                                         <div class="avatar-xs">
@@ -325,7 +326,7 @@ export default {
                                                     <div class="fs-11">12 mins</div>
                                                 </div>
                                             </b-link>
-                                            <b-link href="#" class="list-group-item text-muted py-3">
+                                            <b-link class="list-group-item text-muted py-3" href="#">
                                                 <div class="d-flex align-items-start">
                                                     <div class="flex-shrink-0 align-self-center me-3">
                                                         <div class="avatar-xs">
@@ -344,7 +345,7 @@ export default {
                                                 </div>
                                             </b-link>
 
-                                            <b-link href="#" class="list-group-item text-muted py-3">
+                                            <b-link class="list-group-item text-muted py-3" href="#">
                                                 <div class="d-flex align-items-start">
                                                     <div class="flex-shrink-0 align-self-center me-3">
                                                         <div class="avatar-xs">
@@ -363,7 +364,7 @@ export default {
                                                 </div>
                                             </b-link>
 
-                                            <b-link href="#" class="list-group-item text-muted py-3">
+                                            <b-link class="list-group-item text-muted py-3" href="#">
                                                 <div class="d-flex align-items-start">
                                                     <div class="flex-shrink-0 align-self-center me-3">
                                                         <div class="avatar-xs">
@@ -381,7 +382,7 @@ export default {
                                                     <div class="fs-11">03 hrs</div>
                                                 </div>
                                             </b-link>
-                                            <b-link href="#" class="list-group-item text-muted py-3">
+                                            <b-link class="list-group-item text-muted py-3" href="#">
                                                 <div class="d-flex align-items-start">
                                                     <div class="flex-shrink-0 align-self-center me-3">
                                                         <div class="avatar-xs">
@@ -406,7 +407,7 @@ export default {
                         </b-card>
                     </b-col>
 
-                    <b-col xl="4" lg="6">
+                    <b-col lg="6" xl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">Success Track</b-card-title>
@@ -418,7 +419,7 @@ export default {
 
                                 <div class="mx-n3">
                                     <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="success"
-                                        style="max-height: 274px;">
+                                         style="max-height: 274px;">
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item py-3">
                                                 <div class="d-flex align-items-center">
@@ -500,7 +501,7 @@ export default {
                     </b-col>
 
 
-                    <b-col xl="4" lg="6">
+                    <b-col lg="6" xl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">Info Track</b-card-title>
@@ -512,23 +513,23 @@ export default {
 
                                 <div class="mx-n3">
                                     <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="info"
-                                        style="max-height: 238px;">
+                                         style="max-height: 238px;">
                                         <ol class="list-group list-group-flush list-group-numbered">
                                             <li class="list-group-item d-flex align-items-center">
                                                 A list item
-                                                <b-badge variant="success" class="ms-auto">Paid</b-badge>
+                                                <b-badge class="ms-auto" variant="success">Paid</b-badge>
                                             </li>
                                             <li class="list-group-item d-flex align-items-center">
                                                 A second list item
-                                                <b-badge variant="danger" class="ms-auto">Refund</b-badge>
+                                                <b-badge class="ms-auto" variant="danger">Refund</b-badge>
                                             </li>
                                             <li class="list-group-item d-flex align-items-center">
                                                 A third list item
-                                                <b-badge variant="success" class="ms-auto">Paid</b-badge>
+                                                <b-badge class="ms-auto" variant="success">Paid</b-badge>
                                             </li>
                                             <li class="list-group-item d-flex align-items-center">
                                                 A fourth list item
-                                                <b-badge variant="success" class="ms-auto">Paid</b-badge>
+                                                <b-badge class="ms-auto" variant="success">Paid</b-badge>
                                             </li>
                                             <li class="list-group-item d-flex align-items-center">
                                                 A Fifth list item
@@ -536,7 +537,7 @@ export default {
                                             </li>
                                             <li class="list-group-item d-flex align-items-center">
                                                 A Sixth list item
-                                                <b-badge variant="success" class="ms-auto">Paid</b-badge>
+                                                <b-badge class="ms-auto" variant="success">Paid</b-badge>
                                             </li>
                                         </ol>
                                     </div>
@@ -546,7 +547,7 @@ export default {
                     </b-col>
 
 
-                    <b-col xl="4" lg="6">
+                    <b-col lg="6" xl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">Warning Track</b-card-title>
@@ -557,12 +558,12 @@ export default {
                                     warning color simplebar track.</p>
 
                                 <div class="mx-n3">
-                                    <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="warning"
-                                        style="max-height: 220px;" class="px-3">
+                                    <div class="px-3" data-simplebar data-simplebar-auto-hide="false"
+                                         data-simplebar-track="warning" style="max-height: 220px;">
                                         <div class="d-flex align-items-center py-3">
                                             <div class="avatar-xs flex-shrink-0 me-3">
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                    class="img-fluid rounded-circle">
+                                                <img alt="" class="img-fluid rounded-circle"
+                                                     src="@/assets/images/users/avatar-3.jpg">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <div>
@@ -571,15 +572,15 @@ export default {
                                                 </div>
                                             </div>
                                             <div class="flex-shrink-0 ms-2">
-                                                <b-button variant="outline-success" size="sm" type="button"><i
-                                                        class="ri-user-add-line align-middle"></i></b-button>
+                                                <b-button size="sm" type="button" variant="outline-success"><i
+                                                    class="ri-user-add-line align-middle"></i></b-button>
                                             </div>
                                         </div>
 
                                         <div class="d-flex align-items-center py-3">
                                             <div class="avatar-xs flex-shrink-0 me-3">
-                                                <img src="@/assets/images/users/avatar-4.jpg" alt=""
-                                                    class="img-fluid rounded-circle">
+                                                <img alt="" class="img-fluid rounded-circle"
+                                                     src="@/assets/images/users/avatar-4.jpg">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <div>
@@ -588,15 +589,15 @@ export default {
                                                 </div>
                                             </div>
                                             <div class="flex-shrink-0 ms-2">
-                                                <b-button variant="outline-success" size="sm" type="button"><i
-                                                        class="ri-user-add-line align-middle"></i></b-button>
+                                                <b-button size="sm" type="button" variant="outline-success"><i
+                                                    class="ri-user-add-line align-middle"></i></b-button>
                                             </div>
                                         </div>
 
                                         <div class="d-flex align-items-center py-3">
                                             <div class="avatar-xs flex-shrink-0 me-3">
-                                                <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                                    class="img-fluid rounded-circle">
+                                                <img alt="" class="img-fluid rounded-circle"
+                                                     src="@/assets/images/users/avatar-5.jpg">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <div>
@@ -605,14 +606,14 @@ export default {
                                                 </div>
                                             </div>
                                             <div class="flex-shrink-0 ms-2">
-                                                <b-button variant="outline-success" size="sm" type="button"><i
-                                                        class="ri-user-add-line align-middle"></i></b-button>
+                                                <b-button size="sm" type="button" variant="outline-success"><i
+                                                    class="ri-user-add-line align-middle"></i></b-button>
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center py-3">
                                             <div class="avatar-xs flex-shrink-0 me-3">
-                                                <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                    class="img-fluid rounded-circle">
+                                                <img alt="" class="img-fluid rounded-circle"
+                                                     src="@/assets/images/users/avatar-3.jpg">
                                             </div>
                                             <div class="flex-grow-1">
                                                 <div>
@@ -621,8 +622,8 @@ export default {
                                                 </div>
                                             </div>
                                             <div class="flex-shrink-0 ms-2">
-                                                <b-button variant="outline-success" size="sm" type="button"><i
-                                                        class="ri-user-add-line align-middle"></i></b-button>
+                                                <b-button size="sm" type="button" variant="outline-success"><i
+                                                    class="ri-user-add-line align-middle"></i></b-button>
                                             </div>
                                         </div>
                                     </div>
@@ -632,7 +633,7 @@ export default {
                     </b-col>
 
 
-                    <b-col xl="4" lg="6">
+                    <b-col lg="6" xl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">Danger Track</b-card-title>
@@ -643,9 +644,9 @@ export default {
                                     danger color simplebar track.</p>
 
                                 <div class="mx-n3">
-                                    <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="danger"
-                                        style="max-height: 220px;" class="px-3">
-                                        <b-link href="#" class="d-flex align-items-center py-2">
+                                    <div class="px-3" data-simplebar data-simplebar-auto-hide="false"
+                                         data-simplebar-track="danger" style="max-height: 220px;">
+                                        <b-link class="d-flex align-items-center py-2" href="#">
                                             <div class="flex-shrink-0 avatar-xs me-3">
                                                 <div class="avatar-title bg-light text-primary rounded-circle">
                                                     <i class="ri-hashtag"></i>
@@ -656,11 +657,12 @@ export default {
                                                 <p class="text-muted mb-0">04 Members</p>
                                             </div>
                                             <div class="flex-shrink-0 align-self-start ms-2">
-                                                <b-badge tag="div" variant="soft-warning"
-                                                    class="badge-soft-warning fs-10">Inprogress</b-badge>
+                                                <b-badge class="badge-soft-warning fs-10" tag="div"
+                                                         variant="soft-warning">Inprogress
+                                                </b-badge>
                                             </div>
                                         </b-link>
-                                        <b-link href="#" class="d-flex align-items-center py-2">
+                                        <b-link class="d-flex align-items-center py-2" href="#">
                                             <div class="flex-shrink-0 avatar-xs me-3">
                                                 <div class="avatar-title bg-light text-primary rounded-circle">
                                                     <i class="ri-hashtag"></i>
@@ -671,11 +673,12 @@ export default {
                                                 <p class="text-muted mb-0">02 Members</p>
                                             </div>
                                             <div class="flex-shrink-0 align-self-start ms-2">
-                                                <b-badge tag="div" variant="soft-warning"
-                                                    class="badge-soft-warning fs-10">Inprogress</b-badge>
+                                                <b-badge class="badge-soft-warning fs-10" tag="div"
+                                                         variant="soft-warning">Inprogress
+                                                </b-badge>
                                             </div>
                                         </b-link>
-                                        <b-link href="#" class="d-flex align-items-center py-2">
+                                        <b-link class="d-flex align-items-center py-2" href="#">
                                             <div class="flex-shrink-0 avatar-xs me-3">
                                                 <div class="avatar-title bg-light text-primary rounded-circle">
                                                     <i class="ri-hashtag"></i>
@@ -686,11 +689,12 @@ export default {
                                                 <p class="text-muted mb-0">01 Members</p>
                                             </div>
                                             <div class="flex-shrink-0 align-self-start ms-2">
-                                                <b-badge tag="div" variant="soft-success"
-                                                    class="badge-soft-success fs-10">Completed</b-badge>
+                                                <b-badge class="badge-soft-success fs-10" tag="div"
+                                                         variant="soft-success">Completed
+                                                </b-badge>
                                             </div>
                                         </b-link>
-                                        <b-link href="#" class="d-flex align-items-center py-2">
+                                        <b-link class="d-flex align-items-center py-2" href="#">
                                             <div class="flex-shrink-0 avatar-xs me-3">
                                                 <div class="avatar-title bg-light text-primary rounded-circle">
                                                     <i class="ri-hashtag"></i>
@@ -701,11 +705,12 @@ export default {
                                                 <p class="text-muted mb-0">03 Members</p>
                                             </div>
                                             <div class="flex-shrink-0 align-self-start ms-2">
-                                                <b-badge tag="div" variant="soft-warning"
-                                                    class="badge-soft-warning fs-10">Inprogress</b-badge>
+                                                <b-badge class="badge-soft-warning fs-10" tag="div"
+                                                         variant="soft-warning">Inprogress
+                                                </b-badge>
                                             </div>
                                         </b-link>
-                                        <b-link href="#" class="d-flex align-items-center py-2">
+                                        <b-link class="d-flex align-items-center py-2" href="#">
                                             <div class="flex-shrink-0 avatar-xs me-3">
                                                 <div class="avatar-title bg-light text-primary rounded-circle">
                                                     <i class="ri-hashtag"></i>
@@ -716,8 +721,9 @@ export default {
                                                 <p class="text-muted mb-0">05 Members</p>
                                             </div>
                                             <div class="flex-shrink-0 align-self-start ms-2">
-                                                <b-badge tag="div" variant="soft-success"
-                                                    class="badge-soft-success fs-10">Completed</b-badge>
+                                                <b-badge class="badge-soft-success fs-10" tag="div"
+                                                         variant="soft-success">Completed
+                                                </b-badge>
                                             </div>
                                         </b-link>
                                     </div>
@@ -727,7 +733,7 @@ export default {
                     </b-col>
 
 
-                    <b-col xl="4" lg="6">
+                    <b-col lg="6" xl="4">
                         <b-card no-body>
                             <b-card-header>
                                 <b-card-title class="mb-0">Dark Track</b-card-title>
@@ -739,15 +745,17 @@ export default {
 
                                 <div class="mx-n3">
                                     <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="dark"
-                                        style="max-height: 220px;">
+                                         style="max-height: 220px;">
                                         <ul class="list-group list-group-flush">
                                             <li class="list-group-item">
                                                 <div>
                                                     <div class="d-flex align-items-start">
                                                         <div class="flex-grow-1">
-                                                            <b-badge tag="div" variant="success"
-                                                                class="bg-gradient mb-2"><i class="mdi mdi-star"></i>
-                                                                4.1</b-badge>
+                                                            <b-badge class="bg-gradient mb-2" tag="div"
+                                                                     variant="success"><i
+                                                                class="mdi mdi-star"></i>
+                                                                4.1
+                                                            </b-badge>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <p class="text-muted fs-13">12 Jul, 21</p>
@@ -763,27 +771,30 @@ export default {
 
                                                         <div class="flex-shrink-0">
                                                             <div class="hstack gap-3">
-                                                                <div data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Like">
-                                                                    <b-link href="#" class="text-muted"><i
-                                                                            class="ri-thumb-up-line"></i></b-link>
+                                                                <div data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                     title="Like">
+                                                                    <b-link class="text-muted" href="#"><i
+                                                                        class="ri-thumb-up-line"></i></b-link>
                                                                 </div>
                                                                 <div class="vr"></div>
-                                                                <div data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Comment">
-                                                                    <b-link href="#" class="text-muted"><i
-                                                                            class="ri-discuss-line"></i></b-link>
+                                                                <div data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                     title="Comment">
+                                                                    <b-link class="text-muted" href="#"><i
+                                                                        class="ri-discuss-line"></i></b-link>
                                                                 </div>
                                                                 <div class="vr"></div>
-                                                                <b-dropdown variant="link" right
-                                                                    toggle-class="text-muted arrow-none p-0" no-caret>
-                                                                    <template #button-content> <i
-                                                                            class="ri-more-fill"></i> </template>
+                                                                <b-dropdown no-caret right
+                                                                            toggle-class="text-muted arrow-none p-0"
+                                                                            variant="link">
+                                                                    <template #button-content><i
+                                                                        class="ri-more-fill"></i></template>
                                                                     <b-dropdown-item href="#">Action</b-dropdown-item>
                                                                     <b-dropdown-item href="#">Another
-                                                                        action</b-dropdown-item>
+                                                                        action
+                                                                    </b-dropdown-item>
                                                                     <b-dropdown-item href="#">Something else
-                                                                        here</b-dropdown-item>
+                                                                        here
+                                                                    </b-dropdown-item>
                                                                 </b-dropdown>
                                                             </div>
                                                         </div>
@@ -794,9 +805,11 @@ export default {
                                                 <div>
                                                     <div class="d-flex align-items-start">
                                                         <div class="flex-grow-1">
-                                                            <b-badge tag="div" variant="success"
-                                                                class="bg-gradient mb-2"><i class="mdi mdi-star"></i>
-                                                                4.0</b-badge>
+                                                            <b-badge class="bg-gradient mb-2" tag="div"
+                                                                     variant="success"><i
+                                                                class="mdi mdi-star"></i>
+                                                                4.0
+                                                            </b-badge>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <p class="text-muted fs-13">06 Jul, 21</p>
@@ -810,27 +823,30 @@ export default {
 
                                                         <div class="flex-shrink-0">
                                                             <div class="hstack gap-3">
-                                                                <div data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Like">
-                                                                    <b-link href="#" class="text-muted"><i
-                                                                            class="ri-thumb-up-line"></i></b-link>
+                                                                <div data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                     title="Like">
+                                                                    <b-link class="text-muted" href="#"><i
+                                                                        class="ri-thumb-up-line"></i></b-link>
                                                                 </div>
                                                                 <div class="vr"></div>
-                                                                <div data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Comment">
-                                                                    <b-link href="#" class="text-muted"><i
-                                                                            class="ri-discuss-line"></i></b-link>
+                                                                <div data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                     title="Comment">
+                                                                    <b-link class="text-muted" href="#"><i
+                                                                        class="ri-discuss-line"></i></b-link>
                                                                 </div>
                                                                 <div class="vr"></div>
-                                                                <b-dropdown variant="link" right
-                                                                    toggle-class="text-muted arrow-none p-0" no-caret>
-                                                                    <template #button-content> <i
-                                                                            class="ri-more-fill"></i> </template>
+                                                                <b-dropdown no-caret right
+                                                                            toggle-class="text-muted arrow-none p-0"
+                                                                            variant="link">
+                                                                    <template #button-content><i
+                                                                        class="ri-more-fill"></i></template>
                                                                     <b-dropdown-item href="#">Action</b-dropdown-item>
                                                                     <b-dropdown-item href="#">Another
-                                                                        action</b-dropdown-item>
+                                                                        action
+                                                                    </b-dropdown-item>
                                                                     <b-dropdown-item href="#">Something else
-                                                                        here</b-dropdown-item>
+                                                                        here
+                                                                    </b-dropdown-item>
                                                                 </b-dropdown>
                                                             </div>
                                                         </div>
@@ -842,9 +858,11 @@ export default {
                                                 <div>
                                                     <div class="d-flex align-items-start">
                                                         <div class="flex-grow-1">
-                                                            <b-badge tag="div" variant="success"
-                                                                class="bg-gradient mb-2"><i class="mdi mdi-star"></i>
-                                                                4.2</b-badge>
+                                                            <b-badge class="bg-gradient mb-2" tag="div"
+                                                                     variant="success"><i
+                                                                class="mdi mdi-star"></i>
+                                                                4.2
+                                                            </b-badge>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <p class="text-muted fs-13">26 Jun, 21</p>
@@ -859,27 +877,30 @@ export default {
 
                                                         <div class="flex-shrink-0">
                                                             <div class="hstack gap-3">
-                                                                <div data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Like">
-                                                                    <b-link href="#" class="text-muted"><i
-                                                                            class="ri-thumb-up-line"></i></b-link>
+                                                                <div data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                     title="Like">
+                                                                    <b-link class="text-muted" href="#"><i
+                                                                        class="ri-thumb-up-line"></i></b-link>
                                                                 </div>
                                                                 <div class="vr"></div>
-                                                                <div data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Comment">
-                                                                    <b-link href="#" class="text-muted"><i
-                                                                            class="ri-discuss-line"></i></b-link>
+                                                                <div data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                     title="Comment">
+                                                                    <b-link class="text-muted" href="#"><i
+                                                                        class="ri-discuss-line"></i></b-link>
                                                                 </div>
                                                                 <div class="vr"></div>
-                                                                <b-dropdown variant="link" right
-                                                                    toggle-class="text-muted arrow-none p-0" no-caret>
-                                                                    <template #button-content> <i
-                                                                            class="ri-more-fill"></i> </template>
+                                                                <b-dropdown no-caret right
+                                                                            toggle-class="text-muted arrow-none p-0"
+                                                                            variant="link">
+                                                                    <template #button-content><i
+                                                                        class="ri-more-fill"></i></template>
                                                                     <b-dropdown-item href="#">Action</b-dropdown-item>
                                                                     <b-dropdown-item href="#">Another
-                                                                        action</b-dropdown-item>
+                                                                        action
+                                                                    </b-dropdown-item>
                                                                     <b-dropdown-item href="#">Something else
-                                                                        here</b-dropdown-item>
+                                                                        here
+                                                                    </b-dropdown-item>
                                                                 </b-dropdown>
                                                             </div>
                                                         </div>
@@ -891,9 +912,11 @@ export default {
                                                 <div>
                                                     <div class="d-flex align-items-start">
                                                         <div class="flex-grow-1">
-                                                            <b-badge tag="div" variant="success"
-                                                                class="bg-gradient mb-2"><i class="mdi mdi-star"></i>
-                                                                4.1</b-badge>
+                                                            <b-badge class="bg-gradient mb-2" tag="div"
+                                                                     variant="success"><i
+                                                                class="mdi mdi-star"></i>
+                                                                4.1
+                                                            </b-badge>
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                             <p class="text-muted fs-13">24 Jun, 21</p>
@@ -908,27 +931,30 @@ export default {
 
                                                         <div class="flex-shrink-0">
                                                             <div class="hstack gap-3">
-                                                                <div data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Like">
-                                                                    <b-link href="#" class="text-muted"><i
-                                                                            class="ri-thumb-up-line"></i></b-link>
+                                                                <div data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                     title="Like">
+                                                                    <b-link class="text-muted" href="#"><i
+                                                                        class="ri-thumb-up-line"></i></b-link>
                                                                 </div>
                                                                 <div class="vr"></div>
-                                                                <div data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Comment">
-                                                                    <b-link href="#" class="text-muted"><i
-                                                                            class="ri-discuss-line"></i></b-link>
+                                                                <div data-bs-placement="top" data-bs-toggle="tooltip"
+                                                                     title="Comment">
+                                                                    <b-link class="text-muted" href="#"><i
+                                                                        class="ri-discuss-line"></i></b-link>
                                                                 </div>
                                                                 <div class="vr"></div>
-                                                                <b-dropdown variant="link" right
-                                                                    toggle-class="text-muted arrow-none p-0" no-caret>
-                                                                    <template #button-content> <i
-                                                                            class="ri-more-fill"></i> </template>
+                                                                <b-dropdown no-caret right
+                                                                            toggle-class="text-muted arrow-none p-0"
+                                                                            variant="link">
+                                                                    <template #button-content><i
+                                                                        class="ri-more-fill"></i></template>
                                                                     <b-dropdown-item href="#">Action</b-dropdown-item>
                                                                     <b-dropdown-item href="#">Another
-                                                                        action</b-dropdown-item>
+                                                                        action
+                                                                    </b-dropdown-item>
                                                                     <b-dropdown-item href="#">Something else
-                                                                        here</b-dropdown-item>
+                                                                        here
+                                                                    </b-dropdown-item>
                                                                 </b-dropdown>
                                                             </div>
                                                         </div>

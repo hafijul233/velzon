@@ -20,10 +20,10 @@ export default {
                 text: "Base UI",
                 href: "/",
             },
-            {
-                text: "Modals",
-                active: true,
-            },
+                {
+                    text: "Modals",
+                    active: true,
+                },
             ],
             defaultOptions: {
                 animationData: animationData
@@ -121,7 +121,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col xxl="6">
                 <b-card no-body>
@@ -129,8 +129,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Default Modal</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="default-modal" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="default-modal" />
+                                <label class="form-label text-muted" for="default-modal">Show Code</label>
+                                <input id="default-modal" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -143,7 +143,7 @@ export default {
                         <div class="live-preview">
                             <div>
                                 <b-button variant="primary" @click="modalShow = !modalShow">Standard Modal</b-button>
-                                <b-modal v-model="modalShow" hide-footer title="Modal Heading" class="v-modal-custom">
+                                <b-modal v-model="modalShow" class="v-modal-custom" hide-footer title="Modal Heading">
                                     <h5 class="fs-15">Overflowing text to show scroll behavior</h5>
                                     <p class="text-muted">One morning, when Gregor Samsa woke from troubled
                                         dreams, he found himself transformed in his bed into a horrible
@@ -202,9 +202,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Vertically Centered Modal</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="vertically-centered" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="vertically-centered" />
+                                <label class="form-label text-muted" for="vertically-centered">Show Code</label>
+                                <input id="vertically-centered" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -217,19 +217,20 @@ export default {
                         <div class="live-preview">
                             <div>
                                 <b-button variant="primary" @click="modalShow1 = !modalShow1">Center Modal</b-button>
-                                <b-modal v-model="modalShow1" hide-footer class="v-modal-custom" hide-header-close
-                                    centered>
+                                <b-modal v-model="modalShow1" centered class="v-modal-custom" hide-footer
+                                         hide-header-close>
                                     <div class="modal-body text-center">
-                                        <lottie colors="primary:#121331,secondary:#08a88a" trigger="loop"
-                                            :options="defaultOptions" :height="120" :width="120" />
+                                        <lottie :height="120" :options="defaultOptions"
+                                                :width="120" colors="primary:#121331,secondary:#08a88a" trigger="loop"/>
                                         <div class="mt-4">
                                             <h4 class="mb-3">Oops something went wrong!</h4>
                                             <p class="text-muted mb-4">The transfer was not successfully
                                                 received by us. the email of the recipient wasn't correct.</p>
                                             <div class="hstack gap-2 justify-content-center">
                                                 <b-button type="button" variant="light" @click="modalShow1 = false">
-                                                    Close</b-button>
-                                                <b-link href="javascript:void(0);" class="btn btn-danger">Try Again
+                                                    Close
+                                                </b-button>
+                                                <b-link class="btn btn-danger" href="javascript:void(0);">Try Again
                                                 </b-link>
                                             </div>
                                         </div>
@@ -260,9 +261,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Grids in Modals</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="grid-modal-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="grid-modal-showcode" />
+                                <label class="form-label text-muted" for="grid-modal-showcode">Show Code</label>
+                                <input id="grid-modal-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -275,57 +276,58 @@ export default {
                         </p>
                         <div class="live-preview">
                             <b-button variant="primary" @click="modalShow2 = !modalShow2">Launch Demo Modal</b-button>
-                            <b-modal v-model="modalShow2" hide-footer title="Grid Modals" class="v-modal-custom">
+                            <b-modal v-model="modalShow2" class="v-modal-custom" hide-footer title="Grid Modals">
                                 <form action="javascript:void(0);">
                                     <b-row class="g-3">
                                         <b-col xxl="6">
                                             <div>
-                                                <label for="firstName" class="form-label">First Name</label>
-                                                <input type="text" class="form-control" id="firstName"
-                                                    placeholder="Enter firstname" />
+                                                <label class="form-label" for="firstName">First Name</label>
+                                                <input id="firstName" class="form-control" placeholder="Enter firstname"
+                                                       type="text"/>
                                             </div>
                                         </b-col>
                                         <b-col xxl="6">
                                             <div>
-                                                <label for="lastName" class="form-label">Last Name</label>
-                                                <input type="text" class="form-control" id="lastName"
-                                                    placeholder="Enter lastname" />
+                                                <label class="form-label" for="lastName">Last Name</label>
+                                                <input id="lastName" class="form-control" placeholder="Enter lastname"
+                                                       type="text"/>
                                             </div>
                                         </b-col>
                                         <b-col lg="12">
                                             <label class="form-label">Gender</label>
                                             <div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                                                    <input id="inlineRadio1" class="form-check-input"
+                                                           name="inlineRadioOptions" type="radio" value="option1"/>
                                                     <label class="form-check-label" for="inlineRadio1">Male</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                                                    <input id="inlineRadio2" class="form-check-input"
+                                                           name="inlineRadioOptions" type="radio" value="option2"/>
                                                     <label class="form-check-label" for="inlineRadio2">Female</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio"
-                                                        name="inlineRadioOptions" id="inlineRadio3" value="option3" />
+                                                    <input id="inlineRadio3" class="form-check-input"
+                                                           name="inlineRadioOptions" type="radio" value="option3"/>
                                                     <label class="form-check-label" for="inlineRadio3">Others</label>
                                                 </div>
                                             </div>
                                         </b-col>
                                         <b-col xxl="6">
-                                            <label for="emailInput" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="emailInput"
-                                                placeholder="Enter your email" />
+                                            <label class="form-label" for="emailInput">Email</label>
+                                            <input id="emailInput" class="form-control" placeholder="Enter your email"
+                                                   type="email"/>
                                         </b-col>
                                         <b-col xxl="6">
-                                            <label for="passwordInput" class="form-label">Password</label>
-                                            <input type="password" class="form-control" id="passwordInput"
-                                                value="451326546" placeholder="Enter password" />
+                                            <label class="form-label" for="passwordInput">Password</label>
+                                            <input id="passwordInput" class="form-control" placeholder="Enter password"
+                                                   type="password" value="451326546"/>
                                         </b-col>
                                         <b-col lg="12">
                                             <div class="hstack gap-2 justify-content-end">
                                                 <b-button type="button" variant="light" @click="modalShow2 = false">
-                                                    Close</b-button>
+                                                    Close
+                                                </b-button>
                                                 <b-button type="submit" variant="primary">Submit</b-button>
                                             </div>
                                         </b-col>
@@ -408,8 +410,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Static Backdrop Modal</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="static-backdrop" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="static-backdrop" />
+                                <label class="form-label text-muted" for="static-backdrop">Show Code</label>
+                                <input id="static-backdrop" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -424,23 +426,24 @@ export default {
                             <div>
                                 <b-button variant="primary" @click="modalShow3 = !modalShow3">Static Backdrop Modal
                                 </b-button>
-                                <b-modal v-model="modalShow3" hide-footer class="v-modal-custom" hide-header-close
-                                    centered no-close-on-backdrop>
+                                <b-modal v-model="modalShow3" centered class="v-modal-custom" hide-footer
+                                         hide-header-close no-close-on-backdrop>
                                     <div class="modal-body text-center">
-                                        <lottie colors="primary:#121331,secondary:#08a88a" trigger="loop"
-                                            :options="defaultOptions1" :height="120" :width="120" />
+                                        <lottie :height="120" :options="defaultOptions1"
+                                                :width="120" colors="primary:#121331,secondary:#08a88a" trigger="loop"/>
                                         <div class="mt-4">
                                             <h4 class="mb-3">You've made it!</h4>
                                             <p class="text-muted mb-4">The transfer was not successfully
                                                 received by us. the email of the recipient wasn't correct.</p>
                                             <div class="hstack gap-2 justify-content-center">
-                                                <b-link href="javascript:void(0);"
-                                                    class="btn btn-link link-success fw-medium"
-                                                    @click="modalShow3 = false">
+                                                <b-link class="btn btn-link link-success fw-medium"
+                                                        href="javascript:void(0);"
+                                                        @click="modalShow3 = false">
                                                     <i class="ri-close-line me-1 align-middle"></i> Close
                                                 </b-link>
-                                                <b-link href="javascript:void(0);" class="btn btn-success">
-                                                    Completed</b-link>
+                                                <b-link class="btn btn-success" href="javascript:void(0);">
+                                                    Completed
+                                                </b-link>
                                             </div>
                                         </div>
                                     </div>
@@ -489,9 +492,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Toggle Between Modal</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="toggle-betweeen-modals" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="toggle-betweeen-modals" />
+                                <label class="form-label text-muted" for="toggle-betweeen-modals">Show Code</label>
+                                <input id="toggle-betweeen-modals" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -509,11 +512,11 @@ export default {
                                 <b-button variant="primary" @click="modalShow30 = !modalShow30">Open First Modal
                                 </b-button>
 
-                                <b-modal v-model="modalShow30" hide-footer class="v-modal-custom" hide-header-close
-                                    centered>
+                                <b-modal v-model="modalShow30" centered class="v-modal-custom" hide-footer
+                                         hide-header-close>
                                     <div class="modal-body text-center">
-                                        <lottie colors="primary:#f7b84b,secondary:#405189" trigger="loop"
-                                            :options="defaultOptions2" :height="130" :width="130" />
+                                        <lottie :height="130" :options="defaultOptions2"
+                                                :width="130" colors="primary:#f7b84b,secondary:#405189" trigger="loop"/>
                                         <div class="mt-4 pt-4">
                                             <h4>Uh oh, something went wrong!</h4>
                                             <p class="text-muted">The transfer was not successfully received by
@@ -523,11 +526,11 @@ export default {
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow31" hide-footer class="v-modal-custom" hide-header-close
-                                    centered>
+                                <b-modal v-model="modalShow31" centered class="v-modal-custom" hide-footer
+                                         hide-header-close>
                                     <div class="modal-body text-center">
-                                        <lottie colors="primary:#405189,secondary:#0ab39c" trigger="loop"
-                                            :options="defaultOptions3" :height="150" :width="150" />
+                                        <lottie :height="150" :options="defaultOptions3"
+                                                :width="150" colors="primary:#405189,secondary:#0ab39c" trigger="loop"/>
                                         <div class="mt-4 pt-3">
                                             <h4 class="mb-3">Follow-Up Email</h4>
                                             <p class="text-muted mb-4">Hide this modal and show the first with
@@ -537,7 +540,8 @@ export default {
                                                 <b-button variant="soft-danger" @click="toggleModal"> Back to First
                                                 </b-button>
                                                 <b-button type="button" variant="light" @click="modalShow31 = false">
-                                                    Close</b-button>
+                                                    Close
+                                                </b-button>
                                             </div>
                                         </div>
                                     </div>
@@ -595,9 +599,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Tooltips and Popovers</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="tooltip-popover-modal" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="tooltip-popover-modal" />
+                                <label class="form-label text-muted" for="tooltip-popover-modal">Show Code</label>
+                                <input id="tooltip-popover-modal" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -605,7 +609,8 @@ export default {
 
                     <b-card-body>
                         <p class="text-muted">
-                            <b-link href="https://getbootstrap.com/docs/5.1/components/tooltips/">Tooltips</b-link> and
+                            <b-link href="https://getbootstrap.com/docs/5.1/components/tooltips/">Tooltips</b-link>
+                            and
                             <b-link href="https://getbootstrap.com/docs/5.1/components/popovers/">Popovers</b-link>
                             can be placed within modals as needed.When modals are closed, any tooltips and popovers
                             within are also automatically dismissed.
@@ -613,17 +618,20 @@ export default {
 
                         <div class="live-preview">
                             <b-button variant="primary" @click="modalShow4 = !modalShow4">Launch Demo Modal</b-button>
-                            <b-modal v-model="modalShow4" hide-footer title="Tooltips and Popovers Modal"
-                                class="v-modal-custom">
+                            <b-modal v-model="modalShow4" class="v-modal-custom" hide-footer
+                                     title="Tooltips and Popovers Modal">
                                 <h5 class="fs-16">Popover in a Modal</h5>
                                 <p class="text-muted">
                                     You only need to know a little to make a big
-                                    <b-link href="#"
-                                        class="popover-test fw-medium text-decoration-underline link-success"
-                                        data-bs-toggle="popover" title="Common Types of Fonts"
-                                        data-bs-content="They're a good choice for more traditional projects."
-                                        data-bs-container="body" data-bs-placement="bottom"
-                                        data-bs-original-title="Popover Title">Popover on Click</b-link> you
+                                    <b-link class="popover-test fw-medium text-decoration-underline link-success"
+                                            data-bs-container="body"
+                                            data-bs-content="They're a good choice for more traditional projects."
+                                            data-bs-original-title="Popover Title"
+                                            data-bs-placement="bottom"
+                                            data-bs-toggle="popover" href="#"
+                                            title="Common Types of Fonts">Popover on Click
+                                    </b-link>
+                                    you
                                     do
                                     every day. So let's get started. First, some common types of fonts and
                                     what you need to know about them triggers a popover on click.
@@ -631,21 +639,27 @@ export default {
                                 <h5 class="fs-16">Tooltips in a Modal</h5>
                                 <p class="text-muted">
                                     Opposites attract, and that’s a fact. It’s in our
-                                    <b-link href="#" class="tooltip-test text-decoration-underline fw-medium"
-                                        title="Morton Bayer" data-bs-container="#exampleModalPopovers"
-                                        data-bs-toggle="tooltip" data-bs-original-title="Tooltip title">
-                                        graphic design</b-link> to be
+                                    <b-link class="tooltip-test text-decoration-underline fw-medium"
+                                            data-bs-container="#exampleModalPopovers"
+                                            data-bs-original-title="Tooltip title" data-bs-toggle="tooltip"
+                                            href="#" title="Morton Bayer">
+                                        graphic design
+                                    </b-link>
+                                    to be
                                     interested in the unusual, and that’s why using
-                                    <b-link href="#" class="tooltip-test text-decoration-underline"
-                                        title="Web Developers" data-bs-toggle="tooltip"
-                                        data-bs-container="#exampleModalPopovers"
-                                        data-bs-original-title="Tooltip title">design</b-link> contrasting
+                                    <b-link class="tooltip-test text-decoration-underline"
+                                            data-bs-container="#exampleModalPopovers"
+                                            data-bs-original-title="Tooltip title" data-bs-toggle="tooltip"
+                                            href="#"
+                                            title="Web Developers">design
+                                    </b-link>
+                                    contrasting
                                     colors
                                     in Graphic Design is a must.
                                 </p>
                                 <div class="modal-footer v-modal-footer">
                                     <div class="mx-auto">
-                                        <b-link href="javascript:void(0);" class="btn btn-link fw-medium">
+                                        <b-link class="btn btn-link fw-medium" href="javascript:void(0);">
                                             Read More
                                             <i class="ri-arrow-right-line ms-1 align-middle"></i>
                                         </b-link>
@@ -712,8 +726,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Scrollable Modal</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="scrollable-modal" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="scrollable-modal" />
+                                <label class="form-label text-muted" for="scrollable-modal">Show Code</label>
+                                <input id="scrollable-modal" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -729,8 +743,8 @@ export default {
                             <div>
                                 <b-button variant="primary" @click="modalShow5 = !modalShow5">Scrollable Modal
                                 </b-button>
-                                <b-modal v-model="modalShow5" hide-footer title="Scrollable Modal"
-                                    class="v-modal-custom" scrollable>
+                                <b-modal v-model="modalShow5" class="v-modal-custom" hide-footer
+                                         scrollable title="Scrollable Modal">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -879,9 +893,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Varying Modal Content</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="varying-modal-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="varying-modal-showcode" />
+                                <label class="form-label text-muted" for="varying-modal-showcode">Show Code</label>
+                                <input id="varying-modal-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -901,21 +915,23 @@ export default {
                                     <b-button variant="primary" @click="changecustomerName('Mary')">Open Modal for Mary
                                     </b-button>
                                     <b-button variant="primary" @click="changecustomerName('Jennifer')">Open Modal for
-                                        Jennifer</b-button>
+                                        Jennifer
+                                    </b-button>
                                     <b-button variant="primary" @click="changecustomerName('Roderick')">Open Modal for
-                                        Roderick</b-button>
+                                        Roderick
+                                    </b-button>
                                 </div>
-                                <b-modal v-model="modalShow6" hide-footer title="New message"
-                                    title-class="varyingcontentModal" class="v-modal-custom">
+                                <b-modal v-model="modalShow6" class="v-modal-custom" hide-footer
+                                         title="New message" title-class="varyingcontentModal">
                                     <form>
                                         <div class="mb-3">
-                                            <label for="customer-name" class="col-form-label">Customer
+                                            <label class="col-form-label" for="customer-name">Customer
                                                 Name:</label>
-                                            <input type="text" class="form-control" id="customer-name" />
+                                            <input id="customer-name" class="form-control" type="text"/>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="message-text" class="col-form-label">Message:</label>
-                                            <textarea class="form-control" id="message-text" rows="4"></textarea>
+                                            <label class="col-form-label" for="message-text">Message:</label>
+                                            <textarea id="message-text" class="form-control" rows="4"></textarea>
                                         </div>
                                     </form>
                                     <div class="modal-footer v-modal-footer">
@@ -970,8 +986,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Optional Sizes</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="optional-sizes" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="optional-sizes" />
+                                <label class="form-label text-muted" for="optional-sizes">Show Code</label>
+                                <input id="optional-sizes" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -997,8 +1013,8 @@ export default {
                                     <b-button variant="danger" @click="modalShow10 = !modalShow10">Small Modal
                                     </b-button>
                                 </div>
-                                <b-modal v-model="modalShow7" hide-footer title="Fullscreen Modal Heading"
-                                    class="v-modal-custom" fullscreen>
+                                <b-modal v-model="modalShow7" class="v-modal-custom" fullscreen
+                                         hide-footer title="Fullscreen Modal Heading">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1118,16 +1134,16 @@ export default {
                                         </div>
                                     </div>
                                     <div class="modal-footer v-modal-footer">
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow7 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow7 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow8" hide-footer title="Extra large Modal"
-                                    class="v-modal-custom" size="xl">
+                                <b-modal v-model="modalShow8" class="v-modal-custom" hide-footer
+                                         size="xl" title="Extra large Modal">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1247,16 +1263,16 @@ export default {
                                         </div>
                                     </div>
                                     <div class="modal-footer v-modal-footer">
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow8 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow8 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow9" hide-footer title="Large Modal" class="v-modal-custom"
-                                    size="lg">
+                                <b-modal v-model="modalShow9" class="v-modal-custom" hide-footer size="lg"
+                                         title="Large Modal">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1376,16 +1392,16 @@ export default {
                                         </div>
                                     </div>
                                     <div class="modal-footer v-modal-footer">
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow9 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow9 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow10" hide-footer title="Small Modal" class="v-modal-custom"
-                                    size="sm">
+                                <b-modal v-model="modalShow10" class="v-modal-custom" hide-footer size="sm"
+                                         title="Small Modal">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1422,8 +1438,8 @@ export default {
                                         </div>
                                     </div>
                                     <div class="modal-footer v-modal-footer">
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow10 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow10 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
@@ -1445,8 +1461,8 @@ export default {
     &lt;/b-modal&gt;
 </code>
 
-<code> 
-    &lt;b-modal v-model=&quot;modalShow9&quot; hide-footer title=&quot;Large Modal&quot; class=&quot;v-modal-custom&quot; size=&quot;lg&quot;&gt; 
+<code>
+    &lt;b-modal v-model=&quot;modalShow9&quot; hide-footer title=&quot;Large Modal&quot; class=&quot;v-modal-custom&quot; size=&quot;lg&quot;&gt;
         ...
     &lt;/b-modal&gt;
 </code>
@@ -1470,8 +1486,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Fullscreen Responsive Modals</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="fullscreen-modal" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="fullscreen-modal" />
+                                <label class="form-label text-muted" for="fullscreen-modal">Show Code</label>
+                                <input id="fullscreen-modal" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1485,20 +1501,25 @@ export default {
                                     <b-button variant="primary" @click="modalShow16 = !modalShow16"> Fullscreen Modal
                                     </b-button>
                                     <b-button variant="primary" @click="modalShow11 = !modalShow11"> Full Screen Below
-                                        sm </b-button>
+                                        sm
+                                    </b-button>
                                     <b-button variant="primary" @click="modalShow12 = !modalShow12"> Full Screen Below
-                                        md </b-button>
+                                        md
+                                    </b-button>
                                     <b-button variant="primary" @click="modalShow13 = !modalShow13"> Full Screen Below
-                                        lg </b-button>
+                                        lg
+                                    </b-button>
                                     <b-button variant="primary" @click="modalShow14 = !modalShow14"> Full Screen Below
-                                        xl </b-button>
+                                        xl
+                                    </b-button>
                                     <b-button variant="primary" @click="modalShow15 = !modalShow15"> Full Screen Below
-                                        xxl </b-button>
+                                        xxl
+                                    </b-button>
                                 </div>
 
 
-                                <b-modal v-model="modalShow16" hide-footer title="Full screen Modal"
-                                    class="v-modal-custom" fullscreen>
+                                <b-modal v-model="modalShow16" class="v-modal-custom" fullscreen
+                                         hide-footer title="Full screen Modal">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1619,16 +1640,17 @@ export default {
                                     </div>
                                     <div class="modal-footer v-modal-footer">
 
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow16 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow16 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow11" hide-footer title="Full screen below sm"
-                                    dialog-class="modal-fullscreen-sm-down" class="v-modal-custom">
+                                <b-modal v-model="modalShow11" class="v-modal-custom"
+                                         dialog-class="modal-fullscreen-sm-down"
+                                         hide-footer title="Full screen below sm">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1665,16 +1687,17 @@ export default {
                                         </div>
                                     </div>
                                     <div class="modal-footer v-modal-footer">
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow11 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow11 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow12" hide-footer title="Full screen below md"
-                                    dialog-class="modal-fullscreen-md-down" class="v-modal-custom">
+                                <b-modal v-model="modalShow12" class="v-modal-custom"
+                                         dialog-class="modal-fullscreen-md-down"
+                                         hide-footer title="Full screen below md">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1711,16 +1734,17 @@ export default {
                                         </div>
                                     </div>
                                     <div class="modal-footer v-modal-footer">
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow12 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow12 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow13" hide-footer title="Full screen below lg"
-                                    dialog-class="modal-fullscreen-lg-down" class="v-modal-custom">
+                                <b-modal v-model="modalShow13" class="v-modal-custom"
+                                         dialog-class="modal-fullscreen-lg-down"
+                                         hide-footer title="Full screen below lg">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1757,16 +1781,17 @@ export default {
                                         </div>
                                     </div>
                                     <div class="modal-footer v-modal-footer">
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow13 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow13 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow14" hide-footer title="Full screen below xl"
-                                    dialog-class="modal-fullscreen-xl-down" class="v-modal-custom">
+                                <b-modal v-model="modalShow14" class="v-modal-custom"
+                                         dialog-class="modal-fullscreen-xl-down"
+                                         hide-footer title="Full screen below xl">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1803,16 +1828,17 @@ export default {
                                         </div>
                                     </div>
                                     <div class="modal-footer v-modal-footer">
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow14 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow14 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow15" hide-footer title="Full screen below xxl"
-                                    dialog-class="modal-fullscreen-xxl-down" class="v-modal-custom">
+                                <b-modal v-model="modalShow15" class="v-modal-custom"
+                                         dialog-class="modal-fullscreen-xxl-down"
+                                         hide-footer title="Full screen below xxl">
                                     <h6 class="fs-15">Give your text a good structure</h6>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
@@ -1850,8 +1876,8 @@ export default {
                                     </div>
                                     <div class="modal-footer v-modal-footer">
 
-                                        <b-link href="javascript:void(0);" class="btn btn-link link-success fw-medium"
-                                            @click="modalShow15 = false">
+                                        <b-link class="btn btn-link link-success fw-medium" href="javascript:void(0);"
+                                                @click="modalShow15 = false">
                                             <i class="ri-close-line me-1 align-middle"></i> Close
                                         </b-link>
                                         <b-button type="button" variant="primary">Save Changes</b-button>
@@ -1912,9 +1938,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Animation Modals</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="animation-modal-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="animation-modal-showcode" />
+                                <label class="form-label text-muted" for="animation-modal-showcode">Show Code</label>
+                                <input id="animation-modal-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -1944,8 +1970,8 @@ export default {
                                     </b-button>
                                 </div>
 
-                                <b-modal v-model="modalShow17" hide-footer title="Modal Heading"
-                                    modal-class="fadeInRight" class="v-modal-custom" centered>
+                                <b-modal v-model="modalShow17" centered class="v-modal-custom"
+                                         hide-footer modal-class="fadeInRight" title="Modal Heading">
                                     <h5 class="fs-16">Overflowing text to show scroll behavior</h5>
                                     <p class="text-muted">One morning, when Gregor Samsa woke from troubled
                                         dreams, he found himself transformed in his bed into a horrible
@@ -1963,8 +1989,8 @@ export default {
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow18" hide-footer title="Modal Heading"
-                                    modal-class="fadeInLeft" class="v-modal-custom" centered>
+                                <b-modal v-model="modalShow18" centered class="v-modal-custom"
+                                         hide-footer modal-class="fadeInLeft" title="Modal Heading">
                                     <h5 class="fs-16">Overflowing text to show scroll behavior</h5>
                                     <p class="text-muted">One morning, when Gregor Samsa woke from troubled
                                         dreams, he found himself transformed in his bed into a horrible
@@ -1982,8 +2008,8 @@ export default {
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow19" hide-footer title="Modal Heading" modal-class="fadeInUp"
-                                    class="v-modal-custom" centered>
+                                <b-modal v-model="modalShow19" centered class="v-modal-custom" hide-footer
+                                         modal-class="fadeInUp" title="Modal Heading">
                                     <h5 class="fs-16">Overflowing text to show scroll behavior</h5>
                                     <p class="text-muted">One morning, when Gregor Samsa woke from troubled
                                         dreams, he found himself transformed in his bed into a horrible
@@ -2001,8 +2027,8 @@ export default {
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow20" hide-footer title="Modal Heading" modal-class="flip"
-                                    class="v-modal-custom" centered>
+                                <b-modal v-model="modalShow20" centered class="v-modal-custom" hide-footer
+                                         modal-class="flip" title="Modal Heading">
                                     <h5 class="fs-16">Overflowing text to show scroll behavior</h5>
                                     <p class="text-muted">One morning, when Gregor Samsa woke from troubled
                                         dreams, he found himself transformed in his bed into a horrible
@@ -2020,8 +2046,8 @@ export default {
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow21" hide-footer title="Modal Heading" modal-class="zoomIn"
-                                    class="v-modal-custom" centered>
+                                <b-modal v-model="modalShow21" centered class="v-modal-custom" hide-footer
+                                         modal-class="zoomIn" title="Modal Heading">
                                     <h5 class="fs-16">Overflowing text to show scroll behavior</h5>
                                     <p class="text-muted">One morning, when Gregor Samsa woke from troubled
                                         dreams, he found himself transformed in his bed into a horrible
@@ -2053,7 +2079,7 @@ export default {
     &lt;b-modal v-model=&quot;modalShow18&quot; hide-footer title=&quot;Modal Heading&quot; modal-class=&quot;fadeInLeft&quot; class=&quot;v-modal-custom&quot; centered&gt;
         ...
     &lt;/b-modal&gt;
-    
+
 </code>
 
 <code>
@@ -2066,14 +2092,14 @@ export default {
     &lt;b-modal v-model=&quot;modalShow20&quot; hide-footer title=&quot;Modal Heading&quot; modal-class=&quot;flip&quot; class=&quot;v-modal-custom&quot; centered&gt;
         ...
     &lt;/b-modal&gt;
-    
+
 </code>
 
 <code>
     &lt;b-modal v-model=&quot;modalShow21&quot; hide-footer title=&quot;Modal Heading&quot; modal-class=&quot;zoomIn&quot; class=&quot;v-modal-custom&quot; centered&gt;
     ...
     &lt;/b-modal&gt;
-    
+
 </code></pre>
                         </div>
                     </b-card-body>
@@ -2090,9 +2116,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Modal Positions</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="positions-modal-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="positions-modal-showcode" />
+                                <label class="form-label text-muted" for="positions-modal-showcode">Show Code</label>
+                                <input id="positions-modal-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -2117,88 +2143,93 @@ export default {
                                     </b-button>
                                 </div>
 
-                                <b-modal v-model="modalShow22" hide-footer class="v-modal-custom" hide-header-close>
+                                <b-modal v-model="modalShow22" class="v-modal-custom" hide-footer hide-header-close>
                                     <div class="modal-body text-center">
-                                        <lottie colors="primary:#121331,secondary:#08a88a" trigger="loop"
-                                            :options="defaultOptions4" :height="120" :width="120" />
+                                        <lottie :height="120" :options="defaultOptions4"
+                                                :width="120" colors="primary:#121331,secondary:#08a88a" trigger="loop"/>
                                         <div class="mt-4">
                                             <h4 class="mb-3">Your event has been created.</h4>
                                             <p class="text-muted mb-4">The transfer was not successfully
                                                 received by us. the email of the recipient wasn't correct.</p>
                                             <div class="hstack gap-2 justify-content-center">
-                                                <b-link href="javascript:void(0);"
-                                                    class="btn btn-link link-success fw-medium"
-                                                    @click="modalShow22 = false">
+                                                <b-link class="btn btn-link link-success fw-medium"
+                                                        href="javascript:void(0);"
+                                                        @click="modalShow22 = false">
                                                     <i class="ri-close-line me-1 align-middle"></i> Close
                                                 </b-link>
-                                                <b-link href="javascript:void(0);" class="btn btn-success">
-                                                    Completed</b-link>
+                                                <b-link class="btn btn-success" href="javascript:void(0);">
+                                                    Completed
+                                                </b-link>
                                             </div>
                                         </div>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow23" hide-footer dialog-class="modal-dialog-right"
-                                    class="v-modal-custom" hide-header-close>
+                                <b-modal v-model="modalShow23" class="v-modal-custom" dialog-class="modal-dialog-right"
+                                         hide-footer hide-header-close>
                                     <div class="modal-body text-center">
-                                        <lottie colors="primary:#121331,secondary:#08a88a" trigger="loop"
-                                            :options="defaultOptions4" :height="120" :width="120" />
+                                        <lottie :height="120" :options="defaultOptions4"
+                                                :width="120" colors="primary:#121331,secondary:#08a88a" trigger="loop"/>
                                         <div class="mt-4">
                                             <h4 class="mb-3">Your event has been created.</h4>
                                             <p class="text-muted mb-4">The transfer was not successfully
                                                 received by us. the email of the recipient wasn't correct.</p>
                                             <div class="hstack gap-2 justify-content-center">
-                                                <b-link href="javascript:void(0);"
-                                                    class="btn btn-link link-success fw-medium"
-                                                    @click="modalShow23 = false">
+                                                <b-link class="btn btn-link link-success fw-medium"
+                                                        href="javascript:void(0);"
+                                                        @click="modalShow23 = false">
                                                     <i class="ri-close-line me-1 align-middle"></i> Close
                                                 </b-link>
-                                                <b-link href="javascript:void(0);" class="btn btn-success">
-                                                    Completed</b-link>
+                                                <b-link class="btn btn-success" href="javascript:void(0);">
+                                                    Completed
+                                                </b-link>
                                             </div>
                                         </div>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow24" hide-footer dialog-class="modal-dialog-bottom"
-                                    class="v-modal-custom" hide-header-close>
+                                <b-modal v-model="modalShow24" class="v-modal-custom" dialog-class="modal-dialog-bottom"
+                                         hide-footer hide-header-close>
                                     <div class="modal-body text-center">
-                                        <lottie colors="primary:#121331,secondary:#08a88a" trigger="loop"
-                                            :options="defaultOptions4" :height="120" :width="120" />
+                                        <lottie :height="120" :options="defaultOptions4"
+                                                :width="120" colors="primary:#121331,secondary:#08a88a" trigger="loop"/>
                                         <div class="mt-4">
                                             <h4 class="mb-3">Your event has been created.</h4>
                                             <p class="text-muted mb-4">The transfer was not successfully
                                                 received by us. the email of the recipient wasn't correct.</p>
                                             <div class="hstack gap-2 justify-content-center">
-                                                <b-link href="javascript:void(0);"
-                                                    class="btn btn-link link-success fw-medium"
-                                                    @click="modalShow24 = false">
+                                                <b-link class="btn btn-link link-success fw-medium"
+                                                        href="javascript:void(0);"
+                                                        @click="modalShow24 = false">
                                                     <i class="ri-close-line me-1 align-middle"></i> Close
                                                 </b-link>
-                                                <b-link href="javascript:void(0);" class="btn btn-success">
-                                                    Completed</b-link>
+                                                <b-link class="btn btn-success" href="javascript:void(0);">
+                                                    Completed
+                                                </b-link>
                                             </div>
                                         </div>
                                     </div>
                                 </b-modal>
 
-                                <b-modal v-model="modalShow25" hide-footer dialog-class="modal-dialog-bottom-right"
-                                    class="v-modal-custom" hide-header-close>
+                                <b-modal v-model="modalShow25" class="v-modal-custom"
+                                         dialog-class="modal-dialog-bottom-right"
+                                         hide-footer hide-header-close>
                                     <div class="modal-body text-center">
-                                        <lottie colors="primary:#121331,secondary:#08a88a" trigger="loop"
-                                            :options="defaultOptions4" :height="120" :width="120" />
+                                        <lottie :height="120" :options="defaultOptions4"
+                                                :width="120" colors="primary:#121331,secondary:#08a88a" trigger="loop"/>
                                         <div class="mt-4">
                                             <h4 class="mb-3">Your event has been created.</h4>
                                             <p class="text-muted mb-4">The transfer was not successfully
                                                 received by us. the email of the recipient wasn't correct.</p>
                                             <div class="hstack gap-2 justify-content-center">
-                                                <b-link href="javascript:void(0);"
-                                                    class="btn btn-link link-success fw-medium"
-                                                    @click="modalShow25 = false">
+                                                <b-link class="btn btn-link link-success fw-medium"
+                                                        href="javascript:void(0);"
+                                                        @click="modalShow25 = false">
                                                     <i class="ri-close-line me-1 align-middle"></i> Close
                                                 </b-link>
-                                                <b-link href="javascript:void(0);" class="btn btn-success">
-                                                    Completed</b-link>
+                                                <b-link class="btn btn-success" href="javascript:void(0);">
+                                                    Completed
+                                                </b-link>
                                             </div>
                                         </div>
                                     </div>
@@ -2225,7 +2256,7 @@ export default {
     &lt;b-modal v-model=&quot;modalShow24&quot; hide-footer dialog-class=&quot;modal-dialog-bottom&quot; class=&quot;v-modal-custom&quot; hide-header-close&gt;
         ...
     &lt;/b-modal&gt;
-    
+
 </code>
 
 <code>
@@ -2244,8 +2275,8 @@ export default {
                     <h5 class="mb-0 pb-1 text-decoration-underline">Custom Modals Example</h5>
                 </div>
                 <b-row>
-                    <b-col xl="4" md="6">
-                        <b-card no-body class="text-center border">
+                    <b-col md="6" xl="4">
+                        <b-card class="text-center border" no-body>
                             <b-card-body class="p-4 pb-0">
                                 <h5 class="mb-4">Success Message</h5>
                                 <p class="text-muted">Here is an example of a sweet alert with a success message.</p>
@@ -2256,23 +2287,23 @@ export default {
                                 <b-row class="justify-content-center mt-2">
                                     <b-col lg="10">
                                         <div>
-                                            <img src="@/assets/images/modals/success-payment.png" alt="Mac Image"
-                                                class="img-fluid">
+                                            <img alt="Mac Image" class="img-fluid"
+                                                 src="@/assets/images/modals/success-payment.png">
                                         </div>
                                     </b-col>
                                 </b-row>
                             </b-card-body>
                         </b-card>
 
-                        <b-modal v-model="modalShow26" hide-footer class="v-modal-custom" body-class="p-0" centered
-                            hide-header-close>
+                        <b-modal v-model="modalShow26" body-class="p-0" centered class="v-modal-custom" hide-footer
+                                 hide-header-close>
                             <div class="text-center px-5 pt-4">
                                 <div class="text-end">
-                                    <button type="button" class="btn-close text-end" @click="modalShow26 = false"
-                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button aria-label="Close" class="btn-close text-end" data-bs-dismiss="modal"
+                                            type="button" @click="modalShow26 = false"></button>
                                 </div>
                                 <div class="mt-2">
-                                    <lottie trigger="hover" :options="defaultOptions5" :height="150" :width="150" />
+                                    <lottie :height="150" :options="defaultOptions5" :width="150" trigger="hover"/>
 
                                     <h4 class="mb-3 mt-4">Your Transaction is Successfull !</h4>
                                     <p class="text-muted fs-15 mb-4">Successful transaction is the status of
@@ -2281,22 +2312,25 @@ export default {
                                     <div class="hstack gap-2 justify-content-center">
                                         <b-button variant="primary">New transaction</b-button>
                                         <b-button variant="soft-success"><i class="ri-links-line align-bottom"></i> Copy
-                                            tracking link</b-button>
+                                            tracking link
+                                        </b-button>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer bg-light p-3 mt-5 justify-content-center">
-                                <p class="mb-0 text-muted">You like our service? <b-link href="javascript:void(0)"
-                                        class="link-secondary fw-semibold">Invite
-                                        Friends</b-link>
+                                <p class="mb-0 text-muted">You like our service?
+                                    <b-link class="link-secondary fw-semibold"
+                                            href="javascript:void(0)">Invite
+                                        Friends
+                                    </b-link>
                                 </p>
                             </div>
                         </b-modal>
 
                     </b-col>
 
-                    <b-col xl="4" md="6">
-                        <b-card no-body class="text-center border">
+                    <b-col md="6" xl="4">
+                        <b-card class="text-center border" no-body>
                             <b-card-body class="p-4 pb-0">
                                 <h5 class="mb-4">Login Modals</h5>
                                 <p class="text-muted">Here is an example of a sweet alert with a error message.</p>
@@ -2306,24 +2340,28 @@ export default {
                                 <b-row class="justify-content-center mt-2">
                                     <b-col lg="10">
                                         <div>
-                                            <img src="@/assets/images/modals/login.png" alt="Mac Image"
-                                                class="img-fluid">
+                                            <img alt="Mac Image" class="img-fluid"
+                                                 src="@/assets/images/modals/login.png">
                                         </div>
                                     </b-col>
                                 </b-row>
                             </b-card-body>
                         </b-card>
 
-                        <b-modal v-model="modalShow27" hide-footer body-class="p-0" header-class="p-0"
-                            class="v-modal-custom" content-class="border-0 overflow-hidden" centered hide-header-close>
+                        <b-modal v-model="modalShow27" body-class="p-0" centered class="v-modal-custom"
+                                 content-class="border-0 overflow-hidden" header-class="p-0" hide-footer
+                                 hide-header-close>
                             <div class="modal-body login-modal p-5">
                                 <h5 class="text-white fs-20">Login</h5>
-                                <p class="text-white-50 mb-4">Don't have an account? <b-link href="javascript:void(0);"
-                                        class="text-white">Sign Up.</b-link>
+                                <p class="text-white-50 mb-4">Don't have an account?
+                                    <b-link class="text-white"
+                                            href="javascript:void(0);">Sign Up.
+                                    </b-link>
                                 </p>
                                 <div class="vstack gap-2 justify-content-center">
                                     <b-button variant="light"><i class="ri-google-fill align-bottom text-danger"></i>
-                                        Google</b-button>
+                                        Google
+                                    </b-button>
                                     <b-button variant="info"><i class="ri-facebook-fill align-bottom"></i> Facebook
                                     </b-button>
                                 </div>
@@ -2332,24 +2370,26 @@ export default {
                                 <h5 class="mb-3">Login with Email</h5>
                                 <form>
                                     <div class="mb-2">
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            placeholder="Enter your email/username">
+                                        <input id="exampleInputEmail1" class="form-control"
+                                               placeholder="Enter your email/username"
+                                               type="email">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="Enter your password">
+                                        <input id="exampleInputPassword1" class="form-control"
+                                               placeholder="Enter your password"
+                                               type="password">
                                         <div class="mt-1 text-end">
                                             <b-link href="auth/reset-pwd-basic">Forgot password ?</b-link>
                                         </div>
                                     </div>
-                                    <b-button type="submit" variant="primary" class="w-100">Submit</b-button>
+                                    <b-button class="w-100" type="submit" variant="primary">Submit</b-button>
                                 </form>
                             </div>
                         </b-modal>
                     </b-col>
 
-                    <b-col xl="4" md="6">
-                        <b-card no-body class="text-center border">
+                    <b-col md="6" xl="4">
+                        <b-card class="text-center border" no-body>
                             <b-card-body class="p-4 pb-0">
                                 <h5 class="mb-4">Subscribe Modals</h5>
                                 <p class="text-muted">Here is an example of a sweet alert with a warning message.</p>
@@ -2359,17 +2399,18 @@ export default {
                                 <b-row class="justify-content-center mt-2">
                                     <b-col lg="10">
                                         <div>
-                                            <img src="@/assets/images/modals/subscribe.png" alt="Mac Image"
-                                                class="img-fluid">
+                                            <img alt="Mac Image" class="img-fluid"
+                                                 src="@/assets/images/modals/subscribe.png">
                                         </div>
                                     </b-col>
                                 </b-row>
                             </b-card-body>
                         </b-card>
 
-                        <b-modal v-model="modalShow28" body-class="p-0" header-class="p-0" hide-footer
-                            class="v-modal-custom" content-class="border-0 overflow-hidden" size="lg" centered
-                            hide-header-close>
+                        <b-modal v-model="modalShow28" body-class="p-0" centered class="v-modal-custom"
+                                 content-class="border-0 overflow-hidden" header-class="p-0" hide-footer
+                                 hide-header-close
+                                 size="lg">
                             <b-row class="g-0">
                                 <b-col lg="7">
                                     <div class="modal-body p-5">
@@ -2381,15 +2422,16 @@ export default {
                                             Free bets are commonly used as welcome offers.</p>
                                         <div class="input-group mb-3">
 
-                                            <input type="text" class="form-control" placeholder="Enter your email"
-                                                aria-label="Example text with button addon"
-                                                aria-describedby="button-addon1">
-                                            <b-button variant="primary" type="button" id="button-addon1">Subscript Now
+                                            <input aria-describedby="button-addon1"
+                                                   aria-label="Example text with button addon" class="form-control"
+                                                   placeholder="Enter your email"
+                                                   type="text">
+                                            <b-button id="button-addon1" type="button" variant="primary">Subscript Now
                                             </b-button>
                                         </div>
 
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <input id="exampleCheck1" class="form-check-input" type="checkbox">
                                             <label class="form-check-label" for="exampleCheck1">By subscribing
                                                 to a particular channel or user on YouTube, you can receive
                                                 instant updates.</label>
@@ -2398,17 +2440,17 @@ export default {
                                 </b-col>
                                 <b-col lg="5">
                                     <div class="subscribe-modals-cover h-100">
-                                        <img src="@/assets/images/auth-one-bg.jpg" alt=""
-                                            class="h-100 w-100 object-cover"
-                                            style="clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);">
+                                        <img alt="" class="h-100 w-100 object-cover"
+                                             src="@/assets/images/auth-one-bg.jpg"
+                                             style="clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);">
                                     </div>
                                 </b-col>
                             </b-row>
                         </b-modal>
                     </b-col>
 
-                    <b-col xl="4" md="6">
-                        <b-card no-body class="text-center border">
+                    <b-col md="6" xl="4">
+                        <b-card class="text-center border" no-body>
                             <b-card-body class="p-4 pb-0">
                                 <h5 class="mb-4">Sign Up Modals</h5>
                                 <p class="text-muted">Here is an example of a sweet alert with a community registration
@@ -2419,41 +2461,43 @@ export default {
                                 <b-row class="justify-content-center mt-2">
                                     <b-col lg="10">
                                         <div>
-                                            <img src="@/assets/images/modals/signup.png" alt="Mac Image"
-                                                class="img-fluid">
+                                            <img alt="Mac Image" class="img-fluid"
+                                                 src="@/assets/images/modals/signup.png">
                                         </div>
                                     </b-col>
                                 </b-row>
                             </b-card-body>
                         </b-card>
 
-                        <b-modal v-model="modalShow29" hide-footer body-class="p-0" header-class="p-3"
-                            class="v-modal-custom" title="Sign Up" content-class="border-0 overflow-hidden" centered>
-                            <b-alert variant="success" class="rounded-0 mb-0" show>
+                        <b-modal v-model="modalShow29" body-class="p-0" centered class="v-modal-custom"
+                                 content-class="border-0 overflow-hidden" header-class="p-3" hide-footer
+                                 title="Sign Up">
+                            <b-alert class="rounded-0 mb-0" show variant="success">
                                 <p class="mb-0">Up to <span class="fw-semibold">50% OFF</span>, Hurry up before
                                     the stock ends</p>
                             </b-alert>
                             <div class="modal-body">
                                 <form>
                                     <div class="mb-3">
-                                        <label for="fullName" class="form-label">Full Name</label>
-                                        <input type="text" class="form-control" id="fullName"
-                                            placeholder="Enter your name">
+                                        <label class="form-label" for="fullName">Full Name</label>
+                                        <input id="fullName" class="form-control" placeholder="Enter your name"
+                                               type="text">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="emailInput1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="emailInput1"
-                                            placeholder="Enter your email">
+                                        <label class="form-label" for="emailInput1">Email address</label>
+                                        <input id="emailInput1" class="form-control" placeholder="Enter your email"
+                                               type="email">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword"
-                                            placeholder="Enter your password">
+                                        <label class="form-label" for="exampleInputPassword">Password</label>
+                                        <input id="exampleInputPassword" class="form-control"
+                                               placeholder="Enter your password"
+                                               type="password">
                                     </div>
                                     <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="checkTerms">
+                                        <input id="checkTerms" class="form-check-input" type="checkbox">
                                         <label class="form-check-label" for="checkTerms">I agree to the <span
-                                                class="fw-semibold">Terms of Service</span> and Privacy
+                                            class="fw-semibold">Terms of Service</span> and Privacy
                                             Policy</label>
                                     </div>
                                     <div class="text-end">

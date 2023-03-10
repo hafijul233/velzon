@@ -26,7 +26,7 @@ function getChartColorsArray(colors) {
     });
 }
 
-import { CountTo } from "vue3-count-to";
+import {CountTo} from "vue3-count-to";
 
 export default {
     components: {
@@ -35,12 +35,48 @@ export default {
     data() {
         return {
             searchQuery: null,
-            candidateList: [{ id: 1, img: require("@/assets/images/users/avatar-10.jpg"), name: "Tonya Noble", username: "@tonya", designation: "Web Developer" },
-            { id: 2, img: require("@/assets/images/users/avatar-1.jpg"), name: "Nicholas Ball", username: "@nicholas", designation: "Assistant / Store Keeper" },
-            { id: 3, img: require("@/assets/images/users/avatar-9.jpg"), name: "Zynthia Marrow", username: "@zynthia", designation: "Full Stack Engineer" },
-            { id: 4, img: require("@/assets/images/users/avatar-2.jpg"), name: "Cheryl Moore", username: "@cheryl", designation: "Product Designer" },
-            { id: 5, img: require("@/assets/images/users/avatar-5.jpg"), name: "Jennifer Bailey", username: "@jennifer", designation: "Marketing Director" },
-            { id: 6, img: require("@/assets/images/users/avatar-8.jpg"), name: "Hadley Leonard", username: "@hadley", designation: "Executive, HR Operations" }]
+            candidateList: [{
+                id: 1,
+                img: require("@/assets/images/users/avatar-10.jpg"),
+                name: "Tonya Noble",
+                username: "@tonya",
+                designation: "Web Developer"
+            },
+                {
+                    id: 2,
+                    img: require("@/assets/images/users/avatar-1.jpg"),
+                    name: "Nicholas Ball",
+                    username: "@nicholas",
+                    designation: "Assistant / Store Keeper"
+                },
+                {
+                    id: 3,
+                    img: require("@/assets/images/users/avatar-9.jpg"),
+                    name: "Zynthia Marrow",
+                    username: "@zynthia",
+                    designation: "Full Stack Engineer"
+                },
+                {
+                    id: 4,
+                    img: require("@/assets/images/users/avatar-2.jpg"),
+                    name: "Cheryl Moore",
+                    username: "@cheryl",
+                    designation: "Product Designer"
+                },
+                {
+                    id: 5,
+                    img: require("@/assets/images/users/avatar-5.jpg"),
+                    name: "Jennifer Bailey",
+                    username: "@jennifer",
+                    designation: "Marketing Director"
+                },
+                {
+                    id: 6,
+                    img: require("@/assets/images/users/avatar-8.jpg"),
+                    name: "Hadley Leonard",
+                    username: "@hadley",
+                    designation: "Executive, HR Operations"
+                }]
         };
     },
     methods: {
@@ -75,14 +111,14 @@ export default {
                 name: 'New Application',
                 data: [89, 56, 74, 98, 72, 38, 64, 46, 84, 58, 46, 49]
             },
-            {
-                name: "Interview",
-                data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
-            },
-            {
-                name: " Hired",
-                data: [36, 42, 60, 42, 13, 18, 29, 37, 36, 51, 32, 35]
-            }
+                {
+                    name: "Interview",
+                    data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+                },
+                {
+                    name: " Hired",
+                    data: [36, 42, 60, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+                }
             ],
             chartOptions: {
                 chart: {
@@ -124,20 +160,20 @@ export default {
 <template>
     <b-row>
         <b-col col xxl="8">
-            <b-card no-body class="card-height-100">
+            <b-card class="card-height-100" no-body>
                 <b-card-header class="border-0 align-items-center d-flex">
                     <b-card-title class="mb-0 flex-grow-1">Applications Statistic</b-card-title>
                     <div class="hstack gap-1">
-                        <b-button type="button" variant="soft-secondary" size="sm">
+                        <b-button size="sm" type="button" variant="soft-secondary">
                             ALL
                         </b-button>
-                        <b-button type="button" variant="soft-secondary" size="sm">
+                        <b-button size="sm" type="button" variant="soft-secondary">
                             1M
                         </b-button>
-                        <b-button type="button" variant="soft-secondary" size="sm">
+                        <b-button size="sm" type="button" variant="soft-secondary">
                             6M
                         </b-button>
-                        <b-button type="button" variant="soft-primary" size="sm">
+                        <b-button size="sm" type="button" variant="soft-primary">
                             1Y
                         </b-button>
                     </div>
@@ -148,7 +184,7 @@ export default {
                         <b-col cols="6" sm="3">
                             <div class="p-3 border border-dashed border-start-0">
                                 <h5 class="mb-1">
-                                    <count-to :startVal="0" :endVal="3364" :duration="5000"></count-to>
+                                    <count-to :duration="5000" :endVal="3364" :startVal="0"></count-to>
                                 </h5>
                                 <p class="text-muted mb-0">New Applications</p>
                             </div>
@@ -156,7 +192,7 @@ export default {
                         <b-col cols="6" sm="3">
                             <div class="p-3 border border-dashed border-start-0">
                                 <h5 class="mb-1">
-                                    <count-to :startVal="0" :endVal="2804" :duration="5000"></count-to>
+                                    <count-to :duration="5000" :endVal="2804" :startVal="0"></count-to>
                                 </h5>
                                 <p class="text-muted mb-0">Interview</p>
                             </div>
@@ -164,7 +200,7 @@ export default {
                         <b-col cols="6" sm="3">
                             <div class="p-3 border border-dashed border-start-0">
                                 <h5 class="mb-1">
-                                    <count-to :startVal="0" :endVal="2402" :duration="5000"></count-to>
+                                    <count-to :duration="5000" :endVal="2402" :startVal="0"></count-to>
                                 </h5>
                                 <p class="text-muted mb-0">Hired</p>
                             </div>
@@ -172,7 +208,8 @@ export default {
                         <b-col cols="6" sm="3">
                             <div class="p-3 border border-dashed border-start-0 border-end-0">
                                 <h5 class="mb-1 text-success">
-                                    <count-to :startVal="0" :endVal="8" :duration="5000"></count-to>k
+                                    <count-to :duration="5000" :endVal="8" :startVal="0"></count-to>
+                                    k
                                 </h5>
                                 <p class="text-muted mb-0">Total Applications</p>
                             </div>
@@ -182,7 +219,7 @@ export default {
 
                 <b-card-body class="p-0 pb-2">
                     <div class="w-100">
-                        <apexchart class="apex-charts" height="350" dir="ltr" :series="series" :options="chartOptions">
+                        <apexchart :options="chartOptions" :series="series" class="apex-charts" dir="ltr" height="350">
                         </apexchart>
                     </div>
                 </b-card-body>
@@ -195,8 +232,8 @@ export default {
                     <div class="d-flex align-items-center">
                         <h6 class="card-title mb-0 flex-grow-1">Popular Candidates</h6>
                         <div class="flex-shrink-0">
-                            <b-link href="/jobs/candidate-lists" class="link-primary">View All <i
-                                    class="ri-arrow-right-line"></i></b-link>
+                            <b-link class="link-primary" href="/jobs/candidate-lists">View All <i
+                                class="ri-arrow-right-line"></i></b-link>
                         </div>
                     </div>
                 </b-card-header>
@@ -204,26 +241,26 @@ export default {
                     <b-col col lg="6">
                         <b-card-body class="border-end">
                             <div class="search-box">
-                                <input type="text" class="form-control bg-light border-light" autocomplete="off"
-                                    id="searchList" placeholder="Search candidate..." v-model="searchQuery">
+                                <input id="searchList" v-model="searchQuery" autocomplete="off"
+                                       class="form-control bg-light border-light" placeholder="Search candidate..." type="text">
                                 <i class="ri-search-line search-icon"></i>
                             </div>
-                            <div data-simplebar style="max-height: 190px" class="px-3 mx-n3">
-                                <ul class="list-unstyled mb-0 pt-2" id="candidate-list">
+                            <div class="px-3 mx-n3" data-simplebar style="max-height: 190px">
+                                <ul id="candidate-list" class="list-unstyled mb-0 pt-2">
                                     <li v-for="(data, index) of resultQuery" :key="index" @click="showdetail(data)">
-                                        <b-link href="javascript:void(0);" class="d-flex align-items-center py-2">
+                                        <b-link class="d-flex align-items-center py-2" href="javascript:void(0);">
                                             <div class="flex-shrink-0 me-2">
                                                 <div class="avatar-xs">
                                                     <img :src="data.img" alt=""
-                                                        class="img-fluid rounded-circle candidate-img">
+                                                         class="img-fluid rounded-circle candidate-img">
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1">
                                                 <h5 class="fs-13 mb-1 text-truncate"><span class="candidate-name">{{
                                                         data.name
-                                                }}</span> <span class="text-muted fw-normal">{{
-        data.username
-}}</span>
+                                                    }}</span> <span class="text-muted fw-normal">{{
+                                                        data.username
+                                                    }}</span>
                                                 </h5>
                                                 <div class="d-none candidate-position">{{ data.designation }}</div>
                                             </div>
@@ -236,29 +273,29 @@ export default {
                     <b-col col lg="6">
                         <b-card-body class="text-center">
                             <div class="avatar-md mb-3 mx-auto">
-                                <img src="@/assets/images/users/avatar-10.jpg" alt="" id="candidate-img"
-                                    class="img-thumbnail rounded-circle shadow-none">
+                                <img id="candidate-img" alt="" class="img-thumbnail rounded-circle shadow-none"
+                                     src="@/assets/images/users/avatar-10.jpg">
                             </div>
 
                             <h5 id="candidate-name" class="mb-0">Tonya Noble</h5>
                             <p id="candidate-position" class="text-muted">Web Developer</p>
 
                             <div class="d-flex gap-2 justify-content-center mb-3">
-                                <button type="button" class="btn avatar-xs p-0" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Google">
+                                <button class="btn avatar-xs p-0" data-bs-placement="top" data-bs-toggle="tooltip"
+                                        title="Google" type="button">
                                     <span class="avatar-title rounded-circle bg-light text-body">
                                         <i class="ri-google-line"></i>
                                     </span>
                                 </button>
 
-                                <button type="button" class="btn avatar-xs p-0" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Linkedin">
+                                <button class="btn avatar-xs p-0" data-bs-placement="top" data-bs-toggle="tooltip"
+                                        title="Linkedin" type="button">
                                     <span class="avatar-title rounded-circle bg-light text-body">
                                         <i class="ri-linkedin-line"></i>
                                     </span>
                                 </button>
-                                <button type="button" class="btn avatar-xs p-0" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Dribbble">
+                                <button class="btn avatar-xs p-0" data-bs-placement="top" data-bs-toggle="tooltip"
+                                        title="Dribbble" type="button">
                                     <span class="avatar-title rounded-circle bg-light text-body">
                                         <i class="ri-dribbble-fill"></i>
                                     </span>
@@ -266,8 +303,8 @@ export default {
                             </div>
 
                             <div>
-                                <b-button type="button" variant="success" class="custom-toggle w-100"
-                                    data-bs-toggle="button" aria-pressed="false">
+                                <b-button aria-pressed="false" class="custom-toggle w-100" data-bs-toggle="button"
+                                          type="button" variant="success">
                                     <span class="icon-on"><i class="ri-add-line align-bottom me-1"></i> Follow</span>
                                     <span class="icon-off"><i class="ri-user-unfollow-line align-bottom me-1"></i>
                                         Unfollow</span>
@@ -277,7 +314,7 @@ export default {
                     </b-col>
                 </b-row>
             </b-card>
-            <b-card no-body class="overflow-hidden shadow-none">
+            <b-card class="overflow-hidden shadow-none" no-body>
                 <b-card-body class="bg-soft-danger">
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
@@ -294,7 +331,7 @@ export default {
                         </div>
                     </div>
                     <div class="mt-3 text-end">
-                        <b-link href="#!" class="btn btn-danger">Invite Friends</b-link>
+                        <b-link class="btn btn-danger" href="#!">Invite Friends</b-link>
                     </div>
                 </b-card-body>
             </b-card>

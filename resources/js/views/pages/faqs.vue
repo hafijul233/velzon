@@ -5,7 +5,7 @@ import appConfig from "../../../app.config";
 export default {
     page: {
         title: "Widgets",
-        meta: [{ name: "description", content: appConfig.description }],
+        meta: [{name: "description", content: appConfig.description}],
     },
     data() {
         return {
@@ -24,27 +24,29 @@ export default {
     <Layout>
         <b-row>
             <b-col lg="12">
-                <b-card no-body class="rounded-0 bg-soft-success mx-n4 mt-n4 border-top">
+                <b-card class="rounded-0 bg-soft-success mx-n4 mt-n4 border-top" no-body>
                     <div class="px-4">
                         <b-row>
-                            <b-col xxl="5" class="align-self-center">
+                            <b-col class="align-self-center" xxl="5">
                                 <div class="py-4">
                                     <h4 class="display-6 coming-soon-text">Frequently asked questions</h4>
                                     <p class="text-success fs-15 mt-3">If you can not find answer to your question in
                                         our FAQ, you can always contact us or email us. We will answer you shortly!</p>
                                     <div class="hstack flex-wrap gap-2">
-                                        <b-button pill variant="primary" type="button" class="btn-label"><i
-                                                class="ri-mail-line label-icon align-middle rounded-pill fs-16 me-2"></i>
-                                            Email Us</b-button>
-                                        <b-button pill variant="info" type="button" class="btn-label"><i
-                                                class="ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2"></i>
-                                            Send Us Tweet</b-button>
+                                        <b-button class="btn-label" pill type="button" variant="primary"><i
+                                            class="ri-mail-line label-icon align-middle rounded-pill fs-16 me-2"></i>
+                                            Email Us
+                                        </b-button>
+                                        <b-button class="btn-label" pill type="button" variant="info"><i
+                                            class="ri-twitter-line label-icon align-middle rounded-pill fs-16 me-2"></i>
+                                            Send Us Tweet
+                                        </b-button>
                                     </div>
                                 </div>
                             </b-col>
-                            <b-col xxl="3" class="ms-auto">
+                            <b-col class="ms-auto" xxl="3">
                                 <div class="mb-n5 pb-1 faq-img d-none d-xxl-block">
-                                    <img src="@/assets/images/faq-img.png" alt="" class="img-fluid">
+                                    <img alt="" class="img-fluid" src="@/assets/images/faq-img.png">
                                 </div>
                             </b-col>
                         </b-row>
@@ -63,7 +65,7 @@ export default {
                                 </div>
                             </div>
 
-                            <b-accordion class="accordion-border-box" id="genques-accordion">
+                            <b-accordion id="genques-accordion" class="accordion-border-box">
                                 <b-accordion-item title="What is Lorem Ipsum ?" visible>
                                     If several languages coalesce, the grammar of the resulting language is more
                                     simple and regular than that of the individual languages. The new common
@@ -107,7 +109,7 @@ export default {
                                 </div>
                             </div>
 
-                            <b-accordion class="accordion-border-box" id="manageaccount-accordion">
+                            <b-accordion id="manageaccount-accordion" class="accordion-border-box">
                                 <b-accordion-item title="Where can I get some ?">
                                     If several languages coalesce, the grammar of the resulting language is more
                                     simple and regular than that of the individual languages. The new common
@@ -149,7 +151,7 @@ export default {
                                 </div>
                             </div>
 
-                            <b-accordion class="accordion-border-box" id="privacy-accordion">
+                            <b-accordion id="privacy-accordion" class="accordion-border-box">
                                 <b-accordion-item title="Why do we use it ?" visible>
                                     If several languages coalesce, the grammar of the resulting language is more
                                     simple and regular than that of the individual languages. The new common

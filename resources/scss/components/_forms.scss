@@ -7,6 +7,7 @@
 [type="email"],
 [type="number"] {
     &::placeholder {
-        text-align: left /*rtl: right*/;
+        text-align: left /*rtl: right*/
+    ;
     }
 }

@@ -1,7 +1,8 @@
 <script>
-import SwiperCore, { Thumbs, Pagination, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/vue";
+import SwiperCore, {Navigation, Pagination, Thumbs} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/vue";
 import "swiper/swiper-bundle.css";
+
 SwiperCore.use([Thumbs, Pagination, Navigation]);
 export default {
     components: {
@@ -14,19 +15,19 @@ export default {
     <b-card no-body>
         <b-card-header class="d-flex align-items-center">
             <h6 class="card-title flex-grow-1 mb-0">Top Collections</h6>
-            <b-link href="/apps/nft-collection" type="button" class="btn btn-soft-primary btn-sm flex-shrink-0">
+            <b-link class="btn btn-soft-primary btn-sm flex-shrink-0" href="/apps/nft-collection" type="button">
                 See All <i class="ri-arrow-right-line align-bottom"></i>
             </b-link>
         </b-card-header>
         <b-card-body>
             <div class="swiper collection-slider">
                 <div class="swiper-wrapper">
-                    <swiper class="swiper responsive-swiper rounded gallery-light" :loop="true" :slidesPerView="1"
-                        :spaceBetween="10">
+                    <swiper :loop="true" :slidesPerView="1" :spaceBetween="10"
+                            class="swiper responsive-swiper rounded gallery-light">
                         <swiper-slide>
                             <div class="dash-collection overflow-hidden rounded-top position-relative">
-                                <img src="@/assets/images/nft/img-03.jpg" alt="" height="220"
-                                    class="object-cover w-100" />
+                                <img alt="" class="object-cover w-100" height="220"
+                                     src="@/assets/images/nft/img-03.jpg"/>
                                 <div
                                     class="content position-absolute bottom-0 m-2 p-2 start-0 end-0 rounded d-flex align-items-center">
                                     <div class="flex-grow-1">
@@ -37,7 +38,7 @@ export default {
                                     </div>
                                     <div class="avatar-xxs">
                                         <div class="avatar-title bg-white rounded-circle">
-                                            <b-link href="#!" class="link-success"><i class="ri-arrow-right-line"></i>
+                                            <b-link class="link-success" href="#!"><i class="ri-arrow-right-line"></i>
                                             </b-link>
                                         </div>
                                     </div>
@@ -46,8 +47,8 @@ export default {
                         </swiper-slide>
                         <swiper-slide>
                             <div class="dash-collection overflow-hidden rounded-top position-relative">
-                                <img src="@/assets/images/nft/img-04.jpg" alt="" height="220"
-                                    class="object-cover w-100" />
+                                <img alt="" class="object-cover w-100" height="220"
+                                     src="@/assets/images/nft/img-04.jpg"/>
                                 <div
                                     class="content position-absolute bottom-0 m-2 p-2 start-0 end-0 rounded d-flex align-items-center">
                                     <div class="flex-grow-1">
@@ -58,7 +59,7 @@ export default {
                                     </div>
                                     <div class="avatar-xxs">
                                         <div class="avatar-title bg-white rounded-circle">
-                                            <b-link href="#!" class="link-success"><i class="ri-arrow-right-line"></i>
+                                            <b-link class="link-success" href="#!"><i class="ri-arrow-right-line"></i>
                                             </b-link>
                                         </div>
                                     </div>
@@ -67,8 +68,8 @@ export default {
                         </swiper-slide>
                         <swiper-slide>
                             <div class="dash-collection overflow-hidden rounded-top position-relative">
-                                <img src="https://img.themesbrand.com/velzon/images/img-5.gif" alt="" height="220"
-                                    class="object-cover w-100" />
+                                <img alt="" class="object-cover w-100" height="220"
+                                     src="https://img.themesbrand.com/velzon/images/img-5.gif"/>
                                 <div
                                     class="content position-absolute bottom-0 m-2 p-2 start-0 end-0 rounded d-flex align-items-center">
                                     <div class="flex-grow-1">
@@ -79,7 +80,7 @@ export default {
                                     </div>
                                     <div class="avatar-xxs">
                                         <div class="avatar-title bg-white rounded-circle">
-                                            <b-link href="#!" class="link-success"><i class="ri-arrow-right-line"></i>
+                                            <b-link class="link-success" href="#!"><i class="ri-arrow-right-line"></i>
                                             </b-link>
                                         </div>
                                     </div>
@@ -88,8 +89,8 @@ export default {
                         </swiper-slide>
                         <swiper-slide>
                             <div class="dash-collection overflow-hidden rounded-top position-relative">
-                                <img src="@/assets/images/nft/img-06.jpg" alt="" height="220"
-                                    class="object-cover w-100" />
+                                <img alt="" class="object-cover w-100" height="220"
+                                     src="@/assets/images/nft/img-06.jpg"/>
                                 <div
                                     class="content position-absolute bottom-0 m-2 p-2 start-0 end-0 rounded d-flex align-items-center">
                                     <div class="flex-grow-1">
@@ -100,7 +101,7 @@ export default {
                                     </div>
                                     <div class="avatar-xxs">
                                         <div class="avatar-title bg-white rounded-circle">
-                                            <b-link href="#!" class="link-success"><i class="ri-arrow-right-line"></i>
+                                            <b-link class="link-success" href="#!"><i class="ri-arrow-right-line"></i>
                                             </b-link>
                                         </div>
                                     </div>
@@ -115,19 +116,19 @@ export default {
     <b-card no-body>
         <b-card-header class="d-flex align-items-center">
             <h5 class="card-title flex-grow-1 mb-0">Popular Creators</h5>
-            <b-link href="/apps/nft-creators" type="button" class="btn btn-soft-primary btn-sm flex-shrink-0">
+            <b-link class="btn btn-soft-primary btn-sm flex-shrink-0" href="/apps/nft-creators" type="button">
                 See All <i class="ri-arrow-right-line align-bottom"></i>
             </b-link>
         </b-card-header>
         <b-card-body>
             <div class="swiper collection-slider">
                 <div class="swiper-wrapper">
-                    <swiper class="swiper responsive-swiper rounded gallery-light pb-4" :loop="true" :slidesPerView="1">
+                    <swiper :loop="true" :slidesPerView="1" class="swiper responsive-swiper rounded gallery-light pb-4">
                         <swiper-slide>
                             <div class="d-flex">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/nft/img-02.jpg" alt=""
-                                        class="avatar-sm object-cover rounded">
+                                    <img alt="" class="avatar-sm object-cover rounded"
+                                         src="@/assets/images/nft/img-02.jpg">
                                 </div>
                                 <div class="ms-3 flex-grow-1">
                                     <b-link href="/pages/profile">
@@ -138,8 +139,8 @@ export default {
                                 </div>
                                 <div>
                                     <div class="dropdown float-end">
-                                        <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                                data-bs-toggle="dropdown" type="button">
                                             <i class="ri-more-fill align-middle fs-16"></i>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end">
@@ -160,8 +161,8 @@ export default {
                         <swiper-slide>
                             <div class="d-flex">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/nft/img-01.jpg" alt=""
-                                        class="avatar-sm object-cover rounded">
+                                    <img alt="" class="avatar-sm object-cover rounded"
+                                         src="@/assets/images/nft/img-01.jpg">
                                 </div>
                                 <div class="ms-3 flex-grow-1">
                                     <b-link href="/pages/profile">
@@ -172,8 +173,8 @@ export default {
                                 </div>
                                 <div>
                                     <div class="dropdown float-end">
-                                        <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                                data-bs-toggle="dropdown" type="button">
                                             <i class="ri-more-fill align-middle fs-16"></i>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end">
@@ -194,8 +195,8 @@ export default {
                         <swiper-slide>
                             <div class="d-flex">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/nft/img-04.jpg" alt=""
-                                        class="avatar-sm object-cover rounded">
+                                    <img alt="" class="avatar-sm object-cover rounded"
+                                         src="@/assets/images/nft/img-04.jpg">
                                 </div>
                                 <div class="ms-3 flex-grow-1">
                                     <b-link href="/pages/profile">
@@ -206,8 +207,8 @@ export default {
                                 </div>
                                 <div>
                                     <div class="dropdown float-end">
-                                        <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                                data-bs-toggle="dropdown" type="button">
                                             <i class="ri-more-fill align-middle fs-16"></i>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end">
@@ -228,8 +229,8 @@ export default {
                         <swiper-slide>
                             <div class="d-flex">
                                 <div class="flex-shrink-0">
-                                    <img src="@/assets/images/users/avatar-1.jpg" alt=""
-                                        class="avatar-sm object-cover rounded">
+                                    <img alt="" class="avatar-sm object-cover rounded"
+                                         src="@/assets/images/users/avatar-1.jpg">
                                 </div>
                                 <div class="ms-3 flex-grow-1">
                                     <b-link href="/pages/profile">
@@ -240,8 +241,8 @@ export default {
                                 </div>
                                 <div>
                                     <div class="dropdown float-end">
-                                        <button class="btn btn-ghost-primary btn-icon dropdown" type="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button aria-expanded="false" class="btn btn-ghost-primary btn-icon dropdown"
+                                                data-bs-toggle="dropdown" type="button">
                                             <i class="ri-more-fill align-middle fs-16"></i>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end">

@@ -33,7 +33,6 @@ export default {
             });
 
 
-
         var myInput = document.getElementById("password-input");
         var letter = document.getElementById("pass-lower");
         var capital = document.getElementById("pass-upper");
@@ -98,13 +97,13 @@ export default {
 
 <template>
     <div class="auth-page-wrapper pt-5">
-        <div class="auth-one-bg-position auth-one-bg" id="auth-particles">
+        <div id="auth-particles" class="auth-one-bg-position auth-one-bg">
             <div class="bg-overlay"></div>
 
             <div class="shape">
 
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 1440 120">
+                <svg version="1.1" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
                 </svg>
             </div>
@@ -223,7 +222,7 @@ export default {
                     background_repeat: 'no-repeat',
                     background_size: 'cover',
                 },
-            }" />
+            }"/>
         </div>
 
         <div class="auth-page-content">
@@ -232,8 +231,8 @@ export default {
                     <b-col lg="12">
                         <div class="text-center mt-sm-5 mb-4 text-white-50">
                             <div>
-                                <b-link href="/" class="d-inline-block auth-logo">
-                                    <img src="@/assets/images/logo-light.png" alt="" height="20">
+                                <b-link class="d-inline-block auth-logo" href="/">
+                                    <img alt="" height="20" src="@/assets/images/logo-light.png">
                                 </b-link>
                             </div>
                             <p class="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
@@ -242,8 +241,8 @@ export default {
                 </b-row>
 
                 <b-row class="justify-content-center">
-                    <b-col md="8" lg="6" xl="5">
-                        <b-card no-body class="mt-4">
+                    <b-col lg="6" md="8" xl="5">
+                        <b-card class="mt-4" no-body>
 
                             <b-card-body class="p-4">
                                 <div class="text-center mt-2">
@@ -257,13 +256,15 @@ export default {
                                         <div class="mb-3">
                                             <label class="form-label" for="password-input">Password</label>
                                             <div class="position-relative auth-pass-inputgroup">
-                                                <input type="password" class="form-control pe-5 password-input"
-                                                    onpaste="return false" placeholder="Enter password"
-                                                    id="password-input" aria-describedby="passwordInput"
-                                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-                                                <b-button variant="link"
-                                                    class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
-                                                    type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i>
+                                                <input id="password-input" aria-describedby="passwordInput"
+                                                       class="form-control pe-5 password-input" onpaste="return false"
+                                                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                                       placeholder="Enter password"
+                                                       required type="password">
+                                                <b-button id="password-addon"
+                                                          class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                          type="button" variant="link"><i
+                                                    class="ri-eye-fill align-middle"></i>
                                                 </b-button>
                                             </div>
                                             <div id="passwordInput" class="form-text">Must be at least 8 characters.
@@ -274,13 +275,16 @@ export default {
                                             <label class="form-label" for="confirm-password-input">Confirm
                                                 Password</label>
                                             <div class="position-relative auth-pass-inputgroup mb-3">
-                                                <input type="password" class="form-control pe-5 password-input"
-                                                    onpaste="return false" placeholder="Confirm password"
-                                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                                    id="confirm-password-input" required>
-                                                <b-button variant="link"
-                                                    class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
-                                                    type="button" id="confirm-password-input"><i class="ri-eye-fill align-middle"></i>
+                                                <input id="confirm-password-input"
+                                                       class="form-control pe-5 password-input"
+                                                       onpaste="return false"
+                                                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                                       placeholder="Confirm password"
+                                                       required type="password">
+                                                <b-button id="confirm-password-input"
+                                                          class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                          type="button" variant="link"><i
+                                                    class="ri-eye-fill align-middle"></i>
                                                 </b-button>
                                             </div>
                                         </div>
@@ -298,14 +302,16 @@ export default {
                                         </div>
 
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="auth-remember-check">
+                                            <input id="auth-remember-check" class="form-check-input" type="checkbox"
+                                                   value="">
                                             <label class="form-check-label" for="auth-remember-check">Remember
                                                 me</label>
                                         </div>
 
                                         <div class="mt-4">
-                                            <b-button variant="success" class="w-100" @click="validatepassword" type="submit">Reset Password</b-button>
+                                            <b-button class="w-100" type="submit" variant="success"
+                                                      @click="validatepassword">Reset Password
+                                            </b-button>
                                         </div>
 
                                     </form>
@@ -314,8 +320,10 @@ export default {
                         </b-card>
 
                         <div class="mt-4 text-center">
-                            <p class="mb-0">Wait, I remember my password... <b-link href="auth-signin-basic"
-                                    class="fw-semibold text-primary text-decoration-underline"> Click here </b-link>
+                            <p class="mb-0">Wait, I remember my password...
+                                <b-link class="fw-semibold text-primary text-decoration-underline"
+                                        href="auth-signin-basic"> Click here
+                                </b-link>
                             </p>
                         </div>
 
@@ -330,7 +338,7 @@ export default {
                     <b-col lg="12">
                         <div class="text-center">
                             <p class="mb-0 text-muted">&copy; {{ new Date().getFullYear() }} Velzon. Crafted with <i
-                                    class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                                class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                         </div>
                     </b-col>
                 </b-row>

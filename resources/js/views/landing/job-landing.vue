@@ -1,13 +1,7 @@
 <script>
 import appConfig from "../../../app.config";
-import SwiperCore, {
-    Thumbs,
-    Navigation,
-    Pagination
-} from "swiper";
-import {
-    Swiper, SwiperSlide
-} from "swiper/vue";
+import SwiperCore, {Navigation, Pagination, Thumbs} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/vue";
 import "swiper/swiper-bundle.css";
 // import {
 //     CountTo
@@ -29,10 +23,10 @@ export default {
                 text: "Pages",
                 href: "/",
             },
-            {
-                text: "Starter",
-                active: true,
-            },
+                {
+                    text: "Starter",
+                    active: true,
+                },
             ],
         };
     },
@@ -78,20 +72,20 @@ export default {
 
 <template>
     <div class="layout-wrapper landing">
-        <nav class="navbar navbar-expand-lg navbar-landing fixed-top job-navbar" id="navbar">
-            <b-container fluid class="custom-container">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-landing fixed-top job-navbar">
+            <b-container class="custom-container" fluid>
                 <b-link class="navbar-brand" href="/">
-                    <img src="@/assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark"
-                        height="17">
-                    <img src="@/assets/images/logo-light.png" class="card-logo card-logo-light" alt="logo light"
-                        height="17">
+                    <img alt="logo dark" class="card-logo card-logo-dark" height="17"
+                         src="@/assets/images/logo-dark.png">
+                    <img alt="logo light" class="card-logo card-logo-light" height="17"
+                         src="@/assets/images/logo-light.png">
                 </b-link>
-                <button class="navbar-toggler py-0 fs-20 text-body" type="button" v-b-toggle.navbarSupportedContent>
+                <button v-b-toggle.navbarSupportedContent class="navbar-toggler py-0 fs-20 text-body" type="button">
                     <i class="mdi mdi-menu"></i>
                 </button>
 
-                <b-collapse class="navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
+                <b-collapse id="navbarSupportedContent" class="navbar-collapse">
+                    <ul id="navbar-example" class="navbar-nav mx-auto mt-2 mt-lg-0">
                         <li class="nav-item">
                             <b-link class="nav-link active" href="#hero">Home</b-link>
                         </li>
@@ -113,15 +107,16 @@ export default {
                     </ul>
 
                     <div class="">
-                        <b-link href="/auth/signin-basic" class="btn btn-soft-primary"><i
-                                class="ri-user-3-line align-bottom me-1"></i> Login & Register</b-link>
+                        <b-link class="btn btn-soft-primary" href="/auth/signin-basic"><i
+                            class="ri-user-3-line align-bottom me-1"></i> Login & Register
+                        </b-link>
                     </div>
                 </b-collapse>
 
             </b-container>
         </nav>
 
-        <section class="section job-hero-section bg-light pb-0" id="hero">
+        <section id="hero" class="section job-hero-section bg-light pb-0">
             <b-container>
                 <b-row class="justify-content-between align-items-center">
                     <b-col lg="6">
@@ -134,8 +129,8 @@ export default {
                                 <b-row class="g-md-0 g-2">
                                     <b-col md="4">
                                         <div>
-                                            <input type="search" id="job-title" class="form-control filter-input-box"
-                                                placeholder="Job, Company name...">
+                                            <input id="job-title" class="form-control filter-input-box" placeholder="Job, Company name..."
+                                                   type="search">
                                         </div>
                                     </b-col>
                                     <b-col md="4">
@@ -151,8 +146,9 @@ export default {
                                     </b-col>
                                     <b-col md="4">
                                         <div class="h-100">
-                                            <b-button variant="primary" class="submit-btn w-100 h-100" type="submit"><i
-                                                    class="ri-search-2-line align-bottom me-1"></i> Find Job</b-button>
+                                            <b-button class="submit-btn w-100 h-100" type="submit" variant="primary"><i
+                                                class="ri-search-2-line align-bottom me-1"></i> Find Job
+                                            </b-button>
                                         </div>
                                     </b-col>
                                 </b-row>
@@ -160,7 +156,8 @@ export default {
 
                             <ul class="treding-keywords list-inline mb-0 mt-3 fs-13">
                                 <li class="list-inline-item text-danger fw-semibold"><i
-                                        class="mdi mdi-tag-multiple-outline align-middle"></i> Trending Keywords:</li>
+                                    class="mdi mdi-tag-multiple-outline align-middle"></i> Trending Keywords:
+                                </li>
                                 <li class="list-inline-item">
                                     <b-link href="#">Design,</b-link>
                                 </li>
@@ -178,7 +175,7 @@ export default {
                     </b-col>
                     <b-col lg="4">
                         <div class="position-relative home-img text-center mt-5 mt-lg-0">
-                            <b-card no-body class="p-3 rounded shadow-lg inquiry-box">
+                            <b-card class="p-3 rounded shadow-lg inquiry-box" no-body>
                                 <div class="d-flex align-items-center">
                                     <div class="avatar-sm flex-shrink-0 me-3">
                                         <div class="avatar-title bg-soft-warning text-warning rounded fs-18">
@@ -189,43 +186,43 @@ export default {
                                 </div>
                             </b-card>
 
-                            <b-card no-body class="p-3 rounded shadow-lg application-box">
+                            <b-card class="p-3 rounded shadow-lg application-box" no-body>
                                 <h5 class="fs-15 lh-base mb-3">Applications</h5>
                                 <div class="avatar-group">
-                                    <b-link href="#" class="avatar-group-item" v-b-tooltip.hover title="Brent Gonzalez">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="#" title="Brent Gonzalez">
                                         <div class="avatar-xs">
-                                            <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                                class="rounded-circle img-fluid">
+                                            <img alt="" class="rounded-circle img-fluid"
+                                                 src="@/assets/images/users/avatar-3.jpg">
                                         </div>
                                     </b-link>
-                                    <b-link href="#" class="avatar-group-item" v-b-tooltip.hover title="Ellen Smith">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="#" title="Ellen Smith">
                                         <div class="avatar-xs">
                                             <div class="avatar-title rounded-circle bg-danger">
                                                 S
                                             </div>
                                         </div>
                                     </b-link>
-                                    <b-link href="#" class="avatar-group-item" v-b-tooltip.hover title="Ellen Smith">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="#" title="Ellen Smith">
                                         <div class="avatar-xs">
-                                            <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                                class="rounded-circle img-fluid">
+                                            <img alt="" class="rounded-circle img-fluid"
+                                                 src="@/assets/images/users/avatar-10.jpg">
                                         </div>
                                     </b-link>
-                                    <b-link href="#" class="avatar-group-item">
+                                    <b-link class="avatar-group-item" href="#">
                                         <div class="avatar-xs">
                                             <div class="avatar-title rounded-circle bg-success">
                                                 Z
                                             </div>
                                         </div>
                                     </b-link>
-                                    <b-link href="#" class="avatar-group-item" v-b-tooltip.hover title="Brent Gonzalez">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="#" title="Brent Gonzalez">
                                         <div class="avatar-xs">
-                                            <img src="@/assets/images/users/avatar-9.jpg" alt=""
-                                                class="rounded-circle img-fluid">
+                                            <img alt="" class="rounded-circle img-fluid"
+                                                 src="@/assets/images/users/avatar-9.jpg">
                                         </div>
                                     </b-link>
-                                    <b-link href="#" class="avatar-group-item" v-b-tooltip.hover
-                                        title="More Appliances">
+                                    <b-link v-b-tooltip.hover class="avatar-group-item" href="#"
+                                            title="More Appliances">
                                         <div class="avatar-xs">
                                             <div
                                                 class="avatar-title fs-13 rounded-circle bg-light border-dashed border text-primary">
@@ -235,7 +232,7 @@ export default {
                                     </b-link>
                                 </div>
                             </b-card>
-                            <img src="@/assets/images/job-profile2.png" alt="" class="user-img">
+                            <img alt="" class="user-img" src="@/assets/images/job-profile2.png">
 
                             <div class="circle-effect">
                                 <div class="circle"></div>
@@ -249,7 +246,7 @@ export default {
             </b-container>
         </section>
 
-        <section class="section" id="process">
+        <section id="process" class="section">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
@@ -264,7 +261,7 @@ export default {
                 </b-row>
                 <b-row>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body class="p-4">
                                 <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
                                     <div class="job-icon-effect"></div>
@@ -276,7 +273,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none">
+                        <b-card class="shadow-none" no-body>
                             <b-card-body class="p-4">
                                 <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
                                     <div class="job-icon-effect"></div>
@@ -288,7 +285,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none">
+                        <b-card class="shadow-none" no-body>
                             <b-card-body class="p-4">
                                 <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
                                     <div class="job-icon-effect"></div>
@@ -301,7 +298,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none">
+                        <b-card class="shadow-none" no-body>
                             <b-card-body class="p-4">
                                 <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
                                     <div class="job-icon-effect"></div>
@@ -321,7 +318,7 @@ export default {
                 <b-row class="align-items-center justify-content-lg-between justify-content-center gy-4">
                     <b-col lg="5" sm="7">
                         <div class="about-img-section mb-5 mb-lg-0 text-center">
-                            <b-card no-body class="rounded shadow-lg inquiry-box d-none d-lg-block">
+                            <b-card class="rounded shadow-lg inquiry-box d-none d-lg-block" no-body>
                                 <b-card-body class="d-flex align-items-center">
                                     <div class="avatar-sm flex-shrink-0 me-3">
                                         <div class="avatar-title bg-soft-secondary text-secondary rounded-circle fs-18">
@@ -329,15 +326,15 @@ export default {
                                         </div>
                                     </div>
                                     <h5 class="fs-15 lh-base mb-0">Search Over <span
-                                            class="text-secondary fw-semibold">1,00,000+</span> Jobs</h5>
+                                        class="text-secondary fw-semibold">1,00,000+</span> Jobs</h5>
                                 </b-card-body>
                             </b-card>
 
-                            <b-card no-body class="feedback-box">
+                            <b-card class="feedback-box" no-body>
                                 <b-card-body class="d-flex shadow-lg">
                                     <div class="flex-shrink-0 me-3">
-                                        <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                            class="avatar-sm rounded-circle">
+                                        <img alt="" class="avatar-sm rounded-circle"
+                                             src="@/assets/images/users/avatar-10.jpg">
                                     </div>
                                     <div class="flex-grow-1">
                                         <h5 class="fs-14 lh-base mb-0">Tonya Noble</h5>
@@ -353,7 +350,7 @@ export default {
                                     </div>
                                 </b-card-body>
                             </b-card>
-                            <img src="@/assets/images/about.jpg" alt="" class="img-fluid mx-auto rounded-3" />
+                            <img alt="" class="img-fluid mx-auto rounded-3" src="@/assets/images/about.jpg"/>
                         </div>
                     </b-col>
                     <b-col lg="6">
@@ -406,8 +403,8 @@ export default {
                             </div>
 
                             <div>
-                                <b-link href="#!" class="btn btn-primary">Find Your Jobs <i
-                                        class="ri-arrow-right-line align-bottom ms-1"></i></b-link>
+                                <b-link class="btn btn-primary" href="#!">Find Your Jobs <i
+                                    class="ri-arrow-right-line align-bottom ms-1"></i></b-link>
                             </div>
                         </div>
                     </b-col>
@@ -416,13 +413,13 @@ export default {
             </b-container>
         </section>
 
-        <section class="section bg-light" id="categories">
+        <section id="categories" class="section bg-light">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="7">
                         <div class="text-center mb-5">
                             <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">High demand jobs <span
-                                    class="text-primary">Categories</span> fratured</h1>
+                                class="text-primary">Categories</span> fratured</h1>
                             <p class="text-muted">Post a job to tell us about your project. We'll quickly match you with
                                 the right freelancers.</p>
                         </div>
@@ -432,7 +429,7 @@ export default {
 
                 <b-row class="justify-content-center">
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none text-center py-3">
+                        <b-card class="shadow-none text-center py-3" no-body>
                             <b-card-body class="py-4">
                                 <div class="avatar-sm position-relative mb-4 mx-auto">
                                     <div class="job-icon-effect"></div>
@@ -440,7 +437,7 @@ export default {
                                         <i class="ri-pencil-ruler-2-line fs-1"></i>
                                     </div>
                                 </div>
-                                <b-link href="#!" class="stretched-link">
+                                <b-link class="stretched-link" href="#!">
                                     <h5 class="fs-17 pt-1">IT & Software</h5>
                                 </b-link>
                                 <p class="mb-0 text-muted">1543 Jobs</p>
@@ -448,7 +445,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none text-center py-3">
+                        <b-card class="shadow-none text-center py-3" no-body>
                             <b-card-body class="py-4">
                                 <div class="avatar-sm position-relative mb-4 mx-auto">
                                     <div class="job-icon-effect"></div>
@@ -456,7 +453,7 @@ export default {
                                         <i class="ri-airplay-line fs-1"></i>
                                     </div>
                                 </div>
-                                <b-link href="#!" class="stretched-link">
+                                <b-link class="stretched-link" href="#!">
                                     <h5 class="fs-17 pt-1">Construction / Facilities</h5>
                                 </b-link>
                                 <p class="mb-0 text-muted">3241 Jobs</p>
@@ -464,7 +461,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none text-center py-3">
+                        <b-card class="shadow-none text-center py-3" no-body>
                             <b-card-body class="py-4">
                                 <div class="avatar-sm mb-4 mx-auto position-relative">
                                     <div class="job-icon-effect"></div>
@@ -472,7 +469,7 @@ export default {
                                         <i class="ri-bank-line fs-1"></i>
                                     </div>
                                 </div>
-                                <b-link href="#!" class="stretched-link">
+                                <b-link class="stretched-link" href="#!">
                                     <h5 class="fs-17 pt-1">Government</h5>
                                 </b-link>
                                 <p class="mb-0 text-muted">876 Jobs</p>
@@ -480,7 +477,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none text-center py-3">
+                        <b-card class="shadow-none text-center py-3" no-body>
                             <b-card-body class="py-4">
                                 <div class="avatar-sm position-relative mb-4 mx-auto">
                                     <div class="job-icon-effect"></div>
@@ -488,7 +485,7 @@ export default {
                                         <i class="ri-focus-2-line fs-1"></i>
                                     </div>
                                 </div>
-                                <b-link href="#!" class="stretched-link">
+                                <b-link class="stretched-link" href="#!">
                                     <h5 class="fs-17 pt-1">Marketing & Advertising</h5>
                                 </b-link>
                                 <p class="mb-0 text-muted">465 Jobs</p>
@@ -496,7 +493,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none text-center py-3">
+                        <b-card class="shadow-none text-center py-3" no-body>
                             <b-card-body class="py-4">
                                 <div class="avatar-sm position-relative mb-4 mx-auto">
                                     <div class="job-icon-effect"></div>
@@ -504,7 +501,7 @@ export default {
                                         <i class="ri-pencil-ruler-line fs-1"></i>
                                     </div>
                                 </div>
-                                <b-link href="#!" class="stretched-link">
+                                <b-link class="stretched-link" href="#!">
                                     <h5 class="fs-17 pt-1">Education & training</h5>
                                 </b-link>
                                 <p class="mb-0 text-muted">105 Jobs</p>
@@ -512,7 +509,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none text-center py-3">
+                        <b-card class="shadow-none text-center py-3" no-body>
                             <b-card-body class="py-4">
                                 <div class="avatar-sm position-relative mb-4 mx-auto">
                                     <div class="job-icon-effect"></div>
@@ -520,7 +517,7 @@ export default {
                                         <i class="ri-line-chart-line fs-1"></i>
                                     </div>
                                 </div>
-                                <b-link href="#!" class="stretched-link">
+                                <b-link class="stretched-link" href="#!">
                                     <h5 class="fs-17 pt-1">Digital Marketing</h5>
                                 </b-link>
                                 <p class="mb-0 text-muted">377 Jobs</p>
@@ -528,7 +525,7 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="3" md="6">
-                        <b-card no-body class="shadow-none text-center py-3">
+                        <b-card class="shadow-none text-center py-3" no-body>
                             <b-card-body class="py-4">
                                 <div class="avatar-sm position-relative mb-4 mx-auto">
                                     <div class="job-icon-effect"></div>
@@ -536,7 +533,7 @@ export default {
                                         <i class="ri-briefcase-2-line fs-1"></i>
                                     </div>
                                 </div>
-                                <b-link href="#!" class="stretched-link">
+                                <b-link class="stretched-link" href="#!">
                                     <h5 class="fs-17 pt-1">Catering & Tourism</h5>
                                 </b-link>
                                 <p class="mb-0 text-muted">85 Jobs</p>
@@ -560,7 +557,7 @@ export default {
 
                     <b-col sm="auto">
                         <div>
-                            <b-link href="#!" class="btn bg-gradient btn-danger">Create Free Account</b-link>
+                            <b-link class="btn bg-gradient btn-danger" href="#!">Create Free Account</b-link>
                         </div>
                     </b-col>
 
@@ -568,13 +565,13 @@ export default {
             </b-container>
         </section>
 
-        <section class="section" id="findJob">
+        <section id="findJob" class="section">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="7">
                         <div class="text-center mb-5">
                             <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">Find Your <span
-                                    class="text-primary">Career</span> You Deserve it</h1>
+                                class="text-primary">Career</span> You Deserve it</h1>
                             <p class="text-muted">Post a job to tell us about your project. We'll quickly match you with
                                 the right freelancers.</p>
                         </div>
@@ -584,12 +581,12 @@ export default {
 
                 <b-row>
                     <b-col lg="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-soft-warning rounded">
-                                            <img src="@/assets/images/companies/img-3.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-3.png">
                                         </div>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
@@ -608,15 +605,16 @@ export default {
                                             </li>
                                         </ul>
                                         <div class="hstack gap-2">
-                                            <b-badge variant="soft-success" class="badge-soft-success">Design</b-badge>
-                                            <b-badge variant="soft-danger" class="badge-soft-danger">UI/UX</b-badge>
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Adobe
-                                                XD</b-badge>
+                                            <b-badge class="badge-soft-success" variant="soft-success">Design</b-badge>
+                                            <b-badge class="badge-soft-danger" variant="soft-danger">UI/UX</b-badge>
+                                            <b-badge class="badge-soft-primary" variant="soft-primary">Adobe
+                                                XD
+                                            </b-badge>
                                         </div>
                                     </div>
                                     <div>
-                                        <b-button type="button" variant="ghost-primary" class="btn-icon custom-toggle"
-                                            data-bs-toggle="button">
+                                        <b-button class="btn-icon custom-toggle" data-bs-toggle="button" type="button"
+                                                  variant="ghost-primary">
                                             <span class="icon-on"><i class="ri-bookmark-line"></i></span>
                                             <span class="icon-off"><i class="ri-bookmark-fill"></i></span>
                                         </b-button>
@@ -626,12 +624,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-soft-primary rounded">
-                                            <img src="@/assets/images/companies/img-2.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-2.png">
                                         </div>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
@@ -650,15 +648,16 @@ export default {
                                             </li>
                                         </ul>
                                         <div class="hstack gap-2">
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Sales</b-badge>
-                                            <b-badge variant="soft-secondary"
-                                                class="badge-soft-secondary">Product</b-badge>
-                                            <b-badge variant="soft-info" class="badge-soft-info">Bussiness</b-badge>
+                                            <b-badge class="badge-soft-primary" variant="soft-primary">Sales</b-badge>
+                                            <b-badge class="badge-soft-secondary"
+                                                     variant="soft-secondary">Product
+                                            </b-badge>
+                                            <b-badge class="badge-soft-info" variant="soft-info">Bussiness</b-badge>
                                         </div>
                                     </div>
                                     <div>
-                                        <b-button type="button" variant="ghost-primary"
-                                            class="btn-icon custom-toggle active" data-bs-toggle="button">
+                                        <b-button class="btn-icon custom-toggle active" data-bs-toggle="button"
+                                                  type="button" variant="ghost-primary">
                                             <span class="icon-on"><i class="ri-bookmark-line"></i></span>
                                             <span class="icon-off"><i class="ri-bookmark-fill"></i></span>
                                         </b-button>
@@ -668,12 +667,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-soft-danger rounded">
-                                            <img src="@/assets/images/companies/img-4.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-4.png">
                                         </div>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
@@ -692,14 +691,15 @@ export default {
                                             </li>
                                         </ul>
                                         <div class="hstack gap-2">
-                                            <b-badge variant="soft-warning"
-                                                class="badge-soft-warning">Marketing</b-badge>
-                                            <b-badge variant="soft-info" class="badge-soft-info">Bussiness</b-badge>
+                                            <b-badge class="badge-soft-warning"
+                                                     variant="soft-warning">Marketing
+                                            </b-badge>
+                                            <b-badge class="badge-soft-info" variant="soft-info">Bussiness</b-badge>
                                         </div>
                                     </div>
                                     <div>
-                                        <b-button type="button" variant="ghost-primary"
-                                            class="btn-icon custom-toggle active" data-bs-toggle="button">
+                                        <b-button class="btn-icon custom-toggle active" data-bs-toggle="button"
+                                                  type="button" variant="ghost-primary">
                                             <span class="icon-on"><i class="ri-bookmark-line"></i></span>
                                             <span class="icon-off"><i class="ri-bookmark-fill"></i></span>
                                         </b-button>
@@ -709,12 +709,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-soft-success rounded">
-                                            <img src="@/assets/images/companies/img-9.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-9.png">
                                         </div>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
@@ -733,15 +733,16 @@ export default {
                                             </li>
                                         </ul>
                                         <div class="hstack gap-2">
-                                            <b-badge variant="soft-success" class="badge-soft-success">Design</b-badge>
-                                            <b-badge variant="soft-danger" class="badge-soft-danger">UI/UX</b-badge>
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Adobe
-                                                XD</b-badge>
+                                            <b-badge class="badge-soft-success" variant="soft-success">Design</b-badge>
+                                            <b-badge class="badge-soft-danger" variant="soft-danger">UI/UX</b-badge>
+                                            <b-badge class="badge-soft-primary" variant="soft-primary">Adobe
+                                                XD
+                                            </b-badge>
                                         </div>
                                     </div>
                                     <div>
-                                        <b-button type="button" variant="ghost-primary" class="btn-icon custom-toggle"
-                                            data-bs-toggle="button">
+                                        <b-button class="btn-icon custom-toggle" data-bs-toggle="button" type="button"
+                                                  variant="ghost-primary">
                                             <span class="icon-on"><i class="ri-bookmark-line"></i></span>
                                             <span class="icon-off"><i class="ri-bookmark-fill"></i></span>
                                         </b-button>
@@ -751,12 +752,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-soft-info rounded">
-                                            <img src="@/assets/images/companies/img-1.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-1.png">
                                         </div>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
@@ -775,13 +776,13 @@ export default {
                                             </li>
                                         </ul>
                                         <div class="hstack gap-2">
-                                            <b-badge variant="soft-danger" class="badge-soft-danger">HR</b-badge>
-                                            <b-badge variant="soft-success" class="badge-soft-success">Manager</b-badge>
+                                            <b-badge class="badge-soft-danger" variant="soft-danger">HR</b-badge>
+                                            <b-badge class="badge-soft-success" variant="soft-success">Manager</b-badge>
                                         </div>
                                     </div>
                                     <div>
-                                        <b-button type="button" variant="ghost-primary" class="btn-icon custom-toggle"
-                                            data-bs-toggle="button">
+                                        <b-button class="btn-icon custom-toggle" data-bs-toggle="button" type="button"
+                                                  variant="ghost-primary">
                                             <span class="icon-on"><i class="ri-bookmark-line"></i></span>
                                             <span class="icon-off"><i class="ri-bookmark-fill"></i></span>
                                         </b-button>
@@ -791,12 +792,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-soft-success rounded">
-                                            <img src="@/assets/images/companies/img-7.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-7.png">
                                         </div>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
@@ -815,15 +816,16 @@ export default {
                                             </li>
                                         </ul>
                                         <div class="hstack gap-2">
-                                            <b-badge variant="soft-success" class="badge-soft-success">Design</b-badge>
-                                            <b-badge variant="soft-danger" class="badge-soft-danger">UI/UX</b-badge>
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Adobe
-                                                XD</b-badge>
+                                            <b-badge class="badge-soft-success" variant="soft-success">Design</b-badge>
+                                            <b-badge class="badge-soft-danger" variant="soft-danger">UI/UX</b-badge>
+                                            <b-badge class="badge-soft-primary" variant="soft-primary">Adobe
+                                                XD
+                                            </b-badge>
                                         </div>
                                     </div>
                                     <div>
-                                        <b-button type="button" variant="ghost-primary"
-                                            class="btn-icon custom-toggle active" data-bs-toggle="button">
+                                        <b-button class="btn-icon custom-toggle active" data-bs-toggle="button"
+                                                  type="button" variant="ghost-primary">
                                             <span class="icon-on"><i class="ri-bookmark-line"></i></span>
                                             <span class="icon-off"><i class="ri-bookmark-fill"></i></span>
                                         </b-button>
@@ -833,12 +835,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-soft-info rounded">
-                                            <img src="@/assets/images/companies/img-8.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-8.png">
                                         </div>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
@@ -857,15 +859,16 @@ export default {
                                             </li>
                                         </ul>
                                         <div class="hstack gap-2">
-                                            <b-badge variant="soft-success" class="badge-soft-success">Full
-                                                Time</b-badge>
-                                            <b-badge variant="soft-info" class="badge-soft-info">Remote</b-badge>
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Fashion</b-badge>
+                                            <b-badge class="badge-soft-success" variant="soft-success">Full
+                                                Time
+                                            </b-badge>
+                                            <b-badge class="badge-soft-info" variant="soft-info">Remote</b-badge>
+                                            <b-badge class="badge-soft-primary" variant="soft-primary">Fashion</b-badge>
                                         </div>
                                     </div>
                                     <div>
-                                        <b-button type="button" variant="ghost-primary"
-                                            class="btn-icon custom-toggle active" data-bs-toggle="button">
+                                        <b-button class="btn-icon custom-toggle active" data-bs-toggle="button"
+                                                  type="button" variant="ghost-primary">
                                             <span class="icon-on"><i class="ri-bookmark-line"></i></span>
                                             <span class="icon-off"><i class="ri-bookmark-fill"></i></span>
                                         </b-button>
@@ -875,12 +878,12 @@ export default {
                         </b-card>
                     </b-col>
                     <b-col lg="6">
-                        <b-card no-body class="shadow-lg">
+                        <b-card class="shadow-lg" no-body>
                             <b-card-body>
                                 <div class="d-flex">
                                     <div class="avatar-sm">
                                         <div class="avatar-title bg-soft-warning rounded">
-                                            <img src="@/assets/images/companies/img-5.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-5.png">
                                         </div>
                                     </div>
                                     <div class="ms-3 flex-grow-1">
@@ -899,15 +902,16 @@ export default {
                                             </li>
                                         </ul>
                                         <div class="hstack gap-2">
-                                            <b-badge variant="soft-success" class="badge-soft-success">Design</b-badge>
-                                            <b-badge variant="soft-danger" class="badge-soft-danger">UI/UX</b-badge>
-                                            <b-badge variant="soft-primary" class="badge-soft-primary">Adobe
-                                                XD</b-badge>
+                                            <b-badge class="badge-soft-success" variant="soft-success">Design</b-badge>
+                                            <b-badge class="badge-soft-danger" variant="soft-danger">UI/UX</b-badge>
+                                            <b-badge class="badge-soft-primary" variant="soft-primary">Adobe
+                                                XD
+                                            </b-badge>
                                         </div>
                                     </div>
                                     <div>
-                                        <b-button type="button" variant="ghost-primary" class="btn-icon custom-toggle"
-                                            data-bs-toggle="button">
+                                        <b-button class="btn-icon custom-toggle" data-bs-toggle="button" type="button"
+                                                  variant="ghost-primary">
                                             <span class="icon-on"><i class="ri-bookmark-line"></i></span>
                                             <span class="icon-off"><i class="ri-bookmark-fill"></i></span>
                                         </b-button>
@@ -918,8 +922,8 @@ export default {
                     </b-col>
                     <b-col lg="12">
                         <div class="text-center mt-4">
-                            <b-link href="#!" class="btn btn-ghost-primary">View More Jobs <i
-                                    class="ri-arrow-right-line align-bottom"></i></b-link>
+                            <b-link class="btn btn-ghost-primary" href="#!">View More Jobs <i
+                                class="ri-arrow-right-line align-bottom"></i></b-link>
                         </div>
                     </b-col>
                 </b-row>
@@ -933,7 +937,7 @@ export default {
                         <div class="text-muted mt-5 mt-lg-0">
                             <h5 class="fs-12 text-uppercase text-success">Hot Featured Company</h5>
                             <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">Get <span
-                                    class="text-primary">10,000+</span> Featured Companies</h1>
+                                class="text-primary">10,000+</span> Featured Companies</h1>
                             <p class="ff-secondary mb-2">The demand for content writing services is growing. This is
                                 because content is required in almost every industry. <b>Many companies have discovered
                                     how effective content marketing is.</b> This is a major reason for this increase in
@@ -942,22 +946,22 @@ export default {
                                 engaging articles to help brands showcase their products.</p>
 
                             <div class="mt-4">
-                                <b-link href="/" class="btn btn-primary">View More Companies <i
-                                        class="ri-arrow-right-line align-middle ms-1"></i></b-link>
+                                <b-link class="btn btn-primary" href="/">View More Companies <i
+                                    class="ri-arrow-right-line align-middle ms-1"></i></b-link>
                             </div>
                         </div>
                     </b-col>
 
-                    <b-col lg="4" sm="7" cols="10" order="1" order-lg="2" class="ms-lg-auto mx-auto">
+                    <b-col class="ms-lg-auto mx-auto" cols="10" lg="4" order="1" order-lg="2" sm="7">
                         <div>
-                            <b-card no-body class="shadow-lg">
+                            <b-card class="shadow-lg" no-body>
                                 <b-card-body>
-                                    <b-button variant="soft-primary" type="button" class="btn-icon float-end"
-                                        data-bs-toggle="button" aria-pressed="true"><i
-                                            class="mdi mdi-cards-heart fs-16"></i></b-button>
+                                    <b-button aria-pressed="true" class="btn-icon float-end" data-bs-toggle="button"
+                                              type="button" variant="soft-primary"><i
+                                        class="mdi mdi-cards-heart fs-16"></i></b-button>
                                     <div class="avatar-sm mb-4">
                                         <div class="avatar-title bg-soft-secondary rounded">
-                                            <img src="@/assets/images/companies/img-1.png" alt="" class="avatar-xxs">
+                                            <img alt="" class="avatar-xxs" src="@/assets/images/companies/img-1.png">
                                         </div>
                                     </div>
                                     <b-link href="#!">
@@ -980,51 +984,51 @@ export default {
                                         Team fused with UX, engineering, product and data talent.</p>
 
                                     <div class="hstack gap-2">
-                                        <b-badge variant="soft-success" class="badge-soft-success">Full Time</b-badge>
-                                        <b-badge variant="soft-primary" class="badge-soft-primary">Freelance</b-badge>
-                                        <b-badge variant="soft-danger" class="badge-soft-danger">Urgent</b-badge>
+                                        <b-badge class="badge-soft-success" variant="soft-success">Full Time</b-badge>
+                                        <b-badge class="badge-soft-primary" variant="soft-primary">Freelance</b-badge>
+                                        <b-badge class="badge-soft-danger" variant="soft-danger">Urgent</b-badge>
                                     </div>
 
                                     <div class="mt-4 hstack gap-2">
-                                        <b-link href="#!" class="btn btn-soft-primary w-100">Apply Job</b-link>
-                                        <b-link href="#!" class="btn btn-soft-success w-100">Overview</b-link>
+                                        <b-link class="btn btn-soft-primary w-100" href="#!">Apply Job</b-link>
+                                        <b-link class="btn btn-soft-success w-100" href="#!">Overview</b-link>
                                     </div>
                                 </b-card-body>
                             </b-card>
-                            <b-card no-body class="shadow-lg bg-info mb-0 features-company-widgets rounded-3">
+                            <b-card class="shadow-lg bg-info mb-0 features-company-widgets rounded-3" no-body>
                                 <b-card-body>
                                     <h5 class="text-white fs-16 mb-4">10,000+ Featured Companies</h5>
 
                                     <div class="d-flex gap-1">
-                                        <b-link href="#" v-b-tooltip.hover title="Brent Gonzalez">
+                                        <b-link v-b-tooltip.hover href="#" title="Brent Gonzalez">
                                             <div class="avatar-xs">
                                                 <div class="avatar-title bg-light bg-opacity-25 rounded-circle">
-                                                    <img src="@/assets/images/companies/img-5.png" alt="" height="15">
+                                                    <img alt="" height="15" src="@/assets/images/companies/img-5.png">
                                                 </div>
                                             </div>
                                         </b-link>
-                                        <b-link href="#" v-b-tooltip.hover title="Brent Gonzalez">
+                                        <b-link v-b-tooltip.hover href="#" title="Brent Gonzalez">
                                             <div class="avatar-xs">
                                                 <div class="avatar-title bg-light bg-opacity-25 rounded-circle">
-                                                    <img src="@/assets/images/companies/img-2.png" alt="" height="15">
+                                                    <img alt="" height="15" src="@/assets/images/companies/img-2.png">
                                                 </div>
                                             </div>
                                         </b-link>
-                                        <b-link href="#" v-b-tooltip.hover title="Brent Gonzalez">
+                                        <b-link v-b-tooltip.hover href="#" title="Brent Gonzalez">
                                             <div class="avatar-xs">
                                                 <div class="avatar-title bg-light bg-opacity-25 rounded-circle">
-                                                    <img src="@/assets/images/companies/img-8.png" alt="" height="15">
+                                                    <img alt="" height="15" src="@/assets/images/companies/img-8.png">
                                                 </div>
                                             </div>
                                         </b-link>
-                                        <b-link href="#" v-b-tooltip.hover title="Brent Gonzalez">
+                                        <b-link v-b-tooltip.hover href="#" title="Brent Gonzalez">
                                             <div class="avatar-xs">
                                                 <div class="avatar-title bg-light bg-opacity-25 rounded-circle">
-                                                    <img src="@/assets/images/companies/img-7.png" alt="" height="15">
+                                                    <img alt="" height="15" src="@/assets/images/companies/img-7.png">
                                                 </div>
                                             </div>
                                         </b-link>
-                                        <b-link href="#" v-b-tooltip.hover title="More Companies">
+                                        <b-link v-b-tooltip.hover href="#" title="More Companies">
                                             <div class="avatar-xs">
                                                 <div
                                                     class="avatar-title fs-11 rounded-circle bg-light bg-opacity-25 text-white">
@@ -1041,14 +1045,14 @@ export default {
             </b-container>
         </section>
 
-        <section class="section bg-light" id="candidates">
+        <section id="candidates" class="section bg-light">
             <div class="bg-overlay bg-overlay-pattern"></div>
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
                         <div class="text-center mb-5">
                             <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">Hire Experts <span
-                                    class="text-primary">Team</span></h1>
+                                class="text-primary">Team</span></h1>
                             <p class="text-muted mb-4">Hiring experts costs more per hour than hiring entry- or
                                 mid-level freelancers, but they can usually get the work done faster—and better.</p>
                         </div>
@@ -1057,11 +1061,7 @@ export default {
                 </b-row>
                 <b-row>
                     <b-col lg="12">
-                        <swiper class="swiper candidate-swiper" :loop="true" :slidesPerView="1" :spaceBetween="10"
-                            :pagination="{
-    el: '.swiper-pagination',
-    clickable: true,
-}" :breakpoints="{
+                        <swiper :breakpoints="{
     640: {
         slidesPerView: 2,
         spaceBetween: 20,
@@ -1074,12 +1074,16 @@ export default {
         slidesPerView: 4,
         spaceBetween: 50,
     },
-}">
+}" :loop="true" :pagination="{
+    el: '.swiper-pagination',
+    clickable: true,
+}" :slidesPerView="1"
+                                :spaceBetween="10" class="swiper candidate-swiper">
                             <swiper-slide>
-                                <b-card no-body class="text-center">
+                                <b-card class="text-center" no-body>
                                     <b-card-body class="p-4">
-                                        <img src="@/assets/images/users/avatar-2.jpg" alt=""
-                                            class="rounded-circle avatar-md mx-auto d-block">
+                                        <img alt="" class="rounded-circle avatar-md mx-auto d-block"
+                                             src="@/assets/images/users/avatar-2.jpg">
                                         <h5 class="fs-17 mt-3 mb-2">Nancy Martino</h5>
                                         <p class="text-muted fs-13 mb-3">Creative Designer</p>
 
@@ -1088,15 +1092,15 @@ export default {
                                             Escondido, California
                                         </p>
 
-                                        <b-link href="#!" class="btn btn-primary w-100">View Profile</b-link>
+                                        <b-link class="btn btn-primary w-100" href="#!">View Profile</b-link>
                                     </b-card-body>
                                 </b-card>
                             </swiper-slide>
                             <swiper-slide>
-                                <b-card no-body class="text-center">
+                                <b-card class="text-center" no-body>
                                     <b-card-body class="p-4">
-                                        <img src="@/assets/images/users/avatar-3.jpg" alt=""
-                                            class="rounded-circle avatar-md mx-auto d-block">
+                                        <img alt="" class="rounded-circle avatar-md mx-auto d-block"
+                                             src="@/assets/images/users/avatar-3.jpg">
                                         <h5 class="fs-17 mt-3 mb-2">Glen Matney</h5>
                                         <p class="text-muted fs-13 mb-3">Marketing Director</p>
 
@@ -1105,15 +1109,15 @@ export default {
                                             Escondido, California
                                         </p>
 
-                                        <b-link href="#!" class="btn btn-primary w-100">View Profile</b-link>
+                                        <b-link class="btn btn-primary w-100" href="#!">View Profile</b-link>
                                     </b-card-body>
                                 </b-card>
                             </swiper-slide>
                             <swiper-slide>
-                                <b-card no-body class="text-center">
+                                <b-card class="text-center" no-body>
                                     <b-card-body class="p-4">
-                                        <img src="@/assets/images/users/avatar-10.jpg" alt=""
-                                            class="rounded-circle avatar-md mx-auto d-block">
+                                        <img alt="" class="rounded-circle avatar-md mx-auto d-block"
+                                             src="@/assets/images/users/avatar-10.jpg">
                                         <h5 class="fs-17 mt-3 mb-2">Alexis Clarke</h5>
                                         <p class="text-muted fs-13 mb-3">Product Manager</p>
 
@@ -1122,15 +1126,15 @@ export default {
                                             Escondido, California
                                         </p>
 
-                                        <b-link href="#!" class="btn btn-primary w-100">View Profile</b-link>
+                                        <b-link class="btn btn-primary w-100" href="#!">View Profile</b-link>
                                     </b-card-body>
                                 </b-card>
                             </swiper-slide>
                             <swiper-slide>
-                                <b-card no-body class="text-center">
+                                <b-card class="text-center" no-body>
                                     <b-card-body class="p-4">
-                                        <img src="@/assets/images/users/avatar-8.jpg" alt=""
-                                            class="rounded-circle avatar-md mx-auto d-block" />
+                                        <img alt="" class="rounded-circle avatar-md mx-auto d-block"
+                                             src="@/assets/images/users/avatar-8.jpg"/>
                                         <h5 class="fs-17 mt-3 mb-2">James Price</h5>
                                         <p class="text-muted fs-13 mb-3">Product Designer</p>
 
@@ -1139,15 +1143,15 @@ export default {
                                             Escondido, California
                                         </p>
 
-                                        <b-link href="#!" class="btn btn-primary w-100">View Profile</b-link>
+                                        <b-link class="btn btn-primary w-100" href="#!">View Profile</b-link>
                                     </b-card-body>
                                 </b-card>
                             </swiper-slide>
                             <swiper-slide>
-                                <b-card no-body class="text-center">
+                                <b-card class="text-center" no-body>
                                     <b-card-body class="p-4">
-                                        <img src="@/assets/images/users/avatar-5.jpg" alt=""
-                                            class="rounded-circle avatar-md mx-auto d-block" />
+                                        <img alt="" class="rounded-circle avatar-md mx-auto d-block"
+                                             src="@/assets/images/users/avatar-5.jpg"/>
                                         <h5 class="fs-17 mt-3 mb-2">Michael Morris</h5>
                                         <p class="text-muted fs-13 mb-3">Full Stack Developer</p>
 
@@ -1156,7 +1160,7 @@ export default {
                                             Escondido, California
                                         </p>
 
-                                        <b-link href="#!" class="btn btn-primary w-100">View Profile</b-link>
+                                        <b-link class="btn btn-primary w-100" href="#!">View Profile</b-link>
                                     </b-card-body>
                                 </b-card>
                             </swiper-slide>
@@ -1166,13 +1170,13 @@ export default {
             </b-container>
         </section>
 
-        <section class="section" id="blog">
+        <section id="blog" class="section">
             <b-container>
                 <b-row class="justify-content-center">
                     <b-col lg="8">
                         <div class="text-center mb-5">
                             <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">Our Latest <span
-                                    class="text-primary">News</span></h1>
+                                class="text-primary">News</span></h1>
                             <p class="text-muted mb-4">We thrive when coming up with innovative ideas but also
                                 understand that a smart concept should be supported with faucibus sapien odio measurable
                                 results.</p>
@@ -1184,7 +1188,7 @@ export default {
                     <b-col lg="4" md="6">
                         <b-card no-body>
                             <b-card-body>
-                                <img src="@/assets/images/small/img-8.jpg" alt="" class="img-fluid rounded" />
+                                <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-8.jpg"/>
                             </b-card-body>
                             <b-card-body>
                                 <ul class="list-inline fs-14 text-muted">
@@ -1202,8 +1206,8 @@ export default {
                                     letters appear more frequently than others.</p>
 
                                 <div>
-                                    <b-link href="#!" class="link-success">Learn More <i
-                                            class="ri-arrow-right-line align-bottom ms-1"></i></b-link>
+                                    <b-link class="link-success" href="#!">Learn More <i
+                                        class="ri-arrow-right-line align-bottom ms-1"></i></b-link>
                                 </div>
                             </b-card-body>
                         </b-card>
@@ -1211,7 +1215,7 @@ export default {
                     <b-col lg="4" md="6">
                         <b-card no-body>
                             <b-card-body>
-                                <img src="@/assets/images/small/img-6.jpg" alt="" class="img-fluid rounded" />
+                                <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-6.jpg"/>
                             </b-card-body>
                             <b-card-body>
                                 <ul class="list-inline fs-14 text-muted">
@@ -1229,8 +1233,8 @@ export default {
                                     non-readability is of great importance: human perception.</p>
 
                                 <div>
-                                    <b-link href="#!" class="link-success">Learn More <i
-                                            class="ri-arrow-right-line align-bottom ms-1"></i></b-link>
+                                    <b-link class="link-success" href="#!">Learn More <i
+                                        class="ri-arrow-right-line align-bottom ms-1"></i></b-link>
                                 </div>
                             </b-card-body>
                         </b-card>
@@ -1238,7 +1242,7 @@ export default {
                     <b-col lg="4" md="6">
                         <b-card no-body>
                             <b-card-body>
-                                <img src="@/assets/images/small/img-9.jpg" alt="" class="img-fluid rounded" />
+                                <img alt="" class="img-fluid rounded" src="@/assets/images/small/img-9.jpg"/>
                             </b-card-body>
                             <b-card-body>
                                 <ul class="list-inline fs-14 text-muted">
@@ -1256,8 +1260,8 @@ export default {
                                     potentialities Appropriately communicate one-to-one technology.</p>
 
                                 <div>
-                                    <b-link href="#!" class="link-success">Learn More <i
-                                            class="ri-arrow-right-line align-bottom ms-1"></i></b-link>
+                                    <b-link class="link-success" href="#!">Learn More <i
+                                        class="ri-arrow-right-line align-bottom ms-1"></i></b-link>
                                 </div>
                             </b-card-body>
                         </b-card>
@@ -1281,7 +1285,7 @@ export default {
 
                     <b-col sm="auto">
                         <b-button type="button" variant="danger">Subscribe Now <i
-                                class="ri-arrow-right-line align-bottom"></i></b-button>
+                            class="ri-arrow-right-line align-bottom"></i></b-button>
                     </b-col>
 
                 </b-row>
@@ -1291,10 +1295,10 @@ export default {
         <footer class="custom-footer bg-dark py-5 position-relative">
             <b-container>
                 <b-row>
-                    <b-col lg="4" class="mt-4">
+                    <b-col class="mt-4" lg="4">
                         <div>
                             <div>
-                                <img src="@/assets/images/logo-light.png" alt="logo light" height="17" />
+                                <img alt="logo light" height="17" src="@/assets/images/logo-light.png"/>
                             </div>
                             <div class="mt-4 fs-13">
                                 <p>Premium Multipurpose Admin & Dashboard Template</p>
@@ -1302,35 +1306,35 @@ export default {
                                     management apps, Admin Panels, etc using Velzon.</p>
                                 <ul class="list-inline mb-0 footer-social-link">
                                     <li class="list-inline-item">
-                                        <b-link href="#" class="avatar-xs d-block">
+                                        <b-link class="avatar-xs d-block" href="#">
                                             <div class="avatar-title rounded-circle">
                                                 <i class="ri-facebook-fill"></i>
                                             </div>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <b-link href="#" class="avatar-xs d-block">
+                                        <b-link class="avatar-xs d-block" href="#">
                                             <div class="avatar-title rounded-circle">
                                                 <i class="ri-github-fill"></i>
                                             </div>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <b-link href="#" class="avatar-xs d-block">
+                                        <b-link class="avatar-xs d-block" href="#">
                                             <div class="avatar-title rounded-circle">
                                                 <i class="ri-linkedin-fill"></i>
                                             </div>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <b-link href="#" class="avatar-xs d-block">
+                                        <b-link class="avatar-xs d-block" href="#">
                                             <div class="avatar-title rounded-circle">
                                                 <i class="ri-google-fill"></i>
                                             </div>
                                         </b-link>
                                     </li>
                                     <li class="list-inline-item">
-                                        <b-link href="#" class="avatar-xs d-block">
+                                        <b-link class="avatar-xs d-block" href="#">
                                             <div class="avatar-title rounded-circle">
                                                 <i class="ri-dribbble-line"></i>
                                             </div>
@@ -1341,9 +1345,9 @@ export default {
                         </div>
                     </b-col>
 
-                    <b-col lg="7" class="ms-lg-auto">
+                    <b-col class="ms-lg-auto" lg="7">
                         <b-row>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">Company</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1365,7 +1369,7 @@ export default {
                                     </ul>
                                 </div>
                             </b-col>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">For Jobs</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1384,7 +1388,7 @@ export default {
                                     </ul>
                                 </div>
                             </b-col>
-                            <b-col sm="4" class="mt-4">
+                            <b-col class="mt-4" sm="4">
                                 <h5 class="text-white mb-0">Support</h5>
                                 <div class="text-muted mt-3">
                                     <ul class="list-unstyled ff-secondary footer-list">
@@ -1428,7 +1432,7 @@ export default {
                 </b-row>
             </b-container>
         </footer>
-        <b-button variant="info" @click="topFunction" class="btn-icon" id="back-to-top">
+        <b-button id="back-to-top" class="btn-icon" variant="info" @click="topFunction">
             <i class="ri-arrow-up-line"></i>
         </b-button>
     </div>

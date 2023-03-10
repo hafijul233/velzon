@@ -36,7 +36,7 @@
 }
 
 // calendar
-#external-events .external-event{
+#external-events .external-event {
     text-align: right;
 }
 
@@ -78,7 +78,7 @@
 }
 
 // Mailbox
-@media (max-width:991.98px) {
+@media (max-width: 991.98px) {
     .email-menu-sidebar {
         right: 0;
     }
@@ -95,7 +95,7 @@
         margin-left: 32%;
         margin-right: 0px;
 
-        @media (max-width:1349.98px) {
+        @media (max-width: 1349.98px) {
             margin-left: 0;
         }
     }
@@ -135,7 +135,7 @@
                 right: 95px;
                 left: 0;
 
-                @media (max-width:575.98px) {
+                @media (max-width: 575.98px) {
                     right: 95px
                 }
 
@@ -165,21 +165,21 @@
     padding-left: 80px
 }
 
-@media (max-width:1349.98px) {
+@media (max-width: 1349.98px) {
     .email-detail-content {
         right: auto;
         left: 0;
     }
 }
 
-@media (min-width:1025px) {
+@media (min-width: 1025px) {
     [data-layout=horizontal] .email-wrapper {
         margin-right: 0 !important;
         margin-left: 0 !important
     }
 }
 
-@media (max-width:991.98px) {
+@media (max-width: 991.98px) {
     [data-layout=horizontal] .email-wrapper {
         margin-top: 0 !important
     }
@@ -188,10 +188,11 @@
 
 // file-manager
 .file-manager-menu {
-    li .sub-menu li{
+    li .sub-menu li {
         padding-left: 0;
         padding-right: 25px;
-        &:before{
+
+        &:before {
             left: auto;
             right: 0px;
         }
@@ -209,7 +210,7 @@
     }
 }
 
-//Timeline 
+//Timeline
 .timeline {
     &::after {
         right: 50%;
@@ -256,7 +257,7 @@
         }
     }
 
-    @media (max-width:991.98px) {
+    @media (max-width: 991.98px) {
         &::after {
             right: 112px;
             left: auto;
@@ -290,7 +291,6 @@
         }
     }
 }
-
 
 
 .timeline-2 {
@@ -375,8 +375,8 @@
     }
 }
 
-.icon-demo-content{
-    i,  svg{
+.icon-demo-content {
+    i, svg {
         margin-left: 10px;
         margin-right: 0;
     }
@@ -384,8 +384,8 @@
 
 // Coming Soon
 
-.countdownlist{
-    .count-num::after{
+.countdownlist {
+    .count-num::after {
         right: auto;
         left: -16px;
     }
@@ -401,7 +401,7 @@
             left: auto;
         }
 
-        >li:first-child {
+        > li:first-child {
             float: left;
             left: 27.2%;
             right: auto;
@@ -415,9 +415,9 @@
         }
     }
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
         .subdirector {
-            >li:first-child {
+            > li:first-child {
                 left: 10%;
                 right: auto;
                 margin-left: 2px;
@@ -433,7 +433,7 @@
 }
 
 .departments {
-    >li {
+    > li {
         &:first-child {
             float: right;
             right: 27%;
@@ -459,8 +459,8 @@
     }
 }
 
-@media screen and (max-width:767px) {
-    .departments>li:first-child {
+@media screen and (max-width: 767px) {
+    .departments > li:first-child {
         right: 10%;
         left: auto;
         margin-left: auto;
@@ -491,7 +491,7 @@
         margin-right: -4px;
     }
 
-    >a {
+    > a {
         margin: 0 -4px -26px 0;
     }
 
@@ -513,7 +513,7 @@
         clear: right;
     }
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
         margin-right: 0;
         margin-left: auto;
 
@@ -529,7 +529,7 @@
 }
 
 .hori-sitemap {
-    @media (max-width:575.98px) {
+    @media (max-width: 575.98px) {
         ul {
             text-align: right;
 
@@ -567,7 +567,7 @@
         }
     }
 
-    @media (min-width:576px) {
+    @media (min-width: 576px) {
         ul {
             li {
                 &::before {
@@ -709,18 +709,18 @@
 
 #range-product-price {
     .noUi-origin {
-            transform: translate(0%, 0px) !important;
+        transform: translate(0%, 0px) !important;
     }
 }
 
 
 // authentication pages
 
-.auth-pass-inputgroup input{
+.auth-pass-inputgroup input {
     padding-right: $input-padding-x !important;
 }
 
-.twostep-input .wrapper input:not(:last-child){
+.twostep-input .wrapper input:not(:last-child) {
     margin-right: 0 !important;
     margin-left: 8px;
 }

@@ -1,15 +1,14 @@
 // Mixed - Line Column Chart
-function getChartColorsArray(colors){
+function getChartColorsArray(colors) {
     colors = JSON.parse(colors);
     return colors.map(function (value) {
-      var newValue = value.replace(" ", "");
-      if (newValue.indexOf(",") === -1) {
-        var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
+        var newValue = value.replace(" ", "");
+        if (newValue.indexOf(",") === -1) {
+            var color = getComputedStyle(document.documentElement).getPropertyValue(newValue);
             if (color) {
-            color = color.replace(" ", "");
-            return color;
-            }
-            else return newValue;
+                color = color.replace(" ", "");
+                return color;
+            } else return newValue;
         } else {
             var val = value.split(',');
             if (val.length == 2) {
@@ -21,7 +20,8 @@ function getChartColorsArray(colors){
             }
         }
     });
-  }
+}
+
 const mixedLineChart = {
     series: [{
         name: 'Website Blog',
@@ -121,29 +121,29 @@ const yAxisChart = {
             categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
         },
         yaxis: [{
-                axisTicks: {
-                    show: true,
-                },
-                axisBorder: {
-                    show: true,
-                    color: '#405189'
-                },
-                labels: {
-                    style: {
-                        colors: '#405189',
-                    }
-                },
-                title: {
-                    text: "Income (thousand crores)",
-                    style: {
-                        color: '#405189',
-                        fontWeight: 600
-                    }
-                },
-                tooltip: {
-                    enabled: true
+            axisTicks: {
+                show: true,
+            },
+            axisBorder: {
+                show: true,
+                color: '#405189'
+            },
+            labels: {
+                style: {
+                    colors: '#405189',
                 }
             },
+            title: {
+                text: "Income (thousand crores)",
+                style: {
+                    color: '#405189',
+                    fontWeight: 600
+                }
+            },
+            tooltip: {
+                enabled: true
+            }
+        },
             {
                 seriesName: 'Income',
                 opposite: true,
@@ -239,10 +239,10 @@ const lineAreaChart = {
             size: 0
         },
         yaxis: [{
-                title: {
-                    text: 'Series A',
-                },
+            title: {
+                text: 'Series A',
             },
+        },
             {
                 opposite: true,
                 title: {
@@ -343,4 +343,4 @@ const lineColumnAreaChart = {
     }
 };
 
-export { mixedLineChart, yAxisChart, lineAreaChart, lineColumnAreaChart }; 
+export {mixedLineChart, yAxisChart, lineAreaChart, lineColumnAreaChart};

@@ -33,7 +33,6 @@ export default {
             });
 
 
-
         var myInput = document.getElementById("password-input");
         var letter = document.getElementById("pass-lower");
         var capital = document.getElementById("pass-upper");
@@ -103,15 +102,15 @@ export default {
             <b-container>
                 <b-row>
                     <b-col lg="12">
-                        <b-card no-body class="overflow-hidden">
+                        <b-card class="overflow-hidden" no-body>
                             <b-row class="justify-content-center g-0">
                                 <b-col lg="6">
                                     <div class="p-lg-5 p-4 auth-one-bg h-100">
                                         <div class="bg-overlay"></div>
                                         <div class="position-relative h-100 d-flex flex-column">
                                             <div class="mb-4">
-                                                <b-link href="/" class="d-block">
-                                                    <img src="@/assets/images/logo-light.png" alt="" height="18">
+                                                <b-link class="d-block" href="/">
+                                                    <img alt="" height="18" src="@/assets/images/logo-light.png">
                                                 </b-link>
                                             </div>
                                             <div class="mt-auto">
@@ -120,15 +119,18 @@ export default {
                                                 </div>
 
                                                 <div id="qoutescarouselIndicators" class="carousel slide"
-                                                    data-bs-ride="carousel">
+                                                     data-bs-ride="carousel">
                                                     <div class="carousel-indicators">
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="0" class="active" aria-current="true"
-                                                            aria-label="Slide 1"></button>
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                        <button type="button" data-bs-target="#qoutescarouselIndicators"
-                                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                        <button aria-current="true" aria-label="Slide 1"
+                                                                class="active" data-bs-slide-to="0"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
+                                                        <button aria-label="Slide 2" data-bs-slide-to="1"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
+                                                        <button aria-label="Slide 3" data-bs-slide-to="2"
+                                                                data-bs-target="#qoutescarouselIndicators"
+                                                                type="button"></button>
                                                     </div>
                                                     <div class="carousel-inner text-center text-white-50 pb-5">
                                                         <div class="carousel-item active">
@@ -161,38 +163,43 @@ export default {
                                                 <div class="mb-3">
                                                     <label class="form-label" for="password-input">Password</label>
                                                     <div class="position-relative auth-pass-inputgroup">
-                                                        <input type="password" class="form-control pe-5 password-input"
-                                                            onpaste="return false" placeholder="Enter password"
-                                                            id="password-input" aria-describedby="passwordInput"
-                                                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-                                                        <b-button variant="link"
-                                                            class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
-                                                            type="button" id="password-addon"><i
-                                                                class="ri-eye-fill align-middle"></i></b-button>
+                                                        <input id="password-input" aria-describedby="passwordInput"
+                                                               class="form-control pe-5 password-input"
+                                                               onpaste="return false"
+                                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                                               placeholder="Enter password"
+                                                               required type="password">
+                                                        <b-button id="password-addon"
+                                                                  class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                                  type="button" variant="link"><i
+                                                            class="ri-eye-fill align-middle"></i></b-button>
                                                     </div>
                                                     <div id="passwordInput" class="form-text">Must be at least 8
-                                                        characters.</div>
+                                                        characters.
+                                                    </div>
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label class="form-label" for="confirm-password-input">Confirm
                                                         Password</label>
                                                     <div class="position-relative auth-pass-inputgroup mb-3">
-                                                        <input type="password" class="form-control pe-5 password-input"
-                                                            onpaste="return false" placeholder="Confirm password"
-                                                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                                            id="confirm-password-input" required>
-                                                        <b-button variant="link"
-                                                            class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
-                                                            type="button" id="confirm-password-input"><i
-                                                                class="ri-eye-fill align-middle"></i></b-button>
+                                                        <input id="confirm-password-input"
+                                                               class="form-control pe-5 password-input"
+                                                               onpaste="return false"
+                                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                                               placeholder="Confirm password"
+                                                               required type="password">
+                                                        <b-button id="confirm-password-input"
+                                                                  class="position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                                  type="button" variant="link"><i
+                                                            class="ri-eye-fill align-middle"></i></b-button>
                                                     </div>
                                                 </div>
 
                                                 <div id="password-contain" class="p-3 bg-light mb-2 rounded">
                                                     <h5 class="fs-13">Password must contain:</h5>
                                                     <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8
-                                                            characters</b></p>
+                                                        characters</b></p>
                                                     <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b>
                                                         letter (a-z)</p>
                                                     <p id="pass-upper" class="invalid fs-12 mb-2">At least
@@ -203,24 +210,29 @@ export default {
                                                 </div>
 
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="auth-remember-check">
+                                                    <input id="auth-remember-check" class="form-check-input"
+                                                           type="checkbox"
+                                                           value="">
                                                     <label class="form-check-label" for="auth-remember-check">Remember
                                                         me</label>
                                                 </div>
 
                                                 <div class="mt-4">
-                                                    <b-button variant="success" class="w-100" @click="validatepassword" type="submit">Reset Password</b-button>
+                                                    <b-button class="w-100" type="submit" variant="success"
+                                                              @click="validatepassword">Reset Password
+                                                    </b-button>
                                                 </div>
 
                                             </form>
                                         </div>
 
                                         <div class="mt-5 text-center">
-                                            <p class="mb-0">Wait, I remember my password... <b-link
-                                                    href="auth-signin-cover"
-                                                    class="fw-semibold text-primary text-decoration-underline"> Click
-                                                    here </b-link>
+                                            <p class="mb-0">Wait, I remember my password...
+                                                <b-link
+                                                    class="fw-semibold text-primary text-decoration-underline"
+                                                    href="auth-signin-cover"> Click
+                                                    here
+                                                </b-link>
                                             </p>
                                         </div>
                                     </div>
@@ -239,7 +251,7 @@ export default {
                     <b-col lg="12">
                         <div class="text-center">
                             <p class="mb-0 text-muted">&copy; {{ new Date().getFullYear() }} Velzon. Crafted with <i
-                                    class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                                class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
                         </div>
                     </b-col>
                 </b-row>

@@ -1,6 +1,6 @@
-// 
+//
 // _demos.scss
-// 
+//
 
 // Buttons demo
 .button-items {
@@ -81,7 +81,7 @@
         .form-check-input {
             display: none;
 
-            &:checked+.form-check-label {
+            &:checked + .form-check-label {
                 &::before {
                     content: "";
                     position: absolute;
@@ -137,9 +137,9 @@
             background-color: rgba(var(--#{$variable-prefix}dark-rgb), .1) !important;
         }
 
-        .dark{
-            .bg-dark{
-                background-color: var(--#{$prefix}card-bg-custom)!important;
+        .dark {
+            .bg-dark {
+                background-color: var(--#{$prefix}card-bg-custom) !important;
             }
         }
     }

@@ -50,7 +50,7 @@ export default {
 
 <template>
     <Layout>
-        <PageHeader :title="title" :items="items" />
+        <PageHeader :items="items" :title="title"/>
         <b-row>
             <b-col lg="12">
                 <b-card no-body>
@@ -58,9 +58,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Rounded Ribbon</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="rounded-ribbon-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="rounded-ribbon-showcode" />
+                                <label class="form-label text-muted" for="rounded-ribbon-showcode">Show Code</label>
+                                <input id="rounded-ribbon-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -73,7 +73,7 @@ export default {
                                     <code>round-shape</code> class to show round-shaped ribbon.
                                 </p>
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-primary round-shape">Primary</div>
                                             <h5 class="fs-14 text-end">Rounded Ribbon</h5>
@@ -91,7 +91,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-success round-shape">Success</div>
                                             <h5 class="fs-14 text-end">Rounded Ribbon</h5>
@@ -108,7 +108,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none right mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none right mb-lg-0" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-info round-shape">Info</div>
                                             <h5 class="fs-14 text-start">Rounded Ribbon Right</h5>
@@ -174,9 +174,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Ribbon Shape</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="shape-ribbon-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="shape-ribbon-showcode" />
+                                <label class="form-label text-muted" for="shape-ribbon-showcode">Show Code</label>
+                                <input id="shape-ribbon-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -189,7 +189,7 @@ export default {
                                     <code>ribbon-shape</code> class to show ribbon shaped ribbon.
                                 </p>
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-primary ribbon-shape">Primary</div>
                                             <h5 class="fs-14 text-end">Ribbon Shape</h5>
@@ -206,7 +206,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-success ribbon-shape">Success</div>
                                             <h5 class="fs-14 text-end">Ribbon Shape</h5>
@@ -223,7 +223,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0 right">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0 right" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-info ribbon-shape">Info</div>
                                             <h5 class="fs-14 text-start">Ribbon Shape Right</h5>
@@ -288,8 +288,8 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Filled Ribbons</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ribbons01-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox" id="ribbons01-showcode" />
+                                <label class="form-label text-muted" for="ribbons01-showcode">Show Code</label>
+                                <input id="ribbons01-showcode" class="form-check-input code-switcher" type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -302,7 +302,7 @@ export default {
                                     <code>ribbon-fill</code> class to show fill-shaped ribbon.
                                 </p>
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border ribbon-fill shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border ribbon-fill shadow-none mb-lg-0" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-primary">New</div>
                                             <h5 class="fs-14 text-end">Fill Ribbon</h5>
@@ -319,7 +319,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border ribbon-fill shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border ribbon-fill shadow-none mb-lg-0" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-success">Sale</div>
                                             <h5 class="fs-14 text-end">Fill Ribbon</h5>
@@ -336,7 +336,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border ribbon-fill shadow-none right mb-lg-0">
+                                    <b-card class="ribbon-box border ribbon-fill shadow-none right mb-lg-0" no-body>
                                         <b-card-body>
                                             <div class="ribbon ribbon-info">New</div>
                                             <h5 class="fs-14 text-start">Fill Ribbon Right</h5>
@@ -401,9 +401,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Boxed Ribbons</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ribbon-example-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="ribbon-example-showcode" />
+                                <label class="form-label text-muted" for="ribbon-example-showcode">Show Code</label>
+                                <input id="ribbon-example-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -418,7 +418,7 @@ export default {
                                     ribbon.
                                 </p>
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0" no-body>
                                         <b-card-body class="text-muted">
                                             <div class="ribbon-two ribbon-two-primary">
                                                 <span>Basic</span>
@@ -433,7 +433,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0" no-body>
                                         <b-card-body class="text-muted">
                                             <div class="ribbon-two ribbon-two-success">
                                                 <span>Standard</span>
@@ -448,7 +448,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0 right">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0 right" no-body>
                                         <b-card-body class="text-muted">
                                             <div class="ribbon-two ribbon-two-info">
                                                 <span>Premium</span>
@@ -498,9 +498,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Ribbons</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ribbon-three-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="ribbon-three-showcode" />
+                                <label class="form-label text-muted" for="ribbon-three-showcode">Show Code</label>
+                                <input id="ribbon-three-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -515,7 +515,7 @@ export default {
                                     ribbon.
                                 </p>
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0" no-body>
                                         <b-card-body class="text-muted">
                                             <span class="ribbon-three ribbon-three-primary">
                                                 <span>Featured</span>
@@ -530,7 +530,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0" no-body>
                                         <b-card-body class="text-muted">
                                             <span class="ribbon-three ribbon-three-success">
                                                 <span>Featured</span>
@@ -545,7 +545,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none mb-lg-0 right">
+                                    <b-card class="ribbon-box border shadow-none mb-lg-0 right" no-body>
                                         <b-card-body class="text-muted">
                                             <span class="ribbon-three ribbon-three-info">
                                                 <span>Featured</span>
@@ -595,9 +595,9 @@ export default {
                         <b-card-title class="mb-0 flex-grow-1">Ribbons Hover</b-card-title>
                         <div class="flex-shrink-0">
                             <div class="form-check form-switch form-switch-right form-switch-md">
-                                <label for="ribbon-hover-showcode" class="form-label text-muted">Show Code</label>
-                                <input class="form-check-input code-switcher" type="checkbox"
-                                    id="ribbon-hover-showcode" />
+                                <label class="form-label text-muted" for="ribbon-hover-showcode">Show Code</label>
+                                <input id="ribbon-hover-showcode" class="form-check-input code-switcher"
+                                       type="checkbox"/>
                             </div>
                         </div>
                     </b-card-header>
@@ -610,7 +610,7 @@ export default {
                                     <code>trending-ribbon</code> class to show ribbon with hovering effect.
                                 </p>
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none overflow-hidden mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none overflow-hidden mb-lg-0" no-body>
                                         <b-card-body class="text-muted">
                                             <div class="ribbon ribbon-info ribbon-shape trending-ribbon">
                                                 <span class="trending-ribbon-text">Trending</span>
@@ -627,7 +627,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box border shadow-none overflow-hidden mb-lg-0">
+                                    <b-card class="ribbon-box border shadow-none overflow-hidden mb-lg-0" no-body>
                                         <b-card-body class="text-muted">
                                             <div class="ribbon ribbon-info ribbon-shape trending-ribbon">
                                                 <span class="trending-ribbon-text">Trending</span>
@@ -644,7 +644,7 @@ export default {
                                 </b-col>
 
                                 <b-col xxl="4">
-                                    <b-card no-body class="ribbon-box right border shadow-none overflow-hidden mb-lg-0">
+                                    <b-card class="ribbon-box right border shadow-none overflow-hidden mb-lg-0" no-body>
                                         <b-card-body class="text-muted">
                                             <div class="ribbon ribbon-info ribbon-shape trending-ribbon">
                                                 <i
