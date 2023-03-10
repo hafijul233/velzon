@@ -14,7 +14,7 @@ export default defineConfig(({command, mode}) => {
         ],
         resolve: {
             alias: {
-                '@': "./resources/js/"
+                '@': "./resources"
             }
         },
         //load laravel environment to vue
