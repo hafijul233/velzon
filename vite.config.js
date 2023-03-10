@@ -3,8 +3,6 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({command, mode}) => {
-    const env = loadEnv(mode, process.cwd(), '');
-
     return {
         transpileDependencies: ["@vueform"],
         plugins: [
@@ -20,6 +18,6 @@ export default defineConfig(({command, mode}) => {
             }
         },
         //load laravel environment to vue
-        define : env
+        define : loadEnv(mode, process.cwd(), '')
     }
 });

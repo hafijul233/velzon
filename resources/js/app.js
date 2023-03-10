@@ -17,7 +17,6 @@ import Particles from "particles.vue3";
 import '@/assets/scss/config/default/app.scss';
 import '@vueform/slider/themes/default.css';
 import '@/assets/scss/mermaid.min.css';
-import './bootstrap';
 
 // FakeBackend authentication
 // import { configureFakeBackend } from './helpers/fake-backend';

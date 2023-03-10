@@ -1,3 +1,6 @@
+<style lang="scss">
+
+</style>
 <template>
     <router-view></router-view>
 
