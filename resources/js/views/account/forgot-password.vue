@@ -1,6 +1,6 @@
 <script>
 import { authMethods } from "@/state/helpers";
-import appConfig from "../../../app.config";
+import appConfig from "../../../app.config.json";
 
 import { required, email, helpers } from "@vuelidate/validators";
 import useVuelidate from "@vuelidate/core";
